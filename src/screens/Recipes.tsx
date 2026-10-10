@@ -1,11 +1,15 @@
 // Экран «Рецепты»: что можно приготовить из того, что есть + «Спросить Claude».
 import { useMemo, useState } from "react";
-import { Header, Sheet } from "../components/ui";
+import { Header, Seg, Sheet } from "../components/ui";
+import { Menu } from "./Menu";
+import { addMany } from "../lib/shop";
+import { addEntry, dayShort, weekDays } from "../lib/plan";
+import { SLOTS, type Slot } from "../lib/types";
 import { deleteRecipe, saveRecipes, useStore } from "../lib/store";
 import { applyReplace, compileRules, checkRecipe } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
-import { norm } from "../lib/util";
-import { closeSheet, openSheet, toast } from "../lib/ui";
+import { cap, norm, parseYmd, ymd } from "../lib/util";
+import { closeSheet, openSheet, setRecipesView, toast, useUI } from "../lib/ui";
 
 type F = "all" | "now" | "almost" | "fav";
 
@@ -24,11 +28,22 @@ export function Recipes() {
   const ok = rows.filter((x) => x.c.verdict !== "hidden").filter((x) => !nq || norm(x.r.name).includes(nq) || x.r.ingredients.some((i) => norm(i.name).includes(nq)));
   const list = ok.filter((x) => f === "all" || (f === "now" ? x.st.missing.length === 0 : f === "almost" ? x.st.missing.length > 0 && x.st.missing.length <= 2 : !!x.r.fav));
   const hidden = rows.filter((x) => x.c.verdict === "hidden");
+  const view = useUI((u) => u.recipesView);
 
+  if (view === "menu") {
+    return (
+      <div className="screen">
+        <Header title="Меню" screen="menu" />
+        <Seg label="Раздел" value={view} onChange={setRecipesView} options={[{ v: "list", t: "Рецепты" }, { v: "menu", t: "Меню на неделю" }]} />
+        <Menu />
+      </div>
+    );
+  }
   return (
     <div className="screen">
       <Header title="Рецепты" screen="recipes" />
-      <button className="btn" onClick={() => openSheet({ kind: "ask" })}>✨ Спросить Claude: что приготовить</button>
+      <Seg label="Раздел" value={view} onChange={setRecipesView} options={[{ v: "list", t: "Рецепты" }, { v: "menu", t: "Меню на неделю" }]} />
+      <button className="btn" style={{ marginTop: 10 }} onClick={() => openSheet({ kind: "ask" })}>✨ Спросить Claude: что приготовить</button>
       {recipes.length === 0 ? (
         <div className="empty">
           <div className="big">📖</div>
@@ -87,6 +102,9 @@ export function RecipeView({ id }: { id: string }) {
   const { recipes, products, settings } = useStore((s) => s);
   const r = recipes.find((x) => x.id === id);
   const [confirmDel, setConfirmDel] = useState(false);
+  const [toMenu, setToMenu] = useState(false);
+  const [day, setDay] = useState(ymd());
+  const [slot, setSlot] = useState<Slot>("ужин");
   if (!r) return <Sheet title="Рецепт"><p className="empty">Рецепт удалён.</p></Sheet>;
   const compiled = compileRules(settings.rules, settings.customCatalog, settings.members);
   const c = checkRecipe(r, compiled, settings.members.map((m) => m.id));
@@ -116,7 +134,24 @@ export function RecipeView({ id }: { id: string }) {
           </div>
         ))}
       </div>
-      {st.missing.length > 0 && <p className="muted small">Не хватает: {st.missing.map((x) => x.name.toLowerCase()).join(", ")}. Список покупок появится на этапе 4.</p>}
+      {st.missing.length > 0 && (
+        <button className="btn sec" onClick={() => { const n = addMany(st.missing.map((x) => ({ name: x.name, amount: x.amount })), r.name); toast(n ? `В список покупок: ${n}` : "Всё уже в списке покупок"); }}>
+          Недостающее — в покупки ({st.missing.length})
+        </button>
+      )}
+      {!toMenu ? (
+        <button className="btn ghost" onClick={() => setToMenu(true)}>Поставить в меню</button>
+      ) : (
+        <div className="card" style={{ background: "var(--card2)", boxShadow: "none" }}>
+          <div className="chips">
+            {weekDays(ymd()).map((d) => (
+              <button key={d} className="chip" aria-pressed={day === d} onClick={() => setDay(d)}>{d === ymd() ? "Сегодня" : `${dayShort(d)} ${parseYmd(d).getDate()}`}</button>
+            ))}
+          </div>
+          <Seg label="Приём пищи" value={slot} onChange={setSlot} options={SLOTS.map((s) => ({ v: s, t: cap(s) }))} />
+          <button className="btn" onClick={() => { addEntry(day, slot, r.name, r.id); setToMenu(false); toast(`В меню: ${cap(slot)}, ${day === ymd() ? "сегодня" : dayShort(day)}`); }}>Добавить в меню</button>
+        </div>
+      )}
       {r.steps.length > 0 && (
         <>
           <h3 style={{ marginTop: 16 }}>Как готовить</h3>

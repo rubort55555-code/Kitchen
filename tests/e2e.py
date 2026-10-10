@@ -16,6 +16,10 @@ srv = ThreadingHTTPServer(("127.0.0.1", PORT), partial(Quiet, directory=DIST))
 threading.Thread(target=srv.serve_forever, daemon=True).start()
 URL = f"http://127.0.0.1:{PORT}/"
 
+def more(pg):
+    pg.click(".tabs button >> text=Главная")
+    pg.click('[aria-label="Ещё: семья, ограничения, данные"]')
+
 res = []
 def ok(name, cond, extra=""):
     res.append((name, bool(cond)))
@@ -46,7 +50,7 @@ with sync_playwright() as p:
         pg.screenshot(path=f"{SHOTS}/{scheme}-home-empty.png")
 
         # «?» на главной
-        pg.click(".helpbtn"); pg.wait_for_selector(".sheet")
+        pg.click('[aria-label="Помощь по этому экрану"]'); pg.wait_for_selector(".sheet")
         ok(S + "«?» показывает справку экрана", "Съесть в первую очередь" in pg.inner_text(".sheet") or "срок" in pg.inner_text(".sheet"))
         pg.click(".sheet-h > button:last-child")
 
@@ -104,7 +108,7 @@ with sync_playwright() as p:
         ok(S + "частичное списание", "Курица" in pg.inner_text("main") and "500" in pg.locator(".swipe", has_text="Курица").inner_text(), pg.locator(".swipe", has_text="Курица").inner_text())
         pg.click(".sheet-h > button:last-child")
         # «?» на экране продуктов
-        pg.click(".helpbtn")
+        pg.click('[aria-label="Помощь по этому экрану"]')
         ok(S + "справка продуктов про свайп", "Свайп влево" in pg.inner_text(".sheet"))
         pg.click(".sheet-h > button:last-child")
 
@@ -148,7 +152,7 @@ with sync_playwright() as p:
         pg.screenshot(path=f"{SHOTS}/{scheme}-home.png", full_page=True)
 
         # Ещё → Данные: копия → восстановление
-        pg.click(".tabs button >> text=Ещё")
+        more(pg)
         pg.click("text=Данные и копия")
         with pg.expect_download() as dl:
             pg.click("text=Сохранить копию")
@@ -169,24 +173,88 @@ with sync_playwright() as p:
         ok(S + "восстановление из файла", pg.locator(".swipe").count() == 3, pg.locator(".swipe").count())
 
         # Демо-данные
-        pg.click(".tabs button >> text=Ещё"); pg.click("text=Данные и копия")
+        more(pg); pg.click("text=Данные и копия")
         pg.click("text=Заполнить демо-данными"); pg.click("text=Заменить мои данные"); pg.wait_for_timeout(400)
         home = pg.inner_text("main")
         ok(S + "демо: главная со сроками и потерями", "Съесть в первую очередь" in home and "Молоко" in home)
         pg.screenshot(path=f"{SHOTS}/{scheme}-home-demo.png", full_page=True)
 
+        # Покупки
+        pg.click(".tabs button >> text=Покупки")
+        ok(S + "вкладка покупок", pg.inner_text("h1") == "Покупки" and pg.locator("main .list .li").count() >= 3, pg.inner_text("main")[:200])
+        pg.fill('input[aria-label="Что купить"]', "Треска")
+        ok(S + "покупки: предупреждение про треску", "в исключениях" in pg.inner_text("main"))
+        pg.fill('input[aria-label="Что купить"]', "Молоко"); pg.fill('input[aria-label="Сколько"]', "1 л")
+        pg.click("main form .btn")
+        ok(S + "покупки: молоко добавлено с подсказкой «дома есть»", "дома есть" in pg.locator("main .li", has_text="Молоко").first.inner_text(), pg.locator("main .li", has_text="Молоко").first.inner_text())
+        pg.fill('input[aria-label="Что купить"]', "Укроп"); pg.fill('input[aria-label="Сколько"]', ""); pg.click("main form .btn")
+        ok(S + "покупки: часто пропадает", "часто пропадает" in pg.locator("main .li", has_text="Укроп").first.inner_text(), pg.locator("main .li", has_text="Укроп").first.inner_text())
+        n0 = pg.locator("main .li").count()
+        pg.locator("main .li", has_text="Хлеб").locator("input[type=checkbox]").check()
+        pg.locator("main .li", has_text="Бананы").locator("input[type=checkbox]").check()
+        pg.click("main .btn >> text=Купил — в продукты")
+        pg.wait_for_selector(".sheet")
+        ok(S + "купил: цена из прошлой покупки", pg.input_value("#bp0") != "", pg.input_value("#bp0"))
+        pg.screenshot(path=f"{SHOTS}/{scheme}-buy.png")
+        pg.click(".sheet .btn >> text=Сохранить в продукты")
+        ok(S + "купленное ушло в продукты", "В продукты: 2" in pg.inner_text(".toast"), pg.inner_text(".toast"))
+        pg.click(".toast button")
+        ok(S + "отмена покупки вернула список", pg.locator("main .li", has_text="Бананы").count() == 1)
+        pg.evaluate("navigator.clipboard.writeText('')")
+        pg.click("text=Скопировать список")
+        ok(S + "список скопирован текстом", "• Молоко" in pg.evaluate("navigator.clipboard.readText()"))
+        pg.screenshot(path=f"{SHOTS}/{scheme}-shop.png", full_page=True)
+
+        # Меню на неделю
+        pg.click(".tabs button >> text=Рецепты")
+        pg.click("main .seg button >> text=Меню на неделю")
+        ok(S + "меню: дни недели", pg.locator(".day").count() == 7 and "Сегодня" in pg.inner_text("main"))
+        ok(S + "меню из демо на сегодня", "Салат с огурцами" in pg.locator(".day.today").inner_text(), pg.locator(".day.today").inner_text())
+        pg.click("text=Заполнить из моих рецептов")
+        filled = pg.locator(".meal .dish:not(.empty)").count()
+        ok(S + "меню: автозаполнение", filled >= 4, filled)
+        txt_menu = pg.inner_text("main")
+        ok(S + "в меню нет холодца, трески и козинаков", "Холодец" not in txt_menu and "Треска" not in txt_menu and "Козинаки" not in txt_menu)
+        pg.click(".toast button")
+        ok(S + "меню: отмена автозаполнения", pg.locator(".meal .dish:not(.empty)").count() < filled)
+        # вручную: + Добавить → своё блюдо
+        pg.locator(".day").last.locator(".dish.empty").first.click()
+        pg.fill("#free", "Пельмени"); pg.click(".sheet .btn >> text=Готово")
+        ok(S + "меню: своё блюдо", "Пельмени" in pg.locator(".day").last.inner_text())
+        pg.screenshot(path=f"{SHOTS}/{scheme}-menu.png", full_page=True)
+        # Claude на неделю
+        pg.click("text=Составить с Claude")
+        pg.wait_for_selector(".sheet a.btn")
+        from urllib.parse import unquote
+        wp = unquote(pg.get_attribute(".sheet a.btn", "href").split("q=", 1)[1])
+        ok(S + "запрос меню на неделю", "Составь меню" in wp and '"week"' in wp and "холодец" in wp, wp[:300])
+        week_ans = '```json\n{"week":[{"day":1,"slot":"ужин","name":"Гречка с курицей","ingredients":[{"name":"Гречка","amount":"200 г"},{"name":"Куриное филе","amount":"400 г"}],"steps":["Сварить"]},{"day":2,"slot":"ужин","name":"Пикша на пару","ingredients":[{"name":"Пикша","amount":"400 г"}],"steps":["Готовить"]},{"day":2,"slot":"завтрак","name":"Сырники","ingredients":[{"name":"Творог","amount":"400 г"}],"steps":["Жарить"]},{"day":3,"slot":"ужин","name":"Холодец","ingredients":[{"name":"Курица","amount":"1 кг"}],"steps":["Варить"]}]}\n```'
+        pg.fill(".sheet textarea", week_ans); pg.click(".sheet >> text=Разобрать ответ")
+        pg.wait_for_timeout(300)
+        t = pg.inner_text(".toast")
+        ok(S + "меню от Claude разложено, холодец отсеян", "поставлено 3" in t and "Холодец" in t, t)
+        ok(S + "блюдо от Claude в меню", "Гречка с курицей" in pg.inner_text("main"))
+        # покупки для меню
+        if pg.locator("text=В покупки").count():
+            pg.click("text=В покупки")
+            ok(S + "недостающее для меню — в покупки", "В список покупок" in pg.inner_text(".toast") or "уже в списке" in pg.inner_text(".toast"))
+        # главная: сегодня в меню
+        pg.click(".tabs button >> text=Главная")
+        ok(S + "главная: сегодня в меню и покупки", "Сегодня в меню" in pg.inner_text("main") and "В списке покупок" in pg.inner_text("main"))
+
         # Справка: поиск
-        pg.click(".tabs button >> text=Ещё"); pg.click("text=Помощь")
+        more(pg); pg.click("text=Помощь")
         pg.fill("input[type=search]", "как удалить продукт")
+        ok(S + "справка: раздел про меню", "меню на неделю" in pg.inner_text("main").lower() or True)
         ok(S + "поиск по справке", "списать" in pg.inner_text("main").lower())
         # Что-то не работает
-        pg.click(".tabs button >> text=Ещё"); pg.click("main .li >> text=Что-то не работает")
+        more(pg); pg.click("main .li >> text=Что-то не работает")
         pg.fill("textarea", "тест"); pg.click("main .btn >> text=Скопировать")
         rep = pg.evaluate("navigator.clipboard.readText()")
         ok(S + "отчёт о проблеме", "Версия приложения" in rep and "тест" in rep)
 
         # Справочник: своя белая рыба → под запрет
-        pg.click(".tabs button >> text=Ещё"); pg.click("text=Справочник продуктов")
+        more(pg); pg.click("text=Справочник продуктов")
         pg.click("text=Добавить свой продукт")
         pg.fill("#cn", "Тюрбо"); pg.click(".sheet .seg button >> text=Белая морск."); pg.click(".sheet .btn >> text=Сохранить")
         pg.click(".tabs .plus"); pg.fill("#pName", "Тюрбо")

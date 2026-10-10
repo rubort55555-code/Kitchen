@@ -6,9 +6,11 @@ import { buildPrompt, claudeUrl, parseAnswer } from "../lib/claude";
 import { compileRules, checkRecipe } from "../lib/exclusions";
 import type { Recipe } from "../lib/types";
 import { daysLeft, plural } from "../lib/util";
-import { closeSheet, goTab, toast } from "../lib/ui";
+import { closeSheet, goMenu, goTab, toast } from "../lib/ui";
+import { applyWeekAnswer, weekDays, weekPromptPart } from "../lib/plan";
+import { ymd } from "../lib/util";
 
-export function AskClaude() {
+export function AskClaude({ week }: { week?: string }) {
   const { products, settings } = useStore((s) => s);
   const members = settings.members;
   const [who, setWho] = useState<string>("all");
@@ -20,12 +22,14 @@ export function AskClaude() {
   const [err, setErr] = useState("");
   const [copied, setCopied] = useState("");
   const whoIds = who === "all" ? members.map((m) => m.id) : [who];
+  const slots = settings.planSlots?.length ? settings.planSlots : (["обед", "ужин"] as const).slice();
+  const days = week ? weekDays(week).filter((d) => d >= ymd()) : [];
   const urgent = products.filter((p) => { const d = daysLeft(p.until); return d !== null && d <= 2; }).map((p) => p.name);
 
   const prompt = useMemo(() => buildPrompt(
-    { who: whoIds, minutes: Number(minutes) || null, kind, count: 3, wish, useFirst: urgent.slice(0, 5) },
+    { who: whoIds, minutes: Number(minutes) || null, kind: week ? "любое" : kind, count: 3, wish, useFirst: urgent.slice(0, 5), weekPart: week ? weekPromptPart(days.length ? days : weekDays(week), slots) : undefined },
     products, members, settings.rules, settings.basics, settings.customCatalog,
-  ), [who, minutes, kind, wish, products, settings]);
+  ), [who, minutes, kind, wish, products, settings, week]);
 
   async function copy(text: string) {
     try { await navigator.clipboard.writeText(text); return true; } catch { return false; }
@@ -43,6 +47,14 @@ export function AskClaude() {
   const compiled = useMemo(() => compileRules(settings.rules, settings.customCatalog, members), [settings]);
   function parse(t = answer) {
     setErr("");
+    if (week) {
+      const r = applyWeekAnswer(t, days.length ? days : weekDays(week), slots, whoIds);
+      if (r.error) { setErr(r.error); return; }
+      closeSheet();
+      goMenu();
+      toast(`В меню поставлено ${r.placed} ${plural(r.placed, "блюдо", "блюда", "блюд")}` + (r.skipped.length ? `; не подошло по ограничениям: ${r.skipped.join(", ")}` : ""));
+      return;
+    }
     const r = parseAnswer(t);
     if (r.error) { setParsed(null); setErr(r.error); return; }
     setParsed(r.recipes);
@@ -58,18 +70,19 @@ export function AskClaude() {
   }
 
   return (
-    <Sheet title="Спросить Claude">
+    <Sheet title={week ? "Меню с Claude" : "Спросить Claude"}>
       <p className="muted small mt0">Claude получит список ваших продуктов, сроки и ограничения в питании. Это бесплатно — откроется обычный чат.</p>
       <label className="f">Кто будет есть</label>
       <Seg label="Кто будет есть" value={who} onChange={setWho} options={[{ v: "all", t: "Оба" }, ...members.map((m) => ({ v: m.id, t: "Только " + m.name }))]} />
       <label className="f">Время</label>
       <Seg label="Время" value={minutes} onChange={setMinutes} options={[{ v: "0", t: "Любое" }, { v: "15", t: "15 мин" }, { v: "30", t: "30 мин" }, { v: "60", t: "1 час" }]} />
-      <label className="f">Блюдо</label>
-      <div className="chips">
+      {week && <p className="small">Claude составит меню на {days.length || 7} {plural(days.length || 7, "день", "дня", "дней")}: {slots.join(", ")}. Блюда сами встанут по дням.</p>}
+      {!week && <label className="f">Блюдо</label>}
+      {!week && <div className="chips">
         {["любое", "завтрак", "обед", "ужин", "суп", "перекус", "выпечка"].map((k) => (
           <button key={k} className="chip" aria-pressed={kind === k} onClick={() => setKind(k)}>{k[0].toUpperCase() + k.slice(1)}</button>
         ))}
-      </div>
+      </div>}
       <label className="f" htmlFor="wish">Пожелание (необязательно)</label>
       <input id="wish" className="inp" value={wish} onChange={(e: any) => setWish(e.target.value)} placeholder="Например: без духовки, что-то лёгкое" />
       {urgent.length > 0 && <p className="small"><b>В первую очередь:</b> {urgent.slice(0, 5).join(", ")}</p>}

@@ -127,7 +127,41 @@ export interface CatalogItem {
   custom?: boolean;
 }
 
+/** Строка списка покупок. */
+export interface ShopItem {
+  id: string;
+  name: string;
+  /** Сколько купить — текстом, как написали («2 шт», «1 кг», «пачка»). */
+  amount: string;
+  done: boolean;
+  /** Откуда: «Меню», название рецепта, «Запасы» или пусто (вручную). */
+  from?: string;
+  createdAt: number;
+}
+
+/** Минимальный запас: «всегда держать: яйца ≥ 10 шт». */
+export interface MinStock { name: string; qty: number; unit: Unit }
+
+export type Slot = "завтрак" | "обед" | "ужин";
+export const SLOTS: Slot[] = ["завтрак", "обед", "ужин"];
+
+/** Блюдо в меню на конкретный день. */
+export interface PlanEntry {
+  id: string;
+  /** ГГГГ-ММ-ДД */
+  date: string;
+  slot: Slot;
+  name: string;
+  recipeId?: string;
+  done?: boolean;
+}
+
 export interface Settings {
+  shop: ShopItem[];
+  minStock: MinStock[];
+  plan: PlanEntry[];
+  /** Какие приёмы пищи планируем. */
+  planSlots: Slot[];
   members: Member[];
   rules: Rule[];
   /** Базовые продукты: не считаются недостающими. */

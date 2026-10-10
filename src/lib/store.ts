@@ -28,6 +28,10 @@ export function defaultSettings(): Settings {
     tipsSeen: [],
     customCatalog: [],
     lastBuy: {},
+    shop: [],
+    minStock: [{ name: "Яйца", qty: 10, unit: "шт" }],
+    plan: [],
+    planSlots: ["обед", "ужин"],
   };
 }
 
@@ -50,7 +54,7 @@ async function persist(p: Promise<void>) {
     if (state.saveError) set({ saveError: null });
   } catch (e) {
     reportError(e);
-    set({ saveError: "Не удалось сохранить изменения на телефоне. Сделайте копию данных (Ещё → Данные)." });
+    set({ saveError: "Не удалось сохранить изменения на телефоне. Сделайте копию данных (⚙︎ Ещё → Данные)." });
   }
 }
 
@@ -226,7 +230,13 @@ export async function restore(b: Backup, mode: "replace" | "merge") {
     products = mergeBy(state.products, b.products);
     log = mergeBy(state.log, b.log).sort((x, y) => x.t - y.t);
     recipes = mergeBy(state.recipes, b.recipes);
-    settings = { ...state.settings, lastBuy: { ...b.settings.lastBuy, ...state.settings.lastBuy } };
+    const byId = <T extends { id: string }>(a: T[] = [], c: T[] = []) => { const m = new Map(a.map((x) => [x.id, x])); c.forEach((x) => { if (!m.has(x.id)) m.set(x.id, x); }); return Array.from(m.values()); };
+    settings = {
+      ...state.settings,
+      lastBuy: { ...b.settings.lastBuy, ...state.settings.lastBuy },
+      shop: byId(state.settings.shop, b.settings.shop),
+      plan: byId(state.settings.plan, b.settings.plan),
+    };
   }
   await db.replaceAll({ products, log, recipes, kv: { settings } });
   set({ products, log, recipes, settings });

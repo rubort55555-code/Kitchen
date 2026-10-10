@@ -1,6 +1,9 @@
 // Главная: что съесть первым, что приготовить, сколько пропало за месяц.
 import { useMemo } from "react";
-import { Header } from "../components/ui";
+import { Header, Icon } from "../components/ui";
+import { entriesFor } from "../lib/plan";
+import { SLOTS } from "../lib/types";
+import { cap, ymd } from "../lib/util";
 import { useStore, valueOf } from "../lib/store";
 import { findCatalog } from "../lib/catalog";
 import { compileRules, checkRecipe } from "../lib/exclusions";
@@ -8,7 +11,7 @@ import { recipeStatus } from "../lib/match";
 import { monthStart, summary } from "../lib/stats";
 import { daysLeft, freshness, plural, rub, untilText } from "../lib/util";
 import { qtyText } from "../lib/units";
-import { goPage, goTab, openSheet } from "../lib/ui";
+import { goMenu, goPage, goTab, openSheet } from "../lib/ui";
 
 const MONTHS = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
 
@@ -31,10 +34,13 @@ export function Home() {
   const backupDays = settings.lastBackup ? Math.floor((Date.now() - settings.lastBackup) / 86400000) : null;
   const needBackup = (products.length > 0 || log.length > 0) && (backupDays === null || backupDays >= 7);
   const today = new Date();
+  const todayMenu = entriesFor(ymd(), settings.plan || []).filter((e) => SLOTS.includes(e.slot));
+  const shopOpen = (settings.shop || []).filter((x) => !x.done).length;
 
   return (
     <div className="screen">
-      <Header title="Кухня" screen="home" sub={today.toLocaleDateString("ru-RU", { weekday: "long", day: "numeric", month: "long" })} />
+      <Header title="Кухня" screen="home" sub={today.toLocaleDateString("ru-RU", { weekday: "long", day: "numeric", month: "long" })}
+        extra={<button className="helpbtn" aria-label="Ещё: семья, ограничения, данные" onClick={() => goPage(null)} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}><Icon.gear /></button>} />
       {saveError && <div className="banner bad"><span className="txt">{saveError}</span></div>}
       {needBackup && (
         <div className="banner warn">
@@ -72,6 +78,21 @@ export function Home() {
           )}
         </div>
       )}
+
+      <div className="card">
+        <h3>Сегодня в меню <button className="link small" style={{ padding: 0 }} onClick={goMenu}>Неделя ›</button></h3>
+        {todayMenu.length ? (
+          todayMenu.map((e) => (
+            <button key={e.id} className="li" style={{ padding: "8px 0", minHeight: 44 }} onClick={() => (e.recipeId && recipes.some((r) => r.id === e.recipeId) ? openSheet({ kind: "recipe", id: e.recipeId }) : goMenu())}>
+              <span className="ico" style={{ fontSize: 15, width: 60, textAlign: "left" }} >{cap(e.slot)}</span>
+              <div className="main"><div className={"name" + (e.done ? " muted" : "")} style={{ textDecoration: e.done ? "line-through" : undefined }}>{e.name}</div></div>
+            </button>
+          ))
+        ) : (
+          <p className="muted mt0">На сегодня ничего не запланировано. <button className="link" style={{ padding: 0 }} onClick={goMenu}>Составить меню на неделю</button></p>
+        )}
+        {shopOpen > 0 && <button className="btn ghost" style={{ marginTop: 8, background: "var(--card2)" }} onClick={() => goTab("shop")}>🛒 В списке покупок: {shopOpen}</button>}
+      </div>
 
       <div className="card">
         <h3>Что приготовить</h3>

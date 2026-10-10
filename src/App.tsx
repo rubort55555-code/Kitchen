@@ -9,12 +9,14 @@ import { More, HelpSheet } from "./screens/More";
 import { AddProduct } from "./screens/AddProduct";
 import { ProductSheet } from "./screens/ProductSheet";
 import { AskClaude } from "./screens/AskClaude";
+import { Shop, BuySheet } from "./screens/Shop";
+import { PickSheet } from "./screens/Menu";
 
 const TABS: { id: Tab; title: string; icon: typeof Icon.home }[] = [
   { id: "home", title: "Главная", icon: Icon.home },
   { id: "products", title: "Продукты", icon: Icon.fridge },
   { id: "recipes", title: "Рецепты", icon: Icon.book },
-  { id: "more", title: "Ещё", icon: Icon.more },
+  { id: "shop", title: "Покупки", icon: Icon.cart },
 ];
 
 function SheetView({ s }: { s: Sheet }) {
@@ -22,7 +24,9 @@ function SheetView({ s }: { s: Sheet }) {
     case "add": return <AddProduct />;
     case "product": return <ProductSheet id={s.id} />;
     case "help": return <HelpSheet screen={s.screen} />;
-    case "ask": return <AskClaude />;
+    case "ask": return <AskClaude week={s.week} />;
+    case "pick": return <PickSheet date={s.date} slot={s.slot} />;
+    case "buy": return <BuySheet />;
     case "recipe": return <RecipeView id={s.id} />;
   }
 }
@@ -45,6 +49,7 @@ export function App() {
         {tab === "home" && <Home />}
         {tab === "products" && <Products />}
         {tab === "recipes" && <Recipes />}
+        {tab === "shop" && <Shop />}
         {tab === "more" && <More />}
       </main>
       <nav className="tabs" aria-label="Разделы">

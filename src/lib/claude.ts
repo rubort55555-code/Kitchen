@@ -13,6 +13,7 @@ export interface AskOptions {
   count: number;          // сколько блюд предложить
   wish: string;           // пожелание своими словами
   useFirst: string[];     // продукты, которые точно нужно использовать
+  weekPart?: string;      // для меню на неделю: своя просьба и свой формат ответа
 }
 
 export function rulesText(rules: Rule[], members: Member[], who: string[], custom: CatalogItem[]): string[] {
@@ -48,7 +49,7 @@ export function buildPrompt(o: AskOptions, products: Product[], members: Member[
     return `- ${p.name} — ${qtyText(p.qty, p.unit)} (${p.place.toLowerCase()}${when})`;
   });
   const lines = [
-    `Помоги решить, что приготовить дома. Предложи ${o.count} ${o.count === 1 ? "блюдо" : "блюда"}.`,
+    o.weekPart ? "Помоги составить меню для нашей семьи из того, что есть дома." : `Помоги решить, что приготовить дома. Предложи ${o.count} ${o.count === 1 ? "блюдо" : "блюда"}.`,
     `Едят: ${whoText}. Порции рассчитай на ${eaters.length || 1}.`,
     o.minutes ? `Время готовки: не больше ${o.minutes} минут.` : "",
     o.kind && o.kind !== "любое" ? `Тип блюда: ${o.kind}.` : "",
@@ -65,10 +66,12 @@ export function buildPrompt(o: AskOptions, products: Product[], members: Member[
     "Главное — использовать то, что скоро испортится. Можно 1–2 продукта, которых нет дома.",
     "Пиши простым языком, шаги короткие. Названия ингредиентов пиши так же, как в моём списке.",
     "",
-    "В конце ответа обязательно дай блок JSON строго в таком виде (между ```json и ```), чтобы я вставил его в приложение:",
-    "```json",
-    '{"dishes":[{"name":"Название","minutes":30,"servings":2,"kind":"ужин","why":"почему это блюдо","ingredients":[{"name":"Молоко","amount":"200 мл"}],"steps":["Шаг 1","Шаг 2"]}]}',
-    "```",
+    ...(o.weekPart ? [o.weekPart] : [
+      "В конце ответа обязательно дай блок JSON строго в таком виде (между ```json и ```), чтобы я вставил его в приложение:",
+      "```json",
+      '{"dishes":[{"name":"Название","minutes":30,"servings":2,"kind":"ужин","why":"почему это блюдо","ingredients":[{"name":"Молоко","amount":"200 мл"}],"steps":["Шаг 1","Шаг 2"]}]}',
+      "```",
+    ]),
   ];
   return lines.filter((l, i, a) => l !== "" || (a[i - 1] !== "" && i > 0)).join("\n");
 }

@@ -57,7 +57,22 @@ export function makeDemo(): Backup {
   const dill = products.find((p) => p.name === "Укроп");
   if (dill) dill.until = addDays(ymd(), 1);
   const recipes: Recipe[] = parseAnswer(EXAMPLE_ANSWER).recipes.map((r) => ({ ...r, source: "manual" as const }));
-  return { app: BACKUP_APP, v: 1, at: new Date().toISOString(), products, log, recipes, settings: { ...defaultSettings(), lastBuy, lastBackup: Date.now() } };
+  // Меню и список покупок для примера
+  const today = ymd();
+  const plan = [
+    { id: uid(), date: today, slot: "ужин" as const, name: recipes[3]?.name || "Салат", recipeId: recipes[3]?.id },
+    { id: uid(), date: addDays(today, 1), slot: "завтрак" as const, name: recipes[0]?.name || "Омлет", recipeId: recipes[0]?.id },
+    { id: uid(), date: addDays(today, 1), slot: "ужин" as const, name: "Пельмени" },
+  ];
+  const shop = [
+    { id: uid(), name: "Хлеб", amount: "1 шт", done: false, createdAt: now },
+    { id: uid(), name: "Сметана", amount: "300 г", done: false, from: "Меню", createdAt: now },
+    { id: uid(), name: "Бананы", amount: "1 кг", done: false, createdAt: now },
+  ];
+  return {
+    app: BACKUP_APP, v: 1, at: new Date().toISOString(), products, log, recipes,
+    settings: { ...defaultSettings(), lastBuy, lastBackup: Date.now(), plan, shop, planSlots: ["завтрак", "ужин"] },
+  };
 }
 
 /** Пример ответа Claude для проверки исключений: обычное блюдо, треска (замена), холодец (скрыть), много семечек. */

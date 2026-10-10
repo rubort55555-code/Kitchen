@@ -24,8 +24,10 @@ if ("serviceWorker" in navigator && location.protocol !== "file:") {
           if (w.state === "installed" && navigator.serviceWorker.controller) offer(w);
         });
       });
+      // Перезагружаемся только при обновлении (при первой установке перезагрузка не нужна)
+      const hadController = !!navigator.serviceWorker.controller;
       let reloaded = false;
-      navigator.serviceWorker.addEventListener("controllerchange", () => { if (!reloaded) { reloaded = true; location.reload(); } });
+      navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController && !reloaded) { reloaded = true; location.reload(); } });
       // Проверяем обновления каждый раз, когда приложение снова открывают
       document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") reg.update().catch(() => {}); });
     } catch (e) {

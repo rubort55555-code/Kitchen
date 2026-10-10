@@ -4,7 +4,7 @@ import { closeSheet, hideToast, openSheet, useUI } from "../lib/ui";
 import type { Screen } from "../lib/help";
 import { markTip, useStore } from "../lib/store";
 
-export function Header({ title, sub, screen, onBack, backText = "Назад" }: { title: string; sub?: string; screen: Screen; onBack?: () => void; backText?: string }) {
+export function Header({ title, sub, screen, onBack, backText = "Назад", extra }: { title: string; sub?: string; screen: Screen; onBack?: () => void; backText?: string; extra?: ReactNode }) {
   return (
     <>
       {onBack && (
@@ -14,7 +14,7 @@ export function Header({ title, sub, screen, onBack, backText = "Назад" }: 
       )}
       <div className="top">
         <h1>{title}</h1>
-        <HelpButton screen={screen} />
+        <div style={{ display: "flex", gap: 10 }}>{extra}<HelpButton screen={screen} /></div>
       </div>
       {sub && <div className="sub">{sub}</div>}
     </>
@@ -106,5 +106,7 @@ export const Icon = {
   fridge: () => (<svg viewBox="0 0 24 24" aria-hidden="true"><rect {...P} x="5" y="2.5" width="14" height="19" rx="2.5" /><path {...P} d="M5 10h14M9 6v2M9 13v3" /></svg>),
   book: () => (<svg viewBox="0 0 24 24" aria-hidden="true"><path {...P} d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v15H5.5A1.5 1.5 0 0 0 4 19.5zM4 19.5A1.5 1.5 0 0 0 5.5 21H20v-3" /><path {...P} d="M9 8h7M9 11.5h5" /></svg>),
   more: () => (<svg viewBox="0 0 24 24" aria-hidden="true"><path {...P} d="M4 19V11M10 19V5M16 19v-6M22 19H2" /></svg>),
+  cart: () => (<svg viewBox="0 0 24 24" aria-hidden="true"><path {...P} d="M3 4h2.2l2.3 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.3" /><circle {...P} cx="9.5" cy="20" r="1.3" /><circle {...P} cx="17" cy="20" r="1.3" /></svg>),
+  gear: () => (<svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><circle {...P} cx="12" cy="12" r="3" /><path {...P} d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" /></svg>),
   plus: () => (<svg viewBox="0 0 24 24" aria-hidden="true"><path {...P} strokeWidth={2.6} d="M12 5v14M5 12h14" /></svg>),
 };
