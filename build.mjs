@@ -3,6 +3,7 @@
 import * as esbuild from "esbuild";
 import { readFileSync, writeFileSync, rmSync, mkdirSync, cpSync, readdirSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
+import { loadAll } from "./tools/recipes.mjs";
 
 const now = new Date();
 const pad = (n) => String(n).padStart(2, "0");
@@ -36,6 +37,12 @@ const js = outs.find((f) => f.endsWith(".js"));
 const css = outs.find((f) => f.endsWith(".css"));
 
 cpSync("public", "dist", { recursive: true });
+
+// База рецептов: из текстовых файлов recipes/*.txt — в один файл recipes.json
+const base = loadAll("recipes");
+if (base.errors.length) { console.error("Ошибки в рецептах:\n" + base.errors.join("\n")); process.exit(1); }
+writeFileSync("dist/recipes.json", JSON.stringify(base.recipes));
+console.log("Рецептов в базе:", base.recipes.length);
 
 const html = readFileSync("src/index.html", "utf8")
   .replace("%CSS%", css ? `<link rel="stylesheet" href="./${css}">` : "")

@@ -98,7 +98,8 @@ export interface Recipe {
   ingredients: Ingredient[];
   steps: string[];
   why?: string;
-  source: "claude" | "old" | "manual";
+  source: "claude" | "old" | "manual" | "base";
+  tags?: string[];
   fav?: boolean;
   note?: string;
   createdAt: number;
