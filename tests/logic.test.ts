@@ -1,0 +1,60 @@
+import { compileRules, checkRecipe, findHits, toTbsp, applyReplace, DEFAULT_RULES } from "../src/lib/exclusions";
+import { findCatalog } from "../src/lib/catalog";
+import { addQty, qtyText } from "../src/lib/units";
+import { parseAnswer, buildPrompt } from "../src/lib/claude";
+import { rub, num } from "../src/lib/util";
+import type { Recipe } from "../src/lib/types";
+
+let pass = 0, fail = 0;
+const ok = (name: string, c: boolean, extra?: unknown) => { if (c) pass++; else { fail++; console.log("FAIL", name, extra ?? ""); } };
+const members = [{ id: "m1", name: "Аня", allergies: [], dislikes: ["грибы"] }, { id: "m2", name: "Петя", allergies: ["арахис"], dislikes: [] }];
+const C = compileRules(DEFAULT_RULES, [], members);
+const both = ["m1", "m2"];
+const R = (name: string, ings: [string, string][], steps: string[] = []): Recipe => ({ id: "x", name, ingredients: ings.map(([n, a]) => ({ name: n, amount: a })), steps, source: "manual", createdAt: 0 });
+const v = (r: Recipe, who = both) => checkRecipe(r, C, who).verdict;
+
+ok("холодец скрыт", v(R("Холодец из курицы", [["Курица", "1 кг"]])) === "hidden");
+ok("студень скрыт", v(R("Студень", [["Свиные ножки", "1 кг"]])) === "hidden");
+ok("заливное из мяса скрыто", v(R("Заливное из мяса", [["Говядина", "500 г"]])) === "hidden");
+ok("холодная вода не холодец", v(R("Омлет", [["Яйца", "3 шт"]], ["Залейте холодной водой", "Поставьте в холодильник"])) === "ok");
+ok("треска → warn с заменой", (() => { const c = checkRecipe(R("Рыба в духовке", [["Филе трески", "500 г"]]), C, both); return c.verdict === "warn" && c.issues[0].replace === "минтай"; })());
+ok("треска в названии", v(R("Треска в кляре", [["Мука", "100 г"]])) === "warn");
+ok("морского окуня", v(R("Уха", [["Морского окуня", "1 шт"]])) === "warn");
+ok("пикша/хек/палтус/дорадо/сибас", ["Пикша", "Хек", "Палтус", "Дорадо", "Сибас", "Сайда", "Путассу", "Навага"].every((f) => v(R("Блюдо", [[f, "300 г"]])) === "warn"));
+ok("минтай можно", v(R("Минтай с овощами", [["Минтай", "500 г"]])) === "ok");
+ok("камбала можно", v(R("Жареная камбала", [["Камбала", "2 шт"]])) === "ok");
+ok("лосось можно", v(R("Лосось на пару", [["Лосось", "300 г"]])) === "ok");
+ok("речной окунь можно", v(R("Окунь жареный", [["Окунь речной", "2 шт"]])) === "ok");
+ok("семечки 1 ст.л. ок", v(R("Салат", [["Семечки подсолнечные", "1 ст. л."]])) === "ok");
+ok("семечки 2 ст.л. ок", v(R("Салат", [["Семечки", "2 ст. л."]])) === "ok");
+ok("семечки 100 г скрыт", v(R("Салат", [["Семечки", "100 г"]])) === "hidden");
+ok("семечки стакан скрыт", v(R("Козинак", [["Семечки", "1 стакан"]])) === "hidden");
+ok("салат с семечками 1 ст.л. ок", v(R("Салат с семечками", [["Семечки", "1 ст. л."]])) === "ok");
+ok("семечки в названии скрыт", v(R("Козинаки из семечек", [["Мёд", "100 г"]])) === "hidden");
+ok("подсолнечное масло ок", v(R("Салат", [["Масло подсолнечное", "2 ст. л."]])) === "ok");
+ok("тыквенные семечки ок", v(R("Салат", [["Тыквенные семечки", "50 г"]])) === "ok");
+ok("грибы: только когда ест Аня", v(R("Суп", [["Грибы", "200 г"]]), ["m2"]) === "ok" && v(R("Суп", [["Грибы", "200 г"]]), ["m1"]) === "hidden");
+ok("арахис: Петя", v(R("Соус", [["Арахис", "50 г"]]), ["m2"]) === "hidden");
+ok("toTbsp", toTbsp("2 ст. л.") === 2 && toTbsp("30 г") === 3 && toTbsp("по вкусу") === 1 && toTbsp("1 ч. л.")! < 1);
+ok("applyReplace", (() => { const r = applyReplace(R("Треска в кляре", [["Треска", "500 г"]], ["Обжарьте треску"]), "треска", "минтай"); return r.name === "Минтай в кляре" && r.ingredients[0].name === "Минтай" && r.steps[0] === "Обжарьте минтай" && checkRecipe(r, C, both).verdict === "ok"; })(), applyReplace(R("Треска в кляре", [["Треска", "500 г"]], ["Обжарьте треску"]), "треска", "минтай"));
+ok("findHits product", findHits("Филе хека", C, both).length === 1 && findHits("Минтай", C, both).length === 0);
+// справочник
+ok("каталог молоко", findCatalog("МОЛОКО")?.n === "Молоко");
+ok("каталог грудка", findCatalog("куриная грудка")?.n === "Куриное филе");
+ok("каталог помидоры черри", findCatalog("помидоры черри")?.n === "Помидоры");
+ok("каталог подсолнечное масло", findCatalog("подсолнечное масло")?.n === "Масло подсолнечное");
+ok("каталог филе трески", findCatalog("филе трески")?.n === "Треска", findCatalog("филе трески")?.n);
+// единицы и формат
+ok("500 г + 1 кг", (() => { const r = addQty(500, "г", 1, "кг")!; return qtyText(r.qty, r.unit) === "1,5 кг"; })());
+ok("rub", rub(1250) === "1 250 ₽" && rub(45.5) === "45,5 ₽", rub(1250));
+ok("num", num(0.5) === "0,5");
+// ответ Claude
+const ans = 'Вот идеи!\n1. Омлет...\n```json\n{"dishes":[{"name":"Омлет","minutes":15,"servings":2,"ingredients":[{"name":"Яйца","amount":"4 шт"}],"steps":["1. Взбить","Жарить"]},{"name":"Салат","ingredients":["Огурцы — 2 шт"],"steps":[]}]}\n```';
+const p = parseAnswer(ans);
+ok("parse 2 блюда", p.recipes.length === 2 && p.recipes[0].steps[0] === "Взбить" && p.recipes[1].ingredients[0].amount === "2 шт", p);
+ok("parse без json", parseAnswer("просто текст").recipes.length === 0);
+ok("parse без ограды", parseAnswer('Ответ: {"dishes":[{"name":"Каша","ingredients":[],"steps":["Варить"],}]}').recipes.length === 1);
+const pr = buildPrompt({ who: both, minutes: 30, kind: "ужин", count: 3, wish: "", useFirst: [] }, [], members, DEFAULT_RULES, ["соль"], []);
+ok("prompt содержит ограничения", /холодец/.test(pr) && /треска/.test(pr) && /камбала и минтай/.test(pr) && /арахис/.test(pr) && /```json/.test(pr), pr);
+console.log(`\nЛогика: ${pass} из ${pass + fail}`);
+if (fail) process.exit(1);

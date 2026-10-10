@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "typeRoots": [], "paths": { "react": ["./local-types/react.d.ts"], "react-dom/client": ["./local-types/react-dom.d.ts"], "react/jsx-runtime": ["./local-types/jsx-runtime.d.ts"] } },
+  "include": ["src", "local-types"]
+}
