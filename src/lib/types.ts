@@ -161,6 +161,8 @@ export interface PlanEntry {
   name: string;
   recipeId?: string;
   done?: boolean;
+  /** Салат или лёгкая добавка к основному блюду. */
+  side?: { id: string; name: string };
 }
 
 export interface Settings {

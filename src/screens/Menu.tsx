@@ -1,5 +1,5 @@
 // «Меню на неделю»: дни × приёмы пищи; заполнить вручную, из своих рецептов или с Claude.
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { Sheet } from "../components/ui";
 import { setSettings, useStore } from "../lib/store";
 import { addEntry, autoFill, dayShort, dayTitle, entriesFor, pruneOld, recipesInPlan, removeEntry, restorePlan, toggleDone, weekDays } from "../lib/plan";
@@ -69,7 +69,8 @@ export function Menu() {
           {slots.map((slot) => {
             const e = entriesFor(d, plan).find((x) => x.slot === slot);
             return (
-              <div key={slot} className="meal">
+              <Fragment key={slot}>
+              <div className="meal">
                 <span className="slot">{cap(slot)}</span>
                 {e ? (
                   <>
@@ -81,6 +82,14 @@ export function Menu() {
                   <button className="dish empty" onClick={() => openSheet({ kind: "pick", date: d, slot })}>+ Добавить</button>
                 )}
               </div>
+              {e?.side && (
+                <div className="meal side">
+                  <span className="slot">+ салат</span>
+                  <button className="dish" onClick={() => openSheet({ kind: "recipe", id: e.side!.id })}>{e.side.name}</button>
+                  <button className="ib" aria-label={`Убрать салат: ${e.side.name}`} onClick={() => { const before = plan; restorePlan(plan.map((x) => (x.id === e.id ? { ...x, side: undefined } : x))); toast(`Убрано: ${e.side!.name}`, () => restorePlan(before)); }}>×</button>
+                </div>
+              )}
+              </Fragment>
             );
           })}
         </div>
