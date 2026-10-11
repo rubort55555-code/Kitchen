@@ -102,6 +102,8 @@ export interface Recipe {
   tags?: string[];
   fav?: boolean;
   note?: string;
+  /** Кухня, если выбрана вручную (иначе определяется сама). */
+  cuisine?: string;
   /** Фото блюда: сжатая картинка (data:image/jpeg). */
   photo?: string;
   /** Оценка 1–5. */

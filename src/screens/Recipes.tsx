@@ -8,6 +8,8 @@ import { SLOTS, type Slot } from "../lib/types";
 import { deleteRecipe, saveRecipes, useStore } from "../lib/store";
 import { applyReplace, compileRules, checkRecipe } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
+import { CUISINES, KINDS_ORDER, cuisineOf } from "../lib/cuisine";
+import type { Recipe } from "../lib/types";
 import { cap, norm, parseYmd, ymd } from "../lib/util";
 import { closeSheet, openSheet, setRecipesView, toast, useUI } from "../lib/ui";
 
@@ -19,6 +21,8 @@ export function Recipes() {
   const [q, setQ] = useState("");
   const [showHidden, setShowHidden] = useState(false);
   const [limit, setLimit] = useState(60);
+  const [kindF, setKindF] = useState("");
+  const [cuisF, setCuisF] = useState("");
   const rows = useMemo(() => {
     const compiled = compileRules(settings.rules, settings.customCatalog, settings.members);
     const who = settings.members.map((m) => m.id);
@@ -27,7 +31,15 @@ export function Recipes() {
   }, [recipes, products, settings]);
   const nq = norm(q);
   const ok = rows.filter((x) => x.c.verdict !== "hidden").filter((x) => !nq || norm(x.r.name).includes(nq) || x.r.ingredients.some((i) => norm(i.name).includes(nq)));
-  const list = ok.filter((x) => f === "all" || (f === "now" ? x.st.missing.length === 0 : f === "almost" ? x.st.missing.length > 0 && x.st.missing.length <= 2 : !!x.r.fav));
+  // Фильтры «Тип блюда» и «Кухня»; в каждом списке — сколько рецептов подходит с учётом другого фильтра
+  const kindOf = (r: Recipe) => (KINDS_ORDER.includes(norm(r.kind || "")) ? norm(r.kind || "") : "другое");
+  const byKind = ok.filter((x) => !cuisF || cuisineOf(x.r) === cuisF);
+  const byCuis = ok.filter((x) => !kindF || kindOf(x.r) === kindF);
+  const kindCounts = new Map<string, number>();
+  byKind.forEach((x) => kindCounts.set(kindOf(x.r), (kindCounts.get(kindOf(x.r)) || 0) + 1));
+  const cuisCounts = new Map<string, number>();
+  byCuis.forEach((x) => cuisCounts.set(cuisineOf(x.r), (cuisCounts.get(cuisineOf(x.r)) || 0) + 1));
+  const list = ok.filter((x) => (!kindF || kindOf(x.r) === kindF) && (!cuisF || cuisineOf(x.r) === cuisF)).filter((x) => f === "all" || (f === "now" ? x.st.missing.length === 0 : f === "almost" ? x.st.missing.length > 0 && x.st.missing.length <= 2 : !!x.r.fav));
   const hidden = rows.filter((x) => x.c.verdict === "hidden");
   const view = useUI((u) => u.recipesView);
 
@@ -62,6 +74,23 @@ export function Recipes() {
             <button className="chip" aria-pressed={f === "almost"} onClick={() => setF("almost")}>Не хватает 1–2</button>
             <button className="chip" aria-pressed={f === "fav"} onClick={() => setF("fav")}>★ Избранное</button>
           </div>
+          <div className="row2 filters">
+            <label className="fsel">
+              <span>Тип блюда</span>
+              <select className="inp" value={kindF} onChange={(e: any) => { setKindF(e.target.value); setLimit(60); }} aria-label="Тип блюда">
+                <option value="">Все ({byKind.length})</option>
+                {[...KINDS_ORDER, "другое"].filter((k) => kindCounts.get(k)).map((k) => <option key={k} value={k}>{cap(k)} ({kindCounts.get(k)})</option>)}
+              </select>
+            </label>
+            <label className="fsel">
+              <span>Кухня</span>
+              <select className="inp" value={cuisF} onChange={(e: any) => { setCuisF(e.target.value); setLimit(60); }} aria-label="Кухня">
+                <option value="">Все ({byCuis.length})</option>
+                {CUISINES.filter((c) => cuisCounts.get(c)).map((c) => <option key={c} value={c}>{c} ({cuisCounts.get(c)})</option>)}
+              </select>
+            </label>
+          </div>
+          {(kindF || cuisF) && <button className="link" onClick={() => { setKindF(""); setCuisF(""); }}>Сбросить фильтры · найдено {list.length}</button>}
           <div className="list">
             {list.slice(0, limit).map(({ r, c, st }) => (
               <button key={r.id} className="li" onClick={() => openSheet({ kind: "recipe", id: r.id })}>
@@ -118,7 +147,7 @@ export function RecipeView({ id }: { id: string }) {
     <Sheet title="Рецепт" left={<button className="x l" aria-label={r.fav ? "Убрать из избранного" : "В избранное"} onClick={() => saveRecipes([{ ...r, fav: !r.fav }])}>{r.fav ? "★" : "☆"}</button>}>
       {r.photo && <img className="dphoto" src={r.photo} alt={r.name} />}
       <h2 style={{ marginTop: 10 }}>{r.name}</h2>
-      <p className="muted mt0">{[r.minutes && `${r.minutes} мин`, r.servings && `${r.servings} порц.`, r.kind].filter(Boolean).join(" · ")}{r.source === "claude" ? " · от Claude" : r.source === "old" ? " · из «Что приготовить»" : ""}</p>
+      <p className="muted mt0">{[r.minutes && `${r.minutes} мин`, r.servings && `${r.servings} порц.`, r.kind, cuisineOf(r) + " кухня"].filter(Boolean).join(" · ")}{r.source === "claude" ? " · от Claude" : r.source === "old" ? " · из «Что приготовить»" : ""}</p>
       {r.why && <p>{r.why}</p>}
       {c.issues.map((i, k) => (
         <div key={k} className={"issue" + (i.rule.level === "little" && c.verdict !== "hidden" ? " little" : "")}>

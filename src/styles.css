@@ -330,3 +330,7 @@ select.inp { padding-right: 8px; }
 .dphoto{display:block;width:100%;max-height:260px;object-fit:cover;border-radius:14px;margin:8px 0}
 .meal.side .slot{font-size:13px}
 .meal.side .dish{font-size:15px;color:var(--muted)}
+.filters{margin-top:10px;gap:10px}
+.fsel{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0}
+.fsel span{font-size:13px;color:var(--muted)}
+.fsel select{width:100%}

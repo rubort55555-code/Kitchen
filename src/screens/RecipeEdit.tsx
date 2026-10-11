@@ -2,6 +2,7 @@
 import { useMemo, useRef, useState } from "react";
 import { Sheet } from "../components/ui";
 import { compressPhoto } from "../lib/photo";
+import { CUISINES, cuisineOf } from "../lib/cuisine";
 import { saveRecipes, useStore } from "../lib/store";
 import { applyReplace, checkRecipe, compileRules } from "../lib/exclusions";
 import { parseRecipeText, type RecipeDraft } from "../lib/recipeText";
@@ -89,6 +90,7 @@ export function RecipeEdit({ id, draft }: { id?: string; draft?: RecipeDraft }) 
   const [minutes, setMinutes] = useState(init.minutes ? String(init.minutes) : "");
   const [servings, setServings] = useState(init.servings ? String(init.servings) : "2");
   const [kind, setKind] = useState(init.kind || "основное");
+  const [cuisine, setCuisine] = useState(old?.cuisine || "");
   const [ings, setIngs] = useState(init.ingredients.length ? init.ingredients : [{ name: "", amount: "" }]);
   const [steps, setSteps] = useState(init.steps.join("\n"));
   const [err, setErr] = useState("");
@@ -120,7 +122,7 @@ export function RecipeEdit({ id, draft }: { id?: string; draft?: RecipeDraft }) 
     const r: Recipe = {
       ...(old || { id: uid(), source: "manual" as const, createdAt: Date.now() }),
       source: old && old.source === "base" ? "manual" : (old?.source || "manual"),
-      photo,
+      photo, cuisine: cuisine || undefined,
       name: name.trim(), kind, minutes: toNum(minutes) || undefined, servings: toNum(servings) || 2,
       ingredients: cur.ingredients.map((i) => ({ name: i.name.trim(), amount: i.amount.trim() })), steps: cur.steps,
     };
@@ -145,6 +147,11 @@ export function RecipeEdit({ id, draft }: { id?: string; draft?: RecipeDraft }) 
         <div><label className="f" htmlFor="rs">Порций</label><input id="rs" className="inp" inputMode="numeric" value={servings} onChange={(e: any) => setServings(e.target.value)} /></div>
         <div><label className="f" htmlFor="rk">Вид блюда</label><select id="rk" className="inp" value={kind} onChange={(e: any) => setKind(e.target.value)}>{KINDS.map((k) => <option key={k}>{k}</option>)}</select></div>
       </div>
+      <label className="f" htmlFor="rc">Кухня</label>
+      <select id="rc" className="inp" value={cuisine} onChange={(e: any) => setCuisine(e.target.value)}>
+        <option value="">Автоматически — {cuisineOf({ ...cur, kind })}</option>
+        {CUISINES.map((c) => <option key={c} value={c}>{c}</option>)}
+      </select>
 
       {chk.issues.map((i, k) => (
         <div key={k} className={"issue" + (i.rule.level === "little" && chk.verdict !== "hidden" ? " little" : "")}>
