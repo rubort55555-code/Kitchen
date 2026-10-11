@@ -74,7 +74,7 @@ export function Menu() {
                 {e ? (
                   <>
                     <button className={"dish" + (e.done ? " done" : "")} onClick={() => (e.recipeId && st.recipes.some((r) => r.id === e.recipeId) ? openSheet({ kind: "recipe", id: e.recipeId }) : openSheet({ kind: "pick", date: d, slot }))}>{e.name}</button>
-                    <button className="ib" aria-label={e.done ? "Не готовили" : "Приготовили"} onClick={() => toggleDone(e.id)}>{e.done ? "↺" : "✓"}</button>
+                    <button className="ib" aria-label={e.done ? "Не готовили" : "Приготовили"} onClick={() => (!e.done && e.recipeId && st.recipes.some((r) => r.id === e.recipeId) ? openSheet({ kind: "cook", id: e.recipeId, entry: e.id }) : toggleDone(e.id))}>{e.done ? "↺" : "✓"}</button>
                     <button className="ib" aria-label={`Убрать: ${e.name}`} onClick={() => { const before = plan; removeEntry(e.id); toast(`Убрано: ${e.name}`, () => restorePlan(before)); }}>×</button>
                   </>
                 ) : (

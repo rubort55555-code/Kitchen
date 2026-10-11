@@ -11,6 +11,7 @@ import { ProductSheet } from "./screens/ProductSheet";
 import { AskClaude } from "./screens/AskClaude";
 import { Shop, BuySheet } from "./screens/Shop";
 import { PickSheet } from "./screens/Menu";
+import { CookSheet } from "./screens/Cook";
 
 const TABS: { id: Tab; title: string; icon: typeof Icon.home }[] = [
   { id: "home", title: "Главная", icon: Icon.home },
@@ -28,6 +29,7 @@ function SheetView({ s }: { s: Sheet }) {
     case "pick": return <PickSheet date={s.date} slot={s.slot} />;
     case "buy": return <BuySheet />;
     case "recipe": return <RecipeView id={s.id} />;
+    case "cook": return <CookSheet id={s.id} entry={s.entry} />;
   }
 }
 

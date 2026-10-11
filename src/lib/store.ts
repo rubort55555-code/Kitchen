@@ -161,6 +161,63 @@ export function undoWriteOff(u: Undo) {
   persist(db.apply([{ store: "products", put: [u.product] }, { store: "log", del: [u.logId] }]));
 }
 
+export interface CookUndo { before: Product[]; logIds: string[]; leftoverId?: string }
+
+/**
+ * «Приготовили»: списывает все продукты одним действием, в журнал — причина «Приготовлено» и название блюда.
+ * leftFrac — какая доля блюда осталась на потом: её стоимость пока не считаем «съеденной»,
+ * она переходит в продукт «Остатки: …» и попадёт в статистику, когда остатки съедят или выбросят.
+ */
+export function applyCook(takes: { productId: string; take: number }[], dish: string, leftFrac = 0, leftover?: { qty: number; days: number; price: number }): CookUndo {
+  let products = state.products;
+  const before: Product[] = [];
+  const logs: LogEntry[] = [];
+  const changes: db.Change[] = [];
+  for (const t of takes) {
+    const it = products.find((x) => x.id === t.productId);
+    if (!it || !(t.take > 0)) continue;
+    const take = Math.min(t.take, it.qty);
+    const full = it.initialQty ? (it.price * take) / it.initialQty : 0;
+    logs.push(logEntry(it, "cooked", take, full * (1 - leftFrac), dish));
+    before.push(it);
+    const left = round(it.qty - take);
+    if (left <= 0) {
+      products = products.filter((x) => x.id !== it.id);
+      changes.push({ store: "products", del: [it.id] });
+    } else {
+      const upd = { ...it, qty: left };
+      products = products.map((x) => (x.id === it.id ? upd : x));
+      changes.push({ store: "products", put: [upd] });
+    }
+  }
+  let leftoverId: string | undefined;
+  if (leftover && leftover.qty > 0) {
+    const it: Product = {
+      id: uid(), name: `Остатки: ${dish}`, qty: leftover.qty, initialQty: leftover.qty, unit: "шт", place: "Холодильник",
+      bought: ymd(), until: addDays(ymd(), leftover.days), price: Math.max(0, Math.round(leftover.price * 100) / 100), opened: null, createdAt: Date.now(),
+    };
+    // «Исправлено» не считается ни покупкой, ни потерей: деньги уже учтены в приготовленных продуктах
+    logs.push(logEntry(it, "adjust", it.qty, it.price, dish));
+    products = [...products, it];
+    changes.push({ store: "products", put: [it] });
+    leftoverId = it.id;
+  }
+  if (logs.length) changes.push({ store: "log", put: logs });
+  set({ products, log: [...state.log, ...logs] });
+  persist(db.apply(changes));
+  return { before, logIds: logs.map((l) => l.id), leftoverId };
+}
+
+export function undoCook(u: CookUndo) {
+  const gone = new Set(u.logIds);
+  let products = state.products.filter((x) => x.id !== u.leftoverId);
+  for (const b of u.before) products = products.some((x) => x.id === b.id) ? products.map((x) => (x.id === b.id ? b : x)) : [...products, b];
+  set({ products, log: state.log.filter((x) => !gone.has(x.id)) });
+  const changes: db.Change[] = [{ store: "products", put: u.before }, { store: "log", del: u.logIds }];
+  if (u.leftoverId) changes.push({ store: "products", del: [u.leftoverId] });
+  persist(db.apply(changes));
+}
+
 /** Удалить продукт, добавленный по ошибке: убираем и запись «Куплено». */
 export function deleteProduct(id: string) {
   const bought = state.log.filter((x) => x.productId === id && x.reason === "bought").map((x) => x.id);

@@ -277,6 +277,47 @@ with sync_playwright() as p:
         ctx.set_offline(False)
         ok(S + "нет ошибок JS", not errs, errs[:3])
         ctx.close()
+
+    # «Приготовили»: списание продуктов, цена порции, остатки блюда, отмена
+    today = time.strftime("%Y-%m-%d")
+    def prod(i, name, qty, unit, price):
+        return {"id": i, "name": name, "qty": qty, "initialQty": qty, "unit": unit, "place": "Холодильник", "bought": today, "until": None, "price": price, "opened": None, "createdAt": 1}
+    seed_products = [prod("e", "Яйца", 10, "шт", 100), prod("m", "Молоко", 1, "л", 80), prod("b", "Масло сливочное", 180, "г", 180)]
+    seed_recipe = {"id": "r1", "name": "Омлет с сыром", "servings": 2, "kind": "завтрак", "minutes": 12, "source": "base", "createdAt": 1,
+                   "ingredients": [{"name": "Яйца", "amount": "4 шт"}, {"name": "Молоко", "amount": "100 мл"}, {"name": "Соль", "amount": "щепотка"},
+                                   {"name": "Масло сливочное", "amount": "10 г"}, {"name": "Сыр твёрдый", "amount": "60 г"}],
+                   "steps": ["Взбейте яйца с молоком.", "Пожарьте под крышкой."]}
+    ctx = br.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True)
+    pg = ctx.new_page(); errs = []
+    pg.on("pageerror", lambda e: errs.append(str(e)))
+    pg.goto(URL); pg.wait_for_selector("h1")
+    pg.evaluate("""async ([prods, rec]) => { await new Promise((res, rej) => { const r = indexedDB.open('kitchen'); r.onsuccess = () => { const db = r.result; const tx = db.transaction(['products','recipes'], 'readwrite');
+        prods.forEach(x => tx.objectStore('products').put(x)); tx.objectStore('recipes').put(rec); tx.oncomplete = () => res(); tx.onerror = () => rej(tx.error); }; r.onerror = () => rej(r.error); }); }""", [seed_products, seed_recipe])
+    pg.reload(); pg.wait_for_selector("h1")
+    S = "[готовка] "
+    pg.click(".tabs button >> text=Рецепты"); pg.wait_for_selector(".li")
+    pg.click(".li >> text=Омлет с сыром"); pg.wait_for_selector(".sheet")
+    ok(S + "в рецепте есть кнопка «Приготовили»", pg.locator("button", has_text="Приготовили — списать продукты").count() == 1)
+    pg.click("button >> text=Приготовили — списать продукты"); pg.wait_for_selector(".cook-row")
+    CK = '.sheet[aria-label="Приготовили"]'
+    txt = pg.inner_text(CK)
+    ok(S + "4 продукта, соль отдельно", pg.locator(".cook-row").count() == 4 and "Не списываем: соль" in txt, txt)
+    ok(S + "стоимость блюда и порции", "Стоимость блюда" in txt and "Одна порция" in txt, txt)
+    ok(S + "яйца 4 шт, молоко 0,1 л", pg.input_value('[aria-label="Сколько: Яйца"]') == "4" and pg.input_value('[aria-label="Сколько: Молоко"]') == "0,1")
+    pg.click('[aria-label="Больше порций"]')
+    ok(S + "порции пересчитывают количество", pg.input_value('[aria-label="Сколько: Яйца"]') == "6", pg.input_value('[aria-label="Сколько: Яйца"]'))
+    pg.click('[aria-label="Меньше порций"]')
+    pg.click('[aria-label="Больше остатков"]')
+    ok(S + "про остатки написано", "Остатки: Омлет с сыром" in pg.inner_text(CK))
+    pg.locator(CK + " .btn").last.click(); pg.wait_for_selector(".toast")
+    ok(S + "сообщение о списании и цене порции", "Списано 3 продукта" in pg.inner_text(".toast") and "Порция" in pg.inner_text(".toast"), pg.inner_text(".toast"))
+    pg.click(".toast button >> text=Отменить")
+    pg.click(".sheet-h > button:last-child")
+    pg.click(".tabs button >> text=Продукты"); pg.wait_for_selector(".li")
+    pt = pg.inner_text("main").replace("\xa0", " ")
+    ok(S + "«Отменить» возвращает продукты", "Остатки: Омлет" not in pt and "10 шт" in pt and "3 продукта на 360" in pt, pt)
+    ok(S + "нет ошибок JS", not errs, errs[:3])
+    ctx.close()
     br.close()
 srv.shutdown()
 n = sum(1 for r in res if r[1])

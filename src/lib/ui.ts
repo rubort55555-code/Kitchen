@@ -11,7 +11,8 @@ export type Sheet =
   | { kind: "ask"; week?: string }
   | { kind: "pick"; date: string; slot: import("./types").Slot }
   | { kind: "buy" }
-  | { kind: "recipe"; id: string };
+  | { kind: "recipe"; id: string }
+  | { kind: "cook"; id: string; entry?: string };
 
 export interface Toast { id: number; text: string; undo?: () => void }
 interface UI { tab: Tab; page: Page; sheets: Sheet[]; toast: Toast | null; update: (() => void) | null; recipesView: "list" | "menu" }

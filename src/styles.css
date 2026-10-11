@@ -251,3 +251,18 @@ details.prompt pre { white-space: pre-wrap; font: 13px/1.4 ui-monospace, Menlo, 
 .meal .dish.empty { color: var(--accent); }
 .meal .done { text-decoration: line-through; color: var(--muted); }
 .meal .ib { border: 0; background: none; color: var(--muted); font-size: 20px; padding: 6px; min-width: 36px; min-height: 36px; }
+
+/* «Приготовили»: список списания и стоимость блюда */
+.cook-row { display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 0.5px solid var(--line); }
+.cook-row:last-child { border-bottom: 0; }
+.cook-row .main { flex: 1; min-width: 0; }
+.cook-row .name { font-weight: 600; }
+.cook-row .meta { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.cook-row.off .name, .cook-row.off .meta { opacity: 0.45; }
+.chk { width: 30px; height: 30px; flex: none; border-radius: 9px; border: 1.5px solid var(--muted); background: transparent; color: #fff; font-size: 18px; font-weight: 700; line-height: 1; padding: 0; }
+.chk.on { background: var(--accent); border-color: var(--accent); }
+.qtybox { display: flex; align-items: center; gap: 6px; flex: none; }
+.qtybox .inp { width: 74px; min-height: 42px; padding: 6px; text-align: center; }
+.qtybox span { color: var(--muted); font-size: 14px; min-width: 20px; }
+.cost .row-between { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 3px 0; }
+.cost .row-between b { font-size: 20px; }

@@ -134,6 +134,7 @@ export function RecipeView({ id }: { id: string }) {
           </div>
         ))}
       </div>
+      <button className="btn" style={{ marginTop: 12 }} onClick={() => openSheet({ kind: "cook", id: r.id })}>🍳 Приготовили — списать продукты</button>
       {st.missing.length > 0 && (
         <button className="btn sec" onClick={() => { const n = addMany(st.missing.map((x) => ({ name: x.name, amount: x.amount })), r.name); toast(n ? `В список покупок: ${n}` : "Всё уже в списке покупок"); }}>
           Недостающее — в покупки ({st.missing.length})
@@ -158,7 +159,6 @@ export function RecipeView({ id }: { id: string }) {
           <ol className="steps">{r.steps.map((s, k) => <li key={k}>{s}</li>)}</ol>
         </>
       )}
-      <p className="muted small">Режим готовки со списанием продуктов и стоимостью порции появится на следующем этапе.</p>
       {!confirmDel ? (
         <button className="link" style={{ color: "var(--bad)" }} onClick={() => setConfirmDel(true)}>Удалить рецепт</button>
       ) : (

@@ -56,5 +56,38 @@ ok("parse без json", parseAnswer("просто текст").recipes.length ==
 ok("parse без ограды", parseAnswer('Ответ: {"dishes":[{"name":"Каша","ingredients":[],"steps":["Варить"],}]}').recipes.length === 1);
 const pr = buildPrompt({ who: both, minutes: 30, kind: "ужин", count: 3, wish: "", useFirst: [] }, [], members, DEFAULT_RULES, ["соль"], []);
 ok("prompt содержит ограничения", /холодец/.test(pr) && /треска/.test(pr) && /камбала и минтай/.test(pr) && /арахис/.test(pr) && /```json/.test(pr), pr);
+// «Приготовили»: расчёт списания и стоимости
+import { parseNeed, planCook, conv } from "../src/lib/cook";
+import { defaultSettings } from "../src/lib/store";
+import type { Product } from "../src/lib/types";
+const P = (id: string, name: string, qty: number, unit: Product["unit"], price: number, until: string | null = null, initialQty = qty): Product =>
+  ({ id, name, qty, initialQty, unit, place: "Холодильник", bought: "2026-10-01", until, price, createdAt: 0 });
+const S = defaultSettings();
+ok("parseNeed г/мл/шт", JSON.stringify(parseNeed("200 г")) === '{"qty":200,"unit":"г"}' && JSON.stringify(parseNeed("1,5 кг")) === '{"qty":1.5,"unit":"кг"}' && JSON.stringify(parseNeed("3")) === '{"qty":3,"unit":"шт"}');
+ok("parseNeed ложки и зубчики", JSON.stringify(parseNeed("2 ст. л.")) === '{"qty":30,"unit":"мл"}' && JSON.stringify(parseNeed("1 ч. л.")) === '{"qty":5,"unit":"мл"}' && JSON.stringify(parseNeed("3 зубчика")) === '{"qty":0.3,"unit":"шт"}');
+ok("parseNeed щепотка/по вкусу", parseNeed("щепотка") === "free" && parseNeed("по вкусу") === "free" && parseNeed("") === null);
+ok("parseNeed ложка не литр", JSON.stringify(parseNeed("1 ложка")) === '{"qty":15,"unit":"мл"}' && JSON.stringify(parseNeed("2 л")) === '{"qty":2,"unit":"л"}' && JSON.stringify(parseNeed("1 уп")) === '{"qty":1,"unit":"уп"}');
+ok("conv штуки в кг", conv(2, "шт", "кг", "Помидоры") === 0.24 && conv(500, "г", "кг", "Мука") === 0.5 && conv(1, "шт", "г", "Хлеб") === null);
+const omelet: Recipe = { id: "o", name: "Омлет", servings: 2, ingredients: [{ name: "Яйца", amount: "4 шт" }, { name: "Молоко", amount: "100 мл" }, { name: "Соль", amount: "щепотка" }, { name: "Масло сливочное", amount: "10 г" }, { name: "Сыр твёрдый", amount: "60 г" }], steps: ["a", "b"], source: "base", createdAt: 0 };
+const stock = [P("e", "Яйца", 10, "шт", 100), P("m", "Молоко", 1, "л", 80), P("b", "Масло сливочное", 180, "г", 180)];
+const pl = planCook(omelet, 2, stock, S);
+ok("списание яиц и молока", pl.rows[0].takes[0].take === 4 && pl.rows[1].takes[0].take === 0.1 && pl.rows[1].takes[0].unit === "л", pl.rows[1]);
+ok("соль не списываем", pl.skipped.includes("Соль") && pl.rows.length === 4);
+ok("стоимость со склада", Math.abs(pl.rows[0].rub - 40) < 1e-9 && Math.abs(pl.rows[1].rub - 8) < 1e-9 && Math.abs(pl.rows[2].rub - 10) < 1e-9, pl.rows.map((x) => x.rub));
+ok("нет сыра дома: списывать нечего, оценка", pl.rows[3].noStock && pl.rows[3].takes.length === 0 && pl.estimated);
+const pl4 = planCook(omelet, 4, stock, S);
+ok("порции ×2", pl4.rows[0].takes[0].take === 8 && Math.abs(pl4.rows[1].takes[0].take - 0.2) < 1e-9);
+const two = [P("m1", "Молоко", 0.2, "л", 20, "2026-10-12", 1), P("m2", "Молоко", 1, "л", 80, "2026-10-20", 1)];
+const pm = planCook({ ...omelet, ingredients: [{ name: "Молоко", amount: "500 мл" }, { name: "Яйца", amount: "1 шт" }] }, 2, two, S);
+ok("молоко из двух пачек, сначала та, что раньше испортится", pm.rows[0].takes.length === 2 && pm.rows[0].takes[0].productId === "m1" && pm.rows[0].takes[0].take === 0.2 && Math.abs(pm.rows[0].takes[1].take - 0.3) < 1e-9, pm.rows[0].takes);
+const ps = planCook({ ...omelet, ingredients: [{ name: "Молоко", amount: "500 мл" }, { name: "Яйца", amount: "1 шт" }] }, 2, [P("m1", "Молоко", 0.2, "л", 20, null, 1)], S);
+ok("не хватило молока", ps.rows[0].unit === "л" && Math.abs(ps.rows[0].short - 0.3) < 1e-9 && ps.rows[0].takes[0].take === 0.2, ps.rows[0]);
+const pt = planCook({ ...omelet, ingredients: [{ name: "Помидоры", amount: "2 шт" }, { name: "Яйца", amount: "1 шт" }] }, 2, [P("t", "Помидоры", 1, "кг", 150)], S);
+ok("помидоры штуки → кг", Math.abs(pt.rows[0].takes[0].take - 0.24) < 1e-9 && pt.rows[0].unit === "кг", pt.rows[0]);
+const pe = planCook(omelet, 2, stock, S, { "0": { on: false }, "1": { qty: 0.25 } });
+ok("правки: снять галочку и поменять количество", !pe.rows[0].on && pe.rows[1].takes[0].take === 0.25 && pe.cost < pl.cost);
+const pu = planCook({ ...omelet, ingredients: [{ name: "Хрен", amount: "1 кусок" }, { name: "Яйца", amount: "1 шт" }] }, 2, stock, S);
+ok("непонятное количество — вписать самому", pu.rows[0].manual && !pu.rows[0].on);
+
 console.log(`\nЛогика: ${pass} из ${pass + fail}`);
 if (fail) process.exit(1);
