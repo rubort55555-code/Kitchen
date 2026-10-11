@@ -45,6 +45,7 @@ export function Recipes() {
       <Header title="Рецепты" screen="recipes" />
       <Seg label="Раздел" value={view} onChange={setRecipesView} options={[{ v: "list", t: "Рецепты" }, { v: "menu", t: "Меню на неделю" }]} />
       <button className="btn" style={{ marginTop: 10 }} onClick={() => openSheet({ kind: "ask" })}>✨ Спросить Claude: что приготовить</button>
+      <button className="btn sec" onClick={() => openSheet({ kind: "recipeNew" })}>➕ Свой рецепт: написать, вставить, сфотографировать</button>
       {recipes.length === 0 ? (
         <div className="empty">
           <div className="big">📖</div>
@@ -107,6 +108,7 @@ export function RecipeView({ id }: { id: string }) {
   const [toMenu, setToMenu] = useState(false);
   const [day, setDay] = useState(ymd());
   const [slot, setSlot] = useState<Slot>("ужин");
+  const [note, setNote] = useState<string | null>(null);
   if (!r) return <Sheet title="Рецепт"><p className="empty">Рецепт удалён.</p></Sheet>;
   const compiled = compileRules(settings.rules, settings.customCatalog, settings.members);
   const c = checkRecipe(r, compiled, settings.members.map((m) => m.id));
@@ -162,6 +164,20 @@ export function RecipeView({ id }: { id: string }) {
           <ol className="steps">{r.steps.map((s, k) => <li key={k}>{s}</li>)}</ol>
         </>
       )}
+      <h3 style={{ marginTop: 16 }}>Моя оценка</h3>
+      <div className="stars" role="group" aria-label="Оценка">
+        {[1, 2, 3, 4, 5].map((n) => (
+          <button key={n} className="star" aria-label={`${n} из 5`} onClick={() => saveRecipes([{ ...r, rating: r.rating === n ? undefined : n }])}>{(r.rating || 0) >= n ? "★" : "☆"}</button>
+        ))}
+      </div>
+      <label className="f">Заметка («в следующий раз меньше соли»)</label>
+      <textarea className="inp" rows={2} value={note ?? r.note ?? ""} onChange={(e: { target: { value: string } }) => setNote(e.target.value)}
+        onBlur={() => { if (note !== null && note !== (r.note || "")) saveRecipes([{ ...r, note: note.trim() || undefined }]); setNote(null); }} />
+      {(r.history || []).length > 0 && (
+        <p className="muted small">Готовили {r.history!.length} раз(а). Последний раз: {parseYmd(r.history![r.history!.length - 1]).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" })}.</p>
+      )}
+      {r.source !== "base" && <button className="btn ghost" onClick={() => openSheet({ kind: "recipeEdit", id: r.id })}>✏️ Изменить рецепт</button>}
+      {r.source === "base" && <button className="btn ghost" onClick={() => openSheet({ kind: "recipeEdit", id: r.id })}>✏️ Изменить (сделать свою копию правок)</button>}
       {!confirmDel ? (
         <button className="link" style={{ color: "var(--bad)" }} onClick={() => setConfirmDel(true)}>Удалить рецепт</button>
       ) : (

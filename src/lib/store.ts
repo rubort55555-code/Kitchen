@@ -301,7 +301,7 @@ export const BACKUP_APP = "kitchen-app";
 export interface Backup { app: string; v: number; at: string; products: Product[]; log: LogEntry[]; recipes: Recipe[]; settings: Settings }
 
 export function makeBackup(): Backup {
-  return { app: BACKUP_APP, v: 1, at: new Date().toISOString(), products: state.products, log: state.log, recipes: state.recipes.filter((r) => r.source !== "base" || r.fav || r.note), settings: state.settings };
+  return { app: BACKUP_APP, v: 1, at: new Date().toISOString(), products: state.products, log: state.log, recipes: state.recipes.filter((r) => r.source !== "base" || r.fav || r.note || r.rating || r.history?.length), settings: state.settings };
 }
 
 /** Восстановление: replace — заменить всё; merge — добавить недостающее. */

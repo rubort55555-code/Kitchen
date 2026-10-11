@@ -324,3 +324,5 @@ details.prompt pre { white-space: pre-wrap; font: 13px/1.4 ui-monospace, Menlo, 
 .rv .chk { width: 24px; height: 24px; flex: none; accent-color: var(--accent); }
 .rv-bad { outline: 2px solid var(--bad); }
 select.inp { padding-right: 8px; }
+.stars{display:flex;gap:4px;margin:4px 0 8px}
+.star{font-size:34px;line-height:1;background:none;border:0;padding:4px 8px;color:var(--accent);min-width:44px;min-height:44px}

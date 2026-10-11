@@ -1,7 +1,7 @@
 // Окно «Приготовили»: сколько порций, что спишем со склада, во сколько обошлось блюдо и порция.
 import { useMemo, useState } from "react";
 import { Seg, Sheet } from "../components/ui";
-import { applyCook, undoCook, useStore } from "../lib/store";
+import { applyCook, saveRecipes, undoCook, useStore } from "../lib/store";
 import { planCook, type CookRow, type Override } from "../lib/cook";
 import { toggleDone } from "../lib/plan";
 import { closeSheet, toast } from "../lib/ui";
@@ -52,9 +52,11 @@ export function CookSheet({ id, entry }: { id: string; entry?: string }) {
     const ent = (settings.plan || []).find((x) => (entry ? x.id === entry : x.recipeId === r!.id && x.date === ymd()));
     const marked = !!ent && !ent.done;
     if (marked) toggleDone(ent!.id);
+    const prevHist = r!.history;
+    saveRecipes([{ ...r!, history: [...(r!.history || []), ymd()] }]);
     const n = u.before.length;
     const head = n ? `Списано ${n} ${plural(n, "продукт", "продукта", "продуктов")}` : "Приготовлено";
-    toast(`${head}. Порция ≈ ${rub(portion)}`, () => { undoCook(u); if (marked) toggleDone(ent!.id); });
+    toast(`${head}. Порция ≈ ${rub(portion)}`, () => { undoCook(u); saveRecipes([{ ...r!, history: prevHist }]); if (marked) toggleDone(ent!.id); });
     closeSheet();
   }
 

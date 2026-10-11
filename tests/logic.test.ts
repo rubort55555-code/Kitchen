@@ -6,6 +6,7 @@ import { rub, num, scaleAmount } from "../src/lib/util";
 import { findTimes, fmtTime } from "../src/lib/timers";
 import { report, insights, priceTrends, amountText } from "../src/lib/stats";
 import { parseReceipt } from "../src/lib/receipt";
+import { parseRecipeText } from "../src/lib/recipeText";
 import { substitutes } from "../src/lib/subs";
 import { recipeStatus } from "../src/lib/match";
 import type { Recipe } from "../src/lib/types";
@@ -157,6 +158,30 @@ ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) =
   ok("чек: название и цена в разных строках", by("Сметана")?.qty === 300 && by("Сметана")?.price === 79, by("Сметана"));
   ok("чек: запомненное сокращение главнее", parseReceipt("ЭТО НЕПОНЯТНО 1 x 10,00", { "это непонятно": "Творог" })[0]?.name === "Творог");
   ok("чек: неизвестный продукт остаётся с очищенным названием", parseReceipt("ВОДОРОСЛИ НОРИ 5ШТ 1 x 100,00")[0]?.known === false);
+}
+
+{
+  const d = parseRecipeText(`Сырники
+Время приготовления: 30 минут
+Порций: 4
+
+Ингредиенты:
+- Творог 500 г
+- 2 яйца
+- Мука 3 ст. л.
+- Сахар по вкусу
+
+Приготовление:
+1. Смешайте творог с яйцами.
+2. Добавьте муку и сахар, сформируйте сырники.
+3. Обжарьте на масле по 3 минуты с каждой стороны.`);
+  const n = (x: string) => d.ingredients.find((i) => i.name.toLowerCase().includes(x));
+  ok("рецепт-текст: название", d.name === "Сырники", d.name);
+  ok("рецепт-текст: время и порции", d.minutes === 30 && d.servings === 4, [d.minutes, d.servings]);
+  ok("рецепт-текст: 4 ингредиента", d.ingredients.length === 4, d.ingredients);
+  ok("рецепт-текст: творог 500 г", !!n("творог") && /500/.test(n("творог")!.amount), n("творог"));
+  ok("рецепт-текст: число впереди (2 яйца)", !!n("яйц") && /2/.test(n("яйц")!.amount), n("яйц"));
+  ok("рецепт-текст: 3 шага без нумерации", d.steps.length === 3 && d.steps[0].startsWith("Смешайте"), d.steps);
 }
 
 console.log(`\nЛогика: ${pass} из ${pass + fail}`);

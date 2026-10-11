@@ -102,6 +102,10 @@ export interface Recipe {
   tags?: string[];
   fav?: boolean;
   note?: string;
+  /** Оценка 1–5. */
+  rating?: number;
+  /** Даты, когда готовили (ГГГГ-ММ-ДД). */
+  history?: string[];
   createdAt: number;
 }
 
