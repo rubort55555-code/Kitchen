@@ -254,6 +254,26 @@ function Data() {
     }
   }
 
+  async function saveCsv(kind: "products" | "log" | "prices") {
+    const { productsCsv, logCsv, pricesCsv } = await import("../lib/csv");
+    const s = getState();
+    const text = kind === "products" ? productsCsv(s.products) : kind === "log" ? logCsv(s.log) : pricesCsv(s.log);
+    const name = `kitchen-${kind === "products" ? "produkty" : kind === "log" ? "zhurnal" : "tseny"}-${ymd()}.csv`;
+    const file = new File([text], name, { type: "text/csv" });
+    try {
+      const nav = navigator as Navigator & { canShare?: (d: unknown) => boolean };
+      if (nav.canShare && nav.canShare({ files: [file] })) await navigator.share({ files: [file], title: "Кухня — таблица" });
+      else {
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(file); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+      }
+      setMsg("Таблица готова. Сохраните её в «Файлы» — откроется в Numbers или Excel.");
+    } catch (e) {
+      if ((e as Error)?.name !== "AbortError") setMsg("Не получилось сохранить таблицу.");
+    }
+  }
+
   async function readFile(e: any) {
     const f: File | undefined = e.target.files?.[0];
     e.target.value = "";
@@ -296,6 +316,15 @@ function Data() {
           <input type="file" accept=".json,application/json,text/plain" onChange={readFile} hidden />
         </label>
         {msg && <p className="small" role="status">{msg}</p>}
+      </div>
+      <div className="card">
+        <h3>Таблицы (CSV)</h3>
+        <p className="muted small mt0">Для Numbers или Excel. Это не копия данных — восстановить из неё нельзя.</p>
+        <div className="row2">
+          <button className="btn sec" onClick={() => saveCsv("products")}>Продукты</button>
+          <button className="btn sec" onClick={() => saveCsv("log")}>Журнал</button>
+        </div>
+        <button className="btn sec" onClick={() => saveCsv("prices")}>Цены покупок</button>
       </div>
       {pending && (
         <div className="card">

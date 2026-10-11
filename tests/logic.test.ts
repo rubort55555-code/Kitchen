@@ -7,6 +7,7 @@ import { findTimes, fmtTime } from "../src/lib/timers";
 import { report, insights, priceTrends, amountText } from "../src/lib/stats";
 import { parseReceipt } from "../src/lib/receipt";
 import { parseRecipeText } from "../src/lib/recipeText";
+import { productsCsv, pricesCsv } from "../src/lib/csv";
 import { substitutes } from "../src/lib/subs";
 import { recipeStatus } from "../src/lib/match";
 import type { Recipe } from "../src/lib/types";
@@ -182,6 +183,13 @@ ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) =
   ok("рецепт-текст: творог 500 г", !!n("творог") && /500/.test(n("творог")!.amount), n("творог"));
   ok("рецепт-текст: число впереди (2 яйца)", !!n("яйц") && /2/.test(n("яйц")!.amount), n("яйц"));
   ok("рецепт-текст: 3 шага без нумерации", d.steps.length === 3 && d.steps[0].startsWith("Смешайте"), d.steps);
+}
+
+{
+  const c = productsCsv([{ id: "1", name: 'Молоко "Дом"; 3,2%', qty: 0.5, initialQty: 1, unit: "л", place: "Холодильник", bought: "2026-10-01", until: null, price: 89.9, createdAt: 0 }]);
+  ok("csv: BOM, кавычки и запятая в числах", c.startsWith("\ufeff") && c.includes('"Молоко ""Дом""; 3,2%";0,5;л') && c.includes("89,9"), c);
+  const p = pricesCsv([{ id: "a", t: Date.UTC(2026, 9, 1), name: "Мука", reason: "bought", qty: 500, unit: "г", rub: 45 }]);
+  ok("csv: цена за кг считается", p.includes("90"), p);
 }
 
 console.log(`\nЛогика: ${pass} из ${pass + fail}`);
