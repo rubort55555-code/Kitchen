@@ -5,6 +5,7 @@ import { parseAnswer, buildPrompt } from "../src/lib/claude";
 import { rub, num, scaleAmount } from "../src/lib/util";
 import { findTimes, fmtTime } from "../src/lib/timers";
 import { report, insights, priceTrends, amountText } from "../src/lib/stats";
+import { parseReceipt } from "../src/lib/receipt";
 import { substitutes } from "../src/lib/subs";
 import { recipeStatus } from "../src/lib/match";
 import type { Recipe } from "../src/lib/types";
@@ -135,6 +136,27 @@ ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) =
   ok("подбор: нет сметаны и замены — подсказка, чем заменить", st2.percent === 50 && st2.list[0].alts?.[0] === "Йогурт", st2.list[0]);
   const pc = planCook(rec, 2, withY, S);
   ok("«Приготовили»: списывает йогурт вместо сметаны", pc.rows[0].takes[0]?.name === "Йогурт", pc.rows[0]);
+}
+
+{
+  const it = parseReceipt(`ПЯТЁРОЧКА
+МОЛ ПРОСТ 3,2% 930 МЛ    1 x 89,90
+БАНАНЫ КГ    1,235 x 119,00   146,97
+КУР ФИЛЕ ОХЛ ©, 850КГ    1х 389, 99
+ЯЙЦО С1 10ШТ    2 x 99,90
+СМЕТАНА 20% 300Г
+1 x 79,00 = 79,00
+2 Сахар песок 1 кг 1 × 79,99 79,99
+ИТОГО 1040,17`);
+  const by = (n: string) => it.find((x) => x.name === n);
+  ok("чек: найдено 6 товаров, итог не товар", it.length === 6, it.map((x) => x.name));
+  ok("чек: молоко 930 мл → 0,93 л за 89,90", by("Молоко")?.qty === 0.93 && by("Молоко")?.unit === "л" && by("Молоко")?.price === 89.9, by("Молоко"));
+  ok("чек: бананы на вес", by("Бананы")?.qty === 1.235 && by("Бананы")?.unit === "кг" && by("Бананы")?.price === 146.97, by("Бананы"));
+  ok("чек: курица 0,850 кг → 850 г (шум ©, пробел в цене)", by("Куриное филе")?.qty === 850 && by("Куриное филе")?.unit === "г" && by("Куриное филе")?.price === 389.99, by("Куриное филе"));
+  ok("чек: 2 упаковки по 10 яиц = 20 шт, цена за обе", by("Яйца")?.qty === 20 && by("Яйца")?.price === 199.8, by("Яйца"));
+  ok("чек: название и цена в разных строках", by("Сметана")?.qty === 300 && by("Сметана")?.price === 79, by("Сметана"));
+  ok("чек: запомненное сокращение главнее", parseReceipt("ЭТО НЕПОНЯТНО 1 x 10,00", { "это непонятно": "Творог" })[0]?.name === "Творог");
+  ok("чек: неизвестный продукт остаётся с очищенным названием", parseReceipt("ВОДОРОСЛИ НОРИ 5ШТ 1 x 100,00")[0]?.known === false);
 }
 
 console.log(`\nЛогика: ${pass} из ${pass + fail}`);

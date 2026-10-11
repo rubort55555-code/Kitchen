@@ -319,3 +319,8 @@ details.prompt pre { white-space: pre-wrap; font: 13px/1.4 ui-monospace, Menlo, 
 .tip { margin: 8px 0; line-height: 1.4; }
 .t-ok { color: var(--accent); }
 .rev-qty { font-size: 34px; font-weight: 700; }
+
+/* ---- чек ---- */
+.rv .chk { width: 24px; height: 24px; flex: none; accent-color: var(--accent); }
+.rv-bad { outline: 2px solid var(--bad); }
+select.inp { padding-right: 8px; }

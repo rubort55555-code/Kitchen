@@ -8,7 +8,7 @@ import type { CatalogItem, Place, Unit } from "../lib/types";
 import { PLACES, UNITS } from "../lib/types";
 import { addDays, cap, dateText, daysLeft, norm, rub, toNum, untilText, ymd } from "../lib/util";
 import { quickAmounts } from "../lib/units";
-import { toast } from "../lib/ui";
+import { openSheet, toast } from "../lib/ui";
 
 const POPULAR = ["Молоко", "Яйца", "Хлеб", "Куриное филе", "Картофель", "Помидоры", "Огурцы", "Сыр твёрдый", "Бананы", "Творог"];
 const DEFAULT_QTY: Record<Unit, string> = { г: "500", мл: "500", кг: "1", л: "1", шт: "1", уп: "1" };
@@ -104,6 +104,10 @@ export function AddProduct() {
 
   return (
     <Sheet title="Новый продукт">
+      <div className="row2" style={{ marginTop: 8 }}>
+        <button type="button" className="btn sec" onClick={() => openSheet({ kind: "receipt", mode: "photo" })}>📷 Из чека</button>
+        <button type="button" className="btn sec" onClick={() => openSheet({ kind: "receipt", mode: "text" })}>📋 Текст чека</button>
+      </div>
       <form onSubmit={submit} autoComplete="off">
         <label className="f" htmlFor="pName">Что купили</label>
         <input id="pName" ref={nameRef} className="inp big" value={name} onChange={(e: any) => onName(e.target.value)} placeholder="Например, молоко" enterKeyHint="next" autoCapitalize="sentences" />

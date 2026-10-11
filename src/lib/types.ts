@@ -170,6 +170,8 @@ export interface Settings {
   lastBackup: number;
   /** Дата, когда последний раз спрашивали о просроченном. */
   overdueAsked?: string;
+  /** Запомненные сокращения из чеков: «мол прост» → Молоко. */
+  receiptMap?: Record<string, string>;
   /** Дата последней ревизии продуктов. */
   lastRevision?: string;
   tipsSeen: string[];

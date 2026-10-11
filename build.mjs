@@ -61,7 +61,7 @@ const files = [];
 })("dist");
 const sw = readFileSync("src/sw.js", "utf8")
   .replace("%VERSION%", VERSION)
-  .replace("%FILES%", JSON.stringify(files.filter((f) => f !== "./sw.js" && !f.split("/").pop().startsWith(".")).map((f) => (f === "./index.html" ? "./" : f))));
+  .replace("%FILES%", JSON.stringify(files.filter((f) => f !== "./sw.js" && !f.split("/").pop().startsWith(".") && !(f.startsWith("./ocr/") && !/tesseract\.min\.js$|worker\.min\.js$/.test(f))).map((f) => (f === "./index.html" ? "./" : f))));
 writeFileSync("dist/sw.js", sw);
 writeFileSync("dist/version.json", JSON.stringify({ version: VERSION }));
 console.log("Готово:", VERSION, js, css, files.length, "файлов");

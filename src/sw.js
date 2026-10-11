@@ -20,6 +20,10 @@ self.addEventListener("activate", (e) => {
   );
 });
 
+// Файлы распознавания текста (около 15 МБ) скачиваются один раз при первом распознавании чека
+// и дальше хранятся в телефоне отдельно — при обновлении приложения они не скачиваются заново.
+const OCR_CACHE = "ocr-v1";
+
 self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET") return;
@@ -29,6 +33,12 @@ self.addEventListener("fetch", (e) => {
   if (url.pathname.endsWith("/version.json")) return;
   if (req.mode === "navigate") {
     e.respondWith(caches.match("./", { ignoreSearch: true }).then((r) => r || fetch(req)));
+    return;
+  }
+  if (url.pathname.includes("/ocr/") && !/(tesseract|worker)\.min\.js$/.test(url.pathname)) {
+    e.respondWith(
+      caches.open(OCR_CACHE).then((c) => c.match(req).then((r) => r || fetch(req).then((res) => { if (res.ok) c.put(req, res.clone()); return res; })))
+    );
     return;
   }
   e.respondWith(caches.match(req, { ignoreSearch: true }).then((r) => r || fetch(req)));
