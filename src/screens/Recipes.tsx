@@ -131,7 +131,7 @@ export function RecipeView({ id }: { id: string }) {
         {st.list.map((i, k) => (
           <div key={k} className="ing">
             <span className={"mk " + (i.have ? "y" : "n")}>{i.have ? "✓" : "○"}</span>
-            <span>{i.name}{i.urgent ? <span className="tag soon" style={{ marginLeft: 6 }}>срочно</span> : null}{i.basic && !i.product ? <span className="muted small"> · базовый</span> : null}</span>
+            <span>{i.name}{i.urgent ? <span className="tag soon" style={{ marginLeft: 6 }}>срочно</span> : null}{i.basic && !i.product ? <span className="muted small"> · базовый</span> : null}{i.via ? <span className="muted small"> · заменой: {i.via.name}</span> : null}{!i.have && i.alts ? <span className="muted small"> · можно заменить: {i.alts.slice(0, 2).join(", ").toLowerCase()}</span> : null}</span>
             <span className="a">{i.amount}</span>
           </div>
         ))}

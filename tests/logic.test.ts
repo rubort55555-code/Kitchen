@@ -5,6 +5,8 @@ import { parseAnswer, buildPrompt } from "../src/lib/claude";
 import { rub, num, scaleAmount } from "../src/lib/util";
 import { findTimes, fmtTime } from "../src/lib/timers";
 import { report, insights, priceTrends, amountText } from "../src/lib/stats";
+import { substitutes } from "../src/lib/subs";
+import { recipeStatus } from "../src/lib/match";
 import type { Recipe } from "../src/lib/types";
 
 let pass = 0, fail = 0;
@@ -119,6 +121,20 @@ ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) =
   ok("цена: подорожание молока", pr[0].name === "Молоко" && pr[0].changePct > 10, pr[0]);
   const tips = insights(log, rep, 60);
   ok("находки: молоко пропадает и годовая сумма", tips.some((x) => x.includes("Молоко пропадает в 2 из 3")) && tips.some((x) => x.includes("в год")), tips);
+}
+
+{
+  ok("замены: сметана → йогурт, сливки", substitutes("Сметана 20%")[0] === "Йогурт");
+  ok("замены: грудка → индейка", substitutes("куриная грудка")[0] === "Индейка");
+  ok("замены: у соли нет замен", substitutes("Соль").length === 0);
+  const rec = { ...omelet, ingredients: [{ name: "Сметана", amount: "100 г" }, { name: "Яйца", amount: "2 шт" }] };
+  const withY = [P("y", "Йогурт", 2, "шт", 60), P("e", "Яйца", 10, "шт", 100)];
+  const st1 = recipeStatus(rec, withY, S.basics, []);
+  ok("подбор: йогурт заменяет сметану", st1.percent === 100 && st1.list[0].via?.name === "Йогурт" && st1.missing.length === 0, st1);
+  const st2 = recipeStatus(rec, [P("e", "Яйца", 10, "шт", 100)], S.basics, []);
+  ok("подбор: нет сметаны и замены — подсказка, чем заменить", st2.percent === 50 && st2.list[0].alts?.[0] === "Йогурт", st2.list[0]);
+  const pc = planCook(rec, 2, withY, S);
+  ok("«Приготовили»: списывает йогурт вместо сметаны", pc.rows[0].takes[0]?.name === "Йогурт", pc.rows[0]);
 }
 
 console.log(`\nЛогика: ${pass} из ${pass + fail}`);

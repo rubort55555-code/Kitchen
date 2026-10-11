@@ -1,5 +1,6 @@
 // «Приготовили»: что списать со склада для рецепта и сколько стоит блюдо и порция.
 // Здесь только расчёт (без записи в базу) — запись делает applyCook в store.ts.
+import { substitutes } from "./subs";
 import type { Product, Recipe, Settings, Unit } from "./types";
 import { findCatalog } from "./catalog";
 import { keyOf } from "./match";
@@ -12,7 +13,7 @@ export interface Need { qty: number; unit: Unit }
 const PIECE_G: Record<string, number> = {
   "помидоры": 120, "огурцы": 120, "картофель": 100, "морковь": 100, "лук репчатый": 100, "свекла": 200,
   "яблоки": 150, "бананы": 120, "апельсины": 200, "груши": 150, "лимон": 100, "кабачок": 300,
-  "баклажан": 250, "перец болгарский": 150, "чеснок": 40, "капуста пекинская": 600, "авокадо": 200, "киви": 80,
+  "йогурт": 125, "сосиски": 50, "баклажан": 250, "перец болгарский": 150, "чеснок": 40, "капуста пекинская": 600, "авокадо": 200, "киви": 80,
 };
 
 function pieceG(name: string): number | null {
@@ -125,7 +126,15 @@ export function planCook(r: Recipe, servings: number, products: Product[], setti
     const parsed = parseNeed(ing.amount);
     if (parsed === "free") { skipped.push(ing.name); return; }
 
-    const stock = products.filter((p) => keyOf(p.name, settings.customCatalog) === k).sort(byUntil);
+    let stock = products.filter((p) => keyOf(p.name, settings.customCatalog) === k).sort(byUntil);
+    // Нужного нет дома — берём замену, если она есть (сметана → йогурт)
+    if (!stock.length) {
+      for (const s of substitutes(ing.name, settings.customCatalog)) {
+        const sk = keyOf(s, settings.customCatalog);
+        const f = products.filter((p) => keyOf(p.name, settings.customCatalog) === sk).sort(byUntil);
+        if (f.length) { stock = f; break; }
+      }
+    }
     const o = ov[key] || {};
     const unit: Unit | null = stock[0]?.unit ?? parsed?.unit ?? null;
     let need: Need | null = parsed ? { qty: round3(parsed.qty * factor), unit: parsed.unit } : null;
@@ -138,10 +147,10 @@ export function planCook(r: Recipe, servings: number, products: Product[], setti
       for (const p of stock) {
         const avail = p.qty - (used.get(p.id) || 0);
         if (avail <= 1e-9) continue;
-        const availNeed = conv(avail, p.unit, need.unit, ing.name);
+        const availNeed = conv(avail, p.unit, need.unit, p.name);
         if (availNeed === null) { manual = true; break; }
         const takeNeed = Math.min(rem, availNeed);
-        const takeP = round3(takeNeed >= availNeed ? avail : conv(takeNeed, need.unit, p.unit, ing.name)!);
+        const takeP = round3(takeNeed >= availNeed ? avail : conv(takeNeed, need.unit, p.unit, p.name)!);
         if (takeP <= 0) continue;
         used.set(p.id, (used.get(p.id) || 0) + takeP);
         const value = p.initialQty ? (p.price * takeP) / p.initialQty : 0;
