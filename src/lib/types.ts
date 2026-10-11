@@ -102,6 +102,8 @@ export interface Recipe {
   tags?: string[];
   fav?: boolean;
   note?: string;
+  /** Фото блюда: сжатая картинка (data:image/jpeg). */
+  photo?: string;
   /** Оценка 1–5. */
   rating?: number;
   /** Даты, когда готовили (ГГГГ-ММ-ДД). */

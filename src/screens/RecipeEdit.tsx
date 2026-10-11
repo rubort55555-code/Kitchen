@@ -1,6 +1,7 @@
 // Свои рецепты: вручную, из вставленного текста или с фото страницы книги.
 import { useMemo, useRef, useState } from "react";
 import { Sheet } from "../components/ui";
+import { compressPhoto } from "../lib/photo";
 import { saveRecipes, useStore } from "../lib/store";
 import { applyReplace, checkRecipe, compileRules } from "../lib/exclusions";
 import { parseRecipeText, type RecipeDraft } from "../lib/recipeText";
@@ -91,6 +92,14 @@ export function RecipeEdit({ id, draft }: { id?: string; draft?: RecipeDraft }) 
   const [ings, setIngs] = useState(init.ingredients.length ? init.ingredients : [{ name: "", amount: "" }]);
   const [steps, setSteps] = useState(init.steps.join("\n"));
   const [err, setErr] = useState("");
+  const [photo, setPhoto] = useState<string | undefined>(old?.photo);
+  const photoIn = useRef<HTMLInputElement>(null);
+  async function onPhoto(e: any) {
+    const f: File | undefined = e.target.files?.[0];
+    e.target.value = "";
+    if (!f) return;
+    try { setPhoto(await compressPhoto(f)); } catch { setErr("Не получилось прочитать фото. Попробуйте другое."); }
+  }
 
   const compiled = useMemo(() => compileRules(settings.rules, settings.customCatalog, settings.members), [settings]);
   const who = settings.members.map((m) => m.id);
@@ -111,6 +120,7 @@ export function RecipeEdit({ id, draft }: { id?: string; draft?: RecipeDraft }) 
     const r: Recipe = {
       ...(old || { id: uid(), source: "manual" as const, createdAt: Date.now() }),
       source: old && old.source === "base" ? "manual" : (old?.source || "manual"),
+      photo,
       name: name.trim(), kind, minutes: toNum(minutes) || undefined, servings: toNum(servings) || 2,
       ingredients: cur.ingredients.map((i) => ({ name: i.name.trim(), amount: i.amount.trim() })), steps: cur.steps,
     };
@@ -124,6 +134,12 @@ export function RecipeEdit({ id, draft }: { id?: string; draft?: RecipeDraft }) 
     <Sheet title={old ? "Изменить рецепт" : "Проверьте рецепт"}>
       <label className="f" htmlFor="rn">Название</label>
       <input id="rn" className="inp big" value={name} onChange={(e: any) => { setName(e.target.value); setErr(""); }} placeholder="Например, Сырники" />
+      <input ref={photoIn} type="file" accept="image/*" hidden onChange={onPhoto} aria-label="Фото блюда" />
+      {photo && <img className="dphoto" src={photo} alt="Фото блюда" />}
+      <div className="row2">
+        <button type="button" className="btn sec" onClick={() => photoIn.current?.click()}>{photo ? "📷 Другое фото блюда" : "📷 Фото блюда"}</button>
+        {photo && <button type="button" className="btn ghost" onClick={() => setPhoto(undefined)}>Убрать фото</button>}
+      </div>
       <div className="field-row">
         <div><label className="f" htmlFor="rm">Минут</label><input id="rm" className="inp" inputMode="numeric" value={minutes} onChange={(e: any) => setMinutes(e.target.value)} /></div>
         <div><label className="f" htmlFor="rs">Порций</label><input id="rs" className="inp" inputMode="numeric" value={servings} onChange={(e: any) => setServings(e.target.value)} /></div>

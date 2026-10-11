@@ -65,7 +65,7 @@ export function Recipes() {
           <div className="list">
             {list.slice(0, limit).map(({ r, c, st }) => (
               <button key={r.id} className="li" onClick={() => openSheet({ kind: "recipe", id: r.id })}>
-                <span className="ico">{r.fav ? "⭐" : "🍳"}</span>
+                {r.photo ? <img className="thumb" src={r.photo} alt="" /> : <span className="ico">{r.fav ? "⭐" : "🍳"}</span>}
                 <div className="main">
                   <div className="name">{r.name}</div>
                   <div className="meta">
@@ -116,6 +116,7 @@ export function RecipeView({ id }: { id: string }) {
   const st = recipeStatus(r, products, settings.basics, settings.customCatalog);
   return (
     <Sheet title="Рецепт" left={<button className="x l" aria-label={r.fav ? "Убрать из избранного" : "В избранное"} onClick={() => saveRecipes([{ ...r, fav: !r.fav }])}>{r.fav ? "★" : "☆"}</button>}>
+      {r.photo && <img className="dphoto" src={r.photo} alt={r.name} />}
       <h2 style={{ marginTop: 10 }}>{r.name}</h2>
       <p className="muted mt0">{[r.minutes && `${r.minutes} мин`, r.servings && `${r.servings} порц.`, r.kind].filter(Boolean).join(" · ")}{r.source === "claude" ? " · от Claude" : r.source === "old" ? " · из «Что приготовить»" : ""}</p>
       {r.why && <p>{r.why}</p>}

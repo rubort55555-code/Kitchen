@@ -499,6 +499,9 @@ with sync_playwright() as p:
     pg.fill('.sheet textarea', "в следующий раз меньше соли"); pg.click('.sheet h3 >> text=Моя оценка')
     pg.click('.sheet .btn >> text=Изменить рецепт'); pg.wait_for_selector('.sheet[aria-label="Изменить рецепт"]')
     ok(S + "редактор открывается с данными", pg.input_value("#rn").startswith("Запечённая"))
+    pg.set_input_files('input[aria-label="Фото блюда"]', os.path.join(ROOT, "tests", "receipt-sample.png"))
+    pg.wait_for_selector(".sheet img.dphoto")
+    ok(S + "фото блюда сжато и показано", pg.eval_on_selector(".sheet img.dphoto", "e => e.src.startsWith('data:image/jpeg') && e.src.length < 400000"))
     pg.fill("#rn", "Минтай с картофелем"); pg.click('.sheet .btn >> text=Сохранить рецепт')
     pg.wait_for_timeout(300)
     pg.click(".sheet .x >> text=/Закрыть|Готово/") if pg.locator(".sheet .x >> text=/Закрыть|Готово/").count() else None
