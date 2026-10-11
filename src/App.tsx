@@ -16,6 +16,7 @@ import { CookMode } from "./screens/CookMode";
 import { Revision } from "./screens/Revision";
 import { Receipt } from "./screens/Receipt";
 import { RecipeEdit, RecipeNew } from "./screens/RecipeEdit";
+import { Intro } from "./screens/Intro";
 import { Overdue, isExpired } from "./screens/Overdue";
 import { useEffect } from "react";
 import { ymd } from "./lib/util";
@@ -39,6 +40,7 @@ function SheetView({ s }: { s: Sheet }) {
     case "cook": return <CookSheet id={s.id} entry={s.entry} />;
     case "steps": return <CookMode id={s.id} />;
     case "overdue": return <Overdue />;
+    case "intro": return <Intro />;
     case "revision": return <Revision />;
     case "receipt": return <Receipt mode={s.mode} />;
     case "recipeNew": return <RecipeNew mode={s.mode || "menu"} />;
@@ -56,6 +58,12 @@ export function App() {
   const asked = useStore((s) => s.settings.overdueAsked);
   const hasOverdue = useStore((s) => s.products.some(isExpired));
   // При открытии приложения (раз в день) спрашиваем о просроченном
+  const introSeen = useStore((s) => s.settings.tipsSeen.includes("intro"));
+  const empty = useStore((s) => s.products.length === 0 && s.log.length === 0);
+  // Первый запуск: короткое знакомство (в автотестах браузера не показываем)
+  useEffect(() => {
+    if (ready && !introSeen && empty && !navigator.webdriver && !sheets.length) openSheet({ kind: "intro" });
+  }, [ready]);
   useEffect(() => {
     if (ready && hasOverdue && asked !== ymd() && !sheets.length && !askedNow) { askedNow = true; openSheet({ kind: "overdue" }); }
   }, [ready]);

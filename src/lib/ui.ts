@@ -15,6 +15,7 @@ export type Sheet =
   | { kind: "cook"; id: string; entry?: string }
   | { kind: "steps"; id: string }
   | { kind: "overdue" }
+  | { kind: "intro" }
   | { kind: "revision" }
   | { kind: "receipt"; mode: "photo" | "text" }
   | { kind: "recipeNew"; mode?: "menu" | "text" | "photo" }

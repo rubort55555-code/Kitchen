@@ -11,7 +11,7 @@ import type { CatalogItem, FishType, Level, Member, Place, Rule, Unit } from "..
 import { PLACES, UNITS } from "../lib/types";
 import { norm, plural, ymd } from "../lib/util";
 import { Stats } from "./Stats";
-import { closeAll, closeSheet, goPage, goTab, toast, useUI } from "../lib/ui";
+import { closeAll, closeSheet, goPage, goTab, openSheet, toast, useUI } from "../lib/ui";
 
 export const VERSION = typeof __VERSION__ !== "undefined" ? __VERSION__ : "dev";
 
@@ -375,6 +375,7 @@ function HelpPage() {
   return (
     <div className="screen">
       <Header title="Помощь" screen="help" onBack={back} backText="Ещё" />
+      <button className="btn sec" onClick={() => openSheet({ kind: "intro" })}>👋 Показать знакомство с приложением</button>
       <input className="inp search" type="search" placeholder="Например: как удалить продукт" value={q} onChange={(e: any) => setQ(e.target.value)} aria-label="Поиск по справке" />
       {q.trim() ? (
         found.length ? found.map((s, i) => <SectionView key={s.id} s={s} open={i === 0} />) : <p className="muted">Ничего не нашлось. Попробуйте другие слова или откройте «Что-то не работает».</p>

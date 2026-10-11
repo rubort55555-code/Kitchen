@@ -1,6 +1,6 @@
 // Главная: что съесть первым, что приготовить, сколько пропало за месяц.
 import { useMemo } from "react";
-import { Header, Icon } from "../components/ui";
+import { Header, Icon, Tip } from "../components/ui";
 import { entriesFor } from "../lib/plan";
 import { SLOTS } from "../lib/types";
 import { cap, ymd } from "../lib/util";
@@ -43,6 +43,7 @@ export function Home() {
     <div className="screen">
       <Header title="Кухня" screen="home" sub={today.toLocaleDateString("ru-RU", { weekday: "long", day: "numeric", month: "long" })}
         extra={<button className="helpbtn" aria-label="Ещё: семья, ограничения, данные" onClick={() => goPage(null)} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}><Icon.gear /></button>} />
+      <Tip id="home-gear">Значок ⚙︎ справа вверху — статистика, семья, ограничения в питании и копия данных.</Tip>
       {saveError && <div className="banner bad"><span className="txt">{saveError}</span></div>}
       {needBackup && (
         <div className="banner warn">

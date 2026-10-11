@@ -1,6 +1,6 @@
 // Экран «Рецепты»: что можно приготовить из того, что есть + «Спросить Claude».
 import { useMemo, useState } from "react";
-import { Header, Seg, Sheet } from "../components/ui";
+import { Header, Seg, Sheet, Tip } from "../components/ui";
 import { Menu } from "./Menu";
 import { addMany } from "../lib/shop";
 import { addEntry, dayShort, weekDays } from "../lib/plan";
@@ -35,7 +35,8 @@ export function Recipes() {
     return (
       <div className="screen">
         <Header title="Меню" screen="menu" />
-        <Seg label="Раздел" value={view} onChange={setRecipesView} options={[{ v: "list", t: "Рецепты" }, { v: "menu", t: "Меню на неделю" }]} />
+        <Tip id="recipes-cook">Откройте рецепт: «Готовить по шагам» — крупные шаги и таймеры, «Приготовили» — продукты спишутся со склада.</Tip>
+      <Seg label="Раздел" value={view} onChange={setRecipesView} options={[{ v: "list", t: "Рецепты" }, { v: "menu", t: "Меню на неделю" }]} />
         <Menu />
       </div>
     );

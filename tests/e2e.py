@@ -504,6 +504,23 @@ with sync_playwright() as p:
     pg.click(".sheet .x >> text=/Закрыть|Готово/") if pg.locator(".sheet .x >> text=/Закрыть|Готово/").count() else None
     ok(S + "нет ошибок JS", not [e for e in errs if "ERR_FAILED" not in e], errs[:3])
     ctx.close()
+    # ---- знакомство при первом запуске ----
+    S = "[знакомство] "
+    ctx = br.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True)
+    ctx.add_init_script("Object.defineProperty(navigator,'webdriver',{get:()=>false})")
+    pg = ctx.new_page(); errs = []
+    pg.route("**/recipes.json", lambda r: r.abort())
+    pg.on("pageerror", lambda e: errs.append(str(e)))
+    pg.goto(URL); pg.wait_for_selector('.sheet[aria-label="Знакомство"]')
+    ok(S + "показано на первом запуске", "Что лежит дома" in pg.inner_text(".sheet"))
+    for _ in range(3): pg.click(".sheet .btn >> text=Далее")
+    ok(S + "четвёртый экран", "Сколько пропало" in pg.inner_text(".sheet"))
+    pg.click(".sheet .btn >> text=Начать")
+    ok(S + "закрылось", pg.locator(".sheet").count() == 0)
+    pg.reload(); pg.wait_for_selector("h1"); pg.wait_for_timeout(500)
+    ok(S + "второй раз не показывается", pg.locator(".sheet").count() == 0)
+    ok(S + "нет ошибок JS", not [e for e in errs if "ERR_FAILED" not in e], errs[:3])
+    ctx.close()
     br.close()
 srv.shutdown()
 n = sum(1 for r in res if r[1])
