@@ -39,9 +39,10 @@ with sync_playwright() as p:
         ctx = br.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True,
                              color_scheme=scheme, permissions=["clipboard-read", "clipboard-write"], accept_downloads=True)
         pg = ctx.new_page()
+        pg.route("**/recipes.json", lambda r: r.abort())  # старые сценарии — без встроенной базы
         errs = []
         pg.on("pageerror", lambda e: errs.append(str(e)))
-        pg.on("console", lambda m: errs.append(m.text) if m.type == "error" else None)
+        pg.on("console", lambda m: errs.append(m.text) if m.type == "error" and "ERR_FAILED" not in m.text else None)
         pg.goto(URL); pg.wait_for_selector("h1")
         S = f"[{scheme}] "
         ok(S + "главная открылась", pg.inner_text("h1") == "Кухня")
@@ -289,6 +290,7 @@ with sync_playwright() as p:
                    "steps": ["Взбейте яйца с молоком.", "Пожарьте под крышкой."]}
     ctx = br.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True)
     pg = ctx.new_page(); errs = []
+    pg.route("**/recipes.json", lambda r: r.abort())
     pg.on("pageerror", lambda e: errs.append(str(e)))
     pg.goto(URL); pg.wait_for_selector("h1")
     pg.evaluate("""async ([prods, rec]) => { await new Promise((res, rej) => { const r = indexedDB.open('kitchen'); r.onsuccess = () => { const db = r.result; const tx = db.transaction(['products','recipes'], 'readwrite');
@@ -316,6 +318,27 @@ with sync_playwright() as p:
     pg.click(".tabs button >> text=Продукты"); pg.wait_for_selector(".li")
     pt = pg.inner_text("main").replace("\xa0", " ")
     ok(S + "«Отменить» возвращает продукты", "Остатки: Омлет" not in pt and "10 шт" in pt and "3 продукта на 360" in pt, pt)
+    ok(S + "нет ошибок JS", not errs, errs[:3])
+    ctx.close()
+    # ---- встроенная база ----
+    S = "[база] "
+    ctx = br.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True)
+    pg = ctx.new_page(); errs = []
+    pg.on("pageerror", lambda e: errs.append(str(e)))
+    pg.goto(URL); pg.wait_for_selector("h1")
+    pg.wait_for_function("""async () => { const r = indexedDB.open('kitchen'); return await new Promise(res => { r.onsuccess = () => { const q = r.result.transaction('recipes').objectStore('recipes').count(); q.onsuccess = () => res(q.result > 700); }; }); }""", timeout=20000)
+    pg.reload(); pg.wait_for_selector("h1")
+    pg.click(".tabs button >> text=Рецепты"); pg.wait_for_selector(".li")
+    txt = pg.inner_text("main")
+    ok(S + "в списке есть рецепты из базы", pg.locator("main .li").count() >= 30)
+    ok(S + "показано не больше 60 + кнопка «Показать ещё»", pg.locator("main .li").count() <= 61 and "Показать ещё" in txt)
+    ok(S + "нет холодца и трески", "Холодец" not in txt and "Треска" not in txt)
+    pg.fill('input[aria-label="Поиск рецепта"]', "борщ")
+    ok(S + "поиск находит борщ", "орщ" in pg.inner_text("main"))
+    pg.click(".li >> nth=0"); pg.wait_for_selector(".sheet")
+    ok(S + "рецепт открывается с шагами", "Приготовили" in pg.inner_text(".sheet"))
+    pg.click(".sheet-h > button:last-child")
+    pg.reload(); pg.wait_for_selector("h1")
     ok(S + "нет ошибок JS", not errs, errs[:3])
     ctx.close()
     br.close()

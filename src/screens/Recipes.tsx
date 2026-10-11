@@ -18,6 +18,7 @@ export function Recipes() {
   const [f, setF] = useState<F>("all");
   const [q, setQ] = useState("");
   const [showHidden, setShowHidden] = useState(false);
+  const [limit, setLimit] = useState(60);
   const rows = useMemo(() => {
     const compiled = compileRules(settings.rules, settings.customCatalog, settings.members);
     const who = settings.members.map((m) => m.id);
@@ -48,7 +49,7 @@ export function Recipes() {
         <div className="empty">
           <div className="big">📖</div>
           <p>Здесь будут рецепты. Спросите Claude — он подберёт блюда из ваших продуктов, а вы сохраните понравившиеся.</p>
-          <p className="small">Встроенная база рецептов появится на следующем этапе.</p>
+          <p className="small">Встроенная база загружается при первом запуске с интернетом. Закройте и откройте приложение снова.</p>
         </div>
       ) : (
         <>
@@ -60,7 +61,7 @@ export function Recipes() {
             <button className="chip" aria-pressed={f === "fav"} onClick={() => setF("fav")}>★ Избранное</button>
           </div>
           <div className="list">
-            {list.map(({ r, c, st }) => (
+            {list.slice(0, limit).map(({ r, c, st }) => (
               <button key={r.id} className="li" onClick={() => openSheet({ kind: "recipe", id: r.id })}>
                 <span className="ico">{r.fav ? "⭐" : "🍳"}</span>
                 <div className="main">
@@ -75,6 +76,7 @@ export function Recipes() {
               </button>
             ))}
             {list.length === 0 && <p className="empty">Ничего не нашлось.</p>}
+            {list.length > limit && <button className="btn sec" onClick={() => setLimit(limit + 60)}>Показать ещё ({list.length - limit})</button>}
           </div>
           {hidden.length > 0 && (
             <>

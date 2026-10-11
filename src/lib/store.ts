@@ -66,6 +66,7 @@ export async function load() {
     const settings = { ...defaultSettings(), ...(saved || {}) };
     log.sort((a, b) => a.t - b.t);
     set({ ready: true, products, log, recipes, settings });
+    seedBase();
   } catch (e) {
     reportError(e);
     set({ ready: true, saveError: "Не получилось открыть данные на телефоне. Попробуйте закрыть и снова открыть приложение." });
@@ -252,6 +253,30 @@ export function haveQty(name: string, unit: Unit): number {
 }
 
 /** Частые продукты: сначала те, что покупали чаще и недавно. */
+// ---------- встроенная база рецептов ----------
+/** Копирует рецепты из recipes.json в память телефона. Каждый рецепт добавляется один раз:
+ *  удалённые не возвращаются, правки и избранное не затираются. Новые рецепты в обновлениях подтягиваются сами. */
+export async function seedBase() {
+  try {
+    const resp = await fetch("./recipes.json");
+    if (!resp.ok) return;
+    const base = (await resp.json()) as Recipe[];
+    if (!Array.isArray(base) || !base.length) return;
+    const seen = new Set((await db.getKv<string[]>("baseSeen")) || []);
+    const have = new Set(state.recipes.map((r) => r.id));
+    const add = base.filter((r) => !seen.has(r.id) && !have.has(r.id)).map((r) => ({ ...r, createdAt: 0 }));
+    const all = Array.from(new Set([...seen, ...base.map((r) => r.id)]));
+    if (add.length) {
+      await db.apply([{ store: "recipes", put: add }]);
+      set({ recipes: [...state.recipes, ...add] });
+    }
+    if (all.length !== seen.size) await db.setKv("baseSeen", all);
+  } catch (e) {
+    // нет интернета при первом запуске — попробуем в следующий раз
+    console.warn("База рецептов не загрузилась", e);
+  }
+}
+
 export function frequentNames(s: Settings = state.settings): string[] {
   return Object.entries(s.lastBuy)
     .sort((a, b) => b[1].n - a[1].n || b[1].t - a[1].t)
@@ -276,7 +301,7 @@ export const BACKUP_APP = "kitchen-app";
 export interface Backup { app: string; v: number; at: string; products: Product[]; log: LogEntry[]; recipes: Recipe[]; settings: Settings }
 
 export function makeBackup(): Backup {
-  return { app: BACKUP_APP, v: 1, at: new Date().toISOString(), products: state.products, log: state.log, recipes: state.recipes, settings: state.settings };
+  return { app: BACKUP_APP, v: 1, at: new Date().toISOString(), products: state.products, log: state.log, recipes: state.recipes.filter((r) => r.source !== "base" || r.fav || r.note), settings: state.settings };
 }
 
 /** Восстановление: replace — заменить всё; merge — добавить недостающее. */
@@ -297,6 +322,7 @@ export async function restore(b: Backup, mode: "replace" | "merge") {
   }
   await db.replaceAll({ products, log, recipes, kv: { settings } });
   set({ products, log, recipes, settings });
+  seedBase();
 }
 
 export function markBackup() {

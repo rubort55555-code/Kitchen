@@ -121,7 +121,7 @@ export function PickSheet({ date, slot }: { date: string; slot: Slot }) {
         </div>
       ) : (
         <div className="list" style={{ background: "var(--card2)" }}>
-          {rows.map(({ r, s }) => (
+          {rows.slice(0, 50).map(({ r, s }) => (
             <button key={r.id} className="li" style={{ background: "var(--card2)" }} onClick={() => pick(r.name, r.id)}>
               <span className="ico">{r.fav ? "⭐" : "🍳"}</span>
               <div className="main"><div className="name">{r.name}</div><div className="meta">{r.minutes ? `${r.minutes} мин · ` : ""}{s.missing.length ? `нет: ${s.missing.slice(0, 2).map((x) => x.name.toLowerCase()).join(", ")}` : "всё есть"}{s.urgent ? " · спасёт продукты" : ""}</div></div>
