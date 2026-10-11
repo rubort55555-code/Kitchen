@@ -163,6 +163,8 @@ export interface PlanEntry {
   done?: boolean;
   /** Салат или лёгкая добавка к основному блюду. */
   side?: { id: string; name: string };
+  /** Десерт к ужину (2–3 раза в неделю, по желанию). */
+  sweet?: { id: string; name: string };
 }
 
 export interface Settings {
@@ -171,6 +173,8 @@ export interface Settings {
   plan: PlanEntry[];
   /** Какие приёмы пищи планируем. */
   planSlots: Slot[];
+  /** Добавлять десерт в автоменю (по умолчанию да). */
+  planDessert?: boolean;
   members: Member[];
   rules: Rule[];
   /** Базовые продукты: не считаются недостающими. */

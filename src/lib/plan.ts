@@ -193,6 +193,29 @@ export function autoFill(start: string, slots: Slot[]): { added: number; noRecip
     target.side = { id: pick.r.id, name: pick.r.name };
     added++;
   }
+  // Десерт к ужину: через день, до 3 раз в неделю (можно выключить кнопкой «Десерт»)
+  if (st.settings.planDessert !== false) {
+    const sweets = st.recipes.filter((r) => norm(r.kind || "") === "десерт" && checkRecipe(r, compiled, who).verdict === "ok")
+      .map((r) => { const x = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog); return { r, sc: x.urgent * 30 + x.percent * 0.4 + (r.fav ? 15 : 0) + (r.rating ? (r.rating - 3) * 8 : 0) + (/торт|пирож|печень|мусс|желе|мороже|пудинг|шоколад|десерт|суфле|крем|панна|чизкейк|кекс|маффин|трюфел|конфет|зефир|пастил|безе/.test(norm(r.name)) ? 25 : 0) - (/макарон|вермишел|тыкв|рис\b|каш/.test(norm(r.name)) ? 30 : 0) }; })
+      .sort((a, b) => b.sc - a.sc);
+    const inWeek = (e: PlanEntry) => e.date >= start && e.date <= addDays(start, 6);
+    const usedSweet = new Set(plan.map((e) => e.sweet?.id).filter(Boolean) as string[]);
+    let count = plan.filter((e) => inWeek(e) && e.sweet).length;
+    let lastDay = plan.filter((e) => inWeek(e) && e.sweet).map((e) => e.date).sort().pop();
+    for (const d of days) {
+      if (d < today || count >= 3) continue;
+      if (lastDay && Math.abs(parseYmd(d).getTime() - parseYmd(lastDay).getTime()) < 2 * dayMs) continue;
+      const meals = plan.filter((e) => e.date === d && (e.slot === "ужин" || e.slot === "обед"));
+      if (!meals.length) continue;
+      const target = meals.find((e) => e.slot === "ужин") || meals[0];
+      const words = new Set(plan.filter((e) => inWeek(e) && e.sweet).map((e) => norm(e.sweet!.name).split(" ")[0]));
+      const pick = sweets.find((x) => !usedSweet.has(x.r.id) && !words.has(norm(x.r.name).split(" ")[0])) || sweets.find((x) => !usedSweet.has(x.r.id));
+      if (!pick) break;
+      usedSweet.add(pick.r.id);
+      target.sweet = { id: pick.r.id, name: pick.r.name };
+      count++; lastDay = d; added++;
+    }
+  }
   save(plan);
   return { added, noRecipes: false };
 }
@@ -200,7 +223,7 @@ export function autoFill(start: string, slots: Slot[]): { added: number; noRecip
 /** Рецепты, которые стоят в меню на эти дни (для списка покупок). */
 export function recipesInPlan(days: string[]): Recipe[] {
   const st = getState();
-  const ids = new Set(planList().filter((e) => days.includes(e.date) && !e.done).flatMap((e) => [e.recipeId, e.side?.id]).filter(Boolean));
+  const ids = new Set(planList().filter((e) => days.includes(e.date) && !e.done).flatMap((e) => [e.recipeId, e.side?.id, e.sweet?.id]).filter(Boolean));
   return st.recipes.filter((r) => ids.has(r.id));
 }
 

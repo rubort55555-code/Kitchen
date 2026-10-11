@@ -57,6 +57,7 @@ export function Menu() {
       </div>
       <div className="chips" role="group" aria-label="Что планируем">
         {SLOTS.map((s) => <button key={s} className="chip" aria-pressed={slots.includes(s)} onClick={() => toggleSlot(s)}>{cap(s)}</button>)}
+        <button className="chip" aria-pressed={st.settings.planDessert !== false} onClick={() => setSettings({ planDessert: st.settings.planDessert === false })}>Десерт</button>
       </div>
       <div className="row2" style={{ marginTop: 6 }}>
         <button className="btn sec" onClick={fill}>Заполнить из моих рецептов</button>
@@ -87,13 +88,13 @@ export function Menu() {
                   <button className="dish empty" onClick={() => openSheet({ kind: "pick", date: d, slot })}>+ Добавить</button>
                 )}
               </div>
-              {e?.side && (
-                <div className="meal side">
-                  <span className="slot">+ салат</span>
-                  <button className="dish" onClick={() => openSheet({ kind: "recipe", id: e.side!.id })}>{e.side.name}</button>
-                  <button className="ib" aria-label={`Убрать салат: ${e.side.name}`} onClick={() => { const before = plan; restorePlan(plan.map((x) => (x.id === e.id ? { ...x, side: undefined } : x))); toast(`Убрано: ${e.side!.name}`, () => restorePlan(before)); }}>×</button>
+              {e && ([["side", "+ салат"], ["sweet", "+ десерт"]] as const).map(([k, label]) => e[k] && (
+                <div key={k} className="meal side">
+                  <span className="slot">{label}</span>
+                  <button className="dish" onClick={() => openSheet({ kind: "recipe", id: e[k]!.id })}>{e[k]!.name}</button>
+                  <button className="ib" aria-label={`Убрать: ${e[k]!.name}`} onClick={() => { const before = plan; restorePlan(plan.map((x) => (x.id === e.id ? { ...x, [k]: undefined } : x))); toast(`Убрано: ${e[k]!.name}`, () => restorePlan(before)); }}>×</button>
                 </div>
-              )}
+              ))}
               </Fragment>
             );
           })}
