@@ -211,24 +211,45 @@ export function allCatalog(custom: CatalogItem[]): CatalogItem[] {
   return custom.concat(CATALOG.filter((x) => !own.has(norm(x.n))));
 }
 
-/** Ищет продукт справочника по названию (точно, по синониму или по началу слова). */
-export function findCatalog(name: string, custom: CatalogItem[] = []): CatalogItem | null {
-  const q = norm(name);
-  if (!q) return null;
+interface CatIndex { exact: Map<string, CatalogItem>; syn: Map<string, CatalogItem>; stems: { it: CatalogItem; re: RegExp; len: number }[]; memo: Map<string, CatalogItem | null> }
+const indexes = new Map<string, CatIndex>();
+
+/** Индекс справочника: регулярные выражения собираем один раз (раньше — на каждый вызов, это тормозило). */
+function indexFor(custom: CatalogItem[]): CatIndex {
+  const sig = custom.map((c) => c.n + "\u0001" + (c.s || []).join(",")).join("|");
+  let ix = indexes.get(sig);
+  if (ix) return ix;
+  ix = { exact: new Map(), syn: new Map(), stems: [], memo: new Map() };
   const list = allCatalog(custom);
-  for (const it of list) if (norm(it.n) === q) return it;
-  for (const it of list) if ((it.s || []).some((s) => norm(s) === q)) return it;
-  // Начало слова: «помидоры черри» → Помидоры; «филе трески» → Треска
-  let best: CatalogItem | null = null, bestLen = 0;
+  for (const it of list) { const n = norm(it.n); if (!ix.exact.has(n)) ix.exact.set(n, it); }
+  for (const it of list) for (const s of it.s || []) { const n = norm(s); if (!ix.syn.has(n)) ix.syn.set(n, it); }
   for (const it of list) {
     for (const key of [it.n, ...(it.s || [])]) {
       const k = norm(key);
       const stem = k.length > 5 ? k.slice(0, k.length - 1) : k;
-      const re = new RegExp("(^|[^а-яa-z])" + escapeRe(stem));
-      if (re.test(q) && stem.length > bestLen) { best = it; bestLen = stem.length; }
+      ix.stems.push({ it, re: new RegExp("(^|[^а-яa-z])" + escapeRe(stem)), len: stem.length });
     }
   }
-  return best;
+  if (indexes.size > 20) indexes.clear();
+  indexes.set(sig, ix);
+  return ix;
+}
+
+/** Ищет продукт справочника по названию (точно, по синониму или по началу слова). */
+export function findCatalog(name: string, custom: CatalogItem[] = []): CatalogItem | null {
+  const q = norm(name);
+  if (!q) return null;
+  const ix = indexFor(custom);
+  if (ix.memo.has(q)) return ix.memo.get(q)!;
+  let res: CatalogItem | null = ix.exact.get(q) || ix.syn.get(q) || null;
+  if (!res) {
+    // Начало слова: «помидоры черри» → Помидоры; «филе трески» → Треска
+    let bestLen = 0;
+    for (const st of ix.stems) if (st.len > bestLen && st.re.test(q)) { res = st.it; bestLen = st.len; }
+  }
+  if (ix.memo.size > 5000) ix.memo.clear();
+  ix.memo.set(q, res);
+  return res;
 }
 
 const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
