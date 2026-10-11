@@ -93,3 +93,14 @@ export function norm(s: string): string {
 }
 
 export const cap = (s: string) => (s ? s[0].toUpperCase() + s.slice(1) : s);
+
+/** Пересчёт количества в тексте: «200 г» ×1,5 → «300 г», «1–2 шт» → «1,5–3 шт». Без числа — как есть. */
+export function scaleAmount(amount: string, k: number): string {
+  if (Math.abs(k - 1) < 1e-9) return amount;
+  const f = (s: string) => {
+    const v = Number(s.replace(",", ".")) * k;
+    const r = v >= 10 ? Math.round(v) : Math.round(v * 10) / 10;
+    return String(r).replace(".", ",");
+  };
+  return amount.replace(/^(\d+(?:[.,]\d+)?)(\s*[-–]\s*(\d+(?:[.,]\d+)?))?/, (_m, a, _r, b) => (b ? `${f(a)}–${f(b)}` : f(a)));
+}

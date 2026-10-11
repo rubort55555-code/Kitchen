@@ -12,6 +12,7 @@ import { AskClaude } from "./screens/AskClaude";
 import { Shop, BuySheet } from "./screens/Shop";
 import { PickSheet } from "./screens/Menu";
 import { CookSheet } from "./screens/Cook";
+import { CookMode } from "./screens/CookMode";
 
 const TABS: { id: Tab; title: string; icon: typeof Icon.home }[] = [
   { id: "home", title: "Главная", icon: Icon.home },
@@ -30,6 +31,7 @@ function SheetView({ s }: { s: Sheet }) {
     case "buy": return <BuySheet />;
     case "recipe": return <RecipeView id={s.id} />;
     case "cook": return <CookSheet id={s.id} entry={s.entry} />;
+    case "steps": return <CookMode id={s.id} />;
   }
 }
 

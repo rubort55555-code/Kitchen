@@ -136,7 +136,8 @@ export function RecipeView({ id }: { id: string }) {
           </div>
         ))}
       </div>
-      <button className="btn" style={{ marginTop: 12 }} onClick={() => openSheet({ kind: "cook", id: r.id })}>🍳 Приготовили — списать продукты</button>
+      {r.steps.length > 0 && <button className="btn" style={{ marginTop: 12 }} onClick={() => openSheet({ kind: "steps", id: r.id })}>👨‍🍳 Готовить по шагам</button>}
+      <button className="btn sec" onClick={() => openSheet({ kind: "cook", id: r.id })}>🍳 Приготовили — списать продукты</button>
       {st.missing.length > 0 && (
         <button className="btn sec" onClick={() => { const n = addMany(st.missing.map((x) => ({ name: x.name, amount: x.amount })), r.name); toast(n ? `В список покупок: ${n}` : "Всё уже в списке покупок"); }}>
           Недостающее — в покупки ({st.missing.length})

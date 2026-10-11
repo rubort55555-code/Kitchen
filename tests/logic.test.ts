@@ -2,7 +2,8 @@ import { compileRules, checkRecipe, findHits, toTbsp, applyReplace, DEFAULT_RULE
 import { findCatalog } from "../src/lib/catalog";
 import { addQty, qtyText } from "../src/lib/units";
 import { parseAnswer, buildPrompt } from "../src/lib/claude";
-import { rub, num } from "../src/lib/util";
+import { rub, num, scaleAmount } from "../src/lib/util";
+import { findTimes, fmtTime } from "../src/lib/timers";
 import type { Recipe } from "../src/lib/types";
 
 let pass = 0, fail = 0;
@@ -88,6 +89,14 @@ const pe = planCook(omelet, 2, stock, S, { "0": { on: false }, "1": { qty: 0.25 
 ok("правки: снять галочку и поменять количество", !pe.rows[0].on && pe.rows[1].takes[0].take === 0.25 && pe.cost < pl.cost);
 const pu = planCook({ ...omelet, ingredients: [{ name: "Хрен", amount: "1 кусок" }, { name: "Яйца", amount: "1 шт" }] }, 2, stock, S);
 ok("непонятное количество — вписать самому", pu.rows[0].manual && !pu.rows[0].on);
+
+ok("пересчёт: 200 г ×1,5", scaleAmount("200 г", 1.5) === "300 г");
+ok("пересчёт: 1 шт ×2, 0,5 уп ×3", scaleAmount("1 шт", 2) === "2 шт" && scaleAmount("0,5 уп", 3) === "1,5 уп");
+ok("пересчёт: диапазон и «по вкусу»", scaleAmount("1-2 шт", 2) === "2–4 шт" && scaleAmount("по вкусу", 2) === "по вкусу");
+ok("время в шаге: 15 минут", findTimes("Варите 15 минут.")[0]?.seconds === 900);
+ok("время в шаге: 20–25 минут берём большее, час, секунды", findTimes("Тушите 20–25 минут")[0].seconds === 1500 && findTimes("1 час")[0].seconds === 3600 && findTimes("30 секунд")[0].seconds === 30);
+ok("время в шаге: нет времени", findTimes("Посолите по вкусу").length === 0);
+ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) === "1:00:00");
 
 console.log(`\nЛогика: ${pass} из ${pass + fail}`);
 if (fail) process.exit(1);

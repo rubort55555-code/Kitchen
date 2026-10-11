@@ -341,6 +341,44 @@ with sync_playwright() as p:
     pg.reload(); pg.wait_for_selector("h1")
     ok(S + "нет ошибок JS", not errs, errs[:3])
     ctx.close()
+    # ---- режим готовки по шагам ----
+    S = "[шаги] "
+    ctx = br.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True)
+    pg = ctx.new_page(); errs = []
+    pg.on("pageerror", lambda e: errs.append(str(e)))
+    pg.goto(URL); pg.wait_for_selector("h1")
+    pg.wait_for_function("""async () => { const r = indexedDB.open('kitchen'); return await new Promise(res => { r.onsuccess = () => { const q = r.result.transaction('recipes').objectStore('recipes').count(); q.onsuccess = () => res(q.result > 700); }; }); }""", timeout=20000)
+    pg.reload(); pg.wait_for_selector("h1")
+    pg.click(".tabs button >> text=Рецепты"); pg.wait_for_selector(".li")
+    pg.fill('input[aria-label="Поиск рецепта"]', "Гречка рассыпчатая")
+    pg.click("main .li >> nth=0"); pg.wait_for_selector(".sheet")
+    pg.click("button >> text=Готовить по шагам"); pg.wait_for_selector(".cookmode")
+    ok(S + "первый экран — ингредиенты и порции", "Что понадобится" in pg.inner_text(".cookmode") and pg.locator(".cm-ing").count() >= 2)
+    before = pg.locator(".cm-ing .am").first.inner_text()
+    pg.click('[aria-label="Больше порций"]')
+    ok(S + "порции пересчитывают количества", pg.locator(".cm-ing .am").first.inner_text() != before)
+    pg.locator(".cm-ing").first.click()
+    ok(S + "галочка у ингредиента", "on" in (pg.locator(".cm-ing").first.get_attribute("class") or ""))
+    pg.click(".cm-nav .btn >> text=Начать")
+    ok(S + "показан шаг 1", "Шаг 1 из" in pg.inner_text(".cookmode"))
+    found = False
+    for _ in range(12):
+        if pg.locator(".cm-tbtn").count(): found = True; break
+        if pg.locator(".cm-nav .btn >> text=Дальше").count() == 0: break
+        pg.click(".cm-nav .btn >> text=Дальше")
+    ok(S + "в шаге со временем есть кнопка таймера", found)
+    if found:
+        pg.locator(".cm-tbtn").first.click()
+        ok(S + "таймер запустился и виден вверху", pg.locator(".cm-timer").count() == 1)
+        pg.click(".cm-timer button")
+        ok(S + "таймер можно остановить", pg.locator(".cm-timer").count() == 0)
+    while pg.locator(".cm-nav .btn >> text=/Дальше|Закончить/").count():
+        pg.locator(".cm-nav .btn >> text=/Дальше|Закончить/").click()
+    ok(S + "в конце — кнопка «Приготовили»", pg.locator(".cookmode button", has_text="Приготовили").count() == 1)
+    pg.click(".cookmode button >> text=Приготовили"); pg.wait_for_selector(".sheet")
+    ok(S + "открылось списание", pg.locator('.sheet[aria-label="Приготовили"]').count() == 1)
+    ok(S + "нет ошибок JS", not errs, errs[:3])
+    ctx.close()
     br.close()
 srv.shutdown()
 n = sum(1 for r in res if r[1])
