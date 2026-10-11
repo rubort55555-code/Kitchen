@@ -3,7 +3,7 @@ import { Fragment, useEffect, useMemo, useState } from "react";
 import { Sheet } from "../components/ui";
 import { setSettings, useStore } from "../lib/store";
 import { addEntry, autoFill, dayShort, dayTitle, entriesFor, pruneOld, recipesInPlan, removeEntry, restorePlan, toggleDone, weekDays } from "../lib/plan";
-import { addMany, missingFor } from "../lib/shop";
+import { addMany, missingFor, restoreShop, shopList } from "../lib/shop";
 import { compileRules, checkRecipe } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
 import type { Slot } from "../lib/types";
@@ -34,7 +34,12 @@ export function Menu() {
     const r = autoFill(start, slots);
     if (r.noRecipes) toast("Сначала сохраните несколько рецептов (например, через «Спросить Claude»).");
     else if (!r.added) toast("Свободных мест нет или нет подходящих рецептов.");
-    else toast(`Поставлено ${r.added} ${plural(r.added, "блюдо", "блюда", "блюд")}`, () => restorePlan(before));
+    else {
+      // Недостающее для новых блюд сразу уходит в список покупок (отмена вернёт и меню, и список)
+      const shopBefore = shopList();
+      const n = addMany(missingFor(recipesInPlan(future)), "Меню");
+      toast(`Поставлено ${r.added} ${plural(r.added, "блюдо", "блюда", "блюд")}` + (n ? `; докупить: ${n} в списке покупок` : ""), () => { restorePlan(before); restoreShop(shopBefore); });
+    }
   }
   function clearWeek() {
     const before = plan;
