@@ -54,6 +54,7 @@ for (const r of recipes) {
   const res = L.checkRecipe({ ...r, createdAt: 0 }, compiled, []);
   if (res.verdict !== "ok") problems.push(`${where}: ${res.verdict} — ${res.issues.map((i) => i.msg).join(" ")}`);
 
+  if (/\.\.\.|…|\bнет,/.test(r.name)) problems.push(`${where}: в названии лишний текст («...», «нет,»)`);
   if (!r.kind) problems.push(`${where}: не указан вид блюда`);
   if (!r.minutes || r.minutes > 600) problems.push(`${where}: странное время (${r.minutes})`);
   if (!r.servings || r.servings > 24) problems.push(`${where}: странное число порций (${r.servings})`);
