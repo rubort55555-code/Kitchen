@@ -32,6 +32,7 @@ export function Home() {
       .slice(0, 3);
   }, [recipes, products, settings]);
   const expired = useMemo(() => products.filter((p) => { const d = daysLeft(p.until); return d !== null && d < 0; }).length, [products]);
+  const needRevision = products.length >= 5 && (!settings.lastRevision || (Date.now() - new Date(settings.lastRevision).getTime()) / 86400000 >= 14);
   const backupDays = settings.lastBackup ? Math.floor((Date.now() - settings.lastBackup) / 86400000) : null;
   const needBackup = (products.length > 0 || log.length > 0) && (backupDays === null || backupDays >= 7);
   const today = new Date();
@@ -47,6 +48,13 @@ export function Home() {
         <div className="banner warn">
           <span className="txt">{backupDays === null ? "Вы ещё не сохраняли копию данных." : `Копии данных ${backupDays} ${plural(backupDays, "день", "дня", "дней")}.`} Сохраните её — Safari иногда стирает данные.</span>
           <button className="chip" onClick={() => goPage("data")}>Сохранить</button>
+        </div>
+      )}
+
+      {needRevision && (
+        <div className="banner warn">
+          <span className="txt">{settings.lastRevision ? "С последней ревизии прошло больше двух недель." : "Сделайте ревизию: пройдитесь по продуктам и поправьте остатки."}</span>
+          <button className="chip" onClick={() => openSheet({ kind: "revision" })}>Начать</button>
         </div>
       )}
 

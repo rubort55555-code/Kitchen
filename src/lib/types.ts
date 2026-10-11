@@ -170,6 +170,8 @@ export interface Settings {
   lastBackup: number;
   /** Дата, когда последний раз спрашивали о просроченном. */
   overdueAsked?: string;
+  /** Дата последней ревизии продуктов. */
+  lastRevision?: string;
   tipsSeen: string[];
   customCatalog: CatalogItem[];
   /** Последние цены и количества по названию продукта. */

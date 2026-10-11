@@ -318,3 +318,4 @@ details.prompt pre { white-space: pre-wrap; font: 13px/1.4 ui-monospace, Menlo, 
 .split i.bad { background: var(--bad); }
 .tip { margin: 8px 0; line-height: 1.4; }
 .t-ok { color: var(--accent); }
+.rev-qty { font-size: 34px; font-weight: 700; }

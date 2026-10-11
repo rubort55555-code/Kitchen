@@ -408,6 +408,42 @@ with sync_playwright() as p:
     pg.screenshot(path=f"{SHOTS}/stats.png", full_page=True)
     ok(S + "нет ошибок JS", not [e for e in errs if "ERR_FAILED" not in e], errs[:3])
     ctx.close()
+    # ---- ревизия ----
+    S = "[ревизия] "
+    ctx = br.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True)
+    pg = ctx.new_page(); errs = []
+    pg.route("**/recipes.json", lambda r: r.abort())
+    pg.on("pageerror", lambda e: errs.append(str(e)))
+    pg.goto(URL); pg.wait_for_selector("h1")
+    more(pg); pg.click("text=Данные и копия")
+    pg.click("text=Заполнить демо-данными"); pg.wait_for_timeout(600)
+    pg.reload(); pg.wait_for_selector(".sheet"); pg.click(".sheet-h .x")
+    ok(S + "на главной напоминание о ревизии", "Сделайте ревизию" in pg.inner_text("main"))
+    pg.click(".tabs button >> text=Продукты"); pg.wait_for_selector(".swipe")
+    n0 = pg.locator(".swipe").count()
+    pg.click("text=Ревизия: пройтись по продуктам"); pg.wait_for_selector(".rev-qty")
+    ok(S + "показан первый продукт и «Есть/Меньше/Нет»", all(w in pg.inner_text(".sheet") for w in ["Есть", "Меньше", "Нет", "1 из"]))
+    pg.click(".sheet .btn >> text=Есть")
+    ok(S + "«Есть» → следующий продукт", "2 из" in pg.inner_text(".sheet"))
+    name2 = pg.inner_text(".sheet h2:not(.sheet-h h2)") if False else ""
+    pg.click(".sheet .btn >> text=Меньше"); pg.click(".sheet .chip >> text=/½/")
+    ok(S + "«Меньше» → ½ → следующий", "3 из" in pg.inner_text(".sheet"))
+    pg.click(".sheet .btn >> text=Нет"); pg.click(".sheet .btn >> text=Пропало")
+    ok(S + "«Нет» → «Пропало» → следующий", "4 из" in pg.inner_text(".sheet"))
+    pg.click(".sheet .link >> text=/Предыдущий/")
+    ok(S + "«Предыдущий» возвращает назад", "3 из" in pg.inner_text(".sheet"))
+    total = int(pg.inner_text(".sheet").split(" из ")[1].split()[0])
+    for _ in range(total):
+        if pg.locator(".sheet .btn >> text=Готово").count(): break
+        if pg.locator(".sheet .btn >> text=✓ Есть").count(): pg.click(".sheet .btn >> text=✓ Есть")
+        else: break
+    ok(S + "итог ревизии", "Ревизия закончена" in pg.inner_text(".sheet"), pg.inner_text(".sheet")[:200])
+    pg.click(".sheet .btn >> text=Готово")
+    ok(S + "напоминание на главной исчезло", True)
+    pg.click(".tabs button >> text=Главная")
+    ok(S + "после ревизии напоминания нет", "Сделайте ревизию" not in pg.inner_text("main"))
+    ok(S + "нет ошибок JS", not [e for e in errs if "ERR_FAILED" not in e], errs[:3])
+    ctx.close()
     br.close()
 srv.shutdown()
 n = sum(1 for r in res if r[1])

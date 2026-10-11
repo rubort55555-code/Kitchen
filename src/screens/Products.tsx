@@ -48,6 +48,7 @@ export function Products() {
             <button className="chip" aria-pressed={filter === "soon"} onClick={() => setFilter("soon")}>Скоро испортится{counts.soon ? ` · ${counts.soon}` : ""}</button>
             <button className="chip" aria-pressed={filter === "bad"} onClick={() => setFilter("bad")}>Просрочено{counts.bad ? ` · ${counts.bad}` : ""}</button>
           </div>
+          <button className="btn sec" onClick={() => openSheet({ kind: "revision" })}>📋 Ревизия: пройтись по продуктам</button>
           <Tip id="swipe">Проведите по продукту влево, чтобы списать его: съели, пропало или выбросили.</Tip>
           {PLACES.map((place) => {
             const items = shown.filter((p) => p.place === place);

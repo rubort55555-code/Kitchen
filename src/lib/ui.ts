@@ -14,7 +14,8 @@ export type Sheet =
   | { kind: "recipe"; id: string }
   | { kind: "cook"; id: string; entry?: string }
   | { kind: "steps"; id: string }
-  | { kind: "overdue" };
+  | { kind: "overdue" }
+  | { kind: "revision" };
 
 export interface Toast { id: number; text: string; undo?: () => void }
 interface UI { tab: Tab; page: Page; sheets: Sheet[]; toast: Toast | null; update: (() => void) | null; recipesView: "list" | "menu" }

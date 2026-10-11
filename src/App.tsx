@@ -13,6 +13,7 @@ import { Shop, BuySheet } from "./screens/Shop";
 import { PickSheet } from "./screens/Menu";
 import { CookSheet } from "./screens/Cook";
 import { CookMode } from "./screens/CookMode";
+import { Revision } from "./screens/Revision";
 import { Overdue, isExpired } from "./screens/Overdue";
 import { useEffect } from "react";
 import { ymd } from "./lib/util";
@@ -36,6 +37,7 @@ function SheetView({ s }: { s: Sheet }) {
     case "cook": return <CookSheet id={s.id} entry={s.entry} />;
     case "steps": return <CookMode id={s.id} />;
     case "overdue": return <Overdue />;
+    case "revision": return <Revision />;
   }
 }
 
