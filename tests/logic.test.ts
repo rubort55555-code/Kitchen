@@ -8,6 +8,7 @@ import { report, insights, priceTrends, amountText } from "../src/lib/stats";
 import { parseReceipt } from "../src/lib/receipt";
 import { parseRecipeText } from "../src/lib/recipeText";
 import { productsCsv, pricesCsv } from "../src/lib/csv";
+import { sumAmounts } from "../src/lib/shop";
 import { substitutes } from "../src/lib/subs";
 import { recipeStatus } from "../src/lib/match";
 import type { Recipe } from "../src/lib/types";
@@ -190,6 +191,13 @@ ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) =
   ok("csv: BOM, кавычки и запятая в числах", c.startsWith("\ufeff") && c.includes('"Молоко ""Дом""; 3,2%";0,5;л') && c.includes("89,9"), c);
   const p = pricesCsv([{ id: "a", t: Date.UTC(2026, 9, 1), name: "Мука", reason: "bought", qty: 500, unit: "г", rub: 45 }]);
   ok("csv: цена за кг считается", p.includes("90"), p);
+}
+
+{
+  ok("сумма: мука 320 г + 4 ст. л. = 420 г", sumAmounts(["320 г", "4 ст. л."], "Мука").replace(/\s/g, " ") === "420 г", sumAmounts(["320 г", "4 ст. л."], "Мука"));
+  ok("сумма: масло 3 ст. л. + 2 ст. л. = 80 мл", sumAmounts(["3 ст. л.", "2 ст. л."], "Масло оливковое").replace(/\s/g, " ") === "80 мл", sumAmounts(["3 ст. л.", "2 ст. л."], "Масло оливковое"));
+  ok("сумма: укроп 0,5 + 1 пучок = 2 уп (покупаем целыми)", sumAmounts(["0,5 пучка", "1 пучок"], "Укроп").replace(/\s/g, " ") === "2 уп", sumAmounts(["0,5 пучка", "1 пучок"], "Укроп"));
+  ok("сумма: по вкусу остаётся текстом", sumAmounts(["200 г", "по вкусу"], "Сахар").includes("по вкусу"), sumAmounts(["200 г", "по вкусу"], "Сахар"));
 }
 
 console.log(`\nЛогика: ${pass} из ${pass + fail}`);

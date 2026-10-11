@@ -7,6 +7,7 @@ import { findCatalog } from "./catalog";
 import { keyOf, recipeStatus } from "./match";
 import { norm, toNum, uid } from "./util";
 import { qtyText } from "./units";
+import { conv, parseNeed } from "./cook";
 
 export const shopList = (): ShopItem[] => getState().settings.shop || [];
 const save = (shop: ShopItem[]) => setSettings({ shop });
@@ -115,21 +116,46 @@ export function missingFor(recipes: Recipe[]): { name: string; amount: string; f
       acc.set(k, cur);
     }
   }
-  return Array.from(acc.values()).map((x) => ({ name: x.name, amount: sumAmounts(x.amounts), for: x.for }));
+  return Array.from(acc.values()).map((x) => ({ name: x.name, amount: sumAmounts(x.amounts, x.name), for: x.for }));
 }
 
 /** Складывает «200 г» + «300 г» = «500 г»; разные единицы — через «+». */
-export function sumAmounts(list: string[]): string {
+/** Сколько граммов в столовой ложке (15 мл) — для сыпучих и густых продуктов. */
+const SPOON_G: [RegExp, number][] = [
+  [/мук|крахмал/, 25], [/сахар|соль|манн|рис|гречк|пшен/, 25], [/какао/, 20], [/овсян|хлопь/, 12],
+  [/сметан|майонез|творог|йогурт/, 25], [/мёд|мед|варень|сгущ/, 35], [/паста|кетчуп/, 30], [/масло подсолн|масло олив|масло раст/, 17],
+  [/сухар/, 15], [/сода|разрыхл/, 28], [/масло сливоч/, 20],
+];
+
+/**
+ * Складывает количества одного продукта из разных рецептов в одно число:
+ * «320 г + 4 ст. л.» → «420 г» (ложки переводятся в граммы для муки, сахара и т. п.).
+ * Что не удаётся перевести (по вкусу, «кусок») — остаётся рядом текстом.
+ */
+export function sumAmounts(list: string[], name = ""): string {
+  const cat = name ? findCatalog(name, getState().settings.customCatalog) : null;
+  const n = norm(name);
+  const spoonG = SPOON_G.find(([re]) => re.test(n))?.[1];
   const by = new Map<Unit, number>();
   const rest: string[] = [];
-  for (const a of list) {
-    const p = parseAmount(a.replace(/\s*·.*$/, ""));
-    if (!p) { if (a.trim()) rest.push(a.trim()); continue; }
-    const base: Unit = p.unit === "кг" ? "г" : p.unit === "л" ? "мл" : p.unit;
-    const v = p.unit === "кг" || p.unit === "л" ? p.qty * 1000 : p.qty;
-    by.set(base, (by.get(base) || 0) + v);
+  for (const raw of list) {
+    const a = raw.replace(/\s*·.*$/, "").trim();
+    const need = parseNeed(a);
+    if (!need || need === "free") { if (a) rest.push(a); continue; }
+    let { qty, unit } = need;
+    // ложки/стаканы приходят как мл; для сыпучих и густых — переводим в граммы
+    const isSpoon = /ст\.?\s*л|ч\.?\s*л|ложк|стакан/.test(norm(a));
+    if (isSpoon && spoonG && (cat?.u === "г" || cat?.u === "кг" || cat?.u === "шт" || cat?.u === "уп" || !cat)) { qty = (qty / 15) * spoonG; unit = "г"; }
+    // к основной единице продукта (если переводится)
+    const target: Unit = cat ? (cat.u === "кг" ? "г" : cat.u === "л" ? "мл" : cat.u) : unit === "кг" ? "г" : unit === "л" ? "мл" : unit;
+    const c = conv(qty, unit, target, name);
+    const [u, v] = c !== null ? [target, c] : [unit === "кг" ? "г" : unit === "л" ? "мл" : unit, unit === "кг" || unit === "л" ? qty * 1000 : qty] as [Unit, number];
+    by.set(u, (by.get(u) || 0) + v);
   }
-  const parts = Array.from(by.entries()).map(([u, v]) => qtyText(v, u));
+  const parts = Array.from(by.entries()).map(([u, v]) => {
+    const round = u === "г" || u === "мл" ? Math.ceil(v / 10) * 10 : u === "шт" || u === "уп" ? Math.max(1, Math.ceil(v - 0.01)) : Math.round(v * 10) / 10;
+    return qtyText(round, u);
+  });
   return parts.concat(Array.from(new Set(rest))).join(" + ");
 }
 
