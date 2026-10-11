@@ -168,6 +168,8 @@ export interface Settings {
   /** Базовые продукты: не считаются недостающими. */
   basics: string[];
   lastBackup: number;
+  /** Дата, когда последний раз спрашивали о просроченном. */
+  overdueAsked?: string;
   tipsSeen: string[];
   customCatalog: CatalogItem[];
   /** Последние цены и количества по названию продукта. */

@@ -10,6 +10,7 @@ import { FAQ, SCREEN_HELP, SECTIONS, searchHelp, type HelpSection, type Screen }
 import type { CatalogItem, FishType, Level, Member, Place, Rule, Unit } from "../lib/types";
 import { PLACES, UNITS } from "../lib/types";
 import { norm, plural, ymd } from "../lib/util";
+import { Stats } from "./Stats";
 import { closeAll, closeSheet, goPage, goTab, toast, useUI } from "../lib/ui";
 
 export const VERSION = typeof __VERSION__ !== "undefined" ? __VERSION__ : "dev";
@@ -17,6 +18,7 @@ export const VERSION = typeof __VERSION__ !== "undefined" ? __VERSION__ : "dev";
 export function More() {
   const page = useUI((u) => u.page);
   switch (page) {
+    case "stats": return <Stats />;
     case "family": return <Family />;
     case "rules": return <Rules />;
     case "catalog": return <Catalog />;
@@ -45,6 +47,9 @@ function Menu() {
     <div className="screen">
       <Header title="Ещё" screen="more" />
       <div className="list">
+        <Row icon="📊" title="Статистика" sub="Съедено, пропало, осталось — в рублях" onClick={() => goPage("stats")} />
+      </div>
+      <div className="list">
         <Row icon="👨‍👩" title="Семья" sub={s.members.map((m) => m.name).join(", ")} onClick={() => goPage("family")} />
         <Row icon="🚫" title="Ограничения в питании" sub={s.rules.filter((r) => r.level !== "ok").map((r) => r.title).join(", ")} onClick={() => goPage("rules")} />
         <Row icon="📚" title="Справочник продуктов" sub="Сроки хранения, типы рыбы" onClick={() => goPage("catalog")} />
@@ -57,7 +62,6 @@ function Menu() {
         <Row icon="🛠" title="Что-то не работает" onClick={() => goPage("bug")} />
         <Row icon="ℹ️" title="О приложении" sub={"Версия " + VERSION} onClick={() => goPage("about")} />
       </div>
-      <p className="muted small center">Статистика и графики «съедено / пропало / осталось» появятся на этапе 3.</p>
     </div>
   );
 }

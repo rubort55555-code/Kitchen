@@ -4,6 +4,7 @@ import { addQty, qtyText } from "../src/lib/units";
 import { parseAnswer, buildPrompt } from "../src/lib/claude";
 import { rub, num, scaleAmount } from "../src/lib/util";
 import { findTimes, fmtTime } from "../src/lib/timers";
+import { report, insights, priceTrends, amountText } from "../src/lib/stats";
 import type { Recipe } from "../src/lib/types";
 
 let pass = 0, fail = 0;
@@ -97,6 +98,28 @@ ok("время в шаге: 15 минут", findTimes("Варите 15 мину�
 ok("время в шаге: 20–25 минут берём большее, час, секунды", findTimes("Тушите 20–25 минут")[0].seconds === 1500 && findTimes("1 час")[0].seconds === 3600 && findTimes("30 секунд")[0].seconds === 30);
 ok("время в шаге: нет времени", findTimes("Посолите по вкусу").length === 0);
 ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) === "1:00:00");
+
+{
+  const now = Date.now(), d = 86400000;
+  const L = (name: string, reason: any, qty: number, unit: any, r: number, t = now - d) => ({ id: name + reason + t + r, t, name, reason, qty, unit, rub: r } as any);
+  const log = [
+    L("Молоко", "bought", 1, "л", 80, now - 40 * d), L("Молоко", "spoiled", 0.5, "л", 40, now - 30 * d),
+    L("Молоко", "bought", 1, "л", 85, now - 25 * d), L("Молоко", "spoiled", 1, "л", 85, now - 15 * d),
+    L("Молоко", "bought", 1, "л", 100, now - 5 * d), L("Молоко", "eaten", 1, "л", 100, now - 2 * d),
+    L("Гречка", "bought", 900, "г", 120), L("Гречка", "eaten", 300, "г", 40),
+  ];
+  const rep = report(log, [], now - 60 * d);
+  ok("отчёт: куплено/съедено/пропало в рублях", rep.bought.rub === 385 && rep.eaten.rub === 140 && rep.lost.rub === 125, rep);
+  ok("отчёт: процент потерь", rep.lostPct === 47, rep.lostPct);
+  ok("отчёт: количества отдельно по л, кг", amountText(rep.bought.amount) === "0,9 кг + 3 л" && amountText(rep.lost.amount) === "1,5 л", amountText(rep.bought.amount));
+  ok("отчёт: топ потерь — молоко", rep.topLost[0].name === "Молоко" && rep.topLost[0].n === 2);
+  const week = report(log, [], now - 6 * d);
+  ok("отчёт за неделю не включает старое", week.lost.rub === 0 && week.bought.rub === 220, week);
+  const pr = priceTrends(log);
+  ok("цена: подорожание молока", pr[0].name === "Молоко" && pr[0].changePct > 10, pr[0]);
+  const tips = insights(log, rep, 60);
+  ok("находки: молоко пропадает и годовая сумма", tips.some((x) => x.includes("Молоко пропадает в 2 из 3")) && tips.some((x) => x.includes("в год")), tips);
+}
 
 console.log(`\nЛогика: ${pass} из ${pass + fail}`);
 if (fail) process.exit(1);

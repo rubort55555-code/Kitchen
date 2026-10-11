@@ -13,6 +13,9 @@ import { Shop, BuySheet } from "./screens/Shop";
 import { PickSheet } from "./screens/Menu";
 import { CookSheet } from "./screens/Cook";
 import { CookMode } from "./screens/CookMode";
+import { Overdue, isExpired } from "./screens/Overdue";
+import { useEffect } from "react";
+import { ymd } from "./lib/util";
 
 const TABS: { id: Tab; title: string; icon: typeof Icon.home }[] = [
   { id: "home", title: "Главная", icon: Icon.home },
@@ -32,14 +35,23 @@ function SheetView({ s }: { s: Sheet }) {
     case "recipe": return <RecipeView id={s.id} />;
     case "cook": return <CookSheet id={s.id} entry={s.entry} />;
     case "steps": return <CookMode id={s.id} />;
+    case "overdue": return <Overdue />;
   }
 }
+
+let askedNow = false;
 
 export function App() {
   const ready = useStore((s) => s.ready);
   const tab = useUI((u) => u.tab);
   const sheets = useUI((u) => u.sheets);
   const update = useUI((u) => u.update);
+  const asked = useStore((s) => s.settings.overdueAsked);
+  const hasOverdue = useStore((s) => s.products.some(isExpired));
+  // При открытии приложения (раз в день) спрашиваем о просроченном
+  useEffect(() => {
+    if (ready && hasOverdue && asked !== ymd() && !sheets.length && !askedNow) { askedNow = true; openSheet({ kind: "overdue" }); }
+  }, [ready]);
   if (!ready) return <div className="screen"><p className="muted center" style={{ marginTop: 80 }}>Загрузка…</p></div>;
   return (
     <>

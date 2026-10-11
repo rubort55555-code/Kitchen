@@ -3,7 +3,7 @@ import { useSyncExternalStore } from "react";
 import type { Screen } from "./help";
 
 export type Tab = "home" | "products" | "recipes" | "shop" | "more";
-export type Page = null | "family" | "rules" | "catalog" | "data" | "help" | "bug" | "about";
+export type Page = null | "stats" | "family" | "rules" | "catalog" | "data" | "help" | "bug" | "about";
 export type Sheet =
   | { kind: "add" }
   | { kind: "product"; id: string }
@@ -13,7 +13,8 @@ export type Sheet =
   | { kind: "buy" }
   | { kind: "recipe"; id: string }
   | { kind: "cook"; id: string; entry?: string }
-  | { kind: "steps"; id: string };
+  | { kind: "steps"; id: string }
+  | { kind: "overdue" };
 
 export interface Toast { id: number; text: string; undo?: () => void }
 interface UI { tab: Tab; page: Page; sheets: Sheet[]; toast: Toast | null; update: (() => void) | null; recipesView: "list" | "menu" }

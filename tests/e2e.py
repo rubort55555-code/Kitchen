@@ -264,6 +264,9 @@ with sync_playwright() as p:
 
         # Данные сохраняются после перезапуска
         pg.reload(); pg.wait_for_selector("h1")
+        OV = '.sheet[aria-label="Просрочено"]'
+        ok(S + "после перезапуска спрашивают о просроченном", pg.locator(OV).count() == 1)
+        pg.click(OV + " .sheet-h .x")
         pg.click(".tabs button >> text=Продукты")
         ok(S + "данные после перезапуска", pg.locator(".swipe").count() >= 10, pg.locator(".swipe").count())
         ok(S + "нет горизонтальной прокрутки (с данными)", pg.evaluate("document.documentElement.scrollWidth <= innerWidth"))
@@ -378,6 +381,32 @@ with sync_playwright() as p:
     pg.click(".cookmode button >> text=Приготовили"); pg.wait_for_selector(".sheet")
     ok(S + "открылось списание", pg.locator('.sheet[aria-label="Приготовили"]').count() == 1)
     ok(S + "нет ошибок JS", not errs, errs[:3])
+    ctx.close()
+    # ---- просроченное и статистика ----
+    S = "[статистика] "
+    ctx = br.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True)
+    pg = ctx.new_page(); errs = []
+    pg.route("**/recipes.json", lambda r: r.abort())
+    pg.on("pageerror", lambda e: errs.append(str(e)))
+    pg.goto(URL); pg.wait_for_selector("h1")
+    more(pg); pg.click("text=Данные и копия")
+    pg.click("text=Заполнить демо-данными"); pg.wait_for_timeout(600)
+    pg.reload(); pg.wait_for_selector(".sheet")
+    ok(S + "при открытии спрашивают о просроченном", "Что с этими продуктами" in pg.inner_text(".sheet") and "Молоко" in pg.inner_text(".sheet"))
+    pg.locator(".sheet .chip >> text=+3 дня").first.click()
+    ok(S + "«Ещё нормальное» убирает продукт из просроченных", "Просроченного нет" in pg.inner_text(".sheet") or "Молоко" not in pg.inner_text(".sheet"), pg.inner_text(".sheet")[:200])
+    pg.click(".sheet-h .x")
+    pg.reload(); pg.wait_for_selector("h1")
+    ok(S + "в тот же день повторно не спрашивают", pg.locator(".sheet").count() == 0)
+    more(pg); pg.click("text=Статистика"); pg.wait_for_selector(".sbars")
+    txt = pg.inner_text("main").replace("\xa0", " ")
+    ok(S + "есть куплено / съедено / осталось", all(w in txt for w in ["куплено", "съедено", "осталось"]), txt[:200])
+    ok(S + "есть графики, топ потерь и цены", pg.locator(".sbars").count() == 2 and "Что пропадает чаще всего" in txt and "Цены" in txt)
+    ok(S + "есть находки", "Находки" in txt and "💡" in txt, txt[:400])
+    pg.click(".seg button >> text=Год"); pg.click(".seg button >> text=Неделя")
+    ok(S + "периоды переключаются без ошибок", pg.locator(".card").count() >= 3)
+    pg.screenshot(path=f"{SHOTS}/stats.png", full_page=True)
+    ok(S + "нет ошибок JS", not [e for e in errs if "ERR_FAILED" not in e], errs[:3])
     ctx.close()
     br.close()
 srv.shutdown()

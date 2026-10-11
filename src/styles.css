@@ -301,3 +301,20 @@ details.prompt pre { white-space: pre-wrap; font: 13px/1.4 ui-monospace, Menlo, 
 .cm-serv { margin: 8px 0 14px; }
 .cm-nav { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 10px 16px calc(var(--safe-b) + 12px); flex: none; }
 .cm-nav .btn { min-height: 56px; font-size: 19px; margin: 0; }
+
+/* ---- статистика ---- */
+.sbars { display: flex; gap: 6px; align-items: stretch; height: 150px; margin-top: 8px; }
+.sbar { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; min-width: 0; }
+.sbar .col { flex: 1; width: 100%; position: relative; min-height: 0; }
+.sbar .col i { display: block; position: absolute; left: 0; right: 0; bottom: 0; border-radius: 6px 6px 2px 2px; }
+.sbar .v { font-size: 11px; color: var(--muted); height: 14px; white-space: nowrap; }
+.sbar .l { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.qt { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 15px; }
+.qt td { padding: 7px 0; border-top: 0.5px solid var(--line); }
+.qt td:nth-child(2) { color: var(--muted); padding: 0 8px; }
+.qt td:last-child { text-align: right; white-space: nowrap; }
+.split { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: var(--card2); margin-top: 10px; }
+.split i { background: var(--accent); }
+.split i.bad { background: var(--bad); }
+.tip { margin: 8px 0; line-height: 1.4; }
+.t-ok { color: var(--accent); }

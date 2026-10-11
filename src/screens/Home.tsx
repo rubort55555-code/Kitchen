@@ -31,6 +31,7 @@ export function Home() {
       .sort((a, b) => b.st.urgent - a.st.urgent || b.st.percent - a.st.percent)
       .slice(0, 3);
   }, [recipes, products, settings]);
+  const expired = useMemo(() => products.filter((p) => { const d = daysLeft(p.until); return d !== null && d < 0; }).length, [products]);
   const backupDays = settings.lastBackup ? Math.floor((Date.now() - settings.lastBackup) / 86400000) : null;
   const needBackup = (products.length > 0 || log.length > 0) && (backupDays === null || backupDays >= 7);
   const today = new Date();
@@ -79,6 +80,9 @@ export function Home() {
         </div>
       )}
 
+      {expired > 0 && (
+        <button className="btn danger" style={{ marginTop: 10 }} onClick={() => openSheet({ kind: "overdue" })}>⚠️ Просрочено: {expired} — что с ними?</button>
+      )}
       <div className="card">
         <h3>Сегодня в меню <button className="link small" style={{ padding: 0 }} onClick={goMenu}>Неделя ›</button></h3>
         {todayMenu.length ? (
@@ -113,7 +117,7 @@ export function Home() {
       </div>
 
       <div className="card">
-        <h3>Пропало за {MONTHS[today.getMonth()]}</h3>
+        <h3>Пропало за {MONTHS[today.getMonth()]} <button className="link small" style={{ padding: 0 }} onClick={() => goPage("stats")}>Подробнее ›</button></h3>
         <div className={"hero" + (m.lost > 0 ? " bad" : "")}>
           <b>{rub(m.lost)}</b>
           <span className="muted">{m.lost > 0 ? `${m.lostPct}% от съеденного` : "ничего не выброшено"}</span>
