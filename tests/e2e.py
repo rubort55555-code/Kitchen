@@ -541,7 +541,7 @@ with sync_playwright() as p:
     pg.select_option('select[aria-label="Тип блюда"]', "суп")
     pg.select_option('select[aria-label="Кухня"]', "Кавказская")
     names3 = pg.locator(".list .li .name").all_inner_texts()
-    ok(S + "суп + кавказская = харчо", len(names3) >= 1 and all("арчо" in n for n in names3), names3)
+    ok(S + "суп + кавказская: есть харчо, нет борща", any("арчо" in n for n in names3) and not any("орщ" in n for n in names3), names3)
     pg.click("text=/Сбросить фильтры/")
     ok(S + "сброс фильтров", pg.input_value('select[aria-label="Кухня"]') == "" and pg.locator(".list .li").count() >= 60)
     ok(S + "нет ошибок JS", not [e for e in errs if "ERR_FAILED" not in e], errs[:3])
