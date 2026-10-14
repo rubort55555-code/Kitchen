@@ -27,6 +27,8 @@ export interface Product {
   price: number;
   /** Дата вскрытия упаковки, если вскрыта. */
   opened?: string | null;
+  /** Штрихкод, если продукт добавлен сканированием. */
+  barcode?: string;
   createdAt: number;
 }
 
@@ -192,6 +194,11 @@ export interface Settings {
   lastRevision?: string;
   tipsSeen: string[];
   customCatalog: CatalogItem[];
+  /** Запомненные штрихкоды: код → как назвали продукт и что о нём известно из Open Food Facts. */
+  barcodes?: Record<string, BarcodeInfo>;
   /** Последние цены и количества по названию продукта. */
   lastBuy: Record<string, { name?: string; price: number; qty: number; unit: Unit; place: Place; n: number; t: number }>;
 }
+
+/** Что известно о товаре по штрихкоду. off — данные Open Food Facts (© участники OFF, ODbL). */
+export interface BarcodeInfo { name: string; off?: import("./off").OffProduct | null; t: number }

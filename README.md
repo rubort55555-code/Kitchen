@@ -13,4 +13,5 @@
 
 - `npm install` и `npm run build` — сборка в папку `dist/`.
 - Публикация автоматическая: GitHub Actions собирает и выкладывает на GitHub Pages при каждом изменении в ветке `main`.
-- Проверки: `tests/logic.test.ts` (правила, разбор ответа Claude), `tests/e2e.py` (сценарии в браузере, Playwright).
+- Проверки: `tests/logic.test.ts` (правила, разбор ответа Claude), `tests/barcode.test.ts` (распознавание штрихкодов, разбор Open Food Facts), `tests/e2e.py` и `tests/e2e_barcode.py` (сценарии в браузере, Playwright).
+- Штрихкоды: своё распознавание EAN-13/EAN-8/UPC-A (`src/lib/barcode.ts`), поиск товара в Open Food Facts через бесплатный API (`src/lib/off.ts`). Данные © участники Open Food Facts, лицензия ODbL — источник указан рядом с данными.

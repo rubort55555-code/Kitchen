@@ -1,5 +1,5 @@
 // Добавление продукта за 2–3 касания: подсказки из справочника, частые продукты, последняя цена.
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Seg, Sheet } from "../components/ui";
 import { addProduct, deleteProduct, frequentNames, useStore } from "../lib/store";
 import { findCatalog, shelfDays, suggest } from "../lib/catalog";
@@ -9,6 +9,8 @@ import { PLACES, UNITS } from "../lib/types";
 import { addDays, cap, dateText, daysLeft, norm, rub, toNum, untilText, ymd } from "../lib/util";
 import { quickAmounts } from "../lib/units";
 import { closeSheet, openSheet, toast } from "../lib/ui";
+import { BarcodeScan } from "../components/BarcodeScan";
+import { lookupOff, nameFor, offPage, per100Text, OFF_CREDIT, type OffProduct } from "../lib/off";
 
 const POPULAR = ["Молоко", "Яйца", "Хлеб", "Куриное филе", "Картофель", "Помидоры", "Огурцы", "Сыр твёрдый", "Бананы", "Творог"];
 const DEFAULT_QTY: Record<Unit, string> = { г: "500", мл: "500", кг: "1", л: "1", шт: "1", уп: "1" };
@@ -34,6 +36,9 @@ export function AddProduct() {
   const [err, setErr] = useState("");
   const [showSugg, setShowSugg] = useState(true);
   const nameRef = useRef<HTMLInputElement | null>(null);
+  // Штрихкод: сканер открыт; найденный товар и что с поиском
+  const [scan, setScan] = useState(false);
+  const [code, setCode] = useState<{ code: string; off?: OffProduct | null; status: "known" | "loading" | "found" | "none" | "offline" | "busy" | "error" } | null>(null);
   const priceRef = useRef<HTMLInputElement | null>(null);
 
   const frequent = useMemo(() => {
@@ -47,15 +52,16 @@ export function AddProduct() {
   const banned = name.trim() ? checkProduct(name, compiled, settings.members.map((m) => m.id)) : null;
 
   /** Выбрали продукт из подсказок или частых: заполняем всё, что знаем. */
-  function pick(n: string) {
+  function pick(n: string, pack?: { qty?: number; unit?: Unit }) {
     const c = findCatalog(n, settings.customCatalog);
     const l = settings.lastBuy[norm(n)];
     const shown = c && norm(c.n) === norm(n) ? c.n : cap(n);
-    const u: Unit = l?.unit || c?.u || "шт";
+    // Вес/объём с упаковки (из Open Food Facts) точнее, чем прошлая покупка
+    const u: Unit = pack?.qty && pack.unit ? pack.unit : l?.unit || c?.u || "шт";
     const p: Place = l?.place || c?.p || "Холодильник";
     setName(shown);
     setUnit(u);
-    setQty(l ? String(l.qty).replace(".", ",") : DEFAULT_QTY[u]);
+    setQty(pack?.qty && pack.unit ? String(pack.qty).replace(".", ",") : l ? String(l.qty).replace(".", ",") : DEFAULT_QTY[u]);
     setPlace(p);
     setUntil(autoUntil(c, p));
     setPrice(l ? String(l.price).replace(".", ",") : "");
@@ -64,6 +70,30 @@ export function AddProduct() {
     setErr("");
     if (!l) setTimeout(() => priceRef.current?.focus(), 50);
   }
+
+  /** Прочитали штрихкод: сначала свои запомненные, потом Open Food Facts. */
+  async function onCode(c: string) {
+    setScan(false);
+    setErr("");
+    const known = settings.barcodes?.[c];
+    if (known) {
+      setCode({ code: c, off: known.off, status: "known" });
+      pick(known.name, known.off || undefined);
+      return;
+    }
+    setCode({ code: c, status: "loading" });
+    const r = await lookupOff(c);
+    if (!r.ok) { setCode({ code: c, status: r.why }); return; }
+    if (!r.product) { setCode({ code: c, off: null, status: "none" }); return; }
+    setCode({ code: c, off: r.product, status: "found" });
+    pick(nameFor(r.product, settings.customCatalog).name, r.product);
+  }
+
+  // Товар не нашли — сразу ставим курсор в название
+  const st = code?.status;
+  useEffect(() => {
+    if (st === "none" || st === "offline" || st === "busy" || st === "error") nameRef.current?.focus();
+  }, [st, code?.code]);
 
   function onName(v: string) {
     setName(v);
@@ -92,9 +122,10 @@ export function AddProduct() {
     if (!n) return setErr("Напишите, что за продукт.");
     if (q === null || q <= 0) return setErr("Укажите количество.");
     if (pr === null || pr < 0) { priceRef.current?.focus(); return setErr("Укажите цену — без неё не посчитать потери в рублях. Если продукт достался бесплатно, напишите 0."); }
-    const it = addProduct({ name: n, qty: q, unit, place, until, price: pr });
+    const bc = code && code.status !== "loading" ? { barcode: code.code, off: code.status === "found" || code.status === "none" ? code.off : undefined } : {};
+    const it = addProduct({ name: n, qty: q, unit, place, until, price: pr, ...bc });
     toast(`Добавлено: ${it.name}`, () => deleteProduct(it.id));
-    setName(""); setQty(""); setPrice(""); setErr(""); setShowSugg(true);
+    setName(""); setQty(""); setPrice(""); setErr(""); setShowSugg(true); setCode(null);
     setTouched({ until: false, place: false, unit: false });
     setUntil(addDays(ymd(), 5));
     nameRef.current?.focus();
@@ -104,11 +135,15 @@ export function AddProduct() {
 
   return (
     <Sheet title="Новый продукт">
-      <div className="row2" style={{ marginTop: 8 }}>
+      {scan
+        ? <BarcodeScan onCode={onCode} onClose={() => setScan(false)} />
+        : <button type="button" className="btn sec" style={{ marginTop: 8 }} onClick={() => { setScan(true); setCode(null); }}>▥ Сканировать штрихкод</button>}
+      <div className="row2" style={{ marginTop: 10 }}>
         <button type="button" className="btn sec" onClick={() => openSheet({ kind: "receipt", mode: "photo" })}>📷 Из чека</button>
         <button type="button" className="btn sec" onClick={() => openSheet({ kind: "receipt", mode: "text" })}>📋 Текст чека</button>
       </div>
       <button type="button" className="btn ghost" onClick={() => { closeSheet(); openSheet({ kind: "recipeNew" }); }}>📖 Новый рецепт</button>
+      {code && <CodeCard c={code} onClear={() => setCode(null)} />}
       <form onSubmit={submit} autoComplete="off">
         <label className="f" htmlFor="pName">Что купили</label>
         <input id="pName" ref={nameRef} className="inp big" value={name} onChange={(e: any) => onName(e.target.value)} placeholder="Например, молоко" enterKeyHint="next" autoCapitalize="sentences" />
@@ -168,5 +203,35 @@ export function AddProduct() {
         <p className="muted small center">После добавления можно сразу вписать следующий продукт.</p>
       </form>
     </Sheet>
+  );
+}
+
+/** Что нашлось по штрихкоду. Данные Open Food Facts показываем с указанием источника (условие лицензии ODbL). */
+function CodeCard({ c, onClear }: { c: { code: string; off?: OffProduct | null; status: string }; onClear: () => void }) {
+  const o = c.off;
+  const text: Record<string, string> = {
+    loading: "Ищу товар в Open Food Facts…",
+    none: "Этого товара нет в базе Open Food Facts. Напишите название ниже — в следующий раз я узнаю его по коду сам.",
+    offline: "Нет интернета — не могу поискать товар. Напишите название, код я запомню.",
+    busy: "База Open Food Facts просит подождать минуту. Напишите название сами или попробуйте позже.",
+    error: "Не получилось связаться с Open Food Facts. Напишите название сами — код я запомню.",
+  };
+  return (
+    <div className="card code-card" role="status">
+      <div className="code-top">
+        <span className="muted small">Штрихкод {c.code}</span>
+        <button type="button" className="link small" onClick={onClear} aria-label="Убрать штрихкод">Убрать</button>
+      </div>
+      {o ? (
+        <>
+          <div className="code-title">{o.title}{o.brand && !o.title.toLowerCase().includes(o.brand.toLowerCase()) ? `, ${o.brand}` : ""}{o.quantityText ? ` · ${o.quantityText}` : ""}</div>
+          {o.per100 && <div className="small">На 100 г: {per100Text(o.per100)}</div>}
+          <div className="muted small"><a href={offPage(c.code)} target="_blank" rel="noopener">{OFF_CREDIT}</a></div>
+        </>
+      ) : (
+        <p className="small" style={{ margin: "4px 0 0" }}>{c.status === "known" ? "Этот товар вы уже покупали." : text[c.status] || ""}</p>
+      )}
+      {c.status === "none" && <p className="muted small" style={{ margin: "4px 0 0" }}><a href={offPage(c.code)} target="_blank" rel="noopener">Добавить товар в Open Food Facts</a> — по желанию, это поможет и другим.</p>}
+    </div>
   );
 }

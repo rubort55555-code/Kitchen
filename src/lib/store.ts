@@ -86,6 +86,8 @@ export function setSettings(patch: Partial<Settings>) {
 // ---------- продукты ----------
 export interface NewProduct {
   name: string; qty: number; unit: Unit; place: Place; until: string | null; price: number; bought?: string;
+  /** Штрихкод и данные о товаре — запоминаются, чтобы в следующий раз узнать товар сразу. */
+  barcode?: string; off?: import("./off").OffProduct | null;
 }
 
 export function addProduct(p: NewProduct, reason: Reason = "bought"): Product {
@@ -93,11 +95,16 @@ export function addProduct(p: NewProduct, reason: Reason = "bought"): Product {
     id: uid(), name: p.name.trim(), qty: p.qty, initialQty: p.qty, unit: p.unit, place: p.place,
     bought: p.bought || ymd(), until: p.until, price: Math.max(0, p.price), opened: null, createdAt: Date.now(),
   };
+  if (p.barcode) it.barcode = p.barcode;
   const entry = logEntry(it, reason, it.qty, it.price);
   const key = norm(it.name);
   const prev = state.settings.lastBuy[key];
   const lastBuy = { ...state.settings.lastBuy, [key]: { name: it.name, price: it.price, qty: it.qty, unit: it.unit, place: it.place, n: (prev?.n || 0) + 1, t: Date.now() } };
   const settings = { ...state.settings, lastBuy };
+  if (p.barcode) {
+    const old = state.settings.barcodes?.[p.barcode];
+    settings.barcodes = { ...state.settings.barcodes, [p.barcode]: { name: it.name, off: p.off !== undefined ? p.off : old?.off, t: Date.now() } };
+  }
   set({ products: [...state.products, it], log: [...state.log, entry], settings });
   persist(Promise.all([db.apply([{ store: "products", put: [it] }, { store: "log", put: [entry] }]), db.setKv("settings", settings)]).then(() => {}));
   return it;
