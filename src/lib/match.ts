@@ -12,6 +12,23 @@ export function keyOf(name: string, custom: CatalogItem[]): string {
   return c ? "c:" + norm(c.n) : "w:" + stem(norm(name).split(/[ ,(]/)[0]);
 }
 
+/** Все ключи, которые «закрывает» продукт: свой и базовый («Говяжья вырезка» закрывает и «Говядину»). */
+export function keysFor(name: string, custom: CatalogItem[]): string[] {
+  const c = findCatalog(name, custom);
+  if (!c) return ["w:" + stem(norm(name).split(/[ ,(]/)[0])];
+  const keys = ["c:" + norm(c.n)];
+  // Цепочка вверх: «Шампиньоны белые» → «Шампиньоны» → «Грибы»
+  let cur: CatalogItem | null = c;
+  for (let i = 0; i < 3 && cur && cur.g; i++) {
+    keys.push("c:" + norm(cur.g));
+    cur = findCatalog(cur.g, custom);
+  }
+  return keys;
+}
+
+/** Подходит ли продукт (по названию) для ингредиента с ключом key. */
+export const covers = (productName: string, key: string, custom: CatalogItem[]) => keysFor(productName, custom).includes(key);
+
 export interface IngStatus {
   name: string; amount: string; have: boolean; basic: boolean; product?: Product; urgent: boolean;
   /** Нужного нет, но есть замена дома. */
@@ -31,10 +48,12 @@ function stockOf(products: Product[], custom: CatalogItem[]) {
   if (stockMemo && stockMemo.products === products && stockMemo.custom === custom) return stockMemo.stock;
   const stock = new Map<string, Product>();
   for (const p of products) {
-    const k = keyOf(p.name, custom);
-    const cur = stock.get(k);
-    // Если продуктов несколько — берём тот, что испортится раньше
-    if (!cur || (daysLeft(p.until) ?? 9999) < (daysLeft(cur.until) ?? 9999)) stock.set(k, p);
+    // Продукт закрывает свой ключ и ключ базового продукта
+    for (const k of keysFor(p.name, custom)) {
+      const cur = stock.get(k);
+      // Если продуктов несколько — берём тот, что испортится раньше
+      if (!cur || (daysLeft(p.until) ?? 9999) < (daysLeft(cur.until) ?? 9999)) stock.set(k, p);
+    }
   }
   stockMemo = { products, custom, stock };
   return stock;
@@ -67,7 +86,7 @@ function calc(r: Recipe, stock: Map<string, Product>, basicKeys: Set<string>, cu
   const keys = keysOf(r, custom);
   const list: IngStatus[] = r.ingredients.map((i, n) => {
     const k = keys[n];
-    const basic = basicKeys.has(k) || /^вода|^соль|^перец по вкусу/.test(norm(i.name));
+    const basic = keysFor(i.name, custom).some((x) => basicKeys.has(x)) || /^вода|^соль|^перец по вкусу/.test(norm(i.name));
     const product = stock.get(k);
     let via: Product | undefined;
     let alts: string[] | undefined;

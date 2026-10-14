@@ -4,7 +4,7 @@ import { UNITS } from "./types";
 import { addProduct, getState, haveQty, setSettings, valueOf } from "./store";
 import { compileRules, checkProduct, type Hit } from "./exclusions";
 import { findCatalog } from "./catalog";
-import { keyOf, recipeStatus } from "./match";
+import { keyOf, covers, recipeStatus } from "./match";
 import { norm, toNum, uid } from "./util";
 import { qtyText } from "./units";
 import { conv, parseNeed } from "./cook";
@@ -64,7 +64,7 @@ export interface Hints {
 export function hintsFor(name: string): Hints {
   const st = getState();
   const k = keyOf(name, st.settings.customCatalog);
-  const home = st.products.filter((p) => keyOf(p.name, st.settings.customCatalog) === k);
+  const home = st.products.filter((p) => covers(p.name, k, st.settings.customCatalog));
   const have = home.length ? home.map((p) => qtyText(p.qty, p.unit)).join(" + ") : null;
   let bought = 0, lost = 0;
   for (const e of st.log) {

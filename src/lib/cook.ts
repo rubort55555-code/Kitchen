@@ -3,7 +3,7 @@
 import { substitutes } from "./subs";
 import type { Product, Recipe, Settings, Unit } from "./types";
 import { findCatalog } from "./catalog";
-import { keyOf } from "./match";
+import { keyOf, keysFor, covers } from "./match";
 import { convert } from "./units";
 import { daysLeft, norm, toNum } from "./util";
 
@@ -122,16 +122,16 @@ export function planCook(r: Recipe, servings: number, products: Product[], setti
   r.ingredients.forEach((ing, idx) => {
     const key = String(idx);
     const k = keyOf(ing.name, settings.customCatalog);
-    if (basicKeys.has(k) || /^вода|^соль/.test(norm(ing.name))) { skipped.push(ing.name); return; }
+    if (keysFor(ing.name, settings.customCatalog).some((x) => basicKeys.has(x)) || /^вода|^соль/.test(norm(ing.name))) { skipped.push(ing.name); return; }
     const parsed = parseNeed(ing.amount);
     if (parsed === "free") { skipped.push(ing.name); return; }
 
-    let stock = products.filter((p) => keyOf(p.name, settings.customCatalog) === k).sort(byUntil);
+    let stock = products.filter((p) => covers(p.name, k, settings.customCatalog)).sort(byUntil);
     // Нужного нет дома — берём замену, если она есть (сметана → йогурт)
     if (!stock.length) {
       for (const s of substitutes(ing.name, settings.customCatalog)) {
         const sk = keyOf(s, settings.customCatalog);
-        const f = products.filter((p) => keyOf(p.name, settings.customCatalog) === sk).sort(byUntil);
+        const f = products.filter((p) => covers(p.name, sk, settings.customCatalog)).sort(byUntil);
         if (f.length) { stock = f; break; }
       }
     }

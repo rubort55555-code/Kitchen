@@ -57,5 +57,5 @@ const TABLE = new Map(GROUPS.map(([k, v]) => [norm(k), v]));
 /** Названия из справочника, которыми можно заменить продукт (по порядку предпочтения). */
 export function substitutes(name: string, custom: CatalogItem[] = []): string[] {
   const c = findCatalog(name, custom);
-  return c ? TABLE.get(norm(c.n)) || [] : [];
+  return c ? TABLE.get(norm(c.n)) || (c.g ? TABLE.get(norm(c.g)) : undefined) || [] : [];
 }
