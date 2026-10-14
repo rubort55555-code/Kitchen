@@ -16,7 +16,7 @@ import { closeSheet, openSheet, setRecipesView, toast, useUI } from "../lib/ui";
 type F = "all" | "now" | "almost" | "fav";
 
 export function Recipes() {
-  const { recipes, products, settings } = useStore((s) => s);
+  const { recipes, products, settings, baseLoading } = useStore((s) => s);
   const [f, setF] = useState<F>("all");
   const [q, setQ] = useState("");
   const [showHidden, setShowHidden] = useState(false);
@@ -67,6 +67,7 @@ export function Recipes() {
         </div>
       ) : (
         <>
+          {baseLoading && <p className="small muted" role="status">Загружаю встроенные рецепты: {baseLoading.done.toLocaleString("ru-RU")} из {baseLoading.total.toLocaleString("ru-RU")}…</p>}
           <input className="inp search" style={{ marginTop: 14 }} type="search" placeholder="Поиск по названию или продукту" value={q} onChange={(e: any) => setQ(e.target.value)} aria-label="Поиск рецепта" />
           <div className="chips">
             <button className="chip" aria-pressed={f === "all"} onClick={() => setF("all")}>Все</button>

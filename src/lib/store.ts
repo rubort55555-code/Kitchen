@@ -14,6 +14,8 @@ export interface State {
   recipes: Recipe[];
   settings: Settings;
   saveError: string | null;
+  /** Идёт загрузка встроенной базы рецептов по частям. */
+  baseLoading?: { done: number; total: number } | null;
 }
 
 export function defaultSettings(): Settings {
@@ -254,26 +256,57 @@ export function haveQty(name: string, unit: Unit): number {
 
 /** Частые продукты: сначала те, что покупали чаще и недавно. */
 // ---------- встроенная база рецептов ----------
-/** Копирует рецепты из recipes.json в память телефона. Каждый рецепт добавляется один раз:
- *  удалённые не возвращаются, правки и избранное не затираются. Новые рецепты в обновлениях подтягиваются сами. */
+/** Копирует встроенные рецепты в память телефона. Каждый рецепт добавляется один раз:
+ *  удалённые не возвращаются, правки и избранное не затираются. Новые рецепты в обновлениях подтягиваются сами.
+ *  База разбита на части (recipes.json — оглавление): части грузятся по очереди, приложение работает уже после первой;
+ *  уже загруженные части (по отпечатку) повторно не читаются. */
+let seeding = false, rerun = false, seedGen = 0;
 export async function seedBase() {
+  if (seeding) { rerun = true; return; }
+  seeding = true;
+  const gen = seedGen;
+  const stale = () => gen !== seedGen; // данные заменили (восстановление из копии) — эту загрузку бросаем
   try {
     const resp = await fetch("./recipes.json");
     if (!resp.ok) return;
-    const base = (await resp.json()) as Recipe[];
-    if (!Array.isArray(base) || !base.length) return;
+    const index = await resp.json();
+    // Старый формат — сразу весь список; новый — оглавление частей
+    const parts: { f: string | null; h: string; n: number; data?: Recipe[] }[] = Array.isArray(index)
+      ? [{ f: null, h: "", n: index.length, data: index }]
+      : index && Array.isArray(index.parts) ? index.parts : [];
+    if (!parts.length) return;
+    const doneParts = new Set((await db.getKv<string[]>("baseParts")) || []);
+    const todo = parts.filter((p) => !p.h || !doneParts.has(p.h));
+    if (!todo.length) return;
     const seen = new Set((await db.getKv<string[]>("baseSeen")) || []);
-    const have = new Set(state.recipes.map((r) => r.id));
-    const add = base.filter((r) => !seen.has(r.id) && !have.has(r.id)).map((r) => ({ ...r, createdAt: 0 }));
-    const all = Array.from(new Set([...seen, ...base.map((r) => r.id)]));
-    if (add.length) {
-      await db.apply([{ store: "recipes", put: add }]);
-      set({ recipes: [...state.recipes, ...add] });
+    const total = parts.reduce((s, p) => s + p.n, 0);
+    let loaded = parts.filter((p) => p.h && doneParts.has(p.h)).reduce((s, p) => s + p.n, 0);
+    for (const p of todo) {
+      if (todo.length > 1) set({ baseLoading: { done: loaded, total } });
+      const base: Recipe[] = p.data || (await (await fetch("./" + p.f)).json());
+      if (stale()) break;
+      if (!Array.isArray(base)) continue;
+      const have = new Set(state.recipes.map((r) => r.id));
+      const add = base.filter((r) => !seen.has(r.id) && !have.has(r.id)).map((r) => ({ ...r, createdAt: 0 }));
+      if (add.length) {
+        await db.apply([{ store: "recipes", put: add }]);
+        set({ recipes: [...state.recipes, ...add] });
+      }
+      base.forEach((r) => seen.add(r.id));
+      await db.setKv("baseSeen", Array.from(seen));
+      if (p.h) { doneParts.add(p.h); await db.setKv("baseParts", Array.from(doneParts)); }
+      loaded += p.n;
+      if (stale()) break;
+      // Пауза между частями — чтобы экран не подтормаживал
+      await new Promise((ok) => setTimeout(ok, 30));
     }
-    if (all.length !== seen.size) await db.setKv("baseSeen", all);
   } catch (e) {
     // нет интернета при первом запуске — попробуем в следующий раз
     console.warn("База рецептов не загрузилась", e);
+  } finally {
+    seeding = false;
+    if (state.baseLoading) set({ baseLoading: null });
+    if (rerun) { rerun = false; seedBase(); }
   }
 }
 
@@ -320,6 +353,7 @@ export async function restore(b: Backup, mode: "replace" | "merge") {
       plan: byId(state.settings.plan, b.settings.plan),
     };
   }
+  seedGen++;
   await db.replaceAll({ products, log, recipes, kv: { settings } });
   set({ products, log, recipes, settings });
   seedBase();

@@ -41,8 +41,23 @@ cpSync("public", "dist", { recursive: true });
 // База рецептов: из текстовых файлов recipes/*.txt — в один файл recipes.json
 const base = loadAll("recipes");
 if (base.errors.length) { console.error("Ошибки в рецептах:\n" + base.errors.join("\n")); process.exit(1); }
-writeFileSync("dist/recipes.json", JSON.stringify(base.recipes));
-console.log("Рецептов в базе:", base.recipes.length);
+// База большая (11 000+), поэтому делим её на части по 1000: телефон загружает их по очереди,
+// и приложение готово к работе уже после первой части. recipes.json — оглавление частей;
+// у каждой части есть отпечаток (h): при обновлении приложения заново читаются только изменившиеся части.
+const PART = 1000;
+mkdirSync("dist/recipes", { recursive: true });
+const parts = [];
+for (let i = 0; i * PART < base.recipes.length; i++) {
+  const chunk = base.recipes.slice(i * PART, (i + 1) * PART);
+  const text = JSON.stringify(chunk);
+  let h = 2166136261;
+  for (let k = 0; k < text.length; k++) { h ^= text.charCodeAt(k); h = Math.imul(h, 16777619); }
+  const f = `recipes/${String(i).padStart(2, "0")}.json`;
+  writeFileSync("dist/" + f, text);
+  parts.push({ f, h: (h >>> 0).toString(36) + "-" + chunk.length, n: chunk.length });
+}
+writeFileSync("dist/recipes.json", JSON.stringify({ v: 2, total: base.recipes.length, parts }));
+console.log("Рецептов в базе:", base.recipes.length, "частей:", parts.length);
 
 const html = readFileSync("src/index.html", "utf8")
   .replace("%CSS%", css ? `<link rel="stylesheet" href="./${css}">` : "")

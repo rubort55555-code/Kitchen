@@ -1,13 +1,16 @@
 // Превращает текстовые файлы рецептов (папка recipes/) в базу recipes.json.
 //
 // Формат одного рецепта (рецепты разделяются пустой строкой):
-//   # Название | вид блюда | минуты | порции | метки через запятую
+//   # Название | вид блюда | минуты | порции | метки через запятую | кухня (необязательно)
 //   Продукт: количество; Продукт: количество; ...
 //   - Шаг первый.
 //   - Шаг второй.
 // Строки, начинающиеся с //, — комментарии.
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+
+// Те же кухни, что в src/lib/cuisine.ts (фильтр «Кухня» в приложении).
+const CUISINES = ["Русская", "Кавказская", "Среднеазиатская", "Итальянская", "Азиатская", "Европейская", "Ближневосточная", "Американская"];
 
 /** Устойчивый id по названию: при правке текста рецепта избранное не теряется. */
 function hashId(s) {
@@ -24,7 +27,7 @@ export function parseRecipeText(text, file = "") {
     if (!lines.length) continue;
     const head = lines[0];
     if (!head.startsWith("#")) { errors.push(`${file}: ожидался заголовок «# …», а пришло: ${head.slice(0, 60)}`); continue; }
-    const [name, kind, minutes, servings, tags] = head.slice(1).split("|").map((x) => (x || "").trim());
+    const [name, kind, minutes, servings, tags, cuisine] = head.slice(1).split("|").map((x) => (x || "").trim());
     const ingredients = [], steps = [];
     for (const l of lines.slice(1)) {
       if (l.startsWith("-")) { steps.push(l.replace(/^-\s*/, "")); continue; }
@@ -42,6 +45,10 @@ export function parseRecipeText(text, file = "") {
       tags: tags ? tags.split(",").map((t) => t.trim()).filter(Boolean) : undefined,
       ingredients, steps, source: "base",
     };
+    if (cuisine) {
+      if (CUISINES.includes(cuisine)) r.cuisine = cuisine;
+      else errors.push(`${file}: «${name}» — неизвестная кухня «${cuisine}»`);
+    }
     if (!name) errors.push(`${file}: рецепт без названия`);
     if (ingredients.length < 2) errors.push(`${file}: «${name}» — меньше двух ингредиентов`);
     if (steps.length < 2) errors.push(`${file}: «${name}» — меньше двух шагов`);

@@ -20,7 +20,15 @@ export interface IngStatus {
   alts?: string[];
 }
 
-export function recipeStatus(r: Recipe, products: Product[], basics: string[], custom: CatalogItem[]) {
+// Кэши: рецептов может быть больше 11 000, а пересчёт нужен при каждом открытии экрана.
+// Склад и «базовые» продукты считаются один раз на набор продуктов; ключи ингредиентов — один раз на рецепт.
+let stockMemo: { products: Product[]; custom: CatalogItem[]; stock: Map<string, Product> } | null = null;
+let basicMemo: { basics: string[]; custom: CatalogItem[]; keys: Set<string> } | null = null;
+const ingKeys = new WeakMap<Recipe, { custom: CatalogItem[]; keys: string[] }>();
+const statusMemo = new WeakMap<Recipe, { stock: Map<string, Product>; basics: Set<string>; res: ReturnType<typeof calc> }>();
+
+function stockOf(products: Product[], custom: CatalogItem[]) {
+  if (stockMemo && stockMemo.products === products && stockMemo.custom === custom) return stockMemo.stock;
   const stock = new Map<string, Product>();
   for (const p of products) {
     const k = keyOf(p.name, custom);
@@ -28,9 +36,37 @@ export function recipeStatus(r: Recipe, products: Product[], basics: string[], c
     // Если продуктов несколько — берём тот, что испортится раньше
     if (!cur || (daysLeft(p.until) ?? 9999) < (daysLeft(cur.until) ?? 9999)) stock.set(k, p);
   }
-  const basicKeys = new Set(basics.map((b) => keyOf(b, custom)));
-  const list: IngStatus[] = r.ingredients.map((i) => {
-    const k = keyOf(i.name, custom);
+  stockMemo = { products, custom, stock };
+  return stock;
+}
+function basicsOf(basics: string[], custom: CatalogItem[]) {
+  if (basicMemo && basicMemo.basics === basics && basicMemo.custom === custom) return basicMemo.keys;
+  const keys = new Set(basics.map((b) => keyOf(b, custom)));
+  basicMemo = { basics, custom, keys };
+  return keys;
+}
+function keysOf(r: Recipe, custom: CatalogItem[]) {
+  const c = ingKeys.get(r);
+  if (c && c.custom === custom) return c.keys;
+  const keys = r.ingredients.map((i) => keyOf(i.name, custom));
+  ingKeys.set(r, { custom, keys });
+  return keys;
+}
+
+export function recipeStatus(r: Recipe, products: Product[], basics: string[], custom: CatalogItem[]) {
+  const stock = stockOf(products, custom);
+  const basicKeys = basicsOf(basics, custom);
+  const m = statusMemo.get(r);
+  if (m && m.stock === stock && m.basics === basicKeys) return m.res;
+  const res = calc(r, stock, basicKeys, custom);
+  statusMemo.set(r, { stock, basics: basicKeys, res });
+  return res;
+}
+
+function calc(r: Recipe, stock: Map<string, Product>, basicKeys: Set<string>, custom: CatalogItem[]) {
+  const keys = keysOf(r, custom);
+  const list: IngStatus[] = r.ingredients.map((i, n) => {
+    const k = keys[n];
     const basic = basicKeys.has(k) || /^вода|^соль|^перец по вкусу/.test(norm(i.name));
     const product = stock.get(k);
     let via: Product | undefined;

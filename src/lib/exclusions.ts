@@ -38,7 +38,15 @@ function wordRe(w: string): RegExp {
 export interface RuleWord { rule: Rule; word: string; re: RegExp; ex: RegExp[] }
 
 /** Готовит список слов для поиска с учётом справочника (тип рыбы) и людей. */
+let compiledMemo: { rules: Rule[]; custom: CatalogItem[]; members: Member[]; res: { words: RuleWord[] } } | null = null;
+/** Правила в удобном для проверки виде. Повторный вызов с теми же настройками отдаёт готовый результат (нужно для кэша проверок). */
 export function compileRules(rules: Rule[], custom: CatalogItem[], members: Member[]): { words: RuleWord[] } {
+  if (compiledMemo && compiledMemo.rules === rules && compiledMemo.custom === custom && compiledMemo.members === members) return compiledMemo.res;
+  const res = compileRulesNow(rules, custom, members);
+  compiledMemo = { rules, custom, members, res };
+  return res;
+}
+function compileRulesNow(rules: Rule[], custom: CatalogItem[], members: Member[]): { words: RuleWord[] } {
   const words: RuleWord[] = [];
   const all = rules.concat(memberRules(members));
   for (const r of all) {
@@ -122,7 +130,19 @@ export interface Issue {
 }
 
 /** Проверка рецепта: можно ли предлагать и что сказать. */
+const checkMemo = new WeakMap<object, WeakMap<Recipe, { who: string; res: { verdict: Verdict; issues: Issue[] } }>>();
+/** Проверка рецепта по нашим ограничениям (с кэшем: рецептов в базе тысячи). */
 export function checkRecipe(r: Recipe, compiled: ReturnType<typeof compileRules>, who: string[]): { verdict: Verdict; issues: Issue[] } {
+  let byRecipe = checkMemo.get(compiled);
+  if (!byRecipe) { byRecipe = new WeakMap(); checkMemo.set(compiled, byRecipe); }
+  const w = who.join(",");
+  const m = byRecipe.get(r);
+  if (m && m.who === w) return m.res;
+  const res = checkRecipeNow(r, compiled, who);
+  byRecipe.set(r, { who: w, res });
+  return res;
+}
+function checkRecipeNow(r: Recipe, compiled: ReturnType<typeof compileRules>, who: string[]): { verdict: Verdict; issues: Issue[] } {
   const issues: Issue[] = [];
   let verdict: Verdict = "ok";
   const nameHits = findHits(r.name, compiled, who);

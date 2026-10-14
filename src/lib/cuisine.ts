@@ -17,7 +17,13 @@ const RULES: [Cuisine, RegExp][] = [
 ];
 
 /** Кухня рецепта. По умолчанию — русская (домашняя). */
+const cuisMemo = new WeakMap<Recipe, Cuisine>();
 export function cuisineOf(r: Recipe): Cuisine {
+  let c = cuisMemo.get(r);
+  if (!c) { c = cuisineNow(r); cuisMemo.set(r, c); }
+  return c;
+}
+function cuisineNow(r: Recipe): Cuisine {
   if (r.cuisine && (CUISINES as readonly string[]).includes(r.cuisine)) return r.cuisine as Cuisine;
   // метку «паста» в базе ставили и макаронам по-флотски — для кухни её не учитываем
   const text = norm([r.name, ...(r.tags || []).filter((t) => norm(t) !== "паста")].join(" ")).replace(/(томатн|арахисов|шоколадн|ореховн)[а-яё]* паст[а-яё]*/g, "");
