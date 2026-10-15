@@ -389,3 +389,15 @@ select.inp { padding-right: 8px; }
 .nut-waist { border-radius: 10px; padding: 8px 10px; font-size: 14px; background: var(--accent-soft); margin: 6px 0; }
 .nut-waist.soon { background: var(--soon-soft); }
 .nut-waist.bad { background: var(--bad-soft); }
+.nut-bars { display: flex; flex-direction: column; gap: 6px; margin: 8px 0; }
+.nut-bars > div { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "t v" "b b"; gap: 2px 8px; font-size: 14px; }
+.nut-bars span { grid-area: t; }
+.nut-bars b { grid-area: v; font-weight: 500; color: var(--muted); }
+.nut-bars i { grid-area: b; display: block; height: 6px; border-radius: 3px; background: var(--accent); min-width: 4px; }
+.nut-tl .tm { flex: none; width: 50px; font-weight: 600; font-variant-numeric: tabular-nums; display: flex; flex-direction: column; font-size: 16px; }
+.nut-tl .tm small { font-weight: 400; color: var(--muted); font-size: 13px; }
+.nut-tl .name { white-space: normal; }
+.nut-cur { background: var(--accent-soft); border-radius: 12px; padding: 10px 12px; margin-top: 12px; display: flex; flex-direction: column; gap: 2px; }
+.nut-cur span { font-size: 14px; color: var(--muted); }
+.li[aria-selected="true"] { background: var(--accent-soft); }
+.nut-pick .name { white-space: normal; }

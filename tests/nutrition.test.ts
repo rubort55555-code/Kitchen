@@ -1,10 +1,12 @@
 // Проверка расчёта норм питания: node node_modules/.bin/tsx tests/nutrition.test.ts
-import { activityGroup, bmiOf, bmr, micros, newProfile, pal, planFor, restHours, waistRisk, type BodyProfile } from "../src/lib/nutrition";
+import { ACTIVITIES, ACT_GROUPS, actByKey, actKey, searchActs } from "../src/lib/activities";
+import { dayEnergy, diaryTee, fromHours, hm, normSegs, parseHm, templateDay, SLEEP, activityGroup, bmiOf, bmr, micros, newProfile, pal, planFor, restHours, waistRisk, type BodyProfile } from "../src/lib/nutrition";
 
 let pass = 0, fail = 0;
 const ok = (name: string, c: boolean, extra?: unknown) => { if (c) pass++; else { fail++; console.log("FAIL", name, extra ?? ""); } };
 const NOW = new Date(2026, 9, 15);
-const P = (o: Partial<BodyProfile>): BodyProfile => ({ ...newProfile("f"), born: 1991, ...o, day: { ...newProfile().day, ...(o.day || {}) } });
+// Старый режим «часы по категориям» (дневника нет)
+const P = (o: Partial<BodyProfile>): BodyProfile => { const b: BodyProfile = { ...newProfile("f"), born: 1991, workouts: [], ...o, day: { sleep: 8, desk: 8, light: 2, walk: 1, heavy: 0, ...(o.day || {}) } }; if (!o.days) delete b.days; return b; };
 
 // Миффлин — Сан-Жеор: женщина 35 лет, 165 см, 62 кг → 10·62 + 6,25·165 − 5·35 − 161 = 1315,25
 ok("ОО женщина", Math.abs(bmr(P({}), NOW) - 1315.25) < 0.01, bmr(P({}), NOW));
@@ -86,6 +88,53 @@ const ref = bmr(P({ born: 1989, height: 165, weight: 61.6 }), NOW);
 ok("ОО совпадает с таблицей МР", ref >= 1269 && ref <= 1338, ref);
 const refM = bmr(P({ sex: "m", born: 1989, height: 176.7, weight: 72.3 }), NOW);
 ok("ОО мужчины совпадает с таблицей МР", refM >= 1615 && refM <= 1684, refM);
+
+// ---------- Дневник дня ----------
+ok("время: parse/format", parseHm("07:30") === 450 && hm(450) === "07:30" && parseHm("24:00") === null && parseHm("7.05") === 425);
+ok("отрезки: первый с 00:00", normSegs([{ start: 420, act: "13040:Умываюсь, чищу зубы, бреюсь, макияж" }])[0].start === 0);
+ok("отрезки: сортировка и повтор времени", (() => { const s = normSegs([{ start: 600, act: "a" }, { start: 0, act: SLEEP }, { start: 600, act: "b" }]); return s.length === 2 && s[1].act === "b"; })());
+const bm = 1440; // 1 ккал в минуту — так проще проверять
+const sleepAll = dayEnergy({ id: "x", title: "", perWeek: 7, segs: [{ start: 0, act: SLEEP }] }, bm);
+ok("сутки сна = основной обмен", Math.abs(sleepAll.activity - 1440) < 1e-6 && sleepAll.moveMin === 0);
+const mix = dayEnergy({ id: "x", title: "", perWeek: 7, segs: [
+  { start: 0, act: SLEEP }, { start: 480, act: "11582:Работа за компьютером сидя" }, { start: 960, act: "12050:Бег 10 км/ч" }, { start: 1020, act: "07020:Сидя, смотрю телевизор" },
+] }, bm);
+// 480×1,0 + 480×1,3 + 60×9,3 + 420×1,0 = 480 + 624 + 558 + 420 = 2082
+ok("энергия = MET × ОО/мин × минуты", Math.abs(mix.activity - 2082) < 1e-6, mix.activity);
+ok("движение (MET ≥ 3) — 60 мин", mix.moveMin === 60);
+ok("строки с концом отрезка", mix.rows[3].end === 1440 && mix.rows[1].min === 480);
+ok("сводка по разделам", Math.round(mix.byGroup.run.kcal) === 558 && mix.byGroup.rest.min === 900);
+// Неделя: 5 будних + 2 выходных
+const wk = { ...P({}), days: [
+  { id: "a", title: "Будни", perWeek: 5, segs: [{ start: 0, act: SLEEP }, { start: 480, act: "11582:Работа за компьютером сидя" }] },
+  { id: "b", title: "Выходной", perWeek: 2, segs: [{ start: 0, act: SLEEP }, { start: 600, act: "17190:Иду в обычном темпе (4,5–5,5 км/ч)" }, { start: 720, act: "07020:Сидя, смотрю телевизор" }] },
+] } as BodyProfile;
+const b0 = bmr(wk, NOW);
+const exp = ((480 + 960 * 1.3) * 5 + (600 + 120 * 3.8 + 720) * 2) / 7 * b0 / 1440;
+ok("неделя: среднее с весами дней", Math.abs(diaryTee(wk, NOW).activity - exp) < 1e-6);
+const pw = planFor(wk, NOW)!;
+ok("расход = занятия + 10% на пищу", Math.abs(pw.tee - Math.round(exp * 1.1)) <= 1, [pw.tee, exp * 1.1]);
+ok("КФА = расход / ОО", Math.abs(pw.pal - Math.round((exp * 1.1 / b0) * 100) / 100) < 0.011);
+ok("разбор дневника в плане", pw.diary?.length === 2);
+const wk6 = { ...wk, days: [{ ...wk.days![0], perWeek: 6 }] } as BodyProfile;
+ok("дней не 7 — подсказка", planFor(wk6, NOW)!.notes.some((n) => n.includes("7")));
+// Пример дня: правдоподобный офисный КФА 1,4–1,6
+const tpl = { ...P({}), days: [templateDay()] } as BodyProfile;
+ok("пример дня: КФА офиса 1,4–1,6", planFor(tpl, NOW)!.pal >= 1.4 && planFor(tpl, NOW)!.pal <= 1.6, planFor(tpl, NOW)!.pal);
+ok("пример дня: все занятия есть в таблице", templateDay().segs.every((s) => dayEnergy({ id: "", title: "", perWeek: 1, segs: [s] }, 1440).rows[0].act.n !== "Сон" || s.act === SLEEP));
+// Перевод старого профиля
+const conv = fromHours({ sleep: 8, desk: 8, light: 2, walk: 1, heavy: 0 }, [{ kind: "run", minutes: 60, perWeek: 3 }]);
+const convE = dayEnergy(conv, 1440);
+ok("перевод часов в дневник: сутки целиком", convE.rows[convE.rows.length - 1].end === 1440 && convE.rows.reduce((s, r) => s + r.min, 0) === 1440);
+ok("перевод часов: КФА близок к старому", Math.abs(convE.activity * 1.1 / 1440 - pal(P({ workouts: [{ kind: "run", minutes: 60, perWeek: 3 }] }))) < 0.15, [convE.activity * 1.1 / 1440, pal(P({ workouts: [{ kind: "run", minutes: 60, perWeek: 3 }] }))]);
+
+// Таблица занятий
+ok("занятия: ключи уникальны, коды 5 цифр, MET > 0", (() => { const keys = new Set(ACTIVITIES.map(actKey)); return keys.size === ACTIVITIES.length && ACTIVITIES.every((a) => /^\d{5}$/.test(a.c) && a.m > 0 && a.m < 25); })());
+ok("занятия: сон = 1,0, компьютер = 1,3, бег 10 км/ч = 9,3", actByKey(SLEEP)!.m === 1 && ACTIVITIES.find((a) => a.c === "11582")!.m === 1.3 && ACTIVITIES.find((a) => a.c === "12050")!.m === 9.3);
+ok("поиск: «душ»", searchActs("душ").some((a) => a.c === "13050"));
+ok("поиск: «бег 10»", searchActs("бег 10").some((a) => a.c === "12050"), searchActs("бег 10").map((a) => a.n));
+ok("поиск: «компьютер»", searchActs("компьютер").length >= 2);
+ok("у каждого раздела есть занятия", ACT_GROUPS.every((g) => ACTIVITIES.some((a) => a.g === g.id)));
 
 console.log(`nutrition: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

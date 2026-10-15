@@ -3,13 +3,17 @@
 //
 // Источники:
 // - Основной обмен: формула Миффлина — Сан-Жеора (Am J Clin Nutr, 1990).
-// - Расход за день: факторный метод ФАО/ВОЗ/УООН (Human energy requirements, 2004) —
-//   часы каждого занятия × коэффициент (PAR); для тренировок — значения MET из
-//   Compendium of Physical Activities (2024).
+// - Расход за день: дневник дня по минутам. Каждое занятие — из таблиц 2024 Adult Compendium
+//   of Physical Activities (код и MET). Энергия отрезка = MET × основной обмен за минуту × минуты
+//   (MET, поправленный на свой основной обмен, а не на «стандартные» 3,5 мл O₂/кг/мин),
+//   плюс 10% на переваривание пищи (термический эффект пищи).
+//   Старый упрощённый режим (часы по категориям) — факторный метод ФАО/ВОЗ/УООН 2004.
 // - Нормы белков, жиров, углеводов, клетчатки, витаминов и минералов —
 //   МР 2.3.1.0253-21 «Нормы физиологических потребностей…» (Роспотребнадзор, 2021).
 // - ИМТ и окружность талии — пороги ВОЗ.
 // Это ориентиры для здоровых взрослых, а не назначение врача.
+
+import { ACTIVITIES, actByKey, actKey, type Activity } from "./activities";
 
 export type Sex = "m" | "f";
 export type Goal = "keep" | "lose" | "gain" | "protein";
@@ -29,6 +33,11 @@ export interface DayRoutine {
 
 export interface Workout { kind: WorkoutKind; minutes: number; perWeek: number }
 
+/** Отрезок дня: с какой минуты (0–1439) и что делал (ключ занятия из activities.ts). Длится до следующего отрезка. */
+export interface DaySeg { start: number; act: string }
+/** Типичный день (будний, выходной, день тренировки) и сколько таких дней в неделю. */
+export interface DayLog { id: string; title: string; perWeek: number; segs: DaySeg[] }
+
 export interface BodyProfile {
   sex: Sex;
   /** Год рождения. */
@@ -37,8 +46,11 @@ export interface BodyProfile {
   weight: number; // кг
   waist?: number; // см
   hips?: number; // см
-  day: DayRoutine;
-  workouts: Workout[];
+  /** Дневник: типичные дни по времени. Главный способ расчёта расхода. */
+  days?: DayLog[];
+  /** Старый упрощённый распорядок (часы по категориям) — используется, только если дневника нет. */
+  day?: DayRoutine;
+  workouts?: Workout[];
   goal: Goal;
   pregnant?: boolean;
   lactating?: boolean;
@@ -83,7 +95,7 @@ export const GOALS: Record<Goal, string> = {
 export function newProfile(sex: Sex = "f"): BodyProfile {
   return {
     sex, born: new Date().getFullYear() - 35, height: sex === "m" ? 177 : 165, weight: sex === "m" ? 75 : 62,
-    day: { sleep: 8, desk: 8, light: 2, walk: 1, heavy: 0 }, workouts: [], goal: "keep",
+    days: [templateDay()], goal: "keep",
   };
 }
 
@@ -96,22 +108,107 @@ export function bmr(p: BodyProfile, now = new Date()): number {
 
 /** Часы «отдыха сидя» — всё, что не распределено по другим занятиям и тренировкам. */
 export function restHours(p: BodyProfile): number {
-  const d = p.day;
+  const d = p.day || NO_DAY;
   return Math.max(0, 24 - d.sleep - d.desk - d.light - d.walk - d.heavy - workoutHours(p));
 }
 /** Тренировки в среднем за день, часы. */
 export function workoutHours(p: BodyProfile): number {
-  return p.workouts.reduce((s, w) => s + (w.minutes * w.perWeek) / 7 / 60, 0);
+  return (p.workouts || []).reduce((s, w) => s + (w.minutes * w.perWeek) / 7 / 60, 0);
 }
 
 /** Коэффициент физической активности (КФА, PAL): средний за сутки. */
 export function pal(p: BodyProfile): number {
-  const d = p.day;
+  if (p.days?.length) return round(diaryTee(p).activity / bmr(p) * 1.1, 2);
+  const d = p.day || NO_DAY;
   let sum = d.sleep * 1.0 + d.desk * 1.5 + d.light * 2.3 + d.walk * 3.2 + d.heavy * 4.5;
-  for (const w of p.workouts) sum += ((w.minutes * w.perWeek) / 7 / 60) * WORKOUTS[w.kind].met;
+  for (const w of p.workouts || []) sum += ((w.minutes * w.perWeek) / 7 / 60) * WORKOUTS[w.kind].met;
   sum += restHours(p) * 1.4;
   const hours = Math.max(24, d.sleep + d.desk + d.light + d.walk + d.heavy + workoutHours(p));
   return round(sum / hours, 2);
+}
+
+const NO_DAY: DayRoutine = { sleep: 8, desk: 8, light: 2, walk: 1, heavy: 0 };
+
+// ---------- Дневник дня ----------
+export const hm = (min: number) => `${String(Math.floor(min / 60) % 24).padStart(2, "0")}:${String(min % 60).padStart(2, "0")}`;
+export const parseHm = (s: string): number | null => {
+  const m = s.match(/^(\d{1,2})[:.](\d{2})$/);
+  if (!m) return null;
+  const v = +m[1] * 60 + +m[2];
+  return +m[1] < 24 && +m[2] < 60 ? v : null;
+};
+
+/** Отрезки по порядку; первый всегда с 00:00, повторы времени убраны. */
+export function normSegs(segs: DaySeg[]): DaySeg[] {
+  const s = [...segs].filter((x) => x.start >= 0 && x.start < 1440).sort((a, b) => a.start - b.start);
+  const out: DaySeg[] = [];
+  for (const x of s) { if (out.length && out[out.length - 1].start === x.start) out[out.length - 1] = x; else out.push(x); }
+  if (!out.length || out[0].start !== 0) out.unshift({ start: 0, act: out.length ? out[out.length - 1].act : SLEEP });
+  return out;
+}
+
+export interface DayRow { start: number; end: number; act: Activity; min: number; kcal: number }
+export interface DayEnergy { rows: DayRow[]; activity: number; byGroup: Record<string, { min: number; kcal: number }>; moveMin: number }
+
+/** Энергия за день по дневнику: MET × основной обмен за минуту × минуты. */
+export function dayEnergy(d: DayLog, bmrKcal: number): DayEnergy {
+  const segs = normSegs(d.segs);
+  const perMin = bmrKcal / 1440;
+  const rows: DayRow[] = [];
+  const byGroup: DayEnergy["byGroup"] = {};
+  let activity = 0, moveMin = 0;
+  segs.forEach((x, i) => {
+    const end = i + 1 < segs.length ? segs[i + 1].start : 1440;
+    const act = actByKey(x.act) || actByKey(SLEEP)!;
+    const min = end - x.start;
+    const kcal = act.m * perMin * min;
+    rows.push({ start: x.start, end, act, min, kcal });
+    activity += kcal;
+    if (act.m >= 3) moveMin += min;
+    const g = (byGroup[act.g] ||= { min: 0, kcal: 0 });
+    g.min += min; g.kcal += kcal;
+  });
+  return { rows, activity, byGroup, moveMin };
+}
+
+/** Средний за неделю расход на занятия (без переваривания пищи), ккал/сутки, и сводка по дням. */
+export function diaryTee(p: BodyProfile, now = new Date()): { activity: number; days: { d: DayLog; e: DayEnergy }[]; weekDays: number } {
+  const b = bmr(p, now);
+  const days = (p.days || []).map((d) => ({ d, e: dayEnergy(d, b) }));
+  const w = days.reduce((s, x) => s + Math.max(0, x.d.perWeek), 0);
+  if (!w) return { activity: days[0]?.e.activity || b * 1.3, days, weekDays: 0 };
+  return { activity: days.reduce((s, x) => s + x.e.activity * Math.max(0, x.d.perWeek), 0) / w, days, weekDays: w };
+}
+
+export const SLEEP = "07030:Сон";
+const K = (c: string) => { const a = ACTIVITIES.find((x) => x.c === c)!; return actKey(a); };
+
+/** Пример обычного рабочего дня — его удобно поправить под себя. */
+export function templateDay(title = "Будний день", perWeek = 5): DayLog {
+  const t = (h: string, c: string): DaySeg => ({ start: parseHm(h)!, act: K(c) });
+  return {
+    id: "d" + Math.random().toString(36).slice(2, 8), title, perWeek,
+    segs: [
+      t("00:00", "07030"), t("07:00", "13040"), t("07:15", "13050"), t("07:30", "13020"), t("07:40", "13030"),
+      t("08:00", "17270"), t("08:15", "16016"), t("08:45", "17270"), t("09:00", "11582"), t("13:00", "13030"),
+      t("13:30", "11582"), t("18:00", "17270"), t("18:15", "16016"), t("18:45", "05060"), t("19:15", "05050"),
+      t("20:00", "13030"), t("20:30", "05041"), t("20:45", "07020"), t("22:45", "13000"), t("23:00", "07030"),
+    ],
+  };
+}
+
+/** Перевод старого распорядка «часы по категориям» в дневник (последовательные отрезки). */
+export function fromHours(d: DayRoutine, workouts: Workout[] = []): DayLog {
+  const segs: DaySeg[] = [];
+  let t = 0;
+  const add = (h: number, c: string) => { if (h > 0 && t < 1440) { segs.push({ start: t, act: K(c) }); t = Math.min(1440, t + Math.round(h * 60)); } };
+  add(Math.max(0, d.sleep - 1), "07030");
+  add(d.desk, "11582"); add(d.light, "05025"); add(d.walk, "17190"); add(d.heavy, "11476");
+  const MAP: Record<WorkoutKind, string> = { walkFast: "17200", run: "12020", bike: "01020", swim: "18310", gym: "02054", fitness: "02061", yoga: "02175", team: "15610", ski: "19090", dance: "03042" };
+  for (const w of workouts) add((w.minutes * w.perWeek) / 7 / 60, MAP[w.kind]);
+  add(24 - Math.min(24, d.sleep + d.desk + d.light + d.walk + d.heavy) - workoutHours({ workouts } as BodyProfile), "07021");
+  if (t < 1440) segs.push({ start: Math.min(1439, 1440 - 60), act: K("07030") });
+  return { id: "d" + Math.random().toString(36).slice(2, 8), title: "Обычный день", perWeek: 7, segs: normSegs(segs) };
 }
 
 /** Группа активности по МР 2.3.1.0253-21 (I — очень низкая … IV — высокая). */
@@ -205,6 +302,8 @@ export interface Plan {
   waist: ReturnType<typeof waistRisk>;
   notes: string[];
   warnings: string[];
+  /** Разбор дневника по дням (если он есть). */
+  diary?: { d: DayLog; e: DayEnergy }[];
 }
 
 /** Полный расчёт норм для одного человека. null — расчёт для этого возраста пока не поддерживается. */
@@ -214,9 +313,11 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   const notes: string[] = [];
   const warnings: string[] = [];
   const b = bmr(p, now);
-  const k = pal(p);
+  const diary = p.days?.length ? diaryTee(p, now) : null;
+  let tee = diary ? diary.activity * 1.1 : b * pal(p);
+  const k = round(tee / b, 2);
   const group = activityGroup(k);
-  let tee = b * k;
+  if (diary && diary.weekDays !== 7) notes.push(`В дневнике расписано ${diary.weekDays} ${diary.weekDays === 1 ? "день" : diary.weekDays < 5 ? "дня" : "дней"} недели — расход посчитан как среднее по ним. Лучше, чтобы вместе получилось 7.`);
   if (p.pregnant) { tee *= 1.15; notes.push("Беременность: энергия +15% (МР 2.3.1.0253-21)."); }
   else if (p.lactating) { tee *= 1.2; notes.push("Кормление грудью: энергия +20% (МР 2.3.1.0253-21)."); }
   const bmi = bmiOf(p);
@@ -262,7 +363,8 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   // Клетчатка — 10 г на 1000 ккал, не меньше 20 г
   const fiber = Math.max(20, kcal / 100);
   // Вода: EFSA — всего 2,5 л мужчинам и 2,0 л женщинам, из них ~20% даёт еда; +0,5 л на час тренировки
-  const water = (p.sex === "m" ? 2.0 : 1.6) + workoutHours(p) * 0.5 + (p.lactating ? 0.6 : p.pregnant ? 0.3 : 0);
+  const sportH = diary ? diary.days.reduce((s2, x) => s2 + x.e.rows.filter((r) => r.act.m >= 5).reduce((a, r) => a + r.min, 0) * Math.max(0, x.d.perWeek), 0) / Math.max(1, diary.weekDays) / 60 : workoutHours(p);
+  const water = (p.sex === "m" ? 2.0 : 1.6) + sportH * 0.5 + (p.lactating ? 0.6 : p.pregnant ? 0.3 : 0);
 
   if (p.medical?.trim()) warnings.push(`Учтите рекомендации врача: ${p.medical.trim()}. Приложение не заменяет консультацию.`);
 
@@ -270,7 +372,7 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
     age, bmr: Math.round(b), pal: k, group, tee: Math.round(tee), kcal: Math.round(kcal / 10) * 10, goal,
     protein: Math.round(protein), fat: Math.round(fat), satFatMax: Math.round(satFatMax), carbs: Math.round(carbs),
     sugarMax: Math.round(sugarMax), fiber: Math.round(fiber), water: round(water, 1), weekly: round(weekly, 2),
-    bmi, waist: waistRisk(p), notes, warnings,
+    bmi, waist: waistRisk(p), notes, warnings, diary: diary ? diary.days : undefined,
   };
 }
 
