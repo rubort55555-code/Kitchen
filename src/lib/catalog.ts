@@ -18,9 +18,9 @@ const BASE: CatalogItem[] = [
   c("Сметана", "Молочное", "🥛", "г", F, [14, null, null], 5),
   c("Творог", "Молочное", "🧀", "г", F, [5, 60, null], 2),
   c("Сыр твёрдый", "Молочное", "🧀", "г", F, [30, 90, null], 14, ["сыр"]),
-  c("Сыр плавленый", "Молочное", "🧀", "г", F, [30, null, null], 5),
+  c("Сыр плавленый", "Молочное", "🧀", "г", F, [30, null, null], 5, ["плавленый сыр"]),
   c("Моцарелла", "Молочное", "🧀", "г", F, [14, null, null], 3),
-  c("Сыр творожный", "Молочное", "🧀", "г", F, [14, null, null], 5, ["сливочный сыр", "крем-сыр"]),
+  c("Сыр творожный", "Молочное", "🧀", "г", F, [14, null, null], 5, ["сливочный сыр", "крем-сыр", "творожный сыр"]),
   c("Брынза", "Молочное", "🧀", "г", F, [14, null, null], 7),
   c("Масло сливочное", "Молочное", "🧈", "г", F, [30, 180, null], 21, ["сливочное масло"]),
   c("Сливки", "Молочное", "🥛", "мл", F, [10, null, null], 3),
@@ -34,7 +34,7 @@ const BASE: CatalogItem[] = [
   c("Куриные крылья", "Птица", "🍗", "г", F, [2, 180, null], undefined, ["крылышки", "крылья"]),
   c("Куриная печень", "Птица", "🍗", "г", F, [1, 90, null], undefined, ["печень"]),
   c("Индейка", "Птица", "🍗", "г", F, [2, 180, null], undefined, ["филе индейки"]),
-  c("Фарш куриный", "Птица", "🍗", "г", F, [1, 90, null]),
+  c("Фарш куриный", "Птица", "🍗", "г", F, [1, 90, null], undefined, ["куриный фарш"]),
   c("Говядина", "Мясо", "🥩", "г", F, [3, 180, null], undefined, ["говяж"]),
   c("Свинина", "Мясо", "🥩", "г", F, [3, 180, null], undefined, ["свин", "шея", "карбонад"]),
   c("Баранина", "Мясо", "🥩", "г", F, [3, 180, null]),
@@ -92,7 +92,7 @@ const BASE: CatalogItem[] = [
   c("Помидоры", "Овощи", "🍅", "кг", F, [7, null, 5], undefined, ["томат", "помидор"]),
   c("Огурцы", "Овощи", "🥒", "кг", F, [7, null, null], undefined, ["огурец"]),
   c("Перец болгарский", "Овощи", "🫑", "шт", F, [10, 180, null], undefined, ["перец сладкий", "болгарский"]),
-  c("Кабачок", "Овощи", "🥒", "шт", F, [10, 180, null], undefined, ["цукини"]),
+  c("Кабачок", "Овощи", "🥒", "шт", F, [10, 180, null], undefined, ["цукини", "кабачки"]),
   c("Баклажан", "Овощи", "🍆", "шт", F, [7, null, null]),
   c("Свёкла", "Овощи", "🟣", "кг", F, [30, null, null], undefined, ["свекла"]),
   c("Тыква", "Овощи", "🎃", "кг", S, [10, 180, 60]),
@@ -242,7 +242,7 @@ export function allCatalog(custom: CatalogItem[]): CatalogItem[] {
   return custom.concat(CATALOG.filter((x) => !own.has(norm(x.n))));
 }
 
-interface CatIndex { exact: Map<string, CatalogItem>; syn: Map<string, CatalogItem>; stems: Map<string, { it: CatalogItem; re: RegExp; len: number }[]>; memo: Map<string, CatalogItem | null> }
+interface CatIndex { exact: Map<string, CatalogItem>; syn: Map<string, CatalogItem>; stems: Map<string, { it: CatalogItem; re: RegExp; len: number }[]>; memo: Map<string, CatalogItem | null>; words: Map<string, { it: CatalogItem; toks: string[]; len: number }[]> }
 const indexes = new Map<string, CatIndex>();
 
 /** Индекс справочника: регулярные выражения собираем один раз (раньше — на каждый вызов, это тормозило). */
@@ -250,7 +250,7 @@ function indexFor(custom: CatalogItem[]): CatIndex {
   const sig = custom.map((c) => c.n + "\u0001" + (c.s || []).join(",")).join("|");
   let ix = indexes.get(sig);
   if (ix) return ix;
-  ix = { exact: new Map(), syn: new Map(), stems: new Map(), memo: new Map() };
+  ix = { exact: new Map(), syn: new Map(), stems: new Map(), memo: new Map(), words: new Map() };
   const list = allCatalog(custom);
   for (const it of list) { const n = norm(it.n); if (!ix.exact.has(n)) ix.exact.set(n, it); }
   for (const it of list) for (const s of it.s || []) { const n = norm(s); if (!ix.syn.has(n)) ix.syn.set(n, it); }
@@ -264,6 +264,19 @@ function indexFor(custom: CatalogItem[]): CatIndex {
       const arr = ix.stems.get(b) || [];
       arr.push({ it, re: new RegExp("(^|[^а-яa-z])" + escapeRe(stem) + tail), len: stem.length });
       ix.stems.set(b, arr);
+    }
+  }
+  // Слова в другом порядке: «сердце куриное» = «куриное сердце»
+  for (const it of list) {
+    for (const key of [it.n, ...(it.s || [])]) {
+      const toks = wordStems(norm(key));
+      if (toks.length < 2 || toks.length > 3) continue;
+      const e = { it, toks, len: toks.reduce((a, t) => a + t.length, 0) };
+      for (const t of new Set(toks.map((x) => x.slice(0, 2)))) {
+        const arr = ix.words.get(t) || [];
+        arr.push(e);
+        ix.words.set(t, arr);
+      }
     }
   }
   if (indexes.size > 20) indexes.clear();
@@ -287,10 +300,25 @@ export function findCatalog(name: string, custom: CatalogItem[] = []): CatalogIt
       if (bucket) for (const st of bucket) if (st.len > bestLen && st.re.test(q)) { res = st.it; bestLen = st.len; }
     }
   }
+  if (!res) {
+    const qw = q.split(/[^а-яa-z0-9]+/).filter(Boolean);
+    let best = 0;
+    const seen = new Set<unknown>();
+    for (const w of qw) {
+      for (const e of ix.words.get(w.slice(0, 2)) || []) {
+        if (seen.has(e)) continue;
+        seen.add(e);
+        if (e.len > best && e.toks.every((t) => qw.some((x) => x.startsWith(t)))) { res = e.it; best = e.len; }
+      }
+    }
+  }
   if (ix.memo.size > 5000) ix.memo.clear();
   ix.memo.set(q, res);
   return res;
 }
+
+/** Основы слов названия (без окончаний), для поиска при другом порядке слов. */
+const wordStems = (k: string) => k.split(/[^а-яa-z0-9]+/).filter((w) => w.length > 2).map((w) => (w.length > 5 ? w.slice(0, w.length - 2) : w.length > 3 ? w.slice(0, w.length - 1) : w));
 
 const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
