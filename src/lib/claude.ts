@@ -14,6 +14,7 @@ export interface AskOptions {
   wish: string;           // пожелание своими словами
   useFirst: string[];     // продукты, которые точно нужно использовать
   weekPart?: string;      // для меню на неделю: своя просьба и свой формат ответа
+  nutrition?: string[];   // пробная функция «Питание»: нормы на день для тех, кто ест
 }
 
 export function rulesText(rules: Rule[], members: Member[], who: string[], custom: CatalogItem[]): string[] {
@@ -60,6 +61,7 @@ export function buildPrompt(o: AskOptions, products: Product[], members: Member[
     o.useFirst.length ? `Обязательно используй: ${o.useFirst.join(", ")}.` : "",
     `Всегда есть: ${basics.join(", ")}.`,
     "",
+    ...(o.nutrition?.length ? ["Ориентиры по питанию на день (подбирай порции и блюда с учётом этого; у каждого блюда укажи примерные ккал и белок на порцию — в поле why):", ...o.nutrition.map((l) => `- ${l}`), ""] : []),
     "Наши ограничения в питании (строго соблюдай):",
     ...rulesText(rules, members, o.who, custom),
     "",

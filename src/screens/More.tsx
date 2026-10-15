@@ -11,6 +11,8 @@ import type { CatalogItem, FishType, Level, Member, Place, Rule, ScanEvent, Unit
 import { PLACES, UNITS } from "../lib/types";
 import { norm, plural, ymd } from "../lib/util";
 import { Stats } from "./Stats";
+import { Nutrition } from "./Nutrition";
+import { planFor } from "../lib/nutrition";
 import { closeAll, closeSheet, goPage, goTab, openSheet, toast, useUI } from "../lib/ui";
 
 export const VERSION = typeof __VERSION__ !== "undefined" ? __VERSION__ : "dev";
@@ -27,6 +29,7 @@ export function More() {
     case "bug": return <Bug />;
     case "about": return <About />;
     case "beta": return <Beta />;
+    case "nutrition": return <Nutrition />;
     default: return <Menu />;
   }
 }
@@ -49,6 +52,7 @@ function Menu() {
       <Header title="Ещё" screen="more" />
       <div className="list">
         <Row icon="📊" title="Статистика" sub="Съедено, пропало, осталось — в рублях" onClick={() => goPage("stats")} />
+        {s.beta?.nutrition !== false && <Row icon="🥗" title="Питание · проба" sub={nutritionSub(s.members)} onClick={() => goPage("nutrition")} />}
       </div>
       <div className="list">
         <Row icon="👨‍👩" title="Семья" sub={s.members.map((m) => m.name).join(", ")} onClick={() => goPage("family")} />
@@ -60,7 +64,7 @@ function Menu() {
       </div>
       <div className="list">
         <Row icon="❓" title="Помощь" sub="Справка и частые вопросы" onClick={() => goPage("help")} />
-        <Row icon="🧪" title="Пробные функции" sub={s.beta?.barcode === false ? "Сканер штрихкодов выключен" : "Сканер штрихкодов"} onClick={() => goPage("beta")} />
+        <Row icon="🧪" title="Пробные функции" sub="Сканер штрихкодов, питание" onClick={() => goPage("beta")} />
         <Row icon="🛠" title="Что-то не работает" onClick={() => goPage("bug")} />
         <Row icon="ℹ️" title="О приложении" sub={"Версия " + VERSION} onClick={() => goPage("about")} />
       </div>
@@ -69,6 +73,12 @@ function Menu() {
 }
 
 const back = () => goPage(null);
+
+/** Подпись строки «Питание»: нормы тех, у кого заполнен профиль. */
+function nutritionSub(members: Member[]): string {
+  const parts = members.map((m) => { const p = m.body ? planFor(m.body) : null; return p ? `${m.name} ${p.kcal.toLocaleString("ru-RU")} ккал` : null; }).filter(Boolean);
+  return parts.length ? parts.join(" · ") : "Калории, БЖУ и витамины для каждого";
+}
 const splitList = (s: string) => s.split(/[,;\n]/).map((x) => x.trim()).filter(Boolean);
 
 // ---------- Семья ----------
@@ -488,8 +498,13 @@ function Beta() {
           <div className="main"><div className="name">Сканер штрихкодов</div><div className="meta">Кнопка в окне «+». Название, вес и КБЖУ — из Open Food Facts</div></div>
           <input type="checkbox" className="switch" checked={on} onChange={(e: any) => setSettings({ beta: { ...s.beta, barcode: e.target.checked } })} aria-label="Сканер штрихкодов" />
         </label>
+        <label className="li">
+          <span className="ico">🥗</span>
+          <div className="main"><div className="name">Питание и личные нормы</div><div className="meta">⚙︎ → «Питание»: калории, БЖУ, витамины по росту, весу, распорядку дня и цели</div></div>
+          <input type="checkbox" className="switch" checked={s.beta?.nutrition !== false} onChange={(e: any) => setSettings({ beta: { ...s.beta, nutrition: e.target.checked } })} aria-label="Питание и личные нормы" />
+        </label>
       </div>
-      <h2>Как работает у вас</h2>
+      <h2>Сканер: как работает у вас</h2>
       <p className="small">{scanSummary(s.scanLog || [])}.</p>
       {log.length > 0 && (
         <div className="list">

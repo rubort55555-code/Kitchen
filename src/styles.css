@@ -356,3 +356,36 @@ select.inp { padding-right: 8px; }
 .switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 25px; height: 25px; border-radius: 50%; background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); transition: transform 0.2s; }
 .switch:checked { background: var(--ok-bar); border-color: var(--ok-bar); }
 .switch:checked::after { transform: translateX(20px); }
+/* Питание (проба) */
+.nut-card .hero { margin: 2px 0 8px; }
+.nut-macros { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 8px 0; }
+.nut-macros > div { background: var(--card2); border-radius: 12px; padding: 8px 6px; text-align: center; min-width: 0; }
+.nut-macros b { display: block; font-size: 20px; }
+.nut-macros span { font-size: 12px; color: var(--muted); }
+.nut-kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; margin: 10px 0; font-size: 15px; }
+.nut-kv > span:nth-child(odd) { color: var(--muted); }
+.nut-kv > span:nth-child(even) { text-align: right; justify-self: end; }
+.pill { display: inline-block; border-radius: 8px; padding: 1px 8px; background: var(--accent-soft); color: var(--accent); }
+.pill.soon { background: var(--soon-soft); color: var(--soon); }
+.pill.bad { background: var(--bad-soft); color: var(--bad); }
+.nut-h { margin: 14px 0 6px; font-size: 16px; }
+.nut-micro { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.nut-micro > div { background: var(--card2); border-radius: 10px; padding: 7px 10px; font-size: 14px; display: flex; flex-direction: column; }
+.nut-micro b { font-size: 15px; }
+.nut-micro small { color: var(--muted); font-size: 12px; }
+.nut-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 0 10px; }
+.nut-grid .inp { min-width: 0; width: 100%; }
+.nut-hour { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: var(--card); min-height: 58px; }
+.nut-hour + .nut-hour { border-top: 0.5px solid var(--line); }
+.nut-hour .main { flex: 1; min-width: 0; }
+.nut-hour .main small { display: block; font-size: 13px; }
+.nut-hour button { width: 40px; height: 40px; border-radius: 10px; border: 0; background: var(--card2); color: var(--accent); font-size: 22px; flex: none; }
+.nut-hour b { min-width: 34px; text-align: center; font-size: 18px; }
+.nut-work { padding: 10px 12px; }
+.nut-src summary { font-weight: 600; cursor: pointer; }
+.nut-src ul { padding-left: 18px; margin: 8px 0 0; }
+.nut-src li { margin-bottom: 6px; }
+.card h3 .link { padding: 0; }
+.nut-waist { border-radius: 10px; padding: 8px 10px; font-size: 14px; background: var(--accent-soft); margin: 6px 0; }
+.nut-waist.soon { background: var(--soon-soft); }
+.nut-waist.bad { background: var(--bad-soft); }

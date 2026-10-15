@@ -2,6 +2,7 @@
 import { useMemo, useState } from "react";
 import { Seg, Sheet } from "../components/ui";
 import { saveRecipes, useStore } from "../lib/store";
+import { planFor, planLine } from "../lib/nutrition";
 import { buildPrompt, claudeUrl, parseAnswer } from "../lib/claude";
 import { compileRules, checkRecipe } from "../lib/exclusions";
 import type { Recipe } from "../lib/types";
@@ -27,7 +28,8 @@ export function AskClaude({ week }: { week?: string }) {
   const urgent = products.filter((p) => { const d = daysLeft(p.until); return d !== null && d <= 2; }).map((p) => p.name);
 
   const prompt = useMemo(() => buildPrompt(
-    { who: whoIds, minutes: Number(minutes) || null, kind: week ? "любое" : kind, count: 3, wish, useFirst: urgent.slice(0, 5), weekPart: week ? weekPromptPart(days.length ? days : weekDays(week), slots) : undefined },
+    { who: whoIds, minutes: Number(minutes) || null, kind: week ? "любое" : kind, count: 3, wish, useFirst: urgent.slice(0, 5), weekPart: week ? weekPromptPart(days.length ? days : weekDays(week), slots) : undefined,
+      nutrition: settings.beta?.nutrition === false ? undefined : members.filter((m) => whoIds.includes(m.id) && m.body).map((m) => { const p = planFor(m.body!); return p ? planLine(m.name, p) : ""; }).filter(Boolean) },
     products, members, settings.rules, settings.basics, settings.customCatalog,
   ), [who, minutes, kind, wish, products, settings, week]);
 

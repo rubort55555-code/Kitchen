@@ -63,6 +63,8 @@ export interface Member {
   name: string;
   allergies: string[];
   dislikes: string[];
+  /** Пробная функция «Питание»: рост, вес, распорядок дня, цель. */
+  body?: import("./nutrition").BodyProfile;
 }
 
 /** Уровень исключения: никогда / только немного / можно. */
@@ -195,7 +197,7 @@ export interface Settings {
   tipsSeen: string[];
   customCatalog: CatalogItem[];
   /** Пробные функции: включены ли (по умолчанию — да). */
-  beta?: { barcode?: boolean };
+  beta?: { barcode?: boolean; nutrition?: boolean };
   /** Журнал пробы сканера: последние попытки (для отчёта о том, как работает). */
   scanLog?: ScanEvent[];
   /** Запомненные штрихкоды: код → как назвали продукт и что о нём известно из Open Food Facts. */
