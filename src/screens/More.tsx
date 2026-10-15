@@ -7,7 +7,7 @@ import { DEFAULT_RULES, newRule } from "../lib/exclusions";
 import { parseBackupText, type Parsed } from "../lib/importOld";
 import { makeDemo } from "../lib/demo";
 import { FAQ, SCREEN_HELP, SECTIONS, searchHelp, type HelpSection, type Screen } from "../lib/help";
-import type { CatalogItem, FishType, Level, Member, Place, Rule, Unit } from "../lib/types";
+import type { CatalogItem, FishType, Level, Member, Place, Rule, ScanEvent, Unit } from "../lib/types";
 import { PLACES, UNITS } from "../lib/types";
 import { norm, plural, ymd } from "../lib/util";
 import { Stats } from "./Stats";
@@ -26,6 +26,7 @@ export function More() {
     case "help": return <HelpPage />;
     case "bug": return <Bug />;
     case "about": return <About />;
+    case "beta": return <Beta />;
     default: return <Menu />;
   }
 }
@@ -59,6 +60,7 @@ function Menu() {
       </div>
       <div className="list">
         <Row icon="❓" title="Помощь" sub="Справка и частые вопросы" onClick={() => goPage("help")} />
+        <Row icon="🧪" title="Пробные функции" sub={s.beta?.barcode === false ? "Сканер штрихкодов выключен" : "Сканер штрихкодов"} onClick={() => goPage("beta")} />
         <Row icon="🛠" title="Что-то не работает" onClick={() => goPage("bug")} />
         <Row icon="ℹ️" title="О приложении" sub={"Версия " + VERSION} onClick={() => goPage("about")} />
       </div>
@@ -425,6 +427,7 @@ function Bug() {
       `Открыто с экрана «Домой»: ${standalone ? "да" : "нет"}`,
       `Данные: ${st.products.length} продуктов, ${st.log.length} записей, ${st.recipes.length} рецептов`,
       `Последняя ошибка: ${last}`,
+      `Сканер штрихкодов: ${st.settings.beta?.barcode === false ? "выключен" : "включён"}, ${scanSummary(st.settings.scanLog || [])}`,
     ].join("\n");
   };
   return (
@@ -435,6 +438,76 @@ function Bug() {
       <button className="btn" style={{ marginTop: 12 }} onClick={async () => { try { await navigator.clipboard.writeText(report()); setDone("Скопировано. Вставьте в чат с Claude."); } catch { setDone("Не удалось скопировать — выделите текст ниже вручную."); } }}>Скопировать</button>
       {done && <p className="small" role="status">{done}</p>}
       <details className="prompt"><summary>Что будет отправлено</summary><pre>{report()}</pre></details>
+    </div>
+  );
+}
+
+// ---------- Пробные функции ----------
+const HOW: Record<ScanEvent["how"], string> = { camera: "камера", photo: "фото", manual: "цифры", "fail-photo": "фото — код не найден", "bad-digits": "цифры с ошибкой" };
+const RESULT: Record<NonNullable<ScanEvent["result"]>, string> = { known: "уже покупали", found: "найден в базе", none: "нет в базе", offline: "нет интернета", busy: "база занята", error: "ошибка связи" };
+
+/** Сводка по журналу: сколько раз, чем читали, сколько нашлось. */
+export function scanSummary(log: ScanEvent[]): string {
+  if (!log.length) return "сканирований не было";
+  const read = log.filter((e) => e.code);
+  const cam = read.filter((e) => e.how === "camera");
+  const found = read.filter((e) => e.result === "found" || e.result === "known").length;
+  const secs = cam.map((e) => e.sec).filter((x): x is number => typeof x === "number").sort((a, b) => a - b);
+  const med = secs.length ? secs[Math.floor(secs.length / 2)] : null;
+  return [
+    `попыток ${log.length}`,
+    `прочитано ${read.length} (камера ${cam.length}, фото ${read.filter((e) => e.how === "photo").length}, цифры ${read.filter((e) => e.how === "manual").length})`,
+    `не прочитано фото ${log.filter((e) => e.how === "fail-photo").length}`,
+    `товар узнан ${found} из ${read.length}`,
+    med !== null ? `камера находит код за ~${String(med).replace(".", ",")} с` : "",
+  ].filter(Boolean).join(", ");
+}
+
+function Beta() {
+  const s = useStore((x) => x.settings);
+  const on = s.beta?.barcode !== false;
+  const log = [...(s.scanLog || [])].reverse();
+  const [copied, setCopied] = useState("");
+  const report = () => [
+    "Кухня — проба сканера штрихкодов",
+    `Версия: ${VERSION}, ${iosVersion()}`,
+    `Итого: ${scanSummary(s.scanLog || [])}`,
+    "",
+    ...log.map((e) => [
+      new Date(e.t).toLocaleString("ru-RU", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }),
+      HOW[e.how], e.code || "", e.result ? RESULT[e.result] : "", e.name || "", e.sec !== undefined ? e.sec + " с" : "", e.added ? "добавлен" : "",
+    ].filter(Boolean).join(" · ")),
+  ].join("\n");
+  return (
+    <div className="screen">
+      <Header title="Пробные функции" screen="more" onBack={back} backText="Ещё" />
+      <p className="muted mt0">Новые функции, которые пока проверяются. Они могут работать неидеально — их можно выключить.</p>
+      <div className="list">
+        <label className="li">
+          <span className="ico">▥</span>
+          <div className="main"><div className="name">Сканер штрихкодов</div><div className="meta">Кнопка в окне «+». Название, вес и КБЖУ — из Open Food Facts</div></div>
+          <input type="checkbox" className="switch" checked={on} onChange={(e: any) => setSettings({ beta: { ...s.beta, barcode: e.target.checked } })} aria-label="Сканер штрихкодов" />
+        </label>
+      </div>
+      <h2>Как работает у вас</h2>
+      <p className="small">{scanSummary(s.scanLog || [])}.</p>
+      {log.length > 0 && (
+        <div className="list">
+          {log.slice(0, 20).map((e) => (
+            <div className="li" key={e.t}>
+              <div className="main">
+                <div className="name">{e.name || e.code || "Код не прочитан"}</div>
+                <div className="meta">{[HOW[e.how], e.result ? RESULT[e.result] : "", e.sec !== undefined ? `${String(e.sec).replace(".", ",")} с` : "", e.added ? "добавлен" : ""].filter(Boolean).join(" · ")}</div>
+              </div>
+              <span className="end">{new Date(e.t).toLocaleDateString("ru-RU", { day: "numeric", month: "short" })}</span>
+            </div>
+          ))}
+        </div>
+      )}
+      <p className="muted small">Скопируйте отчёт и пришлите в чат с Claude — так проще улучшить распознавание.</p>
+      <button className="btn" disabled={!log.length} onClick={async () => { try { await navigator.clipboard.writeText(report()); setCopied("Скопировано. Вставьте в чат с Claude."); } catch { setCopied("Не удалось скопировать."); } }}>Скопировать отчёт</button>
+      {copied && <p className="small" role="status">{copied}</p>}
+      {log.length > 0 && <button className="btn ghost" onClick={() => setSettings({ scanLog: [] })}>Очистить журнал</button>}
     </div>
   );
 }

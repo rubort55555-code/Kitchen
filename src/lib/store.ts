@@ -83,6 +83,23 @@ export function setSettings(patch: Partial<Settings>) {
   persist(db.setKv("settings", settings));
 }
 
+// ---------- проба сканера штрихкодов ----------
+/** Записывает попытку сканирования (хранятся последние 50). */
+export function logScan(e: Omit<import("./types").ScanEvent, "t">) {
+  const scanLog = [...(state.settings.scanLog || []), { ...e, t: Date.now() }].slice(-50);
+  setSettings({ scanLog });
+}
+/** Отмечает, что после скана кода продукт добавили. */
+function markScanAdded(code: string) {
+  const log = state.settings.scanLog || [];
+  for (let i = log.length - 1; i >= 0; i--) {
+    if (log[i].code === code && !log[i].added) {
+      return [...log.slice(0, i), { ...log[i], added: true }, ...log.slice(i + 1)];
+    }
+  }
+  return log;
+}
+
 // ---------- продукты ----------
 export interface NewProduct {
   name: string; qty: number; unit: Unit; place: Place; until: string | null; price: number; bought?: string;
@@ -104,6 +121,7 @@ export function addProduct(p: NewProduct, reason: Reason = "bought"): Product {
   if (p.barcode) {
     const old = state.settings.barcodes?.[p.barcode];
     settings.barcodes = { ...state.settings.barcodes, [p.barcode]: { name: it.name, off: p.off !== undefined ? p.off : old?.off, t: Date.now() } };
+    settings.scanLog = markScanAdded(p.barcode);
   }
   set({ products: [...state.products, it], log: [...state.log, entry], settings });
   persist(Promise.all([db.apply([{ store: "products", put: [it] }, { store: "log", put: [entry] }]), db.setKv("settings", settings)]).then(() => {}));

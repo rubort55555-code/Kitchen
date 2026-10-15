@@ -1,7 +1,7 @@
 // Добавление продукта за 2–3 касания: подсказки из справочника, частые продукты, последняя цена.
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Seg, Sheet } from "../components/ui";
-import { addProduct, deleteProduct, frequentNames, useStore } from "../lib/store";
+import { addProduct, deleteProduct, frequentNames, logScan, useStore } from "../lib/store";
 import { findCatalog, shelfDays, suggest } from "../lib/catalog";
 import { compileRules, checkProduct } from "../lib/exclusions";
 import type { CatalogItem, Place, Unit } from "../lib/types";
@@ -9,7 +9,7 @@ import { PLACES, UNITS } from "../lib/types";
 import { addDays, cap, dateText, daysLeft, norm, rub, toNum, untilText, ymd } from "../lib/util";
 import { quickAmounts } from "../lib/units";
 import { closeSheet, openSheet, toast } from "../lib/ui";
-import { BarcodeScan } from "../components/BarcodeScan";
+import { BarcodeScan, type ScanHow } from "../components/BarcodeScan";
 import { lookupOff, nameFor, offPage, per100Text, OFF_CREDIT, type OffProduct } from "../lib/off";
 
 const POPULAR = ["Молоко", "Яйца", "Хлеб", "Куриное филе", "Картофель", "Помидоры", "Огурцы", "Сыр твёрдый", "Бананы", "Творог"];
@@ -72,19 +72,21 @@ export function AddProduct() {
   }
 
   /** Прочитали штрихкод: сначала свои запомненные, потом Open Food Facts. */
-  async function onCode(c: string) {
+  async function onCode(c: string, how: ScanHow, sec?: number) {
     setScan(false);
     setErr("");
     const known = settings.barcodes?.[c];
     if (known) {
+      logScan({ how, code: c, result: "known", name: known.name, sec });
       setCode({ code: c, off: known.off, status: "known" });
       pick(known.name, known.off || undefined);
       return;
     }
     setCode({ code: c, status: "loading" });
     const r = await lookupOff(c);
-    if (!r.ok) { setCode({ code: c, status: r.why }); return; }
-    if (!r.product) { setCode({ code: c, off: null, status: "none" }); return; }
+    if (!r.ok) { logScan({ how, code: c, result: r.why, sec }); setCode({ code: c, status: r.why }); return; }
+    if (!r.product) { logScan({ how, code: c, result: "none", sec }); setCode({ code: c, off: null, status: "none" }); return; }
+    logScan({ how, code: c, result: "found", name: r.product.title, sec });
     setCode({ code: c, off: r.product, status: "found" });
     pick(nameFor(r.product, settings.customCatalog).name, r.product);
   }
@@ -136,8 +138,8 @@ export function AddProduct() {
   return (
     <Sheet title="Новый продукт">
       {scan
-        ? <BarcodeScan onCode={onCode} onClose={() => setScan(false)} />
-        : <button type="button" className="btn sec" style={{ marginTop: 8 }} onClick={() => { setScan(true); setCode(null); }}>▥ Сканировать штрихкод</button>}
+        ? <BarcodeScan onCode={onCode} onClose={() => setScan(false)} onFail={(how) => logScan({ how })} />
+        : settings.beta?.barcode !== false && <button type="button" className="btn sec" style={{ marginTop: 8 }} onClick={() => { setScan(true); setCode(null); }}>▥ Сканировать штрихкод <span className="beta">проба</span></button>}
       <div className="row2" style={{ marginTop: 10 }}>
         <button type="button" className="btn sec" onClick={() => openSheet({ kind: "receipt", mode: "photo" })}>📷 Из чека</button>
         <button type="button" className="btn sec" onClick={() => openSheet({ kind: "receipt", mode: "text" })}>📋 Текст чека</button>

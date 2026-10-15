@@ -3,7 +3,7 @@ import { useSyncExternalStore } from "react";
 import type { Screen } from "./help";
 
 export type Tab = "home" | "products" | "recipes" | "shop" | "more";
-export type Page = null | "stats" | "family" | "rules" | "catalog" | "data" | "help" | "bug" | "about";
+export type Page = null | "stats" | "family" | "rules" | "catalog" | "data" | "help" | "bug" | "about" | "beta";
 export type Sheet =
   | { kind: "add" }
   | { kind: "product"; id: string }
@@ -54,7 +54,7 @@ export const hideToast = () => { clearTimeout(timer); set({ toast: null }); };
 
 /** Текущий экран — для значка «?». */
 export function currentScreen(u: UI = ui): Screen {
-  if (u.tab === "more" && u.page) return u.page === "bug" || u.page === "about" ? "more" : u.page;
+  if (u.tab === "more" && u.page) return u.page === "bug" || u.page === "about" || u.page === "beta" ? "more" : u.page;
   if (u.tab === "recipes" && u.recipesView === "menu") return "menu";
   return u.tab;
 }

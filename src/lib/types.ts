@@ -194,10 +194,27 @@ export interface Settings {
   lastRevision?: string;
   tipsSeen: string[];
   customCatalog: CatalogItem[];
+  /** Пробные функции: включены ли (по умолчанию — да). */
+  beta?: { barcode?: boolean };
+  /** Журнал пробы сканера: последние попытки (для отчёта о том, как работает). */
+  scanLog?: ScanEvent[];
   /** Запомненные штрихкоды: код → как назвали продукт и что о нём известно из Open Food Facts. */
   barcodes?: Record<string, BarcodeInfo>;
   /** Последние цены и количества по названию продукта. */
   lastBuy: Record<string, { name?: string; price: number; qty: number; unit: Unit; place: Place; n: number; t: number }>;
+}
+
+/** Одна попытка сканирования: как читали код и что нашли. */
+export interface ScanEvent {
+  t: number;
+  how: "camera" | "photo" | "manual" | "fail-photo" | "bad-digits";
+  code?: string;
+  result?: "known" | "found" | "none" | "offline" | "busy" | "error";
+  name?: string;
+  /** Сколько секунд камера искала код. */
+  sec?: number;
+  /** Добавили ли продукт после скана. */
+  added?: boolean;
 }
 
 /** Что известно о товаре по штрихкоду. off — данные Open Food Facts (© участники OFF, ODbL). */

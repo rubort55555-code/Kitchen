@@ -36,18 +36,21 @@ export function decodeCanvasSource(src: CanvasImageSource, sw: number, sh: numbe
   return null;
 }
 
-export function BarcodeScan({ onCode, onClose }: { onCode: (code: string) => void; onClose: () => void }) {
+export type ScanHow = "camera" | "photo" | "manual";
+
+export function BarcodeScan({ onCode, onClose, onFail }: { onCode: (code: string, how: ScanHow, sec?: number) => void; onClose: () => void; onFail?: (how: "fail-photo" | "bad-digits") => void }) {
   const video = useRef<HTMLVideoElement | null>(null);
   const fileRef = useRef<HTMLInputElement | null>(null);
   const [state, setState] = useState<"start" | "live" | "nocam">("start");
   const [manual, setManual] = useState("");
   const [msg, setMsg] = useState("");
   const done = useRef(false);
+  const started = useRef(0);
 
-  function finish(code: string) {
+  function finish(code: string, how: ScanHow) {
     if (done.current) return;
     done.current = true;
-    onCode(code);
+    onCode(code, how, how === "camera" && started.current ? Math.round((Date.now() - started.current) / 100) / 10 : undefined);
   }
 
   useEffect(() => {
@@ -68,6 +71,7 @@ export function BarcodeScan({ onCode, onClose }: { onCode: (code: string) => voi
       v.srcObject = stream;
       try { await v.play(); } catch { /* iOS иногда требует касания — видео всё равно идёт */ }
       setState("live");
+      started.current = Date.now();
       const native = await nativeDetector();
       const tick = async () => {
         if (stopped || done.current) return;
@@ -82,7 +86,7 @@ export function BarcodeScan({ onCode, onClose }: { onCode: (code: string) => voi
             if (c && (c === lastSeen)) code = c;
             else if (c) lastSeen = c;
           }
-          if (code) { finish(code); return; }
+          if (code) { finish(code, "camera"); return; }
         }
         timer = setTimeout(tick, 120);
       };
@@ -106,8 +110,11 @@ export function BarcodeScan({ onCode, onClose }: { onCode: (code: string) => voi
       const code = decodeCanvasSource(img, img.naturalWidth, img.naturalHeight, 1, 1)
         || decodeCanvasSource(img, img.naturalWidth, img.naturalHeight, 0.6, 1);
       URL.revokeObjectURL(url);
-      if (code) finish(code);
-      else setMsg("Не нашёл штрихкод на фото. Снимите ближе, чтобы полоски были чёткими и занимали почти всю ширину, или введите цифры под кодом.");
+      if (code) finish(code, "photo");
+      else {
+        onFail?.("fail-photo");
+        setMsg("Не нашёл штрихкод на фото. Снимите ближе, чтобы полоски были чёткими и занимали почти всю ширину, или введите цифры под кодом.");
+      }
     };
     img.onerror = () => { URL.revokeObjectURL(url); setMsg("Не получилось открыть фото."); };
     img.src = url;
@@ -116,8 +123,8 @@ export function BarcodeScan({ onCode, onClose }: { onCode: (code: string) => voi
   function submitManual(e: { preventDefault(): void }) {
     e.preventDefault();
     const c = normCode(manual);
-    if (!c) { setMsg("Проверьте цифры: обычно их 13 (или 8) и последняя — контрольная."); return; }
-    finish(c);
+    if (!c) { onFail?.("bad-digits"); setMsg("Проверьте цифры: обычно их 13 (или 8) и последняя — контрольная."); return; }
+    finish(c, "manual");
   }
 
   return (
@@ -135,6 +142,7 @@ export function BarcodeScan({ onCode, onClose }: { onCode: (code: string) => voi
         <button type="button" className="btn sec" onClick={() => fileRef.current?.click()}>📷 Фото кода</button>
         <button type="button" className="btn sec" onClick={onClose}>Отмена</button>
       </div>
+      <p className="muted small beta-note">Пробная функция. Как она работает у вас — видно в ⚙︎ → «Пробные функции».</p>
       <form onSubmit={submitManual} className="scan-manual">
         <input className="inp" inputMode="numeric" pattern="[0-9 ]*" value={manual} onChange={(e: any) => { setManual(e.target.value); setMsg(""); }} placeholder="Цифры под штрихкодом" aria-label="Цифры штрихкода" />
         <button className="btn" type="submit" disabled={manual.replace(/\D/g, "").length < 8}>Найти</button>
