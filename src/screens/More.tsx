@@ -14,6 +14,7 @@ import { Stats } from "./Stats";
 import { Nutrition } from "./Nutrition";
 import { planFor } from "../lib/nutrition";
 import { closeAll, closeSheet, goPage, goTab, openSheet, toast, useUI } from "../lib/ui";
+import { isNative, shareFile } from "../lib/native";
 
 export const VERSION = typeof __VERSION__ !== "undefined" ? __VERSION__ : "dev";
 
@@ -250,7 +251,8 @@ function Data() {
     const file = new File([text], name, { type: "application/json" });
     try {
       const nav = navigator as Navigator & { canShare?: (d: unknown) => boolean };
-      if (nav.canShare && nav.canShare({ files: [file] })) {
+      if (isNative) await shareFile(name, text, "Кухня — копия данных");
+      else if (nav.canShare && nav.canShare({ files: [file] })) {
         await navigator.share({ files: [file], title: "Кухня — копия данных" });
       } else {
         const a = document.createElement("a");
@@ -258,7 +260,7 @@ function Data() {
         setTimeout(() => URL.revokeObjectURL(a.href), 4000);
       }
       markBackup();
-      setMsg(`Копия готова (${Math.max(1, Math.round(text.length / 1024))} КБ). Сохраните файл в «Файлы» → iCloud Drive.`);
+      setMsg(`Копия готова (${Math.max(1, Math.round(text.length / 1024))} КБ).` + (isNative ? "" : " Сохраните файл в «Файлы» → iCloud Drive."));
     } catch (e) {
       if ((e as Error)?.name === "AbortError") { setMsg("Копия не сохранена — вы закрыли окно."); return; }
       try { await navigator.clipboard.writeText(text); markBackup(); setMsg("Не получилось сохранить файл, поэтому копия скопирована как текст. Вставьте её в Заметки."); }
@@ -274,7 +276,8 @@ function Data() {
     const file = new File([text], name, { type: "text/csv" });
     try {
       const nav = navigator as Navigator & { canShare?: (d: unknown) => boolean };
-      if (nav.canShare && nav.canShare({ files: [file] })) await navigator.share({ files: [file], title: "Кухня — таблица" });
+      if (isNative) await shareFile(name, text, "Кухня — таблица");
+      else if (nav.canShare && nav.canShare({ files: [file] })) await navigator.share({ files: [file], title: "Кухня — таблица" });
       else {
         const a = document.createElement("a");
         a.href = URL.createObjectURL(file); a.download = name; document.body.appendChild(a); a.click(); a.remove();

@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { App } from "./App";
 import { load, reportError } from "./lib/store";
 import { setUpdate } from "./lib/ui";
+import { isNative } from "./lib/native";
 import "./styles.css";
 
 window.addEventListener("error", (e) => reportError(e.error || e.message));
@@ -12,7 +13,8 @@ createRoot(document.getElementById("root")!).render(<App />);
 load();
 
 // Service worker: сохраняет приложение в телефон и сообщает о новой версии.
-if ("serviceWorker" in navigator && location.protocol !== "file:") {
+// В приложении из магазина он не нужен — файлы и так лежат внутри приложения.
+if ("serviceWorker" in navigator && location.protocol !== "file:" && !isNative) {
   window.addEventListener("load", async () => {
     try {
       const reg = await navigator.serviceWorker.register("./sw.js");
