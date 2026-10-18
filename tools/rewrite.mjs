@@ -2,14 +2,14 @@
 //   node tools/rewrite.mjs next 100 > batch.txt   — следующие 100 рецептов, ещё не переписанных (по порядку файлов)
 //   node tools/rewrite.mjs apply batch.txt          — заменить рецепты в recipes/*.txt на переписанные (по названию)
 //   node tools/rewrite.mjs stat                     — сколько уже переписано
-// Переписанный рецепт — тот, у которого есть строка «= Посуда: …».
+// Переписанный рецепт (технологическая карта) — тот, у которого есть строка «= Выход: …».
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const DIR = "recipes";
 const files = readdirSync(DIR).filter((f) => f.endsWith(".txt")).sort();
 const nameOf = (block) => { const h = block.split("\n").find((l) => l.trim().startsWith("#")); return h ? h.trim().slice(1).split("|")[0].trim() : null; };
-const done = (block) => /^\s*=\s*Посуда:/m.test(block);
+const done = (block) => /^\s*=\s*Выход:/m.test(block);
 const blocksOf = (text) => text.replace(/\r/g, "").split(/\n\s*\n/);
 
 const [cmd, arg] = process.argv.slice(2);

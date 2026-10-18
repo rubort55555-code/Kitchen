@@ -44,7 +44,7 @@ const compiled = L.compileRules(L.DEFAULT_RULES, [], []);
 const problems = [...errors];
 const unknown = new Map();
 const names = new Map();
-let detailed = 0;
+let detailed = 0, techCards = 0;
 
 for (const r of recipes) {
   const where = `«${r.name}»`;
@@ -67,6 +67,16 @@ for (const r of recipes) {
     }
   }
   for (const s of r.steps) if (s.length < 8) problems.push(`${where}: слишком короткий шаг «${s}»`);
+  // Технологические карты: этапы, выход, признаки готовности, типичные ошибки, достаточно подробные шаги
+  if (r.out) {
+    techCards++;
+    if (!r.tools || !r.active || !r.serve || !r.keep) problems.push(`${where}: в технологической карте нужны «= Посуда», «= Активно», «= Подача», «= Хранение»`);
+    if (!r.done) problems.push(`${where}: нет признаков готовности («= Готовность:»)`);
+    if (!r.fixes?.length) problems.push(`${where}: нет типичных ошибок («= Ошибка:»)`);
+    if ((r.stages?.length || 0) < 2) problems.push(`${where}: меньше двух этапов («* Подготовка» и т. д.)`);
+    if (r.steps.length < Math.min(8, 4 + r.ingredients.length)) problems.push(`${where}: слишком мало шагов для технологической карты (${r.steps.length})`);
+    for (const s of r.steps) if (s.length < 40) problems.push(`${where}: короткий шаг «${s}» — добавьте как делать и как проверить`);
+  }
   // Переписанные (подробные) рецепты: шагов не меньше четырёх, каждый продукт упомянут в шагах, есть подача
   if (r.tools) {
     detailed++;
@@ -86,7 +96,7 @@ const byKind = new Map();
 for (const r of recipes) byKind.set(r.kind || "?", (byKind.get(r.kind || "?") || 0) + 1);
 console.log(`Рецептов: ${recipes.length}`);
 console.log([...byKind].map(([k, n]) => `${k}: ${n}`).join(" · "));
-console.log(`Подробных (переписанных): ${detailed}`);
+console.log(`Подробных: ${detailed}, из них технологических карт: ${techCards}`);
 
 if (unknown.size) {
   const list = [...unknown].sort((a, b) => b[1] - a[1]);

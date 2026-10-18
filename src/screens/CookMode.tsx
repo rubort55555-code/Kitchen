@@ -5,6 +5,7 @@ import { closeSheet, openSheet } from "../lib/ui";
 import { scaleAmount } from "../lib/util";
 import { findTimes, fmtTime, startTimer, stopTimer, useTimers } from "../lib/timers";
 import { allowSleep, isAwake, keepAwake, wakeSupported } from "../lib/wake";
+import { stageOf, stepIngredients, weightHint } from "../lib/recipeSteps";
 
 export function CookMode({ id }: { id: string }) {
   const r = useStore((s) => s.recipes.find((x) => x.id === id));
@@ -83,13 +84,20 @@ export function CookMode({ id }: { id: string }) {
         {i >= 0 && i < n && (
           <>
             <div className="cm-num">Шаг {i + 1} из {n}</div>
+            {stageOf(r, i) && <div className="cm-stage">{stageOf(r, i)}</div>}
             <p className="cm-step">{r.steps[i]}</p>
+            {stepIngredients(r, r.steps[i]).length > 0 && (
+              <div className="cm-need">
+                <div className="muted small">Нужно на этом шаге</div>
+                {stepIngredients(r, r.steps[i]).map((g, j) => <div key={j} className="ing"><span>{g.name}</span><span className="a">{scaleAmount(g.amount, k)}</span></div>)}
+              </div>
+            )}
             {times.map((t, j) => (
               <button key={j} className="btn sec cm-tbtn" onClick={() => startTimer(`${r.name.slice(0, 18)} · ${t.label}`, t.seconds)}>⏱ Таймер: {t.label}</button>
             ))}
             <details className="cm-small">
-              <summary>Ингредиенты</summary>
-              {r.ingredients.map((g, j) => <div key={j} className="ing"><span>{g.name}</span><span className="a">{scaleAmount(g.amount, k)}</span></div>)}
+              <summary>Все ингредиенты</summary>
+              {r.ingredients.map((g, j) => <div key={j} className="ing"><span>{g.name}</span><span className="a">{scaleAmount(g.amount, k)}{k === 1 && weightHint(g) ? ` ${weightHint(g)}` : ""}</span></div>)}
             </details>
           </>
         )}
