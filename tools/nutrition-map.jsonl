@@ -65,13 +65,13 @@
 {"name": "Квас", "ndb": "14305", "match": "Malt beverage, includes non-alcoholic beer", "units": {}, "density": 1.01, "note": "квас → malt beverage/non-alcoholic beer; аналог примерный"}
 {"name": "Квашеная капуста", "ndb": "11439", "match": "Sauerkraut, canned, solids and liquids", "units": {}, "note": "аналог примерный: квашеная капуста ≈ Sauerkraut"}
 {"name": "Кетчуп", "ndb": "11935", "match": "Catsup", "units": {"ст. л.": 17}}
-{"name": "Кефир", "ndb": "01289", "match": "KEFIR,LOWFAT,PLN,LIFEWAY", "units": {}, "density": 1.03, "note": "аналог примерный: кефир → Kefir, lowfat, plain"}
+{"name": "Кефир", "ndb": "01289", "match": "KEFIR,LOWFAT,PLN,LIFEWAY", "units": {}, "density": 1.03, "note": "аналог примерный: кефир → Kefir, lowfat, plain", "override": {"kcal": 53, "prot": 2.9, "fat": 2.5, "carb": 4.0}, "source": "кефир 2,5 % (ГОСТ 31454, маркировка)"}
 {"name": "Киви", "ndb": "09148", "match": "Kiwifruit, green, raw", "units": {"шт": 75}}
 {"name": "Кинза", "ndb": "11165", "match": "Coriander (cilantro) leaves, raw", "units": {"уп": 30, "пучок": 30}}
 {"name": "Кокосовая стружка", "ndb": "12108", "match": "Nuts, coconut meat, dried (desiccated), not sweetened", "units": {"ст. л.": 6}}
 {"name": "Кокосовое молоко", "ndb": "12118", "match": "COCONUT MILK,CND (LIQ EXPRESSED FROM GRATED MEAT&H2O)", "units": {}, "density": 1.0}
-{"name": "Колбаса", "ndb": "07008", "match": "Bologna, beef and pork", "units": {}, "note": "варёная колбаса → Bologna; аналог примерный"}
-{"name": "Колбаса варёная", "ndb": "07008", "match": "Bologna, beef and pork", "units": {}, "note": "аналог примерный: варёная колбаса ≈ Bologna"}
+{"name": "Колбаса", "ndb": "07008", "match": "Bologna, beef and pork", "units": {}, "note": "варёная колбаса → Bologna; аналог примерный", "override": {"kcal": 257, "prot": 12.8, "fat": 22.2, "carb": 1.5}, "source": "варёная, докторская (ГОСТ Р 52196, маркировка)"}
+{"name": "Колбаса варёная", "ndb": "07008", "match": "Bologna, beef and pork", "units": {}, "note": "аналог примерный: варёная колбаса ≈ Bologna", "override": {"kcal": 257, "prot": 12.8, "fat": 22.2, "carb": 1.5}, "source": "докторская (ГОСТ Р 52196, маркировка)"}
 {"name": "Колбаса копчёная", "ndb": "07075", "match": "SAUSAGE,SMOKED LINK SAUSAGE,PORK & BF", "units": {}, "note": "аналог примерный: копчёная колбаса → smoked link sausage, pork and beef"}
 {"name": "Колбаски", "ndb": "07075", "match": "Sausage, smoked link sausage, pork and beef", "units": {"шт": 80}, "note": "колбаски → smoked link sausage, pork and beef; аналог примерный"}
 {"name": "Кориандр", "ndb": "02013", "match": "Spices, coriander seed", "units": {"ч. л.": 2}}
@@ -110,7 +110,7 @@
 {"name": "Лук порей", "ndb": "11246", "match": "Leeks, (bulb and lower leaf-portion), raw", "units": {"шт": 150}}
 {"name": "Лук репчатый", "ndb": "11282", "match": "Onions, raw", "units": {"шт": 100}}
 {"name": "Лёд", "ndb": "14411", "match": "Beverages, water, tap, drinking", "units": {"стакан": 150, "несколько кубиков": 30}, "note": "лёд = вода"}
-{"name": "Майонез", "ndb": "04025", "match": "Salad dressing, mayonnaise, regular", "units": {"ст. л.": 15}, "note": "примерный аналог: американский майонез regular"}
+{"name": "Майонез", "ndb": "04025", "match": "Salad dressing, mayonnaise, regular", "units": {"ст. л.": 15}, "note": "примерный аналог: американский майонез regular", "override": {"kcal": 625, "prot": 0.4, "fat": 67.0, "carb": 2.6}, "source": "майонез 67 % (ГОСТ 31761, маркировка)"}
 {"name": "Майоран", "ndb": "02023", "match": "Spices, marjoram, dried", "units": {"щепотка": 0.5}}
 {"name": "Мак", "ndb": "02033", "match": "Spices, poppy seed", "units": {}}
 {"name": "Макароны", "ndb": "20120", "match": "Pasta, dry, enriched", "units": {}, "note": "сухие"}
@@ -149,7 +149,7 @@
 {"name": "Пармезан", "ndb": "01033", "match": "Cheese, parmesan, hard", "units": {}}
 {"name": "Паста карри", "ndb": "02015", "match": "Spices, curry powder", "units": {"ст. л.": 15, "ч. л.": 5}, "note": "аналог примерный: пасты карри нет, взят порошок карри"}
 {"name": "Пекинская капуста", "ndb": "11119", "match": "Cabbage, chinese (pe-tsai), raw", "units": {}}
-{"name": "Пельмени", "ndb": "32013", "match": "Potsticker or wonton, pork and vegetable, frozen, unprepared", "units": {}, "note": "пельмени → potsticker/wonton, pork, frozen; аналог примерный"}
+{"name": "Пельмени", "ndb": "32013", "match": "Potsticker or wonton, pork and vegetable, frozen, unprepared", "units": {}, "note": "пельмени → potsticker/wonton, pork, frozen; аналог примерный", "override": {"kcal": 275, "prot": 12.0, "fat": 13.0, "carb": 29.0}, "source": "замороженные пельмени, типичная маркировка"}
 {"name": "Перец", "ndb": "02030", "match": "Spices, pepper, black", "units": {"щепотка": 0.5}, "note": "чёрный молотый"}
 {"name": "Перец белый", "ndb": "02032", "match": "Spices, pepper, white", "units": {"ч. л.": 2.4}}
 {"name": "Перец болгарский", "ndb": "11821", "match": "Peppers, sweet, red, raw", "units": {"шт": 150}}
@@ -185,7 +185,7 @@
 {"name": "Сгущёнка", "ndb": "01095", "match": "Milk, canned, condensed, sweetened", "units": {"шт": 380, "ст. л.": 25}, "note": "шт = банка 380 г"}
 {"name": "Сгущённое молоко", "ndb": "01095", "match": "Milk, canned, condensed, sweetened", "units": {"ст. л.": 30}}
 {"name": "Сельдерей", "ndb": "11143", "match": "Celery, raw", "units": {"стебель": 40}}
-{"name": "Сельдь", "ndb": "15039", "match": "Fish, herring, Atlantic, raw", "units": {"шт": 200}, "note": "аналог примерный: в рецептах обычно солёная, взята сырая атлантическая; шт = тушка, съедобная часть ≈200 г"}
+{"name": "Сельдь", "ndb": "15039", "match": "Fish, herring, Atlantic, raw", "units": {"шт": 200}, "note": "аналог примерный: в рецептах обычно солёная, взята сырая атлантическая; шт = тушка, съедобная часть ≈200 г", "override": {"kcal": 210, "prot": 17.5, "fat": 15.5, "carb": 0, "na": 2000}, "source": "сельдь слабосолёная, филе — типичная маркировка (в рецептах сельдь солёная)"}
 {"name": "Скумбрия", "ndb": "15046", "match": "Fish, mackerel, Atlantic, raw", "units": {"шт": 230}, "note": "шт = тушка ≈350 г, съедобная часть ≈230 г"}
 {"name": "Сливки", "ndb": "01050", "match": "Cream, fluid, light (coffee cream or table cream)", "units": {}, "density": 1.01, "note": "примерный аналог: light cream ~19 %; жирность российских сливок 10–33 %"}
 {"name": "Сливы", "ndb": "09279", "match": "Plums, raw", "units": {"шт": 35}}
@@ -194,7 +194,7 @@
 {"name": "Соевый соус", "ndb": "16123", "match": "Soy sauce made from soy and wheat (shoyu)", "units": {"ст. л.": 18, "ч. л.": 6}, "density": 1.15}
 {"name": "Сок", "ndb": "09016", "match": "Apple juice, canned or bottled, unsweetened, without added ascorbic acid", "units": {}, "density": 1.04, "note": "аналог примерный: вид сока не указан, взят яблочный"}
 {"name": "Соль", "ndb": "02047", "match": "Salt, table", "units": {"ч. л.": 7, "щепотка": 0.5, "ст. л.": 25}}
-{"name": "Сосиски", "ndb": "07950", "match": "FRANKFURTER  MEAT", "units": {"шт": 50}, "note": "аналог примерный: сосиски → frankfurter, meat"}
+{"name": "Сосиски", "ndb": "07950", "match": "FRANKFURTER  MEAT", "units": {"шт": 50}, "note": "аналог примерный: сосиски → frankfurter, meat", "override": {"kcal": 266, "prot": 11.0, "fat": 23.9, "carb": 1.6}, "source": "молочные (ГОСТ Р 52196, маркировка)"}
 {"name": "Соус чили", "ndb": "06631", "match": "SAUCE,HOT CHILE,SRIRACHA", "units": {"ст. л.": 18}, "note": "аналог примерный: соус чили → sriracha"}
 {"name": "Спагетти", "ndb": "20120", "match": "Pasta, dry, enriched", "units": {}}
 {"name": "Стручковая фасоль", "ndb": "11052", "match": "BEANS,SNAP,GREEN,RAW", "units": {}}
@@ -209,7 +209,7 @@
 {"name": "Сыр твёрдый", "ndb": "01022", "match": "Cheese, gouda", "units": {"ломтик": 20}, "note": "примерный аналог: гауда вместо российского твёрдого сыра"}
 {"name": "Сычуаньский перец", "ndb": "02030", "match": "Spices, pepper, black", "units": {"ч. л.": 2}, "note": "сычуаньского перца нет → black pepper; аналог примерный"}
 {"name": "Тахини", "ndb": "12698", "match": "SESAME BUTTER,TAHINI,KRNLS UNSPEC", "units": {"ст. л.": 15}}
-{"name": "Творог", "ndb": "01012", "match": "CHEESE,COTTAGE,CRMD,LRG OR SML CURD", "units": {}, "note": "аналог примерный: творог 5–9% → cottage cheese, creamed"}
+{"name": "Творог", "ndb": "01012", "match": "CHEESE,COTTAGE,CRMD,LRG OR SML CURD", "units": {}, "note": "аналог примерный: творог 5–9% → cottage cheese, creamed", "override": {"kcal": 121, "prot": 17.2, "fat": 5.0, "carb": 1.8, "na": 41}, "source": "творог 5 % (ГОСТ 31453, маркировка): Б/Ж/У и натрий российского продукта; витамины и минералы — от аналога USDA"}
 {"name": "Творожный сыр", "ndb": "01017", "match": "Cheese, cream", "units": {}, "note": "творожный сыр → cream cheese; аналог примерный"}
 {"name": "Тесто слоёное", "ndb": "18337", "match": "PUFF PASTRY,FRZ,RTB", "units": {}}
 {"name": "Тимьян", "ndb": "02042", "match": "Spices, thyme, dried", "units": {"щепотка": 0.5, "ст. л.": 3}}

@@ -1,6 +1,7 @@
 // Таблица состава продуктов для расчёта пищевой ценности рецептов.
 // Источник: USDA National Nutrient Database for Standard Reference, Release 28 (пакет fda-nutrient-database, общественное достояние).
-// Сопоставление «наш ингредиент → продукт USDA» и вес бытовых мер — tools/nutrition-map.jsonl (правится руками).
+// Сопоставление «наш ингредиент → продукт USDA» и вес бытовых мер — tools/nutrition-map.jsonl (правится руками);
+// override — значения российского продукта (ГОСТ, маркировка) поверх аналога USDA, source — откуда они.
 // Запуск: node tools/build-composition.mjs  → src/lib/compositionData.json
 import { readFileSync, writeFileSync } from "node:fs";
 
@@ -25,6 +26,11 @@ for (const [k, line] of readFileSync("tools/nutrition-map.jsonl", "utf8").split(
   const r = sr.get(m.ndb);
   if (!r) { errors.push(`строка ${k + 1}: ${m.name} — нет продукта ${m.ndb} в SR28`); continue; }
   if (r.b9dfe === null) r.b9dfe = r.folate;
+  // Углеводы — как в российских справочниках и на этикетках: усвояемые, без пищевых волокон
+  // (в USDA «carbohydrate by difference» включает клетчатку).
+  r.carb = Math.max(0, (r.carb || 0) - (r.fib || 0));
+  // Российские продукты, у которых американский аналог заметно отличается: Б/Ж/У/ккал (и натрий) по ГОСТ и маркировке
+  if (m.override) for (const [k, v] of Object.entries(m.override)) r[k] = v;
   const v = OUT.map((f) => (typeof r[f] === "number" ? Math.round(r[f] * 1000) / 1000 : null));
   const it = { n: m.name, id: m.ndb, u: m.units || {}, v };
   if (typeof m.density === "number") it.d = m.density;
