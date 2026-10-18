@@ -12,6 +12,7 @@ import { CUISINES, KINDS_ORDER, cuisineOf } from "../lib/cuisine";
 import type { Recipe } from "../lib/types";
 import { cap, norm, parseYmd, ymd } from "../lib/util";
 import { closeSheet, openSheet, setRecipesView, toast, useUI } from "../lib/ui";
+import { RecipeNutrition } from "../components/RecipeNutrition";
 
 type F = "all" | "now" | "almost" | "fav";
 
@@ -205,6 +206,7 @@ export function RecipeView({ id }: { id: string }) {
           <ul className="steps">{r.tips.map((s, k) => <li key={k}>{s}</li>)}</ul>
         </>
       )}
+      <RecipeNutrition r={r} members={settings.members} />
       <h3 style={{ marginTop: 16 }}>Моя оценка</h3>
       <div className="stars" role="group" aria-label="Оценка">
         {[1, 2, 3, 4, 5].map((n) => (

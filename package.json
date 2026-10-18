@@ -9,6 +9,7 @@
     "check": "tsc --noEmit -p tsconfig.json",
     "check-recipes": "node tools/check-recipes.mjs",
     "rewrite": "node tools/rewrite.mjs",
+    "composition": "node tools/build-composition.mjs",
     "android": "node build.mjs && cap sync android",
     "ios": "node build.mjs && cap sync ios"
   },
@@ -26,6 +27,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "esbuild": "0.28.2",
+    "fda-nutrient-database": "1.0.2",
     "typescript": "6.0.3"
   }
 }
