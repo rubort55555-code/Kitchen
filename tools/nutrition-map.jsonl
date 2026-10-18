@@ -257,3 +257,4 @@
 {"name": "Ягоды", "ndb": "09050", "match": "BLUEBERRIES,RAW", "units": {}, "note": "аналог примерный: ягоды без уточнения → blueberries, raw", "fineli": "454", "fineli_match": "Berry, average"}
 {"name": "Ягоды замороженные", "ndb": "09054", "match": "Blueberries, frozen, unsweetened", "units": {}, "note": "ягодная смесь → blueberries, frozen, unsweetened; аналог примерный", "fineli": "454", "fineli_match": "Berry, average"}
 {"name": "Яйца", "ndb": "01123", "match": "Egg, whole, raw, fresh", "units": {"шт": 55}, "fineli": "858", "fineli_match": "Egg without shell"}
+{"name": "Чернослив", "ndb": "09291", "match": "Plums, dried (prunes), uncooked", "units": {"шт": 8}}
