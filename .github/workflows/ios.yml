@@ -1,0 +1,60 @@
+# Приложение для iPhone: GitHub сам собирает его на Mac при каждом изменении кода
+# и выкладывает на страницу Releases → «Кухня для iPhone (тестовая сборка)».
+# Файл без подписи Apple: поставить его можно через Sideloadly или AltStore (см. README).
+# Когда появится аккаунт Apple разработчика, здесь добавится подпись и отправка в TestFlight.
+name: iOS
+
+on:
+  push:
+    branches: [main, "claude/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ipa:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npm run check
+      - run: npm run ios
+      - name: Сборка приложения
+        run: |
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release \
+            -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            CURRENT_PROJECT_VERSION=${{ github.run_number }} MARKETING_VERSION=1.0.${{ github.run_number }} \
+            build > xcodebuild.log || { grep -E "error:" xcodebuild.log | head -50; tail -80 xcodebuild.log; exit 1; }
+          tail -5 xcodebuild.log
+      - name: Упаковка в .ipa
+        run: |
+          mkdir Payload
+          cp -R build/Build/Products/Release-iphoneos/App.app Payload/
+          zip -qry kitchen-unsigned.ipa Payload
+          ls -la kitchen-unsigned.ipa
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kitchen-ipa
+          path: kitchen-unsigned.ipa
+      - name: Выложить на страницу Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ios-test
+          name: Кухня для iPhone (тестовая сборка)
+          prerelease: true
+          make_latest: false
+          body: |
+            Сборка №${{ github.run_number }} от ${{ github.sha }}.
+            Файл без подписи Apple. Как поставить на iPhone: на компьютере установите Sideloadly (sideloadly.io),
+            подключите iPhone кабелем, перетащите kitchen-unsigned.ipa в Sideloadly и войдите своим Apple ID.
+            С бесплатным Apple ID приложение работает 7 дней, потом его нужно переустановить тем же способом — данные сохраняются.
+          files: kitchen-unsigned.ipa
