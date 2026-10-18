@@ -533,10 +533,17 @@ with sync_playwright() as p:
     pg.goto(URL); pg.wait_for_selector("h1")
     pg.click(".tabs button >> text=Рецепты")
     pg.wait_for_selector('select[aria-label="Кухня"]', timeout=20000)
+    # база грузится частями — ждём, пока загрузится вся
+    total = json.load(open(os.path.join(DIST, "recipes.json")))["total"]
+    pg.wait_for_selector(f'select[aria-label="Кухня"] option:text("Все ({total})")', state="attached", timeout=20000)
     pg.select_option('select[aria-label="Кухня"]', "Итальянская")
     names = pg.locator(".list .li .name").all_inner_texts()
     ok(S + "итальянская кухня: паста и пицца", len(names) > 10 and any("Спагетти" in n or "Паста" in n for n in names) and not any("Борщ" in n for n in names), names[:5])
-    ok(S + "в итальянской нет супов — их нет и в списке типов", "суп" not in pg.locator('select[aria-label="Тип блюда"] option').evaluate_all("els => els.map(e => e.value)"))
+    ok(S + "в итальянской есть супы — они есть и в списке типов", "суп" in pg.locator('select[aria-label="Тип блюда"] option').evaluate_all("els => els.map(e => e.value)"))
+    pg.select_option('select[aria-label="Тип блюда"]', "суп")
+    names2 = pg.locator(".list .li .name").all_inner_texts()
+    ok(S + "суп + итальянская: есть минестроне, нет борща", any("Минестроне" in n for n in names2) and not any("орщ" in n for n in names2), names2)
+    pg.select_option('select[aria-label="Тип блюда"]', "")
     pg.select_option('select[aria-label="Кухня"]', "")
     pg.select_option('select[aria-label="Тип блюда"]', "суп")
     pg.select_option('select[aria-label="Кухня"]', "Кавказская")

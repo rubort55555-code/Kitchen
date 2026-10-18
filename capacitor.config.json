@@ -1,0 +1,8 @@
+{
+  "appId": "io.github.rubort55555code.kitchen",
+  "appName": "Кухня",
+  "webDir": "dist",
+  "android": {
+    "backgroundColor": "#f2f2f7"
+  }
+}

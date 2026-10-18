@@ -114,6 +114,16 @@ export interface Recipe {
   rating?: number;
   /** Даты, когда готовили (ГГГГ-ММ-ДД). */
   history?: string[];
+  /** Активное время, мин (сколько стоять у плиты; minutes — общее). */
+  active?: number;
+  /** Посуда и инструменты. */
+  tools?: string;
+  /** Как подавать. */
+  serve?: string;
+  /** Как и сколько хранить. */
+  keep?: string;
+  /** Советы и частые ошибки. */
+  tips?: string[];
   createdAt: number;
 }
 

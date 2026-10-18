@@ -14,6 +14,20 @@ const VERSION = `${now.getUTCFullYear()}.${pad(now.getUTCMonth() + 1)}.${pad(now
 rmSync("dist", { recursive: true, force: true });
 mkdirSync("dist", { recursive: true });
 
+// Время сборки: приложение из магазина берёт рецепты и справочник с сайта, только если они там не старее встроенных.
+const BUILT_AT = now.getTime();
+const fnv = (text) => {
+  let h = 2166136261;
+  for (let k = 0; k < text.length; k++) { h ^= text.charCodeAt(k); h = Math.imul(h, 16777619); }
+  return (h >>> 0).toString(36);
+};
+
+// Справочник продуктов — ещё и отдельным файлом catalog.json: его скачивает приложение из магазина.
+const cat = await esbuild.build({ entryPoints: ["src/lib/catalog.ts"], bundle: true, format: "esm", platform: "neutral", write: false, logLevel: "warning" });
+const { CATALOG } = await import("data:text/javascript;base64," + Buffer.from(cat.outputFiles[0].text).toString("base64"));
+const catText = JSON.stringify(CATALOG);
+const CATALOG_H = fnv(catText) + "-" + CATALOG.length;
+
 const result = await esbuild.build({
   entryPoints: ["src/main.tsx"],
   bundle: true,
@@ -27,7 +41,7 @@ const result = await esbuild.build({
   metafile: true,
   conditions: ["production"],
   legalComments: "none",
-  define: { __VERSION__: JSON.stringify(VERSION), "process.env.NODE_ENV": '"production"' },
+  define: { __VERSION__: JSON.stringify(VERSION), __BUILT_AT__: String(BUILT_AT), __CATALOG_H__: JSON.stringify(CATALOG_H), "process.env.NODE_ENV": '"production"' },
   nodePaths: process.env.LOCAL_NODE_MODULES ? [process.env.LOCAL_NODE_MODULES] : [],
   logLevel: "warning",
 });
@@ -50,13 +64,13 @@ const parts = [];
 for (let i = 0; i * PART < base.recipes.length; i++) {
   const chunk = base.recipes.slice(i * PART, (i + 1) * PART);
   const text = JSON.stringify(chunk);
-  let h = 2166136261;
-  for (let k = 0; k < text.length; k++) { h ^= text.charCodeAt(k); h = Math.imul(h, 16777619); }
   const f = `recipes/${String(i).padStart(2, "0")}.json`;
   writeFileSync("dist/" + f, text);
-  parts.push({ f, h: (h >>> 0).toString(36) + "-" + chunk.length, n: chunk.length });
+  parts.push({ f, h: fnv(text) + "-" + chunk.length, n: chunk.length });
 }
-writeFileSync("dist/recipes.json", JSON.stringify({ v: 2, total: base.recipes.length, parts }));
+writeFileSync("dist/recipes.json", JSON.stringify({ v: 2, at: BUILT_AT, total: base.recipes.length, parts }));
+writeFileSync("dist/catalog.json", JSON.stringify({ v: 1, at: BUILT_AT, h: CATALOG_H, items: CATALOG }));
+console.log("Продуктов в справочнике:", CATALOG.length);
 console.log("Рецептов в базе:", base.recipes.length, "частей:", parts.length);
 
 const html = readFileSync("src/index.html", "utf8")
@@ -76,7 +90,7 @@ const files = [];
 })("dist");
 const sw = readFileSync("src/sw.js", "utf8")
   .replace("%VERSION%", VERSION)
-  .replace("%FILES%", JSON.stringify(files.filter((f) => f !== "./sw.js" && !f.split("/").pop().startsWith(".") && !(f.startsWith("./ocr/") && !/tesseract\.min\.js$|worker\.min\.js$/.test(f))).map((f) => (f === "./index.html" ? "./" : f))));
+  .replace("%FILES%", JSON.stringify(files.filter((f) => f !== "./sw.js" && f !== "./catalog.json" && !f.split("/").pop().startsWith(".") && !(f.startsWith("./ocr/") && !/tesseract\.min\.js$|worker\.min\.js$/.test(f))).map((f) => (f === "./index.html" ? "./" : f))));
 writeFileSync("dist/sw.js", sw);
 writeFileSync("dist/version.json", JSON.stringify({ version: VERSION }));
 console.log("Готово:", VERSION, js, css, files.length, "файлов");
