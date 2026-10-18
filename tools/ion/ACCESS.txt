@@ -1,0 +1,28 @@
+Проверка доступа к базе химического состава ФИЦ питания и биотехнологии
+Дата: 2026-10-18 (UTC), облачное окружение Claude Code
+
+Итог: сайт НЕДОСТУПЕН из окружения, состав не собирался.
+
+Что пробовал (curl через прокси окружения):
+  curl -s -o /dev/null -w "%{http_code}" http://web.ion.ru/food/FD_tree_grid.aspx   -> 000
+      (HTTP идёт мимо прокси: "Could not resolve host: web.ion.ru" — в контейнере нет DNS)
+  curl -x $HTTPS_PROXY http://web.ion.ru/food/FD_tree_grid.aspx                     -> 405
+      (прокси принимает только CONNECT, обычный HTTP не проксирует)
+  curl -s -o /dev/null -w "%{http_code}" https://web.ion.ru/food/FD_tree_grid.aspx  -> 000
+      ("CONNECT tunnel failed, response 403" — шлюз отклонил web.ion.ru:443)
+  https://web.ion.ru/                                                               -> 000 (CONNECT 403)
+  https://www.ion.ru/                                                               -> 000 (CONNECT 403)
+
+Статус прокси (/__agentproxy/status): recentRelayFailures = connect_rejected,
+"gateway answered 403 to CONNECT (policy denial or upstream failure)", host web.ion.ru:443.
+
+Вывод: сетевая политика окружения не пропускает web.ion.ru (по HTTPS шлюз отвечает 403,
+по HTTP — 405), либо изменение списка разрешённых доменов ещё не применилось к этому
+окружению. Кроме того, сайт может работать только по HTTP (порт 80), а прокси окружения
+пропускает только туннели CONNECT — тогда даже при разрешённом домене HTTP-страницы
+могут остаться недоступны.
+
+Что сделать: в настройках окружения (меню окружения в заголовке сессии -> Edit ->
+Network access) добавить web.ion.ru в Allowed domains (или выбрать более широкий уровень),
+начать НОВУЮ сессию и повторить проверку.
+Документация: https://code.claude.com/docs/en/cloud-environments#network-access
