@@ -1,4 +1,4 @@
-// Пищевая ценность рецепта: КБЖУ, витамины и минералы по составу продуктов (USDA SR28, на 100 г)
+// Пищевая ценность рецепта: КБЖУ, витамины и минералы по составу продуктов (Fineli и USDA SR28, на 100 г)
 // и весу бытовых мер («1 шт», «2 ст. л.», «зубчик»). Расчёт ориентировочный: без потерь при варке.
 import type { Ingredient, Recipe } from "./types";
 import { norm } from "./util";
@@ -37,6 +37,7 @@ export const NUTRIENTS = [
   { key: "mn", title: "Марганец", unit: "мг" },
   { key: "se", title: "Селен", unit: "мкг" },
   { key: "chol", title: "Холестерин", unit: "мг" },
+  { key: "i", title: "Йод", unit: "мкг" },
 ] as const;
 export type NutrientKey = (typeof NUTRIENTS)[number]["key"];
 export type Nutrients = Record<NutrientKey, number>;
