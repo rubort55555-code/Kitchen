@@ -1,7 +1,7 @@
 // Точка входа: загружаем данные, рисуем приложение, включаем работу без интернета.
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
-import { load, reportError } from "./lib/store";
+import { checkContent, load, reportError } from "./lib/store";
 import { setUpdate } from "./lib/ui";
 import { isNative } from "./lib/native";
 import "./styles.css";
@@ -11,6 +11,8 @@ window.addEventListener("unhandledrejection", (e) => reportError(e.reason));
 
 createRoot(document.getElementById("root")!).render(<App />);
 load();
+// Приложение из магазина: свежие рецепты и справочник с сайта, когда приложение снова открывают
+if (isNative) document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") checkContent(); });
 
 // Service worker: сохраняет приложение в телефон и сообщает о новой версии.
 // В приложении из магазина он не нужен — файлы и так лежат внутри приложения.

@@ -1,10 +1,12 @@
 // Состояние приложения и все действия с данными. Каждое действие сразу сохраняется в телефон.
 import { useSyncExternalStore } from "react";
 import * as db from "./db";
-import type { LogEntry, Place, Product, Reason, Recipe, Settings, Unit } from "./types";
+import type { CatalogItem, LogEntry, Place, Product, Reason, Recipe, Settings, Unit } from "./types";
 import { DEFAULT_RULES } from "./exclusions";
 import { norm, uid, ymd, addDays, daysLeft } from "./util";
-import { findCatalog } from "./catalog";
+import { findCatalog, setCatalog } from "./catalog";
+import { mergeBase } from "./baseSync";
+import { fetchSite, isNative, SITE } from "./native";
 import { convert } from "./units";
 
 export interface State {
@@ -16,6 +18,8 @@ export interface State {
   saveError: string | null;
   /** Идёт загрузка встроенной базы рецептов по частям. */
   baseLoading?: { done: number; total: number } | null;
+  /** Когда собраны база рецептов и справочник, которые сейчас в телефоне (для «О приложении»). */
+  contentAt?: { recipes?: number; catalog?: number };
 }
 
 export function defaultSettings(): Settings {
@@ -67,8 +71,9 @@ export async function load() {
     ]);
     const settings = { ...defaultSettings(), ...(saved || {}) };
     log.sort((a, b) => a.t - b.t);
+    await applySavedCatalog();
     set({ ready: true, products, log, recipes, settings });
-    seedBase();
+    checkContent();
   } catch (e) {
     reportError(e);
     set({ ready: true, saveError: "Не получилось открыть данные на телефоне. Попробуйте закрыть и снова открыть приложение." });
@@ -282,7 +287,10 @@ export function haveQty(name: string, unit: Unit): number {
 /** Частые продукты: сначала те, что покупали чаще и недавно. */
 // ---------- встроенная база рецептов ----------
 /** Копирует встроенные рецепты в память телефона. Каждый рецепт добавляется один раз:
- *  удалённые не возвращаются, правки и избранное не затираются. Новые рецепты в обновлениях подтягиваются сами.
+ *  удалённые не возвращаются, правки и избранное не затираются. Новые рецепты в обновлениях подтягиваются сами,
+ *  исправленные в базе — обновляются, если человек их не менял (см. baseSync.ts).
+ *  Приложение из магазина берёт базу с сайта, если она там не старше встроенной: так рецепты обновляются у всех
+ *  без выпуска новой версии приложения. Без интернета — встроенная база.
  *  База разбита на части (recipes.json — оглавление): части грузятся по очереди, приложение работает уже после первой;
  *  уже загруженные части (по отпечатку) повторно не читаются. */
 let seeding = false, rerun = false, seedGen = 0;
@@ -293,8 +301,14 @@ export async function seedBase() {
   const stale = () => gen !== seedGen; // данные заменили (восстановление из копии) — эту загрузку бросаем
   try {
     const resp = await fetch("./recipes.json");
-    if (!resp.ok) return;
-    const index = await resp.json();
+    let index = resp.ok ? await resp.json() : null;
+    let from = "./";
+    if (isNative) {
+      const site = await fetchSite<{ v?: number; at?: number }>("recipes.json");
+      if (site && site.v === 2 && (site.at || 0) >= (index?.at || 0)) { index = site; from = SITE; }
+    }
+    if (!index) return;
+    if (index.at) set({ contentAt: { ...state.contentAt, recipes: index.at } });
     // Старый формат — сразу весь список; новый — оглавление частей
     const parts: { f: string | null; h: string; n: number; data?: Recipe[] }[] = Array.isArray(index)
       ? [{ f: null, h: "", n: index.length, data: index }]
@@ -304,21 +318,25 @@ export async function seedBase() {
     const todo = parts.filter((p) => !p.h || !doneParts.has(p.h));
     if (!todo.length) return;
     const seen = new Set((await db.getKv<string[]>("baseSeen")) || []);
+    const sigs = (await db.getKv<Record<string, string>>("baseSigs")) || {};
     const total = parts.reduce((s, p) => s + p.n, 0);
     let loaded = parts.filter((p) => p.h && doneParts.has(p.h)).reduce((s, p) => s + p.n, 0);
     for (const p of todo) {
       if (todo.length > 1) set({ baseLoading: { done: loaded, total } });
-      const base: Recipe[] = p.data || (await (await fetch("./" + p.f)).json());
+      const pr = p.data ? null : await fetch(from + p.f, from === "./" ? undefined : { cache: "no-cache" });
+      if (pr && !pr.ok) throw new Error("Часть базы не загрузилась: " + p.f);
+      const base: Recipe[] = p.data || (await pr!.json());
       if (stale()) break;
       if (!Array.isArray(base)) continue;
-      const have = new Set(state.recipes.map((r) => r.id));
-      const add = base.filter((r) => !seen.has(r.id) && !have.has(r.id)).map((r) => ({ ...r, createdAt: 0 }));
-      if (add.length) {
-        await db.apply([{ store: "recipes", put: add }]);
-        set({ recipes: [...state.recipes, ...add] });
+      const { add, update } = mergeBase(base, new Map(state.recipes.map((r) => [r.id, r])), seen, sigs);
+      if (add.length || update.length) {
+        await db.apply([{ store: "recipes", put: [...add, ...update] }]);
+        const upd = new Map(update.map((r) => [r.id, r]));
+        set({ recipes: [...state.recipes.map((r) => upd.get(r.id) || r), ...add] });
       }
       base.forEach((r) => seen.add(r.id));
       await db.setKv("baseSeen", Array.from(seen));
+      await db.setKv("baseSigs", sigs);
       if (p.h) { doneParts.add(p.h); await db.setKv("baseParts", Array.from(doneParts)); }
       loaded += p.n;
       if (stale()) break;
@@ -333,6 +351,42 @@ export async function seedBase() {
     if (state.baseLoading) set({ baseLoading: null });
     if (rerun) { rerun = false; seedBase(); }
   }
+}
+
+// ---------- справочник продуктов с сайта ----------
+interface CatalogFile { v: number; at: number; h: string; items: CatalogItem[] }
+const BUILT_AT = typeof __BUILT_AT__ !== "undefined" ? __BUILT_AT__ : 0;
+const CATALOG_H = typeof __CATALOG_H__ !== "undefined" ? __CATALOG_H__ : "";
+
+/** Справочник, скачанный раньше, — если он новее встроенного (после обновления приложения встроенный может оказаться новее). */
+async function applySavedCatalog() {
+  if (!isNative) return;
+  try {
+    const f = await db.getKv<CatalogFile>("catalog");
+    if (f && f.at > BUILT_AT && f.h !== CATALOG_H) { setCatalog(f.items); set({ contentAt: { ...state.contentAt, catalog: f.at } }); }
+  } catch (e) {
+    console.warn("Сохранённый справочник не прочитался", e);
+  }
+}
+
+/** Скачивает справочник с сайта, если он там новее того, что в телефоне. В браузере справочник и так с сайта. */
+async function syncCatalog() {
+  if (!isNative) return;
+  const f = await fetchSite<CatalogFile>("catalog.json");
+  if (!f || f.v !== 1 || !Array.isArray(f.items) || f.at <= Math.max(BUILT_AT, state.contentAt?.catalog || 0)) return;
+  if (f.h === CATALOG_H) { await db.setKv("catalog", null); return; }
+  await db.setKv("catalog", f);
+  setCatalog(f.items);
+  set({ contentAt: { ...state.contentAt, catalog: f.at } });
+}
+
+let checkedAt = 0;
+/** Проверка обновлений рецептов и справочника: при запуске и когда приложение снова открывают (не чаще раза в час). */
+export function checkContent() {
+  if (Date.now() - checkedAt < 3600_000) return;
+  checkedAt = Date.now();
+  seedBase();
+  syncCatalog().catch((e) => console.warn("Справочник не обновился", e));
 }
 
 export function frequentNames(s: Settings = state.settings): string[] {

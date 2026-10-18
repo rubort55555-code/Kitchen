@@ -530,8 +530,13 @@ function Beta() {
   );
 }
 
+/** Дата сборки базы для «О приложении». */
+const builtDate = (t?: number) => (t ? new Date(t).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" }) : "—");
+
 function About() {
   const [info, setInfo] = useState<string>("");
+  const at = useStore((s) => s.contentAt);
+  const built = typeof __BUILT_AT__ !== "undefined" ? __BUILT_AT__ : 0;
   useEffect(() => {
     (async () => {
       const p = navigator.storage?.persisted ? await navigator.storage.persisted() : null;
@@ -544,6 +549,8 @@ function About() {
       <Header title="О приложении" screen="more" onBack={back} backText="Ещё" />
       <div className="list">
         <div className="kv"><span>Версия</span><span>{VERSION}</span></div>
+        <div className="kv"><span>База рецептов</span><span>{builtDate(at?.recipes || built)}</span></div>
+        <div className="kv"><span>Справочник продуктов</span><span>{builtDate(at?.catalog || built)}</span></div>
         <div className="kv"><span>Где данные</span><span>только в этом телефоне</span></div>
       </div>
       <p className="muted small">{info}</p>

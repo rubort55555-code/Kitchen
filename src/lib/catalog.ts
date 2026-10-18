@@ -236,6 +236,14 @@ for (const it of BASE) if (BASE_GROUP[it.n]) it.g = BASE_GROUP[it.n];
 /** Весь встроенный справочник: основные продукты + разновидности, полуфабрикаты и мировые продукты. */
 export const CATALOG: CatalogItem[] = BASE.concat(EXTRA);
 
+/** Заменяет встроенный справочник более новым с сайта: приложение из магазина обновляет справочник без новой версии. */
+export function setCatalog(items: CatalogItem[]) {
+  if (!Array.isArray(items) || !items.length) return;
+  CATALOG.splice(0, CATALOG.length, ...items);
+  indexes.clear();
+  CATEGORIES.splice(0, CATEGORIES.length, ...new Set(CATALOG.map((x) => x.c)));
+}
+
 /** Все продукты: встроенные + добавленные вручную. */
 export function allCatalog(custom: CatalogItem[]): CatalogItem[] {
   const own = new Set(custom.map((x) => norm(x.n)));
