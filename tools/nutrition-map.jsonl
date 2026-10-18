@@ -1,259 +1,259 @@
-{"name": "Авокадо", "ndb": "09037", "match": "Avocados, raw, all commercial varieties", "units": {"шт": 140}}
-{"name": "Аджика", "ndb": "06961", "match": "Sauce, peppers, hot, chili, mature red, canned", "units": {"ст. л.": 20}, "note": "аджика → hot chili sauce; аналог примерный"}
-{"name": "Ананасы консервированные", "ndb": "09354", "match": "Pineapple, canned, juice pack, drained", "units": {"шт": 340}, "note": "аналог примерный: в соку, без жидкости; шт = банка 580 мл, ≈340 г ананасов; российские чаще в сиропе"}
-{"name": "Апельсины", "ndb": "09200", "match": "ORANGES,RAW,ALL COMM VAR", "units": {"шт": 150}}
-{"name": "Арахисовая паста", "ndb": "16098", "match": "Peanut butter, smooth style, with salt", "units": {"ст. л.": 20}}
-{"name": "Базилик", "ndb": "02044", "match": "BASIL,FRESH", "units": {"уп": 30, "пучок": 30, "несколько листиков": 2}}
-{"name": "Баклажан", "ndb": "11209", "match": "Eggplant, raw", "units": {"шт": 300}}
-{"name": "Баклажаны", "ndb": "11209", "match": "Eggplant, raw", "units": {"шт": 300}}
-{"name": "Банан", "ndb": "09040", "match": "Bananas, raw", "units": {"шт": 120}}
-{"name": "Бананы", "ndb": "09040", "match": "BANANAS,RAW", "units": {"шт": 120}}
-{"name": "Баранина", "ndb": "17226", "match": "LAMB,DOM,COMP OF RTL CUTS,LN&FAT,1/8\"FAT,CHOIC,RAW", "units": {}}
-{"name": "Батат", "ndb": "11507", "match": "Sweet potato, raw, unprepared", "units": {}}
-{"name": "Бекон", "ndb": "10123", "match": "PORK,CURED,BACON,UNPREP", "units": {"ломтик": 20}}
-{"name": "Блины", "ndb": "18293", "match": "Pancakes, plain, prepared from recipe", "units": {"шт": 40}, "note": "аналог примерный: американские pancakes из теста; тонкий блин ≈ 40 г"}
-{"name": "Болгарский перец", "ndb": "11821", "match": "Peppers, sweet, red, raw", "units": {"шт": 150}}
-{"name": "Брокколи", "ndb": "11090", "match": "BROCCOLI,RAW", "units": {}}
-{"name": "Брынза", "ndb": "01019", "match": "CHEESE,FETA", "units": {}, "note": "аналог примерный: брынза → feta"}
-{"name": "Булгур", "ndb": "20012", "match": "Bulgur, dry", "units": {}}
-{"name": "Бульон куриный", "ndb": "06172", "match": "Soup, stock, chicken, home-prepared", "units": {}, "density": 1.0}
-{"name": "Ванилин", "ndb": "02050", "match": "Vanilla extract", "units": {"щепотка": 0.5}, "note": "аналог примерный: ванилина нет, взят ванильный экстракт"}
-{"name": "Варенье", "ndb": "19297", "match": "Jams and preserves", "units": {"ст. л.": 25}}
-{"name": "Вермишель", "ndb": "20120", "match": "Pasta, dry, enriched", "units": {}}
-{"name": "Ветчина", "ndb": "07029", "match": "HAM,SLICED,REG (APPROX 11% FAT)", "units": {}}
-{"name": "Вино сухое", "ndb": "14084", "match": "Alcoholic beverage, wine, table, all", "units": {}, "density": 0.99}
-{"name": "Виноград", "ndb": "09132", "match": "Grapes, red or green (European type, such as Thompson seedless), raw", "units": {}}
-{"name": "Вода", "ndb": "14411", "match": "Beverages, water, tap, drinking", "units": {}, "density": 1.0}
-{"name": "Гвоздика", "ndb": "02011", "match": "Spices, cloves, ground", "units": {"шт": 0.1, "щепотка": 0.5}, "note": "шт = один бутон ≈0,1 г"}
-{"name": "Говядина", "ndb": "13795", "match": "Beef, composite of trimmed retail cuts, separable lean and fat, trimmed to 1/8\" fat, all grades, raw", "units": {}, "note": "усреднённые отрубы, сырые"}
-{"name": "Говяжий язык", "ndb": "13339", "match": "Beef, variety meats and by-products, tongue, raw", "units": {}}
-{"name": "Говяжья печень", "ndb": "13325", "match": "Beef, variety meats and by-products, liver, raw", "units": {}}
-{"name": "Горох", "ndb": "16085", "match": "Peas, green, split, mature seeds, raw", "units": {}}
-{"name": "Горошек замороженный", "ndb": "11312", "match": "PEAS,GRN,FRZ,UNPREP", "units": {}}
-{"name": "Горошек консервированный", "ndb": "11311", "match": "Peas, green, canned, drained solids, rinsed in tap water", "units": {"шт": 240, "банки": 240}, "note": "без жидкости; шт = банка ≈240 г"}
-{"name": "Горчица", "ndb": "02046", "match": "MUSTARD,PREPARED,YELLOW", "units": {"ст. л.": 15, "ч. л.": 5}, "note": "аналог примерный: русская горчица → yellow prepared mustard"}
-{"name": "Гранат", "ndb": "09286", "match": "Pomegranates, raw", "units": {"шт": 170}, "note": "шт = зёрна одного граната ≈170 г"}
-{"name": "Грецкие орехи", "ndb": "12155", "match": "Nuts, walnuts, english", "units": {}}
-{"name": "Гречка", "ndb": "20009", "match": "BUCKWHEAT GROATS,RSTD,DRY", "units": {}, "note": "аналог примерный: гречка ядрица → buckwheat groats, roasted, dry"}
-{"name": "Грибы сушёные", "ndb": "11268", "match": "Mushrooms, shiitake, dried", "units": {}, "note": "сушёные белые/лесные → shiitake, dried; аналог примерный"}
-{"name": "Грибы шиитаке", "ndb": "11238", "match": "Mushrooms, shiitake, raw", "units": {}}
-{"name": "Грибы эноки", "ndb": "11950", "match": "Mushrooms, enoki, raw", "units": {}}
-{"name": "Груша", "ndb": "09252", "match": "Pears, raw", "units": {"шт": 170}}
-{"name": "Груши", "ndb": "09252", "match": "Pears, raw", "units": {"шт": 170}}
-{"name": "Дрожжи", "ndb": "18375", "match": "Leavening agents, yeast, baker's, active dry", "units": {"ч. л.": 4}, "note": "примерный аналог: сухие активные; в рецептах встречаются и прессованные"}
-{"name": "Желатин", "ndb": "19177", "match": "Gelatins, dry powder, unsweetened", "units": {}}
-{"name": "Зелёный лук", "ndb": "11291", "match": "Onions, spring or scallions (includes tops and bulb), raw", "units": {"уп": 30, "стебель": 10, "несколько перьев": 5, "пучок": 30}}
-{"name": "Зира", "ndb": "02014", "match": "Spices, cumin seed", "units": {"ч. л.": 2.1, "щепотка": 0.5}}
-{"name": "Изюм", "ndb": "09298", "match": "RAISINS,SEEDLESS", "units": {}}
-{"name": "Имбирь", "ndb": "11216", "match": "Ginger root, raw", "units": {"ч. л.": 4}, "note": "свежий корень, тёртый"}
-{"name": "Имбирь молотый", "ndb": "02021", "match": "Spices, ginger, ground", "units": {"ч. л.": 1.8}}
-{"name": "Индейка", "ndb": "05710", "match": "TURKEY,RTL PARTS,BREAST,MEAT ONLY,RAW", "units": {}, "note": "филе грудки"}
-{"name": "Йогурт", "ndb": "01116", "match": "Yogurt, plain, whole milk, 8 grams protein per 8 ounce", "units": {"шт": 125}, "note": "примерный аналог: натуральный йогурт из цельного молока; «шт» = стаканчик 125 г"}
-{"name": "Кабачок", "ndb": "11477", "match": "Squash, summer, zucchini, includes skin, raw", "units": {"шт": 300}}
-{"name": "Какао", "ndb": "19165", "match": "COCOA,DRY PDR,UNSWTND", "units": {"ст. л.": 8}}
-{"name": "Кальмары", "ndb": "15175", "match": "Mollusks, squid, mixed species, raw", "units": {}}
-{"name": "Камбала", "ndb": "15028", "match": "Fish, flatfish (flounder and sole species), raw", "units": {"шт": 250}, "note": "шт = тушка ≈450 г, съедобная часть ≈250 г"}
-{"name": "Каперсы", "ndb": "02054", "match": "Capers, canned", "units": {"ст. л.": 10}}
-{"name": "Капуста", "ndb": "11109", "match": "Cabbage, raw", "units": {}}
-{"name": "Капуста белокочанная", "ndb": "11109", "match": "Cabbage, raw", "units": {}}
-{"name": "Капуста пекинская", "ndb": "11119", "match": "CABBAGE,CHINESE (PE-TSAI),RAW", "units": {"шт": 900}}
-{"name": "Карась", "ndb": "15008", "match": "Fish, carp, raw", "units": {}, "note": "карась → carp; аналог примерный"}
-{"name": "Кардамон", "ndb": "02006", "match": "Spices, cardamom", "units": {"щепотка": 0.5, "ч. л.": 2}}
-{"name": "Карп", "ndb": "15008", "match": "Fish, carp, raw", "units": {}}
-{"name": "Карри", "ndb": "02015", "match": "CURRY POWDER", "units": {"ч. л.": 2, "ст. л.": 6.3}}
-{"name": "Картофель", "ndb": "11352", "match": "Potatoes, flesh and skin, raw", "units": {"шт": 120}}
-{"name": "Квас", "ndb": "14305", "match": "Malt beverage, includes non-alcoholic beer", "units": {}, "density": 1.01, "note": "квас → malt beverage/non-alcoholic beer; аналог примерный"}
-{"name": "Квашеная капуста", "ndb": "11439", "match": "Sauerkraut, canned, solids and liquids", "units": {}, "note": "аналог примерный: квашеная капуста ≈ Sauerkraut"}
-{"name": "Кетчуп", "ndb": "11935", "match": "Catsup", "units": {"ст. л.": 17}}
-{"name": "Кефир", "ndb": "01289", "match": "KEFIR,LOWFAT,PLN,LIFEWAY", "units": {}, "density": 1.03, "note": "аналог примерный: кефир → Kefir, lowfat, plain", "override": {"kcal": 53, "prot": 2.9, "fat": 2.5, "carb": 4.0}, "source": "кефир 2,5 % (ГОСТ 31454, маркировка)"}
-{"name": "Киви", "ndb": "09148", "match": "Kiwifruit, green, raw", "units": {"шт": 75}}
-{"name": "Кинза", "ndb": "11165", "match": "Coriander (cilantro) leaves, raw", "units": {"уп": 30, "пучок": 30}}
-{"name": "Кокосовая стружка", "ndb": "12108", "match": "Nuts, coconut meat, dried (desiccated), not sweetened", "units": {"ст. л.": 6}}
-{"name": "Кокосовое молоко", "ndb": "12118", "match": "COCONUT MILK,CND (LIQ EXPRESSED FROM GRATED MEAT&H2O)", "units": {}, "density": 1.0}
-{"name": "Колбаса", "ndb": "07008", "match": "Bologna, beef and pork", "units": {}, "note": "варёная колбаса → Bologna; аналог примерный", "override": {"kcal": 257, "prot": 12.8, "fat": 22.2, "carb": 1.5}, "source": "варёная, докторская (ГОСТ Р 52196, маркировка)"}
-{"name": "Колбаса варёная", "ndb": "07008", "match": "Bologna, beef and pork", "units": {}, "note": "аналог примерный: варёная колбаса ≈ Bologna", "override": {"kcal": 257, "prot": 12.8, "fat": 22.2, "carb": 1.5}, "source": "докторская (ГОСТ Р 52196, маркировка)"}
-{"name": "Колбаса копчёная", "ndb": "07075", "match": "SAUSAGE,SMOKED LINK SAUSAGE,PORK & BF", "units": {}, "note": "аналог примерный: копчёная колбаса → smoked link sausage, pork and beef"}
-{"name": "Колбаски", "ndb": "07075", "match": "Sausage, smoked link sausage, pork and beef", "units": {"шт": 80}, "note": "колбаски → smoked link sausage, pork and beef; аналог примерный"}
-{"name": "Кориандр", "ndb": "02013", "match": "Spices, coriander seed", "units": {"ч. л.": 2}}
-{"name": "Корица", "ndb": "02010", "match": "Spices, cinnamon, ground", "units": {"щепотка": 0.5, "ч. л.": 2.6, "на кончике ножа": 0.3, "ст. л.": 8}}
-{"name": "Котлеты куриные", "ndb": "05323", "match": "Chicken patty, frozen, uncooked", "units": {"шт": 80}, "note": "котлета → chicken patty, frozen, uncooked; аналог примерный"}
-{"name": "Кофе", "ndb": "14209", "match": "Beverages, coffee, brewed, prepared with tap water", "units": {"ч. л.": 2, "ст. л.": 6}, "density": 1.0, "note": "аналог примерный: мл — заваренный кофе; ложки — молотый/растворимый кофе, состав взят для заваренного"}
-{"name": "Крабовые палочки", "ndb": "15138", "match": "Crustaceans, crab, alaska king, imitation, made from surimi", "units": {}, "note": "имитация краба из сурими"}
-{"name": "Крахмал", "ndb": "20027", "match": "Cornstarch", "units": {"ст. л.": 10, "ч. л.": 3}, "note": "примерный аналог: кукурузный вместо картофельного (в базе нет)"}
-{"name": "Креветки", "ndb": "15149", "match": "CRUSTACEANS,SHRIMP,MXD SP,RAW (MAYBE PREVIOUSLY FROZEN)", "units": {}}
-{"name": "Кролик", "ndb": "17177", "match": "Game meat, rabbit, domesticated, composite of cuts, raw", "units": {}}
-{"name": "Кукуруза консервированная", "ndb": "11172", "match": "CORN,SWT,YEL,CND,WHL KERNEL,DRND SOL", "units": {"шт": 240}, "note": "банка, после слива жидкости"}
-{"name": "Кукурузная крупа", "ndb": "08160", "match": "Cereals, corn grits, yellow, regular and quick, unenriched, dry", "units": {"ст. л.": 20}}
-{"name": "Кунжут", "ndb": "12023", "match": "SESAME SEEDS,WHOLE,DRIED", "units": {"ст. л.": 9, "ч. л.": 3}}
-{"name": "Кунжутная паста", "ndb": "12698", "match": "Seeds, sesame butter, tahini, type of kernels unspecified", "units": {"ст. л.": 16}}
-{"name": "Курага", "ndb": "09032", "match": "Apricots, dried, sulfured, uncooked", "units": {}}
-{"name": "Куриная печень", "ndb": "05027", "match": "CHICKEN,LIVER,ALL CLASSES,RAW", "units": {}}
-{"name": "Куриное филе", "ndb": "05062", "match": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw", "units": {}}
-{"name": "Куриные бёдра", "ndb": "05091", "match": "Chicken, broilers or fryers, thigh, meat and skin, raw", "units": {}, "note": "с кожей, сырые, без кости"}
-{"name": "Куриные голени", "ndb": "05066", "match": "Chicken, broilers or fryers, drumstick, meat and skin, raw", "units": {}}
-{"name": "Куриные крылья", "ndb": "05100", "match": "Chicken, broilers or fryers, wing, meat and skin, raw", "units": {}}
-{"name": "Куриный фарш", "ndb": "05332", "match": "Chicken, ground, raw", "units": {}}
-{"name": "Курица целая", "ndb": "05001", "match": "CHICKEN,BROILERS OR FRYERS,MEAT&SKN&GIBLETS&NECK,RAW", "units": {}, "edible": 0.7, "note": "вес тушки с костями; состав на съедобную часть; съедобная часть ~70 %"}
-{"name": "Куркума", "ndb": "02043", "match": "TURMERIC,GROUND", "units": {"ч. л.": 3, "щепотка": 0.5}}
-{"name": "Кускус", "ndb": "20028", "match": "Couscous, dry", "units": {}}
-{"name": "Лаваш", "ndb": "18041", "match": "BREAD,PITA,WHITE,ENRICHED", "units": {"уп": 250, "шт": 90}, "note": "аналог примерный: тонкий армянский лаваш → pita, white"}
-{"name": "Лавровый лист", "ndb": "02004", "match": "SPICES,BAY LEAF", "units": {"шт": 0.2}}
-{"name": "Лайм", "ndb": "09159", "match": "LIMES,RAW", "units": {"шт": 67}}
-{"name": "Лапша", "ndb": "20120", "match": "Pasta, dry, enriched", "units": {}, "note": "пшеничная лапша → pasta, dry"}
-{"name": "Лапша гречневая", "ndb": "20114", "match": "Noodles, japanese, soba, dry", "units": {}}
-{"name": "Лапша рисовая", "ndb": "20133", "match": "Rice noodles, dry", "units": {}}
-{"name": "Лапша удон", "ndb": "20116", "match": "Noodles, japanese, somen, dry", "units": {}, "note": "удон → somen, dry (пшеничная лапша); аналог примерный"}
-{"name": "Лимон", "ndb": "09150", "match": "Lemons, raw, without peel", "units": {"шт": 120}}
-{"name": "Лимонная кислота", "ndb": "14411", "match": "Beverages, water, tap, drinking", "units": {"щепотка": 0.5}, "note": "лимонной кислоты нет в базе; в щепотках пищевая ценность ничтожна — считаем нулём"}
-{"name": "Лосось", "ndb": "15236", "match": "SALMON,ATLANTIC,FARMED,RAW", "units": {}}
-{"name": "Лук зелёный", "ndb": "11291", "match": "Onions, spring or scallions (includes tops and bulb), raw", "units": {"пучок": 40}}
-{"name": "Лук порей", "ndb": "11246", "match": "Leeks, (bulb and lower leaf-portion), raw", "units": {"шт": 150}}
-{"name": "Лук репчатый", "ndb": "11282", "match": "Onions, raw", "units": {"шт": 100}}
-{"name": "Лёд", "ndb": "14411", "match": "Beverages, water, tap, drinking", "units": {"стакан": 150, "несколько кубиков": 30}, "note": "лёд = вода"}
-{"name": "Майонез", "ndb": "04025", "match": "Salad dressing, mayonnaise, regular", "units": {"ст. л.": 15}, "note": "примерный аналог: американский майонез regular", "override": {"kcal": 625, "prot": 0.4, "fat": 67.0, "carb": 2.6}, "source": "майонез 67 % (ГОСТ 31761, маркировка)"}
-{"name": "Майоран", "ndb": "02023", "match": "Spices, marjoram, dried", "units": {"щепотка": 0.5}}
-{"name": "Мак", "ndb": "02033", "match": "Spices, poppy seed", "units": {}}
-{"name": "Макароны", "ndb": "20120", "match": "Pasta, dry, enriched", "units": {}, "note": "сухие"}
-{"name": "Манго", "ndb": "09176", "match": "Mangos, raw", "units": {"шт": 250}}
-{"name": "Манная крупа", "ndb": "20066", "match": "SEMOLINA,ENRICHED", "units": {"ст. л.": 25}, "note": "аналог примерный: манка → semolina, enriched"}
-{"name": "Маскарпоне", "ndb": "01017", "match": "Cheese, cream", "units": {}, "note": "аналог примерный: маскарпоне ≈ сливочный сыр (Cheese, cream)"}
-{"name": "Масло кунжутное", "ndb": "04058", "match": "OIL,SESAME,SALAD OR COOKING", "units": {"ч. л.": 5, "ст. л.": 17}}
-{"name": "Масло оливковое", "ndb": "04053", "match": "Oil, olive, salad or cooking", "units": {"ст. л.": 17}, "density": 0.92}
-{"name": "Масло подсолнечное", "ndb": "04060", "match": "Oil, sunflower, linoleic (less than 60%)", "units": {"ст. л.": 17, "ч. л.": 5}, "density": 0.92}
-{"name": "Масло сливочное", "ndb": "01145", "match": "Butter, without salt", "units": {}}
-{"name": "Масло чили", "ndb": "04582", "match": "Oil, canola", "units": {"ст. л.": 17}, "note": "масло чили → растительное масло; аналог примерный"}
-{"name": "Мидии", "ndb": "15164", "match": "Mollusks, mussel, blue, raw", "units": {}}
-{"name": "Минтай", "ndb": "15066", "match": "FISH,POLLOCK,ALASKA,RAW (MAY HAVE BEEN PREVIOUSLY FROZEN)", "units": {}}
-{"name": "Мойва", "ndb": "15099", "match": "Fish, smelt, rainbow, raw", "units": {}, "note": "мойва → smelt, rainbow; аналог примерный"}
-{"name": "Молоко", "ndb": "01077", "match": "Milk, whole, 3.25% milkfat, with added vitamin D", "units": {"ст. л.": 15}, "density": 1.03, "note": "цельное 3,25 %; российское 2,5–3,2 % — близко"}
-{"name": "Морковь", "ndb": "11124", "match": "Carrots, raw", "units": {"шт": 80}}
-{"name": "Моцарелла", "ndb": "01026", "match": "CHEESE,MOZZARELLA,WHL MILK", "units": {}}
-{"name": "Мука", "ndb": "20081", "match": "Wheat flour, white, all-purpose, enriched, bleached", "units": {"ст. л.": 10}, "note": "пшеничная мука высшего сорта"}
-{"name": "Мука рисовая", "ndb": "20061", "match": "Rice flour, white, unenriched", "units": {}}
-{"name": "Мускатный орех", "ndb": "02025", "match": "Spices, nutmeg, ground", "units": {"щепотка": 0.5}}
-{"name": "Мята", "ndb": "02065", "match": "SPEARMINT,FRESH", "units": {"несколько листиков": 1, "ч. л.": 2, "пучок": 30}}
-{"name": "Мёд", "ndb": "19296", "match": "Honey", "units": {"ст. л.": 25, "ч. л.": 8}, "density": 1.42}
-{"name": "Нори", "ndb": "11446", "match": "Seaweed, laver, raw", "units": {"уп": 25, "лист": 2.5}, "note": "аналог примерный: Seaweed, laver, raw (сухих листов нори в базе нет); уп ≈ 10 листов"}
-{"name": "Нут", "ndb": "16056", "match": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw", "units": {}}
-{"name": "Нут консервированный", "ndb": "16358", "match": "Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained solids", "units": {"шт": 240}, "note": "без жидкости; шт = банка ≈240 г"}
-{"name": "Овощная смесь", "ndb": "11583", "match": "Vegetables, mixed, frozen, unprepared", "units": {}, "note": "замороженная смесь"}
-{"name": "Овсянка", "ndb": "08120", "match": "Cereals, oats, regular and quick, not fortified, dry", "units": {"ст. л.": 12}}
-{"name": "Овсяные хлопья", "ndb": "08120", "match": "Cereals, oats, regular and quick, not fortified, dry", "units": {}}
-{"name": "Огурец", "ndb": "11205", "match": "Cucumber, with peel, raw", "units": {"шт": 110}}
-{"name": "Огурцы", "ndb": "11205", "match": "Cucumber, with peel, raw", "units": {"шт": 110}}
-{"name": "Огурцы солёные", "ndb": "11941", "match": "PICKLES,CUCUMBER,SOUR", "units": {"шт": 80}, "note": "аналог примерный: солёные огурцы → pickles, cucumber, sour"}
-{"name": "Оливки", "ndb": "09193", "match": "OLIVES,RIPE,CND (SMALL-EXTRA LRG)", "units": {"шт": 4}}
-{"name": "Орегано", "ndb": "02027", "match": "SPICES,OREGANO,DRIED", "units": {"щепотка": 0.5, "ч. л.": 1}}
-{"name": "Орехи", "ndb": "12155", "match": "Nuts, walnuts, english", "units": {}, "note": "примерный аналог: грецкие орехи для «орехов» без уточнения"}
-{"name": "Паприка", "ndb": "02028", "match": "Spices, paprika", "units": {"ч. л.": 2.3, "ст. л.": 7, "щепотка": 0.5}}
-{"name": "Пармезан", "ndb": "01033", "match": "Cheese, parmesan, hard", "units": {}}
-{"name": "Паста карри", "ndb": "02015", "match": "Spices, curry powder", "units": {"ст. л.": 15, "ч. л.": 5}, "note": "аналог примерный: пасты карри нет, взят порошок карри"}
-{"name": "Пекинская капуста", "ndb": "11119", "match": "Cabbage, chinese (pe-tsai), raw", "units": {}}
-{"name": "Пельмени", "ndb": "32013", "match": "Potsticker or wonton, pork and vegetable, frozen, unprepared", "units": {}, "note": "пельмени → potsticker/wonton, pork, frozen; аналог примерный", "override": {"kcal": 275, "prot": 12.0, "fat": 13.0, "carb": 29.0}, "source": "замороженные пельмени, типичная маркировка"}
-{"name": "Перец", "ndb": "02030", "match": "Spices, pepper, black", "units": {"щепотка": 0.5}, "note": "чёрный молотый"}
-{"name": "Перец белый", "ndb": "02032", "match": "Spices, pepper, white", "units": {"ч. л.": 2.4}}
-{"name": "Перец болгарский", "ndb": "11821", "match": "Peppers, sweet, red, raw", "units": {"шт": 150}}
-{"name": "Перец чили", "ndb": "11819", "match": "PEPPERS,HOT CHILI,RED,RAW", "units": {"шт": 20}}
-{"name": "Перец чёрный", "ndb": "02030", "match": "PEPPER,BLACK", "units": {"щепотка": 0.5, "ч. л.": 2.3, "ст. л.": 6.9}}
-{"name": "Перловка", "ndb": "20005", "match": "Barley, pearled, raw", "units": {}}
-{"name": "Персики", "ndb": "09236", "match": "Peaches, yellow, raw", "units": {"шт": 150}}
-{"name": "Петрушка", "ndb": "11297", "match": "Parsley, fresh", "units": {"уп": 30, "пучок": 30, "несколько веточек": 3}}
-{"name": "Печенье", "ndb": "18204", "match": "Cookies, sugar, commercially prepared, regular (includes vanilla)", "units": {"уп": 200}, "note": "аналог примерный: сахарное/ванильное печенье; уп ≈ 200 г"}
-{"name": "Плавленый сыр", "ndb": "01253", "match": "Cheese, pasteurized process, American, without added vitamin D", "units": {"шт": 90}, "note": "плавленый сыр → process American; аналог примерный; шт = брикет 90 г"}
-{"name": "Помидор", "ndb": "11529", "match": "Tomatoes, red, ripe, raw, year round average", "units": {"шт": 120}}
-{"name": "Помидоры", "ndb": "11529", "match": "Tomatoes, red, ripe, raw, year round average", "units": {"шт": 120}}
-{"name": "Помидоры черри", "ndb": "11529", "match": "Tomatoes, red, ripe, raw, year round average", "units": {}}
-{"name": "Пшено", "ndb": "20031", "match": "Millet, raw", "units": {}}
-{"name": "Разрыхлитель", "ndb": "18369", "match": "LEAVENING AGENTS,BAKING PDR,DOUBLE-ACTING,NA AL SULFATE", "units": {"ч. л.": 5}}
-{"name": "Редис", "ndb": "11429", "match": "Radishes, raw", "units": {}}
-{"name": "Рикотта", "ndb": "01036", "match": "Cheese, ricotta, whole milk", "units": {}}
-{"name": "Рис", "ndb": "20044", "match": "Rice, white, long-grain, regular, raw, enriched", "units": {}, "note": "сухой белый"}
-{"name": "Рисовая лапша", "ndb": "20133", "match": "RICE NOODLES,DRY", "units": {}}
-{"name": "Розмарин", "ndb": "02036", "match": "Spices, rosemary, dried", "units": {"щепотка": 0.5}}
-{"name": "Руккола", "ndb": "11959", "match": "Arugula, raw", "units": {}}
-{"name": "Рыбные консервы", "ndb": "15260", "match": "Fish, salmon, pink, canned, drained solids", "units": {"шт": 185}, "note": "аналог примерный: взята горбуша консервированная, без жидкости; шт = банка ≈185 г"}
-{"name": "Сайра консервированная", "ndb": "15048", "match": "Fish, mackerel, jack, canned, drained solids", "units": {"банка": 185}, "note": "сайра → mackerel, jack, canned; аналог примерный"}
-{"name": "Салат листовой", "ndb": "11253", "match": "LETTUCE,GRN LEAF,RAW", "units": {"шт": 200, "уп": 100, "лист": 10}}
-{"name": "Сало", "ndb": "10165", "match": "Pork, cured, salt pork, raw", "units": {}, "note": "аналог примерный: солёное сало ≈ salt pork"}
-{"name": "Сардельки", "ndb": "07950", "match": "Frankfurter, meat", "units": {"шт": 100}, "note": "сарделька → frankfurter, meat; аналог примерный"}
-{"name": "Сахар", "ndb": "19335", "match": "Sugars, granulated", "units": {"ст. л.": 20, "ч. л.": 7}}
-{"name": "Свиная печень", "ndb": "10110", "match": "Pork, fresh, variety meats and by-products, liver, raw", "units": {}}
-{"name": "Свинина", "ndb": "10187", "match": "Pork, fresh, composite of trimmed retail cuts (leg, loin, shoulder, and spareribs), separable lean and fat, raw", "units": {}, "note": "усреднённые отрубы, сырые"}
-{"name": "Свиные кости", "ndb": "10088", "match": "Pork, fresh, spareribs, separable lean and fat, raw", "units": {}, "edible": 0.25, "note": "кости для бульона → spareribs, raw; аналог примерный; мясо на костях ~25 %"}
-{"name": "Свиные рёбра", "ndb": "10088", "match": "Pork, fresh, spareribs, separable lean and fat, raw", "units": {}}
-{"name": "Свёкла", "ndb": "11080", "match": "BEETS,RAW", "units": {"шт": 200}}
-{"name": "Сгущёнка", "ndb": "01095", "match": "Milk, canned, condensed, sweetened", "units": {"шт": 380, "ст. л.": 25}, "note": "шт = банка 380 г"}
-{"name": "Сгущённое молоко", "ndb": "01095", "match": "Milk, canned, condensed, sweetened", "units": {"ст. л.": 30}}
-{"name": "Сельдерей", "ndb": "11143", "match": "Celery, raw", "units": {"стебель": 40}}
-{"name": "Сельдь", "ndb": "15039", "match": "Fish, herring, Atlantic, raw", "units": {"шт": 200}, "note": "аналог примерный: в рецептах обычно солёная, взята сырая атлантическая; шт = тушка, съедобная часть ≈200 г", "override": {"kcal": 210, "prot": 17.5, "fat": 15.5, "carb": 0, "na": 2000}, "source": "сельдь слабосолёная, филе — типичная маркировка (в рецептах сельдь солёная)"}
-{"name": "Скумбрия", "ndb": "15046", "match": "Fish, mackerel, Atlantic, raw", "units": {"шт": 230}, "note": "шт = тушка ≈350 г, съедобная часть ≈230 г"}
-{"name": "Сливки", "ndb": "01050", "match": "Cream, fluid, light (coffee cream or table cream)", "units": {}, "density": 1.01, "note": "примерный аналог: light cream ~19 %; жирность российских сливок 10–33 %"}
-{"name": "Сливы", "ndb": "09279", "match": "Plums, raw", "units": {"шт": 35}}
-{"name": "Сметана", "ndb": "01056", "match": "Cream, sour, cultured", "units": {"ст. л.": 20}, "note": "примерный аналог: американская sour cream (~20 %)"}
-{"name": "Сода", "ndb": "18372", "match": "LEAVENING AGENTS,BAKING SODA", "units": {"ч. л.": 5, "ст. л.": 14}}
-{"name": "Соевый соус", "ndb": "16123", "match": "Soy sauce made from soy and wheat (shoyu)", "units": {"ст. л.": 18, "ч. л.": 6}, "density": 1.15}
-{"name": "Сок", "ndb": "09016", "match": "Apple juice, canned or bottled, unsweetened, without added ascorbic acid", "units": {}, "density": 1.04, "note": "аналог примерный: вид сока не указан, взят яблочный"}
-{"name": "Соль", "ndb": "02047", "match": "Salt, table", "units": {"ч. л.": 7, "щепотка": 0.5, "ст. л.": 25}}
-{"name": "Сосиски", "ndb": "07950", "match": "FRANKFURTER  MEAT", "units": {"шт": 50}, "note": "аналог примерный: сосиски → frankfurter, meat", "override": {"kcal": 266, "prot": 11.0, "fat": 23.9, "carb": 1.6}, "source": "молочные (ГОСТ Р 52196, маркировка)"}
-{"name": "Соус чили", "ndb": "06631", "match": "SAUCE,HOT CHILE,SRIRACHA", "units": {"ст. л.": 18}, "note": "аналог примерный: соус чили → sriracha"}
-{"name": "Спагетти", "ndb": "20120", "match": "Pasta, dry, enriched", "units": {}}
-{"name": "Стручковая фасоль", "ndb": "11052", "match": "BEANS,SNAP,GREEN,RAW", "units": {}}
-{"name": "Судак", "ndb": "15064", "match": "Fish, pike, walleye, raw", "units": {}, "note": "судак → walleye (близкий вид)"}
-{"name": "Сумах", "ndb": "02028", "match": "Spices, paprika", "units": {"ст. л.": 7}, "note": "сумаха нет → paprika; аналог примерный"}
-{"name": "Сухари", "ndb": "18079", "match": "BREAD CRUMBS,DRY,GRATED,PLN", "units": {"ст. л.": 10}}
-{"name": "Сухари панировочные", "ndb": "18079", "match": "Bread crumbs, dry, grated, plain", "units": {"ст. л.": 8}}
-{"name": "Сухарики", "ndb": "18243", "match": "Croutons, seasoned", "units": {"пачка": 40}, "note": "сухарики → croutons, seasoned; аналог примерный"}
-{"name": "Сыр", "ndb": "01022", "match": "CHEESE,GOUDA", "units": {}, "note": "аналог примерный: твёрдый сыр (российский/голландский) → gouda"}
-{"name": "Сыр плавленый", "ndb": "01048", "match": "Cheese spread, pasteurized process, American", "units": {}, "note": "аналог примерный: плавленый сыр ≈ American cheese spread"}
-{"name": "Сыр творожный", "ndb": "01017", "match": "CHEESE,CREAM", "units": {}, "note": "аналог примерный: творожный сыр → cream cheese"}
-{"name": "Сыр твёрдый", "ndb": "01022", "match": "Cheese, gouda", "units": {"ломтик": 20}, "note": "примерный аналог: гауда вместо российского твёрдого сыра"}
-{"name": "Сычуаньский перец", "ndb": "02030", "match": "Spices, pepper, black", "units": {"ч. л.": 2}, "note": "сычуаньского перца нет → black pepper; аналог примерный"}
-{"name": "Тахини", "ndb": "12698", "match": "SESAME BUTTER,TAHINI,KRNLS UNSPEC", "units": {"ст. л.": 15}}
-{"name": "Творог", "ndb": "01012", "match": "CHEESE,COTTAGE,CRMD,LRG OR SML CURD", "units": {}, "note": "аналог примерный: творог 5–9% → cottage cheese, creamed", "override": {"kcal": 121, "prot": 17.2, "fat": 5.0, "carb": 1.8, "na": 41}, "source": "творог 5 % (ГОСТ 31453, маркировка): Б/Ж/У и натрий российского продукта; витамины и минералы — от аналога USDA"}
-{"name": "Творожный сыр", "ndb": "01017", "match": "Cheese, cream", "units": {}, "note": "творожный сыр → cream cheese; аналог примерный"}
-{"name": "Тесто слоёное", "ndb": "18337", "match": "PUFF PASTRY,FRZ,RTB", "units": {}}
-{"name": "Тимьян", "ndb": "02042", "match": "Spices, thyme, dried", "units": {"щепотка": 0.5, "ст. л.": 3}}
-{"name": "Тмин", "ndb": "02005", "match": "Spices, caraway seed", "units": {"ч. л.": 2}}
-{"name": "Томатная паста", "ndb": "11546", "match": "Tomato products, canned, paste, without salt added", "units": {"ст. л.": 30}, "note": "в базе только без соли"}
-{"name": "Томаты консервированные", "ndb": "11531", "match": "Tomatoes, red, ripe, canned, packed in tomato juice", "units": {"шт": 400}, "note": "банка 400 г с соком"}
-{"name": "Тортильи", "ndb": "18364", "match": "TORTILLAS,RTB OR -FRY,FLR,REFR", "units": {"уп": 250, "шт": 48}}
-{"name": "Тофу", "ndb": "16126", "match": "TOFU,FIRM,PREP W/CA SULFATE&MAGNESIUM CHLORIDE (NIGARI)", "units": {}}
-{"name": "Тунец", "ndb": "15119", "match": "Fish, tuna, light, canned in oil, drained solids", "units": {"шт": 185}, "note": "консервированный в масле, без жидкости; шт = банка ≈185 г"}
-{"name": "Тунец консервированный", "ndb": "15121", "match": "Fish, tuna, light, canned in water, drained solids", "units": {"банка": 185}}
-{"name": "Тушёнка", "ndb": "13348", "match": "Beef, cured, corned beef, canned", "units": {"шт": 325}, "note": "тушёнка → corned beef, canned; аналог примерный; шт = банка 325 г"}
-{"name": "Тушёнка говяжья", "ndb": "13348", "match": "Beef, cured, corned beef, canned", "units": {"шт": 325}, "note": "тушёнка → corned beef, canned; аналог примерный; шт = банка 325 г"}
-{"name": "Тыква", "ndb": "11422", "match": "PUMPKIN,RAW", "units": {}}
-{"name": "Тыквенные семечки", "ndb": "12014", "match": "Seeds, pumpkin and squash seed kernels, dried", "units": {}}
-{"name": "Укроп", "ndb": "02045", "match": "Dill weed, fresh", "units": {"уп": 30, "пучок": 30, "несколько веточек": 3}}
-{"name": "Уксус", "ndb": "02053", "match": "Vinegar, distilled", "units": {"ст. л.": 15, "ч. л.": 5}, "density": 1.01, "note": "столовый (дистиллированный)"}
-{"name": "Уксус рисовый", "ndb": "02053", "match": "Vinegar, distilled", "units": {"ст. л.": 15}, "density": 1.01, "note": "аналог примерный: рисового уксуса нет, взят столовый (distilled)"}
-{"name": "Устричный соус", "ndb": "06176", "match": "Sauce, oyster, ready-to-serve", "units": {"ст. л.": 18}}
-{"name": "Утка", "ndb": "05139", "match": "Duck, domesticated, meat and skin, raw", "units": {}}
-{"name": "Фарш", "ndb": "23572", "match": "Beef, ground, 80% lean meat / 20% fat, raw", "units": {}, "note": "аналог примерный: свино-говяжий фарш ≈ говяжий 80/20"}
-{"name": "Фарш говяжий", "ndb": "23572", "match": "Beef, ground, 80% lean meat / 20% fat, raw", "units": {}}
-{"name": "Фарш куриный", "ndb": "05332", "match": "Chicken, ground, raw", "units": {}}
-{"name": "Фарш мясной", "ndb": "23572", "match": "Beef, ground, 80% lean meat / 20% fat, raw", "units": {}, "note": "примерный аналог: говяжий фарш 80/20 вместо смешанного свино-говяжьего"}
-{"name": "Фасоль консервированная", "ndb": "16145", "match": "BEANS,KIDNEY,RED,MATURE SEEDS,CND,DRND SOL", "units": {"шт": 240, "банка": 240}, "note": "банка, после слива жидкости"}
-{"name": "Фасоль сухая", "ndb": "16027", "match": "Beans, kidney, all types, mature seeds, raw", "units": {}}
-{"name": "Фунчоза", "ndb": "16082", "match": "Noodles, chinese, cellophane or long rice (mung beans), dehydrated", "units": {}}
-{"name": "Хлеб", "ndb": "18069", "match": "Bread, white, commercially prepared (includes soft bread crumbs)", "units": {"ломтик": 30, "шт": 50}, "note": "примерный аналог: белый пшеничный хлеб; «шт» принято как булочка/кусок ~50 г"}
-{"name": "Хлеб ржаной", "ndb": "18060", "match": "Bread, rye", "units": {"ломтик": 30}}
-{"name": "Хмели-сунели", "ndb": "02013", "match": "Spices, coriander seed", "units": {"ч. л.": 2}, "note": "аналог примерный: смесь трав, взят кориандр (основной компонент)"}
-{"name": "Хрен", "ndb": "02055", "match": "Horseradish, prepared", "units": {}, "note": "столовый хрен"}
-{"name": "Цветная капуста", "ndb": "11135", "match": "CAULIFLOWER,RAW", "units": {}}
-{"name": "Чай", "ndb": "14355", "match": "BEVERAGES,TEA,BLACK,BREWED,PREP W/ TAP H2O", "units": {"ч. л.": 2, "ст. л.": 6, "пакетика": 2}, "note": "аналог примерный: сухого чая нет в базе → заваренный чёрный чай; веса — сухой заварки"}
-{"name": "Чеснок", "ndb": "11215", "match": "Garlic, raw", "units": {"зубчик": 5, "головка": 45, "шт": 5}, "note": "«шт» принято как зубчик"}
-{"name": "Чечевица", "ndb": "16069", "match": "LENTILS,RAW", "units": {}}
-{"name": "Шалфей сушёный", "ndb": "02038", "match": "Spices, sage, ground", "units": {"щепотка": 0.5}}
-{"name": "Шампиньоны", "ndb": "11260", "match": "Mushrooms, white, raw", "units": {"шт": 20}}
-{"name": "Шиповник сушёный", "ndb": "35203", "match": "Rose Hips, wild (Northern Plains Indians)", "units": {"ст. л.": 10}, "note": "сушёный шиповник → Rose hips, wild; аналог примерный"}
-{"name": "Шоколад", "ndb": "19902", "match": "CHOCOLATE,DK,45- 59% CACAO SOL", "units": {"шт": 100}, "note": "аналог примерный: шоколад без уточнения → dark 45–59%; шт = плитка 100 г"}
-{"name": "Шпинат", "ndb": "11457", "match": "SPINACH,RAW", "units": {}}
-{"name": "Щавель", "ndb": "11616", "match": "Dock, raw", "units": {}, "note": "Dock (Rumex) — щавель"}
-{"name": "Щука", "ndb": "15062", "match": "Fish, pike, northern, raw", "units": {}}
-{"name": "Эстрагон сушёный", "ndb": "02041", "match": "Spices, tarragon, dried", "units": {"ч. л.": 0.6, "ст. л.": 1.8, "щепотка": 0.5}}
-{"name": "Яблоки", "ndb": "09003", "match": "Apples, raw, with skin", "units": {"шт": 160}}
-{"name": "Яблоко", "ndb": "09003", "match": "Apples, raw, with skin", "units": {"шт": 160}}
-{"name": "Ягоды", "ndb": "09050", "match": "BLUEBERRIES,RAW", "units": {}, "note": "аналог примерный: ягоды без уточнения → blueberries, raw"}
-{"name": "Ягоды замороженные", "ndb": "09054", "match": "Blueberries, frozen, unsweetened", "units": {}, "note": "ягодная смесь → blueberries, frozen, unsweetened; аналог примерный"}
-{"name": "Яйца", "ndb": "01123", "match": "Egg, whole, raw, fresh", "units": {"шт": 55}}
+{"name": "Авокадо", "ndb": "09037", "match": "Avocados, raw, all commercial varieties", "units": {"шт": 140}, "fineli": "11057", "fineli_match": "Avocado, without skin and stone"}
+{"name": "Аджика", "ndb": "06961", "match": "Sauce, peppers, hot, chili, mature red, canned", "units": {"ст. л.": 20}, "note": "аджика → hot chili sauce; аналог примерный", "fineli_note": "аджики/острого соуса из перца нет (только сладкий чили)"}
+{"name": "Ананасы консервированные", "ndb": "09354", "match": "Pineapple, canned, juice pack, drained", "units": {"шт": 340}, "note": "аналог примерный: в соку, без жидкости; шт = банка 580 мл, ≈340 г ананасов; российские чаще в сиропе", "fineli": "471", "fineli_match": "Pineapple, canned, in own juice"}
+{"name": "Апельсины", "ndb": "09200", "match": "ORANGES,RAW,ALL COMM VAR", "units": {"шт": 150}, "fineli": "11045", "fineli_match": "Orange without skin"}
+{"name": "Арахисовая паста", "ndb": "16098", "match": "Peanut butter, smooth style, with salt", "units": {"ст. л.": 20}, "fineli_note": "арахисовой пасты в Fineli нет"}
+{"name": "Базилик", "ndb": "02044", "match": "BASIL,FRESH", "units": {"уп": 30, "пучок": 30, "несколько листиков": 2}, "fineli": "11134", "fineli_match": "Basil, fresh"}
+{"name": "Баклажан", "ndb": "11209", "match": "Eggplant, raw", "units": {"шт": 300}, "fineli": "362", "fineli_match": "Aubergine"}
+{"name": "Баклажаны", "ndb": "11209", "match": "Eggplant, raw", "units": {"шт": 300}, "fineli": "362", "fineli_match": "Aubergine"}
+{"name": "Банан", "ndb": "09040", "match": "Bananas, raw", "units": {"шт": 120}, "fineli": "11049", "fineli_match": "Banana, without skin"}
+{"name": "Бананы", "ndb": "09040", "match": "BANANAS,RAW", "units": {"шт": 120}, "fineli": "11049", "fineli_match": "Banana, without skin"}
+{"name": "Баранина", "ndb": "17226", "match": "LAMB,DOM,COMP OF RTL CUTS,LN&FAT,1/8\"FAT,CHOIC,RAW", "units": {}, "fineli": "731", "fineli_match": "Lamb"}
+{"name": "Батат", "ndb": "11507", "match": "Sweet potato, raw, unprepared", "units": {}, "fineli": "30223", "fineli_match": "Sweet potato, without skin"}
+{"name": "Бекон", "ndb": "10123", "match": "PORK,CURED,BACON,UNPREP", "units": {"ломтик": 20}, "fineli": "707", "fineli_match": "Bacon"}
+{"name": "Блины", "ndb": "18293", "match": "Pancakes, plain, prepared from recipe", "units": {"шт": 40}, "note": "аналог примерный: американские pancakes из теста; тонкий блин ≈ 40 г", "fineli": "1223", "fineli_match": "Thin pancake, low-fat milk"}
+{"name": "Болгарский перец", "ndb": "11821", "match": "Peppers, sweet, red, raw", "units": {"шт": 150}, "fineli": "386", "fineli_match": "Sweet pepper, red"}
+{"name": "Брокколи", "ndb": "11090", "match": "BROCCOLI,RAW", "units": {}, "fineli": "324", "fineli_match": "Broccoli"}
+{"name": "Брынза", "ndb": "01019", "match": "CHEESE,FETA", "units": {}, "note": "аналог примерный: брынза → feta", "fineli": "690", "fineli_match": "Cheese, feta type salad cheese in brine, 18% fat"}
+{"name": "Булгур", "ndb": "20012", "match": "Bulgur, dry", "units": {}, "fineli_note": "булгура нет; есть только дроблёное цельное зерно (не пропаренное) — оставляем USDA с точным продуктом"}
+{"name": "Бульон куриный", "ndb": "06172", "match": "Soup, stock, chicken, home-prepared", "units": {}, "density": 1.0, "fineli": "30315", "fineli_match": "Chicken broth"}
+{"name": "Ванилин", "ndb": "02050", "match": "Vanilla extract", "units": {"щепотка": 0.5}, "note": "аналог примерный: ванилина нет, взят ванильный экстракт", "fineli_note": "есть только ванильный сахар (по сути сахар) — другой продукт"}
+{"name": "Варенье", "ndb": "19297", "match": "Jams and preserves", "units": {"ст. л.": 25}, "fineli": "11012", "fineli_match": "Strawberry jam, 54% sugar, home-made"}
+{"name": "Вермишель", "ndb": "20120", "match": "Pasta, dry, enriched", "units": {}, "fineli": "121", "fineli_match": "Pasta, spaghetti, macaroni"}
+{"name": "Ветчина", "ndb": "07029", "match": "HAM,SLICED,REG (APPROX 11% FAT)", "units": {}, "fineli_note": "в Fineli только варёная ветчина 2–6 % жира, обычная ветчина ~11 % — заметно другая жирность"}
+{"name": "Вино сухое", "ndb": "14084", "match": "Alcoholic beverage, wine, table, all", "units": {}, "density": 0.99, "fineli": "904", "fineli_match": "Wine, average, 8-15% volume"}
+{"name": "Виноград", "ndb": "09132", "match": "Grapes, red or green (European type, such as Thompson seedless), raw", "units": {}, "fineli": "423", "fineli_match": "Grape, average, green or red, seedless"}
+{"name": "Вода", "ndb": "14411", "match": "Beverages, water, tap, drinking", "units": {}, "density": 1.0, "fineli": "922", "fineli_match": "Water, tap water"}
+{"name": "Гвоздика", "ndb": "02011", "match": "Spices, cloves, ground", "units": {"шт": 0.1, "щепотка": 0.5}, "note": "шт = один бутон ≈0,1 г", "fineli_note": "гвоздика в Fineli без данных состава (пустые значения)"}
+{"name": "Говядина", "ndb": "13795", "match": "Beef, composite of trimmed retail cuts, separable lean and fat, trimmed to 1/8\" fat, all grades, raw", "units": {}, "note": "усреднённые отрубы, сырые", "fineli": "714", "fineli_match": "Beef, average"}
+{"name": "Говяжий язык", "ndb": "13339", "match": "Beef, variety meats and by-products, tongue, raw", "units": {}, "fineli": "793", "fineli_match": "Tongue, beef"}
+{"name": "Говяжья печень", "ndb": "13325", "match": "Beef, variety meats and by-products, liver, raw", "units": {}, "fineli": "786", "fineli_match": "Liver, beef"}
+{"name": "Горох", "ndb": "16085", "match": "Peas, green, split, mature seeds, raw", "units": {}, "fineli": "371", "fineli_match": "Pea, green, dried"}
+{"name": "Горошек замороженный", "ndb": "11312", "match": "PEAS,GRN,FRZ,UNPREP", "units": {}, "fineli": "34229", "fineli_match": "Pea, green, frozen"}
+{"name": "Горошек консервированный", "ndb": "11311", "match": "Peas, green, canned, drained solids, rinsed in tap water", "units": {"шт": 240, "банки": 240}, "note": "без жидкости; шт = банка ≈240 г", "fineli": "34229", "fineli_match": "Pea, green, frozen"}
+{"name": "Горчица", "ndb": "02046", "match": "MUSTARD,PREPARED,YELLOW", "units": {"ст. л.": 15, "ч. л.": 5}, "note": "аналог примерный: русская горчица → yellow prepared mustard", "fineli": "28", "fineli_match": "Mustard"}
+{"name": "Гранат", "ndb": "09286", "match": "Pomegranates, raw", "units": {"шт": 170}, "note": "шт = зёрна одного граната ≈170 г", "fineli": "31555", "fineli_match": "Pomegranate, without skin"}
+{"name": "Грецкие орехи", "ndb": "12155", "match": "Nuts, walnuts, english", "units": {}, "fineli": "376", "fineli_match": "Nut, walnut"}
+{"name": "Гречка", "ndb": "20009", "match": "BUCKWHEAT GROATS,RSTD,DRY", "units": {}, "note": "аналог примерный: гречка ядрица → buckwheat groats, roasted, dry", "fineli": "161", "fineli_match": "Flour, buckwheat, whole or crushed grains"}
+{"name": "Грибы сушёные", "ndb": "11268", "match": "Mushrooms, shiitake, dried", "units": {}, "note": "сушёные белые/лесные → shiitake, dried; аналог примерный", "fineli_note": "сушёных грибов в Fineli нет, только свежие"}
+{"name": "Грибы шиитаке", "ndb": "11238", "match": "Mushrooms, shiitake, raw", "units": {}, "fineli": "11734", "fineli_match": "Shiitake mushroom"}
+{"name": "Грибы эноки", "ndb": "11950", "match": "Mushrooms, enoki, raw", "units": {}, "fineli_note": "эноки в Fineli нет"}
+{"name": "Груша", "ndb": "09252", "match": "Pears, raw", "units": {"шт": 170}, "fineli": "11062", "fineli_match": "Pear, without skin"}
+{"name": "Груши", "ndb": "09252", "match": "Pears, raw", "units": {"шт": 170}, "fineli": "11062", "fineli_match": "Pear, without skin"}
+{"name": "Дрожжи", "ndb": "18375", "match": "Leavening agents, yeast, baker's, active dry", "units": {"ч. л.": 4}, "note": "примерный аналог: сухие активные; в рецептах встречаются и прессованные", "fineli_note": "в Fineli только свежие дрожжи, а в USDA-сопоставлении сухие активные — состав сильно отличается; оставить USDA"}
+{"name": "Желатин", "ndb": "19177", "match": "Gelatins, dry powder, unsweetened", "units": {}, "fineli": "25", "fineli_match": "Gelatin"}
+{"name": "Зелёный лук", "ndb": "11291", "match": "Onions, spring or scallions (includes tops and bulb), raw", "units": {"уп": 30, "стебель": 10, "несколько перьев": 5, "пучок": 30}, "fineli_note": "в Fineli нет зелёного лука/scallion; есть только шнитт-лук (chives) — другой вид, оставить USDA"}
+{"name": "Зира", "ndb": "02014", "match": "Spices, cumin seed", "units": {"ч. л.": 2.1, "щепотка": 0.5}, "fineli_note": "в Fineli нет зиры (кумина); оставить USDA"}
+{"name": "Изюм", "ndb": "09298", "match": "RAISINS,SEEDLESS", "units": {}, "fineli": "428", "fineli_match": "Raisin"}
+{"name": "Имбирь", "ndb": "11216", "match": "Ginger root, raw", "units": {"ч. л.": 4}, "note": "свежий корень, тёртый", "fineli": "33023", "fineli_match": "Ginger root, raw"}
+{"name": "Имбирь молотый", "ndb": "02021", "match": "Spices, ginger, ground", "units": {"ч. л.": 1.8}, "fineli_note": "в Fineli есть Ginger, ground (11186), но без данных о составе"}
+{"name": "Индейка", "ndb": "05710", "match": "TURKEY,RTL PARTS,BREAST,MEAT ONLY,RAW", "units": {}, "note": "филе грудки", "fineli": "11551", "fineli_match": "Turkey breast"}
+{"name": "Йогурт", "ndb": "01116", "match": "Yogurt, plain, whole milk, 8 grams protein per 8 ounce", "units": {"шт": 125}, "note": "примерный аналог: натуральный йогурт из цельного молока; «шт» = стаканчик 125 г", "fineli": "33162", "fineli_match": "Yoghurt, plain, 2.5% fat"}
+{"name": "Кабачок", "ndb": "11477", "match": "Squash, summer, zucchini, includes skin, raw", "units": {"шт": 300}, "fineli": "389", "fineli_match": "Zucchini, summer squash"}
+{"name": "Какао", "ndb": "19165", "match": "COCOA,DRY PDR,UNSWTND", "units": {"ст. л.": 8}, "fineli": "20", "fineli_match": "Cocoa powder, unsweetened"}
+{"name": "Кальмары", "ndb": "15175", "match": "Mollusks, squid, mixed species, raw", "units": {}, "fineli": "865", "fineli_match": "Squid"}
+{"name": "Камбала", "ndb": "15028", "match": "Fish, flatfish (flounder and sole species), raw", "units": {"шт": 250}, "note": "шт = тушка ≈450 г, съедобная часть ≈250 г", "fineli": "820", "fineli_match": "Flounder"}
+{"name": "Каперсы", "ndb": "02054", "match": "Capers, canned", "units": {"ст. л.": 10}, "fineli_note": "каперсов в Fineli нет"}
+{"name": "Капуста", "ndb": "11109", "match": "Cabbage, raw", "units": {}, "fineli": "320", "fineli_match": "White cabbage"}
+{"name": "Капуста белокочанная", "ndb": "11109", "match": "Cabbage, raw", "units": {}, "fineli": "320", "fineli_match": "White cabbage"}
+{"name": "Капуста пекинская", "ndb": "11119", "match": "CABBAGE,CHINESE (PE-TSAI),RAW", "units": {"шт": 900}, "fineli": "359", "fineli_match": "Chinese cabbage"}
+{"name": "Карась", "ndb": "15008", "match": "Fish, carp, raw", "units": {}, "note": "карась → carp; аналог примерный", "fineli_note": "карася/карпа в Fineli нет"}
+{"name": "Кардамон", "ndb": "02006", "match": "Spices, cardamom", "units": {"щепотка": 0.5, "ч. л.": 2}, "fineli_note": "кардамон в Fineli без данных состава (пустые значения)"}
+{"name": "Карп", "ndb": "15008", "match": "Fish, carp, raw", "units": {}, "fineli_note": "карпа в Fineli нет"}
+{"name": "Карри", "ndb": "02015", "match": "CURRY POWDER", "units": {"ч. л.": 2, "ст. л.": 6.3}, "fineli_note": "порошка карри нет, только паста карри (другой продукт)"}
+{"name": "Картофель", "ndb": "11352", "match": "Potatoes, flesh and skin, raw", "units": {"шт": 120}, "fineli": "205", "fineli_match": "Potato, peeled"}
+{"name": "Квас", "ndb": "14305", "match": "Malt beverage, includes non-alcoholic beer", "units": {}, "density": 1.01, "note": "квас → malt beverage/non-alcoholic beer; аналог примерный", "fineli_note": "есть только kalja 9 ккал/1,8 г сахара — заметно менее калорийна, чем квас; остаётся USDA"}
+{"name": "Квашеная капуста", "ndb": "11439", "match": "Sauerkraut, canned, solids and liquids", "units": {}, "note": "аналог примерный: квашеная капуста ≈ Sauerkraut", "fineli": "3204", "fineli_match": "Sour cabbage/sauerkraut"}
+{"name": "Кетчуп", "ndb": "11935", "match": "Catsup", "units": {"ст. л.": 17}, "fineli": "353", "fineli_match": "Tomato ketchup"}
+{"name": "Кефир", "ndb": "01289", "match": "KEFIR,LOWFAT,PLN,LIFEWAY", "units": {}, "density": 1.03, "note": "аналог примерный: кефир → Kefir, lowfat, plain", "override": {"kcal": 53, "prot": 2.9, "fat": 2.5, "carb": 4.0}, "source": "кефир 2,5 % (ГОСТ 31454, маркировка)", "fineli": "34615", "fineli_match": "Gefilus kefir drink, plain, fat 2.5%, 1 ug vitamin d, lactose-free, probiotics"}
+{"name": "Киви", "ndb": "09148", "match": "Kiwifruit, green, raw", "units": {"шт": 75}, "fineli": "11050", "fineli_match": "Kiwi fruit, without skin"}
+{"name": "Кинза", "ndb": "11165", "match": "Coriander (cilantro) leaves, raw", "units": {"уп": 30, "пучок": 30}, "fineli": "34238", "fineli_match": "Coriander, fresh"}
+{"name": "Кокосовая стружка", "ndb": "12108", "match": "Nuts, coconut meat, dried (desiccated), not sweetened", "units": {"ст. л.": 6}, "fineli": "382", "fineli_match": "Coconut flake"}
+{"name": "Кокосовое молоко", "ndb": "12118", "match": "COCONUT MILK,CND (LIQ EXPRESSED FROM GRATED MEAT&H2O)", "units": {}, "density": 1.0, "fineli": "29014", "fineli_match": "Coconut milk"}
+{"name": "Колбаса", "ndb": "07008", "match": "Bologna, beef and pork", "units": {}, "note": "варёная колбаса → Bologna; аналог примерный", "override": {"kcal": 257, "prot": 12.8, "fat": 22.2, "carb": 1.5}, "source": "варёная, докторская (ГОСТ Р 52196, маркировка)", "fineli": "30318", "fineli_match": "Sausage, ring bologna, average"}
+{"name": "Колбаса варёная", "ndb": "07008", "match": "Bologna, beef and pork", "units": {}, "note": "аналог примерный: варёная колбаса ≈ Bologna", "override": {"kcal": 257, "prot": 12.8, "fat": 22.2, "carb": 1.5}, "source": "докторская (ГОСТ Р 52196, маркировка)", "fineli": "30318", "fineli_match": "Sausage, ring bologna, average"}
+{"name": "Колбаса копчёная", "ndb": "07075", "match": "SAUSAGE,SMOKED LINK SAUSAGE,PORK & BF", "units": {}, "note": "аналог примерный: копчёная колбаса → smoked link sausage, pork and beef", "fineli": "30306", "fineli_match": "Salami"}
+{"name": "Колбаски", "ndb": "07075", "match": "Sausage, smoked link sausage, pork and beef", "units": {"шт": 80}, "note": "колбаски → smoked link sausage, pork and beef; аналог примерный", "fineli": "30572", "fineli_match": "Barbeque sausage, average"}
+{"name": "Кориандр", "ndb": "02013", "match": "Spices, coriander seed", "units": {"ч. л.": 2}, "fineli_note": "семян кориандра нет, только свежая зелень"}
+{"name": "Корица", "ndb": "02010", "match": "Spices, cinnamon, ground", "units": {"щепотка": 0.5, "ч. л.": 2.6, "на кончике ножа": 0.3, "ст. л.": 8}, "fineli_note": "в Fineli есть Cinnamon (11184), но без данных состава; оставить USDA"}
+{"name": "Котлеты куриные", "ndb": "05323", "match": "Chicken patty, frozen, uncooked", "units": {"шт": 80}, "note": "котлета → chicken patty, frozen, uncooked; аналог примерный", "fineli_note": "сырых полуфабрикатных куриных котлет нет, только жареные блюда"}
+{"name": "Кофе", "ndb": "14209", "match": "Beverages, coffee, brewed, prepared with tap water", "units": {"ч. л.": 2, "ст. л.": 6}, "density": 1.0, "note": "аналог примерный: мл — заваренный кофе; ложки — молотый/растворимый кофе, состав взят для заваренного", "fineli": "900", "fineli_match": "Coffee, average"}
+{"name": "Крабовые палочки", "ndb": "15138", "match": "Crustaceans, crab, alaska king, imitation, made from surimi", "units": {}, "note": "имитация краба из сурими", "fineli_note": "сурими/крабовых палочек в Fineli нет"}
+{"name": "Крахмал", "ndb": "20027", "match": "Cornstarch", "units": {"ст. л.": 10, "ч. л.": 3}, "note": "примерный аналог: кукурузный вместо картофельного (в базе нет)", "fineli": "162", "fineli_match": "Flour, potato starch, potato flour"}
+{"name": "Креветки", "ndb": "15149", "match": "CRUSTACEANS,SHRIMP,MXD SP,RAW (MAYBE PREVIOUSLY FROZEN)", "units": {}, "fineli": "835", "fineli_match": "Shrimp"}
+{"name": "Кролик", "ndb": "17177", "match": "Game meat, rabbit, domesticated, composite of cuts, raw", "units": {}, "fineli": "737", "fineli_match": "Rabbit"}
+{"name": "Кукуруза консервированная", "ndb": "11172", "match": "CORN,SWT,YEL,CND,WHL KERNEL,DRND SOL", "units": {"шт": 240}, "note": "банка, после слива жидкости", "fineli_note": "консервированной кукурузы нет; 'Sweet corn kernels' 135 ккал — заметно другой состав"}
+{"name": "Кукурузная крупа", "ndb": "08160", "match": "Cereals, corn grits, yellow, regular and quick, unenriched, dry", "units": {"ст. л.": 20}, "fineli": "29822", "fineli_match": "Flour, corn meal, coarsely ground"}
+{"name": "Кунжут", "ndb": "12023", "match": "SESAME SEEDS,WHOLE,DRIED", "units": {"ст. л.": 9, "ч. л.": 3}, "fineli": "385", "fineli_match": "Sesame seed, with hull"}
+{"name": "Кунжутная паста", "ndb": "12698", "match": "Seeds, sesame butter, tahini, type of kernels unspecified", "units": {"ст. л.": 16}, "fineli": "11087", "fineli_match": "Sesame seed paste tahini, without added salt"}
+{"name": "Курага", "ndb": "09032", "match": "Apricots, dried, sulfured, uncooked", "units": {}, "fineli": "409", "fineli_match": "Apricot, dried"}
+{"name": "Куриная печень", "ndb": "05027", "match": "CHICKEN,LIVER,ALL CLASSES,RAW", "units": {}, "fineli": "788", "fineli_match": "Liver, chicken"}
+{"name": "Куриное филе", "ndb": "05062", "match": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw", "units": {}, "fineli": "11565", "fineli_match": "Chicken breast strips without skin"}
+{"name": "Куриные бёдра", "ndb": "05091", "match": "Chicken, broilers or fryers, thigh, meat and skin, raw", "units": {}, "note": "с кожей, сырые, без кости", "fineli": "11563", "fineli_match": "Chicken leg and thigh with skin"}
+{"name": "Куриные голени", "ndb": "05066", "match": "Chicken, broilers or fryers, drumstick, meat and skin, raw", "units": {}, "fineli": "34180", "fineli_match": "Chicken drumstick with skin, raw"}
+{"name": "Куриные крылья", "ndb": "05100", "match": "Chicken, broilers or fryers, wing, meat and skin, raw", "units": {}, "fineli": "30265", "fineli_match": "Chicken wing with skin"}
+{"name": "Куриный фарш", "ndb": "05332", "match": "Chicken, ground, raw", "units": {}, "fineli": "28930", "fineli_match": "Chicken mince"}
+{"name": "Курица целая", "ndb": "05001", "match": "CHICKEN,BROILERS OR FRYERS,MEAT&SKN&GIBLETS&NECK,RAW", "units": {}, "edible": 0.7, "note": "вес тушки с костями; состав на съедобную часть; съедобная часть ~70 %", "fineli": "751", "fineli_match": "Chicken with skin"}
+{"name": "Куркума", "ndb": "02043", "match": "TURMERIC,GROUND", "units": {"ч. л.": 3, "щепотка": 0.5}, "fineli_note": "куркумы в Fineli нет"}
+{"name": "Кускус", "ndb": "20028", "match": "Couscous, dry", "units": {}, "fineli": "29208", "fineli_match": "Couscous"}
+{"name": "Лаваш", "ndb": "18041", "match": "BREAD,PITA,WHITE,ENRICHED", "units": {"уп": 250, "шт": 90}, "note": "аналог примерный: тонкий армянский лаваш → pita, white", "fineli_note": "лаваша/питы в Fineli нет"}
+{"name": "Лавровый лист", "ndb": "02004", "match": "SPICES,BAY LEAF", "units": {"шт": 0.2}, "fineli_note": "лаврового листа в Fineli нет"}
+{"name": "Лайм", "ndb": "09159", "match": "LIMES,RAW", "units": {"шт": 67}, "fineli_note": "лайма в Fineli нет"}
+{"name": "Лапша", "ndb": "20120", "match": "Pasta, dry, enriched", "units": {}, "note": "пшеничная лапша → pasta, dry", "fineli": "121", "fineli_match": "Pasta, spaghetti, macaroni"}
+{"name": "Лапша гречневая", "ndb": "20114", "match": "Noodles, japanese, soba, dry", "units": {}, "fineli_note": "соба в Fineli нет; гречневая мука — другой продукт"}
+{"name": "Лапша рисовая", "ndb": "20133", "match": "Rice noodles, dry", "units": {}, "fineli": "29055", "fineli_match": "Noodle, rice noodle"}
+{"name": "Лапша удон", "ndb": "20116", "match": "Noodles, japanese, somen, dry", "units": {}, "note": "удон → somen, dry (пшеничная лапша); аналог примерный", "fineli": "120", "fineli_match": "Noodle, wheat"}
+{"name": "Лимон", "ndb": "09150", "match": "Lemons, raw, without peel", "units": {"шт": 120}, "fineli": "11048", "fineli_match": "Lemon, without skin"}
+{"name": "Лимонная кислота", "ndb": "14411", "match": "Beverages, water, tap, drinking", "units": {"щепотка": 0.5}, "note": "лимонной кислоты нет в базе; в щепотках пищевая ценность ничтожна — считаем нулём", "fineli_note": "лимонной кислоты в Fineli нет"}
+{"name": "Лосось", "ndb": "15236", "match": "SALMON,ATLANTIC,FARMED,RAW", "units": {}, "fineli": "34255", "fineli_match": "Salmon, farmed"}
+{"name": "Лук зелёный", "ndb": "11291", "match": "Onions, spring or scallions (includes tops and bulb), raw", "units": {"пучок": 40}, "fineli": "392", "fineli_match": "Chives"}
+{"name": "Лук порей", "ndb": "11246", "match": "Leeks, (bulb and lower leaf-portion), raw", "units": {"шт": 150}, "fineli": "337", "fineli_match": "Leek"}
+{"name": "Лук репчатый", "ndb": "11282", "match": "Onions, raw", "units": {"шт": 100}, "fineli": "335", "fineli_match": "Onion"}
+{"name": "Лёд", "ndb": "14411", "match": "Beverages, water, tap, drinking", "units": {"стакан": 150, "несколько кубиков": 30}, "note": "лёд = вода", "fineli": "922", "fineli_match": "Water, tap water"}
+{"name": "Майонез", "ndb": "04025", "match": "Salad dressing, mayonnaise, regular", "units": {"ст. л.": 15}, "note": "примерный аналог: американский майонез regular", "override": {"kcal": 625, "prot": 0.4, "fat": 67.0, "carb": 2.6}, "source": "майонез 67 % (ГОСТ 31761, маркировка)", "fineli": "30925", "fineli_match": "Mayonnaise, 80% fat"}
+{"name": "Майоран", "ndb": "02023", "match": "Spices, marjoram, dried", "units": {"щепотка": 0.5}, "fineli_note": "майорана в Fineli нет"}
+{"name": "Мак", "ndb": "02033", "match": "Spices, poppy seed", "units": {}, "fineli_note": "мака в Fineli нет"}
+{"name": "Макароны", "ndb": "20120", "match": "Pasta, dry, enriched", "units": {}, "note": "сухие", "fineli": "121", "fineli_match": "Pasta, spaghetti, macaroni"}
+{"name": "Манго", "ndb": "09176", "match": "Mangos, raw", "units": {"шт": 250}, "fineli": "34361", "fineli_match": "Mango, without skin"}
+{"name": "Манная крупа", "ndb": "20066", "match": "SEMOLINA,ENRICHED", "units": {"ст. л.": 25}, "note": "аналог примерный: манка → semolina, enriched", "fineli": "112", "fineli_match": "Semolina"}
+{"name": "Маскарпоне", "ndb": "01017", "match": "Cheese, cream", "units": {}, "note": "аналог примерный: маскарпоне ≈ сливочный сыр (Cheese, cream)", "fineli": "34752", "fineli_match": "Cream cheese, mascarpone, 38% fat"}
+{"name": "Масло кунжутное", "ndb": "04058", "match": "OIL,SESAME,SALAD OR COOKING", "units": {"ч. л.": 5, "ст. л.": 17}, "fineli_note": "кунжутного масла в Fineli нет"}
+{"name": "Масло оливковое", "ndb": "04053", "match": "Oil, olive, salad or cooking", "units": {"ст. л.": 17}, "density": 0.92, "fineli": "536", "fineli_match": "Olive oil"}
+{"name": "Масло подсолнечное", "ndb": "04060", "match": "Oil, sunflower, linoleic (less than 60%)", "units": {"ст. л.": 17, "ч. л.": 5}, "density": 0.92, "fineli": "540", "fineli_match": "Sunflower oil"}
+{"name": "Масло сливочное", "ndb": "01145", "match": "Butter, without salt", "units": {}, "fineli": "576", "fineli_match": "Butter, unsalted"}
+{"name": "Масло чили", "ndb": "04582", "match": "Oil, canola", "units": {"ст. л.": 17}, "note": "масло чили → растительное масло; аналог примерный", "fineli": "535", "fineli_match": "Rapeseed oil"}
+{"name": "Мидии", "ndb": "15164", "match": "Mollusks, mussel, blue, raw", "units": {}, "fineli_note": "сырых мидий нет, только консервированные в воде"}
+{"name": "Минтай", "ndb": "15066", "match": "FISH,POLLOCK,ALASKA,RAW (MAY HAVE BEEN PREVIOUSLY FROZEN)", "units": {}, "fineli_note": "минтая нет, есть только сайда (другой вид)"}
+{"name": "Мойва", "ndb": "15099", "match": "Fish, smelt, rainbow, raw", "units": {}, "note": "мойва → smelt, rainbow; аналог примерный", "fineli_note": "мойвы/корюшки в Fineli нет"}
+{"name": "Молоко", "ndb": "01077", "match": "Milk, whole, 3.25% milkfat, with added vitamin D", "units": {"ст. л.": 15}, "density": 1.03, "note": "цельное 3,25 %; российское 2,5–3,2 % — близко", "fineli": "689", "fineli_match": "Milk, 3.5% fat, 1 ug added vitamin d"}
+{"name": "Морковь", "ndb": "11124", "match": "Carrots, raw", "units": {"шт": 80}, "fineli": "300", "fineli_match": "Carrot"}
+{"name": "Моцарелла", "ndb": "01026", "match": "CHEESE,MOZZARELLA,WHL MILK", "units": {}, "fineli": "29239", "fineli_match": "Cheese, mozzarella cheese, 20% fat"}
+{"name": "Мука", "ndb": "20081", "match": "Wheat flour, white, all-purpose, enriched, bleached", "units": {"ст. л.": 10}, "note": "пшеничная мука высшего сорта", "fineli": "110", "fineli_match": "Flour, wheat flour, semi-coarse"}
+{"name": "Мука рисовая", "ndb": "20061", "match": "Rice flour, white, unenriched", "units": {}, "fineli": "182", "fineli_match": "Flour, rice flour, rice flake"}
+{"name": "Мускатный орех", "ndb": "02025", "match": "Spices, nutmeg, ground", "units": {"щепотка": 0.5}, "fineli_note": "мускатного ореха в Fineli нет"}
+{"name": "Мята", "ndb": "02065", "match": "SPEARMINT,FRESH", "units": {"несколько листиков": 1, "ч. л.": 2, "пучок": 30}, "fineli_note": "свежей мяты в Fineli нет"}
+{"name": "Мёд", "ndb": "19296", "match": "Honey", "units": {"ст. л.": 25, "ч. л.": 8}, "density": 1.42, "fineli": "4", "fineli_match": "Honey"}
+{"name": "Нори", "ndb": "11446", "match": "Seaweed, laver, raw", "units": {"уп": 25, "лист": 2.5}, "note": "аналог примерный: Seaweed, laver, raw (сухих листов нори в базе нет); уп ≈ 10 листов", "fineli": "34136", "fineli_match": "Seaweed, nori, dried"}
+{"name": "Нут", "ndb": "16056", "match": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw", "units": {}, "fineli": "31218", "fineli_match": "Chick pea, dried"}
+{"name": "Нут консервированный", "ndb": "16358", "match": "Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained solids", "units": {"шт": 240}, "note": "без жидкости; шт = банка ≈240 г", "fineli": "11089", "fineli_match": "Chick pea in unsalted water"}
+{"name": "Овощная смесь", "ndb": "11583", "match": "Vegetables, mixed, frozen, unprepared", "units": {}, "note": "замороженная смесь", "fineli": "356", "fineli_match": "Mixed vegetables, carrot, cauliflower, pea, bean"}
+{"name": "Овсянка", "ndb": "08120", "match": "Cereals, oats, regular and quick, not fortified, dry", "units": {"ст. л.": 12}, "fineli": "153", "fineli_match": "Oats, rolled, oat flakes"}
+{"name": "Овсяные хлопья", "ndb": "08120", "match": "Cereals, oats, regular and quick, not fortified, dry", "units": {}, "fineli": "153", "fineli_match": "Oats, rolled, oat flakes"}
+{"name": "Огурец", "ndb": "11205", "match": "Cucumber, with peel, raw", "units": {"шт": 110}, "fineli": "346", "fineli_match": "Cucumber"}
+{"name": "Огурцы", "ndb": "11205", "match": "Cucumber, with peel, raw", "units": {"шт": 110}, "fineli": "346", "fineli_match": "Cucumber"}
+{"name": "Огурцы солёные", "ndb": "11941", "match": "PICKLES,CUCUMBER,SOUR", "units": {"шт": 80}, "note": "аналог примерный: солёные огурцы → pickles, cucumber, sour", "fineli": "11072", "fineli_match": "Soured cucumber"}
+{"name": "Оливки", "ndb": "09193", "match": "OLIVES,RIPE,CND (SMALL-EXTRA LRG)", "units": {"шт": 4}, "fineli": "34972", "fineli_match": "Olive, average, without stone, in brine, green"}
+{"name": "Орегано", "ndb": "02027", "match": "SPICES,OREGANO,DRIED", "units": {"щепотка": 0.5, "ч. л.": 1}, "fineli": "11191", "fineli_match": "Oregano, dried"}
+{"name": "Орехи", "ndb": "12155", "match": "Nuts, walnuts, english", "units": {}, "note": "примерный аналог: грецкие орехи для «орехов» без уточнения", "fineli": "376", "fineli_match": "Nut, walnut"}
+{"name": "Паприка", "ndb": "02028", "match": "Spices, paprika", "units": {"ч. л.": 2.3, "ст. л.": 7, "щепотка": 0.5}, "fineli": "11182", "fineli_match": "Paprika powder"}
+{"name": "Пармезан", "ndb": "01033", "match": "Cheese, parmesan, hard", "units": {}, "fineli_note": "в Fineli нет пармезана/твёрдых итальянских сыров; эдам заметно другой; оставить USDA"}
+{"name": "Паста карри", "ndb": "02015", "match": "Spices, curry powder", "units": {"ст. л.": 15, "ч. л.": 5}, "note": "аналог примерный: пасты карри нет, взят порошок карри", "fineli": "33021", "fineli_match": "Spice paste, curry paste, mild, tikka masala"}
+{"name": "Пекинская капуста", "ndb": "11119", "match": "Cabbage, chinese (pe-tsai), raw", "units": {}, "fineli": "359", "fineli_match": "Chinese cabbage"}
+{"name": "Пельмени", "ndb": "32013", "match": "Potsticker or wonton, pork and vegetable, frozen, unprepared", "units": {}, "note": "пельмени → potsticker/wonton, pork, frozen; аналог примерный", "override": {"kcal": 275, "prot": 12.0, "fat": 13.0, "carb": 29.0}, "source": "замороженные пельмени, типичная маркировка", "fineli": "34903", "fineli_match": "Pelmeni, dumpling filled with minced meat"}
+{"name": "Перец", "ndb": "02030", "match": "Spices, pepper, black", "units": {"щепотка": 0.5}, "note": "чёрный молотый", "fineli": "11177", "fineli_match": "Pepper, black pepper"}
+{"name": "Перец белый", "ndb": "02032", "match": "Spices, pepper, white", "units": {"ч. л.": 2.4}, "fineli": "11178", "fineli_match": "Pepper, white pepper"}
+{"name": "Перец болгарский", "ndb": "11821", "match": "Peppers, sweet, red, raw", "units": {"шт": 150}, "fineli": "386", "fineli_match": "Sweet pepper, red"}
+{"name": "Перец чили", "ndb": "11819", "match": "PEPPERS,HOT CHILI,RED,RAW", "units": {"шт": 20}, "fineli": "31557", "fineli_match": "Chili, green, raw"}
+{"name": "Перец чёрный", "ndb": "02030", "match": "PEPPER,BLACK", "units": {"щепотка": 0.5, "ч. л.": 2.3, "ст. л.": 6.9}, "fineli": "11177", "fineli_match": "Pepper, black pepper"}
+{"name": "Перловка", "ndb": "20005", "match": "Barley, pearled, raw", "units": {}, "fineli": "151", "fineli_match": "Barley, pearl"}
+{"name": "Персики", "ndb": "09236", "match": "Peaches, yellow, raw", "units": {"шт": 150}, "fineli": "11051", "fineli_match": "Peach/nectarine, without skin and stone"}
+{"name": "Петрушка", "ndb": "11297", "match": "Parsley, fresh", "units": {"уп": 30, "пучок": 30, "несколько веточек": 3}, "fineli": "333", "fineli_match": "Parsley"}
+{"name": "Печенье", "ndb": "18204", "match": "Cookies, sugar, commercially prepared, regular (includes vanilla)", "units": {"уп": 200}, "note": "аналог примерный: сахарное/ванильное печенье; уп ≈ 200 г", "fineli": "29753", "fineli_match": "Biscuit"}
+{"name": "Плавленый сыр", "ndb": "01253", "match": "Cheese, pasteurized process, American, without added vitamin D", "units": {"шт": 90}, "note": "плавленый сыр → process American; аналог примерный; шт = брикет 90 г", "fineli": "647", "fineli_match": "Processed cheese, 20-24% fat"}
+{"name": "Помидор", "ndb": "11529", "match": "Tomatoes, red, ripe, raw, year round average", "units": {"шт": 120}, "fineli": "352", "fineli_match": "Tomato"}
+{"name": "Помидоры", "ndb": "11529", "match": "Tomatoes, red, ripe, raw, year round average", "units": {"шт": 120}, "fineli": "352", "fineli_match": "Tomato"}
+{"name": "Помидоры черри", "ndb": "11529", "match": "Tomatoes, red, ripe, raw, year round average", "units": {}, "fineli": "352", "fineli_match": "Tomato"}
+{"name": "Пшено", "ndb": "20031", "match": "Millet, raw", "units": {}, "fineli": "160", "fineli_match": "Flour, millet, whole or crushed grains"}
+{"name": "Разрыхлитель", "ndb": "18369", "match": "LEAVENING AGENTS,BAKING PDR,DOUBLE-ACTING,NA AL SULFATE", "units": {"ч. л.": 5}, "fineli": "74", "fineli_match": "Baking powder"}
+{"name": "Редис", "ndb": "11429", "match": "Radishes, raw", "units": {}, "fineli": "308", "fineli_match": "Radish"}
+{"name": "Рикотта", "ndb": "01036", "match": "Cheese, ricotta, whole milk", "units": {}, "fineli_note": "рикотты в Fineli нет; kotijuusto/raejuusto — другой продукт"}
+{"name": "Рис", "ndb": "20044", "match": "Rice, white, long-grain, regular, raw, enriched", "units": {}, "note": "сухой белый", "fineli": "156", "fineli_match": "Rice, white"}
+{"name": "Рисовая лапша", "ndb": "20133", "match": "RICE NOODLES,DRY", "units": {}, "fineli": "29055", "fineli_match": "Noodle, rice noodle"}
+{"name": "Розмарин", "ndb": "02036", "match": "Spices, rosemary, dried", "units": {"щепотка": 0.5}, "fineli_note": "розмарина в Fineli нет"}
+{"name": "Руккола", "ndb": "11959", "match": "Arugula, raw", "units": {}, "fineli": "34159", "fineli_match": "Rocket, arugula"}
+{"name": "Рыбные консервы", "ndb": "15260", "match": "Fish, salmon, pink, canned, drained solids", "units": {"шт": 185}, "note": "аналог примерный: взята горбуша консервированная, без жидкости; шт = банка ≈185 г", "fineli_note": "нет консервированной горбуши/лосося в собственном соку; только лосось в масле (вдвое калорийнее)"}
+{"name": "Сайра консервированная", "ndb": "15048", "match": "Fish, mackerel, jack, canned, drained solids", "units": {"банка": 185}, "note": "сайра → mackerel, jack, canned; аналог примерный", "fineli_note": "сайры и консервированной скумбрии в Fineli нет"}
+{"name": "Салат листовой", "ndb": "11253", "match": "LETTUCE,GRN LEAF,RAW", "units": {"шт": 200, "уп": 100, "лист": 10}, "fineli": "330", "fineli_match": "Lettuce"}
+{"name": "Сало", "ndb": "10165", "match": "Pork, cured, salt pork, raw", "units": {}, "note": "аналог примерный: солёное сало ≈ salt pork", "fineli_note": "оставлен USDA (солёный шпик): в рецептах сало солёное"}
+{"name": "Сардельки", "ndb": "07950", "match": "Frankfurter, meat", "units": {"шт": 100}, "note": "сарделька → frankfurter, meat; аналог примерный", "fineli": "30317", "fineli_match": "Frankfurter, average of industrial products"}
+{"name": "Сахар", "ndb": "19335", "match": "Sugars, granulated", "units": {"ст. л.": 20, "ч. л.": 7}, "fineli": "1", "fineli_match": "Sugar"}
+{"name": "Свиная печень", "ndb": "10110", "match": "Pork, fresh, variety meats and by-products, liver, raw", "units": {}, "fineli": "787", "fineli_match": "Liver, pork"}
+{"name": "Свинина", "ndb": "10187", "match": "Pork, fresh, composite of trimmed retail cuts (leg, loin, shoulder, and spareribs), separable lean and fat, raw", "units": {}, "note": "усреднённые отрубы, сырые", "fineli": "713", "fineli_match": "Pork, average"}
+{"name": "Свиные кости", "ndb": "10088", "match": "Pork, fresh, spareribs, separable lean and fat, raw", "units": {}, "edible": 0.25, "note": "кости для бульона → spareribs, raw; аналог примерный; мясо на костях ~25 %", "fineli_note": "костей нет; siankylki — грудинка, намного жирнее, оставляем USDA"}
+{"name": "Свиные рёбра", "ndb": "10088", "match": "Pork, fresh, spareribs, separable lean and fat, raw", "units": {}, "fineli": "706", "fineli_match": "Pork ribs"}
+{"name": "Свёкла", "ndb": "11080", "match": "BEETS,RAW", "units": {"шт": 200}, "fineli": "305", "fineli_match": "Beetroot, red beet"}
+{"name": "Сгущёнка", "ndb": "01095", "match": "Milk, canned, condensed, sweetened", "units": {"шт": 380, "ст. л.": 25}, "note": "шт = банка 380 г", "fineli_note": "сгущённого молока с сахаром в Fineli нет"}
+{"name": "Сгущённое молоко", "ndb": "01095", "match": "Milk, canned, condensed, sweetened", "units": {"ст. л.": 30}, "fineli_note": "сгущённого молока в Fineli нет"}
+{"name": "Сельдерей", "ndb": "11143", "match": "Celery, raw", "units": {"стебель": 40}, "fineli": "339", "fineli_match": "Celery"}
+{"name": "Сельдь", "ndb": "15039", "match": "Fish, herring, Atlantic, raw", "units": {"шт": 200}, "note": "аналог примерный: в рецептах обычно солёная, взята сырая атлантическая; шт = тушка, съедобная часть ≈200 г", "override": {"kcal": 210, "prot": 17.5, "fat": 15.5, "carb": 0, "na": 2000}, "source": "сельдь слабосолёная, филе — типичная маркировка (в рецептах сельдь солёная)", "fineli": "803", "fineli_match": "Herring, salted"}
+{"name": "Скумбрия", "ndb": "15046", "match": "Fish, mackerel, Atlantic, raw", "units": {"шт": 230}, "note": "шт = тушка ≈350 г, съедобная часть ≈230 г", "fineli_note": "в Fineli только копчёная скумбрия, сырой нет"}
+{"name": "Сливки", "ndb": "01050", "match": "Cream, fluid, light (coffee cream or table cream)", "units": {}, "density": 1.01, "note": "примерный аналог: light cream ~19 %; жирность российских сливок 10–33 %", "fineli": "632", "fineli_match": "Cooking cream, 19% fat"}
+{"name": "Сливы", "ndb": "09279", "match": "Plums, raw", "units": {"шт": 35}, "fineli": "11053", "fineli_match": "Plum, without stone"}
+{"name": "Сметана", "ndb": "01056", "match": "Cream, sour, cultured", "units": {"ст. л.": 20}, "note": "примерный аналог: американская sour cream (~20 %)", "fineli_note": "оставлен USDA (~20 %): финская сметана 10–12 % заметно занижает жир"}
+{"name": "Сода", "ndb": "18372", "match": "LEAVENING AGENTS,BAKING SODA", "units": {"ч. л.": 5, "ст. л.": 14}, "fineli": "31160", "fineli_match": "Baking soda, bicarbonate of soda"}
+{"name": "Соевый соус", "ndb": "16123", "match": "Soy sauce made from soy and wheat (shoyu)", "units": {"ст. л.": 18, "ч. л.": 6}, "density": 1.15, "fineli": "31", "fineli_match": "Soy sauce"}
+{"name": "Сок", "ndb": "09016", "match": "Apple juice, canned or bottled, unsweetened, without added ascorbic acid", "units": {}, "density": 1.04, "note": "аналог примерный: вид сока не указан, взят яблочный", "fineli": "433", "fineli_match": "Apple juice, unsweetened, vitamin c"}
+{"name": "Соль", "ndb": "02047", "match": "Salt, table", "units": {"ч. л.": 7, "щепотка": 0.5, "ст. л.": 25}, "fineli": "79", "fineli_match": "Salt, rock salt, without iodine"}
+{"name": "Сосиски", "ndb": "07950", "match": "FRANKFURTER  MEAT", "units": {"шт": 50}, "note": "аналог примерный: сосиски → frankfurter, meat", "override": {"kcal": 266, "prot": 11.0, "fat": 23.9, "carb": 1.6}, "source": "молочные (ГОСТ Р 52196, маркировка)", "fineli": "30317", "fineli_match": "Frankfurter, average of industrial products"}
+{"name": "Соус чили", "ndb": "06631", "match": "SAUCE,HOT CHILE,SRIRACHA", "units": {"ст. л.": 18}, "note": "аналог примерный: соус чили → sriracha", "fineli_note": "есть только сладкий соус чили, острого (шрирача) нет"}
+{"name": "Спагетти", "ndb": "20120", "match": "Pasta, dry, enriched", "units": {}, "fineli": "121", "fineli_match": "Pasta, spaghetti, macaroni"}
+{"name": "Стручковая фасоль", "ndb": "11052", "match": "BEANS,SNAP,GREEN,RAW", "units": {}, "fineli": "372", "fineli_match": "Bean, green bean, string bean"}
+{"name": "Судак", "ndb": "15064", "match": "Fish, pike, walleye, raw", "units": {}, "note": "судак → walleye (близкий вид)", "fineli": "805", "fineli_match": "Zander, pike-perch"}
+{"name": "Сумах", "ndb": "02028", "match": "Spices, paprika", "units": {"ст. л.": 7}, "note": "сумаха нет → paprika; аналог примерный", "fineli_note": "сумаха нет; паприка — лишь прокси, оставляем USDA"}
+{"name": "Сухари", "ndb": "18079", "match": "BREAD CRUMBS,DRY,GRATED,PLN", "units": {"ст. л.": 10}, "fineli": "126", "fineli_match": "Flour, breadcrumbs"}
+{"name": "Сухари панировочные", "ndb": "18079", "match": "Bread crumbs, dry, grated, plain", "units": {"ст. л.": 8}, "fineli": "126", "fineli_match": "Flour, breadcrumbs"}
+{"name": "Сухарики", "ndb": "18243", "match": "Croutons, seasoned", "units": {"пачка": 40}, "note": "сухарики → croutons, seasoned; аналог примерный", "fineli": "34701", "fineli_match": "Crouton"}
+{"name": "Сыр", "ndb": "01022", "match": "CHEESE,GOUDA", "units": {}, "note": "аналог примерный: твёрдый сыр (российский/голландский) → gouda", "fineli": "643", "fineli_match": "Cheese, hard cheese, edam type, 24-27% fat"}
+{"name": "Сыр плавленый", "ndb": "01048", "match": "Cheese spread, pasteurized process, American", "units": {}, "note": "аналог примерный: плавленый сыр ≈ American cheese spread", "fineli": "647", "fineli_match": "Processed cheese, 20-24% fat"}
+{"name": "Сыр творожный", "ndb": "01017", "match": "CHEESE,CREAM", "units": {}, "note": "аналог примерный: творожный сыр → cream cheese", "fineli": "34764", "fineli_match": "Cream cheese, low-fat, 25% fat, plain, lactose-free"}
+{"name": "Сыр твёрдый", "ndb": "01022", "match": "Cheese, gouda", "units": {"ломтик": 20}, "note": "примерный аналог: гауда вместо российского твёрдого сыра", "fineli": "643", "fineli_match": "Cheese, hard cheese, edam type, 24-27% fat"}
+{"name": "Сычуаньский перец", "ndb": "02030", "match": "Spices, pepper, black", "units": {"ч. л.": 2}, "note": "сычуаньского перца нет → black pepper; аналог примерный", "fineli_note": "сычуаньского перца нет; чёрный перец — лишь прокси, оставляем USDA"}
+{"name": "Тахини", "ndb": "12698", "match": "SESAME BUTTER,TAHINI,KRNLS UNSPEC", "units": {"ст. л.": 15}, "fineli": "11087", "fineli_match": "Sesame seed paste tahini, without added salt"}
+{"name": "Творог", "ndb": "01012", "match": "CHEESE,COTTAGE,CRMD,LRG OR SML CURD", "units": {}, "note": "аналог примерный: творог 5–9% → cottage cheese, creamed", "override": {"kcal": 121, "prot": 17.2, "fat": 5.0, "carb": 1.8, "na": 41}, "source": "творог 5 % (ГОСТ 31453, маркировка): Б/Ж/У и натрий российского продукта; витамины и минералы — от аналога USDA", "fineli": "34592", "fineli_match": "Quark, 2,3% fat, low-lactose"}
+{"name": "Творожный сыр", "ndb": "01017", "match": "Cheese, cream", "units": {}, "note": "творожный сыр → cream cheese; аналог примерный", "fineli": "34764", "fineli_match": "Cream cheese, low-fat, 25% fat, plain, lactose-free"}
+{"name": "Тесто слоёное", "ndb": "18337", "match": "PUFF PASTRY,FRZ,RTB", "units": {}, "fineli_note": "слоёного теста в Fineli нет"}
+{"name": "Тимьян", "ndb": "02042", "match": "Spices, thyme, dried", "units": {"щепотка": 0.5, "ст. л.": 3}, "fineli": "11194", "fineli_match": "Thyme"}
+{"name": "Тмин", "ndb": "02005", "match": "Spices, caraway seed", "units": {"ч. л.": 2}, "fineli_note": "тмина в Fineli нет"}
+{"name": "Томатная паста", "ndb": "11546", "match": "Tomato products, canned, paste, without salt added", "units": {"ст. л.": 30}, "note": "в базе только без соли", "fineli_note": "в Fineli только томатное пюре (85 % воды, 8 г углеводов) — заметно жиже пасты; оставить USDA"}
+{"name": "Томаты консервированные", "ndb": "11531", "match": "Tomatoes, red, ripe, canned, packed in tomato juice", "units": {"шт": 400}, "note": "банка 400 г с соком", "fineli": "398", "fineli_match": "Tomatoes, crushed, canned"}
+{"name": "Тортильи", "ndb": "18364", "match": "TORTILLAS,RTB OR -FRY,FLR,REFR", "units": {"уп": 250, "шт": 48}, "fineli_note": "пшеничных тортилий в Fineli нет"}
+{"name": "Тофу", "ndb": "16126", "match": "TOFU,FIRM,PREP W/CA SULFATE&MAGNESIUM CHLORIDE (NIGARI)", "units": {}, "fineli": "33501", "fineli_match": "Tofu, soya product"}
+{"name": "Тунец", "ndb": "15119", "match": "Fish, tuna, light, canned in oil, drained solids", "units": {"шт": 185}, "note": "консервированный в масле, без жидкости; шт = банка ≈185 г", "fineli": "828", "fineli_match": "Tuna, in oil, canned"}
+{"name": "Тунец консервированный", "ndb": "15121", "match": "Fish, tuna, light, canned in water, drained solids", "units": {"банка": 185}, "fineli": "11067", "fineli_match": "Tuna, in water, canned"}
+{"name": "Тушёнка", "ndb": "13348", "match": "Beef, cured, corned beef, canned", "units": {"шт": 325}, "note": "тушёнка → corned beef, canned; аналог примерный; шт = банка 325 г", "fineli": "741", "fineli_match": "Beef, canned"}
+{"name": "Тушёнка говяжья", "ndb": "13348", "match": "Beef, cured, corned beef, canned", "units": {"шт": 325}, "note": "тушёнка → corned beef, canned; аналог примерный; шт = банка 325 г", "fineli": "741", "fineli_match": "Beef, canned"}
+{"name": "Тыква", "ndb": "11422", "match": "PUMPKIN,RAW", "units": {}, "fineli": "350", "fineli_match": "Pumpkin"}
+{"name": "Тыквенные семечки", "ndb": "12014", "match": "Seeds, pumpkin and squash seed kernels, dried", "units": {}, "fineli": "31211", "fineli_match": "Pumpkin seed"}
+{"name": "Укроп", "ndb": "02045", "match": "Dill weed, fresh", "units": {"уп": 30, "пучок": 30, "несколько веточек": 3}, "fineli": "369", "fineli_match": "Dill, fresh"}
+{"name": "Уксус", "ndb": "02053", "match": "Vinegar, distilled", "units": {"ст. л.": 15, "ч. л.": 5}, "density": 1.01, "note": "столовый (дистиллированный)", "fineli": "933", "fineli_match": "Vinegar"}
+{"name": "Уксус рисовый", "ndb": "02053", "match": "Vinegar, distilled", "units": {"ст. л.": 15}, "density": 1.01, "note": "аналог примерный: рисового уксуса нет, взят столовый (distilled)", "fineli": "933", "fineli_match": "Vinegar"}
+{"name": "Устричный соус", "ndb": "06176", "match": "Sauce, oyster, ready-to-serve", "units": {"ст. л.": 18}, "fineli_note": "устричного соуса в Fineli нет"}
+{"name": "Утка", "ndb": "05139", "match": "Duck, domesticated, meat and skin, raw", "units": {}, "fineli_note": "утки в Fineli нет"}
+{"name": "Фарш", "ndb": "23572", "match": "Beef, ground, 80% lean meat / 20% fat, raw", "units": {}, "note": "аналог примерный: свино-говяжий фарш ≈ говяжий 80/20", "fineli": "711", "fineli_match": "Pork beef mince"}
+{"name": "Фарш говяжий", "ndb": "23572", "match": "Beef, ground, 80% lean meat / 20% fat, raw", "units": {}, "fineli_note": "в Fineli только постный говяжий фарш 7 % или свино-говяжий; USDA 80/20 ближе"}
+{"name": "Фарш куриный", "ndb": "05332", "match": "Chicken, ground, raw", "units": {}, "fineli": "28930", "fineli_match": "Chicken mince"}
+{"name": "Фарш мясной", "ndb": "23572", "match": "Beef, ground, 80% lean meat / 20% fat, raw", "units": {}, "note": "примерный аналог: говяжий фарш 80/20 вместо смешанного свино-говяжьего", "fineli": "711", "fineli_match": "Pork beef mince"}
+{"name": "Фасоль консервированная", "ndb": "16145", "match": "BEANS,KIDNEY,RED,MATURE SEEDS,CND,DRND SOL", "units": {"шт": 240, "банка": 240}, "note": "банка, после слива жидкости", "fineli": "31214", "fineli_match": "Bean, kidney bean, boiled"}
+{"name": "Фасоль сухая", "ndb": "16027", "match": "Beans, kidney, all types, mature seeds, raw", "units": {}, "fineli": "373", "fineli_match": "Bean, brown bean, white bean, average"}
+{"name": "Фунчоза", "ndb": "16082", "match": "Noodles, chinese, cellophane or long rice (mung beans), dehydrated", "units": {}, "fineli_note": "стеклянной лапши (из бобов мунг) в Fineli нет"}
+{"name": "Хлеб", "ndb": "18069", "match": "Bread, white, commercially prepared (includes soft bread crumbs)", "units": {"ломтик": 30, "шт": 50}, "note": "примерный аналог: белый пшеничный хлеб; «шт» принято как булочка/кусок ~50 г", "fineli": "1309", "fineli_match": "White bread, wheat bread, french bread, industrial"}
+{"name": "Хлеб ржаной", "ndb": "18060", "match": "Bread, rye", "units": {"ломтик": 30}, "fineli": "1330", "fineli_match": "Rye bread, water, rye and dark wheat flour"}
+{"name": "Хмели-сунели", "ndb": "02013", "match": "Spices, coriander seed", "units": {"ч. л.": 2}, "note": "аналог примерный: смесь трав, взят кориандр (основной компонент)", "fineli_note": "смеси хмели-сунели и семян кориандра в Fineli нет"}
+{"name": "Хрен", "ndb": "02055", "match": "Horseradish, prepared", "units": {}, "note": "столовый хрен", "fineli": "11589", "fineli_match": "Horseradish"}
+{"name": "Цветная капуста", "ndb": "11135", "match": "CAULIFLOWER,RAW", "units": {}, "fineli": "322", "fineli_match": "Cauliflower"}
+{"name": "Чай", "ndb": "14355", "match": "BEVERAGES,TEA,BLACK,BREWED,PREP W/ TAP H2O", "units": {"ч. л.": 2, "ст. л.": 6, "пакетика": 2}, "note": "аналог примерный: сухого чая нет в базе → заваренный чёрный чай; веса — сухой заварки", "fineli": "901", "fineli_match": "Tea"}
+{"name": "Чеснок", "ndb": "11215", "match": "Garlic, raw", "units": {"зубчик": 5, "головка": 45, "шт": 5}, "note": "«шт» принято как зубчик", "fineli": "393", "fineli_match": "Garlic"}
+{"name": "Чечевица", "ndb": "16069", "match": "LENTILS,RAW", "units": {}, "fineli": "399", "fineli_match": "Lentils, green/brown, dried"}
+{"name": "Шалфей сушёный", "ndb": "02038", "match": "Spices, sage, ground", "units": {"щепотка": 0.5}, "fineli_note": "сушёного шалфея в Fineli нет"}
+{"name": "Шампиньоны", "ndb": "11260", "match": "Mushrooms, white, raw", "units": {"шт": 20}, "fineli": "345", "fineli_match": "Champignon, fresh"}
+{"name": "Шиповник сушёный", "ndb": "35203", "match": "Rose Hips, wild (Northern Plains Indians)", "units": {"ст. л.": 10}, "note": "сушёный шиповник → Rose hips, wild; аналог примерный", "fineli": "33436", "fineli_match": "Rose hip, dried"}
+{"name": "Шоколад", "ndb": "19902", "match": "CHOCOLATE,DK,45- 59% CACAO SOL", "units": {"шт": 100}, "note": "аналог примерный: шоколад без уточнения → dark 45–59%; шт = плитка 100 г", "fineli": "32", "fineli_match": "Chocolate, plain, dark chocolate"}
+{"name": "Шпинат", "ndb": "11457", "match": "SPINACH,RAW", "units": {}, "fineli": "33456", "fineli_match": "Spinach"}
+{"name": "Щавель", "ndb": "11616", "match": "Dock, raw", "units": {}, "note": "Dock (Rumex) — щавель", "fineli_note": "щавеля в Fineli нет"}
+{"name": "Щука", "ndb": "15062", "match": "Fish, pike, northern, raw", "units": {}, "fineli": "813", "fineli_match": "Pike"}
+{"name": "Эстрагон сушёный", "ndb": "02041", "match": "Spices, tarragon, dried", "units": {"ч. л.": 0.6, "ст. л.": 1.8, "щепотка": 0.5}, "fineli_note": "эстрагона в Fineli нет"}
+{"name": "Яблоки", "ndb": "09003", "match": "Apples, raw, with skin", "units": {"шт": 160}, "fineli": "28942", "fineli_match": "Apple, imported, average, with skin"}
+{"name": "Яблоко", "ndb": "09003", "match": "Apples, raw, with skin", "units": {"шт": 160}, "fineli": "11061", "fineli_match": "Apple, imported, without skin"}
+{"name": "Ягоды", "ndb": "09050", "match": "BLUEBERRIES,RAW", "units": {}, "note": "аналог примерный: ягоды без уточнения → blueberries, raw", "fineli": "454", "fineli_match": "Berry, average"}
+{"name": "Ягоды замороженные", "ndb": "09054", "match": "Blueberries, frozen, unsweetened", "units": {}, "note": "ягодная смесь → blueberries, frozen, unsweetened; аналог примерный", "fineli": "454", "fineli_match": "Berry, average"}
+{"name": "Яйца", "ndb": "01123", "match": "Egg, whole, raw, fresh", "units": {"шт": 55}, "fineli": "858", "fineli_match": "Egg without shell"}
