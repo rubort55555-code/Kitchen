@@ -29,8 +29,10 @@ export function mergeBase(base: Recipe[], have: Map<string, Recipe>, seen: Set<s
     if (mine.source !== "base" || sigs[r.id] === s) continue;
     const ms = recipeSig(mine);
     if (ms === s) { sigs[r.id] = s; continue; }
-    // Рецепт в телефоне такой же, каким пришёл из базы в прошлый раз, — значит, человек его не менял
-    if (sigs[r.id] && ms === sigs[r.id]) {
+    // Рецепт в телефоне такой же, каким пришёл из базы в прошлый раз, — значит, человек его не менял.
+    // Подписи нет (рецепт пришёл до этой функции) — рецепт из базы и через редактор не правился
+    // (правка в редакторе делает его «своим», source: manual), значит, тоже обновляем.
+    if (sigs[r.id] ? ms === sigs[r.id] : true) {
       const u: Record<string, unknown> = { ...mine };
       for (const k of KEYS) { if (r[k] === undefined) delete u[k]; else u[k] = r[k]; }
       update.push(u as unknown as Recipe);
