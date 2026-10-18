@@ -10,6 +10,10 @@
 //   = Подача: …                      (необязательно)
 //   = Хранение: …                    (необязательно)
 //   = Совет: …                       (необязательно, можно несколько)
+//   = Выход: …                       (технологическая карта: вес готового блюда и порции)
+//   = Готовность: …                  (технологическая карта: как выглядит и какое на вкус готовое блюдо)
+//   = Ошибка: признак → причина → как исправить   (технологическая карта, можно несколько)
+//   * Название этапа                  (перед шагами этапа: «* Подготовка», «* Тесто», «* Выпечка»)
 // Строки, начинающиеся с //, — комментарии.
 // Название не меняйте: по нему считается id рецепта, с ним связаны избранное, оценки и фото у людей.
 import { existsSync, readFileSync, readdirSync } from "node:fs";
@@ -26,7 +30,7 @@ function hashId(s) {
 }
 
 // Строки «= Ключ: значение» → поля рецепта
-const EXTRA = { "активно": "active", "посуда": "tools", "подача": "serve", "хранение": "keep", "совет": "tips" };
+const EXTRA = { "активно": "active", "посуда": "tools", "подача": "serve", "хранение": "keep", "совет": "tips", "выход": "out", "готовность": "done", "ошибка": "fixes" };
 
 export function parseRecipeText(text, file = "") {
   const out = [], errors = [];
@@ -37,14 +41,15 @@ export function parseRecipeText(text, file = "") {
     const head = lines[0];
     if (!head.startsWith("#")) { errors.push(`${file}: ожидался заголовок «# …», а пришло: ${head.slice(0, 60)}`); continue; }
     const [name, kind, minutes, servings, tags, cuisine] = head.slice(1).split("|").map((x) => (x || "").trim());
-    const ingredients = [], steps = [], extra = { tips: [] };
+    const ingredients = [], steps = [], stages = [], extra = { tips: [], fixes: [] };
     for (const l of lines.slice(1)) {
       if (l.startsWith("-")) { steps.push(l.replace(/^-\s*/, "")); continue; }
+      if (l.startsWith("*")) { stages.push({ t: l.replace(/^\*\s*/, ""), i: steps.length }); continue; }
       if (l.startsWith("=")) {
         const m = l.match(/^=\s*([^:]+):\s*(.+)$/);
         const key = m && EXTRA[m[1].trim().toLowerCase()];
         if (!key) { errors.push(`${file}: «${name}» — непонятная строка «${l.slice(0, 40)}»`); continue; }
-        if (key === "tips") extra.tips.push(m[2].trim());
+        if (key === "tips" || key === "fixes") extra[key].push(m[2].trim());
         else if (key === "active") extra.active = Number(m[2].replace(/[^\d]/g, "")) || undefined;
         else extra[key] = m[2].trim();
         continue;
@@ -64,8 +69,11 @@ export function parseRecipeText(text, file = "") {
       ingredients, steps, source: "base",
     };
     if (extra.active) r.active = extra.active;
-    for (const k of ["tools", "serve", "keep"]) if (extra[k]) r[k] = extra[k];
+    for (const k of ["tools", "serve", "keep", "out", "done"]) if (extra[k]) r[k] = extra[k];
     if (extra.tips.length) r.tips = extra.tips;
+    if (extra.fixes.length) r.fixes = extra.fixes;
+    if (stages.length) r.stages = stages;
+    if (stages.some((s, k) => s.i >= steps.length || (k > 0 && s.i <= stages[k - 1].i))) errors.push(`${file}: «${name}» — пустой этап`);
     if (r.active && r.minutes && r.active > r.minutes) errors.push(`${file}: «${name}» — активное время больше общего`);
     if (cuisine) {
       if (CUISINES.includes(cuisine)) r.cuisine = cuisine;
