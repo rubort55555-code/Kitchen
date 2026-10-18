@@ -148,7 +148,7 @@ export function RecipeView({ id }: { id: string }) {
     <Sheet title="Рецепт" left={<button className="x l" aria-label={r.fav ? "Убрать из избранного" : "В избранное"} onClick={() => saveRecipes([{ ...r, fav: !r.fav }])}>{r.fav ? "★" : "☆"}</button>}>
       {r.photo && <img className="dphoto" src={r.photo} alt={r.name} />}
       <h2 style={{ marginTop: 10 }}>{r.name}</h2>
-      <p className="muted mt0">{[r.minutes && `${r.minutes} мин`, r.servings && `${r.servings} порц.`, r.kind, cuisineOf(r) + " кухня"].filter(Boolean).join(" · ")}{r.source === "claude" ? " · от Claude" : r.source === "old" ? " · из «Что приготовить»" : ""}</p>
+      <p className="muted mt0">{[r.minutes && (r.active && r.active < r.minutes ? `${r.minutes} мин (у плиты ${r.active})` : `${r.minutes} мин`), r.servings && `${r.servings} порц.`, r.kind, cuisineOf(r) + " кухня"].filter(Boolean).join(" · ")}{r.source === "claude" ? " · от Claude" : r.source === "old" ? " · из «Что приготовить»" : ""}</p>
       {r.why && <p>{r.why}</p>}
       {c.issues.map((i, k) => (
         <div key={k} className={"issue" + (i.rule.level === "little" && c.verdict !== "hidden" ? " little" : "")}>
@@ -193,7 +193,16 @@ export function RecipeView({ id }: { id: string }) {
       {r.steps.length > 0 && (
         <>
           <h3 style={{ marginTop: 16 }}>Как готовить</h3>
+          {r.tools && <p className="small"><b>Посуда:</b> {r.tools}</p>}
           <ol className="steps">{r.steps.map((s, k) => <li key={k}>{s}</li>)}</ol>
+        </>
+      )}
+      {r.serve && <p><b>Подача.</b> {r.serve}</p>}
+      {r.keep && <p><b>Хранение.</b> {r.keep}</p>}
+      {r.tips && r.tips.length > 0 && (
+        <>
+          <h3 style={{ marginTop: 16 }}>Советы</h3>
+          <ul className="steps">{r.tips.map((s, k) => <li key={k}>{s}</li>)}</ul>
         </>
       )}
       <h3 style={{ marginTop: 16 }}>Моя оценка</h3>

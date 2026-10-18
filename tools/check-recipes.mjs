@@ -44,6 +44,7 @@ const compiled = L.compileRules(L.DEFAULT_RULES, [], []);
 const problems = [...errors];
 const unknown = new Map();
 const names = new Map();
+let detailed = 0;
 
 for (const r of recipes) {
   const where = `«${r.name}»`;
@@ -66,12 +67,26 @@ for (const r of recipes) {
     }
   }
   for (const s of r.steps) if (s.length < 8) problems.push(`${where}: слишком короткий шаг «${s}»`);
+  // Переписанные (подробные) рецепты: шагов не меньше четырёх, каждый продукт упомянут в шагах, есть подача
+  if (r.tools) {
+    detailed++;
+    // Простым блюдам без готовки хватает трёх шагов
+    if (r.steps.length < (r.active > 10 ? 4 : 3)) problems.push(`${where}: в подробном рецепте мало шагов (${r.steps.length})`);
+    if (!r.active) problems.push(`${where}: в подробном рецепте нет активного времени («= Активно:»)`);
+    if (!r.serve) problems.push(`${where}: в подробном рецепте нет подачи («= Подача:»)`);
+    const text = L.norm(r.steps.join(" ") + " " + (r.serve || ""));
+    for (const i of r.ingredients) {
+      const words = L.norm(i.name).split(/[^а-яa-z]+/).filter((w) => w.length > 2);
+      if (words.length && !words.some((w) => text.includes(w.slice(0, Math.max(3, w.length - 2))))) problems.push(`${where}: «${i.name}» не упомянут в шагах`);
+    }
+  }
 }
 
 const byKind = new Map();
 for (const r of recipes) byKind.set(r.kind || "?", (byKind.get(r.kind || "?") || 0) + 1);
 console.log(`Рецептов: ${recipes.length}`);
 console.log([...byKind].map(([k, n]) => `${k}: ${n}`).join(" · "));
+console.log(`Подробных (переписанных): ${detailed}`);
 
 if (unknown.size) {
   const list = [...unknown].sort((a, b) => b[1] - a[1]);

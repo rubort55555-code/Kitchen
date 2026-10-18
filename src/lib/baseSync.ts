@@ -3,7 +3,7 @@
 import type { Recipe } from "./types";
 
 /** Поля рецепта, которые приходят из базы. Избранное, оценка, фото, заметка и история — личные, их не трогаем. */
-const KEYS = ["name", "kind", "minutes", "servings", "tags", "ingredients", "steps", "cuisine"] as const;
+const KEYS = ["name", "kind", "minutes", "servings", "tags", "ingredients", "steps", "cuisine", "active", "tools", "serve", "keep", "tips"] as const;
 
 /** Подпись содержимого рецепта: по ней видно, менялся ли рецепт. */
 export function recipeSig(r: Recipe): string {

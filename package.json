@@ -8,6 +8,7 @@
     "build": "node build.mjs",
     "check": "tsc --noEmit -p tsconfig.json",
     "check-recipes": "node tools/check-recipes.mjs",
+    "rewrite": "node tools/rewrite.mjs",
     "android": "node build.mjs && cap sync android",
     "ios": "node build.mjs && cap sync ios"
   },
