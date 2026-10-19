@@ -1,6 +1,7 @@
 // «Меню на неделю»: дни × приёмы пищи; заполнить вручную, из своих рецептов или с Claude.
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { Sheet } from "../components/ui";
+import { NO_FILTERS, RecipeFilters, filterRecipes, kindOf, type Filters } from "../components/RecipeFilters";
 import { setSettings, useStore } from "../lib/store";
 import { addEntry, autoFill, dayShort, dayTitle, entriesFor, pruneOld, recipesInPlan, removeEntry, restorePlan, toggleDone, weekDays } from "../lib/plan";
 import { addMany, missingFor, restoreShop, shopList } from "../lib/shop";
@@ -110,15 +111,20 @@ export function PickSheet({ date, slot }: { date: string; slot: Slot }) {
   const st = useStore((s) => s);
   const [q, setQ] = useState("");
   const [free, setFree] = useState("");
-  const rows = useMemo(() => {
+  const [limit, setLimit] = useState(50);
+  const ok = useMemo(() => {
     const compiled = compileRules(st.settings.rules, st.settings.customCatalog, st.settings.members);
     const who = st.settings.members.map((m) => m.id);
+    const nq = norm(q);
     return st.recipes
       .filter((r) => checkRecipe(r, compiled, who).verdict !== "hidden")
-      .map((r) => ({ r, s: recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog) }))
-      .filter((x) => !q.trim() || norm(x.r.name).includes(norm(q)))
-      .sort((a, b) => b.s.urgent - a.s.urgent || b.s.percent - a.s.percent);
+      .filter((r) => !nq || norm(r.name).includes(nq) || r.ingredients.some((i) => norm(i.name).includes(nq)))
+      .map((r) => ({ r, st: recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog) }))
+      .sort((a, b) => b.st.urgent - a.st.urgent || b.st.percent - a.st.percent);
   }, [st, q]);
+  // На завтрак сразу показываем завтраки, если они есть; фильтр можно сбросить
+  const [flt, setFlt] = useState<Filters>(() => (slot === "завтрак" && st.recipes.some((r) => kindOf(r) === "завтрак") ? { ...NO_FILTERS, kind: "завтрак" } : NO_FILTERS));
+  const rows = filterRecipes(ok, flt);
   const pick = (name: string, id?: string) => { addEntry(date, slot, name, id); closeSheet(); toast(`${cap(slot)}, ${dayTitle(date).toLowerCase()}: ${name}`); };
   return (
     <Sheet title={`${cap(slot)} · ${dayTitle(date)}`}>
@@ -128,7 +134,12 @@ export function PickSheet({ date, slot }: { date: string; slot: Slot }) {
         <div><button className="btn" disabled={!free.trim()} onClick={() => pick(free.trim())}>Готово</button></div>
       </div>
       <label className="f">Или выберите из рецептов</label>
-      {st.recipes.length > 6 && <input className="inp search" type="search" value={q} onChange={(e: any) => setQ(e.target.value)} placeholder="Поиск" aria-label="Поиск рецепта" />}
+      {st.recipes.length > 6 && (
+        <>
+          <input className="inp search" type="search" value={q} onChange={(e: any) => { setQ(e.target.value); setLimit(50); }} placeholder="Поиск по названию или продукту" aria-label="Поиск рецепта" />
+          <RecipeFilters ok={ok} value={flt} onChange={(v) => { setFlt(v); setLimit(50); }} />
+        </>
+      )}
       {rows.length === 0 ? (
         <div className="empty">
           <p>{st.recipes.length ? "Ничего не нашлось." : "Рецептов пока нет. Спросите Claude — он подберёт блюда, и они появятся здесь."}</p>
@@ -136,13 +147,14 @@ export function PickSheet({ date, slot }: { date: string; slot: Slot }) {
         </div>
       ) : (
         <div className="list" style={{ background: "var(--card2)" }}>
-          {rows.slice(0, 50).map(({ r, s }) => (
+          {rows.slice(0, limit).map(({ r, st: s }) => (
             <button key={r.id} className="li" style={{ background: "var(--card2)" }} onClick={() => pick(r.name, r.id)}>
               <span className="ico">{r.fav ? "⭐" : "🍳"}</span>
               <div className="main"><div className="name">{r.name}</div><div className="meta">{r.minutes ? `${r.minutes} мин · ` : ""}{s.missing.length ? `нет: ${s.missing.slice(0, 2).map((x) => x.name.toLowerCase()).join(", ")}` : "всё есть"}{s.urgent ? " · спасёт продукты" : ""}</div></div>
               <span className={"pct" + (s.percent === 100 ? " full" : "")}>{s.percent}%</span>
             </button>
           ))}
+          {rows.length > limit && <button className="btn sec" onClick={() => setLimit(limit + 50)}>Показать ещё ({rows.length - limit})</button>}
         </div>
       )}
     </Sheet>
