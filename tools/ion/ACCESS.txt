@@ -26,3 +26,27 @@
 Network access) добавить web.ion.ru в Allowed domains (или выбрать более широкий уровень),
 начать НОВУЮ сессию и повторить проверку.
 Документация: https://code.claude.com/docs/en/cloud-environments#network-access
+
+----------------------------------------------------------------------
+Повторная проверка: 2026-10-20 (UTC), новая сессия
+
+Итог: сайт по-прежнему НЕДОСТУПЕН, состав не собирался.
+
+  curl -s -o /dev/null -w "%{http_code}" http://web.ion.ru/food/FD_tree_grid.aspx   -> 000
+      ("Could not resolve host: web.ion.ru" — HTTP мимо прокси, DNS в контейнере нет)
+  curl -x $HTTPS_PROXY http://web.ion.ru/food/FD_tree_grid.aspx                     -> 405
+      (прокси принимает только CONNECT)
+  curl -s -o /dev/null -w "%{http_code}" https://web.ion.ru/food/FD_tree_grid.aspx  -> 000
+      ("CONNECT tunnel failed, response 403")
+  https://www.ion.ru/                                                               -> 000 (CONNECT 403)
+  https://example.com (контроль)                                                    -> 000 (CONNECT 403)
+
+/__agentproxy/status: recentRelayFailures = connect_rejected для web.ion.ru:443,
+www.ion.ru:443 и example.com:443.
+
+Вывод: шлюз отклоняет даже example.com, т. е. у окружения ограниченный сетевой доступ,
+и web.ion.ru в список разрешённых для этой сессии не попал (изменение не применилось
+либо сделано в другом окружении). Нужно проверить Network access именно у окружения
+этой сессии (меню окружения в заголовке -> Edit), добавить web.ion.ru (и www.ion.ru),
+затем начать новую сессию. Если сайт отдаёт страницы только по HTTP (порт 80),
+через прокси окружения (только CONNECT) он может остаться недоступен и после этого.
