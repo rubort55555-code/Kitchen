@@ -1,4 +1,4 @@
-// «Меню на неделю»: дни × приёмы пищи; заполнить вручную, из своих рецептов или с Claude.
+// «Меню»: на один день или на неделю — дни × приёмы пищи; заполнить вручную, из своих рецептов или с Claude.
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { Sheet } from "../components/ui";
 import { NO_FILTERS, RecipeFilters, filterRecipes, kindOf, type Filters } from "../components/RecipeFilters";
@@ -16,15 +16,19 @@ export function Menu() {
   const st = useStore((s) => s);
   const slots = st.settings.planSlots?.length ? st.settings.planSlots : (["обед", "ужин"] as Slot[]);
   const [offset, setOffset] = useState(0);
-  // Неделя — это ближайшие 7 дней, начиная с сегодня (в воскресенье не нужно ждать понедельника)
-  const start = addDays(ymd(), offset * 7);
-  const days = weekDays(start);
+  // Меню на один день (выбранный из ближайших 7) или на неделю
+  const [mode, setMode] = useState<"day" | "week">("week");
   const today = ymd();
+  const [day, setDay] = useState(today);
+  // Неделя — это ближайшие 7 дней, начиная с сегодня (в воскресенье не нужно ждать понедельника)
+  const start = mode === "day" ? today : addDays(today, offset * 7);
+  const week = weekDays(start);
+  const days = mode === "day" ? [day] : week;
   const plan = st.settings.plan || [];
   useEffect(() => { pruneOld(); }, []);
-  const inWeek = plan.filter((e) => e.date >= start && e.date <= days[6]);
+  const inWeek = plan.filter((e) => days.includes(e.date));
   const future = days.filter((d) => d >= today);
-  const missing = useMemo(() => missingFor(recipesInPlan(future)), [plan, st.products, st.recipes, offset]);
+  const missing = useMemo(() => missingFor(recipesInPlan(future)), [plan, st.products, st.recipes, offset, mode, day]);
 
   function toggleSlot(s: Slot) {
     const next = slots.includes(s) ? slots.filter((x) => x !== s) : SLOTS.filter((x) => x === s || slots.includes(x));
@@ -32,9 +36,9 @@ export function Menu() {
   }
   function fill() {
     const before = plan;
-    const r = autoFill(start, slots);
+    const r = autoFill(start, slots, mode === "day" ? day : undefined);
     if (r.noRecipes) toast("Сначала сохраните несколько рецептов (например, через «Спросить Claude»).");
-    else if (!r.added) toast("Свободных мест нет или нет подходящих рецептов.");
+    else if (!r.added) toast(mode === "day" && day < today ? "Этот день уже прошёл." : "Свободных мест нет или нет подходящих рецептов.");
     else {
       // Недостающее для новых блюд сразу уходит в список покупок (отмена вернёт и меню, и список)
       const shopBefore = shopList();
@@ -44,25 +48,36 @@ export function Menu() {
   }
   function clearWeek() {
     const before = plan;
-    restorePlan(plan.filter((e) => !(e.date >= start && e.date <= days[6])));
-    toast("Меню недели очищено", () => restorePlan(before));
+    restorePlan(plan.filter((e) => !days.includes(e.date)));
+    toast(mode === "day" ? "Меню дня очищено" : "Меню недели очищено", () => restorePlan(before));
   }
 
-  const range = `${parseYmd(days[0]).getDate()}.${String(parseYmd(days[0]).getMonth() + 1).padStart(2, "0")} — ${parseYmd(days[6]).getDate()}.${String(parseYmd(days[6]).getMonth() + 1).padStart(2, "0")}`;
+  const dm = (d: string) => `${parseYmd(d).getDate()}.${String(parseYmd(d).getMonth() + 1).padStart(2, "0")}`;
+  const range = `${dm(week[0])} — ${dm(week[6])}`;
   return (
     <>
-      <div className="chips">
-        <button className="chip" aria-pressed={offset === 0} onClick={() => setOffset(0)}>Ближайшие 7 дней</button>
-        <button className="chip" aria-pressed={offset === 1} onClick={() => setOffset(1)}>Следующие</button>
-        <span className="muted small" style={{ alignSelf: "center", marginLeft: "auto" }}>{range}</span>
+      <div className="chips" role="group" aria-label="На сколько дней">
+        <button className="chip" aria-pressed={mode === "day"} onClick={() => setMode("day")}>На день</button>
+        <button className="chip" aria-pressed={mode === "week"} onClick={() => setMode("week")}>На неделю</button>
       </div>
+      {mode === "week" ? (
+        <div className="chips">
+          <button className="chip" aria-pressed={offset === 0} onClick={() => setOffset(0)}>Ближайшие 7 дней</button>
+          <button className="chip" aria-pressed={offset === 1} onClick={() => setOffset(1)}>Следующие</button>
+          <span className="muted small" style={{ alignSelf: "center", marginLeft: "auto" }}>{range}</span>
+        </div>
+      ) : (
+        <div className="chips scroll" role="group" aria-label="День">
+          {week.map((d, i) => <button key={d} className="chip" aria-pressed={day === d} onClick={() => setDay(d)}>{i === 0 ? "Сегодня" : i === 1 ? "Завтра" : `${dayShort(d)} ${dm(d)}`}</button>)}
+        </div>
+      )}
       <div className="chips" role="group" aria-label="Что планируем">
         {SLOTS.map((s) => <button key={s} className="chip" aria-pressed={slots.includes(s)} onClick={() => toggleSlot(s)}>{cap(s)}</button>)}
         <button className="chip" aria-pressed={st.settings.planDessert !== false} onClick={() => setSettings({ planDessert: st.settings.planDessert === false })}>Десерт</button>
       </div>
       <div className="row2" style={{ marginTop: 6 }}>
         <button className="btn sec" onClick={fill}>Заполнить из моих рецептов</button>
-        <button className="btn sec" onClick={() => openSheet({ kind: "ask", week: start })}>✨ Составить с Claude</button>
+        <button className="btn sec" onClick={() => openSheet(mode === "day" ? { kind: "ask", week: day, day } : { kind: "ask", week: start })}>✨ Составить с Claude</button>
       </div>
       {missing.length > 0 && (
         <div className="banner">
@@ -101,7 +116,7 @@ export function Menu() {
           })}
         </div>
       ))}
-      {inWeek.length > 0 && <button className="link" style={{ color: "var(--bad)" }} onClick={clearWeek}>Очистить меню на эти 7 дней</button>}
+      {inWeek.length > 0 && <button className="link" style={{ color: "var(--bad)" }} onClick={clearWeek}>{mode === "day" ? "Очистить меню на этот день" : "Очистить меню на эти 7 дней"}</button>}
     </>
   );
 }

@@ -38,7 +38,7 @@ export function Recipes() {
       <div className="screen">
         <Header title="Меню" screen="menu" />
         <Tip id="recipes-cook">Откройте рецепт: «Готовить по шагам» — крупные шаги и таймеры, «Приготовили» — продукты спишутся со склада.</Tip>
-      <Seg label="Раздел" value={view} onChange={setRecipesView} options={[{ v: "list", t: "Рецепты" }, { v: "menu", t: "Меню на неделю" }]} />
+      <Seg label="Раздел" value={view} onChange={setRecipesView} options={[{ v: "list", t: "Рецепты" }, { v: "menu", t: "Меню" }]} />
         <Menu />
       </div>
     );
@@ -46,7 +46,7 @@ export function Recipes() {
   return (
     <div className="screen">
       <Header title="Рецепты" screen="recipes" />
-      <Seg label="Раздел" value={view} onChange={setRecipesView} options={[{ v: "list", t: "Рецепты" }, { v: "menu", t: "Меню на неделю" }]} />
+      <Seg label="Раздел" value={view} onChange={setRecipesView} options={[{ v: "list", t: "Рецепты" }, { v: "menu", t: "Меню" }]} />
       <button className="btn" style={{ marginTop: 10 }} onClick={() => openSheet({ kind: "ask" })}>✨ Спросить Claude: что приготовить</button>
       <button className="btn sec" onClick={() => openSheet({ kind: "recipeNew" })}>➕ Свой рецепт: написать, вставить, сфотографировать</button>
       {recipes.length === 0 ? (

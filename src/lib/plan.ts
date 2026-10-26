@@ -1,4 +1,4 @@
-// Меню на неделю: дни, приёмы пищи, автозаполнение из своих рецептов, запрос к Claude.
+// Меню на день или неделю: дни, приёмы пищи, автозаполнение из своих рецептов, запрос к Claude.
 import type { PlanEntry, Recipe, Slot } from "./types";
 import { SLOTS } from "./types";
 import { getState, saveRecipes, setSettings } from "./store";
@@ -98,8 +98,9 @@ function fitsSlot(r: Recipe, slot: Slot): boolean {
 /**
  * Заполняет пустые места недели своими рецептами (без интернета).
  * Сначала — блюда, которые спасают продукты и для которых почти всё есть; без повторов.
+ * only — заполнить только этот день (баланс по-прежнему считается по неделе, начиная со start).
  */
-export function autoFill(start: string, slots: Slot[]): { added: number; noRecipes: boolean } {
+export function autoFill(start: string, slots: Slot[], only?: string): { added: number; noRecipes: boolean } {
   const st = getState();
   const compiled = compileRules(st.settings.rules, st.settings.customCatalog, st.settings.members);
   const who = st.settings.members.map((m) => m.id);
@@ -113,7 +114,7 @@ export function autoFill(start: string, slots: Slot[]): { added: number; noRecip
   if (!ok.length) return { added: 0, noRecipes: true };
   const byId = new Map(ok.map((x) => [x.r.id, x]));
   const plan = [...planList()];
-  const days = weekDays(start);
+  const days = only ? [only] : weekDays(start);
   const used = new Set(plan.filter((e) => e.date >= start && e.date <= addDays(start, 6)).map((e) => e.recipeId));
   const dayMs = 86400000;
 
@@ -232,10 +233,10 @@ export function weekPromptPart(days: string[], slots: Slot[]): string {
   const list = days.map((d) => `${dayShort(d)} ${parseYmd(d).getDate()}.${String(parseYmd(d).getMonth() + 1).padStart(2, "0")}`).join(", ");
   return [
     `Составь меню на ${days.length} ${days.length === 1 ? "день" : days.length < 5 ? "дня" : "дней"} (${list}): ${slots.join(", ")}.`,
-    "Блюда не должны повторяться чаще двух раз за неделю. Остатки можно использовать на следующий день.",
+    days.length === 1 ? "Блюда за день не должны повторяться: на обед и ужин — разные основные блюда с разным белком." : "Блюда не должны повторяться чаще двух раз за неделю. Остатки можно использовать на следующий день.",
     "Рацион должен быть сбалансированным: на обед и ужин — полноценное основное блюдо или суп с белком (мясо, птица, рыба, яйца, творог, бобовые), белок чередуй по дням; салат — только как дополнение к основному блюду, не вместо него.",
     "Если для блюда не хватает 1–2 продуктов, это нормально — их докупят.",
-    "Сначала используй то, что скоро испортится; в конце недели — то, что хранится долго.",
+    days.length === 1 ? "Сначала используй то, что скоро испортится." : "Сначала используй то, что скоро испортится; в конце недели — то, что хранится долго.",
     "В конце дай блок JSON строго в таком виде (между ```json и ```):",
     "```json",
     '{"week":[{"day":1,"slot":"ужин","name":"Название","minutes":30,"servings":2,"kind":"ужин","ingredients":[{"name":"Молоко","amount":"200 мл"}],"steps":["Шаг 1"]}]}',

@@ -33,7 +33,7 @@ function SheetView({ s }: { s: Sheet }) {
     case "add": return <AddProduct />;
     case "product": return <ProductSheet id={s.id} />;
     case "help": return <HelpSheet screen={s.screen} />;
-    case "ask": return <AskClaude week={s.week} />;
+    case "ask": return <AskClaude week={s.week} day={s.day} />;
     case "pick": return <PickSheet date={s.date} slot={s.slot} />;
     case "buy": return <BuySheet />;
     case "recipe": return <RecipeView id={s.id} />;
