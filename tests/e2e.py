@@ -287,7 +287,7 @@ with sync_playwright() as p:
     def prod(i, name, qty, unit, price):
         return {"id": i, "name": name, "qty": qty, "initialQty": qty, "unit": unit, "place": "Холодильник", "bought": today, "until": None, "price": price, "opened": None, "createdAt": 1}
     seed_products = [prod("e", "Яйца", 10, "шт", 100), prod("m", "Молоко", 1, "л", 80), prod("b", "Масло сливочное", 180, "г", 180)]
-    seed_recipe = {"id": "r1", "name": "Омлет с сыром", "servings": 2, "kind": "завтрак", "minutes": 12, "source": "base", "createdAt": 1,
+    seed_recipe = {"id": "r1", "name": "Омлет с сыром", "servings": 2, "kind": "завтрак", "minutes": 12, "source": "manual", "createdAt": 1,
                    "ingredients": [{"name": "Яйца", "amount": "4 шт"}, {"name": "Молоко", "amount": "100 мл"}, {"name": "Соль", "amount": "щепотка"},
                                    {"name": "Масло сливочное", "amount": "10 г"}, {"name": "Сыр твёрдый", "amount": "60 г"}],
                    "steps": ["Взбейте яйца с молоком.", "Пожарьте под крышкой."]}

@@ -5,7 +5,7 @@ import type { CatalogItem, LogEntry, Place, Product, Reason, Recipe, Settings, U
 import { DEFAULT_RULES } from "./exclusions";
 import { norm, uid, ymd, addDays, daysLeft } from "./util";
 import { findCatalog, setCatalog } from "./catalog";
-import { mergeBase } from "./baseSync";
+import { mergeBase, staleBase } from "./baseSync";
 import { fetchSite, isNative, SITE } from "./native";
 import { convert } from "./units";
 
@@ -314,6 +314,17 @@ export async function seedBase() {
       ? [{ f: null, h: "", n: index.length, data: index }]
       : index && Array.isArray(index.parts) ? index.parts : [];
     if (!parts.length) return;
+    // Рецепты, которых больше нет в базе, убираем (личное и то, что в меню, остаётся)
+    if (!Array.isArray(index) && Array.isArray(index.ids) && index.ids.length && index.ids.length === index.total) {
+      const sigs0 = (await db.getKv<Record<string, string>>("baseSigs")) || {};
+      const keep = new Set(state.settings.plan.flatMap((e) => [e.recipeId, e.side?.id, e.sweet?.id]).filter((x): x is string => !!x));
+      const gone = staleBase(state.recipes, new Set<string>(index.ids), sigs0, keep);
+      if (gone.length && !stale()) {
+        await db.apply([{ store: "recipes", del: gone }]);
+        const g = new Set(gone);
+        set({ recipes: state.recipes.filter((r) => !g.has(r.id)) });
+      }
+    }
     const doneParts = new Set((await db.getKv<string[]>("baseParts")) || []);
     const todo = parts.filter((p) => !p.h || !doneParts.has(p.h));
     if (!todo.length) return;
