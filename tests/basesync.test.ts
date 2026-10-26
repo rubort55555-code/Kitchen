@@ -1,5 +1,5 @@
 // Проверка обновления встроенных рецептов: node node_modules/.bin/tsx tests/basesync.test.ts
-import { mergeBase, recipeSig } from "../src/lib/baseSync";
+import { mergeBase, recipeSig, staleBase } from "../src/lib/baseSync";
 import { setCatalog, findCatalog, CATALOG } from "../src/lib/catalog";
 import type { Recipe } from "../src/lib/types";
 
@@ -75,6 +75,23 @@ ok("порядок полей не важен", recipeSig(R("a", ["1"])) === rec
   ok("справочник вырос на 1", CATALOG.length === before + 1);
   setCatalog([]);
   ok("пустой справочник не принимаем", CATALOG.length === before + 1);
+}
+
+// Рецепт убрали из базы: из телефона уходит, если в нём нет ничего личного и его нет в меню
+{
+  const plain = R("x", ["1"]);
+  const have = [R("a", ["1"]), plain, { ...R("f", ["1"]), fav: true }, { ...R("p", ["1"]), photo: "data:x" }, { ...R("r", ["1"]), rating: 4 },
+    { ...R("n", ["1"]), note: "мало соли" }, { ...R("h", ["1"]), history: ["2026-10-01"] }, R("m", ["1"]), R("e", ["моя версия"]),
+    R("o", ["1"], { source: "manual" }), R("s", ["1"])];
+  const sigs = { e: recipeSig(R("e", ["1"])), s: recipeSig(R("s", ["1"])) };
+  const gone = staleBase(have, new Set(["a"]), sigs, new Set(["m"]));
+  ok("убран обычный рецепт и рецепт без правок", gone.includes("x") && gone.includes("s"), gone);
+  ok("рецепт из базы остаётся", !gone.includes("a"));
+  ok("избранное, фото, оценка, заметка, история остаются", !["f", "p", "r", "n", "h"].some((id) => gone.includes(id)), gone);
+  ok("рецепт из меню остаётся", !gone.includes("m"));
+  ok("поправленный человеком остаётся", !gone.includes("e"));
+  ok("свои рецепты не трогаем", !gone.includes("o"));
+  ok("убрано ровно два", gone.length === 2, gone);
 }
 
 console.log(`basesync: ${pass} passed, ${fail} failed`);

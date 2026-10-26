@@ -41,3 +41,16 @@ export function mergeBase(base: Recipe[], have: Map<string, Recipe>, seen: Set<s
   }
   return { add, update };
 }
+
+/**
+ * Рецепты, которые убрали из базы: их удаляем и из телефона, но только если в них нет ничего личного —
+ * избранного, оценки, фото, заметки, истории готовки, правок человека — и они не стоят в меню (keep).
+ * ids — все рецепты нынешней базы.
+ */
+export function staleBase(have: Recipe[], ids: Set<string>, sigs: Record<string, string>, keep: Set<string>): string[] {
+  return have
+    .filter((r) => r.source === "base" && !ids.has(r.id) && !keep.has(r.id))
+    .filter((r) => !r.fav && !r.rating && !r.photo && !r.note && !r.history?.length)
+    .filter((r) => !sigs[r.id] || recipeSig(r) === sigs[r.id])
+    .map((r) => r.id);
+}

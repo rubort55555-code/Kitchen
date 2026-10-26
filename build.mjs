@@ -68,7 +68,8 @@ for (let i = 0; i * PART < base.recipes.length; i++) {
   writeFileSync("dist/" + f, text);
   parts.push({ f, h: fnv(text) + "-" + chunk.length, n: chunk.length });
 }
-writeFileSync("dist/recipes.json", JSON.stringify({ v: 2, at: BUILT_AT, total: base.recipes.length, parts }));
+// ids — все рецепты базы: по ним телефон убирает рецепты, которых в базе больше нет
+writeFileSync("dist/recipes.json", JSON.stringify({ v: 2, at: BUILT_AT, total: base.recipes.length, parts, ids: base.recipes.map((r) => r.id) }));
 writeFileSync("dist/catalog.json", JSON.stringify({ v: 1, at: BUILT_AT, h: CATALOG_H, items: CATALOG }));
 console.log("Продуктов в справочнике:", CATALOG.length);
 console.log("Рецептов в базе:", base.recipes.length, "частей:", parts.length);

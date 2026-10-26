@@ -25,7 +25,10 @@ def publish(d, change):
     idx = json.load(open(os.path.join(d, "recipes.json")))
     p0 = idx["parts"][0]
     part = json.load(open(os.path.join(d, p0["f"])))
+    old_ids = {r["id"] for r in part}
     change(part)
+    idx["ids"] = [r["id"] for r in part] + [i for i in idx["ids"] if i not in old_ids]
+    idx["total"] = len(idx["ids"])
     text = json.dumps(part, ensure_ascii=False, separators=(",", ":"))
     open(os.path.join(d, p0["f"]), "w").write(text)
     p0["h"] = hashlib.md5(text.encode()).hexdigest()[:8] + "-" + str(len(part)); p0["n"] = len(part)
@@ -77,6 +80,15 @@ with sync_playwright() as p:
     ok(S + "избранное у обновлённого рецепта сохранилось", a and a.get("fav") is True)
     ok(S + "рецепт, который человек поправил сам, не затёрт", b and b["steps"] == ["Моя версия шага"], b and b["steps"])
     ok(S + "новый рецепт добавился", n and n["name"] == "Новый рецепт из обновления")
+    # рецепты, которых в базе больше нет: обычный уходит, личный (избранное) и свой остаются
+    old = {**A, "id": "b-test-gone", "name": "Убранный из базы"}
+    pg.evaluate(IDB, {"store": "recipes", "key": None, "put": {k: v for k, v in old.items() if k != "fav"}})
+    pg.evaluate(IDB, {"store": "recipes", "key": None, "put": {**old, "id": "b-test-gone-fav", "name": "Убранный, но в избранном", "fav": True}})
+    pg.evaluate(IDB, {"store": "recipes", "key": None, "put": {**old, "id": "b-test-own", "name": "Свой рецепт", "source": "manual"}})
+    pg.reload(); pg.wait_for_selector("h1"); wait_all(pg, total + 3)
+    ok(S + "убранный из базы рецепт удалён из телефона", pg.evaluate(IDB, {"store": "recipes", "key": "b-test-gone"}) is None)
+    ok(S + "убранный из базы, но в избранном — остался", pg.evaluate(IDB, {"store": "recipes", "key": "b-test-gone-fav"}) is not None)
+    ok(S + "свой рецепт остался", pg.evaluate(IDB, {"store": "recipes", "key": "b-test-own"}) is not None)
     ok(S + "нет ошибок JS", not errs, errs[:3])
     ctx.close()
 
