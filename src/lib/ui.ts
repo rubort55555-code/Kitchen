@@ -8,7 +8,7 @@ export type Sheet =
   | { kind: "add" }
   | { kind: "product"; id: string }
   | { kind: "help"; screen: Screen; section?: string }
-  | { kind: "ask"; week?: string }
+  | { kind: "ask"; week?: string; day?: string }
   | { kind: "pick"; date: string; slot: import("./types").Slot }
   | { kind: "buy" }
   | { kind: "recipe"; id: string }

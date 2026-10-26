@@ -11,7 +11,7 @@ import { closeSheet, goMenu, goTab, toast } from "../lib/ui";
 import { applyWeekAnswer, weekDays, weekPromptPart } from "../lib/plan";
 import { ymd } from "../lib/util";
 
-export function AskClaude({ week }: { week?: string }) {
+export function AskClaude({ week, day }: { week?: string; day?: string }) {
   const { products, settings } = useStore((s) => s);
   const members = settings.members;
   const [who, setWho] = useState<string>("all");
@@ -24,14 +24,15 @@ export function AskClaude({ week }: { week?: string }) {
   const [copied, setCopied] = useState("");
   const whoIds = who === "all" ? members.map((m) => m.id) : [who];
   const slots = settings.planSlots?.length ? settings.planSlots : (["обед", "ужин"] as const).slice();
-  const days = week ? weekDays(week).filter((d) => d >= ymd()) : [];
+  // day — меню на один день; week — на 7 дней с этой даты
+  const days = day ? [day] : week ? weekDays(week).filter((d) => d >= ymd()) : [];
   const urgent = products.filter((p) => { const d = daysLeft(p.until); return d !== null && d <= 2; }).map((p) => p.name);
 
   const prompt = useMemo(() => buildPrompt(
-    { who: whoIds, minutes: Number(minutes) || null, kind: week ? "любое" : kind, count: 3, wish, useFirst: urgent.slice(0, 5), weekPart: week ? weekPromptPart(days.length ? days : weekDays(week), slots) : undefined,
+    { who: whoIds, minutes: Number(minutes) || null, kind: week ? "любое" : kind, count: 3, wish, useFirst: urgent.slice(0, 5), weekPart: week ? weekPromptPart(days.length ? days : weekDays(week), slots, settings.planCuisine) : undefined,
       nutrition: settings.beta?.nutrition === false ? undefined : members.filter((m) => whoIds.includes(m.id) && m.body).map((m) => { const p = planFor(m.body!); return p ? planLine(m.name, p) : ""; }).filter(Boolean) },
     products, members, settings.rules, settings.basics, settings.customCatalog,
-  ), [who, minutes, kind, wish, products, settings, week]);
+  ), [who, minutes, kind, wish, products, settings, week, day]);
 
   async function copy(text: string) {
     try { await navigator.clipboard.writeText(text); return true; } catch { return false; }
@@ -78,7 +79,7 @@ export function AskClaude({ week }: { week?: string }) {
       <Seg label="Кто будет есть" value={who} onChange={setWho} options={[{ v: "all", t: "Оба" }, ...members.map((m) => ({ v: m.id, t: "Только " + m.name }))]} />
       <label className="f">Время</label>
       <Seg label="Время" value={minutes} onChange={setMinutes} options={[{ v: "0", t: "Любое" }, { v: "15", t: "15 мин" }, { v: "30", t: "30 мин" }, { v: "60", t: "1 час" }]} />
-      {week && <p className="small">Claude составит меню на {days.length || 7} {plural(days.length || 7, "день", "дня", "дней")}: {slots.join(", ")}. Блюда сами встанут по дням.</p>}
+      {week && <p className="small">Claude составит меню на {days.length || 7} {plural(days.length || 7, "день", "дня", "дней")}: {slots.join(", ")}{settings.planCuisine ? `; кухня — ${settings.planCuisine.toLowerCase()}` : ""}. Блюда сами встанут по дням.</p>}
       {!week && <label className="f">Блюдо</label>}
       {!week && <div className="chips">
         {["любое", "завтрак", "обед", "ужин", "суп", "перекус", "выпечка"].map((k) => (

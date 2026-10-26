@@ -201,6 +201,8 @@ export interface Settings {
   planSlots: Slot[];
   /** Добавлять десерт в автоменю (по умолчанию да). */
   planDessert?: boolean;
+  /** Кухня для автоменю и меню с Claude (пусто — любая). */
+  planCuisine?: string;
   members: Member[];
   rules: Rule[];
   /** Базовые продукты: не считаются недостающими. */
