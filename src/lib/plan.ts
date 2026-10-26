@@ -6,6 +6,7 @@ import { compileRules, checkRecipe } from "./exclusions";
 import { recipeStatus } from "./match";
 import { addDays, norm, parseYmd, uid, ymd } from "./util";
 import { parseAnswer } from "./claude";
+import { cuisineOf } from "./cuisine";
 
 const DAY_SHORT = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
 const DAY_LONG = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
@@ -104,15 +105,21 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
   const st = getState();
   const compiled = compileRules(st.settings.rules, st.settings.customCatalog, st.settings.members);
   const who = st.settings.members.map((m) => m.id);
-  const ok = st.recipes
+  // Выбранная кухня: обед и ужин — только её; завтрак — её, а если у кухни нет завтраков, любой;
+  // салат и десерт — лучше её же, но можно и другие
+  const cuis = st.settings.planCuisine || "";
+  const sameCuis = (r: Recipe) => !cuis || cuisineOf(r) === cuis;
+  const all = st.recipes
     .filter((r) => checkRecipe(r, compiled, who).verdict === "ok")
     .map((r) => {
       const s = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog);
       return { r, score: s.urgent * 30 + s.percent * 0.4 + (r.fav ? 15 : 0) + (r.rating ? (r.rating - 3) * 8 : 0), prot: proteinOf(r), bt: breakfastType(r) };
     })
     .sort((a, b) => b.score - a.score);
-  if (!ok.length) return { added: 0, noRecipes: true };
-  const byId = new Map(ok.map((x) => [x.r.id, x]));
+  const ok = all.filter((x) => sameCuis(x.r));
+  const cuisBreakfast = ok.some((x) => fitsSlot(x.r, "завтрак"));
+  if (!all.length) return { added: 0, noRecipes: true };
+  const byId = new Map(all.map((x) => [x.r.id, x]));
   const plan = [...planList()];
   const days = only ? [only] : weekDays(start);
   const used = new Set(plan.filter((e) => e.date >= start && e.date <= addDays(start, 6)).map((e) => e.recipeId));
@@ -130,7 +137,7 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
     for (const slot of slots) {
       if (plan.some((e) => e.date === d && e.slot === slot)) continue;
       const prevDay = addDays(d, -1);
-      let pool = ok.filter((x) => fitsSlot(x.r, slot));
+      let pool = (slot === "завтрак" && !cuisBreakfast ? all : ok).filter((x) => fitsSlot(x.r, slot));
       // Без белка (одни овощи и крупы) — не чаще раза в неделю и только на обед
       if (slot === "ужин" || weekCount("prot", "овощи и крупы") >= 1) {
         const withProtein = pool.filter((x) => x.prot !== "овощи и крупы");
@@ -179,7 +186,7 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
   const salads = st.recipes.filter((r) => norm(r.kind || "") === "салат" && !/фрукт|банан|апельсин|груш/.test(norm(r.name)) && checkRecipe(r, compiled, who).verdict === "ok")
     .map((r) => ({ r, score: recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog) }))
     // Свежие овощные салаты — чаще, тяжёлые на майонезе — реже
-    .map((x) => ({ r: x.r, sc: x.score.urgent * 30 + x.score.percent * 0.4 + (x.r.fav ? 15 : 0) - (x.r.ingredients.some((i) => /майонез/i.test(i.name)) ? 25 : 0) + (x.r.ingredients.some((i) => /огур|помидор|капуст|морков|свёкл|свекл|перец|редис|зелень|укроп|салат/i.test(i.name)) ? 10 : 0) }))
+    .map((x) => ({ r: x.r, sc: x.score.urgent * 30 + x.score.percent * 0.4 + (x.r.fav ? 15 : 0) + (cuis && sameCuis(x.r) ? 40 : 0) - (x.r.ingredients.some((i) => /майонез/i.test(i.name)) ? 25 : 0) + (x.r.ingredients.some((i) => /огур|помидор|капуст|морков|свёкл|свекл|перец|редис|зелень|укроп|салат/i.test(i.name)) ? 10 : 0) }))
     .sort((a, b) => b.sc - a.sc);
   const usedSalad = new Set(plan.map((e) => e.side?.id).filter(Boolean) as string[]);
   for (const d of days) {
@@ -197,7 +204,7 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
   // Десерт к ужину: через день, до 3 раз в неделю (можно выключить кнопкой «Десерт»)
   if (st.settings.planDessert !== false) {
     const sweets = st.recipes.filter((r) => norm(r.kind || "") === "десерт" && checkRecipe(r, compiled, who).verdict === "ok")
-      .map((r) => { const x = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog); return { r, sc: x.urgent * 30 + x.percent * 0.4 + (r.fav ? 15 : 0) + (r.rating ? (r.rating - 3) * 8 : 0) + (/торт|пирож|печень|мусс|желе|мороже|пудинг|шоколад|десерт|суфле|крем|панна|чизкейк|кекс|маффин|трюфел|конфет|зефир|пастил|безе/.test(norm(r.name)) ? 25 : 0) - (/макарон|вермишел|тыкв|рис\b|каш/.test(norm(r.name)) ? 30 : 0) }; })
+      .map((r) => { const x = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog); return { r, sc: x.urgent * 30 + x.percent * 0.4 + (r.fav ? 15 : 0) + (cuis && sameCuis(r) ? 40 : 0) + (r.rating ? (r.rating - 3) * 8 : 0) + (/торт|пирож|печень|мусс|желе|мороже|пудинг|шоколад|десерт|суфле|крем|панна|чизкейк|кекс|маффин|трюфел|конфет|зефир|пастил|безе/.test(norm(r.name)) ? 25 : 0) - (/макарон|вермишел|тыкв|рис\b|каш/.test(norm(r.name)) ? 30 : 0) }; })
       .sort((a, b) => b.sc - a.sc);
     const inWeek = (e: PlanEntry) => e.date >= start && e.date <= addDays(start, 6);
     const usedSweet = new Set(plan.map((e) => e.sweet?.id).filter(Boolean) as string[]);
@@ -229,12 +236,13 @@ export function recipesInPlan(days: string[]): Recipe[] {
 }
 
 /** Дополнение к запросу Claude: просим меню на неделю в особом JSON. */
-export function weekPromptPart(days: string[], slots: Slot[]): string {
+export function weekPromptPart(days: string[], slots: Slot[], cuisine?: string): string {
   const list = days.map((d) => `${dayShort(d)} ${parseYmd(d).getDate()}.${String(parseYmd(d).getMonth() + 1).padStart(2, "0")}`).join(", ");
   return [
     `Составь меню на ${days.length} ${days.length === 1 ? "день" : days.length < 5 ? "дня" : "дней"} (${list}): ${slots.join(", ")}.`,
     days.length === 1 ? "Блюда за день не должны повторяться: на обед и ужин — разные основные блюда с разным белком." : "Блюда не должны повторяться чаще двух раз за неделю. Остатки можно использовать на следующий день.",
     "Рацион должен быть сбалансированным: на обед и ужин — полноценное основное блюдо или суп с белком (мясо, птица, рыба, яйца, творог, бобовые), белок чередуй по дням; салат — только как дополнение к основному блюду, не вместо него.",
+    ...(cuisine ? [`Кухня: ${cuisine.toLowerCase()} — все основные блюда, супы и салаты этой кухни, в домашнем варианте из продуктов, которые продаются в обычном магазине.`] : []),
     "Если для блюда не хватает 1–2 продуктов, это нормально — их докупят.",
     days.length === 1 ? "Сначала используй то, что скоро испортится." : "Сначала используй то, что скоро испортится; в конце недели — то, что хранится долго.",
     "В конце дай блок JSON строго в таком виде (между ```json и ```):",

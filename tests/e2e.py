@@ -1,5 +1,5 @@
 # Проверка приложения в браузере (как на iPhone): python3 tests/e2e.py
-import json, os, subprocess, sys, time, threading
+import json, os, re, subprocess, sys, time, threading
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from functools import partial
 from playwright.sync_api import sync_playwright
@@ -251,6 +251,21 @@ with sync_playwright() as p:
         dp = unquote(pg.get_attribute(".sheet a.btn", "href").split("q=", 1)[1])
         ok(S + "запрос Claude на 1 день", "Составь меню на 1 день" in dp and '"week"' in dp, dp[:200])
         pg.click(".sheet-h > button:last-child")
+        # Меню на день выбранной кухни: основные блюда только этой кухни, Claude получает кухню в запросе
+        pg.select_option('select[aria-label="Кухня меню"]', "Кавказская")
+        pg.click("text=Очистить меню на этот день")
+        pg.click("text=Заполнить из моих рецептов")
+        # на обед и ужин — только кавказские блюда; кавказских завтраков нет — завтрак любой
+        meals = {pg.locator(".day .meal:not(.side)").nth(i).locator(".slot").inner_text(): pg.locator(".day .meal:not(.side)").nth(i).locator(".dish").inner_text() for i in range(pg.locator(".day .meal:not(.side)").count())}
+        mains = [v for k, v in meals.items() if k in ("Обед", "Ужин")]
+        ok(S + "меню на день: кавказская кухня", mains and all(re.search(r"шашлык|чахохбил|табака|харчо|по-кавказск", m, re.I) for m in mains), meals)
+        ok(S + "меню на день: завтрак есть, хоть у кухни завтраков нет", "Завтрак" not in meals or meals["Завтрак"] != "+ Добавить", meals)
+        pg.click("text=Составить с Claude")
+        pg.wait_for_selector(".sheet a.btn")
+        dp = unquote(pg.get_attribute(".sheet a.btn", "href").split("q=", 1)[1])
+        ok(S + "запрос Claude с кухней", "Кухня: кавказская" in dp, dp[:300])
+        pg.click(".sheet-h > button:last-child")
+        pg.select_option('select[aria-label="Кухня меню"]', "")
         pg.click("main .chip >> text=На неделю")
         ok(S + "меню на день не тронуло остальные дни", pg.locator(".day").count() == 7 and "Гречка с курицей" in pg.inner_text("main"))
         # покупки для меню

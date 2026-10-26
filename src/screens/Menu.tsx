@@ -7,6 +7,7 @@ import { addEntry, autoFill, dayShort, dayTitle, entriesFor, pruneOld, recipesIn
 import { addMany, missingFor, restoreShop, shopList } from "../lib/shop";
 import { compileRules, checkRecipe } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
+import { CUISINES, cuisineOf } from "../lib/cuisine";
 import type { Slot } from "../lib/types";
 import { SLOTS } from "../lib/types";
 import { addDays, cap, norm, parseYmd, plural, ymd } from "../lib/util";
@@ -28,6 +29,15 @@ export function Menu() {
   useEffect(() => { pruneOld(); }, []);
   const inWeek = plan.filter((e) => days.includes(e.date));
   const future = days.filter((d) => d >= today);
+  // Сколько рецептов каждой кухни (без запрещённых ограничениями) — для списка «Кухня»
+  const cuisCounts = useMemo(() => {
+    const compiled = compileRules(st.settings.rules, st.settings.customCatalog, st.settings.members);
+    const who = st.settings.members.map((m) => m.id);
+    const m = new Map<string, number>();
+    st.recipes.filter((r) => checkRecipe(r, compiled, who).verdict === "ok").forEach((r) => m.set(cuisineOf(r), (m.get(cuisineOf(r)) || 0) + 1));
+    return m;
+  }, [st.recipes, st.settings.rules, st.settings.customCatalog, st.settings.members]);
+  const cuis = st.settings.planCuisine || "";
   const missing = useMemo(() => missingFor(recipesInPlan(future)), [plan, st.products, st.recipes, offset, mode, day]);
 
   function toggleSlot(s: Slot) {
@@ -38,7 +48,7 @@ export function Menu() {
     const before = plan;
     const r = autoFill(start, slots, mode === "day" ? day : undefined);
     if (r.noRecipes) toast("Сначала сохраните несколько рецептов (например, через «Спросить Claude»).");
-    else if (!r.added) toast(mode === "day" && day < today ? "Этот день уже прошёл." : "Свободных мест нет или нет подходящих рецептов.");
+    else if (!r.added) toast(mode === "day" && day < today ? "Этот день уже прошёл." : cuis ? `Не нашлось подходящих рецептов кухни «${cuis}» — выберите другую кухню или «Любая».` : "Свободных мест нет или нет подходящих рецептов.");
     else {
       // Недостающее для новых блюд сразу уходит в список покупок (отмена вернёт и меню, и список)
       const shopBefore = shopList();
@@ -75,6 +85,13 @@ export function Menu() {
         {SLOTS.map((s) => <button key={s} className="chip" aria-pressed={slots.includes(s)} onClick={() => toggleSlot(s)}>{cap(s)}</button>)}
         <button className="chip" aria-pressed={st.settings.planDessert !== false} onClick={() => setSettings({ planDessert: st.settings.planDessert === false })}>Десерт</button>
       </div>
+      <label className="fsel">
+        <span>Кухня</span>
+        <select className="inp" value={cuis} onChange={(e: any) => setSettings({ planCuisine: e.target.value || undefined })} aria-label="Кухня меню">
+          <option value="">Любая</option>
+          {CUISINES.filter((c) => cuisCounts.get(c) || c === cuis).map((c) => <option key={c} value={c}>{c} ({cuisCounts.get(c) || 0})</option>)}
+        </select>
+      </label>
       <div className="row2" style={{ marginTop: 6 }}>
         <button className="btn sec" onClick={fill}>Заполнить из моих рецептов</button>
         <button className="btn sec" onClick={() => openSheet(mode === "day" ? { kind: "ask", week: day, day } : { kind: "ask", week: start })}>✨ Составить с Claude</button>
