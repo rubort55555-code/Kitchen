@@ -15,9 +15,11 @@ class Quiet(SimpleHTTPRequestHandler):
 srv = ThreadingHTTPServer(("127.0.0.1", PORT), partial(Quiet, directory=DIST))
 threading.Thread(target=srv.serve_forever, daemon=True).start()
 URL = f"http://127.0.0.1:{PORT}/"
+# Заголовок главной — приветствие по времени суток
+GREETINGS = ("Доброй ночи", "Доброе утро", "Добрый день", "Добрый вечер")
 
 def more(pg):
-    pg.click(".tabs button >> text=Главная")
+    pg.click(".tabs button[aria-label=Главная]")
     pg.click('[aria-label="Ещё: семья, ограничения, данные"]')
 
 res = []
@@ -45,14 +47,14 @@ with sync_playwright() as p:
         pg.on("console", lambda m: errs.append(m.text) if m.type == "error" and "ERR_FAILED" not in m.text else None)
         pg.goto(URL); pg.wait_for_selector("h1")
         S = f"[{scheme}] "
-        ok(S + "главная открылась", pg.inner_text("h1") == "Кухня")
+        ok(S + "главная открылась", pg.inner_text("h1") in GREETINGS)
         ok(S + "пустое состояние с подсказкой", "Добавьте продукты из холодильника" in pg.inner_text("main"))
         ok(S + "нет горизонтальной прокрутки", pg.evaluate("document.documentElement.scrollWidth <= innerWidth"))
         pg.screenshot(path=f"{SHOTS}/{scheme}-home-empty.png")
 
         # «?» на главной
         pg.click('[aria-label="Помощь по этому экрану"]'); pg.wait_for_selector(".sheet")
-        ok(S + "«?» показывает справку экрана", "Съесть в первую очередь" in pg.inner_text(".sheet") or "срок" in pg.inner_text(".sheet"))
+        ok(S + "«?» показывает справку экрана", "Съесть первым" in pg.inner_text(".sheet") or "срок" in pg.inner_text(".sheet"))
         pg.click(".sheet-h > button:last-child")
 
         # добавление за 3 касания: + → частый → Добавить (нужна цена у нового продукта)
@@ -86,7 +88,7 @@ with sync_playwright() as p:
         pg.click(".sheet-h > button:last-child")
 
         # Продукты
-        pg.click(".tabs button >> text=Продукты")
+        pg.click(".tabs button[aria-label=Продукты]")
         ok(S + "в списке 3 продукта", pg.locator(".swipe").count() == 3, pg.locator(".swipe").count())
         pg.screenshot(path=f"{SHOTS}/{scheme}-products.png")
         # свайп влево по Молоку → Съели → отмена
@@ -114,7 +116,7 @@ with sync_playwright() as p:
         pg.click(".sheet-h > button:last-child")
 
         # Рецепты: спросить Claude
-        pg.click(".tabs button >> text=Рецепты")
+        pg.click(".tabs button[aria-label=Рецепты]")
         pg.click("text=Спросить Claude: что приготовить")
         pg.wait_for_selector(".sheet a.btn")
         href = pg.get_attribute(".sheet a.btn", "href")
@@ -147,7 +149,7 @@ with sync_playwright() as p:
         pg.click(".sheet-h > button:last-child")
 
         # Главная: что приготовить, потери
-        pg.click(".tabs button >> text=Главная")
+        pg.click(".tabs button[aria-label=Главная]")
         home = pg.inner_text("main")
         ok(S + "главная: потери за месяц", "Пропало за" in home)
         pg.screenshot(path=f"{SHOTS}/{scheme}-home.png", full_page=True)
@@ -170,18 +172,18 @@ with sync_playwright() as p:
         # восстановление из файла (замена)
         pg.set_input_files("input[type=file]", path)
         pg.click("text=Заменить всё"); pg.wait_for_timeout(300)
-        pg.click(".tabs button >> text=Продукты")
+        pg.click(".tabs button[aria-label=Продукты]")
         ok(S + "восстановление из файла", pg.locator(".swipe").count() == 3, pg.locator(".swipe").count())
 
         # Демо-данные
         more(pg); pg.click("text=Данные и копия")
         pg.click("text=Заполнить демо-данными"); pg.click("text=Заменить мои данные"); pg.wait_for_timeout(400)
         home = pg.inner_text("main")
-        ok(S + "демо: главная со сроками и потерями", "Съесть в первую очередь" in home and "Молоко" in home)
+        ok(S + "демо: главная со сроками и потерями", "Съесть первым" in home and "Молоко" in home)
         pg.screenshot(path=f"{SHOTS}/{scheme}-home-demo.png", full_page=True)
 
         # Покупки
-        pg.click(".tabs button >> text=Покупки")
+        pg.click(".tabs button[aria-label=Покупки]")
         ok(S + "вкладка покупок", pg.inner_text("h1") == "Покупки" and pg.locator("main .list .li").count() >= 3, pg.inner_text("main")[:200])
         pg.fill('input[aria-label="Что купить"]', "Треска")
         ok(S + "покупки: предупреждение про треску", "в исключениях" in pg.inner_text("main"))
@@ -207,7 +209,7 @@ with sync_playwright() as p:
         pg.screenshot(path=f"{SHOTS}/{scheme}-shop.png", full_page=True)
 
         # Меню на неделю
-        pg.click(".tabs button >> text=Рецепты")
+        pg.click(".tabs button[aria-label=Рецепты]")
         pg.click("main .seg button >> text=Меню")
         ok(S + "меню: дни недели", pg.locator(".day").count() == 7 and "Сегодня" in pg.inner_text("main"))
         ok(S + "меню из демо на сегодня", "Салат с огурцами" in pg.locator(".day.today").inner_text(), pg.locator(".day.today").inner_text())
@@ -273,7 +275,7 @@ with sync_playwright() as p:
             pg.click("text=В покупки")
             ok(S + "недостающее для меню — в покупки", "В список покупок" in pg.inner_text(".toast") or "уже в списке" in pg.inner_text(".toast"))
         # главная: сегодня в меню
-        pg.click(".tabs button >> text=Главная")
+        pg.click(".tabs button[aria-label=Главная]")
         ok(S + "главная: сегодня в меню и покупки", "Сегодня в меню" in pg.inner_text("main") and "В списке покупок" in pg.inner_text("main"))
 
         # Справка: поиск
@@ -300,7 +302,7 @@ with sync_playwright() as p:
         OV = '.sheet[aria-label="Просрочено"]'
         ok(S + "после перезапуска спрашивают о просроченном", pg.locator(OV).count() == 1)
         pg.click(OV + " .sheet-h .x")
-        pg.click(".tabs button >> text=Продукты")
+        pg.click(".tabs button[aria-label=Продукты]")
         ok(S + "данные после перезапуска", pg.locator(".swipe").count() >= 10, pg.locator(".swipe").count())
         ok(S + "нет горизонтальной прокрутки (с данными)", pg.evaluate("document.documentElement.scrollWidth <= innerWidth"))
 
@@ -310,7 +312,7 @@ with sync_playwright() as p:
         pg.reload(); pg.wait_for_timeout(500)
         ctx.set_offline(True)
         pg.reload(); pg.wait_for_selector("h1", timeout=5000)
-        ok(S + "открывается без интернета", pg.inner_text("h1") in ("Кухня", "Продукты"))
+        ok(S + "открывается без интернета", pg.inner_text("h1") in GREETINGS + ("Продукты",))
         ctx.set_offline(False)
         ok(S + "нет ошибок JS", not errs, errs[:3])
         ctx.close()
@@ -333,7 +335,7 @@ with sync_playwright() as p:
         prods.forEach(x => tx.objectStore('products').put(x)); tx.objectStore('recipes').put(rec); tx.oncomplete = () => res(); tx.onerror = () => rej(tx.error); }; r.onerror = () => rej(r.error); }); }""", [seed_products, seed_recipe])
     pg.reload(); pg.wait_for_selector("h1")
     S = "[готовка] "
-    pg.click(".tabs button >> text=Рецепты"); pg.wait_for_selector(".li")
+    pg.click(".tabs button[aria-label=Рецепты]"); pg.wait_for_selector(".li")
     pg.click(".li >> text=Омлет с сыром"); pg.wait_for_selector(".sheet")
     ok(S + "в рецепте есть кнопка «Приготовили»", pg.locator("button", has_text="Приготовили — списать продукты").count() == 1)
     pg.click("button >> text=Приготовили — списать продукты"); pg.wait_for_selector(".cook-row")
@@ -351,7 +353,7 @@ with sync_playwright() as p:
     ok(S + "сообщение о списании и цене порции", "Списано 3 продукта" in pg.inner_text(".toast") and "Порция" in pg.inner_text(".toast"), pg.inner_text(".toast"))
     pg.click(".toast button >> text=Отменить")
     pg.click(".sheet-h > button:last-child")
-    pg.click(".tabs button >> text=Продукты"); pg.wait_for_selector(".li")
+    pg.click(".tabs button[aria-label=Продукты]"); pg.wait_for_selector(".li")
     pt = pg.inner_text("main").replace("\xa0", " ")
     ok(S + "«Отменить» возвращает продукты", "Остатки: Омлет" not in pt and "10 шт" in pt and "3 продукта на 360" in pt, pt)
     ok(S + "нет ошибок JS", not errs, errs[:3])
@@ -364,7 +366,7 @@ with sync_playwright() as p:
     pg.goto(URL); pg.wait_for_selector("h1")
     pg.wait_for_function("""async () => { const r = indexedDB.open('kitchen'); return await new Promise(res => { r.onsuccess = () => { const q = r.result.transaction('recipes').objectStore('recipes').count(); q.onsuccess = () => res(q.result > 300); }; }); }""", timeout=20000)
     pg.reload(); pg.wait_for_selector("h1")
-    pg.click(".tabs button >> text=Рецепты"); pg.wait_for_selector(".li")
+    pg.click(".tabs button[aria-label=Рецепты]"); pg.wait_for_selector(".li")
     txt = pg.inner_text("main")
     ok(S + "в списке есть рецепты из базы", pg.locator("main .li").count() >= 30)
     ok(S + "показано не больше 60 + кнопка «Показать ещё»", pg.locator("main .li").count() <= 61 and "Показать ещё" in txt)
@@ -385,7 +387,7 @@ with sync_playwright() as p:
     pg.goto(URL); pg.wait_for_selector("h1")
     pg.wait_for_function("""async () => { const r = indexedDB.open('kitchen'); return await new Promise(res => { r.onsuccess = () => { const q = r.result.transaction('recipes').objectStore('recipes').count(); q.onsuccess = () => res(q.result > 300); }; }); }""", timeout=20000)
     pg.reload(); pg.wait_for_selector("h1")
-    pg.click(".tabs button >> text=Рецепты"); pg.wait_for_selector(".li")
+    pg.click(".tabs button[aria-label=Рецепты]"); pg.wait_for_selector(".li")
     pg.fill('input[aria-label="Поиск рецепта"]', "Пшённая каша с тыквой")
     pg.click("main .li >> nth=0"); pg.wait_for_selector(".sheet")
     pg.click("button >> text=Готовить по шагам"); pg.wait_for_selector(".cookmode")
@@ -452,7 +454,7 @@ with sync_playwright() as p:
     pg.click("text=Заполнить демо-данными"); pg.wait_for_timeout(600)
     pg.reload(); pg.wait_for_selector(".sheet"); pg.click(".sheet-h .x")
     ok(S + "на главной напоминание о ревизии", "Сделайте ревизию" in pg.inner_text("main"))
-    pg.click(".tabs button >> text=Продукты"); pg.wait_for_selector(".swipe")
+    pg.click(".tabs button[aria-label=Продукты]"); pg.wait_for_selector(".swipe")
     n0 = pg.locator(".swipe").count()
     pg.click("text=Ревизия: пройтись по продуктам"); pg.wait_for_selector(".rev-qty")
     ok(S + "показан первый продукт и «Есть/Меньше/Нет»", all(w in pg.inner_text(".sheet") for w in ["Есть", "Меньше", "Нет", "1 из"]))
@@ -473,7 +475,7 @@ with sync_playwright() as p:
     ok(S + "итог ревизии", "Ревизия закончена" in pg.inner_text(".sheet"), pg.inner_text(".sheet")[:200])
     pg.click(".sheet .btn >> text=Готово")
     ok(S + "напоминание на главной исчезло", True)
-    pg.click(".tabs button >> text=Главная")
+    pg.click(".tabs button[aria-label=Главная]")
     ok(S + "после ревизии напоминания нет", "Сделайте ревизию" not in pg.inner_text("main"))
     ok(S + "нет ошибок JS", not [e for e in errs if "ERR_FAILED" not in e], errs[:3])
     ctx.close()
@@ -497,7 +499,7 @@ with sync_playwright() as p:
     pg.locator(".rv input[aria-label=Название]").first.fill("Молоко")
     pg.click('.sheet[aria-label="Чек"] .btn >> text=Сохранить в продукты'); pg.wait_for_selector(".toast")
     ok(S + "продукты добавлены", "Добавлено продуктов" in pg.inner_text(".toast"), pg.inner_text(".toast"))
-    pg.click(".tabs button >> text=Продукты"); pg.wait_for_selector(".swipe")
+    pg.click(".tabs button[aria-label=Продукты]"); pg.wait_for_selector(".swipe")
     pt = pg.inner_text("main")
     ok(S + "на складе молоко и хлеб с ценами", "Молоко" in pt and "Хлеб" in pt and "₽" in pt, pt[:300])
     # вставка текста
@@ -564,7 +566,7 @@ with sync_playwright() as p:
     pg = ctx.new_page(); errs = []
     pg.on("pageerror", lambda e: errs.append(str(e)))
     pg.goto(URL); pg.wait_for_selector("h1")
-    pg.click(".tabs button >> text=Рецепты")
+    pg.click(".tabs button[aria-label=Рецепты]")
     pg.wait_for_selector('select[aria-label="Кухня"]', timeout=20000)
     # база грузится частями — ждём, пока загрузится вся
     total = json.load(open(os.path.join(DIST, "recipes.json")))["total"]

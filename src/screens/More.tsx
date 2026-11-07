@@ -15,6 +15,8 @@ import { Nutrition } from "./Nutrition";
 import { ageOf, basicsError, bmiOf, needsBasics, planFor, type BodyProfile } from "../lib/nutrition";
 import { closeAll, closeSheet, goPage, goTab, openSheet, toast, useUI } from "../lib/ui";
 import { isNative, shareFile } from "../lib/native";
+import { brightnessSupported, DARK_BELOW, SUN_FROM, useTheme, type Theme } from "../lib/theme";
+import type { Appearance } from "../lib/types";
 
 export const VERSION = typeof __VERSION__ !== "undefined" ? __VERSION__ : "dev";
 
@@ -31,6 +33,7 @@ export function More() {
     case "about": return <About />;
     case "beta": return <Beta />;
     case "nutrition": return <Nutrition />;
+    case "appearance": return <AppearancePage />;
     default: return <Menu />;
   }
 }
@@ -61,6 +64,9 @@ function Menu() {
         <Row icon="📚" title="Справочник продуктов" sub="Сроки хранения, типы рыбы" onClick={() => goPage("catalog")} />
       </div>
       <div className="list">
+        <Row icon="🎨" title="Оформление" sub={APPEARANCE_TITLE[s.appearance === "brightness" && !brightnessSupported ? "system" : s.appearance || "system"]} onClick={() => goPage("appearance")} />
+      </div>
+      <div className="list">
         <Row icon="💾" title="Данные и копия" sub={days === null ? "Копию ещё не сохраняли" : days === 0 ? "Копия сохранена сегодня" : `Копия: ${days} ${plural(days, "день", "дня", "дней")} назад`} onClick={() => goPage("data")} />
       </div>
       <div className="list">
@@ -74,6 +80,58 @@ function Menu() {
 }
 
 const back = () => goPage(null);
+
+const APPEARANCE_TITLE: Record<Appearance, string> = { system: "Как в телефоне", brightness: "По яркости экрана", light: "Всегда светлое", dark: "Всегда тёмное" };
+const THEME_NAME: Record<Theme, string> = { light: "светлое", dark: "тёмное", sun: "«солнце»" };
+
+/** Оформление: как в телефоне, по яркости экрана, всегда светлое или тёмное. */
+function AppearancePage() {
+  const s = useStore((x) => x.settings);
+  const { theme, brightness } = useTheme();
+  const mode: Appearance = s.appearance === "brightness" && !brightnessSupported ? "system" : s.appearance || "system";
+  const sun = s.sunContrast !== false;
+  const opts: { id: Appearance; title: string; sub?: string; off?: boolean }[] = [
+    { id: "system", title: APPEARANCE_TITLE.system, sub: "Светлое, а когда в телефоне тёмная тема — тёмное" },
+    { id: "brightness", title: APPEARANCE_TITLE.brightness, sub: brightnessSupported ? "Само подстраивается под освещение" : "Только в приложении для Android и iPhone", off: !brightnessSupported },
+    { id: "light", title: APPEARANCE_TITLE.light },
+    { id: "dark", title: APPEARANCE_TITLE.dark },
+  ];
+  const pct = (v: number) => Math.round(v * 100) + "%";
+  return (
+    <div className="screen">
+      <Header title="Оформление" screen="more" onBack={back} backText="Ещё" />
+      <div role="radiogroup" aria-label="Оформление">
+        {opts.map((o) => (
+          <button key={o.id} className="opt" role="radio" aria-checked={mode === o.id} disabled={o.off} onClick={() => setSettings({ appearance: o.id })}>
+            <span className="main"><span className="name" style={{ display: "block" }}>{o.title}</span>{o.sub && <span className="meta" style={{ display: "block" }}>{o.sub}</span>}</span>
+            <span className="radio" />
+          </button>
+        ))}
+      </div>
+      {mode === "brightness" && (
+        <div className="card">
+          <h3>Когда что включается</h3>
+          <div className="scale-wrap">
+            <div className="scale">
+              <div className="s-dark" style={{ width: pct(DARK_BELOW) }}>тёмное</div>
+              <div className="s-light" style={{ width: pct((sun ? SUN_FROM : 1) - DARK_BELOW) }}>светлое</div>
+              {sun && <div className="s-sun" style={{ width: pct(1 - SUN_FROM) }}>солнце</div>}
+            </div>
+            {brightness !== null && <span className="scale-mark" style={{ left: pct(brightness) }} />}
+          </div>
+          <div className="ticks"><span style={{ left: 0 }}>0%</span><span style={{ left: pct(DARK_BELOW) }}>{pct(DARK_BELOW)}</span>{sun && <span style={{ left: pct(SUN_FROM) }}>{pct(SUN_FROM)}</span>}<span style={{ left: "100%" }}>100%</span></div>
+          <p className="small mt0">{brightness === null ? "Узнаю яркость экрана…" : <>Сейчас яркость <b>{pct(brightness)}</b>{theme ? ` — ${THEME_NAME[theme]} оформление` : ""}.</>}</p>
+          <p className="muted small">С автояркостью в телефоне оформление само следует за освещением. Меняется через несколько секунд, чтобы не мигать.</p>
+        </div>
+      )}
+      {mode === "brightness" && <label className="opt" style={{ marginTop: 8 }}>
+        <span className="main"><span className="name" style={{ display: "block" }}>Контрастнее на солнце</span><span className="meta" style={{ display: "block" }}>При максимальной яркости — белый фон, чёткие рамки и тёмный текст</span></span>
+        <input type="checkbox" className="switch" checked={sun} onChange={(e) => setSettings({ sunContrast: e.target.checked })} aria-label="Контрастнее на солнце" />
+      </label>}
+      {!brightnessSupported && <p className="muted small">В браузере яркость экрана узнать нельзя — оформление «по яркости» есть только в приложении для Android и iPhone.</p>}
+    </div>
+  );
+}
 
 /** Подпись строки «Питание»: нормы тех, у кого заполнен профиль. */
 function nutritionSub(members: Member[]): string {

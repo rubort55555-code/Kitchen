@@ -190,7 +190,7 @@ with sync_playwright() as p:
     # 6б. пробная функция: пометка, журнал, выключатель
     ok("на кнопке пометка «проба»", pg.query_selector(".sheet .btn .beta") is not None)
     pg.click('.sheet-h button:has-text("Готово")')
-    pg.click(".tabs button >> text=Главная"); pg.click('[aria-label="Ещё: семья, ограничения, данные"]')
+    pg.click(".tabs button[aria-label=Главная]"); pg.click('[aria-label="Ещё: семья, ограничения, данные"]')
     pg.click("text=Пробные функции"); pg.wait_for_selector("text=Как работает у вас")
     page = pg.inner_text("main")
     ok("журнал: есть цифры и фото", "цифры" in page and "фото" in page and "Кефир" in page, page[:500])

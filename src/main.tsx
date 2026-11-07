@@ -4,11 +4,13 @@ import { App } from "./App";
 import { checkContent, load, reportError } from "./lib/store";
 import { setUpdate } from "./lib/ui";
 import { isNative } from "./lib/native";
+import { startTheme } from "./lib/theme";
 import "./styles.css";
 
 window.addEventListener("error", (e) => reportError(e.error || e.message));
 window.addEventListener("unhandledrejection", (e) => reportError(e.reason));
 
+startTheme();
 createRoot(document.getElementById("root")!).render(<App />);
 load();
 // Приложение из магазина: свежие рецепты и справочник с сайта, когда приложение снова открывают

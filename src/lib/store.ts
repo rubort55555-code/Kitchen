@@ -49,6 +49,8 @@ function set(patch: Partial<State>) {
   subs.forEach((f) => f());
 }
 export const getState = () => state;
+/** Подписка на любые изменения данных (для оформления и т. п.). */
+export function subscribe(cb: () => void): () => void { subs.add(cb); return () => { subs.delete(cb); }; }
 export function useStore<T>(sel: (s: State) => T): T {
   return useSyncExternalStore((cb) => { subs.add(cb); return () => subs.delete(cb); }, () => sel(state));
 }
