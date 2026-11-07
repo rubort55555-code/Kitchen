@@ -14,7 +14,8 @@ import { ymd } from "../lib/util";
 export function AskClaude({ week, day }: { week?: string; day?: string }) {
   const { products, settings } = useStore((s) => s);
   const members = settings.members;
-  const [who, setWho] = useState<string>("all");
+  // Кто будет есть: по умолчанию вся семья; хотя бы один человек остаётся выбранным
+  const [off, setOff] = useState<string[]>([]);
   const [minutes, setMinutes] = useState<string>("0");
   const [kind, setKind] = useState("любое");
   const [wish, setWish] = useState("");
@@ -22,7 +23,8 @@ export function AskClaude({ week, day }: { week?: string; day?: string }) {
   const [parsed, setParsed] = useState<Recipe[] | null>(null);
   const [err, setErr] = useState("");
   const [copied, setCopied] = useState("");
-  const whoIds = who === "all" ? members.map((m) => m.id) : [who];
+  const whoIds = members.filter((m) => !off.includes(m.id)).map((m) => m.id);
+  const toggleWho = (id: string) => setOff(off.includes(id) ? off.filter((x) => x !== id) : whoIds.length > 1 ? [...off, id] : off);
   const slots = settings.planSlots?.length ? settings.planSlots : (["обед", "ужин"] as const).slice();
   // day — меню на один день; week — на 7 дней с этой даты
   const days = day ? [day] : week ? weekDays(week).filter((d) => d >= ymd()) : [];
@@ -32,7 +34,7 @@ export function AskClaude({ week, day }: { week?: string; day?: string }) {
     { who: whoIds, minutes: Number(minutes) || null, kind: week ? "любое" : kind, count: 3, wish, useFirst: urgent.slice(0, 5), weekPart: week ? weekPromptPart(days.length ? days : weekDays(week), slots, settings.planCuisine) : undefined,
       nutrition: settings.beta?.nutrition === false ? undefined : members.filter((m) => whoIds.includes(m.id) && m.body).map((m) => { const p = planFor(m.body!); return p ? planLine(m.name, p) : ""; }).filter(Boolean) },
     products, members, settings.rules, settings.basics, settings.customCatalog,
-  ), [who, minutes, kind, wish, products, settings, week, day]);
+  ), [off, minutes, kind, wish, products, settings, week, day]);
 
   async function copy(text: string) {
     try { await navigator.clipboard.writeText(text); return true; } catch { return false; }
@@ -75,8 +77,12 @@ export function AskClaude({ week, day }: { week?: string; day?: string }) {
   return (
     <Sheet title={week ? "Меню с Claude" : "Спросить Claude"}>
       <p className="muted small mt0">Claude получит список ваших продуктов, сроки и ограничения в питании. Это бесплатно — откроется обычный чат.</p>
-      <label className="f">Кто будет есть</label>
-      <Seg label="Кто будет есть" value={who} onChange={setWho} options={[{ v: "all", t: "Оба" }, ...members.map((m) => ({ v: m.id, t: "Только " + m.name }))]} />
+      {members.length > 1 && <>
+        <label className="f">Кто будет есть</label>
+        <div className="chips" role="group" aria-label="Кто будет есть">
+          {members.map((m) => <button key={m.id} className="chip" aria-pressed={whoIds.includes(m.id)} onClick={() => toggleWho(m.id)}>{m.name}</button>)}
+        </div>
+      </>}
       <label className="f">Время</label>
       <Seg label="Время" value={minutes} onChange={setMinutes} options={[{ v: "0", t: "Любое" }, { v: "15", t: "15 мин" }, { v: "30", t: "30 мин" }, { v: "60", t: "1 час" }]} />
       {week && <p className="small">Claude составит меню на {days.length || 7} {plural(days.length || 7, "день", "дня", "дней")}: {slots.join(", ")}{settings.planCuisine ? `; кухня — ${settings.planCuisine.toLowerCase()}` : ""}. Блюда сами встанут по дням.</p>}

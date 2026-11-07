@@ -66,6 +66,21 @@ ok("parse без json", parseAnswer("просто текст").recipes.length ==
 ok("parse без ограды", parseAnswer('Ответ: {"dishes":[{"name":"Каша","ingredients":[],"steps":["Варить"],}]}').recipes.length === 1);
 const pr = buildPrompt({ who: both, minutes: 30, kind: "ужин", count: 3, wish: "", useFirst: [] }, [], members, DEFAULT_RULES, ["соль"], []);
 ok("prompt содержит ограничения", /холодец/.test(pr) && /треска/.test(pr) && /камбала и минтай/.test(pr) && /арахис/.test(pr) && /```json/.test(pr), pr);
+ok("prompt просит технологическую карту", /технологическую карту/.test(pr) && /"stages"/.test(pr) && /"out"/.test(pr) && /"fixes"/.test(pr) && /"done"/.test(pr) && !/шаги короткие/.test(pr), pr);
+const fam = [{ id: "a", name: "Аня", allergies: [], dislikes: [], body: { sex: "f", born: new Date().getFullYear() - 35, height: 165, weight: 60, goal: "keep" } },
+  { id: "b", name: "Петя", allergies: [], dislikes: [], body: { sex: "m", born: new Date().getFullYear() - 37, height: 180, weight: 80, goal: "keep" } },
+  { id: "c", name: "Маша", allergies: [], dislikes: [], body: { sex: "f", born: new Date().getFullYear() - 6, height: 115, weight: 20, goal: "keep" } }] as any;
+const prf = buildPrompt({ who: ["a", "b", "c"], minutes: null, kind: "ужин", count: 3, wish: "", useFirst: [] }, [], fam, DEFAULT_RULES, ["соль"], []);
+ok("prompt: семья из 3 — взрослые и ребёнок с возрастом", /2 взрослых \(Аня, 35 лет; Петя, 37 лет\) и 1 ребёнок \(Маша, 6 лет\)/.test(prf) && /Порции рассчитай на 3/.test(prf), prf.split("\n").slice(0, 3));
+const pr1 = buildPrompt({ who: ["b"], minutes: null, kind: "ужин", count: 3, wish: "", useFirst: [] }, [], fam, DEFAULT_RULES, ["соль"], []);
+ok("prompt: один человек", /1 взрослый \(Петя, 37 лет\)/.test(pr1) && /Порции рассчитай на 1/.test(pr1));
+const prw = buildPrompt({ who: both, minutes: null, kind: "любое", count: 3, wish: "", useFirst: [], weekPart: "Составь меню на 7 дней" }, [], members, DEFAULT_RULES, ["соль"], []);
+ok("prompt меню на неделю — без технологических карт", /Составь меню/.test(prw) && !/технологическую карту/.test(prw), prw);
+// ответ Claude в виде технологической карты: этапы, выход, готовность, ошибки
+const tc = parseAnswer('```json\n{"dishes":[{"name":"Хлеб","minutes":150,"active":30,"servings":4,"kind":"выпечка","out":"1 буханка ≈ 350 г","tools":["миска","противень"],"ingredients":[{"name":"Мука","amount":"200 г"}],"stages":[{"name":"Тесто","steps":["1. Смешайте муку с водой.","Месите 8–10 минут."]},{"name":"Выпечка","steps":["Пеките при 200 °C 25 минут."]},{"name":"Пусто","steps":[]}],"done":"корочка золотистая","serve":"остывшим","keep":"2 дня в пакете","fixes":["хлеб плотный → мало расстаивали → дайте тесту вырасти вдвое"],"tips":"можно с тмином"}]}\n```').recipes[0];
+ok("тех. карта: шаги из этапов", tc && tc.steps.length === 3 && tc.steps[0] === "Смешайте муку с водой." && JSON.stringify(tc.stages) === '[{"t":"Тесто","i":0},{"t":"Выпечка","i":2}]', tc);
+ok("тех. карта: выход, посуда, готовность, подача, хранение, ошибки, советы", tc && tc.active === 30 && tc.out === "1 буханка ≈ 350 г" && tc.tools === "миска, противень" && tc.done === "корочка золотистая" && tc.serve === "остывшим" && tc.keep === "2 дня в пакете" && tc.fixes?.length === 1 && tc.tips?.[0] === "можно с тмином", tc);
+ok("старый ответ без этапов читается как раньше", !p.recipes[0].stages && !p.recipes[0].out && p.recipes[0].steps.length === 2);
 // «Приготовили»: расчёт списания и стоимости
 import { parseNeed, planCook, conv } from "../src/lib/cook";
 import { defaultSettings } from "../src/lib/store";

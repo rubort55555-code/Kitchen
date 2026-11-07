@@ -106,6 +106,7 @@ function PersonCard({ m, plan, onEdit }: { m: Member; plan: Plan | null; onEdit:
         <span>Вода</span><span>≈ {n1(plan.water)} л питья</span>
       </div>
       {plan.warnings.map((w, i) => <div key={i} className="issue small">⚠️ {w}</div>)}
+      {!b.days?.length && <p className="muted small">Активность посчитана по умолчанию (сидячая работа). Нажмите «Изменить» и распишите обычный день — расчёт станет точнее.</p>}
       <button className="link" onClick={() => setMore(!more)} aria-expanded={more}>{more ? "Скрыть подробности" : "Подробнее: обмен, активность, витамины"}</button>
       {more && (
         <>
@@ -150,7 +151,8 @@ type View = { v: "profile" } | { v: "day"; i: number } | { v: "seg"; i: number; 
 /** Профиль и дневник в одном окне: анкета → день → отрезок дня. */
 function ProfileSheet({ m, onSave, onClose }: { m: Member; onSave: (b: BodyProfile | undefined) => void; onClose: () => void }) {
   const [b, setB] = useState<BodyProfile>(() => {
-    if (!m.body) return newProfile(m.id === "m1" ? "f" : "m");
+    // Новый профиль — без выдуманных цифр: год рождения, рост и вес человек вводит сам
+    if (!m.body) return { ...newProfile(m.id === "m1" ? "f" : "m"), born: NaN, height: NaN, weight: NaN };
     const body = JSON.parse(JSON.stringify(m.body)) as BodyProfile;
     // Старый профиль «часы по категориям» → дневник
     if (!body.days?.length) body.days = [body.day ? fromHours(body.day, body.workouts) : templateDay()];
