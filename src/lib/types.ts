@@ -193,6 +193,8 @@ export interface PlanEntry {
   sweet?: { id: string; name: string };
 }
 
+export type Appearance = "system" | "brightness" | "light" | "dark";
+
 export interface Settings {
   shop: ShopItem[];
   minStock: MinStock[];
@@ -216,6 +218,10 @@ export interface Settings {
   lastRevision?: string;
   tipsSeen: string[];
   customCatalog: CatalogItem[];
+  /** Оформление: как в телефоне (по умолчанию), по яркости экрана (только в приложении), всегда светлое или тёмное. */
+  appearance?: Appearance;
+  /** При максимальной яркости — контрастная тема «солнце» (по умолчанию да). */
+  sunContrast?: boolean;
   /** Пробные функции: включены ли (по умолчанию — да). */
   beta?: { barcode?: boolean; nutrition?: boolean };
   /** Журнал пробы сканера: последние попытки (для отчёта о том, как работает). */

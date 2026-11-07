@@ -1,4 +1,4 @@
-// Корень приложения: вкладки внизу, большая кнопка «+», окна поверх.
+// Корень приложения: вкладки внизу (плавающая «таблетка», подпись — у открытой вкладки), кнопка «+», окна поверх.
 import { Icon, ToastView } from "./components/ui";
 import { useStore } from "./lib/store";
 import { goTab, openSheet, useUI, type Sheet, type Tab } from "./lib/ui";
@@ -71,7 +71,7 @@ export function App() {
   return (
     <>
       {update && (
-        <div className="update banner" style={{ background: "var(--card)", boxShadow: "0 6px 24px rgba(0,0,0,.18)" }}>
+        <div className="update banner" style={{ background: "var(--card)", boxShadow: "0 6px 24px rgba(0,0,0,.18), var(--edge)" }}>
           <span className="txt">Есть новая версия приложения.</span>
           <button className="chip" aria-pressed="true" onClick={update}>Обновить</button>
         </div>
@@ -96,7 +96,7 @@ export function App() {
 
 function TabButton({ t, active }: { t: (typeof TABS)[number]; active: boolean }) {
   return (
-    <button aria-current={active ? "page" : undefined} onClick={() => goTab(t.id)}>
+    <button aria-current={active ? "page" : undefined} aria-label={t.title} onClick={() => goTab(t.id)}>
       <t.icon />
       <span>{t.title}</span>
     </button>

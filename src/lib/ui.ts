@@ -3,7 +3,7 @@ import { useSyncExternalStore } from "react";
 import type { Screen } from "./help";
 
 export type Tab = "home" | "products" | "recipes" | "shop" | "more";
-export type Page = null | "stats" | "family" | "rules" | "catalog" | "data" | "help" | "bug" | "about" | "beta" | "nutrition";
+export type Page = null | "stats" | "family" | "rules" | "catalog" | "data" | "help" | "bug" | "about" | "beta" | "nutrition" | "appearance";
 export type Sheet =
   | { kind: "add" }
   | { kind: "product"; id: string }

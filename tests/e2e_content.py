@@ -41,7 +41,7 @@ IDB = """(q) => new Promise((ok, no) => { const r = indexedDB.open('kitchen'); r
     const g = q.put ? (q.key == null ? s.put(q.put) : s.put(q.put, q.key)) : s.get(q.key); g.onsuccess = () => ok(g.result ?? null); g.onerror = () => no(g.error); } })"""
 
 def wait_all(pg, total):
-    pg.click(".tabs button >> text=Рецепты")
+    pg.click(".tabs button[aria-label=Рецепты]")
     pg.wait_for_selector(f'select[aria-label="Кухня"] option:text("Все ({total})")', state="attached", timeout=30000)
 
 base_dir = tempfile.mkdtemp()
@@ -121,7 +121,7 @@ with sync_playwright() as p:
     ok(S + "оглавление и части скачаны с сайта", "recipes.json" in hits and "00.json" in hits, hits)
     saved = pg.evaluate(IDB, {"store": "kv", "key": "catalog"})
     ok(S + "справочник с сайта сохранён в телефоне", saved and saved.get("h") == cat["h"] and len(saved["items"]) == len(cat["items"]), saved and saved.get("h"))
-    pg.click(".tabs button >> text=Главная")
+    pg.click(".tabs button[aria-label=Главная]")
     pg.click('[aria-label="Ещё: семья, ограничения, данные"]')
     pg.click("text=О приложении")
     about = pg.locator(".screen").last.inner_text()

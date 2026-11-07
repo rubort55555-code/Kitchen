@@ -18,7 +18,7 @@ def ok(name, cond, extra=""):
     print(("PASS " if cond else "FAIL ") + name + ("" if cond or not extra else " | " + str(extra)[:400]))
 
 def more(pg):
-    pg.click(".tabs button >> text=Главная")
+    pg.click(".tabs button[aria-label=Главная]")
     pg.click('[aria-label="Ещё: семья, ограничения, данные"]')
 
 with sync_playwright() as p:
@@ -136,7 +136,7 @@ with sync_playwright() as p:
         pg.click(".sheet-h > button:last-child")
 
         # Нормы попадают в запрос Claude
-        pg.click(".tabs button >> text=Рецепты")
+        pg.click(".tabs button[aria-label=Рецепты]")
         pg.click("text=Спросить Claude"); pg.wait_for_selector(".sheet")
         pg.wait_for_timeout(300)
         txt = pg.evaluate("() => { const d = document.querySelector('.sheet details pre') || document.querySelector('.sheet pre'); return d ? d.textContent : document.querySelector('.sheet').innerText; }")
@@ -152,7 +152,7 @@ with sync_playwright() as p:
         more(pg)
         ok(S + "включено снова — строка есть и с ккал", "ккал" in pg.inner_text("text=Питание · проба >> xpath=.."), pg.inner_text(".list >> nth=0"))
         # Семья: число людей меняется, пол, год рождения, рост и вес обязательны
-        pg.click(".tabs button >> text=Главная")
+        pg.click(".tabs button[aria-label=Главная]")
         ok(S + "главная: данные семьи заполнены — просьбы нет", "Заполните данные семьи" not in pg.inner_text("main"))
         more(pg); pg.click(".li:has-text('Семья')"); pg.wait_for_selector("text=+ Добавить человека")
         ok(S + "семья: двое с возрастом и ИМТ", pg.locator("main .list .li").count() == 2 and "ИМТ" in pg.inner_text("main .list"), pg.inner_text("main .list"))
@@ -168,7 +168,7 @@ with sync_playwright() as p:
         fam = pg.inner_text("main")
         ok(S + "семья: третий человек — ребёнок, ИМТ без взрослой оценки", pg.locator("main .list .li").count() == 3 and "Маша" in fam and "у детей" in fam and "3 человека в семье" in fam, fam)
         # В запросе Claude — все трое с возрастом; Машу можно не выбирать
-        pg.click(".tabs button >> text=Рецепты")
+        pg.click(".tabs button[aria-label=Рецепты]")
         pg.click("text=Спросить Claude"); pg.wait_for_selector(".sheet"); pg.wait_for_timeout(200)
         q = lambda: pg.evaluate("() => document.querySelector('.sheet details pre').textContent")
         ok(S + "запрос Claude: двое взрослых и ребёнок", "2 взрослых" in q() and "1 ребёнок (Маша," in q() and "Порции рассчитай на 3" in q(), q()[:300])
