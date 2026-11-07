@@ -300,12 +300,20 @@ export function findCatalog(name: string, custom: CatalogItem[] = []): CatalogIt
   if (ix.memo.has(q)) return ix.memo.get(q)!;
   let res: CatalogItem | null = ix.exact.get(q) || ix.syn.get(q) || null;
   if (!res) {
-    // Начало слова: «помидоры черри» → Помидоры; «филе трески» → Треска
-    let bestLen = 0;
+    // Начало слова: «помидоры черри» → Помидоры; «филе трески» → Треска.
+    // Главное слово — первое: «Хлеб заливной» — хлеб, а не «Заливное», «Молоко Простоквашино» — молоко.
+    // Поэтому совпадение с начала названия важнее более длинного совпадения дальше.
+    let bestLen = 0, bestFirst = false;
     // Берём только основы, начинающиеся так же, как какое-то слово запроса (ускоряет поиск в разы)
     for (const w of q.split(/[^а-яa-z]+/)) {
       const bucket = w.length >= 2 ? ix.stems.get(w.slice(0, 2)) : undefined;
-      if (bucket) for (const st of bucket) if (st.len > bestLen && st.re.test(q)) { res = st.it; bestLen = st.len; }
+      if (bucket) for (const st of bucket) {
+        if (bestFirst && st.len <= bestLen) continue;
+        const m = st.re.exec(q);
+        if (!m) continue;
+        const first = st.len >= 4 && q.slice(0, m.index).replace(/[^а-яa-z]/g, "") === "";
+        if ((first && !bestFirst) || (first === bestFirst && st.len > bestLen)) { res = st.it; bestLen = st.len; bestFirst = first; }
+      }
     }
   }
   if (!res) {

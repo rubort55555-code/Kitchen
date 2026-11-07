@@ -69,10 +69,10 @@ export async function bench(kinds: string[], opts: any = {}) {
     const items = parseReceipt(text);
     const ALT: Record<string, string[]> = { "Хлеб": ["Хлеб бородинский", "Хлеб зерновой"], "Сыр твёрдый": ["Российский сыр", "Сыр российский"] };
     const same = (a: string, e: string) => a === e || (ALT[e] || []).includes(a);
-    const hit = spec.items.filter((e) => items.some((i) => same(i.name, e.name) && Math.abs(i.price - e.price) < 0.011));
-    const nameHit = spec.items.filter((e) => items.some((i) => same(i.name, e.name)));
+    const hit = spec.items.filter((e) => items.some((i) => same(i.kind ?? i.name, e.name) && Math.abs(i.price - e.price) < 0.011));
+    const nameHit = spec.items.filter((e) => items.some((i) => same(i.kind ?? i.name, e.name)));
     const priceHit = spec.items.filter((e) => items.some((i) => Math.abs(i.price - e.price) < 0.011));
-    out.push({ kind, id: spec.id, want: spec.items.length, hit: hit.length, name: nameHit.length, price: priceHit.length, extra: items.length - hit.length, ms: Math.round(performance.now() - t0), text, items: items.map((i) => `${i.name}|${i.price}`) });
+    out.push({ kind, id: spec.id, want: spec.items.length, hit: hit.length, name: nameHit.length, price: priceHit.length, extra: items.length - hit.length, ms: Math.round(performance.now() - t0), text, items: items.map((i) => `${i.kind ?? i.name}|${i.price}`) });
   }
   return out;
 }

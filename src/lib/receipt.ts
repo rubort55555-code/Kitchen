@@ -4,6 +4,7 @@ import type { CatalogItem, Unit } from "./types";
 import { findCatalog } from "./catalog";
 import { norm } from "./util";
 import { fixWords } from "./ocrWords";
+import { jsonBlocks } from "./claude";
 
 export interface ReceiptItem {
   /** Строка из чека как есть (для запоминания сокращений). */
@@ -16,6 +17,8 @@ export interface ReceiptItem {
   price: number;
   /** Нашли в справочнике. */
   known: boolean;
+  /** Вид продукта по справочнику («Хлеб» для «Хлеб заливной»). */
+  kind?: string;
   /** Не еда (пакет, помада, салфетки) — по умолчанию не добавляем. */
   nonFood?: boolean;
 }
@@ -104,7 +107,7 @@ const PHRASES: [RegExp, string][] = [
   [/шампин/, "Шампиньоны"],
   [/чай\b/, "Чай"],
   [/кофе/, "Кофе"],
-  [/(?:^|\s)сок\b|нектар|морс\b/, "Сок"],
+  [/(?:^|\s)сок\b|морс\b/, "Сок"],
   [/укроп/, "Укроп"],
   [/петруш/, "Петрушка"],
 ];
@@ -140,22 +143,48 @@ export function cleanName(raw: string): string {
 /** Ключ для запоминания сокращений: название без цифр и размеров. */
 export const receiptKey = (raw: string) => norm(cleanName(raw));
 
-/** Подбор названия продукта: запомненное → фразы-сокращения → справочник → очищенное название. */
-export function matchName(raw: string, learned: Record<string, string>, custom: CatalogItem[]): { name: string; known: boolean } {
+/**
+ * Название продукта из строки чека.
+ * name — как показывать и сохранять: полное понятное название из чека («Хлеб заливной», «Сыр плавленый карат»),
+ * а если в чеке сокращения («МОЛ ПРОСТ», «КУР ФИЛЕ») — название из справочника («Молоко», «Куриное филе»).
+ * kind — вид продукта по справочнику: по нему подставляются место, срок, и продукт находится для рецептов.
+ */
+export function matchName(raw: string, learned: Record<string, string>, custom: CatalogItem[]): { name: string; kind?: string; known: boolean } {
   const key = receiptKey(raw);
-  if (learned[key]) return { name: learned[key], known: true };
+  if (learned[key]) return { name: learned[key], kind: findCatalog(learned[key], custom)?.n, known: true };
+  // Полное название без мусора в конце («… КАРАТ 130ГР ДР» → «Сыр плавленый карат»)
+  // и без обрывков в начале («ТМ СЫР …» → «Сыр …»)
+  let clean = cleanName(raw).replace(/[’'`´«»"()]/g, " ").replace(/(\s+[а-яёa-z]{1,2}\.?)+$/i, "").replace(/^([а-яёa-z]{1,2}\.?\s+)+(?=[а-яёa-z]{3})/i, "").replace(/\s+/g, " ").trim();
+  if (clean) clean = clean[0].toUpperCase() + clean.slice(1);
   const q = norm(raw).replace(/[0-9]+[.,]?[0-9]*\s*%/g, " ");
-  // Главное слово обычно первое: «НЕКТАР ДОБРЫЙ БАНАНОВЫЙ» — нектар, а не бананы. Сначала ищем в начале названия
   const head = q.replace(/[^а-яёa-z\s-]/g, " ").trim().split(/\s+/).slice(0, 3).join(" ");
-  for (const [re, name] of PHRASE_RES) if (re.test(head)) return { name, known: true };
-  for (const [re, name] of PHRASE_RES) if (re.test(q)) return { name, known: true };
-  const c = findCatalog(cleanName(raw), custom);
-  if (c) return { name: c.n, known: true };
-  return { name: cleanName(raw), known: false };
+  const cat = findCatalog(clean, custom);
+  // Справочник нашёл продукт по первому слову названия — ему верим («Нектар …», «Хлеб заливной»)
+  const first = norm(clean).split(" ")[0] || "";
+  const catFirst = cat && first.length >= 3 && norm([cat.n, ...(cat.s || [])].join(" ")).includes(first.slice(0, Math.min(4, first.length))) ? cat : null;
+  let kind: string | undefined;
+  // 1) сокращения с начала названия («МОЛ ПРОСТ», «КУР ФИЛЕ»); 2) справочник по первому слову;
+  // 3) сокращения в любом месте; 4) справочник как есть
+  for (const [re, name] of PHRASE_RES) { const m = re.exec(head); if (m && m.index === 0) { kind = name; break; } }
+  if (!kind && catFirst) kind = catFirst.n;
+  if (!kind) for (const [re, name] of PHRASE_RES) if (re.test(q)) { kind = name; break; }
+  if (!kind && cat) kind = cat.n;
+  if (!kind) return { name: clean || cleanName(raw), known: false };
+  // Полное название показываем, если первое слово в нём — сам продукт: совпадает с видом по справочнику
+  // или его синонимом («Хлеб заливной» — хлеб, «Приправа …» — специи). Сокращения («Мол прост», «Кур филе») — нет.
+  const words = norm(clean).split(" ");
+  const item = findCatalog(kind, custom);
+  const heads = [kind, ...(item?.s || [])].map((x) => norm(x).split(" ")[0]);
+  const f0 = words[0] || "";
+  // Точно — только с самим видом («сыр»); с синонимами — от 4 букв (в синонимах бывают сокращения: «мол»)
+  const readable = words.length >= 2 && (heads[0] === f0 || (f0.length >= 4 && heads.some((h) => h.length >= 4 && h.slice(0, 4) === f0.slice(0, 4))));
+  const name = readable ? clean : kind;
+  return { name, kind, known: true };
 }
 
 // Латинские буквы, похожие на русские: распознавание путает «СМЕТАНА» и «CMETAHA», «НДС» и «HДC»
-const LAT: Record<string, string> = { A: "А", B: "В", C: "С", E: "Е", H: "Н", K: "К", M: "М", O: "О", P: "Р", T: "Т", X: "Х", Y: "У", a: "а", c: "с", e: "е", o: "о", p: "р", x: "х", y: "у" };
+// N — обычно «П» («NPOCTOKB» — «ПРОСТОКВ»)
+const LAT: Record<string, string> = { A: "А", B: "В", C: "С", E: "Е", H: "Н", K: "К", M: "М", N: "П", O: "О", P: "Р", T: "Т", X: "Х", Y: "У", a: "а", c: "с", e: "е", n: "п", o: "о", p: "р", x: "х", y: "у" };
 /** Слово из похожих латинских букв (или вперемешку с русскими) → по-русски. Настоящие латинские слова не трогаем. */
 function cyr(word: string): string {
   if (!/[a-z]/i.test(word)) return word;
@@ -353,11 +382,56 @@ function reconcile(items: Raw[], total: number | null): Raw[] {
   return items;
 }
 
+/**
+ * Запрос к Claude: прочитать фото чека (человек прикрепляет фото в чате) и вернуть товары в JSON.
+ * Claude читает чековый шрифт заметно лучше распознавания на телефоне.
+ */
+export const CLAUDE_RECEIPT_PROMPT = [
+  "Прикрепляю фото кассового чека из магазина. Прочитай его и выпиши все купленные позиции.",
+  "Правила:",
+  "- name — полное понятное название по-русски, как в чеке, но без сокращений, кодов товара, «ШТ.», размеров упаковки и процентов. Марку оставь: «Хлеб заливной», «Сыр плавленый Карат», «Нектар Добрый банановый», «Молоко Простоквашино».",
+  "- qty и unit — сколько куплено: для весового товара — вес (кг), для упаковки — её вес или объём из названия (г, мл, кг, л), умноженный на число упаковок; если размера нет — штуки (шт).",
+  "- price — итоговая сумма по позиции в рублях, уже со скидкой (то, что после «=» в строке позиции).",
+  "- food — false для того, что не едят: пакеты, косметика, бытовая химия, хозтовары.",
+  "- Не включай строки «Цена позиции до скидки», «Сумма скидки», НДС, итоги и оплату.",
+  "- total — «ИТОГО» по чеку.",
+  "- Если что-то не читается — напиши как видишь и добавь в конец name «(?)».",
+  "В конце ответа дай блок JSON строго в таком виде (между ```json и ```):",
+  "```json",
+  JSON.stringify({ items: [{ name: "Хлеб заливной", qty: 480, unit: "г", price: 52.99, food: true }, { name: "Пакет-майка", qty: 1, unit: "шт", price: 7.99, food: false }], total: 60.98 }),
+  "```",
+].join("\n");
+
+/** Ответ Claude по фото чека → товары (тот же вид, что из распознавания: можно проверить и сохранить). */
+export function parseClaudeReceipt(text: string, learned: Record<string, string> = {}, custom: CatalogItem[] = []): { items: ReceiptItem[]; total: number | null; error?: string } {
+  for (const d of jsonBlocks(text)) {
+    const list: any[] = Array.isArray(d) ? d : Array.isArray(d?.items) ? d.items : [];
+    const items: ReceiptItem[] = [];
+    for (const x of list) {
+      const raw = String(x?.name ?? "").trim();
+      const price = Number(String(x?.price ?? "").replace(",", "."));
+      if (!raw || !isFinite(price)) continue;
+      const u = String(x?.unit ?? "").toLowerCase().replace(/^гр$/, "г").replace(/\.$/, "");
+      const unit: Unit = (["г", "кг", "мл", "л", "шт", "уп"] as Unit[]).includes(u as Unit) ? (u as Unit) : "шт";
+      const q = Number(String(x?.qty ?? "").replace(",", "."));
+      const learnedName = learned[receiptKey(raw)];
+      const m = matchName(learnedName || raw, {}, custom);
+      const nonFood = x?.food === false || NON_FOOD.test(norm(raw));
+      items.push({ raw, name: learnedName || raw, qty: round(q > 0 ? q : 1), unit, price: Math.round(price * 100) / 100, known: !nonFood && !!m.kind, kind: nonFood ? undefined : m.kind, nonFood: nonFood || undefined });
+    }
+    if (items.length) {
+      const total = Number(String(d?.total ?? "").replace(",", "."));
+      return { items, total: isFinite(total) && total > 0 ? total : null };
+    }
+  }
+  return { items: [], total: null, error: "В ответе нет списка товаров. Скопируйте ответ Claude целиком — вместе с блоком ```json в конце." };
+}
+
 /** Главная функция: текст чека → список товаров. */
 export function parseReceipt(text: string, learned: Record<string, string> = {}, custom: CatalogItem[] = []): ReceiptItem[] {
   return scan(text).map((r) => {
     const m = matchName(r.raw, learned, custom);
-    const c = m.known ? findCatalog(m.name, custom) : null;
+    const c = m.kind ? findCatalog(m.kind, custom) : null;
     const size = packSize(r.raw);
     const wholePacks = Math.abs(r.packs - Math.round(r.packs)) < 1e-9;
     const weighed = !wholePacks || /(^|\s)(кг|вес)(\s|$)/i.test(r.raw);
@@ -379,8 +453,8 @@ export function parseReceipt(text: string, learned: Record<string, string> = {},
       // Штучный товар, который на складе считаем в г/мл/кг, а размер не указан — ставим 1 шт
       qty = r.packs; unit = "шт";
     }
-    const item: ReceiptItem = { raw: r.raw, name: m.name, qty: round(qty), unit, price: r.price, known: m.known };
-    if (NON_FOOD.test(norm(r.raw))) { item.nonFood = true; item.known = false; item.name = cleanName(r.raw); }
+    const item: ReceiptItem = { raw: r.raw, name: m.name, qty: round(qty), unit, price: r.price, known: m.known, kind: m.kind };
+    if (NON_FOOD.test(norm(r.raw))) { item.nonFood = true; item.known = false; item.kind = undefined; item.name = cleanName(r.raw); }
     return item;
   });
 }

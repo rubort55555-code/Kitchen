@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { compileRules, checkRecipe, findHits, toTbsp, applyReplace, DEFAULT_RULES } from "../src/lib/exclusions";
 import { findCatalog } from "../src/lib/catalog";
 import { covers } from "../src/lib/match";
@@ -6,7 +7,7 @@ import { parseAnswer, buildPrompt } from "../src/lib/claude";
 import { rub, num, scaleAmount } from "../src/lib/util";
 import { findTimes, fmtTime } from "../src/lib/timers";
 import { report, insights, priceTrends, amountText } from "../src/lib/stats";
-import { findTotal, parseReceipt } from "../src/lib/receipt";
+import { findTotal, parseClaudeReceipt, parseReceipt } from "../src/lib/receipt";
 import { fixWords } from "../src/lib/ocrWords";
 import { parseRecipeText } from "../src/lib/recipeText";
 import { productsCsv, pricesCsv } from "../src/lib/csv";
@@ -182,7 +183,8 @@ ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) =
 
 {
   // Форматы разных магазинов и ошибки распознавания
-  const names = (txt: string) => parseReceipt(txt).map((x) => `${x.name}|${x.qty}|${x.unit}|${x.price}`);
+  // Вид продукта по справочнику (название может быть полнее: «Помидоры красные»)
+  const names = (txt: string) => parseReceipt(txt).map((x) => `${x.kind ?? x.name}|${x.qty}|${x.unit}|${x.price}`);
   // Пятёрочка: «цена x количество», сумма через «=», строки НДС; латиница вместо кириллицы
   const p5 = names(`1. МОЛОКО NPOCTOKB.3,2%930МЛ
    89.99 x 1                 =89.99
@@ -256,13 +258,21 @@ ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) =
 итого            =1463.88`);
   const rp = real.map((x) => x.price);
   ok("настоящий чек: 11 позиций с верными ценами", real.length === 11 && [299.99, 52.99, 162.99, 109.99, 135.99, 86.99, 171.99, 163.99, 129.99, 26.99, 7.99].every((v, i) => rp[i] === v), real.map((x) => `${x.name}|${x.price}`));
-  ok("настоящий чек: нектар — сок, плавленый сыр, сахар", real[2].name === "Сок" && real[3].name === "Сыр плавленый" && real[9].name === "Сахар", real.map((x) => x.name));
+  ok("настоящий чек: полные названия — нектар, плавленый сыр с маркой, сахарная пудра", real[2].name.startsWith("Нектар добрый") && real[2].kind === "Нектар" && real[3].name === "Сыр плавленый карат" && real[3].kind === "Сыр плавленый" && real[9].kind === "Сахарная пудра", real.map((x) => `${x.name} (${x.kind})`));
+  ok("чек: «ХЛЕБ ЗАЛИВНОЙ» — так и называется, вид — хлеб", (() => { const x = parseReceipt("ХЛЕБ ЗАЛИВНОЙ 480 ГР 1 x 52.99")[0]; return x?.name === "Хлеб заливной" && x.kind === "Хлеб"; })(), parseReceipt("ХЛЕБ ЗАЛИВНОЙ 480 ГР 1 x 52.99")[0]);
+  ok("чек: сокращения — название из справочника", parseReceipt("МОЛ ПРОСТ 3,2% 930 МЛ 1 x 89,90")[0]?.name === "Молоко" && parseReceipt("КУР ФИЛЕ ОХЛ 0,850КГ 1 x 389,99")[0]?.name === "Куриное филе");
   ok("настоящий чек: помада и пакет — не продукты", real[8].nonFood === true && real[10].nonFood === true && !real[2].nonFood, real.map((x) => `${x.name}|${x.nonFood}`));
   ok("настоящий чек: строки скидок — не товары", !real.some((x) => /скид|позиц/i.test(x.raw)));
   // Исправление слов после распознавания: только уверенные замены похожих букв
   ok("слова: ЗРЛИВНОЙ → ЗАЛИВНОЙ, ЦОБРЫЙ → ДОБРЫЙ, СУННА → СУММА, ПАКОНКА → ЛАКОМКА", fixWords("ЗРЛИВНОЙ ЦОБРЫЙ СУННА ПАКОНКА") === "ЗАЛИВНОЙ ДОБРЫЙ СУММА ЛАКОМКА", fixWords("ЗРЛИВНОЙ ЦОБРЫЙ СУННА ПАКОНКА"));
   ok("слова: другие окончания, обрезанные и чужие слова не трогаем", fixWords("ПОЗИЦИЮ СКИДКУ ГИГИЕНИЧЕ ЛЕНИНА КЭРРИ Простоквашино") === "ПОЗИЦИЮ СКИДКУ ГИГИЕНИЧЕ ЛЕНИНА КЭРРИ Простоквашино", fixWords("ПОЗИЦИЮ СКИДКУ ГИГИЕНИЧЕ ЛЕНИНА КЭРРИ Простоквашино"));
-  ok("чек: «ХЛЕБ ЗАЛИВНОЙ» — хлеб, а не холодец", parseReceipt("ИЕБ ЗРЛИВНОЙ 480 ГР 1 x 52.99")[0]?.name === "Хлеб", parseReceipt("ИЕБ ЗРЛИВНОЙ 480 ГР 1 x 52.99")[0]);
+  ok("чек: «ХЛЕБ ЗАЛИВНОЙ» — хлеб, а не холодец", parseReceipt("ИЕБ ЗРЛИВНОЙ 480 ГР 1 x 52.99")[0]?.kind === "Хлеб", parseReceipt("ИЕБ ЗРЛИВНОЙ 480 ГР 1 x 52.99")[0]);
+  // Ответ Claude по фото чека
+  const cl = parseClaudeReceipt(readFileSync("tests/claude_receipt_answer.txt", "utf8"));
+  ok("Claude по чеку: 12 позиций, итог, сумма сходится", cl.items.length === 12 && cl.total === 1463.88 && Math.abs(cl.items.reduce((s, x) => s + x.price, 0) - 1463.88) < 0.01, cl);
+  ok("Claude по чеку: полные названия и вид продукта", cl.items[1].name === "Хлеб заливной" && cl.items[1].kind === "Хлеб" && cl.items[3].unit === "г" && cl.items[3].kind === "Сыр плавленый", cl.items.slice(0, 4));
+  ok("Claude по чеку: помада и пакет — не продукты", cl.items[9].nonFood === true && cl.items[11].nonFood === true && !cl.items[0].nonFood);
+  ok("Claude по чеку: без JSON — понятная ошибка", !!parseClaudeReceipt("просто текст").error);
   ok("чек: итог через много пробелов", findTotal("ИТОГ                         =905.41") === 905.41 && findTotal("Итого: 1 040,17") === 1040.17);
   ok("чек: цифры с буквами (О вместо 0, ] вместо 1)", names("Сахар песок 1кг 1 x 79.99 =79.9]")[0] === "Сахар|1|кг|79.91", names("Сахар песок 1кг 1 x 79.99 =79.9]"));
 }
