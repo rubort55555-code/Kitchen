@@ -52,7 +52,7 @@ export function Receipt({ mode }: { mode: "photo" | "text" }) {
     const items = parseReceipt(text, settings.receiptMap || {}, settings.customCatalog);
     if (!items.length) { setErr("Не нашёл в тексте строк с товарами и ценами. Поправьте текст: каждая строка — «название количество x цена»."); return; }
     setErr("");
-    setRows(items.map((it, i) => ({ ...it, id: i, on: true, qtyS: String(it.qty).replace(".", ","), priceS: String(it.price).replace(".", ","), orig: it.name })));
+    setRows(items.map((it, i) => ({ ...it, id: i, on: !it.nonFood, qtyS: String(it.qty).replace(".", ","), priceS: String(it.price).replace(".", ","), orig: it.name })));
     setStage("review");
   }
 
@@ -83,7 +83,7 @@ export function Receipt({ mode }: { mode: "photo" | "text" }) {
         <div className="center" style={{ paddingTop: 16 }}>
           <div style={{ fontSize: 56 }}>🧾</div>
           <h2>Сфотографируйте чек</h2>
-          <p className="muted">Расправьте чек, сфотографируйте при хорошем свете, чтобы все строки были в кадре. Распознавание идёт на телефоне, фото никуда не отправляется.</p>
+          <p className="muted">Расправьте чек и подойдите ближе, чтобы строки с товарами занимали почти весь кадр — чем крупнее текст, тем точнее. Длинный чек снимите в две части и добавьте по очереди. Распознавание идёт на телефоне, фото никуда не отправляется.</p>
           <input ref={input} type="file" accept="image/*" capture="environment" hidden onChange={onFile} />
           <button className="btn" onClick={() => input.current?.click()}>📷 Сфотографировать</button>
           <button className="btn sec" onClick={() => { const i = document.createElement("input"); i.type = "file"; i.accept = "image/*"; i.onchange = onFile; i.click(); }}>🖼 Выбрать из галереи</button>
@@ -128,7 +128,7 @@ export function Receipt({ mode }: { mode: "photo" | "text" }) {
                   <input type="checkbox" className="chk" checked={r.on} onChange={(e: any) => upd(r.id, { on: e.target.checked })} aria-label={"Добавить: " + r.name} />
                   <input className="inp" value={r.name} onChange={(e: any) => upd(r.id, { name: e.target.value })} aria-label="Название" />
                 </div>
-                <div className="muted small" style={{ margin: "4px 0 6px 34px" }}>в чеке: {r.raw}{!r.known ? " · не знаю такой продукт" : ""}</div>
+                <div className="muted small" style={{ margin: "4px 0 6px 34px" }}>в чеке: {r.raw}{r.nonFood ? " · похоже, не продукт — не добавляю" : !r.known ? " · не знаю такой продукт" : ""}</div>
                 <div className="field-row">
                   <div style={{ flex: 2 }}><input className="inp" inputMode="decimal" value={r.qtyS} onChange={(e: any) => upd(r.id, { qtyS: e.target.value })} aria-label="Сколько" /></div>
                   <div style={{ flex: 2 }}>

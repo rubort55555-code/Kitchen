@@ -34,8 +34,22 @@ function otsu(hist: Uint32Array, total: number): number {
   return th;
 }
 
-/** Где на фото чек: самая большая светлая область (бумага светлее стола). null — обрезать не нужно. */
-function paperBox(g: Uint8Array, W: number, H: number): { x: number; y: number; w: number; h: number } | null {
+/** «Белизна» пикселя: светлый и бесцветный — бумага; светлый, но окрашенный стол или рука — нет. */
+function whiteOf(ctx: CanvasRenderingContext2D, W: number, H: number): Uint8Array {
+  const d = ctx.getImageData(0, 0, W, H).data;
+  const g = new Uint8Array(W * H);
+  for (let i = 0, j = 0; j < g.length; i += 4, j++) {
+    const mn = Math.min(d[i], d[i + 1], d[i + 2]), mx = Math.max(d[i], d[i + 1], d[i + 2]);
+    g[j] = Math.max(0, mn - (mx - mn));
+  }
+  return g;
+}
+
+/** Где на фото чек: самая большая белая область (белизна — whiteOf). null — обрезать не нужно. */
+type Box = { x: number; y: number; w: number; h: number };
+/** Чек на фото: рамка и для каждой полосы высотой f точек — где бумага слева и справа (чтобы закрасить стол рядом). */
+type Paper = Box & { f: number; spans: [number, number][] };
+function paperBox(g: Uint8Array, W: number, H: number): Paper | null {
   const f = Math.max(1, Math.ceil(Math.max(W, H) / 300));
   const w = Math.floor(W / f), h = Math.floor(H / f);
   const s = new Uint8Array(w * h);
@@ -45,17 +59,22 @@ function paperBox(g: Uint8Array, W: number, H: number): { x: number; y: number; 
     for (let yy = 0; yy < f; yy++) for (let xx = 0; xx < f; xx++) acc += g[(y * f + yy) * W + x * f + xx];
     const v = acc / (f * f); s[y * w + x] = v; hist[v | 0]++;
   }
-  const th = otsu(hist, w * h);
+  // Порог: по Оцу, но не ниже 80% от самых белых точек (2% ярчайших) — иначе светлые участки стола и блики
+  // считаются бумагой, когда чек занимает малую часть кадра
+  let p98 = 255, acc = 0;
+  for (let v = 255; v >= 0; v--) { acc += hist[v]; if (acc >= w * h * 0.02) { p98 = v; break; } }
+  const th = Math.max(otsu(hist, w * h), p98 * 0.8);
   // Текст на бумаге тёмный — «закрываем» его: светлый пиксель или светлые соседи
   const bright = new Uint8Array(w * h);
   for (let i = 0; i < s.length; i++) bright[i] = s[i] > th ? 1 : 0;
   const seen = new Uint8Array(w * h);
-  let bestN = 0, box = { x0: 0, y0: 0, x1: 0, y1: 0 };
+  let bestN = 0, bestId = 0, box = { x0: 0, y0: 0, x1: 0, y1: 0 }, id = 0;
   const stack: number[] = [];
   for (let i = 0; i < bright.length; i++) {
     if (!bright[i] || seen[i]) continue;
     let n = 0, x0 = w, y0 = h, x1 = 0, y1 = 0;
-    stack.push(i); seen[i] = 1;
+    id++;
+    stack.push(i); seen[i] = id;
     while (stack.length) {
       const k = stack.pop()!, x = k % w, y = (k / w) | 0;
       n++; if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
@@ -64,21 +83,28 @@ function paperBox(g: Uint8Array, W: number, H: number): { x: number; y: number; 
         const nx = x + dx, ny = y + dy;
         if (nx < 0 || ny < 0 || nx >= w || ny >= h) continue;
         const j = ny * w + nx;
-        if (bright[j] && !seen[j]) { seen[j] = 1; stack.push(j); }
+        if (bright[j] && !seen[j]) { seen[j] = id; stack.push(j); }
       }
     }
-    if (n > bestN) { bestN = n; box = { x0, y0, x1, y1 }; }
+    if (n > bestN) { bestN = n; bestId = id; box = { x0, y0, x1, y1 }; }
   }
   const bw = box.x1 - box.x0 + 1, bh = box.y1 - box.y0 + 1;
   // Бумага занимает почти весь кадр или найдено что-то крошечное — не режем
   if (bestN < w * h * 0.06 || (bw > w * 0.92 && bh > h * 0.92)) return null;
+  // Где бумага в каждой строке: от самой левой до самой правой клетки чека (буквы внутри не мешают)
+  const spans: [number, number][] = [];
+  for (let y = 0; y < h; y++) {
+    let a = -1, b = -1;
+    for (let x = 0; x < w; x++) if (seen[y * w + x] === bestId) { if (a < 0) a = x; b = x; }
+    spans.push(a < 0 ? [1, 0] : [Math.max(0, a - 1) * f, Math.min(W, (b + 2) * f)]);
+  }
   const m = 2;
   const x = Math.max(0, (box.x0 - m) * f), y = Math.max(0, (box.y0 - m) * f);
-  return { x, y, w: Math.min(W, (box.x1 + 1 + m) * f) - x, h: Math.min(H, (box.y1 + 1 + m) * f) - y };
+  return { x, y, w: Math.min(W, (box.x1 + 1 + m) * f) - x, h: Math.min(H, (box.y1 + 1 + m) * f) - y, f, spans };
 }
 
 /** Наклон строк в радианах: перебираем углы и ищем, где строки текста дают самые «резкие» полосы. */
-function skewAngle(g: Uint8Array, W: number, box: { x: number; y: number; w: number; h: number }): number {
+function skewAngle(g: Uint8Array, W: number, box: Box): number {
   const f = Math.max(1, Math.round(box.w / 500));
   const pts: number[] = [];
   const hist = new Uint32Array(256);
@@ -126,14 +152,26 @@ export async function prepareImage(file: Blob, rotate: 0 | 90 | 180 | 270 = 0, o
   sctx.setTransform(1, 0, 0, 1, 0, 0);
 
   // 2. Где чек и насколько он наклонён
+  const paper = crop ? paperBox(whiteOf(sctx, W, H), W, H) : null;
+  if (paper) {
+    // Стол и руку рядом с чеком закрашиваем белым — иначе их узор распознаётся как буквы
+    const im = sctx.getImageData(0, 0, W, H), d = im.data;
+    for (let y = 0; y < H; y++) {
+      const [a, b] = paper.spans[Math.min(paper.spans.length - 1, (y / paper.f) | 0)];
+      for (let x = 0; x < W; x++) if (x < a || x >= b) { const i = (y * W + x) * 4; d[i] = d[i + 1] = d[i + 2] = 255; }
+    }
+    sctx.putImageData(im, 0, 0);
+  }
   const g0 = grayOf(sctx, W, H);
-  const box = (crop && paperBox(g0, W, H)) || { x: 0, y: 0, w: W, h: H };
+  const box: Box = paper || { x: 0, y: 0, w: W, h: H };
   const ang = deskew ? skewAngle(g0, W, box) : 0;
 
-  // 3. Вырезаем чек, выравниваем и подгоняем размер: текст должен быть крупным (ширина чека ≥ 1200)
+  // 3. Вырезаем чек, выравниваем и подгоняем размер: в строке чека ~40 знаков, ширина ~1300 — буквы около 30 точек.
+  // Длинный узкий чек может быть высоким: ограничиваем площадь (лимит холста iPhone ~16 млн точек) и сторону
   let k = 1;
-  if (box.w < 1200) k = Math.min(2.5, 1200 / box.w);
-  if (Math.max(box.w, box.h) * k > 3000) k = 3000 / Math.max(box.w, box.h);
+  if (box.w < 1300) k = Math.min(5, 1300 / box.w);
+  if (box.w * box.h * k * k > 12e6) k = Math.sqrt(12e6 / (box.w * box.h));
+  if (Math.max(box.w, box.h) * k > 8000) k = 8000 / Math.max(box.w, box.h);
   const OW = Math.round(box.w * k), OH = Math.round(box.h * k);
   const cv = document.createElement("canvas");
   cv.width = OW; cv.height = OH;
