@@ -15,10 +15,15 @@ export interface ReceiptItem {
   price: number;
   /** Нашли в справочнике. */
   known: boolean;
+  /** Не еда (пакет, помада, салфетки) — по умолчанию не добавляем. */
+  nonFood?: boolean;
 }
 
+/** Не продукты: в чеке супермаркета их много, на склад кухни они не нужны. */
+const NON_FOOD = /(^|[^а-яё])(пакет|майка|помада|гигиенич|салфет|шампун|мыло|зубн\S* (паст|щетк)|батарейк|прокладк|подгузн|туалетн\S* бумаг|бумаг\S* туалет|губк|средство|порошок|чистящ|моющ|освежит|дезодор|крем для|бритв|пластыр|лампочк|свеч|зажигалк|сигарет|журнал|открытк|игрушк)/;
+
 /** Строки, которые точно не товары. */
-const SERVICE = /^(итого|итог|всего|к оплате|сумма|сдача|наличн|безнал|карт[аы]?\b|оплат|ндс|ндс|чек\b|кассов|ккт|инн|фн\b|фд\b|фп\b|фпд|снс|сно\b|кассир|смена|скидк|баллы|бонус|бонусн|приход|возврат|магазин|адрес|тел\b|www|http|спасибо|покупк[аи]|терминал|эквайринг|rrn|номер|№|дата|время|ост\.|мир\b|visa|mastercard|система налог|организац|ооо\b|зао\b|ао\b|ип\b|торговая|торг\.? точка|сайт|эл\.? адрес|электронн|получен|выдан|клиент|картой|наличными|безналичн|электронн|сдача|к оплате|подытог|без скидки|округлен)/i;
+const SERVICE = /^(итого|итог|всего|к оплате|сумма|сдача|наличн|безнал|карт[аы]?\b|оплат|ндс|ндс|чек\b|кассов|ккт|инн|фн\b|фд\b|фп\b|фпд|снс|сно\b|кассир|смена|скидк|баллы|бонус|бонусн|приход|возврат|магазин|адрес|тел\b|www|http|спасибо|покупк[аи]|терминал|эквайринг|rrn|номер|№|дата|время|ост\.|мир\b|visa|mastercard|система налог|организац|ооо\b|зао\b|ао\b|ип\b|торговая|торг\.? точка|сайт|эл\.? адрес|электронн|получен|выдан|клиент|картой|наличными|безналичн|электронн|сдача|к оплате|подытог|без скидки|округлен|цена\s*позиц|с[уy]\S{2,3}\s*(скид|ндс|по чеку|\(руб)|ваша скидка|комисси|подпись|одобрен|банковск)/i;
 
 const NUM = "\\d+(?:[.,]\\d+)?";
 const toN = (s: string) => Number(s.replace(/\s/g, "").replace(",", "."));
@@ -96,7 +101,7 @@ const PHRASES: [RegExp, string][] = [
   [/шампин/, "Шампиньоны"],
   [/чай\b/, "Чай"],
   [/кофе/, "Кофе"],
-  [/(?:^|\s)сок\b/, "Сок"],
+  [/(?:^|\s)сок\b|нектар|морс\b/, "Сок"],
   [/укроп/, "Укроп"],
   [/петруш/, "Петрушка"],
 ];
@@ -137,6 +142,9 @@ export function matchName(raw: string, learned: Record<string, string>, custom: 
   const key = receiptKey(raw);
   if (learned[key]) return { name: learned[key], known: true };
   const q = norm(raw).replace(/[0-9]+[.,]?[0-9]*\s*%/g, " ");
+  // Главное слово обычно первое: «НЕКТАР ДОБРЫЙ БАНАНОВЫЙ» — нектар, а не бананы. Сначала ищем в начале названия
+  const head = q.replace(/[^а-яёa-z\s-]/g, " ").trim().split(/\s+/).slice(0, 3).join(" ");
+  for (const [re, name] of PHRASE_RES) if (re.test(head)) return { name, known: true };
   for (const [re, name] of PHRASE_RES) if (re.test(q)) return { name, known: true };
   const c = findCatalog(cleanName(raw), custom);
   if (c) return { name: c.n, known: true };
@@ -244,7 +252,26 @@ function scan(text: string): Raw[] {
     // «1. МОЛОКО», «2 Сахар» — номер позиции; но «2 шт x 109,90» — количество, его не трогаем
     line = line.replace(/^\d{1,3}(?:[.)]\s*|\s+)(?=[А-Яа-яA-Za-z]{2})(?!(?:шт|кг|г|л)(?![а-яё]))/i, "")
       .replace(/^\d{4,13}\s+(?=[А-Яа-яA-Za-z]{2})/, ""); // код товара: «3604 Яйцо»
+    // «ШТ.» перед названием и код товара: «ШТ.[М+]10907 НЕКТАР» (распознаётся и как «ИТ.», «ВТ.», «(№+10907»)
+    line = line.replace(/^[«*"]?\s*(?:[а-яa-z]{0,2}т\.|[а-яa-z]?т\s+(?=[а-яё]{2}))\s*/i, "").replace(/^[\[(]?\s*[мm№#]?\s*\+\s*[\])]?\s*\d{3,6}\s*/i, "").replace(/^[«*"]\s*/, "");
     if (VAT.test(line) || SERVICE.test(line)) { pending = []; st.open = null; continue; }
+    // «162.99*1   =162.99» под названием: «*» теряется («162.991») или читается как «#», «в»; «=» — как «2» или «+»
+    const pq = line.match(new RegExp("^" + P + "(?:\\s*[*#вx×хХ]?\\s*(\\d{1,2}))?(?:\\s+([=+2]?)\\s*(\\d+[.,]\\d{2})|\\s+[=+]\\S*)?\\s*$", "i"));
+    if (pq && pending.length) {
+      const unit = toN(pq[1]), packs = pq[2] ? toN(pq[2]) : 1, calc = Math.round(unit * packs * 100) / 100;
+      let total = calc;
+      const alts: { packs: number; price: number }[] = [];
+      if (pq[4]) {
+        const s = toN(pq[4]);
+        // «2195.99» — это «=195.99», если без первой «2» сходится
+        const s2 = pq[3] === "" && /^2/.test(pq[4]) ? toN(pq[4].slice(1)) : NaN;
+        if (near(s, calc)) total = s;
+        else if (near(s2, calc)) total = s2;
+        else alts.push({ packs, price: s });
+      }
+      push({ raw: take(), packs, price: total, unitPrice: unit, alts }, true);
+      continue;
+    }
     // Сумма отдельной строкой (Магнит): «=79.99»
     const so = line.match(sumOnly);
     if (so) {
@@ -281,6 +308,9 @@ function scan(text: string): Raw[] {
       push({ raw: name, packs: r.packs, price: r.total, unitPrice: r.unit, alts: r.alts }, !!sum);
       continue;
     }
+    // Строка цены распозналась плохо («. 99а   =109,99»), но сумма в конце видна — берём её для названия выше
+    const tail = line.match(new RegExp("[=+]\\s*" + P + "\\s*$"));
+    if (tail && pending.length && !/[а-яё]{3}/i.test(line.slice(0, tail.index))) { push({ raw: take(), packs: 1, price: toN(tail[1]) }, true); continue; }
     const e = line.match(endPrice);
     if (e && (!/^\d/.test(e[1].trim()) || /[а-яёa-z]{3}/i.test(e[1]))) {
       const name = e[1].trim();
@@ -344,6 +374,8 @@ export function parseReceipt(text: string, learned: Record<string, string> = {},
       // Штучный товар, который на складе считаем в г/мл/кг, а размер не указан — ставим 1 шт
       qty = r.packs; unit = "шт";
     }
-    return { raw: r.raw, name: m.name, qty: round(qty), unit, price: r.price, known: m.known };
+    const item: ReceiptItem = { raw: r.raw, name: m.name, qty: round(qty), unit, price: r.price, known: m.known };
+    if (NON_FOOD.test(norm(r.raw))) { item.nonFood = true; item.known = false; item.name = cleanName(r.raw); }
+    return item;
   });
 }
