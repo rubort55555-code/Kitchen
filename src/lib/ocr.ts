@@ -8,6 +8,8 @@ export interface PrepOpts {
   crop?: boolean;
   /** Выровнять наклон строк. */
   deskew?: boolean;
+  /** Ширина вырезанного чека после увеличения, точек. */
+  width?: number;
 }
 
 /** Серое изображение: яркость 0–255 на пиксель. */
@@ -128,7 +130,7 @@ function skewAngle(g: Uint8Array, W: number, box: Box): number {
 
 /** Улучшение фото перед распознаванием: поворот, обрезка по чеку, выравнивание, размер, контраст. */
 export async function prepareImage(file: Blob, rotate: 0 | 90 | 180 | 270 = 0, o: PrepOpts = {}): Promise<Blob> {
-  const { crop = true, deskew = true } = o;
+  const { crop = true, deskew = true, width = 1300 } = o;
   let bmp: ImageBitmap | HTMLImageElement;
   try {
     bmp = await createImageBitmap(file, { imageOrientation: "from-image" } as any);
@@ -169,7 +171,7 @@ export async function prepareImage(file: Blob, rotate: 0 | 90 | 180 | 270 = 0, o
   // 3. Вырезаем чек, выравниваем и подгоняем размер: в строке чека ~40 знаков, ширина ~1300 — буквы около 30 точек.
   // Длинный узкий чек может быть высоким: ограничиваем площадь (лимит холста iPhone ~16 млн точек) и сторону
   let k = 1;
-  if (box.w < 1300) k = Math.min(5, 1300 / box.w);
+  if (box.w < width) k = Math.min(5, width / box.w);
   if (box.w * box.h * k * k > 12e6) k = Math.sqrt(12e6 / (box.w * box.h));
   if (Math.max(box.w, box.h) * k > 8000) k = 8000 / Math.max(box.w, box.h);
   const OW = Math.round(box.w * k), OH = Math.round(box.h * k);

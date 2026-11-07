@@ -3,6 +3,7 @@
 import type { CatalogItem, Unit } from "./types";
 import { findCatalog } from "./catalog";
 import { norm } from "./util";
+import { fixWords } from "./ocrWords";
 
 export interface ReceiptItem {
   /** Строка из чека как есть (для запоминания сокращений). */
@@ -62,6 +63,8 @@ const PHRASES: [RegExp, string][] = [
   [/сосиск|сардел|сос\.?\s*(мол|вар)/, "Сосиски"],
   [/ветчин/, "Ветчина"],
   [/бекон/, "Бекон"],
+  // «ХЛЕБ ЗАЛИВНОЙ» — хлеб; «заливное» (холодец) — другое слово
+  [/заливной/, "Хлеб"],
   [/\bхлеб|\bбатон|\bбулк|буханк|багет/, "Хлеб"],
   [/лаваш/, "Лаваш"],
   [/картоф|картошк|\bкарт\b/, "Картофель"],
@@ -172,6 +175,8 @@ function normalizeLines(text: string): string[] {
   return text.split(/\r?\n/)
     .map((l) => l.replace(/[ \t]+/g, " ").replace(/[©®]/g, "0").replace(/(\d)\s*[,.]\s+(\d)/g, "$1,$2").replace(/[×✕]/g, "x").replace(/[“”«»"']/g, "").trim())
     .map((l) => l.split(/(\s+)/).map((w) => (/^\s+$/.test(w) ? w : cyr(digits(w)))).join(""))
+    // Слова с ошибками распознавания — ближайшим знакомым словом («ЗРЛИВНОЙ» → «ЗАЛИВНОЙ», «СУННА» → «СУММА»)
+    .map(fixWords)
     // «1 х 89.99», «1Х 79.99», «2 штх 109,90»: русская «х» между числами — знак умножения
     .map((l) => l.replace(/(\d)\s*(шт|кг|г|л)?\.?\s*[хХxX*]{1,2}\s*(?=\d)/gi, (_m, d, u) => `${d}${u ? " " + u.toLowerCase() : ""} x `))
     .filter(Boolean);
