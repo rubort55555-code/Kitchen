@@ -66,17 +66,40 @@ export function buildPrompt(o: AskOptions, products: Product[], members: Member[
     ...rulesText(rules, members, o.who, custom),
     "",
     "Главное — использовать то, что скоро испортится. Можно 1–2 продукта, которых нет дома.",
-    "Пиши простым языком, шаги короткие. Названия ингредиентов пиши так же, как в моём списке.",
+    o.weekPart ? "Пиши простым языком, шаги короткие. Названия ингредиентов пиши так же, как в моём списке." : "Пиши простым языком, на «вы», в повелительном наклонении («нарежьте», «обжарьте»). Названия ингредиентов пиши так же, как в моём списке.",
     "",
-    ...(o.weekPart ? [o.weekPart] : [
-      "В конце ответа обязательно дай блок JSON строго в таком виде (между ```json и ```), чтобы я вставил его в приложение:",
-      "```json",
-      '{"dishes":[{"name":"Название","minutes":30,"servings":2,"kind":"ужин","why":"почему это блюдо","ingredients":[{"name":"Молоко","amount":"200 мл"}],"steps":["Шаг 1","Шаг 2"]}]}',
-      "```",
-    ]),
+    ...(o.weekPart ? [o.weekPart] : TECH_CARD),
   ];
   return lines.filter((l, i, a) => l !== "" || (a[i - 1] !== "" && i > 0)).join("\n");
 }
+
+/**
+ * Каждое блюдо — технологическая карта (как рецепты в базе, tools/REWRITE.md):
+ * по ней может приготовить человек, который делает это впервые.
+ */
+const TECH_CARD = [
+  "Каждое блюдо оформи как технологическую карту — так, чтобы его приготовил человек, который делает это впервые:",
+  "- Состав — всё, что идёт в блюдо, включая воду, соль, сахар, масло для жарки и смазывания формы. Количество — числом: г, мл, шт, ст. л., ч. л., щепотка; без «по вкусу». Яйца, овощи и фрукты — в шт.",
+  "- Технология — по этапам («Подготовка», «Тесто», «Брожение», «Формовка», «Жарка», «Выпечка», «Сборка», «Остывание» и т. п.), не меньше двух этапов и обычно 8–15 шагов. Шаг — одно законченное действие в 1–3 предложениях.",
+  "- В каждом шаге: что и сколько (если продукт идёт частями — сколько именно сейчас); как делать (размер нарезки, техника); огонь (слабый, средний, сильный) или температура и режим духовки; время диапазоном («10–12 минут»); как проверить, что этап готов (по виду, на ощупь, по запаху, по температуре); что делать, если не получилось; где важно — почему так.",
+  "- Мясо, птица, рыба, фарш, яйца — безопасные температуры и признаки готовности (75 °C в толще для птицы и фарша, сок прозрачный).",
+  "- minutes — честное общее время от начала до подачи, включая замачивание, брожение, маринование, запекание и остывание; active — сколько минут человек занят руками.",
+  "- out — выход: вес или объём готового блюда и порции («около 900 г, 4 порции по 225 г»).",
+  "- tools — вся посуда с размерами; done — как выглядит, какое на ощупь и на вкус готовое блюдо; serve — как подавать; keep — где и сколько хранить, как разогревать, можно ли замораживать.",
+  "- fixes — 2–4 самые частые ошибки именно этого блюда в виде «признак → причина → как исправить»; tips — 0–2 совета (замены, как сделать вкуснее).",
+  "",
+  "В конце ответа обязательно дай блок JSON строго в таком виде (между ```json и ```), чтобы я вставил его в приложение. Все поля обязательны, кроме tips:",
+  "```json",
+  JSON.stringify({ dishes: [{
+    name: "Название", minutes: 60, active: 25, servings: 2, kind: "ужин", why: "почему это блюдо",
+    out: "около 600 г, 2 порции по 300 г", tools: "сковорода 26 см с крышкой, миска, нож, доска",
+    ingredients: [{ name: "Молоко", amount: "200 мл" }],
+    stages: [{ name: "Подготовка", steps: ["Шаг: что, сколько, как, время, как проверить"] }, { name: "Жарка", steps: ["…"] }],
+    done: "как выглядит и какое на вкус готовое блюдо", serve: "как подавать", keep: "как и сколько хранить",
+    fixes: ["признак → причина → как исправить"], tips: ["совет"],
+  }] }),
+  "```",
+];
 
 /** Ссылка, которая открывает новый чат Claude с готовым запросом. */
 export function claudeUrl(prompt: string): string {
@@ -130,14 +153,36 @@ function toRecipe(x: any): Recipe | null {
   const ings = (Array.isArray(x.ingredients) ? x.ingredients : []).map((i: any) =>
     typeof i === "string" ? { name: i.replace(/\s*[—–-]\s*.*$/, "").trim(), amount: (i.match(/[—–-]\s*(.*)$/) || [])[1] || "" } : { name: str(i?.name), amount: str(i?.amount ?? i?.qty) }
   ).filter((i: any) => i.name);
-  const steps = (Array.isArray(x.steps) ? x.steps : []).map(str).filter(Boolean).map((s: string) => s.replace(/^\d+[.)]\s*/, ""));
+  const clean = (a: unknown): string[] => (Array.isArray(a) ? a : []).map(str).filter(Boolean).map((s: string) => s.replace(/^\d+[.)]\s*/, ""));
+  // Технологическая карта: этапы со своими шагами → общий список шагов и номер шага, с которого начинается этап
+  let steps = clean(x.steps);
+  let stages: { t: string; i: number }[] | undefined;
+  if (Array.isArray(x.stages) && x.stages.some((s: any) => Array.isArray(s?.steps))) {
+    steps = []; stages = [];
+    for (const s of x.stages) {
+      const list = clean(s?.steps);
+      if (!list.length) continue;
+      const title = str(s?.name || s?.title || s?.t);
+      if (title) stages.push({ t: title, i: steps.length });
+      steps.push(...list);
+    }
+    if (!stages.length) stages = undefined;
+  }
   const minutes = Number(x.minutes ?? x.time);
   const servings = Number(x.servings ?? x.portions);
-  return {
+  const active = Number(x.active);
+  const text = (v: unknown) => (Array.isArray(v) ? v.map(str).filter(Boolean).join(", ") : str(v)) || undefined;
+  const list = (v: unknown) => { const a = (Array.isArray(v) ? v : v ? [v] : []).map(str).filter(Boolean); return a.length ? a : undefined; };
+  const r: Recipe = {
     id: uid(), name, ingredients: ings, steps,
     minutes: isFinite(minutes) && minutes > 0 ? Math.round(minutes) : undefined,
     servings: isFinite(servings) && servings > 0 ? Math.round(servings) : undefined,
     kind: str(x.kind || x.type) || undefined, why: str(x.why) || undefined,
     source: "claude", createdAt: Date.now(),
   };
+  if (isFinite(active) && active > 0 && (!r.minutes || active <= r.minutes)) r.active = Math.round(active);
+  if (stages) r.stages = stages;
+  const extra = { out: text(x.out ?? x.yield), tools: text(x.tools), done: text(x.done), serve: text(x.serve), keep: text(x.keep), fixes: list(x.fixes), tips: list(x.tips) };
+  for (const [k, v] of Object.entries(extra)) if (v) (r as any)[k] = v;
+  return r;
 }
