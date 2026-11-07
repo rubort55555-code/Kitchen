@@ -7,6 +7,7 @@ import { rub, num, scaleAmount } from "../src/lib/util";
 import { findTimes, fmtTime } from "../src/lib/timers";
 import { report, insights, priceTrends, amountText } from "../src/lib/stats";
 import { findTotal, parseReceipt } from "../src/lib/receipt";
+import { fixWords } from "../src/lib/ocrWords";
 import { parseRecipeText } from "../src/lib/recipeText";
 import { productsCsv, pricesCsv } from "../src/lib/csv";
 import { sumAmounts } from "../src/lib/shop";
@@ -258,6 +259,10 @@ ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) =
   ok("настоящий чек: нектар — сок, плавленый сыр, сахар", real[2].name === "Сок" && real[3].name === "Сыр плавленый" && real[9].name === "Сахар", real.map((x) => x.name));
   ok("настоящий чек: помада и пакет — не продукты", real[8].nonFood === true && real[10].nonFood === true && !real[2].nonFood, real.map((x) => `${x.name}|${x.nonFood}`));
   ok("настоящий чек: строки скидок — не товары", !real.some((x) => /скид|позиц/i.test(x.raw)));
+  // Исправление слов после распознавания: только уверенные замены похожих букв
+  ok("слова: ЗРЛИВНОЙ → ЗАЛИВНОЙ, ЦОБРЫЙ → ДОБРЫЙ, СУННА → СУММА, ПАКОНКА → ЛАКОМКА", fixWords("ЗРЛИВНОЙ ЦОБРЫЙ СУННА ПАКОНКА") === "ЗАЛИВНОЙ ДОБРЫЙ СУММА ЛАКОМКА", fixWords("ЗРЛИВНОЙ ЦОБРЫЙ СУННА ПАКОНКА"));
+  ok("слова: другие окончания, обрезанные и чужие слова не трогаем", fixWords("ПОЗИЦИЮ СКИДКУ ГИГИЕНИЧЕ ЛЕНИНА КЭРРИ Простоквашино") === "ПОЗИЦИЮ СКИДКУ ГИГИЕНИЧЕ ЛЕНИНА КЭРРИ Простоквашино", fixWords("ПОЗИЦИЮ СКИДКУ ГИГИЕНИЧЕ ЛЕНИНА КЭРРИ Простоквашино"));
+  ok("чек: «ХЛЕБ ЗАЛИВНОЙ» — хлеб, а не холодец", parseReceipt("ИЕБ ЗРЛИВНОЙ 480 ГР 1 x 52.99")[0]?.name === "Хлеб", parseReceipt("ИЕБ ЗРЛИВНОЙ 480 ГР 1 x 52.99")[0]);
   ok("чек: итог через много пробелов", findTotal("ИТОГ                         =905.41") === 905.41 && findTotal("Итого: 1 040,17") === 1040.17);
   ok("чек: цифры с буквами (О вместо 0, ] вместо 1)", names("Сахар песок 1кг 1 x 79.99 =79.9]")[0] === "Сахар|1|кг|79.91", names("Сахар песок 1кг 1 x 79.99 =79.9]"));
 }
