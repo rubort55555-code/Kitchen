@@ -147,11 +147,14 @@ with sync_playwright() as p:
     pg.fill("#pName", ""); pg.fill("#pPrice", "")
 
     # 3. нет интернета, новый код
+    # Карточка появляется сразу («Ищу товар…»), а сообщение — только когда оборванный запрос
+    # вернётся. Поэтому ждём сам текст, а не карточку, иначе проверка обгоняет приложение.
     manual(pg, NOPE)
     try:
-        pg.wait_for_selector(".code-card", timeout=5000)
+        pg.wait_for_function("""() => { const c = document.querySelector('.code-card');
+            return !!c && (c.innerText.includes('Нет интернета') || c.innerText.includes('Не получилось связаться')); }""", timeout=5000)
     except Exception:
-        pg.screenshot(path="/tmp/claude-0/-home-claude/bc837202-9ac9-5713-9ea7-61764190d27c/scratchpad/s3.png"); print(pg.inner_text(".sheet")[:600]); print(errs); raise
+        pg.screenshot(path=os.path.join(tmp, "s3.png")); print(pg.inner_text(".sheet")[:600]); print(errs)
     ok("нет сети: понятное сообщение", "Нет интернета" in pg.inner_text(".code-card") or "Не получилось связаться" in pg.inner_text(".code-card"), pg.inner_text(".code-card"))
     online["on"] = True
     pg.click('[aria-label="Убрать штрихкод"]')
