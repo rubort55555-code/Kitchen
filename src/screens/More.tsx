@@ -9,10 +9,10 @@ import { makeDemo } from "../lib/demo";
 import { FAQ, SCREEN_HELP, SECTIONS, searchHelp, type HelpSection, type Screen } from "../lib/help";
 import type { CatalogItem, FishType, Level, Member, Place, Rule, ScanEvent, Unit } from "../lib/types";
 import { PLACES, UNITS } from "../lib/types";
-import { norm, plural, ymd } from "../lib/util";
+import { norm, plural, uid, ymd } from "../lib/util";
 import { Stats } from "./Stats";
 import { Nutrition } from "./Nutrition";
-import { planFor } from "../lib/nutrition";
+import { ageOf, basicsError, bmiOf, needsBasics, planFor, type BodyProfile } from "../lib/nutrition";
 import { closeAll, closeSheet, goPage, goTab, openSheet, toast, useUI } from "../lib/ui";
 import { isNative, shareFile } from "../lib/native";
 
@@ -83,25 +83,97 @@ function nutritionSub(members: Member[]): string {
 const splitList = (s: string) => s.split(/[,;\n]/).map((x) => x.trim()).filter(Boolean);
 
 // ---------- Семья ----------
+/** Возраст и ИМТ одной строкой; у детей ИМТ без взрослой оценки — у них свои возрастные таблицы ВОЗ. */
+function bodyLine(b: BodyProfile | undefined): string {
+  if (needsBasics(b)) return "";
+  const age = ageOf(b!);
+  const bmi = bmiOf(b!);
+  const ageText = `${age} ${plural(age, "год", "года", "лет")}`;
+  return age < 18 ? `${ageText} · ${b!.height} см, ${String(b!.weight).replace(".", ",")} кг · ИМТ ${String(bmi.bmi).replace(".", ",")} (у детей оценивается по возрастным таблицам)` : `${ageText} · ИМТ ${String(bmi.bmi).replace(".", ",")} — ${bmi.cat}`;
+}
+
 function Family() {
-  const members = useStore((s) => s.settings.members);
-  const upd = (i: number, patch: Partial<Member>) => setSettings({ members: members.map((m, k) => (k === i ? { ...m, ...patch } : m)) });
+  const s = useStore((x) => x.settings);
+  const members = s.members;
+  const [edit, setEdit] = useState<string | null>(null);
+  const missing = members.filter((m) => needsBasics(m.body)).length;
+  function remove(m: Member) {
+    const before = { members: s.members, rules: s.rules };
+    // Ограничения только для этого человека уходят вместе с ним
+    setSettings({ members: members.filter((x) => x.id !== m.id), rules: s.rules.filter((r) => r.who !== m.id) });
+    setEdit(null);
+    toast(`Удалено из семьи: ${m.name}`, () => setSettings(before));
+  }
+  const editing = edit === "new" ? null : members.find((m) => m.id === edit);
   return (
     <div className="screen">
       <Header title="Семья" screen="family" onBack={back} backText="Ещё" />
-      <p className="muted mt0">Порции считаются на всех. В «Спросить Claude» можно выбрать «только я» или «только второй».</p>
-      {members.map((m, i) => (
-        <div className="card" key={m.id}>
-          <label className="f mt0" htmlFor={"mn" + i}>Имя</label>
-          <input id={"mn" + i} className="inp" style={{ background: "var(--card2)" }} defaultValue={m.name} onBlur={(e: any) => upd(i, { name: e.target.value.trim() || m.name })} />
-          <label className="f" htmlFor={"ma" + i}>Аллергия (через запятую)</label>
-          <input id={"ma" + i} className="inp" style={{ background: "var(--card2)" }} defaultValue={m.allergies.join(", ")} placeholder="Например: арахис, киви" onBlur={(e: any) => upd(i, { allergies: splitList(e.target.value) })} />
-          <label className="f" htmlFor={"md" + i}>Не любит</label>
-          <input id={"md" + i} className="inp" style={{ background: "var(--card2)" }} defaultValue={m.dislikes.join(", ")} placeholder="Например: грибы, оливки" onBlur={(e: any) => upd(i, { dislikes: splitList(e.target.value) })} />
-        </div>
-      ))}
-      <p className="muted small">Изменения сохраняются, когда вы выходите из поля.</p>
+      <p className="muted mt0">Все, кто ест дома. Пол, год рождения, рост и вес нужны у каждого — по ним считаются ИМТ, нормы питания и порции. В «Спросить Claude» можно выбрать, кто будет есть.</p>
+      {missing > 0 && <div className="issue">⚠️ Заполните данные: {members.filter((m) => needsBasics(m.body)).map((m) => m.name).join(", ")} — без пола, возраста, роста и веса не посчитать ИМТ и нормы.</div>}
+      <div className="list">
+        {members.map((m) => (
+          <button className="li" key={m.id} onClick={() => setEdit(m.id)}>
+            <span className="ico">{needsBasics(m.body) ? "⚠️" : m.body!.born > new Date().getFullYear() - 18 ? "🧒" : "🧑"}</span>
+            <div className="main">
+              <div className="name">{m.name}</div>
+              <div className="meta">{needsBasics(m.body) ? "Нужно заполнить: пол, год рождения, рост, вес" : bodyLine(m.body)}{m.allergies.length ? ` · аллергия: ${m.allergies.join(", ")}` : ""}</div>
+            </div>
+            <Chevron />
+          </button>
+        ))}
+      </div>
+      <button className="btn sec" style={{ marginTop: 12 }} onClick={() => setEdit("new")}>+ Добавить человека</button>
+      <p className="muted small">{members.length} {plural(members.length, "человек", "человека", "человек")} в семье — на столько порций считаются рецепты и меню.</p>
+      {edit && <MemberSheet m={editing || undefined} canDelete={!!editing && members.length > 1}
+        onSave={(m) => { setSettings({ members: editing ? members.map((x) => (x.id === m.id ? m : x)) : [...members, m] }); setEdit(null); toast(editing ? `Сохранено: ${m.name}` : `Добавлено в семью: ${m.name}`); }}
+        onDelete={() => editing && remove(editing)} onClose={() => setEdit(null)} />}
     </div>
+  );
+}
+
+/** Карточка человека: имя, пол, год рождения, рост, вес (обязательно), аллергии и что не любит. */
+function MemberSheet({ m, canDelete, onSave, onDelete, onClose }: { m?: Member; canDelete: boolean; onSave: (m: Member) => void; onDelete: () => void; onClose: () => void }) {
+  const [name, setName] = useState(m?.name || "");
+  const [sex, setSex] = useState<"" | "f" | "m">(m?.body?.sex || "");
+  const num = (v: number | undefined) => (v ? String(v).replace(".", ",") : "");
+  const [born, setBorn] = useState(num(m?.body?.born));
+  const [height, setHeight] = useState(num(m?.body?.height));
+  const [weight, setWeight] = useState(num(m?.body?.weight));
+  const [allergies, setAllergies] = useState(m?.allergies.join(", ") || "");
+  const [dislikes, setDislikes] = useState(m?.dislikes.join(", ") || "");
+  const [err, setErr] = useState("");
+  const toN = (x: string) => { const v = parseFloat(x.replace(",", ".")); return isNaN(v) ? 0 : v; };
+  function submit() {
+    if (!name.trim()) return setErr("Укажите имя.");
+    const basics = { sex: sex || undefined, born: Math.round(toN(born)), height: toN(height), weight: toN(weight) } as Partial<BodyProfile>;
+    const e = basicsError(basics);
+    if (e) return setErr(e);
+    // Остальное из «Питания» (дневник, цель, талия) сохраняем; новый вес — с датой
+    const body: BodyProfile = { ...(m?.body || {}), ...(basics as BodyProfile), goal: m?.body?.goal || "keep" };
+    if (!m?.body || m.body.weight !== body.weight) body.updated = ymd();
+    if (body.sex === "m") { body.pregnant = false; body.lactating = false; }
+    onSave({ id: m?.id || uid(), name: name.trim(), allergies: splitList(allergies), dislikes: splitList(dislikes), body });
+  }
+  return (
+    <Sheet title={m ? m.name : "Новый человек"} onClose={onClose} right={<button className="x" onClick={submit}>Готово</button>}>
+      <label className="f mt0" htmlFor="fmName">Имя</label>
+      <input id="fmName" className="inp" value={name} onChange={(e: any) => { setName(e.target.value); setErr(""); }} placeholder="Например: Аня" />
+      <label className="f">Пол</label>
+      <Seg label="Пол" value={sex} onChange={(v) => { setSex(v); setErr(""); }} options={[{ v: "f", t: "Женский" }, { v: "m", t: "Мужской" }]} />
+      <div className="nut-grid">
+        <div><label className="f" htmlFor="fmBorn">Год рождения</label><input id="fmBorn" className="inp" inputMode="numeric" value={born} onChange={(e: any) => { setBorn(e.target.value); setErr(""); }} placeholder="ГГГГ" /></div>
+        <div><label className="f" htmlFor="fmHeight">Рост, см</label><input id="fmHeight" className="inp" inputMode="decimal" value={height} onChange={(e: any) => { setHeight(e.target.value); setErr(""); }} placeholder="см" /></div>
+        <div><label className="f" htmlFor="fmWeight">Вес, кг</label><input id="fmWeight" className="inp" inputMode="decimal" value={weight} onChange={(e: any) => { setWeight(e.target.value); setErr(""); }} placeholder="кг" /></div>
+      </div>
+      <p className="muted small">Всё обязательно: по полу, возрасту, росту и весу считаются ИМТ, калории и нормы. Распорядок дня, цель и талию можно уточнить в «Питании».</p>
+      <label className="f" htmlFor="fmAll">Аллергия (через запятую)</label>
+      <input id="fmAll" className="inp" value={allergies} onChange={(e: any) => setAllergies(e.target.value)} placeholder="Например: арахис, киви" />
+      <label className="f" htmlFor="fmDis">Не любит</label>
+      <input id="fmDis" className="inp" value={dislikes} onChange={(e: any) => setDislikes(e.target.value)} placeholder="Например: грибы, оливки" />
+      {err && <p className="err" role="alert">{err}</p>}
+      <button className="btn" style={{ marginTop: 12 }} onClick={submit}>Сохранить</button>
+      {canDelete && <button className="btn ghost" style={{ color: "var(--bad)" }} onClick={onDelete}>Удалить из семьи</button>}
+    </Sheet>
   );
 }
 

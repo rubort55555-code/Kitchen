@@ -2,7 +2,7 @@
 // потом разбираем ответ, который пользователь вставил обратно. Бесплатно, без ключей.
 import type { Member, Product, Recipe, Rule } from "./types";
 import { qtyText } from "./units";
-import { dateText, daysLeft, norm, uid } from "./util";
+import { dateText, daysLeft, norm, plural, uid } from "./util";
 import { allCatalog } from "./catalog";
 import type { CatalogItem } from "./types";
 
@@ -42,7 +42,16 @@ export function rulesText(rules: Rule[], members: Member[], who: string[], custo
 
 export function buildPrompt(o: AskOptions, products: Product[], members: Member[], rules: Rule[], basics: string[], custom: CatalogItem[]): string {
   const eaters = members.filter((m) => o.who.includes(m.id));
-  const whoText = eaters.length >= 2 ? `${eaters.length} взрослых (${eaters.map((m) => m.name).join(" и ")})` : `1 взрослый (${eaters[0]?.name || "я"})`;
+  // Возраст каждого — чтобы порции и блюда подходили и взрослым, и детям
+  const year = new Date().getFullYear();
+  const ageOf = (m: Member) => (m.body?.born ? year - m.body.born : null);
+  const who = (list: Member[]) => list.map((m) => { const a = ageOf(m); return a === null ? m.name : `${m.name}, ${a} ${plural(a, "год", "года", "лет")}`; }).join("; ");
+  const adults = eaters.filter((m) => (ageOf(m) ?? 18) >= 18);
+  const kids = eaters.filter((m) => (ageOf(m) ?? 18) < 18);
+  const whoText = !eaters.length ? "1 взрослый (я)" : [
+    adults.length ? `${adults.length} ${plural(adults.length, "взрослый", "взрослых", "взрослых")} (${who(adults)})` : "",
+    kids.length ? `${kids.length} ${plural(kids.length, "ребёнок", "ребёнка", "детей")} (${who(kids)}) — детям порции меньше, блюда без острого` : "",
+  ].filter(Boolean).join(" и ");
   const sorted = [...products].sort((a, b) => (daysLeft(a.until) ?? 9999) - (daysLeft(b.until) ?? 9999));
   const stock = sorted.map((p) => {
     const d = daysLeft(p.until);

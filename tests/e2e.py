@@ -122,9 +122,9 @@ with sync_playwright() as p:
         prompt = unquote(href.split("q=", 1)[1])
         ok(S + "ссылка на Claude с запросом", href.startswith("https://claude.ai/new?q="))
         ok(S + "в запросе продукты и ограничения", "Молоко" in prompt and "холодец" in prompt and "треска" in prompt and "камбала и минтай" in prompt and "семечки" in prompt, prompt[:400])
-        pg.click(".sheet .seg button >> text=Только Я")
+        pg.click('.sheet [aria-label="Кто будет есть"] .chip >> text=Второй')
         href2 = pg.get_attribute(".sheet a.btn", "href")
-        ok(S + "«только я» меняет запрос", "1 взрослый" in unquote(href2))
+        ok(S + "без второго — запрос на одного", "1 взрослый" in unquote(href2))
         # вставить пример ответа
         sample = open(os.path.join(ROOT, "tests", "sample_answer.txt"), encoding="utf-8").read()
         pg.evaluate("t => navigator.clipboard.writeText(t)", sample)

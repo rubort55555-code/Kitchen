@@ -1,6 +1,6 @@
 // Проверка расчёта норм питания: node node_modules/.bin/tsx tests/nutrition.test.ts
 import { ACTIVITIES, ACT_GROUPS, actByKey, actKey, searchActs } from "../src/lib/activities";
-import { dayEnergy, diaryTee, fromHours, hm, normSegs, parseHm, templateDay, SLEEP, activityGroup, bmiOf, bmr, micros, newProfile, pal, planFor, restHours, waistRisk, type BodyProfile } from "../src/lib/nutrition";
+import { dayEnergy, diaryTee, fromHours, hm, normSegs, parseHm, templateDay, SLEEP, activityGroup, bmiOf, bmr, micros, newProfile, pal, planFor, restHours, waistRisk, basicsError, needsBasics, type BodyProfile } from "../src/lib/nutrition";
 
 let pass = 0, fail = 0;
 const ok = (name: string, c: boolean, extra?: unknown) => { if (c) pass++; else { fail++; console.log("FAIL", name, extra ?? ""); } };
@@ -135,6 +135,16 @@ ok("поиск: «душ»", searchActs("душ").some((a) => a.c === "13050"));
 ok("поиск: «бег 10»", searchActs("бег 10").some((a) => a.c === "12050"), searchActs("бег 10").map((a) => a.n));
 ok("поиск: «компьютер»", searchActs("компьютер").length >= 2);
 ok("у каждого раздела есть занятия", ACT_GROUPS.every((g) => ACTIVITIES.some((a) => a.g === g.id)));
+
+// Обязательные данные человека (экран «Семья»): пол, год рождения, рост, вес
+ok("данные: всё заполнено", basicsError({ sex: "f", born: 1990, height: 165, weight: 60 }, 2026) === "");
+ok("данные: нет профиля — укажите пол", basicsError(undefined, 2026) === "Укажите пол." && needsBasics(undefined));
+ok("данные: без пола", /пол/.test(basicsError({ born: 1990, height: 165, weight: 60 }, 2026)));
+ok("данные: год рождения в будущем", /год рождения/.test(basicsError({ sex: "m", born: 2030, height: 180, weight: 80 }, 2026)));
+ok("данные: рост в метрах", /Рост/.test(basicsError({ sex: "m", born: 1990, height: 1.8, weight: 80 }, 2026)));
+ok("данные: нет веса", /Вес/.test(basicsError({ sex: "m", born: 1990, height: 180 } as any, 2026)));
+ok("данные: ребёнок 3 года проходит", basicsError({ sex: "f", born: 2023, height: 95, weight: 14 }, 2026) === "");
+ok("профиль без дневника считается по умолчанию", !!planFor({ sex: "f", born: 1990, height: 165, weight: 60, goal: "keep" }, NOW));
 
 console.log(`nutrition: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

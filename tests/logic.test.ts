@@ -67,6 +67,13 @@ ok("parse без ограды", parseAnswer('Ответ: {"dishes":[{"name":"К�
 const pr = buildPrompt({ who: both, minutes: 30, kind: "ужин", count: 3, wish: "", useFirst: [] }, [], members, DEFAULT_RULES, ["соль"], []);
 ok("prompt содержит ограничения", /холодец/.test(pr) && /треска/.test(pr) && /камбала и минтай/.test(pr) && /арахис/.test(pr) && /```json/.test(pr), pr);
 ok("prompt просит технологическую карту", /технологическую карту/.test(pr) && /"stages"/.test(pr) && /"out"/.test(pr) && /"fixes"/.test(pr) && /"done"/.test(pr) && !/шаги короткие/.test(pr), pr);
+const fam = [{ id: "a", name: "Аня", allergies: [], dislikes: [], body: { sex: "f", born: new Date().getFullYear() - 35, height: 165, weight: 60, goal: "keep" } },
+  { id: "b", name: "Петя", allergies: [], dislikes: [], body: { sex: "m", born: new Date().getFullYear() - 37, height: 180, weight: 80, goal: "keep" } },
+  { id: "c", name: "Маша", allergies: [], dislikes: [], body: { sex: "f", born: new Date().getFullYear() - 6, height: 115, weight: 20, goal: "keep" } }] as any;
+const prf = buildPrompt({ who: ["a", "b", "c"], minutes: null, kind: "ужин", count: 3, wish: "", useFirst: [] }, [], fam, DEFAULT_RULES, ["соль"], []);
+ok("prompt: семья из 3 — взрослые и ребёнок с возрастом", /2 взрослых \(Аня, 35 лет; Петя, 37 лет\) и 1 ребёнок \(Маша, 6 лет\)/.test(prf) && /Порции рассчитай на 3/.test(prf), prf.split("\n").slice(0, 3));
+const pr1 = buildPrompt({ who: ["b"], minutes: null, kind: "ужин", count: 3, wish: "", useFirst: [] }, [], fam, DEFAULT_RULES, ["соль"], []);
+ok("prompt: один человек", /1 взрослый \(Петя, 37 лет\)/.test(pr1) && /Порции рассчитай на 1/.test(pr1));
 const prw = buildPrompt({ who: both, minutes: null, kind: "любое", count: 3, wish: "", useFirst: [], weekPart: "Составь меню на 7 дней" }, [], members, DEFAULT_RULES, ["соль"], []);
 ok("prompt меню на неделю — без технологических карт", /Составь меню/.test(prw) && !/технологическую карту/.test(prw), prw);
 // ответ Claude в виде технологической карты: этапы, выход, готовность, ошибки

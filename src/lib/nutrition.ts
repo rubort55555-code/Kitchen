@@ -101,6 +101,19 @@ export function newProfile(sex: Sex = "f"): BodyProfile {
 
 export const ageOf = (p: BodyProfile, now = new Date()) => now.getFullYear() - p.born;
 
+/**
+ * Обязательные данные человека: пол, год рождения, рост и вес — без них не посчитать ИМТ, нормы и порции.
+ * Пустая строка — всё заполнено; иначе — что поправить. Рост и вес допускают детей.
+ */
+export function basicsError(b: Partial<BodyProfile> | undefined, year = new Date().getFullYear()): string {
+  if (!b || (b.sex !== "f" && b.sex !== "m")) return "Укажите пол.";
+  if (!b.born || b.born < year - 110 || b.born > year) return "Проверьте год рождения, например 1988.";
+  if (!b.height || b.height < 45 || b.height > 250) return "Рост — в сантиметрах, например 168.";
+  if (!b.weight || b.weight < 2 || b.weight > 300) return "Вес — в килограммах, например 64,5.";
+  return "";
+}
+export const needsBasics = (b: BodyProfile | undefined) => !!basicsError(b);
+
 /** Основной обмен, ккал/сутки (Миффлин — Сан-Жеор). */
 export function bmr(p: BodyProfile, now = new Date()): number {
   return 10 * p.weight + 6.25 * p.height - 5 * ageOf(p, now) + (p.sex === "m" ? 5 : -161);

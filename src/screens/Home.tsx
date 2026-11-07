@@ -9,6 +9,7 @@ import { findCatalog } from "../lib/catalog";
 import { compileRules, checkRecipe } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
 import { monthStart, summary } from "../lib/stats";
+import { needsBasics } from "../lib/nutrition";
 import { daysLeft, freshness, plural, rub, untilText } from "../lib/util";
 import { qtyText } from "../lib/units";
 import { goMenu, goPage, goTab, openSheet } from "../lib/ui";
@@ -49,6 +50,13 @@ export function Home() {
         <div className="banner warn">
           <span className="txt">{backupDays === null ? "Вы ещё не сохраняли копию данных." : `Копии данных ${backupDays} ${plural(backupDays, "день", "дня", "дней")}.`} Сохраните её — Safari иногда стирает данные.</span>
           <button className="chip" onClick={() => goPage("data")}>Сохранить</button>
+        </div>
+      )}
+
+      {settings.members.some((m) => needsBasics(m.body)) && (
+        <div className="banner warn">
+          <span className="txt">Заполните данные семьи: пол, год рождения, рост и вес каждого — без них не посчитать ИМТ и нормы питания.</span>
+          <button className="chip" onClick={() => goPage("family")}>Заполнить</button>
         </div>
       )}
 
