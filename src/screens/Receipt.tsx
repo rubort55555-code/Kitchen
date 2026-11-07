@@ -88,7 +88,7 @@ export function Receipt({ mode }: { mode: "photo" | "text" }) {
           <button className="btn" onClick={() => input.current?.click()}>📷 Сфотографировать</button>
           <button className="btn sec" onClick={() => { const i = document.createElement("input"); i.type = "file"; i.accept = "image/*"; i.onchange = onFile; i.click(); }}>🖼 Выбрать из галереи</button>
           <button className="link" onClick={() => setStage("text")}>Вставить текст вместо фото</button>
-          <p className="muted small">В первый раз скачается русский язык (около 12 МБ) — лучше по Wi‑Fi. Дальше работает без интернета.</p>
+          <p className="muted small">В первый раз скачается русский язык (около 8 МБ) — лучше по Wi‑Fi. Дальше работает без интернета.</p>
         </div>
       )}
 

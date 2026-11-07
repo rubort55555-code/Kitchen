@@ -31,9 +31,9 @@ await esbuild.build({ ...common, entryPoints: [join(jsDir, "src/index.js")], out
 await esbuild.build({ ...common, entryPoints: [join(jsDir, "src/worker-script/browser/index.js")], outfile: join(out, "worker.min.js"), format: "iife" });
 // Ядро (WebAssembly внутри) — с SIMD и без
 for (const f of ["tesseract-core-simd-lstm.wasm.js", "tesseract-core-lstm.wasm.js"]) copyFileSync(join(coreDir, f), join(out, f));
-// Языки: русский и английский (быстрые модели, без сжатия)
-for (const f of ["rus.traineddata", "eng.traineddata"]) copyFileSync(join(dataDir, f), join(out, f));
+// Язык: только русский — с английским распознавание путает похожие буквы в чеках
+for (const f of ["rus.traineddata"]) copyFileSync(join(dataDir, f), join(out, f));
 copyFileSync(join(jsDir, "LICENSE.md"), join(out, "LICENSE-tesseract.js.txt"));
 copyFileSync(join(dataDir, "LICENSE"), join(out, "LICENSE-tessdata.txt"));
-writeFileSync(join(out, "README.txt"), "Tesseract.js 7.0.0 (Apache-2.0), tesseract.js-core, tessdata_fast (rus, eng). Собрано tools/build-ocr.mjs. Используется для распознавания чеков без интернета.\n");
+writeFileSync(join(out, "README.txt"), "Tesseract.js 7.0.0 (Apache-2.0), tesseract.js-core, tessdata_fast (rus). Собрано tools/build-ocr.mjs. Используется для распознавания чеков без интернета.\n");
 console.log("Готово:", out);

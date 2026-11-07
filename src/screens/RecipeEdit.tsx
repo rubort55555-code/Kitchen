@@ -63,7 +63,7 @@ export function RecipeNew({ mode }: { mode: "menu" | "text" | "photo" }) {
           <div style={{ fontSize: 48 }}>📖</div>
           <h2>{statusText(prog.status)}</h2>
           <div className="split" style={{ height: 12 }}><i style={{ width: Math.max(4, Math.round(prog.progress * 100)) + "%" }} /></div>
-          <p className="muted small">В первый раз скачивается русский язык (около 12 МБ). Не закрывайте приложение.</p>
+          <p className="muted small">В первый раз скачивается русский язык (около 8 МБ). Не закрывайте приложение.</p>
         </div>
       )}
       {stage === "text" && (
