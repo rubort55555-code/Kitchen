@@ -133,6 +133,17 @@ export function parseAnswer(text: string): { recipes: Recipe[]; error?: string }
   return { recipes: [], error: candidates.length ? "Нашёл блок с данными, но не смог его прочитать. Попросите Claude: «Повтори JSON с блюдами»." : "В тексте нет блока JSON с блюдами. Скопируйте ответ Claude целиком — вместе с блоком ```json в конце." };
 }
 
+/** Все блоки JSON в ответе Claude: в ```json … ``` и просто в тексте. */
+export function jsonBlocks(text: string): any[] {
+  const out: any[] = [];
+  const fence = /```(?:json)?\s*([\s\S]*?)```/gi;
+  let m: RegExpExecArray | null;
+  while ((m = fence.exec(text))) { const d = tryJson(m[1]); if (d) out.push(d); }
+  const b = balanced(text);
+  if (b) { const d = tryJson(b); if (d) out.push(d); }
+  return out;
+}
+
 function balanced(t: string): string | null {
   const s = t.indexOf("{");
   if (s < 0) return null;
