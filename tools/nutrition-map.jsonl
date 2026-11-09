@@ -228,7 +228,7 @@
 {"name": "Уксус", "ndb": "02053", "match": "Vinegar, distilled", "units": {"ст. л.": 15, "ч. л.": 5}, "density": 1.01, "note": "столовый (дистиллированный)", "fineli": "933", "fineli_match": "Vinegar"}
 {"name": "Уксус рисовый", "ndb": "02053", "match": "Vinegar, distilled", "units": {"ст. л.": 15}, "density": 1.01, "note": "аналог примерный: рисового уксуса нет, взят столовый (distilled)", "fineli": "933", "fineli_match": "Vinegar"}
 {"name": "Устричный соус", "ndb": "06176", "match": "Sauce, oyster, ready-to-serve", "units": {"ст. л.": 18}, "fineli_note": "устричного соуса в Fineli нет"}
-{"name": "Утка", "ndb": "05139", "match": "Duck, domesticated, meat and skin, raw", "units": {}, "fineli_note": "утки в Fineli нет"}
+{"name": "Утка", "ndb": "05139", "match": "Duck, domesticated, meat and skin, raw", "units": {}, "edible": 0.65, "note": "вес тушки с костями; состав на мясо с кожей; съедобная часть ~65 % (оценка, по аналогии с курицей — уточнить по таблице отходов USDA)", "fineli_note": "утки в Fineli нет"}
 {"name": "Фарш", "ndb": "23572", "match": "Beef, ground, 80% lean meat / 20% fat, raw", "units": {}, "note": "аналог примерный: свино-говяжий фарш ≈ говяжий 80/20", "fineli": "711", "fineli_match": "Pork beef mince"}
 {"name": "Фарш говяжий", "ndb": "23572", "match": "Beef, ground, 80% lean meat / 20% fat, raw", "units": {}, "fineli_note": "в Fineli только постный говяжий фарш 7 % или свино-говяжий; USDA 80/20 ближе"}
 {"name": "Фарш куриный", "ndb": "05332", "match": "Chicken, ground, raw", "units": {}, "fineli": "28930", "fineli_match": "Chicken mince"}
