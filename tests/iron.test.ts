@@ -1,6 +1,6 @@
 // Проверка оценки железа: node node_modules/.bin/tsx tests/iron.test.ts
 import { CATALOG } from "../src/lib/catalog";
-import { CALCIUM_INHIBITOR_MG, IRON_MIN_MG, MEAT_ENHANCER_G, analyzeIron, foodIron, foodIronFromTags, foodIronFromUsdaGroup, foodIronOfProduct, ironDay, ironHints, mealParts } from "../src/lib/iron";
+import { CALCIUM_INHIBITOR_MG, IRON_MIN_MG, MEAT_ENHANCER_G, analyzeIron, foodIron, foodIronFromTags, foodIronFromUsdaGroup, foodIronOfProduct, ironDay, ironUnknownWhy, ironHints, mealParts } from "../src/lib/iron";
 import { DRINKS, SOURCES } from "../src/lib/interactions";
 import { mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe } from "../src/lib/diary";
 import { fromOff } from "../src/lib/off";
@@ -35,8 +35,33 @@ ok("неизвестное остаётся D", foodIron("Зюзюка").grade =
 const cnt = { B: 0, C: 0, D: 0 };
 for (const it of CATALOG) { const g = foodIron(it.n, it).grade; cnt[g as "B" | "C" | "D"]++; }
 ok("все 2000+ продуктов справочника размечены", cnt.B + cnt.C + cnt.D === CATALOG.length, cnt);
-ok("доля «данных нет» не больше 20%", cnt.D / CATALOG.length <= 0.20, cnt);
+ok("доля «данных нет» не больше 3%", cnt.D / CATALOG.length <= 0.03, cnt);
 ok("мясо, птица, рыба, молочное, яйца — все со степенью B", CATALOG.filter((x) => ["Мясо", "Птица", "Рыба", "Яйца"].includes(x.c)).every((x) => foodIron(x.n, x).grade === "B"));
+
+// Разметка бывших «D»: блюда, выпечка, лапша, напитки, сладости, экзотика
+const fl = (n: string) => foodIron(n).flags;
+ok("блюда типичного состава — степень C", ["Кордон блю", "Гирос", "Салат мимоза", "Пицца кусочек", "Лазанья готовая", "Паста карбонара готовая", "Суши наборы", "Борщ"].every((n) => foodIron(n).grade === "C" && foodIron(n).flags.length > 0));
+ok("кордон блю: мясо и молочное; лазанья: мясо, молочное, мука", fl("Кордон блю").includes("meat") && fl("Кордон блю").includes("dairy") && ["meat", "dairy", "bakery"].every((f) => fl("Лазанья готовая").includes(f as never)));
+ok("карбонара: мясо, яйцо, молочное", ["meat", "egg", "dairy"].every((f) => fl("Паста карбонара готовая").includes(f as never)));
+ok("название называет ингредиент — степень B: форшмак, селёдка, уха, мисо, натто, лобио", ["Форшмак", "Салат селёдка под шубой", "Уха консервированная", "Мисо-паста белая", "Натто", "Лобио"].every((n) => foodIron(n).grade === "B"));
+ok("икра масаго и тобико — рыба, а кабачковая икра — нет", fl("Икра масаго").includes("fish") && !fl("Икра кабачковая").includes("fish") && fl("Красная икра").includes("fish"));
+ok("лапша, тесто, выпечка — изделия из очищенной муки (не «цельные крупы»)", ["Лапша удон сухая", "Тесто слоёное", "Брауни", "Круассаны замороженные", "Пряники тульские", "Вареники с вишней"].every((n) => fl(n).includes("bakery") && !fl(n).includes("grain")));
+ok("каши и рис — крупы", ["Каша пшённая", "Каша рисовая", "Рис парбоилд", "Мамалыга замороженная", "Чумиза"].every((n) => fl(n).includes("grain")));
+ok("молочное в сладком: мороженое, джелато, дульсе де лече; ватрушка и чизкейк — типично", ["Мороженое", "Джелато"].every((n) => fl(n).includes("dairy") && foodIron(n).grade === "B") && fl("Чизкейк готовый").includes("dairy") && foodIron("Чизкейк готовый").grade === "C");
+ok("сыры мира: тильзит, курт, данаблю; раита, айран", ["Тильзит", "Курт", "Данаблю", "Раита", "Айран кислый"].every((n) => fl(n).includes("dairy")));
+ok("алкоголь по названию: сидр, кагор, глинтвейн, брага, эль, гиннесс", ["Сидр", "Кагор", "Глинтвейн", "Брага", "Эль", "Гиннесс"].every((n) => fl(n).includes("alcohol")));
+ok("бальзамический крем — не алкоголь", !fl("Бальзамический крем").includes("alcohol"));
+ok("кэроб и ройбос — полифенолы", fl("Кэроб").includes("polyphenol") && fl("Ройбос").includes("polyphenol"));
+ok("бобовые мира: дал, лобиани, фалафель, папад, анко", ["Дал", "Лобиани", "Фалафель", "Папад", "Анко"].every((n) => fl(n).includes("legume")));
+ok("орехи и семена в сладком: нуга, пахлава, козинаки, халва, булочка с маком", ["Нуга", "Пахлава", "Козинаки", "Халва", "Булочка с маком", "Баба гануш"].every((n) => fl(n).includes("nuts")));
+ok("овощи, фрукты, соусы на овощах, сахарозаменители — нейтральны (C)", ["Икра кабачковая", "Аджика", "Лечо готовое", "Дуриан замороженный", "Кизил", "Эритрит", "Стевия", "Агар", "Мёд", "Спрайт", "Драники", "Черри маринованные"].every((n) => foodIron(n).flags.length === 0 && foodIron(n).grade === "C"));
+ok("грибы сушёные и чёрные грибы учтены", foodIron("Грибы сушёные белые").grade === "C" && foodIron("Чёрные грибы").grade === "C");
+ok("ложные срабатывания новых правил: «Бальзам» ≠ «Бальзамический», «рис» ≠ «Приправа к рису», «мак» ≠ «макароны»", !fl("Приправа к рису").includes("grain") && !fl("Макароны").includes("nuts") && !fl("Рисовая лапша").includes("nuts"));
+// Остаток без оценки — с причиной
+const rest = CATALOG.filter((x) => foodIron(x.n, x).grade === "D");
+ok("остаток без оценки: у каждого продукта есть причина", rest.length > 0 && rest.every((x) => ["supplement", "composite", "seaweed", "drink", "other"].includes(ironUnknownWhy(x.n))));
+ok("причины: БАД, водоросли, составное блюдо, напиток", ironUnknownWhy("Протеин") === "supplement" && ironUnknownWhy("Нори") === "seaweed" && ironUnknownWhy("Салат оливье") === "composite" && ironUnknownWhy("Кола") === "drink");
+ok("в остатке нет продуктов с однозначным названием (мясо, рыба, молочное, бобовые)", rest.every((x) => !["Мясо", "Птица", "Рыба", "Яйца", "Молочное", "Овощи", "Фрукты", "Крупы", "Хлеб"].includes(x.c)));
 
 // Приёмы пищи
 const D = "2026-11-09";
