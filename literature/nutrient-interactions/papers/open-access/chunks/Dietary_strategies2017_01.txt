@@ -1,0 +1,13 @@
+Название: Dietary strategies for improving iron status: balancing safety and efficacy
+Авторы: Andrew M Prentice, Yery A Mendoza, Dora Pereira, Carla Cerami, Rita Wegmuller, Anne Constable, Jörg Spieldenner
+Журнал: Nutrition Reviews, 2016
+DOI: https://doi.org/10.1093/nutrit/nuw055   PMID: 27974599   PMC: PMC5155616
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2016. Published by Oxford University Press on behalf of the International Life Sciences Institute.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 15: Abstract
+============================================================
+
+In light of evidence that high-dose iron supplements lead to a range of adverse events in low-income settings, the safety and efficacy of lower doses of iron provided through biological or industrial fortification of foodstuffs is reviewed. First, strategies for point-of-manufacture chemical fortification are compared with biofortification achieved through plant breeding. Recent insights into the mechanisms of human iron absorption and regulation, the mechanisms by which iron can promote malaria and bacterial infections, and the role of iron in modifying the gut microbiota are summarized. There is strong evidence that supplemental iron given in nonphysiological amounts can increase the risk of bacterial and protozoal infections (especially malaria), but the use of lower quantities of iron provided within a food matrix, ie, fortified food, should be safer in most cases and represents a more logical strategy for a sustained reduction of the risk of deficiency by providing the best balance of risk and benefits. Further research into iron compounds that would minimize the availability of unabsorbed iron to the gut microbiota is warranted.
+
+Keywords: food fortification, iron, safety, staple foods, supplementation.

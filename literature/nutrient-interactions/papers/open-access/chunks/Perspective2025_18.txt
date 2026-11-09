@@ -1,0 +1,11 @@
+Название: Perspective: Framework for Developing Prediction Equations for Estimating the Absorption and Bioavailability of Nutrients from Foods
+Авторы: Connie Weaver, Seth Armah, Richard S Bruno, Andrew Fletcher, Raymond Glahn, Isabelle Herter-Aeberli, Tasija Karosas, Cornelia U Loechl, Veronica Lopez-Teros, Michael I McBurney, Alida Melse-Boonstra, Rachel Novotny, Manju B Reddy, Jessica Rigutto-Farebrother, Sherry Tanumihardjo, Emorn Udomkesmalee, Ellen Van Den Heuvel, Taylor Wallace, Pattanee Winichagoon
+Журнал: Advances in Nutrition, 2025
+DOI: https://doi.org/10.1016/j.advnut.2025.100481   PMID: 40683371   PMC: PMC12361767
+Лицензия: CC BY 4.0 (открытый доступ). © 2025 The Author(s)
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 18 из 20: Funding
+============================================================
+
+This project was funded by The International Life Sciences Institute (ILSI), U.S. & Canada, a nonprofit scientific organization. ILSI, US & Canada paid for publication fees. The project was led and managed by ILSI U.S. & Canada staff, who are listed as authors on this paper. ILSI US & Canada receives its support primarily from industry.

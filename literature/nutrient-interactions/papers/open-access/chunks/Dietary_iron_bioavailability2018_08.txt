@@ -1,0 +1,13 @@
+Название: Dietary Iron Bioavailability: Agreement between Estimation Methods and Association with Serum Ferritin Concentrations in Women of Childbearing Age
+Авторы: Eduardo De Carli, Gisele Cristina Dias, Juliana Massami Morimoto, Dirce Maria Lobo Marchioni, Célia Colli
+Журнал: Nutrients, 2018
+DOI: https://doi.org/10.3390/nu10050650   PMID: 29883384   PMC: PMC5986529
+Лицензия: CC BY 4.0 (открытый доступ). © 2018 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 8 из 13: 3. Results (часть 2)
+============================================================
+
+To assess a possible mediation effect of the non-omnivorous dietary pattern on the associations between algorithm measurements and SF concentrations values, an additional adjustment for vegetarians or meat restrictors in regression models was tested. In this sense, the association between SF and tertiles of FeBio measured using Collings et al.’s (2013) model, but not with Hallberg and Hulthén (2000) model, remained statistically significant (p = 0.021 and p = 0.103, respectively). Interestingly, only Hallberg and Hulthén’s (2000) algorithm estimates were also associated with transferrin saturation (Table S3).
+
+Besides FeBio measures, quantiles of total iron, non-heme iron, and heme iron intakes were also evaluated in relation to SF, but no significant association was found. Moreover, neither of the tested regression models showed an interactive effect between dietary variables and hormonal contraceptive use on the biomarker concentrations.

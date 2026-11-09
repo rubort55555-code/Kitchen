@@ -31,7 +31,7 @@ export function mealFromRecipe(r: Recipe, servings: number, date: string, slot: 
   const n: N = {};
   for (const x of NUTRIENTS) n[x.key] = rn.perServing[x.key] * servings;
   const q = servings === 1 ? "1 порция" : `${String(servings).replace(".", ",")} порции`;
-  return mk(date, slot, r.name, n, who, { recipeId: r.id, qty: q });
+  return mk(date, slot, r.name, n, who, { recipeId: r.id, qty: q, servings });
 }
 
 /** Продукт из справочника состава на заданный вес в граммах. */

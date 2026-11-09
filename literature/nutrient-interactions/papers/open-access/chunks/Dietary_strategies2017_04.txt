@@ -1,0 +1,25 @@
+Название: Dietary strategies for improving iron status: balancing safety and efficacy
+Авторы: Andrew M Prentice, Yery A Mendoza, Dora Pereira, Carla Cerami, Rita Wegmuller, Anne Constable, Jörg Spieldenner
+Журнал: Nutrition Reviews, 2016
+DOI: https://doi.org/10.1093/nutrit/nuw055   PMID: 27974599   PMC: PMC5155616
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2016. Published by Oxford University Press on behalf of the International Life Sciences Institute.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 15: IRON FORTIFICATION OF FOOD (часть 2)
+============================================================
+
+The Codex Alimentarius41 gives several options for determining the measure (Table 2). In general, these measures should be roughly equivalent. However, in the case of products that are consumed in small quantities but are nevertheless good carriers of fortification, such as condiments and bouillon cubes, the measures “100 g,” or “100 mL” or “100 kcal” are not realistic, since such quantities are not consumed in practice. Some companies estimate that the measure “per serving” is more appropriate to convey good nutrition,42 provided the serving is determined realistically and corresponds with the amounts typically consumed.
+
+Table 2. Excerpt from the Codex Alimentarius Guidelines for Use of Nutrition and Health Claims (CAC/GL 23-1997)41
+
+Component | Claim | Condition (not less than)
+
+Vitamins and minerals | Source | 15% of NRV per 100 g (solids)
+
+7.5% of NRV per 100 mL (liquids)
+
+or 5% of NRV per 100 kcal (12% of NRV per 1 MJ)
+
+or 15% of NRV per serving
+
+High | 2 times the values for “source”

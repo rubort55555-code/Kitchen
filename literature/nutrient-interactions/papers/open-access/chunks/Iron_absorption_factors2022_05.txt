@@ -1,0 +1,13 @@
+Название: Iron Absorption: Factors, Limitations, and Improvement Methods
+Авторы: Elif Piskin, Danila Cianciosi, Sukru Gulec, Merve Tomas, Esra Capanoglu
+Журнал: ACS Omega, 2022
+DOI: https://doi.org/10.1021/acsomega.2c01833   PMID: 35755397   PMC: PMC9219084
+Лицензия: CC BY 4.0 (открытый доступ). © 2022 The Authors. Published by American Chemical Society
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 5 из 16: Bioavailability of Iron from Dietary Sources
+============================================================
+
+Heme iron contributes 10–15% of the total iron intake. However, since heme iron is absorbed better than nonheme iron, with an approximate 15–35% of absorption, it can account for more than 40% of total intestinal iron absorption.37 In contrast to heme iron, nonheme iron is found in animal and plant sources (i.e., cereals, beans, and herbs) and iron-enriched or fortified foods such as iron-fortified cereal.38,39
+
+The iron content of foods does not indicate its bioavailability because iron absorption depends on some factors, mainly the form of iron. Because plants mainly contain nonheme iron, even if its iron content is high, absorption of iron is low due to plant-based molecule–iron interactions.40 Red meat is the most significant source of iron since it is rich in heme iron, which is highly bioavailable.41,42 Since 30–70% of the iron in meat is in the form of heme, the iron requirement for humans is mainly met by red meat in developed countries. In contrast, in underdeveloped and developing countries, iron intake depends on plant-based diets that contain mostly nonheme iron, often absorbed less than 10%.42,43 Therefore, the consumption of iron-containing food is one of the main factors determining the body iron status.

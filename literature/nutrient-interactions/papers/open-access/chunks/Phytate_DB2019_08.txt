@@ -1,0 +1,41 @@
+Название: Development of the FAO/INFOODS/IZINCG Global Food Composition Database for Phytate
+Авторы: Sergio Dahdouh, Fernanda Grande, Sarah Nájera Espinosa, Anna Vincent, Rosalind Gibson, Karl Bailey, Janet King, Doris Rittenschober, U Ruth Charrondière
+Журнал: Journal of Food Composition and Analysis, 2019
+DOI: https://doi.org/10.1016/j.jfca.2019.01.023   PMID: 31057213   PMC: PMC6472536
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 The Authors
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 8 из 10: Discussion
+============================================================
+
+The PhyFoodComp represents a comprehensive and expandable data repository of publicly available high-quality data with several uses (Table 3), where the variability of nutrient and antinutrient values, due to factors such as processing and biodiversity, is well portrayed.
+
+Table 3. Uses of the Global Food Composition Database for Phytate.
+
+For food composition:
+
+•To allow compilers to include relevant phytate and mineral values into their FCTs/FCDBs
+
+•To determine the differences in phytate values when using different analytical methods
+
+For nutrition programs and policies:
+
+•To give a new basis to revise assumptions on bioavailability and to revise the RDIs
+
+•To provide the necessary data for developing apparent nutrient retention factors for different food groups and cooking/processing methods
+
+•To enable governments and nutritionists to revise their advice on processing of foods, in order to increase the bioavailability of iron and zinc
+
+•To provide the basis for advice regarding improvements in infant and young child feeding, diet formulations or product development
+
+•To build an evidence-base for providing advice on processing methods to lower the phytate content and/or its mineral-binding capacity
+
+•To raise awareness of food-based methods that increase the bioavailability of iron and zinc
+
+Although several foods containing high phytate values were covered in PhyFoodComp, phytate data for other food groups and subgroups might become available in the near future. It is expected that more analytical data, e.g., centred on each separate IP (IP3–IP6) rather than only total phytate or with coverage of all relevant processing methods, will become available.
+
+The next step would be the establishment of retention factors for phytate, based on various food processing practices that could be applied to mixed dishes and specific food and food subgroups, in an effort to improve the accuracy of the phytate values for prepared foods and diets. This will also provide much needed information on the most suitable processing methods per food category to reduce the phytate content and thus have the potential to increase the bioavailability of iron and zinc in plant-based foods and diets. Increasing the intake of bioavailable micronutrients through food-based approaches remains a highly sustainable means of ensuring the long-term prevention and treatment of micronutrient deficiencies. Such phytate-reducing processing strategies for raw, cooked and/or processed foods should be integrated into national food, agriculture, nutrition and health programmes/policies to enhance their effectiveness and sustainability (Gibson and Ferguson, 1998).
+
+Studies suggest that IP6 and IP5 bind zinc and iron sufficiently strongly to inhibit both zinc and iron absorption (Gibson et al., 2010, 1991). Additional research is necessary to determine the specific affinity of iron to IP4 or IP3. Such affinity factors could then be used in the molar ratio equations, reflecting more closely the effect of the individual IPs on the bioavailability of iron, and possibly zinc. Studies on the relative affinity of total phytate or the different IPs might also be necessary, changing the relative amounts of each mineral to establish the relative affinity of phytate to different minerals. For example, what is the amount of iron bound, if huge amounts of calcium are present in the gut? It might be necessary to develop a phytate-equivalent for zinc, iron and calcium taking the absolute and relative affinity of the IPs to the different minerals into account.
+
+On the other hand, It should be pointed out that the availability of Zn and Fe from food and diets does not just depend on the molar ratios of phytic acid:Zn or phytic acid:Fe, but can be affected by some other food compounds as well; e.g., ascorbic acid can enhance iron availability, while other food components, such as oxalic acid, may reduce it (Armah et al., 2013)-. Thus, it is highly desirable that further compounds affecting the availability of zinc and iron, such as polyphenols, ascorbic acid, oxalic acid, and the protein content, should be included in the database in the future to get a more reliable view on the availability of zinc and iron from food and diets. Determining the phytic acid:Zn and the phytic acid:Fe ratios of foods or meals alone might give limited information on the iron and zinc bioavailability in individuals or population groups.

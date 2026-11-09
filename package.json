@@ -11,7 +11,8 @@
     "rewrite": "node tools/rewrite.mjs",
     "composition": "node tools/build-composition.mjs",
     "android": "node build.mjs && cap sync android",
-    "ios": "node build.mjs && cap sync ios"
+    "ios": "node build.mjs && cap sync ios",
+    "coverage:iron": "tsx tools/iron-coverage.ts"
   },
   "dependencies": {
     "@capacitor/android": "8.5.3",

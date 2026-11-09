@@ -20,17 +20,8 @@ ok("у каждого напитка есть кофеин, объём и кал
 
 // Нет напитков и сочетаний — нет подсказок
 ok("пустой день — без подсказок", interactionHints([]).length === 0);
-ok("обычная еда без особенностей — без подсказок", interactionHints([food("Суп", "обед", { fe: 1, vitC: 30, fat: 10 })]).length === 0);
+ok("обычная еда без особенностей — без подсказок", interactionHints([food("Суп", "обед", { vitC: 30, fat: 10 })]).length === 0);
 
-// Железо и витамин C
-ok("много железа и мало C — подсказка про витамин C", ids(interactionHints([food("Чечевица", "обед", { fe: 6, vitC: 3, fat: 5 })])).includes("iron-c"));
-ok("железо с достаточным витамином C — без подсказки", !ids(interactionHints([food("Чечевица с перцем", "обед", { fe: 6, vitC: 60, fat: 5 })])).includes("iron-c"));
-// Чай/кофе рядом с железом
-ok("кофе в одном приёме с железом — предупреждение", ids(interactionHints([food("Печень", "обед", { fe: 8, vitC: 40, fat: 10 }), drink("coffee", 1, "обед")])).includes("iron-tea"));
-ok("кофе в другом приёме — без предупреждения про железо", !ids(interactionHints([food("Печень", "обед", { fe: 8, vitC: 40, fat: 10 }), drink("coffee", 1, "перекус")])).includes("iron-tea"));
-// Кальций и железо
-ok("много кальция вместе с железом — подсказка", ids(interactionHints([food("Творог и гречка", "завтрак", { fe: 4, vitC: 30, ca: 450, fat: 10 })])).includes("iron-ca"));
-ok("мало кальция — нет подсказки", !ids(interactionHints([food("Гречка", "завтрак", { fe: 4, vitC: 30, ca: 40, fat: 10 })])).includes("iron-ca"));
 // Жирорастворимые витамины
 ok("витамин A без жира — подсказка про жир", ids(interactionHints([food("Салат из моркови", "обед", { vitA: 800, fat: 1 })])).includes("fat-sol"));
 ok("витамин A с жиром — без подсказки", !ids(interactionHints([food("Морковь с маслом", "обед", { vitA: 800, fat: 12 })])).includes("fat-sol"));
@@ -46,10 +37,10 @@ ok("больше 200 мг за раз — предупреждение", ids(int
 ok("немного кофе — без подсказок про минералы", !ids(interactionHints([drink("coffee")])).includes("caf-mineral"));
 
 // Источники: у каждой подсказки есть ссылки, и они описаны
-const all = interactionHints([food("Чечевица", "обед", { fe: 6, vitC: 3, ca: 400, vitA: 500, fat: 1 }), drink("coffee", 5, "обед")]);
-ok("подсказки сработали всех видов", ["iron-c", "iron-tea", "iron-ca", "fat-sol", "caf-limit", "caf-single", "caf-mineral"].every((x) => ids(all).includes(x)), ids(all));
+const all = interactionHints([food("Салат", "обед", { vitA: 500, fat: 1 }), drink("coffee", 5, "обед")]);
+ok("подсказки сработали всех видов", ["fat-sol", "caf-limit", "caf-single", "caf-mineral"].every((x) => ids(all).includes(x)), ids(all));
 ok("у каждой подсказки есть источники из списка", all.every((x) => x.src.length > 0 && x.src.every((s) => SOURCES[s] && SOURCES[s].cite.length > 20)));
-ok("подсказки по приёмам называют приём пищи", all.filter((x) => /^iron|^fat/.test(x.id)).every((x) => x.text.includes("обед")));
+ok("подсказки по приёмам называют приём пищи", all.filter((x) => /^fat/.test(x.id)).every((x) => x.text.includes("обед")));
 
 console.log(`interactions: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

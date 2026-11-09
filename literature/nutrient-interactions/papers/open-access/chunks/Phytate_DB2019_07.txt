@@ -1,0 +1,11 @@
+Название: Development of the FAO/INFOODS/IZINCG Global Food Composition Database for Phytate
+Авторы: Sergio Dahdouh, Fernanda Grande, Sarah Nájera Espinosa, Anna Vincent, Rosalind Gibson, Karl Bailey, Janet King, Doris Rittenschober, U Ruth Charrondière
+Журнал: Journal of Food Composition and Analysis, 2019
+DOI: https://doi.org/10.1016/j.jfca.2019.01.023   PMID: 31057213   PMC: PMC6472536
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 The Authors
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 7 из 10: Results (часть 3)
+============================================================
+
+The phytate to mineral molar ratios are used to predict the inhibitory effect of the antinutrient on the mineral bioavailability (Gibson et al., 1991). It is assumed that, for foods, the bioavailability of iron is affected by a ratio above 1, or even above 0.4 for a significant effect on absorption (Hurrell and Egli, 2010) because the inhibitory effect is observed at very low phytate concentrations (i.e., 2–10 mg in food/meal/diet) (Hallberg et al., 1989). In contrast, IZiNCG tentatively suggests that phytate:zinc molar ratios characterising unfermented, cereal-based diets (i.e., > 18) were likely to adversely affect zinc bioavailability (Brown et al., 2004). In the WHO/FAO semi-quantitative algorithm, diets were classified mainly on the basis of their source of protein and their phytate:zinc molar ratios, with ratios > 15 likely to compromise zinc bioavailability (WHO/FAO, 2004).

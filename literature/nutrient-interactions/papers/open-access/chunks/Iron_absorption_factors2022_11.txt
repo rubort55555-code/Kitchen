@@ -1,0 +1,69 @@
+Название: Iron Absorption: Factors, Limitations, and Improvement Methods
+Авторы: Elif Piskin, Danila Cianciosi, Sukru Gulec, Merve Tomas, Esra Capanoglu
+Журнал: ACS Omega, 2022
+DOI: https://doi.org/10.1021/acsomega.2c01833   PMID: 35755397   PMC: PMC9219084
+Лицензия: CC BY 4.0 (открытый доступ). © 2022 The Authors. Published by American Chemical Society
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 11 из 16: Recent Studies on Improving Iron Bioavailability
+============================================================
+
+Various strategies are known and applied to reduce the prevalence of iron deficiency anemia.123 In addition, numerous studies have been carried out for years to enhance iron absorption in humans. General estimates of iron bioavailability include in vitro studies, animal bioassays, and human trials. In vitro methods have been used as an alternative to in vivo techniques for estimating mineral bioavailability. Most of the in vitro methods have been developed to mimic physiological conditions of the intestine system. Human and animal studies on iron absorption are time consuming and expensive and offer a limited capacity to assess luminal interactions of iron and food ingredients. These factors directed scientists to develop fast and efficient in vitro methods that help analyze food–iron interactions and estimate iron bioavailability.
+
+In consequence, a simulation of in vitro digestion combined with caco-2 cell monolayers (human epithelial cell line) was developed.124 The caco-2 model is considered helpful because it is of human origin, has many characteristics analogous to the intestinal epithelium, takes up nonheme iron, and exhibits uptake properties consistent with in vivo observations in humans and animals.125 Therefore, this section covers in vitro digestion/caco-2 cell culture model studies and in vivo human and animal studies. Recent in vivo studies to improve iron bioavailability are shown in Table 2 and in vitro/caco-2 cell culture model studies in Table 3.
+
+Table 2. Recent in Vivo Studies on Improving Iron Bioavailability
+
+technique | compound | study system | food | results | reference
+
+encapsulation | iron encapsulated in banana peel matrix | animal bioassay (rat) | tempeh | A significant (p < 0.05) increase was observed in serum hemoglobin and iron levels in all groups with the highest value found in an iron matrix dose of 20 ppm. | (137)
+
+iron and folic acid (FA) bovine serum albumin nanoparticles | animal bioassay (rat) | stirred functional yogurt | Enhancement in the levels of hemoglobin, iron, ferritin, and total protein was observed. | (138)
+
+microencapsulated liposomal iron pyrophosphate | human trial | iron pyrophosphate sachets | Microencapsulated liposomal iron pyrophosphate sachets showed higher palatability and bioavailability. | (145)
+
+Serum hemoglobin levels in nonpregnant women of reproductive age were significantly increased.
+
+lipoosomal iron | human trial | oral liposomal iron | 62% of the patients who completed the treatment responded to oral liposomal iron therapy (mean increases of hemoglobin from 11.4 to 12.6 g/dL). | (146)
+
+Number of patients with mild iron deficiency was decreased.
+
+chelation | tripeptide iron complex, ferrous glycinate | animal bioassay (rat) | - | Blood parameters such as hemoglobin, serum ferritin, and transferrin levels as well as growth parameters and mRNA expression which is a marker of iron deficiency showed that the tripeptide iron complex was more efficient than FeSO4 or the ferrous glycinate complex in alleviating IDA. | (154)
+
+desalted duck egg white peptides-ferrous chelate | animal bioassay (rat) | - | In iron-deficient rats, 3 weeks of treatment caused red blood cells, serum ferritin, hemoglobin, and serum iron levels to reach the normal levels. | (152)
+
+The effects of IDA were reduced more efficiently by desalted duck egg white peptide-ferrous chelate compared to FeSO4.
+
+whey protein concentrate–iron complex | animal bioassay (rat) | - | In regular weaning and anemic conditions, the WPC–Fe complex supplementation improves iron bioavailability, hemoglobin level, percent apparent digestibility coefficient, and percent retention/intake. | (161)
+
+In iron-deficient animals, a spray-dried WPC–Fe complex supplementation significantly increased iron digestion and metabolism.
+
+nanoparticulation | ferric hydroxide-polyphosphate nanoparticles | animal bioassay (rat) | - | Relative iron bioavailability from polyP-FeO NPs was greater by ∼170% relative to FeSO4. | (168)
+
+bio iron(II) nanoparticles | animal bioassay (rat) | yogurt | Bioiron nanoparticles were good sources of bioavailable iron. | (169)
+
+Bioiron nanoparticles in 200 and 400 μg/mL were safe and enhanced yogurt quality and shelf life.
+
+β-lactoglobulin fibril iron nanoparticles | animal bioassay (rat) | - | β-Lactoglobulin fibril iron nanoparticles were digestible and bioavailable without altering the organoleptic features of the food carriers. | (170)
+
+β-Lactoglobulin fibril nanocomposites showed no toxicity in a rat assay.
+
+Table 3. Recent in Vitro Studies on Improving Iron Bioavailability
+
+technique | compound | food | results | reference
+
+encapsulation | iron encapsulated in thermo-resistant modified starch with or without vitamin C | conventionally and sourdough fermented breads | The bioavailability and bioaccessibility of iron from conventially fermented bread were higher in general. | (136)
+
+Iron transport efficiency represented a wide range (1.16–13.78%).
+
+Fortified breads showed bioaccessibility values changing from 41.45 to 99.31%.
+
+Type of fermentation affected the degree of iron oxidation during digestion.
+
+Iron source, either ferrous sulfate or ferrous lactate, showed an effect on tested parameters but not statistically significant.
+
+microencapsulated iron coated by whey protein isolate and a starch-based aqueous coating | tea | Cellular absorption or iron from microcapsules was increased by 73%. | (140)
+
+Within 30 min of tea brewing, microcapsules reduced the formation of the iron–polyphenol complex in the tea by 60%.
+
+chelation | iron–casein complex with ascorbic acid | water and milk | Ascorbic acid addition at the molar ratio of 2:1 improved the iron absorption from ICCs and FeSO4 to close levels, and absorption levels were significantly higher than ferric pyrophosphate (FePP) with and without ascorbic acid. | (153)

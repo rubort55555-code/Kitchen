@@ -1,0 +1,11 @@
+Название: Dietary strategies for improving iron status: balancing safety and efficacy
+Авторы: Andrew M Prentice, Yery A Mendoza, Dora Pereira, Carla Cerami, Rita Wegmuller, Anne Constable, Jörg Spieldenner
+Журнал: Nutrition Reviews, 2016
+DOI: https://doi.org/10.1093/nutrit/nuw055   PMID: 27974599   PMC: PMC5155616
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2016. Published by Oxford University Press on behalf of the International Life Sciences Institute.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 7 из 15: MECHANISMS OF IRON ABSORPTION: THE ROLE OF HEPCIDIN (часть 2)
+============================================================
+
+Therefore, hepcidin provides an elaborate system for the body to autoregulate iron influx by balancing the competing signals indicating a need for iron (hypoxia, erythroid drive, and hepatic iron deficiency) against the possible threat of an infection that might be fuelled by additional iron. In iron-deficient populations, hepcidin levels would tend to be low (to allow absorption) but are often high because systemic inflammation heralds the threat of infection. The interplay of these competing factors has been described in some detail for Gambian and Kenyan children.69 The take-home message for policymakers is that, rather than being unable to absorb adequate levels of iron, people living in unsanitary settings devote considerable physiological effort to exclude iron from their circulation. This is further validated by the tendency for all but one of the known genetic defects that alter iron status to lead to iron overload rather than deficiency, even in populations living on a low-iron diet.

@@ -1,0 +1,35 @@
+Название: Dietary Iron Bioavailability: Agreement between Estimation Methods and Association with Serum Ferritin Concentrations in Women of Childbearing Age
+Авторы: Eduardo De Carli, Gisele Cristina Dias, Juliana Massami Morimoto, Dirce Maria Lobo Marchioni, Célia Colli
+Журнал: Nutrients, 2018
+DOI: https://doi.org/10.3390/nu10050650   PMID: 29883384   PMC: PMC5986529
+Лицензия: CC BY 4.0 (открытый доступ). © 2018 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 13: 2. Materials and Methods
+============================================================
+
+## 2.1. Participants
+
+This cross-sectional observational study was conducted on the main campus of the University of São Paulo (USP), São Paulo, Brazil, between May 2014 and June 2016. A sample size of 126 women was calculated prior to the start of the study, aiming a test power of 80% and a 2-tailed type I error rate of 5%, to detect significant differences of at least a half standard deviation on log-SF concentration values among women grouped by tertiles of bioavailable iron intake. Recruitment was conducted through posters, flyers, and electronic announcements. Volunteer students were screened using an eligibility questionnaire. If the initial criteria were met, these students were instructed to provide dietary intake information via a web-based system. Then, a blood collection, anthropometry measurements, and responding to general characterization questionnaires were scheduled.
+
+The exclusion criteria were as follows: (1) age < 18 or >45 years; (2) body mass index (BMI) < 17 or >30 kg/m2; (3) diagnosis of chronic disease, hemoglobinopathies, or hormonal dysfunction; (4) anemia (Hb < 12 g/dL), macrocytosis (VCM > 100 fl), microcytosis (VCM < 80 fl), or anisocytosis (RDW > 14.5%) in the absence of iron deficiency; (5) clinically important infection and/or inflammation (CRP >10 ng/dL); (6) alcohol abuse (>2 daily doses or >30 g/day); (7) smoking habit; (8) pregnancy or lactation in the last 2 years; (9) irregular menstrual cycle (interval < 21 or >35 days) in the last 2 years; (10) blood loss in the last 2 years due to accident, surgery, or blood donation; (11) diagnosis of intestinal parasites in the last 2 years; (12) intentional changes in eating habits in the last year; and (13) use of medication (except contraceptive) or vitamin-mineral supplement in the last year. Individuals with incomplete or invalid dietary data were also excluded from the study.
+
+The study protocol was approved by the Research Ethics Committee of the Faculty of Pharmaceutical Sciences from the University of São Paulo (USP) (protocol number: 228.946/03-2013). All volunteers gave their written informed consent prior to participating in the study. Those with any hematological and/or biochemical abnormalities were referred for medical care.
+
+## 2.2. Dietary Data Acquisition
+
+Dietary intake was assessed via three web-based Food Records (FR) and an FFQ, using the online Nutriquanti system [28]. Briefly, the participants used an instruction manual attached to the electronic messages to access the system’s webpages and complete FRs on non-consecutive days, including one weekend day. Women were instructed to avoid changing their usual eating habits during the registration period. Moreover, they were encouraged to provide enough details about the types, portions, brands, and preparation modes of all food and beverages, based on a list with more than 3000 items. Meals were self-identified by participants.
+
+Weights and volumes from household measures of all foods and beverages were standardized according to the national reference data [29,30]. Conversions of food into energy, iron, vitamin C, calcium, and alcohol intakes were mostly based on the national food chemical composition tables and [31,32], for few items, on an international database [33]. To add the food components required to estimate FeBio, the analytical data from our laboratory and other independent sources were used to ascribe heme iron [5,34,35,36], phytate [5,37], and polyphenols (tannic acid equivalents) to foods [5]. Moreover, based on the facts from food labels and standard recipe references [29,30], industrialized foods and composite dishes were broken down into ingredients to estimate the amounts of animal tissues, eggs, soy protein, and iron-fortified flours (corn and wheat). Unit conversions of phytate and raw animal tissue values to phytic acid (3.53 mg = 1 mg phytate phosphorus) and cooked tissue (1 g = 1.3 g raw tissue) were applied when necessary [5,7]. As proposed by Armah et al. (2013), tea and coffee equivalents (cups/day) were calculated by assuming that 1 cup of tea is equivalent to 2 cups (480 mL) of ice tea or 1.5 cup (360 mL) of coffee or herbal tea [13].
+
+Invalid data in FRs were checked using the method proposed by McCrory et al. (2002) [38], assuming a cutoff limit of 2 standard deviations in the ratio between total energy intake (TEI) and total energy expenditure (TEE), as predicted by the equations from Vinken et al. (1999) [39]. Underreports were therefore considered as those whose mean TEI in FRs was lower than 50.8% of their predicted TEE.
+
+All participants with valid FRs were also requested to respond to an online version of a validated FFQ form for adults in São Paulo (SP) [40], which assessed the participants’ usual intake frequency of 84 foods, beverages, or food groups in the previous 12 months.
+
+## 2.3. Dietary Data Analysis
+
+Using the online Multiple Source Method (MSM), daily means of all studied dietary variables were adjusted by the intraindividual data variability (deattenuation), to estimate the women’s usual intakes [41,42]. Data from the FFQ were used to define true non-consumers and usual consumer of animal tissues and alcoholic beverages, which served in MSM models as adjustment variable of daily heme iron and alcohol intake estimates, respectively. The same strategy was used to estimate the usual tea and coffee intake.
+
+Before being employed in the analysis of correlation or stratification in quantiles, all dietary variables were adjusted by total energy intake values, using the residual method [43].
+
+## 2.3.1. Probabilistic Approach Estimate

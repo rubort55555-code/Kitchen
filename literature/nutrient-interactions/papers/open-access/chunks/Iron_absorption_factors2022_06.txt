@@ -1,0 +1,65 @@
+Название: Iron Absorption: Factors, Limitations, and Improvement Methods
+Авторы: Elif Piskin, Danila Cianciosi, Sukru Gulec, Merve Tomas, Esra Capanoglu
+Журнал: ACS Omega, 2022
+DOI: https://doi.org/10.1021/acsomega.2c01833   PMID: 35755397   PMC: PMC9219084
+Лицензия: CC BY 4.0 (открытый доступ). © 2022 The Authors. Published by American Chemical Society
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 6 из 16: Dietary Factors Affecting Iron Bioavailability
+============================================================
+
+The absorption of iron heavily depends on the physical state of iron as ferrous and ferric.44 Nonheme iron in the diet is primarily in an oxidized or ferric form, although ferrous iron is more likely to be carried into enterocytes.11 Ferric iron is precipitated in solutions with a pH higher than 3, whereas most ferrous iron remains soluble at a neutral pH. Therefore, ferric iron must first be solubilized and chelated in the stomach to be absorbed in the less acidic proximal small intestine.45 The chelation happens rapidly by the other components in food as iron is released in the intestinal lumen. These chelators may be enhancers and inhibitors influencing iron absorption via iron solubility.6 Therefore, diet composition is one of the main factors influencing the absorption of nonheme iron.46Figure 2 shows the main enhancers and inhibitors of iron bioavailability, and Table 1 shows the relevant studies.
+
+Figure 2. Main enhancers and inhibitors of iron bioavailability.
+
+Table 1. Main Enhancers and Inhibitors of Iron Absorption
+
+type of study | component/dose | experimental model | main results | reference
+
+in vivo | ascorbic acid/25 to 1000 mg | 63 male subjects | As vitamin C dose was increased from 25 to 1000 mg, absorption of iron showed an increase from 0.8% to 7.1% in male subjects who were fed with a liquid formula meal containing 4.1 mg of iron. | (56)
+
+in vitro | ascorbic acid/- | caco-2 cell | Ascorbic acid enhanced the absorption only when it was added along with the digests to Caco-2 cells during the iron uptake study. | (50)
+
+in vitro | ascorbic acid/- | caco-2 cells | While phytic acid, sodium oxalate, and sodium silicate decrease iron absorption, ascorbic acid has the ability to counteract their inhibitory effects. | (51)
+
+in vivo | animal tissue/25 g | 8 healthy infants 43–49 weeks of age | Inclusion of meat to the vegetable puree significantly increased the nonheme iron absorption. | (64)
+
+in vivo | animal tissue/25, 50, or 75 g | 45 healthy women with a mean age of 24 ± 3 years | Dose–response increase was observed when pork meat was added to a high-phytate, low-ascorbic-acid meal. | (65)
+
+While 25 g of meat did not influence the nonheme iron absorption, inclusion of 50 and 75 g of meat increased the absorption significantly (44% and 57%, respectively).
+
+in vivo | animal tissue/- | randomized crossover trial in 21 young women with low iron stores | Addition of fish to high-phytate bean meal enhanced the iron bioavailability. | (66)
+
+in vitro | animal tissue/- | caco-2 cell | Caco-2 cells’ response to nonheme iron from infant rice was significantly increased by bovine coproducts (kidney, lung, and heart). | (67)
+
+For the kidney, lung, and heart, relative uptake of iron was found to be 207.13%, 171.21%, and 265.28%, respectively.
+
+in vivo | phytate/- | 58 men and 60 women, aged 19–58 years | Iron absorption was significantly increased by the removal of phytates in bran. | (74)
+
+The addition of potassium and magnesium phytates in amounts present in bran showed an inhibition of iron absorption.
+
+in vivo | phytate/seven dose levels from 2 to 250 mg | 34 men and 90 women, aged 19–47 years | Inhibitory effect of phytate was dose dependent. | (76)
+
+Ascorbic acid may reduce the inhibitory impact of phytate.
+
+in vivo | phytate/718 to 1190 mg/d in the high-phyate group and 623 to 385 mg/d in the low phytate group | 32 nonanemic females, 18–35 years of age, with suboptimal iron stores | Inhibitory effects of phytate on nonheme iron absorption were lessened by eating a high-phytate diet on a regular basis in young women with low iron status. | (79)
+
+in vivo | phytate/- | 720 pregnant women | Bioavailability of iron and calcium in the diets of pregnant women was inhibited by phytate intake. | (78)
+
+in vivo | phytate/77 ± 11 mg | 102 females aged between 20 and 30 years | 12 weeks of high-phytate wholegrain bread consumption had no effect on iron status in women at reproductive age. | (80)
+
+in vivo | phytate/817 ± 21 mg | 14 women aged 19–42 years who were not habitually consuming iron-containing nutritional supplements | A significant effect of phytate content on iron absorption was not found when porridge was fortified with iron in the form of either sodium iron EDTA or ferrous sulfate. | (81)
+
+in vivo | polyphenols/from 52 to 396 mg | 23 males and 54 females aged 19–40 years | Black tea was more inhibitory than cocoa and more inhibitory than herbal teas camomile, vervain, lime flower, and pennyroyal but equivalent to peppermint tea at the same total polyphenol content. | (82)
+
+in vivo | polyphenols/20, 50, and 200 mg | 97 apparently nonpregnant, nonlactating women aged between 18 and 45 years and weighing below 60 kg | Red bean polyphenols inhibited iron bioavailability dose-dependently. While 20 mg of bean polyphenols had no effect on iron absorption, 50 mg and 200 mg lowered iron bioavailability by 18% and 45%, respectively. | (83)
+
+in vitro | polyphenols/- | caco-2 cell | Polyphenolic compounds inhibited the heme iron absorption in a dose-dependent manner. | (121)
+
+In small amounts of polyphenols (≤4.6 mg/L) ascorbic acid counteracted the inhibitory effect; however, in higher levels (46 mg/L), it could not modulate the inhibition.
+
+in vivo | polyphenols/- | 17 mother–child pairs | Polyphenol-rich tea reduced iron absorption from wheat bread fortified with ferrous sulfate or ferrous fumarate by 56–72%. | (89)
+
+in vivo | polyphenols/492 mg | 50 women aged 21–30 years | In both IDA and nonanemic women, tea consumption decreased iron absorption from NaFeEDTA by more than 85%. | (90)
+
+in vitro | polyphenols/- | caco-2 cell | Catechin, 3,4-dihydroxybenzoic acid, kaempferol, and kaempferol 3-glucoside promoted iron uptake, while myricetin, myricetin 3-glucoside, quercetin, and quercetin 3-glucoside showed an inhibitory effect. | (84)

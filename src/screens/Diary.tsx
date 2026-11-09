@@ -9,6 +9,7 @@ import { micros, planFor, type BodyProfile } from "../lib/nutrition";
 import { NUTRIENTS, recipeNutrition, type NutrientKey } from "../lib/recipeNutrition";
 import { lookupOff, nameFor, type OffProduct } from "../lib/off";
 import { DRINKS, SOURCES, caffeineLimit, caffeineOf, interactionHints, type Drink } from "../lib/interactions";
+import { LEVEL_TEXT, ironDay, ironHints } from "../lib/iron";
 import { copyMeal, defaultGrams, dayView, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
 import { addDays, cap, norm, ymd } from "../lib/util";
 
@@ -66,6 +67,7 @@ export function TodayCard() {
 export function Diary({ date: start }: { date?: string }) {
   const [date, setDate] = useState(start || ymd());
   const { who, members, member, plan, list, view, water } = useDay(date);
+  const recipes = useStore((s) => s.recipes);
   const e = view.eaten;
   const waterNorm = plan ? Math.round(plan.water * 1000) : 0;
   const bySlot = MEAL_SLOTS.map((s) => ({ s, items: list.filter((m) => m.slot === s) })).filter((x) => x.items.length);
@@ -108,7 +110,7 @@ export function Diary({ date: start }: { date?: string }) {
         {view.hints.map((h, i) => <div key={i} className="issue little small">💡 {h}</div>)}
       </div>
 
-      <CombosBlock meals={list} limit={caffeineLimit(!!(member?.body?.pregnant || member?.body?.lactating))} />
+      <CombosBlock meals={list} recipes={recipes} limit={caffeineLimit(!!(member?.body?.pregnant || member?.body?.lactating))} />
       {plan && member?.body && <MicroBlock eaten={e} body={member.body} hasMeals={list.length > 0} />}
 
       <div className="card">
@@ -188,10 +190,11 @@ function MicroBlock({ eaten, body, hasMeals }: { eaten: Record<NutrientKey, numb
 }
 
 /** Кофеин за день против предела и подсказки по сочетаниям (что усваивается лучше или хуже). */
-function CombosBlock({ meals, limit }: { meals: Meal[]; limit: number }) {
+function CombosBlock({ meals, limit, recipes }: { meals: Meal[]; limit: number; recipes: import("../lib/types").Recipe[] }) {
   const caf = caffeineOf(meals);
-  const hints = useMemo(() => interactionHints(meals, { caffeineLimit: limit }), [meals, limit]);
-  if (!caf && !hints.length) return null;
+  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...interactionHints(meals, { caffeineLimit: limit })], [meals, limit, recipes]);
+  const irons = useMemo(() => ironDay(meals, { recipes }), [meals, recipes]);
+  if (!caf && !hints.length && !irons.length) return null;
   return (
     <div className="card">
       <h3>Сочетания и усвоение</h3>
@@ -200,6 +203,13 @@ function CombosBlock({ meals, limit }: { meals: Meal[]; limit: number }) {
           <p className="small" style={{ margin: "2px 0" }}>☕ Кофеин: <b>{Math.round(caf)} мг</b> из {limit} мг</p>
           <Bar v={caf} max={limit} cls={caf > limit ? "bad" : ""} />
         </>
+      )}
+      {irons.length > 0 && (
+        <div className="ironrows">
+          {irons.map((r) => (
+            <p key={r.slot} className="small" style={{ margin: "4px 0" }}>🩸 {cap(r.slot)}: железа <b>{String(Math.round(r.mg * 10) / 10).replace(".", ",")} мг</b> — {LEVEL_TEXT[r.level]}{r.enhancers.length ? ` (помогают: ${r.enhancers.join(", ")})` : ""}{r.inhibitors.length ? ` (мешают: ${r.inhibitors.join(", ")})` : ""}</p>
+          ))}
+        </div>
       )}
       {hints.map((h) => (
         <details key={h.id} className="hint" open={h.id.startsWith("caf-limit") || h.id.startsWith("caf-single")}>

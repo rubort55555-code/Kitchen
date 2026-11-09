@@ -1,0 +1,67 @@
+Название: Dietary Iron Bioavailability: Agreement between Estimation Methods and Association with Serum Ferritin Concentrations in Women of Childbearing Age
+Авторы: Eduardo De Carli, Gisele Cristina Dias, Juliana Massami Morimoto, Dirce Maria Lobo Marchioni, Célia Colli
+Журнал: Nutrients, 2018
+DOI: https://doi.org/10.3390/nu10050650   PMID: 29883384   PMC: PMC5986529
+Лицензия: CC BY 4.0 (открытый доступ). © 2018 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 11 из 13: References
+============================================================
+
+[1] 1.World Health OrganizationNutritional Anaemias: Tools for Effective Prevention and ControlWorld Health OrganizationGeneva, Switzerland2017Available online: http://www.who.int/nutrition/publications/micronutrients/anaemias-tools-prevention-control/en(accessed on 30 March 2018)
+
+[2] 2.World Health OrganizationIron Deficiency Anaemia: Assessment, Prevention and Control. A Guide for Programme ManagersWorld Health OrganizationGeneva, Switzerland2001Available online: http://www.who.int/nutrition/publications/en/ida_assessment_prevention_control.pdf(accessed on 30 March 2018)
+
+[3] 3.CookJ.D.DassenkoS.A.LynchS.R.Assessment of the role of nonheme-iron availability in iron balanceAm. J. Clin. Nutr.19915471772210.1093/ajcn/54.4.7171897479
+
+[4] 4.HoppeM.HulthénL.HallbergL.The importance of bioavailability of dietary iron in relation to the expected effect from iron fortificationEur. J. Clin. Nutr.20086276176910.1038/sj.ejcn.160277617538547
+
+[5] 5.HallbergL.HulthénL.Prediction of dietary iron absorption: An algorithm for calculating absorption and bioavailability of dietary ironAm. J. Clin. Nutr.2000711147116010.1093/ajcn/71.5.114710799377
+
+[6] 6.HallbergL.HulthénL.GramatkovskiE.Iron absorption from the whole diet in men: How effective is the regulation of iron absorption?Am. J. Clin. Nutr.19976634735610.1093/ajcn/66.2.3479250114
+
+[7] 7.MonsenE.R.HallbergL.LayrisseM.HegstedD.M.CookJ.D.MertzW.FinchC.C.Estimation of available dietary ironAm. J. Clin. Nutr.19783113414110.1093/ajcn/31.1.134619599
+
+[8] 8.ReddyM.B.HurrellR.F.CookJ.D.Estimation of nonheme-iron bioavailability from meal compositionAm. J. Clin. Nutr.20007193794310.1093/ajcn/71.4.93710731500
+
+[9] 9.ChiplonkarS.A.AgteV.V.Statistical model for predicting non-heme iron bioavailability from vegetarian mealsInt. J. Food Sci. Nutr.20065743445010.1080/0963748060083683317162323
+
+[10] 10.ConwayR.E.PowellJ.J.GeisslerC.A.A food-group based algorithm to predict non-heme iron absorptionInt. J. Food Sci. Nutr.200758294110.1080/0963748060112125017415954
+
+[11] 11.RickardA.P.ChatfieldM.D.ConwayR.E.StephenA.M.PowellJ.J.An algorithm to assess intestinal iron availability for use in dietary surveysBr. J. Nutr.20091021678168510.1017/S000711450999089419709447PMC3065058
+
+[12] 12.CollingsR.HarveyL.J.HooperL.HurstR.BrownT.J.AnsettJ.KingM.Fairweather-TaitS.J.The absorption of iron from whole diets: A systematic reviewAm. J. Clin. Nutr.201398658110.3945/ajcn.112.05060923719560
+
+[13] 13.ArmahS.M.CarriquiryA.SullivanD.CookJ.D.ReddyM.B.A Complete Diet-Based Algorithm for Predicting Nonheme Iron Absorption in AdultsJ. Nutr.20131431136114010.3945/jn.112.16990423700342
+
+[14] 14.DaintyJ.R.BerryR.LynchS.R.HarveyL.J.Fairweather-TaitS.J.Estimation of Dietary Iron Bioavailability from Food Iron Intake and Iron StatusPLoS ONE20149e11182410.1371/journal.pone.011182425356629PMC4214798
+
+[15] 15.ReddyM.B.Algorithms to assess non-Heme Iron BioavailabilityInt. J. Vitam. Nutr. Res.20057540541210.1024/0300-9831.75.6.40516711474
+
+[16] 16.LynchS.The Precision of in vitro Methods and Algorithms for Predicting the Bioavailability of Dietary IronInt. J. Vitam. Nutr. Res.20057543644510.1024/0300-9831.75.6.43616711477
+
+[17] 17.HuntJ.R.Algorithms for Iron and Zinc Bioavailability: Are they Accurate?Int. J. Vitam. Nutr. Res.20108025726210.1024/0300-9831/a00003221462108
+
+[18] 18.ZimmermannM.B.ChaoukiN.HurrellR.F.Iron deficiency due to consumption of a habitual diet low in bioavailable iron: A longitudinal cohort study in Moroccan childrenAm. J. Clin. Nutr.20058111512110.1093/ajcn/81.1.11515640469
+
+[19] 19.BeardJ.L.Murray-KolbL.E.HaasJ.D.LawrenceF.Iron Absorption Prediction Equations Lack Agreement and Underestimate Iron AbsorptionJ. Nutr.20071371741174610.1093/jn/137.7.174117585024
+
+[20] 20.CookJ.D.LipschitzD.A.MilesL.E.M.FinchC.A.Serum ferritin as a measure of iron stores in normal subjectsAm. J. Clin. Nutr.19742768168710.1093/ajcn/27.7.6814472911
+
+[21] 21.Fairweather-TaitS.J.JenningsA.HarveyL.J.BerryR.WaltonJ.DaintyJ.R.Modeling tool for calculating dietary iron bioavailability in iron-sufficient adultsAm. J. Clin. Nutr.20171051408141410.3945/ajcn.116.14738928381473PMC5533300
+
+[22] 22.HulténL.GramatkovskiE.GleerupA.HallbergL.Iron absorption from the whole diet. Relation to meal composition, iron requirements and iron storesEur. J. Clin. Nutr.1995497948088557018
+
+[23] 23.HallbergL.HulthénL.GarbyL.Iron stores in man in relation to diet and iron requirementsEur. J. Clin. Nutr.19985262363110.1038/sj.ejcn.16006239756117
+
+[24] 24.HallbergH.HulthénL.GarbyL.Iron stores and haemoglobin iron deficits in menstruating women. Calculations based on variations in iron requirements and bioavailability of dietary ironEur. J. Clin. Nutr.20005465065710.1038/sj.ejcn.160106910951514
+
+[25] 25.HallbergL.New tools in studies on iron nutrition. Principles, applications and consequencesScand. J. Food Nutr.20004415015410.3402/fnr.v44i0.1779
+
+[26] 26.Food and Agriculture Organization of the United NationsHuman Vitamin and Mineral RequirementsWorld Health OrganizationRome, Italy2001Available online: http://www.fao.org/docrep/004/y2809e/y2809e00.htm(accessed on 30 March 2018)
+
+[27] 27.Institute of Medicine (US) Panel on MicronutrientsDietary Reference Intakes for Vitamin A, Vitamin K, Arsenic, Boron, Chromium, Copper, Iodine, Iron, Manganese, Molybdenum, Nickel, Silicon, Vanadium, and ZincNational Academies PressWashington, DC, USA2001Available online: https://www.nap.edu/read/10026/chapter/1(accessed on 30 March 2018)25057538
+
+[28] 28.GalanteA.Desenvolvimento e validação de um método computadorizado para avaliação do consumo alimentar, preenchido por indivíduos adultos utilizando a WebPh.D. ThesisUniversity of São Paulo (USP)São Paulo, Brazil1252007Available online: http://www.teses.usp.br/teses/disponiveis/89/89131/tde-11032013-155020/pt-br.php(accessed on 30 March 2018)
+
+[29] 29.FisbergR.M.VillarB.S.Manual de Receitas e Medidas Caseiras para Cálculo de Inquéritos Alimentares1st ed.SignusSão Paulo, Brazil2002

@@ -1,0 +1,11 @@
+Название: Dietary Iron Bioavailability: Agreement between Estimation Methods and Association with Serum Ferritin Concentrations in Women of Childbearing Age
+Авторы: Eduardo De Carli, Gisele Cristina Dias, Juliana Massami Morimoto, Dirce Maria Lobo Marchioni, Célia Colli
+Журнал: Nutrients, 2018
+DOI: https://doi.org/10.3390/nu10050650   PMID: 29883384   PMC: PMC5986529
+Лицензия: CC BY 4.0 (открытый доступ). © 2018 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 13: Abstract
+============================================================
+
+Predictive iron bioavailability (FeBio) methods aimed at evaluating the association between diet and body iron have been proposed, but few studies explored their validity and practical usefulness in epidemiological studies. In this cross-sectional study involving 127 women (18–42 years) with presumably steady-state body iron balance, correlations were checked among various FeBio estimates (probabilistic approach and meal-based and diet-based algorithms) and serum ferritin (SF) concentrations. Iron deficiency was defined as SF < 15 µg/L. Pearson correlation, Friedman test, and linear regression were employed. Iron intake and prevalence of iron deficiency were 10.9 mg/day and 12.6%. Algorithm estimates were strongly correlated (0.69≤ r ≥0.85; p < 0.001), although diet-based models (8.5–8.9%) diverged from meal-based models (11.6–12.8%; p < 0.001). Still, all algorithms underestimated the probabilistic approach (17.2%). No significant association was found between SF and FeBio from Monsen (1978), Reddy (2000), and Armah (2013) algorithms. Nevertheless, there was a 30–37% difference in SF concentrations between women stratified at extreme tertiles of FeBio from Hallberg and Hulthén (2000) and Collings’ (2013) models. The results demonstrate discordance of FeBio from probabilistic approach and algorithm methods while suggesting two models with best performances to rank individuals according to their bioavailable iron intakes.

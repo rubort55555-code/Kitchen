@@ -1,0 +1,31 @@
+Название: Dietary Iron Bioavailability: Agreement between Estimation Methods and Association with Serum Ferritin Concentrations in Women of Childbearing Age
+Авторы: Eduardo De Carli, Gisele Cristina Dias, Juliana Massami Morimoto, Dirce Maria Lobo Marchioni, Célia Colli
+Журнал: Nutrients, 2018
+DOI: https://doi.org/10.3390/nu10050650   PMID: 29883384   PMC: PMC5986529
+Лицензия: CC BY 4.0 (открытый доступ). © 2018 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 6 из 13: 2. Materials and Methods (часть 3)
+============================================================
+
+Participants underwent anthropometric measurements three times in light clothing and with no shoes. Height was recorded to the nearest 0.1 cm using a portable stadiometer (Alturexata, Belo Horizonte, Brazil). Weights were recorded to the nearest 0.1 kg using an electronic digital platform scale (Kratos, Embu, Brazil). The mean values of height and weight were then used to calculate the BMI (BMI—kg/m2) and to diagnose undernutrition (<17 kg/m2), low or normal weights (17–24.9 kg/m2), overweight (24.9–29.9 kg/m2), and obesity (≥30 kg/m2) [52]. Moreover, waist circumference (WC) was measured to the nearest 0.1 cm at the midpoint between the lower margin of the last rib and the top of the iliac crest, using a retractable inelastic tape (AvaNutri, Três Rios, Brazil). High WC values served as an indicator of increased risk of cardiovascular and metabolic complications (>80 cm) [53].
+
+## 2.5. Hematological and Biochemical Determinations
+
+Women were requested to fast overnight for at least 8 h before a blood collection (08:00–11:00 a.m.). By venipuncture, blood samples were obtained in vacuum tubes containing EDTA (1.8 mg/µL), for hematological analysis, and in tubes with clot activator gel, for separation of serum by centrifugation at 4.000 RPM for 15 min. All blood analysis was performed by an accredited laboratory from the university hospital.
+
+Complete blood count, including hemoglobin (Hb), hematimetric parameters, and reticulocyte count, was determined on the Sysmex XT-2000i equipment (GMI OpCo LLC., Minneapolis, MN, USA). Serum iron and total iron-binding capacity (CTLF) were determined using colorimetry and SF using direct chemiluminescence on the Advia Centaur XP equipment (Siemens AG., Munich, Germany). Transferrin saturation was calculated as the ratio of serum iron (μg/dL) to TIBC (μg/dL) multiplied by 100. High-sensitive C-reactive protein (CRP) and alfa1-acid glycoprotein (AGP) were determined using nephelometry on the BNII equipment (Siemens AG., Munich, Germany). The inter-assay coefficients of variability were 4.73%, 2.59%, and 5.81% for serum iron, CTLF, and SF determinations, respectively.
+
+It has been long recognized that inflammation can increase SF, therefore affecting the assessment of iron status [45,54]. Hence, before any analysis, we corrected the SF concentration values by a possible subclinical infection and/or inflammation, as proposed by Thurnham and McCabe (2012) [54]. CRP > 5 mg/L and AGP > 100 mg/dL indicated the acute phases of incubation (for increased CRP only), early convalescence (for increased AGP and CRP), or late convalescence (for increased AGP only), for which the specific correction factors of 0.77, 0.53, or 0.75 on SF concentration values were applied, respectively [54].
+
+Iron deficiency was diagnosed as SF < 15 μg/L [45], and iron-deficient erythropoiesis as transferrin saturation < 16% [2,27]. Iron overload were defined as SF > 150 μg/L and transferrin saturation > 60% [2,45]. Anemia was diagnosed when Hb < 12 g/dL [1,2].
+
+## 2.6. Statistical Analysis
+
+Analysis was performed using IBM SPSS (version 20.0, IBM SPSS Inc., Chicago, IL, USA) and GraphPad Prism (version 5.0, GraphPad Software Inc., San Diego, CA, USA) software. A significance level adopted in all statistical tests was 5%.
+
+The normal distribution of continuous variables was evaluated using Kolmogorov-Smirnov test. When necessary, natural logarithm transformation was applied on variable values to approximate normal distributions. Data are presented as means and standard deviations or geometric means and 95% confidence intervals.
+
+Due to the heteroscedasticity between values distributions, repeated measurements from algorithms (mg/day and %) were compared using the non-parametric Friedman test, followed by Dunn’s post hoc test. The linear association between continuous variables was assessed using Pearson’s correlation and simple linear regression analysis. To compare the independent groups, chi-square test, likelihood ratio test, or Fisher’s tests were used to analyze categorical variables, and Student’s t-test or analysis of variance (ANOVA) followed by polynomial contrast for linear trends or Tukey’s post hoc test for continuous variables.
+
+Multiple linear regression was used to test the associations between SF and tertiles or combined extreme quartiles of the dietary variables. The covariates included in the multiple models were age (years), BMI (kg/m2), hormonal contraceptive use (yes vs. no), menstrual flow score (tertiles), self-declared skin color/race (white vs. black or brown/mixed; white vs. yellow), and physical activity levels (active vs. insufficiently active; active vs. very active). In sensitive analysis, an additional adjustment for self-declared vegetarianism or dietary meat restriction (yes vs. no) was also tested. In all models, possible interactions between dietary variables and hormonal contraceptive use were evaluated. Residual analysis and collinearity diagnosis were performed to assess the validity of the final regression models.

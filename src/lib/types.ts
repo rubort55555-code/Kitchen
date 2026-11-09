@@ -212,6 +212,8 @@ export interface Meal {
   planEntryId?: string;
   /** Сколько: «1 порция», «150 г». */
   qty?: string;
+  /** Съедено порций рецепта (для расчёта состава по ингредиентам). */
+  servings?: number;
   /** Кофеин, мг (для напитков). */
   caffeine?: number;
   /** Пищевая ценность съеденного; ключи — как в recipeNutrition.ts. */

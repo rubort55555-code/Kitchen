@@ -1,0 +1,13 @@
+Название: Dietary Iron Bioavailability: Agreement between Estimation Methods and Association with Serum Ferritin Concentrations in Women of Childbearing Age
+Авторы: Eduardo De Carli, Gisele Cristina Dias, Juliana Massami Morimoto, Dirce Maria Lobo Marchioni, Célia Colli
+Журнал: Nutrients, 2018
+DOI: https://doi.org/10.3390/nu10050650   PMID: 29883384   PMC: PMC5986529
+Лицензия: CC BY 4.0 (открытый доступ). © 2018 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 3 из 13: 1. Introduction (часть 2)
+============================================================
+
+In this study, having access to biochemical and dietary data of a selected group of healthy adult women at apparently steady-state body iron balance, we aim to prove the relative validity of currently published predictive FeBio mathematical models by assessing their correlation to each other and with serum ferritin (SF) concentrations. We hypothesized that the five tested different algorithms and the probabilistic approach models generate discordant FeBio estimates. However, we also expected that one or more of the algorithm estimates would be associated with women’s body iron stores, as measured by SF concentrations. Therefore, we assumed that, after adjustments for physiological losses, variations in steady-state body iron stores are potentially predicted by precise estimates of the usual bioavailable iron intake [25].
+
+To allow comparability of the results, we adopted a definition of dietary FeBio consensually followed by scientific committees reporting reference values of dietary intakes, such as the United Nations Food and Agriculture Organization (FAO) and the Institute of Medicine (IOM) [26,27]. Hence, FeBio was defined as the percentage of the total ingested iron that is absorbed and utilized within the body by individuals with minimal iron stores (SF = 15 µg/L) [16,17].

@@ -1,0 +1,71 @@
+Название: Dietary strategies for improving iron status: balancing safety and efficacy
+Авторы: Andrew M Prentice, Yery A Mendoza, Dora Pereira, Carla Cerami, Rita Wegmuller, Anne Constable, Jörg Spieldenner
+Журнал: Nutrition Reviews, 2016
+DOI: https://doi.org/10.1093/nutrit/nuw055   PMID: 27974599   PMC: PMC5155616
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2016. Published by Oxford University Press on behalf of the International Life Sciences Institute.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 3 из 15: IRON FORTIFICATION OF FOOD
+============================================================
+
+Numerous studies have evaluated the effect of iron fortification in terms of health18–20 and economic benefits.21 Although many of the existing studies are based on food fortification in general, some have focused on specific packaged foods, such as beverages,22 milk, cereals,18 and condiments.23,24
+
+Fortification of food products with iron implies the addition of iron-containing substances to the product recipe, either as isolated compounds (eg, iron salts or chelates) or as iron-rich ingredients (eg, meat or its derivatives). The choice of these ingredients is influenced by the desired product characteristics, including taste and color, and may be constrained by cost.
+
+Although iron has been added to diverse food items since the early 1940s,25 its addition to packaged food products still poses technical challenges. Because of its oxidation-reduction properties, iron can create chemical instability in the food matrix, inducing organoleptic changes that are often unacceptable to the consumer.26 To overcome this technical obstacle, the industry uses insoluble, poorly soluble, or strongly chelated27 iron compounds, all of which have limited chemical reactivity. However, both solubility and chemical availability are necessary for effective absorption (bioavailability) of inorganic or nonheme iron. The preferred iron carriers must therefore offer a balance of these properties. These carriers must be tailored to the specific food product. For example, more soluble carriers can be used in dark-colored items (such as soy and fish sauces), which are less affected by color changes but are still prone to alterations in taste. Iron may react with other components of food products (such as unsaturated fatty acids, polyphenols, vitamins, etc), thereby affecting the shelf life and/or the nutritive value.
+
+Beyond these technical issues, a key consideration is the bioavailability of the added iron. While heme iron is well absorbed in the human digestive tract, nonheme iron is generally poorly absorbed.28 Besides the differences in the mechanism of absorption of these two types of iron by the enterocytes – discussed elsewhere in this article – the absorption of nonheme iron is subject to strong interference from other common food components such as phytates from cereals29 and other staple foods (sorghum, pulses) or polyphenolic structures from fruits and vegetables. In fact, polyphenols can even inhibit the absorption of heme iron.30
+
+The main iron compounds used for fortification of packaged foods are listed in Table 1, together with a qualitative assessment of their solubility and bioavailability (based on several references26,27,31–34).
+
+Table 1. Main iron compounds used for the fortification of packaged foods
+
+Compound | Iron load (% weight) | Solubility in watera | Relative bioavailability (%)b | Induction of taste, texture, or color changes | Approximate cost scalec
+
+Ferrous sulfate 7H20 | 20 | High | 100 | High | Low
+
+Dried ferrous sulfate | 33 | High | 100 | High | Low
+
+Ferrous gluconate | 12 | High | 89 | High | High
+
+Ferrous lactate | 19 | High | 106 | High | High
+
+Ferric ammonium citrate | 18 | High | >100 | High | Medium
+
+Ferrous ammonium sulfate | 14 | High | ≈100 | High | Medium
+
+Ferrous bisglycinate | 20 | High | >100 | Low | High
+
+Ferrous or ferric EDTA chelates | 13 | High | ≥100 d | Low | High
+
+Ferrous fumarate | 33 | Low | 100 | Low | Low
+
+Ferrous succinate | 35 | Low | 92 | Low | High
+
+Ferric saccharate | 10 | Low | 74 | Low | High
+
+Ferric glycerophosphate | 15 | Low | ≈90 | Low | Very high
+
+Ferrous citrate | 24 | Low | 74 | Low | Medium
+
+Ferrous tartrate | 22 | Low | 62 | Low | Medium
+
+Ferric pyrophosphate | 25 | Low | 21–74 | Low | Low to medium
+
+Ferric orthophosphate | 28 | Low | 25–32 | Low | Medium
+
+Electrolytic iron powder | 97 | Negligible | 75 | Variablee | Very low
+
+H-reduced iron | 97 | Negligible | 13–148 | Variablee | Very low
+
+CO-reduced iron | 97 | Negligible | 10–30 | Variablee | Very low
+
+Atomized iron | 97 | Negligible | ND | Variablee | Very low
+
+Carbonyl iron | 99 | Negligible | 5–20 | Variablee | Very low
+
+Since heme iron is readily bioavailable, there have been some instances of the use of meat-derived products in packaged food as fortificants.35,36 Although this could be a good approach for some populations that usually cannot afford sufficient quantities of meat in their diets, it may not be possible to extend it to more common food items because of issues related to consumer acceptance and/or price and availability.
+
+Another natural source of iron is ferritin, a protein that can encapsulate high amounts of iron and is used by plants and animals for iron storage. It has been noted repeatedly that phytoferritin has high potential as a food fortificant.37,38 Currently, however, phytoferritin is not available commercially; therefore, it can be used only in products that contain sufficient amounts of foods that are naturally rich in this protein, such as pulses (beans, lentils, etc). Compounds that mimic the behavior of ferritin have recently shown very good bioavailability and are being explored for use in supplements,39 but they might be difficult to incorporate into some foods.
+
+Manufacturers of fortified foods usually inform consumers of their products’ nutritional quality through label claims. In order to guarantee significant benefits for the consumer, regulatory bodies and health authorities define the minimum amounts of micronutrients that must be achieved before nutritional and/or health claims can be made. The WHO and Food and Agriculture Organization of the United Nations (FAO) Codex Alimentarius40 specifies that, in order to carry the nutritional claim of “fortified with iron,” products must contain at least 15% of the relevant Nutrient Reference Value (NRV) per measure of product. The claim “source of iron” requires that a product contain a minimum of 15% of the iron NRV (14 mg/d), ie, 2.1 mg per measure. The claim “rich in iron” requires that a product contain 30% of the NRV, ie, 4.2 mg per measure.

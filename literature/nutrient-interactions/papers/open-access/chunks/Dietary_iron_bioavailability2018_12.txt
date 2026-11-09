@@ -1,0 +1,59 @@
+Название: Dietary Iron Bioavailability: Agreement between Estimation Methods and Association with Serum Ferritin Concentrations in Women of Childbearing Age
+Авторы: Eduardo De Carli, Gisele Cristina Dias, Juliana Massami Morimoto, Dirce Maria Lobo Marchioni, Célia Colli
+Журнал: Nutrients, 2018
+DOI: https://doi.org/10.3390/nu10050650   PMID: 29883384   PMC: PMC5986529
+Лицензия: CC BY 4.0 (открытый доступ). © 2018 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 12 из 13: References (часть 2)
+============================================================
+
+[30] 30.PinheiroA.B.V.Tabela para Avaliação de Consumo Alimentar em Medidas Caseiras, 5th edAtheneuSão Paulo, Brazil2008
+
+[31] 31.NEPA—UNICAMPTabela Brasileira de Composição de Alimentos4th ed.NEPA—UNICAMPCampinas, Brazil2011Available online: http://www.nepa.unicamp.br/taco/tabela.php?ativo=tabela(accessed on 31 March 2018)
+
+[32] 32.Universidade de São Paulo. Faculdade de Ciências Farmacêuticas, Departamento de Alimentos e Nutrição Experimental/BRASILFOODSTabela Brasileira de Composição de Alimentos-USP5th ed.Universidade de São PauloSão Paulo, Brazil1998Available online: http://www.intranet.fcf.usp.br/tabela/(accessed on 31 March 2018)
+
+[33] 33.US Department of Agriculture, Agricultural Research Service, Nutrient Data LaboratoryUSDA National Nutrient Database for Standard Reference28th ed.Nutrient Data LaboratoryBeltsville, MD, USA2015Available online: https://ndb.nal.usda.gov/ndb/(accessed on 31 March 2018)
+
+[34] 34.KongkachuichaiR.NapatthalungP.CharoensiriR.Heme and Nonheme Iron Content of Animal Products Commonly Consumed in ThailandJ. Food Compost. Anal.20021538939810.1006/jfca.2002.1080
+
+[35] 35.SchönfeldtH.C.HallN.G.H.Determining iron bio-availability with a constant heme iron valueJ. Food Compost. Anal.20112473874010.1016/j.jfca.2011.01.002
+
+[36] 36.MisturaL.P.F.Cinética de ruptura do ferro heme em carne bovina (coxão mole—semi membranosus) submetida a diferentes tratamentos térmicosPh.D. ThesisUniversity of São PauloSão Paulo, Brazil8122006Available online: http://www.teses.usp.br/teses/disponiveis/9/9132/tde-04042007-122100/pt-br.php(accessed on 31 March 2018)
+
+[37] 37.HarlandB.F.OberleasD.Phytate contents of foodsCRC Handbook of Dietary Fiber in Human Nutrition3rd ed.SpillerG.A.CRC PressBoca Raton, FL, USA1993673
+
+[38] 38.MccroryM.A.HajdukC.L.RobertsS.B.Procedures for screening out inaccurate reports of dietary energy intakePublic Health Nutr.2006587388210.1079/PHN200238712633510
+
+[39] 39.VinkenA.G.BathalonG.P.SawayaA.L.DallalG.E.TuckerK.L.RobertsS.B.Equations for predicting the energy requirements of healthy adults aged 18–81 yAm. J. Clin. Nutr.19996992092610.1093/ajcn/69.5.92010232631
+
+[40] 40.FisbergR.M.ColucciA.C.A.MorimotoJ.M.MarchioniD.M.L.Food frequency questionnaire for adults from a population-based studyRev. Saude Publica2008421410.1590/s0034-8910200800500002018425293
+
+[41] 41.HaubrockJ.NöthlingsU.VolatierJ.L.DekkersA.OckéM.HarttigU.IllnerA.K.KnüppelS.AndersenL.F.BoeingH.Estimating Usual Food Intake Distributions by Using the Multiple Source Method in the EPIC-Potsdam Calibration StudyJ. Nutr.201114191492010.3945/jn.109.12039421430241
+
+[42] 42.HarttigU.HaubrockJ.KnuppelS.BoeingH.EFCOVAL ConsortiumThe MSM program: Web-based statistics package for estimating usual dietary intake using the Multiple Source MethodEur. J. Clin. Nutr.201165S87S9110.1038/ejcn.2011.9221731011
+
+[43] 43.WillettW.C.HoweG.R.KushiL.H.Adjustment for total energy intake in epidemiologic studiesAm. J. Clin. Nutr.1997651220S1228S10.1093/ajcn/65.4.1220S9094926
+
+[44] 44.R Core TeamR: A Language and Environment for Statistical ComputingR Foundation for Statistical ComputingVienna, Austria2013Available online: http://www.R-project.org(accessed on 31 March 2018)
+
+[45] 45.World Health OrganizationSerum Ferritin Concentrations for the Assessment of Iron Status and Iron Deficiency in PopulationsWorld Health OrganizationGeneva, Switzerland2011Available online: http://www.who.int/vmnis/indicators/serum_ferritin.pdf(accessed on 31 March 2018)
+
+[46] 46.Agência Nacional de Vigilância Sanitária (ANVISA)Resolução 344/2002: Regulamento Técnico para a Fortificação das Farinhas de Trigo e das Farinhas de Milho com Ferro e Ácido FólicoANVISABrasília, Brazil2002Available online: http://portal.anvisa.gov.br/documents/10181/2718376/RDC_344_2002_COMP.pdf/b4d87885-dcb9-4fe3-870d-db57921cf73f(accessed on 31 March 2018)
+
+[47] 47.AllenL.H.De BenoistB.OmarD.HurrellR.Guidelines on Food Fortification with MicronutrientsWorld Health OrganizationGeneva, Switzerland2006Available online: http://www.who.int/nutrition/publications/micronutrients/9241594012/en(accessed on 31 March 2018)
+
+[48] 48.AssunçãoM.C.F.SantosI.S.BarroA.J.GiganteD.P.VictoraC.G.Flour fortification with iron has no impact on anaemia in urban Brazilian childrenPublic Health Nutr.2012151796180110.1017/S136898001200304722704130
+
+[49] 49.HoppeM.SjöbergA.HallbergL.HulthénL.Iron status in Swedish teenage girls: Impact of low dietary iron bioavailabilityNutrition20082463864510.1016/j.nut.2008.03.00718472400
+
+[50] 50.Associação Brasileira de Empresas de Pesquisa (ABEP)Critério Brasil 2014ABEPSão Paulo, Brazil2014Available online: http://www.abep.org/criterio-brasil(accessed on 31 March 2018)
+
+[51] 51.MatsudoS.AraújoT.MatsudoV.AndradeD.AndradeE.OliveiraL.C.BraggionG.International physical activity questionnaire (IPAQ): Study of validity and reability in BrazilRev. Bras. Ativ. Fís. Saúde20016518
+
+[52] 52.World Health OrganizationPhysical Status: The Use of and Interpretation of AnthropometryWorld Health OrganizationGeneva, Switzerland1995Available online: http://www.who.int/childgrowth/publications/physical_status/en(accessed on 31 March 2018)
+
+[53] 53.World Health OrganizationWaist Circumference and Waist–Hip RatioWorld Health OrganizationGeneva, Switzerland2011Available online: http://www.who.int/nutrition/publications/obesity/WHO_report_waistcircumference_and_waisthip_ratio/en(accessed on 31 March 2018)
+
+[54] 54.ThurnhamD.I.McCabeG.P.Influence of infection and inflammation on biomarkers of nutritional status with an emphasis on vitamin A and ironReport: Priorities in the Assessment of Vitamin A and Iron Status in Populations, Panama City, Panama, 15–17 September 2010World Health OrganizationGeneva, Switzerland2012Available online: http://www.who.int/nutrition/publications/micronutrients/background_paper4_report_assessment_vitAandIron_status.pdf(accessed on 31 March 2018)

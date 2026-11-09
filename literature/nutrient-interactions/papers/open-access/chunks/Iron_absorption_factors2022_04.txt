@@ -1,0 +1,15 @@
+Название: Iron Absorption: Factors, Limitations, and Improvement Methods
+Авторы: Elif Piskin, Danila Cianciosi, Sukru Gulec, Merve Tomas, Esra Capanoglu
+Журнал: ACS Omega, 2022
+DOI: https://doi.org/10.1021/acsomega.2c01833   PMID: 35755397   PMC: PMC9219084
+Лицензия: CC BY 4.0 (открытый доступ). © 2022 The Authors. Published by American Chemical Society
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 16: Iron Deficiency and Anemia (IDA)
+============================================================
+
+Iron deficiency and iron deficiency anemia are global health problems and common medical conditions seen in daily clinical practice.19 Iron deficiency is when the amount of iron needed by the body cannot be met due to some physiological consequences, including blood loss and limited dietary supply.19,20 The World Health Organization (WHO) defines iron deficiency anemia as a hemoglobin (Hb) level of less than 13 g/dl in men and 12 g/dl in women.21 Iron deficiency is the most common nutritional deficiency worldwide. It is a significant health problem for children, adolescents, pregnant women, and those with low socioeconomic status, especially in developing countries. Furthermore, IDA also affects many people around the industrialized world.22 However, the prevalence of iron deficiency in developing countries is approximately four times higher than in developed countries.23 Recently, up to one-third of the world’s population is suffering from iron deficiency. Infants, the elderly, and women, especially during menstruation and pregnancy, are at high risk for IDA.24
+
+IDA is a severe problem that negatively affects growth, cognitive function, and behaviors in infants.25−28 It induces some health problems in adults, including restless legs syndrome (RLS),29 diminished quality of life,30 fatigue and weakness,31 trouble concentrating, and lack of work productivity.32 In pregnant women, low iron levels may affect the birth weight and cause prematurity33,34 and even mortality in the mother and child.35 In addition, a link between preoperative anemia and increased risk of 30-day morbidity and mortality in patients undergoing major noncardiac surgery was demonstrated.36 A schematic summary of the cause and symptoms of iron deficiency anemia is provided in Figure 1.
+
+Figure 1. Iron deficiency anemia causes and symptoms.

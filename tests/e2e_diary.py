@@ -78,6 +78,8 @@ with sync_playwright() as p:
         ok(S + "витамины: сказано, что не учитывается", "Не учитываются" in mt and "хром" in mt)
         pg.click(D + ' .link:has-text("Свернуть список")')
         ok(S + "витамины: список сворачивается", len(pg.query_selector_all(D + ' .mrow')) == 0)
+        # железо: оценка приёма пищи (в омлете есть железо; формулировка про усвоение)
+        ok(S + "железо: строка оценки приёма пищи", "🩸" in pg.inner_text(D) and "железа" in pg.inner_text(D) and ("усвоени" in pg.inner_text(D)), pg.inner_text(D)[:700])
         # вода
         pg.click(D + ' .chip:has-text("+ стакан")'); pg.click(D + ' .chip:has-text("+ стакан")')
         ok(S + "вода: 500 мл", "500 мл" in pg.inner_text(D + ' .wrow'), pg.inner_text(D + ' .wrow'))

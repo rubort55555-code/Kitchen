@@ -1,0 +1,11 @@
+Название: Perspective: Framework for Developing Prediction Equations for Estimating the Absorption and Bioavailability of Nutrients from Foods
+Авторы: Connie Weaver, Seth Armah, Richard S Bruno, Andrew Fletcher, Raymond Glahn, Isabelle Herter-Aeberli, Tasija Karosas, Cornelia U Loechl, Veronica Lopez-Teros, Michael I McBurney, Alida Melse-Boonstra, Rachel Novotny, Manju B Reddy, Jessica Rigutto-Farebrother, Sherry Tanumihardjo, Emorn Udomkesmalee, Ellen Van Den Heuvel, Taylor Wallace, Pattanee Winichagoon
+Журнал: Advances in Nutrition, 2025
+DOI: https://doi.org/10.1016/j.advnut.2025.100481   PMID: 40683371   PMC: PMC12361767
+Лицензия: CC BY 4.0 (открытый доступ). © 2025 The Author(s)
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 15 из 20: Validate the Predictive Equation
+============================================================
+
+Step 4, the concluding stage of the framework, focuses on validating the predictive equation when feasible and enhancing its applicability for practical implementation. The typical approach to validating an equation is to see how well data fit the equation from datasets not used to develop the equation (independent dataset) but that use experimental designs and endpoints consistent with the datasets that were used to develop the equation [107]. Preserving an independent dataset from equation development will be difficult to achieve for many nutrients and bioactive with existing literature.

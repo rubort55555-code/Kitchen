@@ -1,0 +1,13 @@
+Название: Perspective: Framework for Developing Prediction Equations for Estimating the Absorption and Bioavailability of Nutrients from Foods
+Авторы: Connie Weaver, Seth Armah, Richard S Bruno, Andrew Fletcher, Raymond Glahn, Isabelle Herter-Aeberli, Tasija Karosas, Cornelia U Loechl, Veronica Lopez-Teros, Michael I McBurney, Alida Melse-Boonstra, Rachel Novotny, Manju B Reddy, Jessica Rigutto-Farebrother, Sherry Tanumihardjo, Emorn Udomkesmalee, Ellen Van Den Heuvel, Taylor Wallace, Pattanee Winichagoon
+Журнал: Advances in Nutrition, 2025
+DOI: https://doi.org/10.1016/j.advnut.2025.100481   PMID: 40683371   PMC: PMC12361767
+Лицензия: CC BY 4.0 (открытый доступ). © 2025 The Author(s)
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 20: Abstract
+============================================================
+
+Current nutrient intake recommendations, nutritional assessments, and food labeling rely on estimated total nutrient content in foods and dietary supplements. However, the adequacy of nutrient intake depends not only on the total amount consumed but also on the fraction absorbed and utilized by the body. Accurate assessments of nutrient bioavailability require predictive equations or algorithms. This paper outlines a 4-step framework designed to guide researchers in developing such equations. The framework includes: 1) identifying key factors that influence nutrient or bioactive compound bioavailability; 2) conducting a comprehensive literature review of high-quality human studies to inform the development of predictive equations; 3) constructing predictive equations based on these insights; and 4) validate the equation, when feasible, to potentiate translation. This structured approach aims to enhance the accuracy and precision of nutrient bioavailability estimates, address data limitations, and highlight evidence gaps to inform future research and policy on nutrients and bioactive compounds.
+
+Keywords: bioavailability, prediction equation, micronutrients, nutrient absorption, nutrients requirements

@@ -1,4 +1,4 @@
-// Сочетания продуктов и усвоение нутриентов: что усваивается лучше вместе, что хуже, и кофеин.
+// Сочетания продуктов и усвоение нутриентов: жирорастворимые витамины и кофеин. Железо — в iron.ts.
 // Правила опираются на опубликованные работы (список — SOURCES; обзор и ссылки — literature/nutrient-interactions/).
 // Это подсказки к рациону, а не расчёт биодоступности: в справочнике состава нет данных о гемовом железе, фитатах и дубильных веществах.
 import type { Meal, MealSlot } from "./types";
@@ -14,6 +14,11 @@ export const SOURCES: Record<string, Source> = {
   massey1984: { id: "massey1984", cite: "Massey L.K., Wise K.J. The effect of dietary caffeine on urinary excretion of calcium, magnesium, sodium and potassium in healthy young females. Nutr Res, 1984" },
   bergman1990: { id: "bergman1990", cite: "Bergman E.A. и др. Effects of dietary caffeine on renal handling of minerals in adult women. Life Sci, 1990" },
   kynast1994: { id: "kynast1994", cite: "Kynast-Gales S.A., Massey L.K. Effect of caffeine on circadian excretion of urinary calcium and magnesium. J Am Coll Nutr, 1994" },
+  piskin2022: { id: "piskin2022", cite: "Piskin E. и др. Iron absorption: factors, limitations, and improvement methods. ACS Omega, 2022 (CC BY 4.0)" },
+  decarli2018: { id: "decarli2018", cite: "De Carli E. и др. Dietary iron bioavailability: agreement between estimation methods and association with serum ferritin concentrations in women of childbearing age. Nutrients, 2018 (CC BY 4.0)" },
+  dahdouh2019: { id: "dahdouh2019", cite: "Dahdouh S. и др. Development of the FAO/INFOODS/IZINCG global food composition database for phytate. J Food Compost Anal, 2019 (CC BY 4.0)" },
+  prentice2017: { id: "prentice2017", cite: "Prentice A.M. и др. Dietary strategies for improving iron status: balancing safety and efficacy. Nutr Rev, 2017 (CC BY 4.0)" },
+  weaver2025: { id: "weaver2025", cite: "Weaver C. и др. Perspective: framework for developing prediction equations for estimating the absorption and bioavailability of nutrients from foods. Adv Nutr, 2025 (CC BY 4.0)" },
   efsa2015: { id: "efsa2015", cite: "EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific opinion on the safety of caffeine. EFSA Journal, 2015" },
 };
 
@@ -45,13 +50,6 @@ export function interactionHints(meals: Meal[], opts: { caffeineLimit: number } 
   for (const m of meals) bySlot.set(m.slot, [...(bySlot.get(m.slot) || []), m]);
   for (const [slot, list] of bySlot) {
     const s = sumMeals(list);
-    const caf = caffeineOf(list);
-    // Железо: витамин C помогает, чай/кофе, кальций и фитаты мешают
-    if (s.fe >= 3) {
-      if (s.vitC < 20) out.push({ id: "iron-c:" + slot, text: `В приёме «${slot}» много железа, но мало витамина C. Свежий перец, цитрусовые, квашеная капуста или зелень рядом помогут усвоению растительного железа.`, src: ["heffernan2017", "milman2020"] });
-      if (caf > 0) out.push({ id: "iron-tea:" + slot, text: `Чай или кофе в приёме «${slot}» рядом с богатой железом едой мешают его усвоению (дубильные вещества). Лучше пить между приёмами пищи.`, src: ["milman2020"] });
-      if (s.ca >= 300) out.push({ id: "iron-ca:" + slot, text: `Много кальция (молочное) в одном приёме с железом («${slot}») снижает усвоение железа. Молочное лучше отдельно от мяса, печени и бобовых.`, src: ["milman2020"] });
-    }
     // Жирорастворимые витамины и каротиноиды — с жиром
     if ((s.vitA >= 300 || s.vitE >= 4 || s.vitK >= 60) && s.fat < 5) {
       out.push({ id: "fat-sol:" + slot, text: `В приёме «${slot}» много витаминов A, E или K, но почти нет жира. С чайной ложкой масла, сметаной или орехами они усвоятся лучше.`, src: ["white2017", "yao2023"] });
