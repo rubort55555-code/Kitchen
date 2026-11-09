@@ -16,6 +16,8 @@ export type Sheet =
   | { kind: "steps"; id: string }
   | { kind: "overdue" }
   | { kind: "intro" }
+  | { kind: "diary"; date?: string }
+  | { kind: "meal"; date: string; slot?: import("./types").MealSlot }
   | { kind: "revision" }
   | { kind: "receipt"; mode: "photo" | "text" }
   | { kind: "recipeNew"; mode?: "menu" | "text" | "photo" }

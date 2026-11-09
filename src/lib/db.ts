@@ -2,8 +2,8 @@
 // Небольшая собственная обёртка вместо Dexie: меньше кода и работает полностью офлайн.
 
 const DB_NAME = "kitchen";
-const DB_VERSION = 1;
-export const STORES = ["products", "log", "recipes", "kv"] as const;
+const DB_VERSION = 2;
+export const STORES = ["products", "log", "recipes", "meals", "kv"] as const;
 export type StoreName = (typeof STORES)[number];
 
 let dbPromise: Promise<IDBDatabase> | null = null;
@@ -17,6 +17,7 @@ function open(): Promise<IDBDatabase> {
       if (!db.objectStoreNames.contains("products")) db.createObjectStore("products", { keyPath: "id" });
       if (!db.objectStoreNames.contains("log")) db.createObjectStore("log", { keyPath: "id" }).createIndex("t", "t");
       if (!db.objectStoreNames.contains("recipes")) db.createObjectStore("recipes", { keyPath: "id" });
+      if (!db.objectStoreNames.contains("meals")) db.createObjectStore("meals", { keyPath: "id" }).createIndex("date", "date");
       if (!db.objectStoreNames.contains("kv")) db.createObjectStore("kv");
     };
     req.onsuccess = () => {
@@ -80,13 +81,13 @@ export async function apply(changes: Change[]): Promise<void> {
 }
 
 /** Полная замена всех данных (восстановление из копии). */
-export async function replaceAll(data: { products: unknown[]; log: unknown[]; recipes: unknown[]; kv: Record<string, unknown> }): Promise<void> {
+export async function replaceAll(data: { products: unknown[]; log: unknown[]; recipes: unknown[]; meals?: unknown[]; kv: Record<string, unknown> }): Promise<void> {
   const db = await open();
   const tx = db.transaction(STORES as unknown as string[], "readwrite");
-  for (const s of ["products", "log", "recipes"] as const) {
+  for (const s of ["products", "log", "recipes", "meals"] as const) {
     const os = tx.objectStore(s);
     os.clear();
-    data[s].forEach((v) => os.put(v));
+    (data[s] || []).forEach((v) => os.put(v));
   }
   const kv = tx.objectStore("kv");
   kv.clear();

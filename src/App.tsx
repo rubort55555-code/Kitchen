@@ -17,6 +17,7 @@ import { Revision } from "./screens/Revision";
 import { Receipt } from "./screens/Receipt";
 import { RecipeEdit, RecipeNew } from "./screens/RecipeEdit";
 import { Intro } from "./screens/Intro";
+import { Diary, AddMeal } from "./screens/Diary";
 import { Overdue, isExpired } from "./screens/Overdue";
 import { useEffect } from "react";
 import { ymd } from "./lib/util";
@@ -41,6 +42,8 @@ function SheetView({ s }: { s: Sheet }) {
     case "steps": return <CookMode id={s.id} />;
     case "overdue": return <Overdue />;
     case "intro": return <Intro />;
+    case "diary": return <Diary date={s.date} />;
+    case "meal": return <AddMeal date={s.date} slot={s.slot} />;
     case "revision": return <Revision />;
     case "receipt": return <Receipt mode={s.mode} />;
     case "recipeNew": return <RecipeNew mode={s.mode || "menu"} />;
