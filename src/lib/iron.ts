@@ -84,6 +84,98 @@ export function foodIron(name: string, cat?: CatalogItem | null): FoodIron {
   return { flags: [...flags], grade, via };
 }
 
+// ---------- Масштабирование: категории баз данных и состав с упаковки ----------
+// Названия продуктов перечислить нельзя: в Open Food Facts около 4,9 млн товаров, в USDA SR Legacy 7 793 продукта (4 462 из них
+// содержат ≥ 1 мг железа на 100 г), и так в каждой стране. Поэтому классифицируем по категориям, составу и тегам, а не по названию.
+
+/** Слова-признаки в тегах категорий Open Food Facts (en:..., fr:...) и в английских названиях групп. */
+const TAG_TOKENS: { flag: IronFlag; tokens: string[]; grade: Grade }[] = [
+  { flag: "organ", tokens: ["liver", "offal", "kidney", "giblets", "foie", "tripe"], grade: "B" },
+  { flag: "meat", tokens: ["meat", "meats", "beef", "pork", "lamb", "veal", "poultry", "chicken", "turkey", "duck", "sausage", "sausages", "ham", "bacon", "charcuterie", "salami", "game", "mutton", "venison", "viande", "viandes", "pate"], grade: "B" },
+  { flag: "fish", tokens: ["fish", "fishes", "seafood", "tuna", "salmon", "sardine", "sardines", "herring", "mackerel", "cod", "shrimp", "shrimps", "mussel", "mussels", "crab", "oysters", "finfish", "shellfish", "poissons"], grade: "B" },
+  { flag: "egg", tokens: ["egg", "eggs", "omelette", "omelettes"], grade: "B" },
+  { flag: "dairy", tokens: ["dairy", "dairies", "milk", "milks", "cheese", "cheeses", "yogurt", "yogurts", "yoghurt", "yoghurts", "cream", "creams", "kefir", "curd", "quark", "laitiers"], grade: "B" },
+  { flag: "soy", tokens: ["soy", "soya", "soybean", "tofu", "tempeh"], grade: "B" },
+  { flag: "legume", tokens: ["legume", "legumes", "bean", "beans", "lentil", "lentils", "chickpea", "chickpeas", "pulses", "pulse", "hummus", "peas"], grade: "B" },
+  { flag: "polyphenol", tokens: ["tea", "teas", "coffee", "coffees", "cocoa", "chocolate", "chocolates", "matcha"], grade: "B" },
+  { flag: "alcohol", tokens: ["wine", "wines", "beer", "beers", "spirits", "liquor", "liqueur", "alcoholic", "vodka", "whisky", "cider"], grade: "B" },
+  { flag: "nuts", tokens: ["nut", "nuts", "seed", "seeds", "almond", "almonds", "peanut", "peanuts", "hazelnut", "walnut", "cashew", "sesame", "tahini", "flaxseed", "chia"], grade: "C" },
+  { flag: "grain", tokens: ["cereal", "cereals", "grain", "grains", "bread", "breads", "oat", "oats", "oatmeal", "wheat", "rye", "barley", "bran", "muesli", "granola", "pasta", "corn", "buckwheat", "millet", "bulgur", "bakery", "baked"], grade: "C" },
+];
+// Если в тегах есть слова про масло, жиры, сахар, специи — продукт нейтральный
+const NEUTRAL_TOKENS = new Set(["oil", "oils", "fat", "fats", "butter", "sugar", "sugars", "sweeteners", "honey", "spice", "spices", "herbs", "salt", "vinegar", "sauce", "sauces", "condiments", "jam", "jams", "juice", "juices", "water", "waters", "soda", "sodas", "sweets", "candy", "confectionery", "snack"]);
+const BUTTER_LIKE = new Set(["butter", "butters", "margarine", "oils", "oil"]);
+const TRUE_DAIRY = ["milk", "milks", "cheese", "cheeses", "yogurt", "yogurts", "yoghurt", "yoghurts", "kefir", "curd", "quark"];
+
+const tokensOf = (tags: string[]) => tags.flatMap((t) => t.replace(/^[a-z]{2}:/i, "").toLowerCase().split(/[^a-zа-яё]+/).filter(Boolean));
+
+/** Свойства по тегам категорий (Open Food Facts, группы USDA). */
+export function foodIronFromTags(tags: string[]): FoodIron {
+  const toks = new Set(tokensOf(tags));
+  const flags = new Set<IronFlag>();
+  let grade: Grade = "D";
+  for (const r of TAG_TOKENS) {
+    if (!r.tokens.some((t) => toks.has(t))) continue;
+    // Сливочное масло и маргарин лежат в категории «dairies», но кальция и молочного белка почти не дают
+    if (r.flag === "dairy" && [...toks].some((t) => BUTTER_LIKE.has(t)) && !TRUE_DAIRY.some((t) => toks.has(t))) continue;
+    flags.add(r.flag);
+    if (grade === "D" || (grade === "C" && r.grade === "B")) grade = r.grade;
+  }
+  if (flags.has("organ")) flags.add("meat");
+  if (!flags.size && [...toks].some((t) => NEUTRAL_TOKENS.has(t))) grade = "C";
+  return { flags: [...flags], grade, via: grade === "D" ? "none" : "category" };
+}
+
+/** Группы USDA FoodData Central (SR Legacy, Foundation) → свойства. Группы со смешанным составом остаются без оценки (D). */
+const USDA_GROUPS: Record<string, { flags: IronFlag[]; grade: Grade }> = {
+  "Beef Products": { flags: ["meat"], grade: "B" },
+  "Pork Products": { flags: ["meat"], grade: "B" },
+  "Poultry Products": { flags: ["meat"], grade: "B" },
+  "Lamb, Veal, and Game Products": { flags: ["meat"], grade: "B" },
+  "Sausages and Luncheon Meats": { flags: ["meat"], grade: "B" },
+  "Finfish and Shellfish Products": { flags: ["fish"], grade: "B" },
+  "Dairy and Egg Products": { flags: ["dairy", "egg"], grade: "C" },
+  "Legumes and Legume Products": { flags: ["legume"], grade: "B" },
+  "Nut and Seed Products": { flags: ["nuts"], grade: "C" },
+  "Cereal Grains and Pasta": { flags: ["grain"], grade: "C" },
+  "Breakfast Cereals": { flags: ["grain"], grade: "C" },
+  "Baked Products": { flags: ["grain"], grade: "C" },
+  "Vegetables and Vegetable Products": { flags: [], grade: "C" },
+  "Fruits and Fruit Juices": { flags: [], grade: "C" },
+  "Fats and Oils": { flags: [], grade: "C" },
+  "Sweets": { flags: [], grade: "C" },
+  "Spices and Herbs": { flags: [], grade: "C" },
+};
+export function foodIronFromUsdaGroup(group: string): FoodIron {
+  const g = USDA_GROUPS[group];
+  return g ? { flags: [...g.flags], grade: g.grade, via: "category" } : { flags: [], grade: "D", via: "none" };
+}
+
+/** Объединение оценок: признаки складываются, степень берётся лучшая из имеющихся (по принципу «есть данные»). */
+export function mergeIron(...list: FoodIron[]): FoodIron {
+  const flags = new Set<IronFlag>();
+  let grade: Grade = "D";
+  let via: FoodIron["via"] = "none";
+  for (const f of list) {
+    f.flags.forEach((x) => flags.add(x));
+    if (f.grade === "B" || (f.grade === "C" && grade === "D")) grade = f.grade;
+    if (f.via !== "none" && via === "none") via = f.via;
+  }
+  return { flags: [...flags], grade, via };
+}
+
+/** Свойства товара по штрихкоду: название, теги категорий, первые три компонента состава (список идёт по убыванию массы). */
+export function foodIronOfProduct(title: string, cats?: string[], ingredients?: string): FoodIron {
+  const parts = [foodIron(title), cats?.length ? foodIronFromTags(cats) : null];
+  if (ingredients) {
+    const head = ingredients.split(/[,;]/).slice(0, 3).join(", ");
+    const ing = foodIron(head, null);
+    // Из состава берём только то, что в начале списка (много в продукте); категория D из состава не портит
+    if (ing.grade !== "D") parts.push({ ...ing, grade: "C" });
+  }
+  return mergeIron(...(parts.filter(Boolean) as FoodIron[]));
+}
+
 export interface IronContext { recipes: Recipe[] }
 interface Part { name: string; grams: number; food: FoodIron }
 
@@ -98,7 +190,9 @@ export function mealParts(m: Meal, ctx: IronContext): Part[] {
   }
   const g = m.qty?.match(/^(\d+(?:[.,]\d+)?)\s*(г|мл)/);
   const grams = g ? Number(g[1].replace(",", ".")) : 0;
-  return [{ name: m.name, grams, food: foodIron(m.name) }];
+  // Товар по штрихкоду: категории и состав с упаковки дают больше, чем название
+  const food = m.cats || m.ingredients ? foodIronOfProduct(m.name, m.cats, m.ingredients) : foodIron(m.name);
+  return [{ name: m.name, grams, food }];
 }
 
 export type IronLevel = "better" | "usual" | "worse";

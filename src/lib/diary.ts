@@ -55,7 +55,10 @@ export function mealFromOff(p: OffProduct, name: string, grams: number, date: st
   if (c.fiber !== undefined) n.fiber = c.fiber * k;
   if (c.sugar !== undefined) n.sugar = c.sugar * k;
   if (c.salt !== undefined) n.na = c.salt * 400 * k; // соль, г → натрий, мг (в соли 40% натрия)
-  return mk(date, slot, name, n, who, { qty: `${Math.round(grams)} г` });
+  if (c.fe !== undefined) n.fe = c.fe * k;
+  if (c.ca !== undefined) n.ca = c.ca * k;
+  if (c.vitC !== undefined) n.vitC = c.vitC * k;
+  return mk(date, slot, name, n, who, { qty: `${Math.round(grams)} г`, ...(p.cats ? { cats: p.cats } : {}), ...(p.ingredients ? { ingredients: p.ingredients } : {}) });
 }
 
 /** Своё блюдо: человек вводит калории и БЖУ на всё съеденное. */

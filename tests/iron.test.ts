@@ -1,8 +1,9 @@
 // Проверка оценки железа: node node_modules/.bin/tsx tests/iron.test.ts
 import { CATALOG } from "../src/lib/catalog";
-import { CALCIUM_INHIBITOR_MG, IRON_MIN_MG, MEAT_ENHANCER_G, analyzeIron, foodIron, ironDay, ironHints, mealParts } from "../src/lib/iron";
+import { CALCIUM_INHIBITOR_MG, IRON_MIN_MG, MEAT_ENHANCER_G, analyzeIron, foodIron, foodIronFromTags, foodIronFromUsdaGroup, foodIronOfProduct, ironDay, ironHints, mealParts } from "../src/lib/iron";
 import { DRINKS, SOURCES } from "../src/lib/interactions";
-import { mealCustom, mealDrink, mealFromComposition, mealFromRecipe } from "../src/lib/diary";
+import { mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe } from "../src/lib/diary";
+import { fromOff } from "../src/lib/off";
 import { parseRecipeText } from "../tools/recipes.mjs";
 import { readFileSync, readdirSync } from "node:fs";
 import type { Meal, Recipe } from "../src/lib/types";
@@ -88,6 +89,38 @@ let ironRecipes = 0, withMeat = 0;
 for (const r of all) { const m = mealFromRecipe(r, 1, D, "обед", "m1"); if (!m) continue; const a = analyzeIron("обед", [m], { recipes: all }); if (a) { ironRecipes++; if (a.enhancers.includes("мясо или рыба")) withMeat++; } }
 ok("по рецептам оценка железа работает (много рецептов с железом ≥ 1,5 мг на порцию)", ironRecipes > 80, ironRecipes);
 ok("в части рецептов мясо или рыба определены как усилитель", withMeat > 20, withMeat);
+
+// Масштабирование: теги категорий Open Food Facts, группы USDA, состав с упаковки
+const tags = (...t: string[]) => foodIronFromTags(t);
+ok("теги OFF: мясо", tags("en:meats", "en:beef").flags.includes("meat") && tags("en:meats").grade === "B");
+ok("теги OFF: рыба и морепродукты", tags("en:seafood", "en:fishes").flags.includes("fish"));
+ok("теги OFF: молочное и сыры", tags("en:dairies", "en:cheeses").flags.includes("dairy"));
+ok("теги OFF: сливочное масло — не источник кальция", !tags("en:dairies", "en:butters").flags.includes("dairy"));
+ok("теги OFF: чай, кофе, шоколад — полифенолы", tags("en:teas").flags.includes("polyphenol") && tags("en:coffees").flags.includes("polyphenol") && tags("en:chocolates").flags.includes("polyphenol"));
+ok("теги OFF: бобовые, соя, орехи, хлеб", tags("en:legumes-and-their-products").flags.includes("legume") && tags("en:soy-based-foods").flags.includes("soy") && tags("en:peanut-butters").flags.includes("nuts") && tags("en:breads").flags.includes("grain"));
+ok("теги OFF: вино — алкоголь", tags("en:wines").flags.includes("alcohol"));
+ok("теги OFF: неизвестное — D, масла и сахар — нейтральны (C)", tags("en:plant-based-foods").grade === "D" && tags("en:sugars").grade === "C" && tags("en:olive-oils").grade === "C");
+ok("теги OFF: слова внутри слов не находятся (peach, pea)", !tags("en:peaches").flags.includes("legume") && !tags("en:nutmeg").flags.includes("nuts"));
+ok("теги на других языках: viande, poissons", tags("fr:viandes").flags.includes("meat") && tags("fr:poissons").flags.includes("fish"));
+ok("USDA: говядина и птица — мясо (B), молочное и яйца (C)", foodIronFromUsdaGroup("Beef Products").grade === "B" && foodIronFromUsdaGroup("Poultry Products").flags.includes("meat") && foodIronFromUsdaGroup("Dairy and Egg Products").grade === "C");
+ok("USDA: смешанные группы — без оценки (D)", ["Fast Foods", "Baby Foods", "Snacks", "Soups, Sauces, and Gravies", "Meals, Entrees, and Side Dishes"].every((g) => foodIronFromUsdaGroup(g).grade === "D"));
+const prod = foodIronOfProduct("Шоколад молочный", ["en:chocolates"]);
+ok("товар: название и категория складываются", prod.flags.includes("polyphenol") && prod.grade === "B");
+ok("товар: по составу — первые три компонента (мясо в начале)", foodIronOfProduct("Консерва", undefined, "говядина, вода, соль, специи").flags.includes("meat"));
+ok("товар: молоко в конце состава не считается", !foodIronOfProduct("Печенье", undefined, "мука, сахар, масло, молоко сухое").flags.includes("dairy"));
+
+// Open Food Facts: железо, кальций, витамин C (в OFF — граммы на 100 г)
+const offJson = { status: 1, product: { product_name: "Говяжья тушёнка", quantity: "325 г", nutriments: { "energy-kcal_100g": 220, proteins_100g: 16, fat_100g: 17, carbohydrates_100g: 0, iron_100g: 0.0035, calcium_100g: 0.012, "vitamin-c_100g": 0.0005 }, categories_tags: ["en:meats", "en:canned-meats"], ingredients_text_ru: "Говядина, жир, соль, лавровый лист" } };
+const op = fromOff("4600000000001", offJson)!;
+ok("OFF: железо 0,0035 г → 3,5 мг, кальций 12 мг, витамин C 0,5 мг", op.per100!.fe === 3.5 && op.per100!.ca === 12 && op.per100!.vitC === 0.5, op.per100);
+ok("OFF: категории и состав сохранены", op.cats?.[0] === "en:meats" && op.ingredients!.startsWith("Говядина"));
+const om = mealFromOff(op, op.title, 150, D, "обед", "m1")!;
+ok("запись по штрихкоду: железо на 150 г = 5,25 мг", om.n.fe === 5.3 || Math.abs(om.n.fe! - 5.25) < 0.06, om.n.fe);
+ok("запись по штрихкоду хранит категории и состав", om.cats?.includes("en:meats") === true && !!om.ingredients);
+const oa = analyzeIron("обед", [om], ctx)!;
+ok("железо по штрихкоду: мясо по категории — усилитель", oa.enhancers.includes("мясо или рыба") && oa.level === "better", oa);
+const noFe = mealFromOff({ code: "1", title: "Йогурт", per100: { kcal: 60 } }, "Йогурт", 100, D, "обед", "m1")!;
+ok("без железа на упаковке — оценки нет", noFe.n.fe === undefined && analyzeIron("обед", [noFe], ctx) === null);
 
 console.log(`iron: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

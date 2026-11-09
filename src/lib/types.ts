@@ -212,6 +212,9 @@ export interface Meal {
   planEntryId?: string;
   /** Сколько: «1 порция», «150 г». */
   qty?: string;
+  /** Категории Open Food Facts и состав с упаковки — для оценки усвоения железа по штрихкоду. */
+  cats?: string[];
+  ingredients?: string;
   /** Съедено порций рецепта (для расчёта состава по ингредиентам). */
   servings?: number;
   /** Кофеин, мг (для напитков). */
