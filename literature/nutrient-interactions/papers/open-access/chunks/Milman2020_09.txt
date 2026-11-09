@@ -1,0 +1,45 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 9 из 19: 4. Inhibitors (часть 3)
+============================================================
+
+Clusters of phosphoserine residues in cow milk caseins bind ferric iron with high affinity [119]. Caseins inhibit iron absorption in humans, but hydrolysis of whole caseins lessens this effect and can improve iron absorption [118]. Altogether, cow milk proteins have a negative effect on iron uptake, and in whole milk and milk products, this effect can be enhanced by the presence of calcium in the milk and cheese (see Section 4.9).
+
+However, the inhibitory effect of milk proteins and milk calcium on iron uptake, which has been shown in single-test-meal studies, cannot simply be interpolated into real-life dietary studies. A moderate intake of milk (one glass of skimmed milk or yogurt once daily) consumed with a typical standard meal had no measurable effect on iron absorption when compared with the reference meal without milk [51, 52]. Likewise, nonfat milk consumed with a cereal-based diet had no influence on iron absorption in young women with small body iron reserves [120].
+
+## 4.8. Egg Proteins
+
+In a semisynthetic meal containing ovalbumin as the protein source, i.e., with low iron bioavailability, the substitution of ovalbumin with whole egg protein did not change mean nonheme iron uptake, which remained low at about 1.4% [62].
+
+The absorption of nonheme iron from eggs in test meals was significantly lower when compared with the reference meal [121], and adding egg white to a test meal decreased nonheme iron uptake [122].
+
+In in vivo rat studies, egg yolk decreased iron uptake [121] and other rat studies confirmed that egg yolk protein and egg yolk phosvitin decreased the absorption of the divalent minerals iron, calcium, and magnesium [123].
+
+Almost all the iron in eggs is present in the yolk. The iron content in egg yolk varies from 2.7 to 5.9 mg/100 g [113, 115, 124]. Iron content in egg white is extremely low about 0.1 mg/100 g [113, 115, 124].
+
+Another mechanism for the poor iron bioavailability in eggs could be the formation of insoluble iron sulfides. Both egg yolk and egg white contain sulfur incorporated into sulfur proteins. When eggs are boiled for a long time, the yolk's surface and subsequently its whole interior turns green and black due to the formation of iron sulfide, when iron from the yolk reacts with hydrogen sulfide from the egg white. Iron sulfide is not water soluble, and the iron in these compounds is not available for absorption [125].
+
+Altogether, both egg yolk and egg white contain proteinaceous and other chemical compounds that decrease iron absorption [62, 121–123], and the iron in eggs has a poor bioavailability.
+
+## 4.9. Calcium
+
+The most calcium-rich nutrients are bovine milk and dairy foods produced from milk. Some green leafy vegetables such as spinach, broccoli, cabbage, okra, and some legumes like soya beans [113, 115, 126] also contain appreciable amounts of calcium.
+
+Calcium inhibits iron absorption in single-test-meal settings [127], and the inhibition includes both nonheme and heme iron. The effect is partly dose related, being more dependent on the total amount of calcium administered than the calcium : iron molar ratio. In single-test-meal studies, iron uptake was inhibited by calcium supplements and by dairy products; the effect was depending on the simultaneous presence of calcium and iron in the intestine and also present when calcium and iron were given together in the fasting state [128–131].
+
+However, the inhibitory effect of calcium on iron uptake demonstrated in single-test-meal studies is more complex to evaluate in daily-life dietary settings. A study in 6 European countries, comprising 1,604 adolescent girls and young women, demonstrated a significant negative association between dietary calcium intake, assessed by a three-day food record, and body iron status (serum ferritin) [132]. On the other hand, long-term intervention studies of calcium supplementation have failed to show any relevant reduction in body iron status (serum ferritin), even in women being at risk for low iron status; for review, see [127, 133].
+
+Calcium inhibits the absorption of heme and nonheme iron to the same extent, which suggests that calcium interferes with the transport of iron through the enterocyte, probably at a stage in the absorption process, which is common for both heme and nonheme iron transport [130]. There may be an adaptive intestinal response to long-term calcium supplementation, generating a “normalization” of the iron absorption process. This hypothesis is supported by an in vitro study of Caco-2 cells, where the addition of calcium decreased the ferroportin expression at the basolateral membrane, resulting in a decreased iron efflux and increased cellular iron retention. However, after a few hours, DMT-1 and ferroportin expression increased again, suggesting a rebound effect [134].
+
+## 4.10. Turmeric: Curcumin—Promoter or Inhibitor?
+
+Curcumin is the active substance in turmeric, which is widely used as a spice, especially in the composite spice, yellow curry powder, and curry paste. Many naturopathic doctors/nutritionists/dieticians consider curcumin to be of benefit for patients with iron overload and haemochromatosis [135].
+
+Curcumin contains polyphenolic compounds, which have antioxidative and anti-inflammatory properties [136]. Curcumin, a low-molecular-weight polyphenolic diketone, forms soluble iron complexes in aqueous solution [137], but the effect of curcumin on iron absorption is not clarified.
+
+Due to its high content of polyphenols, it could be anticipated that curcumin would inhibit iron uptake, and some have even suggested that curcumin has iron-chelating properties that impair iron absorption [138]. However, in test meal studies, using stable iron isotopes, turmeric had no influence on iron absorption, despite a high content of polyphenols [111]. In contrast, chili induced a decrease in iron absorption, even though it had a lower content of polyphenols [111].

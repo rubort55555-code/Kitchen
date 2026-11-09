@@ -1,0 +1,15 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 6 из 19: 3. Promoters (часть 3)
+============================================================
+
+However, the enhancing influence of alcohol on iron absorption may be indirect, relying on an inhibition of hepcidin synthesis in the liver. In patients with alcoholic liver disease, serum prohepcidin concentrations were significantly lower than in healthy subjects, and concentrations were most decreased in patients with the highest serum ferritin values. In an ethanol-fed mouse model, hepatic hepcidin-1 mRNA expression was significantly lower than that in controls. Prohepcidin was expressed in the cytoplasm of hepatocytes of mice liver tissue sections, and the expression decreased after ethanol loading [75].
+
+Other animal studies have confirmed these findings [76–78]. It appears that alcohol loading downregulates hepatic hepcidin expression and thereby leads to an increase in intestinal iron absorption. Both acute and chronic alcohol exposures suppress hepcidin expression in the liver [79].
+
+Maybe the “missing link” between alcohol consumption and increased iron absorption is predominantly the alcohol-induced inhibition of hepcidin expression and not as earlier presumed being due to effects on the absorptive processes in the intestine. However, patients with haemochromatosis already have a low hepcidin level and it has not yet been clarified whether alcohol will contribute to a further reduction of hepcidin.

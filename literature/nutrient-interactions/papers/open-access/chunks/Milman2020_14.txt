@@ -1,0 +1,67 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 14 из 19: References
+============================================================
+
+[1] 1LynchS.SkikneB.CookJ.CookFood iron absorption in idiopathic hemochromatosisBlood19897462187219310.1182/blood.v74.6.2187.21872804357
+
+[2] 2WaltersG. O.JacobsA.WorwoodM.TrevettD.ThomsonW.Iron absorption in normal subjects and patients with idiopathic haemochromatosis: relationship with serum ferritin concentrationGut197516318819210.1136/gut.16.3.1882-s2.0-0016651662804432PMC1410965
+
+[3] 3MorettiD.van DoornG. M.SwinkelsD. W.Melse-BoonstraA.Relevance of dietary iron intake and bioavailability in the management of HFE hemochromatosis: a systematic reviewThe American Journal of Clinical Nutrition201398246847910.3945/ajcn.112.0482642-s2.0-8488124302723803887
+
+[4] 4MilmanN. T.SchioedtF. V.JunkerA. E.MagnussenK.Diagnosis and treatment of genetic HFE-hemochromatosis: the Danish aspectGastroenterology Research201912522123210.14740/gr120631636772PMC6785287
+
+[5] 5MilmanN.PedersenP.Evidence that the Cys282Tyr mutation of the HFE gene originated from a population in Southern Scandinavia and spread with the vikingsClinical Genetics2003641364710.1034/j.1399-0004.2003.00083.x2-s2.0-004213168712791037
+
+[6] 6MilmanN. T.Diagnosis and treatment of genetic haemochromatosisUgeskr Laeger2013175161109111223651749
+
+[7] 7MilmanN.KoefoedP.PedersenP.NielsenF. C.EibergH.Frequency of the HFE C282Y and H63D mutations in Danish patients with clinical haemochromatosis initially diagnosed by phenotypic methodsEuropean Journal of Haematology200371640340710.1046/j.0902-4441.2003.00156.x2-s2.0-034539313314703688
+
+[8] 8HuntJ. R.ZengH.Iron Absorption by heterozygous carriers of the HFE C282Y mutation associated with hemochromatosisThe American Journal of Clinical Nutrition200480492493110.1093/ajcn/80.4.92415447900
+
+[9] 9PedersenP.MilmanN.Genetic screening for HFE hemochromatosis in 6,020 Danish men: penetrance of C282Y, H63D, and S65C variantsAnnals of Hematology200988877578410.1007/s00277-008-0679-12-s2.0-6764938806619159930
+
+[10] 10PillingL. C.TamosauskaiteJ.JonesG.Common conditions associated with hereditary haemochromatosis genetic variants: cohort study in UK BiobankBMJ2019364p. k522210.1136/bmj.k52222-s2.0-8506010398030651232PMC6334179
+
+[11] 11GinzburgY. Z.Hepcidin-ferroportin axis in health and diseaseVitamins and Hormones2019110174510.1016/bs.vh.2019.01.0022-s2.0-8506110835530798811PMC7730607
+
+[12] 12PietrangeloA.Hereditary hemochromatosis: pathogenesis, diagnosis, and treatmentGastroenterology2010139239340810.1053/j.gastro.2010.06.0132-s2.0-7795550857320542038
+
+[13] 13AdamsP.AltesA.AltesA.Therapeutic recommendations in HFE hemochromatosis for p.Cys282Tyr (C282Y/C282Y) homozygous genotypeHepatology International2018122838610.1007/s12072-018-9855-02-s2.0-8504448086529589198PMC5904234
+
+[14] 14TetensI.BendtsenK. M.HenriksenM.ErsbøllA. K.MilmanN.The impact of a meat-versus a vegetable-based diet on iron status in women of childbearing age with small iron storesEuropean Journal of Nutrition200746843944510.1007/s00394-007-0683-62-s2.0-3744900350817982706
+
+[15] 15PawlakR.BergerJ.HinesI.Iron status of vegetarian adults: a review of literatureAmerican Journal of Lifestyle Medicine201612648649810.1177/15598276166829332-s2.0-8505674118130783404PMC6367879
+
+[16] 16KristensenM. B.HelsO.MorbergC.MarvingJ.BügelS.TetensI.Pork meat increases iron absorption from a 5-day fully controlled diet when compared to a vegetarian diet with similar vitamin C and phytic acid contentBritish Journal of Nutrition2005941788310.1079/bjn200514172-s2.0-2544449066016115336
+
+[17] 17HallbergL.Rossander-HulténL.Iron requirements in menstruating womenThe American Journal of Clinical Nutrition19915461047105810.1093/ajcn/54.6.10472-s2.0-00257903811957820
+
+[18] 18Institute of MedicineDietary Reference Intakes for Vitamin A, Vitamin K, Arsenic, Boron, Chromium, Copper; Iodine, Iron, Manganese, Molybdenum, Nickel, Silicon, Vanadium, and Zinc2001Washington, DC, USANational Academic Press25057538
+
+[19] 19Nordic Council of MinistersNordic Nutrition Recommendations 2012: Integrating Nutrition and Physical Activity2019Copenhagen, DenmarkNordic Council of Ministers
+
+[20] 20European Food Safety Authority (EFSA)Scientific opinion on dietary reference values for iron. EFSA panel on dietetic products, nutrition and allergiesEFSA Journal20151310p. 425410.2903/j.efsa.2015.4185PMC1315160842109813
+
+[21] 21The National Food InstituteDietary Habits in Denmark 2011–2013 Main Results2015Kongens Lyngby, DenmarkThe National Food Institute, Danish Technical Universityhttp://www.food.dtu.dk
+
+[22] 22Department Of Agriculture Agricultural Research ServiceU.S.What we eat in america2015https://www.ars.usda.gov/ARSUserFiles/80400530/pdf/1516/Table_1_NIN_GEN_15.pdf
+
+[23] 23FagtS.MatthiessenJ.Biltoft-JensenA.How much meat do the danes consume?–data from statistics and nutrition surveys (Hvor meget kød spiser danskerne?–data fra statistikker og kostundersøgelser)2018Kongens Lyngby, DenmarkDanish Technical university
+
+[24] 24MilmanN. T.Dietary iron intake in women of reproductive age in Europe: a review of 49 studies from 29 countries in the period 1993–2015Journal of Nutrition and Metabolism2019201913763130610.1155/2019/76313062-s2.0-85068137281PMC659537831312532
+
+[25] 25HyttenF. E.CheyneG. A.KlopperA. I.Iron loss at menstruationBJOG: An International Journal of Obstetrics and Gynaecology196471225525910.1111/j.1471-0528.1964.tb04275.x2-s2.0-8498179339714138388
+
+[26] 26MilmanN.Iron and pregnancy-a delicate balanceAnnals of Hematology200685955956510.1007/s00277-006-0108-22-s2.0-3374781295716691399
+
+[27] 27DasaF.AberaT.Factors affecting iron absorption and mitigation mechanisms: a reviewInternational Journal of Agricultural Science and Food Technology201841243010.17352/2455-815x.000033
+
+[28] 28SharpP. A.Intestinal iron absorption: regulation by dietary & systemic factorsInternational Journal for Vitamin and Nutrition Research2010804523124210.1024/0300-9831/a0000292-s2.0-7995378199421462105
+
+[29] 29ConradM. E.UmbreitJ. N.Pathways of iron absorptionBlood Cells, Molecules, and Diseases200229333635510.1006/bcmd.2002.05642-s2.0-004270420112547224

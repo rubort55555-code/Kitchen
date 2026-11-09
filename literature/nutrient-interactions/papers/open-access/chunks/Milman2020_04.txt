@@ -1,0 +1,47 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 19: 3. Promoters
+============================================================
+
+## 3.1. Acids
+
+## 3.1.1. Gastric Acid
+
+The gastric secretions contain hydrochloric acid with a low pH, which promotes the reduction of ferric iron in the foods to ferrous iron. Gastric acid is one of the most important luminal factors being mandatory for an optimal nonheme iron absorption. In persons with histamine-fast achlorhydria, adding hydrochloric acid to a solution of ferric chloride increased iron absorption more than fourfold, but had no effect on heme iron absorption [33]. Conversely, inhibition of gastric acid production by histamine H2-receptor blockers caused a marked decrease in iron absorption [34]. Administration of an antacid in association with a meal likewise reduced iron absorption significantly [34] and patients with achlorhydria often develop iron deficiency [35].
+
+## 3.1.2. Organic Acids
+
+Ascorbic acid = vitamin C is a potent reducing and antioxidant agent, found in fruits and vegetables [36]. Among the organic acids, ascorbic acid possesses the most pronounced enhancing effect on nonheme iron absorption [37–39]. Ascorbic acid forms a soluble chelate with ferric iron, which prevents the formation of insoluble and unabsorbable iron compounds and it is assumed that ascorbic acid facilitates the reduction of ferric to ferrous iron [40]. In contrast, an in vitro study on the human epithelial Caco-2 cell line showed that ascorbate increased apical ferric iron uptake in a concentration-dependent manner with a significant difference between iron uptake and iron reduction; ascorbate enhanced the uptake of ferric chloride iron through the formation of a Fe3+-ascorbate complex [41]. Therefore, the mechanisms of the enhancing effect of ascorbic acid on iron uptake are still not fully clarified.
+
+Addition of 15 mg ascorbic acid, which is commonly found in vegetables, improved the geometric mean nonheme iron absorption from a basic rice meal with 98% [42]. The effects of the chemical composition of fruit juices and fruits on the absorption of iron from a basic rice meal were examined in 234 women, using the erythrocyte utilization of the double isotope radioactive iron method. The corrected geometric mean iron absorptions with different fruit juices were closely correlated with the ascorbic acid contents of the juices [43], and there was a close correlation between iron absorption from various fruits and their ascorbic acid content [42].
+
+Adding ascorbic acid to a test meal with a molar ratio of ascorbic acid : iron of 1.6 : 1 significantly increased iron absorption [43], and adding ascorbic acid to a test meal with a molar ratio ascorbic acid : iron of 4 : 1 increased nonheme iron uptake with 185% [44].
+
+The facilitating effect of ascorbic acid on iron absorption from a complete diet is less pronounced than that from single-test-meal studies [45]. This may explain why several studies did not show a significant effect on iron status after prolonged supplementation with ascorbic acid [46]. However, in the complete diet study, there was still a significant correlation between the intake of ascorbic acid and iron uptake [45]. Probably, if the daily diet contains adequate amounts of heme iron and meat factors from animal meat, which are strong promoters of iron uptake, the enhancing effect of ascorbic acid may hardly be discernable.
+
+The European Food Safety Authority has reviewed the association between ascorbic acid and iron uptake in 2010 and 2014 and concluded that “vitamin C contributes to increasing nonheme iron absorption” [47, 48].
+
+## 3.1.3. Citric Acid, Malic Acid, and Tartaric Acid
+
+Citric acid, malic acid, and tartaric acid are present in many berries, fruits, and vegetables. Citric acid seems to have a promoting effect on nonheme iron absorption, possibly through the reduction of ferric to ferrous iron. Although citric acid is found in fruits of which the majority also contain ascorbic acid, studies indicate that citric acid per se stimulates iron absorption [42, 43]. However, one human single-test-meal study showed that adding citric acid to the meal decreased iron uptake [38].
+
+The results concerning malic acid are also controversial. One study showed that adding malic acid to a rice meal significantly increased iron uptake [42] while a subsequent study from the same group found an inhibitory effect of fruits with high malic acid content [39].
+
+Tartaric acid from citrus fruits and wine grapes appears to have a moderate stimulatory effect on nonheme iron absorption [42].
+
+## 3.1.4. Lactic Acid
+
+Lactic acid is produced by fermentation of carbohydrates by cultures of lactic acid bacteria (mainly Lactobacillus species and some Streptococcus species). Lactic acid fermentation of specific food items increases the bioavailability of iron [49].
+
+In lactic acid fermented milk products, lactic acid is produced from lactose and the fermentation process has as a lowering effect on pH in all kinds of foods [50]. Galan et al. [51] measured iron absorption from a typical French meal and from the same meal after the addition of a glass of skimmed milk or plain yogurt. Iron absorption was similar in the three meals, about 2.1% [51].
+
+In women consuming a typical plant-based, phytate-rich Mexican meal once daily, the addition of 250 ml skimmed milk or 150 g yogurt to the meal for 13 days did not change iron uptake compared to the same meal without milk products; uptake was also similar in the diet with milk and the diet with yogurt [52]. Under real-life conditions, a moderate intake of dairy products probably has no significant effect on iron absorption [51, 52].
+
+The lactic acid fermented cabbage sauerkraut has a high lactic acid content and an enhancing effect on iron absorption compared to nonfermented vegetables [42].
+
+Lactic acid is an effective promoter of nonheme iron absorption, both by itself and in lactic acid-containing gruels made from maize and sorghum mask for beer production [53]; lactic acid enhanced iron absorption both in gruels and in the final brews [53].

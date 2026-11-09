@@ -1,0 +1,43 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 8 из 19: 4. Inhibitors (часть 2)
+============================================================
+
+Lactic acid fermentation causes a marked reduction in the phytate content of cereal flours [57] and lactic acid sourdough fermentation is more efficient than yeast fermentation in reducing the phytate content in whole-grain wheat bread [58]. Reduction of the phytate content has an enhancing effect on iron absorption [42, 96–101].
+
+Lactic acid fermented oat gruel increased nonheme iron absorption significantly compared with a nonfermented gruel, due to the reduction in phytate content [59]. Further details of the interactions between lactic acid fermentation, phytate, and phytase are given in the above section on lactic acid.
+
+## 4.5. Polyphenols
+
+Polyphenols are widely present in the human diet as components of fruits, berries, vegetables, spices, pulses, and whole grains, and they are especially high in tea, coffee, cocoa, red wine, and some herb teas [102, 103].
+
+Phenolic compounds (phenolic monomers, polyphenols, e.g., tannic acid and tannins) inhibit iron uptake by a complex formation of chelates with iron in the gastrointestinal lumen [104, 105], making the iron less available for absorption [42, 98, 99, 106–109]. The inhibitory effect of polyphenols on iron uptake [42, 99, 100, 104–109] is dose-dependent [107–109].
+
+Population studies of healthy Danish subjects (nonblood donors) showed significant negative correlations between body iron status (serum ferritin) and coffee plus tea consumption in men [71] but not in women [71].
+
+A cup of tea reduced iron absorption from a test meal by 64% and a cup of coffee by 39% [107]. In patients with haemochromatosis on maintenance phlebotomy treatment, the content of polyphenols in one cup of black tea consumed with each meal has been shown to inhibit iron uptake and prolong the phlebotomy intervals [110]. Another study reported that beverages containing 20–50 mg total polyphenols per serving reduced iron absorption from a bread meal by 50–70%, whereas beverages containing 100–400 mg total polyphenols per serving reduced absorption by 60–90%. The inhibition by black tea ranged from 79 to 94% [109]. Probably due to its content of polyphenols, the widely used spice, chili, significantly inhibits iron absorption from a test meal [111].
+
+However, the inhibitory effect of polyphenols on iron absorption can be counteracted and abolished by adequate doses of ascorbic acid added to the meal [98], suggesting that ascorbic acid has a higher affinity to ferric iron than polyphenols.
+
+Tannins are polyphenolic compounds that are found in many fruits, berries, and legumes. Principal dietary sources of tannins are pomegranate juice, tea, coffee, dark chocolate, red wine grapes, and red wine, especially red wine, which has been aged in oak barrels [102].
+
+Tannic acid and tannins are potent inhibitors of iron absorption. Adding tannic acid to a vegetable meal inhibited iron absorption in a dose-dependent manner [42]; 5 mg tannic acid in a meal inhibited absorption by 20% and 100 mg by 88% [108].
+
+## 4.6. Soya Bean Protein
+
+Soya beans are the largest global protein crop and the most efficient source of plant protein per hectare cultured area. Soya beans are used to make a variety of vegetarian foods such as soya milk, tofu, and edamame, as well as miso, tempeh, and natto from fermented soya beans. Most of the soya bean crops are processed into soya bean flour and soya bean oil, and soya bean products are used worldwide as a protein-rich nutrient [110]. The iron content in soya beans shows considerable variation. Some beans can be rich in iron and contain as much as 15.7 mg/100 g [113], while other beans have a lower iron content varying from 5.1 to 4.0 mg/100 g [114, 115].
+
+Most of the iron is in the form of organic plant ferritin iron, which by itself has a reasonably good bioavailability [31, 32]. However, nongenetically modified soya beans are also rich in phytic acid, which inhibit iron absorption [99], and in addition, they have a low intrinsic content of phytase [55]. Removing the phytates from soya bean flour increased iron absorption markedly, but absorption was still significantly lower than from the egg white control meal, suggesting that other intrinsic factors in the flour inhibit iron uptake [99]. Moreover, another study showed that different kinds of processed soya bean proteins per se appear to impair iron uptake [116]. In humans, the unmodified soya bean protein isolate markedly inhibited iron absorption and there are two major inhibitors of iron absorption in soya bean protein isolates, phytic acid and a protein-related moiety contained in the conglycinin fraction [117]. In contrast, another study [38] found that processed soya bean flour added to a test meal increased iron absorption significantly—which the authors presumed could be explained by the high iron content in the flour [38].
+
+Soya beans are rich in calcium, the content varying from 150 to 277 mg/100 g [113, 115] compared to 126 mg/100 g in partly skimmed milk [113, 115]. The calcium content can also contribute to a decrease in iron absorption (see Section 4.9).
+
+In conclusion, the iron contained in unprocessed soya beans is poorly absorbed, but the bioavailability may be increased by specific processing methods, e.g., removing part of the phytate content [100, 116].
+
+## 4.7. Milk Proteins
+
+Bovine milk contains almost no iron [113, 115]. From a semisynthetic meal of low iron bioavailability (mean absorption 1.4%) containing ovalbumin as the protein source, substitution of the ovalbumin protein with animal meat protein resulted in a significant increase in iron absorption [62]. However, when the ovalbumin was substituted with protein from bovine milk and cheese, there was no increase in iron uptake [62], indicating that milk proteins have an inhibitory effect on iron absorption. In a subsequent study, the bovine milk proteins, casein and whey, were also shown to inhibit iron absorption [118].

@@ -1,0 +1,41 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 5 из 19: 3. Promoters (часть 2)
+============================================================
+
+In an in vitro study using Caco-2 cells, lactic acid fermentation of maize products as well as the addition of small amounts of lactic acid to unfermented maize products improved iron bioavailability [54]. Nongenetically modified maize contains phytate but has a low intrinsic content of phytase [55], so the enhancing effect of lactic acid is hardly due to the activation of intrinsic phytase.
+
+Another study combining in vitro Caco-2 cells and an in vivo mouse model showed that lactic acid fermentation of bread enhanced iron absorption both in vitro and in vivo [56].
+
+Lactic acid fermentation of cereal flours [57] and whole-grain wheat bread [58] reduces the phytate content between 47 and 100% [57], depending on the phytase content of the specific grain [57]. A lactic acid fermented, phytate-rich, oat gruel increased nonheme iron absorption significantly, compared with a nonfermented gruel [59].
+
+Lactic acid sourdough fermentation was more efficient than yeast fermentation in reducing the phytate content in whole-grain wheat bread, 62% versus 38% reduction, respectively. Furthermore, lactic acid bacteria present in sourdough induce acidification, leading to increased magnesium and probably also iron solubility [58].
+
+Lactic acid fermentation can reduce the phytate content in foods in two ways: some species of lactic acid bacteria by themselves produce phytase [60], and in addition, the acid fermentation process can activate the intrinsic but inactive phytase in the cereals [57].
+
+Altogether, there is good evidence that lactic acid has an enhancing effect on nonheme iron absorption and that lactic acid fermentation of selected food items increases iron uptake both directly and indirectly in cereal products by reducing the content of phytate.
+
+## 3.1.5. Meat Factors
+
+Meat factors are present in meat from mammals, birds, and fish. It has been recognized for many years that the fractional iron absorption, i.e., percent iron absorbed of the total iron content, is significantly higher from animal foods than from vegetable foods [38, 61].
+
+Cook and Monsen [62] studied the effects of different proteins of animal origin on iron uptake in humans. In a semisynthetic meal, substituting beef, lamb, pork, chicken, liver, and fish for egg ovalbumin resulted in a twofold to fourfold increase in iron absorption [62]. Pork meat increased iron absorption significantly from a 5-day controlled diet, when compared to a vegetarian diet with similar vitamin C and phytic acid content, clearly demonstrating the enhancing effect of the meat factors [16].
+
+Hurrell et al. [63] tried to characterize the meat factors. Freeze-dried beef and chicken muscle increased nonheme iron absorption by 180% and 100%, respectively, relative to ovalbumin. The enhancing effect of muscle tissue on iron absorption was protein and/or peptide related, but other factors might play a role [63].
+
+## 3.1.6. Heme Iron
+
+Heme iron is present in haemoglobin in the red blood cells and in myoglobin in the muscle cells. The metallo-protoporphyrin heme contains one ferrous iron atom. Pure heme iron, i.e., heme without its protein (globin) moiety, is poorly absorbed, probably because it forms macromolecular polymers [64]. The absorption mechanisms of heme are not fully clarified; it appears that heme is taken up by the enterocyte as an intact molecule and subsequently degraded by the enzyme heme oxygenase, thereby releasing the iron [30].
+
+Compared to nonheme iron, the ferrous iron incorporated in the heme-globin molecule is much more easily absorbed, and heme in association with its globin moiety can therefore be considered a strong “facilitator” of iron uptake. Even if heme iron constitutes only a smaller part of the total iron content in the meal, the fractional absorption is fourfold to sixfold higher [65–68]. Dietary iron is predominantly nonheme iron with about 10–15% in the form of heme iron in diets containing animal meat. Heme is highly bioavailable, about 20–30% of heme iron being absorbed [28]. Absorption of nonheme iron is more variable and significantly affected by promoters/enhancers of iron uptake in the diet with 1–10% of nonheme iron being absorbed [28]. Heme iron is therefore the “super iron” for healthy subjects and the “poisonous iron” for persons with haemochromatosis.
+
+## 3.1.7. Alcohol
+
+The influence of alcohol (ethanol) on body iron status seems to be complex. It has for a long time been recognized that regular and/or excessive consumption of alcohol predisposes to iron overload [69]. In population studies of normal subjects, there is a significant association between alcohol intake and the iron status marker serum ferritin, in both men and women. An increased alcohol intake is associated with an increase in ferritin and body iron content [70–72]. In patients with HFE-haemochromatosis, excessive alcohol consumption accentuates the biochemical and clinical disease expression and therefore the risk of liver cirrhosis and liver cancer [73]. Toxicity of alcohol in combination with iron accumulation in the liver may have deleterious effects on inflammation, fibrogenesis, and carcinogenesis [73].
+
+In one single-dose study, there was no effect of alcohol on the absorption of ferrous ascorbate and haemoglobin iron [69], but a significant enhancement of absorption of ferric chloride. This effect could be due to the alcohol-induced stimulation of gastric acid production [69]. Another single-dose study showed that the acute ingestion of ethanol did not influence the absorption of inorganic iron, while it diminished the absorption of heme iron [74].

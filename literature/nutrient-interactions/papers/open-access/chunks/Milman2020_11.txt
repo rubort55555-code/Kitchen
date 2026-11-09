@@ -1,0 +1,29 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 11 из 19: 5. Discussion
+============================================================
+
+In human iron metabolism, the focus has for many years been on iron deficiency, which still is frequent in certain parts of the populations all over the world, even in the Western countries [141], and a search on the Internet reveals a tremendous amount of information about the prevention and treatment of iron deficiency, which also includes a large number of nutritional and dietary advices, food recipes, and cookbooks.
+
+In the last decades, the advances in genetics and molecular biology have brought much new information about the nature and prevalence of iron overload disorders, including the different forms of genetic haemochromatosis, which is emerging as a significant health concern among populations in Western countries [4–7, 9, 10]. Lifestyle changes have introduced new forms of iron overload, such as the metabolic syndrome with fatty liver and/or dysmetabolic iron overload syndrome [142] or other liver diseases with iron overload due to impaired hepcidin expression and low serum hepcidin levels [143].
+
+So far, the interest for dietary intervention in haemochromatosis has been modest. Basically, patients with haemochromatosis are advised a healthy, balanced diet and to avoid iron-fortified food items and vitamin-mineral supplements containing iron. However, during the recent years, there appears to be an increasing interest for the effect of dietary intervention, from both treaters and patients. A number of cookbooks with dietary recipes for haemochromatosis patients [144, 145] have been published, but in the evaluation and treatment of these patients, at least in the Danish healthcare system, nutritional advices/recommendations for dietary modulations by a nutritionist/dietician are not routinely implemented.
+
+According to Moretti et al. [3], restricting the absorption of dietary iron might reduce the annual amount of blood, which has to be removed by 0.5–1.5 L, depending on the penetrance of the disorder and the degree of dietary intervention.
+
+This conclusion is supported by a study of extrinsic factors influencing the expressivity (serum ferritin and serum transferrin saturation levels) of the HFE-variant phenotypes in Danish men. The expressivity was enhanced by alcohol and meat consumption and decreased by milk and egg consumption as well as the official donation of blood in blood banks [146].
+
+The Danish Haemochromatosis Association [147] has performed a small dietary survey among the members, which revealed that almost all patients are omnivorous, consuming mammalian and avian meat several times a week, and most of them taking alcoholic beverages with/without meals daily or several times a week [148]. Only few patients were offered dietary intervention. After consulting a dietician, a few have converted to a predominantly vegetarian diet, which has had a clear reducing impact on the rate of iron accumulation (assessed by the time-related increase in serum ferritin) according to the patients' own statements (Milman NT, personal communication). Some patients with a relatively high daily alcohol consumption who abstained from alcohol reported a marked decrease in the rate of iron accumulation (Milman NT, personal communication).
+
+Almost all nutritional papers and cookbooks state that oxalic acid/oxalates are strong inhibitors of iron absorption although the documentation is controversial [91, 92]. The latest human study from 2008 found no effect of oxalate on iron absorption [93], so probably the effect of oxalic acid/oxalates on iron uptake has been exaggerated or misinterpreted and nutritional recommendations concerning oxalic acid/oxalate should be revised.
+
+There is also controversy concerning the effect of turmeric/curcumin, which may be both an inhibitor and/or promoter of iron absorption [111, 135–140]. Some authors claim that it acts as an iron chelator—but at the same time, it reduces the expression of hepcidin; further studies are necessary to clarify which of these two effects are prevailing.
+
+A diet designed for persons with iron overload due to excessive intestinal iron absorption should contain a minimum of nutrients and/or compounds with a high iron content, which at the same time contribute to increase iron absorption. The intake of mammalian and avian meat protein (beef, pork, and poultry) containing nonheme and heme iron plus meat factors should be restricted and/or partly substituted by fish meat, which has a lower content of both nonheme and heme iron. The intake of alcohol should be low. Ascorbic acid supplements and fruits and juices rich in ascorbic acid and other organic acids, which may increase iron absorption, should be consumed between the main meals [149]. Lactic acid fermented foods (except milk products) should be reduced or avoided [42, 49, 51].
+
+The diet should be rich in nutrients and compounds that decrease iron absorption, especially the strong inhibitors phytates in cereals and polyphenols in plants and teas. Fluid intakes to the main meals should preferably be in the form of tea, milk, or water—not alcoholic drinks. Regular tea drinking at the main meals significantly decreases the rate of iron accumulation and the number of phlebotomies in the maintenance phase [110].

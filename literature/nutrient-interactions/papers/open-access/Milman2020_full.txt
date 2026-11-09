@@ -1,0 +1,590 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+### Abstract
+
+To provide an overview of nutrients and compounds, which influence human intestinal iron absorption, thereby making a platform for elaboration of dietary recommendations that can reduce iron uptake in patients with genetic haemochromatosis.
+
+Review. Setting. A literature search in PubMed and Google Scholar of papers dealing with iron absorption.
+
+The most important promoters of iron absorption in foods are ascorbic acid, lactic acid (produced by fermentation), meat factors in animal meat, the presence of heme iron, and alcohol which stimulate iron uptake by inhibition of hepcidin expression. The most important inhibitors of iron uptake are phytic acid/phytates, polyphenols/tannins, proteins from soya beans, milk, eggs, and calcium. Oxalic acid/oxalate does not seem to influence iron uptake. Turmeric/curcumin may stimulate iron uptake through a decrease in hepcidin expression and inhibit uptake by complex formation with iron, but the net effect has not been clarified.
+
+In haemochromatosis, iron absorption is enhanced due to a decreased expression of hepcidin. Dietary modifications that lower iron intake and decrease iron bioavailability may provide additional measures to reduce iron uptake from the foods. This could stimulate the patients' active cooperation in the treatment of their disorder and reduce the number of phlebotomies.
+
+### 1. Introduction
+
+Genetic haemochromatosis is characterized by an increased intestinal dietary iron uptake, of both nonheme and heme iron [1–3], which in the long term may lead to the gradual accumulation of excess iron in the body and clinical symptoms of iron overload. The various forms of genetic haemochromatosis are caused by mutations on different iron regulatory genes and are divided into two main groups: HFE-haemochromatosis being caused by mutations on the HFE-gene on chromosome 6 and non-HFE-haemochromatosis. Among people of northwestern European descent, including ethnic Danes, HFE-haemochromatosis is the most common variant [4, 5], while non-HFE-haemochromatosis occurs sporadically [6].
+
+Homozygosity for a particular gene means that the two alleles of the gene present on both homologous chromosomes are identical. Homozygosity for the HFE-C282Y mutation (C282Y/C282Y) is the leading cause of preclinical and clinical haemochromatosis in ethnic Danes, where more than 95% of the patients have this mutation [7]. Heterozygosity for a particular gene means that the two alleles of the gene present on both homologous chromosomes are not identical, i.e., the cells contain two different alleles, one mutant and one wild-type allele. Heterozygosity for the C282Y mutation (C282Y/wild type) is generally associated with a normal iron absorption pattern for both nonheme and heme iron [8]. Population studies have shown that among ethnic Danes, at least 0.4%, or one in 250, are C282Y homozygous equivalent to more than 20,000 people in Denmark, and more than 500,000 people are heterozygous (C282Y/wild type) or compound heterozygous (C282Y/H63D) for the HFE-mutations [9]. In comparison, the UK Biobank study examined more than 450,000 individuals of European descent and found a prevalence of C282Y homozygosity of 0.6%, or one in 167 persons [10].
+
+Hepcidin, which is produced in the liver, is considered to be the “master regulator” of body iron homeostasis, and one of its main tasks is to inactivate ferroportin, which regulates iron transport out of the cells (efflux) through the cell membrane in enterocytes, hepatocytes, and macrophages [11]. Normal HFE- and transferrin receptor-2 complexes on the cell membrane of the hepatocytes stimulate the production/activation of hepcidin, which subsequently inhibits intestinal iron uptake [11, 12]. In haemochromatosis, because of a defective HFE-complex, the production/activation of hepcidin is reduced, resulting in an increased intestinal iron uptake, which by and large is independent of the body's iron status. HFE-haemochromatosis and several other forms of genetic haemochromatosis are characterized by a low plasma concentration of hepcidin and a condition termed “hepcidin insufficiency” [11, 12].
+
+The standard treatment of HFE-haemochromatosis consists of repeated lettings of 400–500 ml of whole blood (phlebotomy) where excess body iron is gradually removed [4, 13]. Treatment is divided into the induction phase, where patients are phlebotomized weekly or every other week until serum ferritin has declined to 50–100 µg/L. In the following maintenance phase, phlebotomy is performed two to four times a year maintaining ferritin around 50–100 µg/L [4].
+
+In haemochromatosis, body iron overload is gradually increasing over time due to excessive absorption of iron from the food. Consuming a diet void of iron or with a low iron content will downregulate the body iron accumulation. Another important factor is the bioavailability of the iron in the food as well as the presence of promoters versus inhibitors of iron absorption. There exists only scarce literature concerning the significance of dietary iron intake in haemochromatosis, and the effect of dietary intervention has not been sufficiently investigated [3] However, the focus on population groups with specific dietary habits has provided us with valuable data showing that the content and the chemical form of iron in the diet have a definite influence on body iron status. Vegetarians/vegans have a low body iron status and many, especially women in the reproductive age, develop iron deficiency [14, 15]. In a cross-over study, total and fractional iron absorption was significantly lower in a vegetarian than in a meat-rich diet [16]. A Western-type vegetarian diet has a low bioavailability ranging from 5 to 12% [17].
+
+The purpose of this paper is to review the existing knowledge on the different nutrients and compounds that influence iron uptake from the diet.
+
+### 2. Methods
+
+This paper is based on literature searches in the PubMed and Google Scholar databases as well as literature references cited in published articles, review papers, and books on iron metabolism. Search terms included “iron absorption” and “iron absorption [AND] … name of the specific nutrient or compound”. Primarily, human studies on iron absorption have been included, but where necessary, some in vitro and animal studies have been included for the purpose of clarification.
+
+## 2.1. Dietary Iron Intake
+
+The composition of the diet concerning the content of iron and the content of inhibitors/promoters of iron absorption may have a significant influence on the development of clinically overt haemochromatosis.
+
+The recommended intake of dietary iron in healthy men in the Western World varies from 8 to 11 mg/day, depending on country-specific recommendations [18–20]. Danish men have a median dietary iron intake of 12.7 mg/day (10–90 percentile 8.3–18.0) [21], indicating that the majority have an intake which is above the recommended intake. In the USA, the “estimated” mean iron intake is even higher, 16.1 mg/day [22].
+
+In addition, men have a distinctly higher intake of meat [21, 23] and alcohol [21] than women, both factors, which increase iron uptake (see below) and the rate of body iron accumulation in men with genetic haemochromatosis.
+
+In healthy women of reproductive age, the recommended iron intake varies from 15 to18 mg/day [18–20]. A review of dietary iron intake in women in Europe has recently been published [24]. Danish women in the reproductive age have a median iron intake of 9.7 mg/day (5–95 percentile 5.6–14.5) [21, 24], indicating that all women have an intake below the recommended intake. In the USA, the “estimated” mean iron intake is higher, 12.3 mg/day [22].
+
+The majority of healthy women of reproductive age have an iron intake which is markedly below the recommended intake [24]. In addition, women of reproductive age have physiological iron losses by menstruations [25] and pregnancies [26], exerting an inhibitory effect on body iron accumulation in women with haemochromatosis, thereby delaying or preventing the onset of clinical disease.
+
+Although the HFE-mutations occur with the same frequencies in men and women, preclinical and clinical haemochromatosis is much more prevalent in men than in women and presents at a younger age in men compared to women [4]. This gender difference is partly explained by a higher dietary iron intake in men, combined with a higher intake of absorption promoters, e.g., meat and alcohol, compared to women.
+
+## 2.2. Different Forms of Dietary Iron
+
+An overview of the intestinal absorption of nonheme and heme iron is shown in Figure 1.
+
+Iron in the foods exists in two forms: (i) inorganic iron = nonheme iron consisting of mostly ferric iron (Fe3+) and some ferrous iron (Fe2+) and (ii) organic iron consisting of heme iron from animals and ferritin iron from animals and plants. Most iron in the foods consists of inorganic ferric iron, which is chemically relatively inactive. Ferric iron must be reduced to ferrous iron either by gastric acid pH, reducing components in the meal, or by the ferric reductase enzyme duodenal cytochrome b, which catalyzes the reduction of Fe³⁺ to Fe2⁺, before the ferrous iron can be taken up in the enterocytes by the protein dimetal transporter-1 (DMT-1) pathway [28]. Ferric iron may be taken up by the mucin-beta3-integrin-mobilferrin pathway (IMP) [29], but the relative physiological and nutritional importance of the IMP compared with the DMT-1 pathway in the absorption of iron in humans is not known.
+
+Heme iron, which is ferrous iron present in haemoglobin in the red blood cells and myoglobin in the myocytes, is absorbed within the intact protoporphyrin molecule threefold to fourfold more efficiently than inorganic ferric iron. Heme iron absorption is relatively independent of the effects of various promoters/inhibitors of iron absorption in the food matrix (except for calcium, see below) [30].
+
+The ferric iron contained in the ferritin molecule, i.e., “ferritin iron” from animal and plant foods, is released from the ferritin shell by the gastric acid pH as well as by cooking. It enters the common nonheme iron pool in the meal and is absorbed as other nonheme iron compounds [31, 32].
+
+## 2.3. Promoters and Inhibitors of Iron Absorption
+
+Table 1 gives an overview of the principal known promoters and inhibitors of food iron absorption. When giving dietary recommendations to patients with haemochromatosis, it is essential to emphasize that promoters and inhibitors of iron uptake must be ingested in the same meal as the food iron, in order to exert their effects.
+
+### 3. Promoters
+
+## 3.1. Acids
+
+## 3.1.1. Gastric Acid
+
+The gastric secretions contain hydrochloric acid with a low pH, which promotes the reduction of ferric iron in the foods to ferrous iron. Gastric acid is one of the most important luminal factors being mandatory for an optimal nonheme iron absorption. In persons with histamine-fast achlorhydria, adding hydrochloric acid to a solution of ferric chloride increased iron absorption more than fourfold, but had no effect on heme iron absorption [33]. Conversely, inhibition of gastric acid production by histamine H2-receptor blockers caused a marked decrease in iron absorption [34]. Administration of an antacid in association with a meal likewise reduced iron absorption significantly [34] and patients with achlorhydria often develop iron deficiency [35].
+
+## 3.1.2. Organic Acids
+
+Ascorbic acid = vitamin C is a potent reducing and antioxidant agent, found in fruits and vegetables [36]. Among the organic acids, ascorbic acid possesses the most pronounced enhancing effect on nonheme iron absorption [37–39]. Ascorbic acid forms a soluble chelate with ferric iron, which prevents the formation of insoluble and unabsorbable iron compounds and it is assumed that ascorbic acid facilitates the reduction of ferric to ferrous iron [40]. In contrast, an in vitro study on the human epithelial Caco-2 cell line showed that ascorbate increased apical ferric iron uptake in a concentration-dependent manner with a significant difference between iron uptake and iron reduction; ascorbate enhanced the uptake of ferric chloride iron through the formation of a Fe3+-ascorbate complex [41]. Therefore, the mechanisms of the enhancing effect of ascorbic acid on iron uptake are still not fully clarified.
+
+Addition of 15 mg ascorbic acid, which is commonly found in vegetables, improved the geometric mean nonheme iron absorption from a basic rice meal with 98% [42]. The effects of the chemical composition of fruit juices and fruits on the absorption of iron from a basic rice meal were examined in 234 women, using the erythrocyte utilization of the double isotope radioactive iron method. The corrected geometric mean iron absorptions with different fruit juices were closely correlated with the ascorbic acid contents of the juices [43], and there was a close correlation between iron absorption from various fruits and their ascorbic acid content [42].
+
+Adding ascorbic acid to a test meal with a molar ratio of ascorbic acid : iron of 1.6 : 1 significantly increased iron absorption [43], and adding ascorbic acid to a test meal with a molar ratio ascorbic acid : iron of 4 : 1 increased nonheme iron uptake with 185% [44].
+
+The facilitating effect of ascorbic acid on iron absorption from a complete diet is less pronounced than that from single-test-meal studies [45]. This may explain why several studies did not show a significant effect on iron status after prolonged supplementation with ascorbic acid [46]. However, in the complete diet study, there was still a significant correlation between the intake of ascorbic acid and iron uptake [45]. Probably, if the daily diet contains adequate amounts of heme iron and meat factors from animal meat, which are strong promoters of iron uptake, the enhancing effect of ascorbic acid may hardly be discernable.
+
+The European Food Safety Authority has reviewed the association between ascorbic acid and iron uptake in 2010 and 2014 and concluded that “vitamin C contributes to increasing nonheme iron absorption” [47, 48].
+
+## 3.1.3. Citric Acid, Malic Acid, and Tartaric Acid
+
+Citric acid, malic acid, and tartaric acid are present in many berries, fruits, and vegetables. Citric acid seems to have a promoting effect on nonheme iron absorption, possibly through the reduction of ferric to ferrous iron. Although citric acid is found in fruits of which the majority also contain ascorbic acid, studies indicate that citric acid per se stimulates iron absorption [42, 43]. However, one human single-test-meal study showed that adding citric acid to the meal decreased iron uptake [38].
+
+The results concerning malic acid are also controversial. One study showed that adding malic acid to a rice meal significantly increased iron uptake [42] while a subsequent study from the same group found an inhibitory effect of fruits with high malic acid content [39].
+
+Tartaric acid from citrus fruits and wine grapes appears to have a moderate stimulatory effect on nonheme iron absorption [42].
+
+## 3.1.4. Lactic Acid
+
+Lactic acid is produced by fermentation of carbohydrates by cultures of lactic acid bacteria (mainly Lactobacillus species and some Streptococcus species). Lactic acid fermentation of specific food items increases the bioavailability of iron [49].
+
+In lactic acid fermented milk products, lactic acid is produced from lactose and the fermentation process has as a lowering effect on pH in all kinds of foods [50]. Galan et al. [51] measured iron absorption from a typical French meal and from the same meal after the addition of a glass of skimmed milk or plain yogurt. Iron absorption was similar in the three meals, about 2.1% [51].
+
+In women consuming a typical plant-based, phytate-rich Mexican meal once daily, the addition of 250 ml skimmed milk or 150 g yogurt to the meal for 13 days did not change iron uptake compared to the same meal without milk products; uptake was also similar in the diet with milk and the diet with yogurt [52]. Under real-life conditions, a moderate intake of dairy products probably has no significant effect on iron absorption [51, 52].
+
+The lactic acid fermented cabbage sauerkraut has a high lactic acid content and an enhancing effect on iron absorption compared to nonfermented vegetables [42].
+
+Lactic acid is an effective promoter of nonheme iron absorption, both by itself and in lactic acid-containing gruels made from maize and sorghum mask for beer production [53]; lactic acid enhanced iron absorption both in gruels and in the final brews [53].
+
+In an in vitro study using Caco-2 cells, lactic acid fermentation of maize products as well as the addition of small amounts of lactic acid to unfermented maize products improved iron bioavailability [54]. Nongenetically modified maize contains phytate but has a low intrinsic content of phytase [55], so the enhancing effect of lactic acid is hardly due to the activation of intrinsic phytase.
+
+Another study combining in vitro Caco-2 cells and an in vivo mouse model showed that lactic acid fermentation of bread enhanced iron absorption both in vitro and in vivo [56].
+
+Lactic acid fermentation of cereal flours [57] and whole-grain wheat bread [58] reduces the phytate content between 47 and 100% [57], depending on the phytase content of the specific grain [57]. A lactic acid fermented, phytate-rich, oat gruel increased nonheme iron absorption significantly, compared with a nonfermented gruel [59].
+
+Lactic acid sourdough fermentation was more efficient than yeast fermentation in reducing the phytate content in whole-grain wheat bread, 62% versus 38% reduction, respectively. Furthermore, lactic acid bacteria present in sourdough induce acidification, leading to increased magnesium and probably also iron solubility [58].
+
+Lactic acid fermentation can reduce the phytate content in foods in two ways: some species of lactic acid bacteria by themselves produce phytase [60], and in addition, the acid fermentation process can activate the intrinsic but inactive phytase in the cereals [57].
+
+Altogether, there is good evidence that lactic acid has an enhancing effect on nonheme iron absorption and that lactic acid fermentation of selected food items increases iron uptake both directly and indirectly in cereal products by reducing the content of phytate.
+
+## 3.1.5. Meat Factors
+
+Meat factors are present in meat from mammals, birds, and fish. It has been recognized for many years that the fractional iron absorption, i.e., percent iron absorbed of the total iron content, is significantly higher from animal foods than from vegetable foods [38, 61].
+
+Cook and Monsen [62] studied the effects of different proteins of animal origin on iron uptake in humans. In a semisynthetic meal, substituting beef, lamb, pork, chicken, liver, and fish for egg ovalbumin resulted in a twofold to fourfold increase in iron absorption [62]. Pork meat increased iron absorption significantly from a 5-day controlled diet, when compared to a vegetarian diet with similar vitamin C and phytic acid content, clearly demonstrating the enhancing effect of the meat factors [16].
+
+Hurrell et al. [63] tried to characterize the meat factors. Freeze-dried beef and chicken muscle increased nonheme iron absorption by 180% and 100%, respectively, relative to ovalbumin. The enhancing effect of muscle tissue on iron absorption was protein and/or peptide related, but other factors might play a role [63].
+
+## 3.1.6. Heme Iron
+
+Heme iron is present in haemoglobin in the red blood cells and in myoglobin in the muscle cells. The metallo-protoporphyrin heme contains one ferrous iron atom. Pure heme iron, i.e., heme without its protein (globin) moiety, is poorly absorbed, probably because it forms macromolecular polymers [64]. The absorption mechanisms of heme are not fully clarified; it appears that heme is taken up by the enterocyte as an intact molecule and subsequently degraded by the enzyme heme oxygenase, thereby releasing the iron [30].
+
+Compared to nonheme iron, the ferrous iron incorporated in the heme-globin molecule is much more easily absorbed, and heme in association with its globin moiety can therefore be considered a strong “facilitator” of iron uptake. Even if heme iron constitutes only a smaller part of the total iron content in the meal, the fractional absorption is fourfold to sixfold higher [65–68]. Dietary iron is predominantly nonheme iron with about 10–15% in the form of heme iron in diets containing animal meat. Heme is highly bioavailable, about 20–30% of heme iron being absorbed [28]. Absorption of nonheme iron is more variable and significantly affected by promoters/enhancers of iron uptake in the diet with 1–10% of nonheme iron being absorbed [28]. Heme iron is therefore the “super iron” for healthy subjects and the “poisonous iron” for persons with haemochromatosis.
+
+## 3.1.7. Alcohol
+
+The influence of alcohol (ethanol) on body iron status seems to be complex. It has for a long time been recognized that regular and/or excessive consumption of alcohol predisposes to iron overload [69]. In population studies of normal subjects, there is a significant association between alcohol intake and the iron status marker serum ferritin, in both men and women. An increased alcohol intake is associated with an increase in ferritin and body iron content [70–72]. In patients with HFE-haemochromatosis, excessive alcohol consumption accentuates the biochemical and clinical disease expression and therefore the risk of liver cirrhosis and liver cancer [73]. Toxicity of alcohol in combination with iron accumulation in the liver may have deleterious effects on inflammation, fibrogenesis, and carcinogenesis [73].
+
+In one single-dose study, there was no effect of alcohol on the absorption of ferrous ascorbate and haemoglobin iron [69], but a significant enhancement of absorption of ferric chloride. This effect could be due to the alcohol-induced stimulation of gastric acid production [69]. Another single-dose study showed that the acute ingestion of ethanol did not influence the absorption of inorganic iron, while it diminished the absorption of heme iron [74].
+
+However, the enhancing influence of alcohol on iron absorption may be indirect, relying on an inhibition of hepcidin synthesis in the liver. In patients with alcoholic liver disease, serum prohepcidin concentrations were significantly lower than in healthy subjects, and concentrations were most decreased in patients with the highest serum ferritin values. In an ethanol-fed mouse model, hepatic hepcidin-1 mRNA expression was significantly lower than that in controls. Prohepcidin was expressed in the cytoplasm of hepatocytes of mice liver tissue sections, and the expression decreased after ethanol loading [75].
+
+Other animal studies have confirmed these findings [76–78]. It appears that alcohol loading downregulates hepatic hepcidin expression and thereby leads to an increase in intestinal iron absorption. Both acute and chronic alcohol exposures suppress hepcidin expression in the liver [79].
+
+Maybe the “missing link” between alcohol consumption and increased iron absorption is predominantly the alcohol-induced inhibition of hepcidin expression and not as earlier presumed being due to effects on the absorptive processes in the intestine. However, patients with haemochromatosis already have a low hepcidin level and it has not yet been clarified whether alcohol will contribute to a further reduction of hepcidin.
+
+### 4. Inhibitors
+
+## 4.1. Gastric Acid Inhibitors
+
+There exist two types of gastric acid inhibitors, histamine H2-receptor antagonists, e.g., cimetidine, and proton pump inhibitors, e.g., lansoprazole. Both types of medication can effectively reduce the production of gastric acid [80, 81]. In a nested case-control study, among subjects without known risk factors for iron deficiency, the use of a gastric acid inhibitor for two years or more was associated with an increased risk of iron deficiency. The risk increased with increasing potency of acid inhibition and decreased after medication discontinuation [82].
+
+In patients with HFE-haemochromatosis, consecutive measurements of serum iron demonstrated a 50% decrease in the area under the curve (AUC) from a test meal after 7 days of proton pump inhibitor therapy, indicating decreased absorption of nonheme iron [83]. Furthermore, treatment of patients with genetic haemochromatosis with proton pump inhibitors caused a significant reduction in the volume of blood that had to be drawn annually, in order to maintain serum ferritin in therapeutic levels [83].
+
+A similar finding was observed in a retrospective analysis of patients with HFE-haemochromatosis, where treatment with proton pump inhibitors for two years or more significantly reduced the number of phlebotomies required to maintain serum ferritin levels below 100 μg/L [84]. These studies show that gastric acid inhibitors decrease iron absorption in both iron-depleted and iron-overloaded individuals.
+
+## 4.2. Antacids
+
+Antacids are used for immediate relief of gastroesophageal reflux of gastric acid giving unpleasant symptoms called pyrosis, cardialgia, or heartburn. Antacids are normally used on a demand basis, seldom for long-term treatment. Many preparations contain calcium carbonate and magnesium oxide, magnesium hydroxide, or magnesium trisilicate. If taken in close association with a meal, this kind of medicine can inhibit iron uptake from the food in three ways: (i) by neutralizing the gastric acid pH [33], (ii) by calcium-induced inhibition of iron absorption (see Section 4.9 and [85]), and (iii) by a possible inhibition of magnesium compounds on iron absorption [86, 87].
+
+## 4.3. Oxalic Acid-Oxalates
+
+Oxalic acid and oxalates are common in plant foods, and the largest amounts are found in rhubarb, spinach, mangold, and purslane [88]. Oxalic acid may be present as insoluble calcium or magnesium oxalate crystals or as soluble sodium or potassium oxalate. In humans, approximately 75% of all urinary tract stones are composed of calcium oxalate, and hyperoxaluria is a primary risk factor for urolithiasis [89].
+
+Oxalate is a well-known inhibitor of calcium absorption in humans due to the poor solubility of calcium oxalate [90]. It is a widespread perception among nutritionists/dieticians that oxalic acid is a strong inhibitor of iron absorption. This is stated (without evidence) in dietary publications and cookbooks (e.g., [91, 92]). It may rely on the fact that ferric oxalate is slightly soluble and ferrous oxalate is poorly soluble in water.
+
+Calcium oxalate appears to depress iron absorption in some circumstances—the addition of 1 g calcium oxalate to a cabbage meal was associated with a 39% depression in iron absorption [42]; this is surprising as calcium oxalate is almost insoluble and therefore should be chemically inert. However, there was no relationship between the oxalate content and iron absorption when vegetables that contained large amounts of oxalate were examined; iron absorption was poor from spinach and beetroot greens but good from beetroot [42]; these findings could be explained by the high polyphenol and calcium content in spinach, the high polyphenol content in beetroot greens, and the low polyphenol and high citric acid and ascorbic acid content in beetroot [42].
+
+The influence of oxalic acid/oxalate on iron absorption may depend on the chemical state of the oxalate in the food. Spinach is rich in oxalic acid/oxalate but also rich in calcium; if the oxalate exists in the form of calcium oxalate, then it should not be able to bind ferric iron in the food and therefore have a minor influence on iron absorption.
+
+In a test meal consisting of wheat bread rolls and kale with a low content of oxalic acid, the addition of soluble potassium oxalate to the meal did not have any negative influence on iron absorption [93]. Absorption from the test meal with bread rolls and spinach was lower than that from the meal with bread rolls and kale (without added potassium oxalate), possibly due to the higher content of polyphenols and calcium in the spinach meal compared to the kale meal [93]. Consequently, oxalic acid in plant foods does not inhibit iron absorption and does not contribute to the reported inhibitory effect of spinach on iron uptake [93].
+
+## 4.4. Phytic Acid-Phytates
+
+Phytic acid, the hexaphosphate of myo-inositol, is a bioactive compound widely distributed in plant foods [94]. Phytic acid has an affinity to form complexes with polyvalent cations including iron, in this way interfering with intestinal absorption. The main sources of phytate in the daily diet are cereals and legumes as well as oilseeds and nuts [94]. These foods are important in the human diet and represent approximately 40% of the caloric intake for humans in developed countries [95].
+
+Phytates are strong inhibitors of iron absorption in a dose-dependent manner [42, 96–100]. Furthermore, the inhibitory effect of phytates on iron absorption can be reversed by ascorbic acid and to a lesser degree by meat factors [97, 98], indicating that ascorbic acid has a higher affinity to ferric iron than phytate.
+
+The clinical impact of the phytate content in bran on iron absorption is evident. In vegetarians/vegans [14–17] and in young women, long-term daily intake of fiber-rich wheat bread with a high fraction of whole grain decreased body iron status (serum ferritin) [100].
+
+Lactic acid fermentation causes a marked reduction in the phytate content of cereal flours [57] and lactic acid sourdough fermentation is more efficient than yeast fermentation in reducing the phytate content in whole-grain wheat bread [58]. Reduction of the phytate content has an enhancing effect on iron absorption [42, 96–101].
+
+Lactic acid fermented oat gruel increased nonheme iron absorption significantly compared with a nonfermented gruel, due to the reduction in phytate content [59]. Further details of the interactions between lactic acid fermentation, phytate, and phytase are given in the above section on lactic acid.
+
+## 4.5. Polyphenols
+
+Polyphenols are widely present in the human diet as components of fruits, berries, vegetables, spices, pulses, and whole grains, and they are especially high in tea, coffee, cocoa, red wine, and some herb teas [102, 103].
+
+Phenolic compounds (phenolic monomers, polyphenols, e.g., tannic acid and tannins) inhibit iron uptake by a complex formation of chelates with iron in the gastrointestinal lumen [104, 105], making the iron less available for absorption [42, 98, 99, 106–109]. The inhibitory effect of polyphenols on iron uptake [42, 99, 100, 104–109] is dose-dependent [107–109].
+
+Population studies of healthy Danish subjects (nonblood donors) showed significant negative correlations between body iron status (serum ferritin) and coffee plus tea consumption in men [71] but not in women [71].
+
+A cup of tea reduced iron absorption from a test meal by 64% and a cup of coffee by 39% [107]. In patients with haemochromatosis on maintenance phlebotomy treatment, the content of polyphenols in one cup of black tea consumed with each meal has been shown to inhibit iron uptake and prolong the phlebotomy intervals [110]. Another study reported that beverages containing 20–50 mg total polyphenols per serving reduced iron absorption from a bread meal by 50–70%, whereas beverages containing 100–400 mg total polyphenols per serving reduced absorption by 60–90%. The inhibition by black tea ranged from 79 to 94% [109]. Probably due to its content of polyphenols, the widely used spice, chili, significantly inhibits iron absorption from a test meal [111].
+
+However, the inhibitory effect of polyphenols on iron absorption can be counteracted and abolished by adequate doses of ascorbic acid added to the meal [98], suggesting that ascorbic acid has a higher affinity to ferric iron than polyphenols.
+
+Tannins are polyphenolic compounds that are found in many fruits, berries, and legumes. Principal dietary sources of tannins are pomegranate juice, tea, coffee, dark chocolate, red wine grapes, and red wine, especially red wine, which has been aged in oak barrels [102].
+
+Tannic acid and tannins are potent inhibitors of iron absorption. Adding tannic acid to a vegetable meal inhibited iron absorption in a dose-dependent manner [42]; 5 mg tannic acid in a meal inhibited absorption by 20% and 100 mg by 88% [108].
+
+## 4.6. Soya Bean Protein
+
+Soya beans are the largest global protein crop and the most efficient source of plant protein per hectare cultured area. Soya beans are used to make a variety of vegetarian foods such as soya milk, tofu, and edamame, as well as miso, tempeh, and natto from fermented soya beans. Most of the soya bean crops are processed into soya bean flour and soya bean oil, and soya bean products are used worldwide as a protein-rich nutrient [110]. The iron content in soya beans shows considerable variation. Some beans can be rich in iron and contain as much as 15.7 mg/100 g [113], while other beans have a lower iron content varying from 5.1 to 4.0 mg/100 g [114, 115].
+
+Most of the iron is in the form of organic plant ferritin iron, which by itself has a reasonably good bioavailability [31, 32]. However, nongenetically modified soya beans are also rich in phytic acid, which inhibit iron absorption [99], and in addition, they have a low intrinsic content of phytase [55]. Removing the phytates from soya bean flour increased iron absorption markedly, but absorption was still significantly lower than from the egg white control meal, suggesting that other intrinsic factors in the flour inhibit iron uptake [99]. Moreover, another study showed that different kinds of processed soya bean proteins per se appear to impair iron uptake [116]. In humans, the unmodified soya bean protein isolate markedly inhibited iron absorption and there are two major inhibitors of iron absorption in soya bean protein isolates, phytic acid and a protein-related moiety contained in the conglycinin fraction [117]. In contrast, another study [38] found that processed soya bean flour added to a test meal increased iron absorption significantly—which the authors presumed could be explained by the high iron content in the flour [38].
+
+Soya beans are rich in calcium, the content varying from 150 to 277 mg/100 g [113, 115] compared to 126 mg/100 g in partly skimmed milk [113, 115]. The calcium content can also contribute to a decrease in iron absorption (see Section 4.9).
+
+In conclusion, the iron contained in unprocessed soya beans is poorly absorbed, but the bioavailability may be increased by specific processing methods, e.g., removing part of the phytate content [100, 116].
+
+## 4.7. Milk Proteins
+
+Bovine milk contains almost no iron [113, 115]. From a semisynthetic meal of low iron bioavailability (mean absorption 1.4%) containing ovalbumin as the protein source, substitution of the ovalbumin protein with animal meat protein resulted in a significant increase in iron absorption [62]. However, when the ovalbumin was substituted with protein from bovine milk and cheese, there was no increase in iron uptake [62], indicating that milk proteins have an inhibitory effect on iron absorption. In a subsequent study, the bovine milk proteins, casein and whey, were also shown to inhibit iron absorption [118].
+
+Clusters of phosphoserine residues in cow milk caseins bind ferric iron with high affinity [119]. Caseins inhibit iron absorption in humans, but hydrolysis of whole caseins lessens this effect and can improve iron absorption [118]. Altogether, cow milk proteins have a negative effect on iron uptake, and in whole milk and milk products, this effect can be enhanced by the presence of calcium in the milk and cheese (see Section 4.9).
+
+However, the inhibitory effect of milk proteins and milk calcium on iron uptake, which has been shown in single-test-meal studies, cannot simply be interpolated into real-life dietary studies. A moderate intake of milk (one glass of skimmed milk or yogurt once daily) consumed with a typical standard meal had no measurable effect on iron absorption when compared with the reference meal without milk [51, 52]. Likewise, nonfat milk consumed with a cereal-based diet had no influence on iron absorption in young women with small body iron reserves [120].
+
+## 4.8. Egg Proteins
+
+In a semisynthetic meal containing ovalbumin as the protein source, i.e., with low iron bioavailability, the substitution of ovalbumin with whole egg protein did not change mean nonheme iron uptake, which remained low at about 1.4% [62].
+
+The absorption of nonheme iron from eggs in test meals was significantly lower when compared with the reference meal [121], and adding egg white to a test meal decreased nonheme iron uptake [122].
+
+In in vivo rat studies, egg yolk decreased iron uptake [121] and other rat studies confirmed that egg yolk protein and egg yolk phosvitin decreased the absorption of the divalent minerals iron, calcium, and magnesium [123].
+
+Almost all the iron in eggs is present in the yolk. The iron content in egg yolk varies from 2.7 to 5.9 mg/100 g [113, 115, 124]. Iron content in egg white is extremely low about 0.1 mg/100 g [113, 115, 124].
+
+Another mechanism for the poor iron bioavailability in eggs could be the formation of insoluble iron sulfides. Both egg yolk and egg white contain sulfur incorporated into sulfur proteins. When eggs are boiled for a long time, the yolk's surface and subsequently its whole interior turns green and black due to the formation of iron sulfide, when iron from the yolk reacts with hydrogen sulfide from the egg white. Iron sulfide is not water soluble, and the iron in these compounds is not available for absorption [125].
+
+Altogether, both egg yolk and egg white contain proteinaceous and other chemical compounds that decrease iron absorption [62, 121–123], and the iron in eggs has a poor bioavailability.
+
+## 4.9. Calcium
+
+The most calcium-rich nutrients are bovine milk and dairy foods produced from milk. Some green leafy vegetables such as spinach, broccoli, cabbage, okra, and some legumes like soya beans [113, 115, 126] also contain appreciable amounts of calcium.
+
+Calcium inhibits iron absorption in single-test-meal settings [127], and the inhibition includes both nonheme and heme iron. The effect is partly dose related, being more dependent on the total amount of calcium administered than the calcium : iron molar ratio. In single-test-meal studies, iron uptake was inhibited by calcium supplements and by dairy products; the effect was depending on the simultaneous presence of calcium and iron in the intestine and also present when calcium and iron were given together in the fasting state [128–131].
+
+However, the inhibitory effect of calcium on iron uptake demonstrated in single-test-meal studies is more complex to evaluate in daily-life dietary settings. A study in 6 European countries, comprising 1,604 adolescent girls and young women, demonstrated a significant negative association between dietary calcium intake, assessed by a three-day food record, and body iron status (serum ferritin) [132]. On the other hand, long-term intervention studies of calcium supplementation have failed to show any relevant reduction in body iron status (serum ferritin), even in women being at risk for low iron status; for review, see [127, 133].
+
+Calcium inhibits the absorption of heme and nonheme iron to the same extent, which suggests that calcium interferes with the transport of iron through the enterocyte, probably at a stage in the absorption process, which is common for both heme and nonheme iron transport [130]. There may be an adaptive intestinal response to long-term calcium supplementation, generating a “normalization” of the iron absorption process. This hypothesis is supported by an in vitro study of Caco-2 cells, where the addition of calcium decreased the ferroportin expression at the basolateral membrane, resulting in a decreased iron efflux and increased cellular iron retention. However, after a few hours, DMT-1 and ferroportin expression increased again, suggesting a rebound effect [134].
+
+## 4.10. Turmeric: Curcumin—Promoter or Inhibitor?
+
+Curcumin is the active substance in turmeric, which is widely used as a spice, especially in the composite spice, yellow curry powder, and curry paste. Many naturopathic doctors/nutritionists/dieticians consider curcumin to be of benefit for patients with iron overload and haemochromatosis [135].
+
+Curcumin contains polyphenolic compounds, which have antioxidative and anti-inflammatory properties [136]. Curcumin, a low-molecular-weight polyphenolic diketone, forms soluble iron complexes in aqueous solution [137], but the effect of curcumin on iron absorption is not clarified.
+
+Due to its high content of polyphenols, it could be anticipated that curcumin would inhibit iron uptake, and some have even suggested that curcumin has iron-chelating properties that impair iron absorption [138]. However, in test meal studies, using stable iron isotopes, turmeric had no influence on iron absorption, despite a high content of polyphenols [111]. In contrast, chili induced a decrease in iron absorption, even though it had a lower content of polyphenols [111].
+
+Regular ingestion of curcumin is recommended by many nutritionists being in favor of anti-inflammatory diets. However, from an iron absorption point of view, curcumin may in the long term have an indirect enhancing effect on iron uptake because curcumin inhibits the synthesis of hepcidin through inhibition of the signal transducer and activator of transcription 3 (STAT3) transduction pathway. This effect has been demonstrated both in mice [139] and in humans [140]. Although curcumin may be of benefit for patients with iron overload due to its antioxidant and anti-inflammatory properties, more studies are needed to clarify the final role of curcumin in human iron metabolism.
+
+### 5. Discussion
+
+In human iron metabolism, the focus has for many years been on iron deficiency, which still is frequent in certain parts of the populations all over the world, even in the Western countries [141], and a search on the Internet reveals a tremendous amount of information about the prevention and treatment of iron deficiency, which also includes a large number of nutritional and dietary advices, food recipes, and cookbooks.
+
+In the last decades, the advances in genetics and molecular biology have brought much new information about the nature and prevalence of iron overload disorders, including the different forms of genetic haemochromatosis, which is emerging as a significant health concern among populations in Western countries [4–7, 9, 10]. Lifestyle changes have introduced new forms of iron overload, such as the metabolic syndrome with fatty liver and/or dysmetabolic iron overload syndrome [142] or other liver diseases with iron overload due to impaired hepcidin expression and low serum hepcidin levels [143].
+
+So far, the interest for dietary intervention in haemochromatosis has been modest. Basically, patients with haemochromatosis are advised a healthy, balanced diet and to avoid iron-fortified food items and vitamin-mineral supplements containing iron. However, during the recent years, there appears to be an increasing interest for the effect of dietary intervention, from both treaters and patients. A number of cookbooks with dietary recipes for haemochromatosis patients [144, 145] have been published, but in the evaluation and treatment of these patients, at least in the Danish healthcare system, nutritional advices/recommendations for dietary modulations by a nutritionist/dietician are not routinely implemented.
+
+According to Moretti et al. [3], restricting the absorption of dietary iron might reduce the annual amount of blood, which has to be removed by 0.5–1.5 L, depending on the penetrance of the disorder and the degree of dietary intervention.
+
+This conclusion is supported by a study of extrinsic factors influencing the expressivity (serum ferritin and serum transferrin saturation levels) of the HFE-variant phenotypes in Danish men. The expressivity was enhanced by alcohol and meat consumption and decreased by milk and egg consumption as well as the official donation of blood in blood banks [146].
+
+The Danish Haemochromatosis Association [147] has performed a small dietary survey among the members, which revealed that almost all patients are omnivorous, consuming mammalian and avian meat several times a week, and most of them taking alcoholic beverages with/without meals daily or several times a week [148]. Only few patients were offered dietary intervention. After consulting a dietician, a few have converted to a predominantly vegetarian diet, which has had a clear reducing impact on the rate of iron accumulation (assessed by the time-related increase in serum ferritin) according to the patients' own statements (Milman NT, personal communication). Some patients with a relatively high daily alcohol consumption who abstained from alcohol reported a marked decrease in the rate of iron accumulation (Milman NT, personal communication).
+
+Almost all nutritional papers and cookbooks state that oxalic acid/oxalates are strong inhibitors of iron absorption although the documentation is controversial [91, 92]. The latest human study from 2008 found no effect of oxalate on iron absorption [93], so probably the effect of oxalic acid/oxalates on iron uptake has been exaggerated or misinterpreted and nutritional recommendations concerning oxalic acid/oxalate should be revised.
+
+There is also controversy concerning the effect of turmeric/curcumin, which may be both an inhibitor and/or promoter of iron absorption [111, 135–140]. Some authors claim that it acts as an iron chelator—but at the same time, it reduces the expression of hepcidin; further studies are necessary to clarify which of these two effects are prevailing.
+
+A diet designed for persons with iron overload due to excessive intestinal iron absorption should contain a minimum of nutrients and/or compounds with a high iron content, which at the same time contribute to increase iron absorption. The intake of mammalian and avian meat protein (beef, pork, and poultry) containing nonheme and heme iron plus meat factors should be restricted and/or partly substituted by fish meat, which has a lower content of both nonheme and heme iron. The intake of alcohol should be low. Ascorbic acid supplements and fruits and juices rich in ascorbic acid and other organic acids, which may increase iron absorption, should be consumed between the main meals [149]. Lactic acid fermented foods (except milk products) should be reduced or avoided [42, 49, 51].
+
+The diet should be rich in nutrients and compounds that decrease iron absorption, especially the strong inhibitors phytates in cereals and polyphenols in plants and teas. Fluid intakes to the main meals should preferably be in the form of tea, milk, or water—not alcoholic drinks. Regular tea drinking at the main meals significantly decreases the rate of iron accumulation and the number of phlebotomies in the maintenance phase [110].
+
+These dietary premises are best fulfilled by a predominantly plant-based, vegetarian diet, which also contains milk products, eggs, and fish meat—a “vegetarian-lacto-ovo-pescetarian” diet [149]. The dietary advices should be implemented as soon as the diagnosis of haemochromatosis has been confirmed. It is difficult to evaluate the dietary effect in the induction phase, and most dietary studies have therefore evaluated the effect in the maintenance phase [3]. However, in the induction phase, the frequent phlebotomies, rapidly diminishing iron overload, probably has a strong stimulating effect on iron absorption, which is an argument for early dietary intervention. In healthy persons, the maximal erythropoietic response to phlebotomy-induced anemia is a 200% increase over basal erythropoietic rate [150]. In haemochromatosis patients, the erythropoiesis works in a normal way and most patients regain their habitual haemoglobin level in a few weeks.
+
+By each phlebotomy of 400–500 ml whole blood, approximately 130–140 g of protein is lost from the body. This is equivalent to two-day needs for protein [19]. The protein loss is highest in the induction phase of the treatment with weekly phlebotomies. It is therefore important to consume adequate protein—preferably from milk, whey, eggs, and protein-rich plants, e.g., soya beans, as the proteins from these nutrients by themselves inhibit iron uptake. The consumption of animal protein should be restricted and preferably be from fish and young poultry with a relatively low content of heme iron [149].
+
+In healthy subjects, the composition of the diet and body iron status are the two main factors determining iron bioavailability and absorption. The bioavailability factor is usually estimated in relation to “reference subjects” with low or no body iron reserves [151]. In haemochromatosis, due to the dysregulation of iron absorption, which is permanently upregulated, being by and large independent of body iron stores, the patients are therefore in a state mimicking a continuous marked “iron deficiency” or “iron craving,” which will tend to obtain maximum iron availability from almost any diet.
+
+The prediction of iron bioavailability using algorithms in healthy individuals can only predict high, medium, and low bioavailability [151, 152]. The bioavailability of iron from Western-type diets is, on average, 15% with a range of 14–17%. Iron in diets with little meat (50–100 g/day), occasionally with fruit or vegetables consumed with the main meals, and more whole-grain cereals, is 10–12% bioavailable. Vegetarian diets have the lowest bioavailability ranging from 5 to 12% [17]. Although dietary habits in Western countries have changed somewhat since the 1990s, the overall dietary iron intake in women and men in Europe has been quite constant from the 1990s until now [24].
+
+Another aspect of dietary modulation could be to supplement the main meals with some of the known natural inhibitors of iron absorption in balanced amounts, e.g., specific phytates, specific polyphenols, or specific calcium compounds or alternatively artificial nonabsorbable food iron chelators. These dietary approaches have not been investigated.
+
+Finally, it must be emphasized that dietary intervention should be implemented on a voluntary basis, after targeted dietary counselling and education of the patient.
+
+### 6. Conclusions
+
+In patients with genetic haemochromatosis, intestinal iron absorption is enhanced due to a decreased expression of hepcidin. Overall, we have detailed knowledge of the mechanisms of iron absorption to design dietary interventions that may decrease iron intake and iron uptake. Dietary modifications that lower iron intake and iron bioavailability may provide additional measures to limit iron uptake from the diet. This could stimulate the patients' active cooperation in the treatment of their disorder. However, there is a need to perform controlled studies of the effect of targeted long-term dietary intervention and to evaluate the effect of dietary supplements containing specific inhibitors of iron absorption.
+
+### References
+
+[1] 1LynchS.SkikneB.CookJ.CookFood iron absorption in idiopathic hemochromatosisBlood19897462187219310.1182/blood.v74.6.2187.21872804357
+
+[2] 2WaltersG. O.JacobsA.WorwoodM.TrevettD.ThomsonW.Iron absorption in normal subjects and patients with idiopathic haemochromatosis: relationship with serum ferritin concentrationGut197516318819210.1136/gut.16.3.1882-s2.0-0016651662804432PMC1410965
+
+[3] 3MorettiD.van DoornG. M.SwinkelsD. W.Melse-BoonstraA.Relevance of dietary iron intake and bioavailability in the management of HFE hemochromatosis: a systematic reviewThe American Journal of Clinical Nutrition201398246847910.3945/ajcn.112.0482642-s2.0-8488124302723803887
+
+[4] 4MilmanN. T.SchioedtF. V.JunkerA. E.MagnussenK.Diagnosis and treatment of genetic HFE-hemochromatosis: the Danish aspectGastroenterology Research201912522123210.14740/gr120631636772PMC6785287
+
+[5] 5MilmanN.PedersenP.Evidence that the Cys282Tyr mutation of the HFE gene originated from a population in Southern Scandinavia and spread with the vikingsClinical Genetics2003641364710.1034/j.1399-0004.2003.00083.x2-s2.0-004213168712791037
+
+[6] 6MilmanN. T.Diagnosis and treatment of genetic haemochromatosisUgeskr Laeger2013175161109111223651749
+
+[7] 7MilmanN.KoefoedP.PedersenP.NielsenF. C.EibergH.Frequency of the HFE C282Y and H63D mutations in Danish patients with clinical haemochromatosis initially diagnosed by phenotypic methodsEuropean Journal of Haematology200371640340710.1046/j.0902-4441.2003.00156.x2-s2.0-034539313314703688
+
+[8] 8HuntJ. R.ZengH.Iron Absorption by heterozygous carriers of the HFE C282Y mutation associated with hemochromatosisThe American Journal of Clinical Nutrition200480492493110.1093/ajcn/80.4.92415447900
+
+[9] 9PedersenP.MilmanN.Genetic screening for HFE hemochromatosis in 6,020 Danish men: penetrance of C282Y, H63D, and S65C variantsAnnals of Hematology200988877578410.1007/s00277-008-0679-12-s2.0-6764938806619159930
+
+[10] 10PillingL. C.TamosauskaiteJ.JonesG.Common conditions associated with hereditary haemochromatosis genetic variants: cohort study in UK BiobankBMJ2019364p. k522210.1136/bmj.k52222-s2.0-8506010398030651232PMC6334179
+
+[11] 11GinzburgY. Z.Hepcidin-ferroportin axis in health and diseaseVitamins and Hormones2019110174510.1016/bs.vh.2019.01.0022-s2.0-8506110835530798811PMC7730607
+
+[12] 12PietrangeloA.Hereditary hemochromatosis: pathogenesis, diagnosis, and treatmentGastroenterology2010139239340810.1053/j.gastro.2010.06.0132-s2.0-7795550857320542038
+
+[13] 13AdamsP.AltesA.AltesA.Therapeutic recommendations in HFE hemochromatosis for p.Cys282Tyr (C282Y/C282Y) homozygous genotypeHepatology International2018122838610.1007/s12072-018-9855-02-s2.0-8504448086529589198PMC5904234
+
+[14] 14TetensI.BendtsenK. M.HenriksenM.ErsbøllA. K.MilmanN.The impact of a meat-versus a vegetable-based diet on iron status in women of childbearing age with small iron storesEuropean Journal of Nutrition200746843944510.1007/s00394-007-0683-62-s2.0-3744900350817982706
+
+[15] 15PawlakR.BergerJ.HinesI.Iron status of vegetarian adults: a review of literatureAmerican Journal of Lifestyle Medicine201612648649810.1177/15598276166829332-s2.0-8505674118130783404PMC6367879
+
+[16] 16KristensenM. B.HelsO.MorbergC.MarvingJ.BügelS.TetensI.Pork meat increases iron absorption from a 5-day fully controlled diet when compared to a vegetarian diet with similar vitamin C and phytic acid contentBritish Journal of Nutrition2005941788310.1079/bjn200514172-s2.0-2544449066016115336
+
+[17] 17HallbergL.Rossander-HulténL.Iron requirements in menstruating womenThe American Journal of Clinical Nutrition19915461047105810.1093/ajcn/54.6.10472-s2.0-00257903811957820
+
+[18] 18Institute of MedicineDietary Reference Intakes for Vitamin A, Vitamin K, Arsenic, Boron, Chromium, Copper; Iodine, Iron, Manganese, Molybdenum, Nickel, Silicon, Vanadium, and Zinc2001Washington, DC, USANational Academic Press25057538
+
+[19] 19Nordic Council of MinistersNordic Nutrition Recommendations 2012: Integrating Nutrition and Physical Activity2019Copenhagen, DenmarkNordic Council of Ministers
+
+[20] 20European Food Safety Authority (EFSA)Scientific opinion on dietary reference values for iron. EFSA panel on dietetic products, nutrition and allergiesEFSA Journal20151310p. 425410.2903/j.efsa.2015.4185PMC1315160842109813
+
+[21] 21The National Food InstituteDietary Habits in Denmark 2011–2013 Main Results2015Kongens Lyngby, DenmarkThe National Food Institute, Danish Technical Universityhttp://www.food.dtu.dk
+
+[22] 22Department Of Agriculture Agricultural Research ServiceU.S.What we eat in america2015https://www.ars.usda.gov/ARSUserFiles/80400530/pdf/1516/Table_1_NIN_GEN_15.pdf
+
+[23] 23FagtS.MatthiessenJ.Biltoft-JensenA.How much meat do the danes consume?–data from statistics and nutrition surveys (Hvor meget kød spiser danskerne?–data fra statistikker og kostundersøgelser)2018Kongens Lyngby, DenmarkDanish Technical university
+
+[24] 24MilmanN. T.Dietary iron intake in women of reproductive age in Europe: a review of 49 studies from 29 countries in the period 1993–2015Journal of Nutrition and Metabolism2019201913763130610.1155/2019/76313062-s2.0-85068137281PMC659537831312532
+
+[25] 25HyttenF. E.CheyneG. A.KlopperA. I.Iron loss at menstruationBJOG: An International Journal of Obstetrics and Gynaecology196471225525910.1111/j.1471-0528.1964.tb04275.x2-s2.0-8498179339714138388
+
+[26] 26MilmanN.Iron and pregnancy-a delicate balanceAnnals of Hematology200685955956510.1007/s00277-006-0108-22-s2.0-3374781295716691399
+
+[27] 27DasaF.AberaT.Factors affecting iron absorption and mitigation mechanisms: a reviewInternational Journal of Agricultural Science and Food Technology201841243010.17352/2455-815x.000033
+
+[28] 28SharpP. A.Intestinal iron absorption: regulation by dietary & systemic factorsInternational Journal for Vitamin and Nutrition Research2010804523124210.1024/0300-9831/a0000292-s2.0-7995378199421462105
+
+[29] 29ConradM. E.UmbreitJ. N.Pathways of iron absorptionBlood Cells, Molecules, and Diseases200229333635510.1006/bcmd.2002.05642-s2.0-004270420112547224
+
+[30] 30WestA. R.OatesP. S.Mechanisms of heme iron absorption: current questions and controversiesWorld Journal of Gastroenterology200814264101411010.3748/wjg.14.41012-s2.0-5404909331918636652PMC2725368
+
+[31] 31LönnerdalB.BryantA.LiuX.TheilE. C.Iron absorption from soybean ferritin in nonanemic womenThe American Journal of Clinical Nutrition200683110310710.1093/ajcn/83.1.10316400057
+
+[32] 32HopplerM.SchönbächlerA.MeileL.HurrellR. F.WalczykT.Ferritin-iron is released during boiling and in vitro gastric digestionThe Journal of Nutrition2008138587888410.1093/jn/138.5.87818424595
+
+[33] 33JacobsP.BothwellT.CharltonR. W.Role of hydrochloric acid in iron absorptionJournal of Applied Physiology196419218718810.1152/jappl.1964.19.2.18714155278
+
+[34] 34SkikneB. S.LynchS. R.CookJ. D.Role of gastric acid in food iron absorptionGastroenterology19818161068107110.1016/s0016-5085(81)80013-32-s2.0-00194095067286584
+
+[35] 35BeteshA. L.Santa AnaC. A.ColeJ. A.FordtranJ. S.Is achlorhydria a cause of iron deficiency anemia?The American Journal of Clinical Nutrition2015102191910.3945/ajcn.114.0973942-s2.0-8493741860325994564
+
+[36] 36https://www.healthline.com/nutrition/vitamin-c-foods
+
+[37] 37CookJ. D.MonsenE. R.Vitamin C, the common cold, and iron absorptionThe American Journal of Clinical Nutrition197730223524110.1093/ajcn/30.2.235835510
+
+[38] 38HallbergL.RossanderL.Improvement of iron nutrition in developing countries: comparison of adding meat, soy protein, ascorbic acid, citric acid, and ferrous sulphate on iron absorption from a simple Latin American-type of mealThe American Journal of Clinical Nutrition198439457758310.1093/ajcn/39.4.5772-s2.0-00212397256538742
+
+[39] 39BallotD.BaynesR. D.BothwellT. H.The effects of fruit juices and fruits on the absorption of iron from a rice mealBritish Journal of Nutrition198757333134310.1079/bjn198700412-s2.0-00231876253593665
+
+[40] 40HallbergL.BruneM.RossanderL.The role of vitamin C in iron absorptionInternational Journal for Vitamin and Nutrition Research1989301031082507689
+
+[41] 41ThumserA. E.RashedA. A.SharpP. A.LodgeJ. K.Ascorbate enhances iron uptake into intestinal cells through formation of a FeCl3-ascorbate complexFood Chemistry2010123228128510.1016/j.foodchem.2010.04.0312-s2.0-77953286667
+
+[42] 42GilloolyM.BothwellT. H.TorranceJ. D.The effects of organic acids, phytates and polyphenols on the absorption of iron from vegetablesBritish Journal of Nutrition198349333134210.1079/bjn198300422-s2.0-00209634106860621
+
+[43] 43DavidssonL.WalczykT.ZavaletaN.HurrellR. F.Improving iron absorption from a Peruvian school breakfast meal by adding ascorbic acid or Na2EDTAThe American Journal of Clinical Nutrition200173228328710.1093/ajcn/73.2.28311157325
+
+[44] 44FidlerM. C.DavidssonL.ZederC.HurrellR. F.Erythorbic acid is a potent enhancer of nonheme-iron absorptionThe American Journal of Clinical Nutrition20047919910210.1093/ajcn/79.1.9914684404
+
+[45] 45CookJ. D.ReddyM. B.Effect of ascorbic acid intake on nonheme-iron absorption from a complete dietThe American Journal of Clinical Nutrition2001731939810.1093/ajcn/73.1.9311124756
+
+[46] 46HuntJ. R.GallagherS. K.JohnsonL. K.Effect of ascorbic acid on apparent iron absorption by women with low iron storesThe American Journal of Clinical Nutrition19945961381138510.1093/ajcn/59.6.13812-s2.0-00283604538198064
+
+[47] 47EFSA Panel on Dietetic Products Nutrition and Allergies (NDA)Scientific opinion on the substantiation of health claims related to vitamin C and protection of DNA, proteins and lipids from oxidative damage (ID 129, 138, 143, 148), antioxidant function of lutein (ID 146), maintenance of vision (ID 141, 142), collagenEFSA Journal2009710p. 122610.2903/j.efsa.2009.1226
+
+[48] 48European Food Safety Authority (EFSA)Scientific Opinion on the Substantiation of a Health Claim Related to Vitamin C and Increasing Non-haem Iron Absorption Pursuant to Article 14 of Regulation (EC) No 1924/20061 EFSA Panel on Dietetic Products, Nutrition and Allergies (NDA)2014Parma, Italy10.2903/j.efsa.2014.3514PMC1315984342125126
+
+[49] 49ScheersN.Rossander-HulthenL.TorsdottirI.SandbergA. S.Increased iron bioavailability from lactic-fermented vegetables is likely an effect of promoting the formation of ferric iron (Fe3+)European Journal of Nutrition201655137338210.1007/s00394-015-0857-62-s2.0-8495744229325672527PMC4737790
+
+[50] 50Gómez-GallegoC.GueimondeM.SalminenS.The role of yogurt in food-based dietary guidelinesNutrition Reviews201876293910.1093/nutrit/nuy0592-s2.0-8505673268630452698
+
+[51] 51GalanP.CherouvrierF.PreziosiP.HercbergS.Effects of the increasing consumption of dairy products upon iron absorptionEuropean Journal of Clinical Nutrition199145115535591782927
+
+[52] 52RosadoJ. L.DíazM.GonzálezK.GriffinI.AbramsS. A.PreciadoR.The addition of milk or yogurt to a plant-based diet increases zinc bioavailability but does not affect iron bioavailability in womenThe Journal of Nutrition200135346546810.1093/jn/135.3.46515735079
+
+[53] 53DermanD. P.BothwellT. H.TorranceJ. D.Iron absorption from maize (Zea mays) and sorghum (Sorghum vulgare) beerBritish Journal of Nutrition198043227127910.1079/bjn198000902-s2.0-00188652977378337
+
+[54] 54ProulxA. K.ReddyM. B.Fermentation and lactic acid addition enhance iron bioavailability of maizeJournal of Agricultural and Food Chemistry20075572749275410.1021/jf06300152-s2.0-3424720194817355139
+
+[55] 55EeckhoutW.De PaepeM.Total phosphorus, phytate-phosphorus and phytase activity in plant feedstuffsAnimal Feed Science and Technology199447, no.1-2192910.1016/0377-8401(94)90156-22-s2.0-0002498444
+
+[56] 56KodaiiZ.ZadehM. N.KamaliJ.MehrabaniM.NatanziM. M.Enhanced iron absorption from lactic acid fermented bread (an in vivo/ex vivo study)Gene Reports20191510038910.1016/j.genrep.2019.1003892-s2.0-85063325708
+
+[57] 57RealeA.KonietznyU.CoppolaR.SorrentinoE.GreinerR.The importance of lactic acid bacteria for phytate degradation during cereal dough fermentationJournal of Agricultural and Food Chemistry20075582993299710.1021/jf063507n2-s2.0-3424757230517373819
+
+[58] 58LopezH. W.KrespineV.GuyC.MessagerA.DemigneC.RemesyC.Prolonged fermentation of whole wheat sourdough reduces phytate level and increases soluble magnesiumJournal of Agricultural and Food Chemistry20014952657266210.1021/jf001255z2-s2.0-003485663711368651
+
+[59] 59BeringS.SuchdevS.SjøltovL.BerggrenA.TetensI.BukhaveK.A lactic acid-fermented oat gruel increases non-haem iron absorption from a phytate-rich meal in healthy women of childbearing ageBritish Journal of Nutrition2006961808510.1079/bjn200616832-s2.0-3374668496016869994
+
+[60] 60DoğanM.TekinerI. H.Extracellular phytase activites of lactic acid bacteria in sourdough mix prepared from traditionally produced boza as starter cultureFood Health20206211712710.3153/FH20013
+
+[61] 61Martinez-TorresC.LayrisseM.CallenderS. T.Nutritional factors in iron deficiency: food iron absorptionClinics in Haematology19732Philadelphia, PA, USASaunders339352
+
+[62] 62CookJ. D.MonsenE. R.Food iron absorption in human subjects. III. Comparison of the effect of animal proteins on nonheme iron absorptionThe American Journal of Clinical Nutrition197629885986710.1093/ajcn/29.8.859941868
+
+[63] 63HurrellR. F.ReddyM. B.JuilleratM.CookJ. D.Meat protein fractions enhance nonheme iron absorption in humansThe Journal of Nutrition2006136112808281210.1093/jn/136.11.280817056805
+
+[64] 64ConradM. E.BenjaminB. I.WilliamsH. L.FoyA. L.Human absorption of hemoglobin-ironGastroenterology196753151010.1016/s0016-5085(19)34256-86067462
+
+[65] 65LayrisseM.Martínez-TorresC.Model for measuring dietary absorption of heme iron: test with a complete mealThe American Journal of Clinical Nutrition197225440141110.1093/ajcn/25.4.4015062276
+
+[66] 66Björn-RasmussenE.HallbergL.IsakssonB.ArvidssonB.Food iron absorption in man applications of the two-pool extrinsic tag method to measure heme and nonheme iron absorption from the whole dietJournal of Clinical Investigation197453124725510.1172/jci1075452-s2.0-00159532904808639PMC301460
+
+[67] 67HallbergL.Björn-RasmussenE.HowardL.RossanderL.Dietary heme iron absorptionScandinavian Journal of Gastroenterology197914776977910.3109/003655279091814032-s2.0-0018612257538407
+
+[68] 68CarpenterC. E.MahoneyA. W.Contributions of heme and nonheme iron to human nutritionCritical Reviews in Food Science and Nutrition199231433336710.1080/104083992095275762-s2.0-00264704291581009
+
+[69] 69CharltonR. W.JacobsP.SeftelH.BothwellT. H.Effect of alcohol on iron absorptionBMJ1964254221427142910.1136/bmj.2.5422.14272-s2.0-000097451714209363PMC1817497
+
+[70] 70MilmanN.KirchhoffM.Relationship between serum ferritin, alcohol intake, and social status in 2235 Danish men and womenAnnals of Hematology199672314515110.1007/s0027700501532-s2.0-00299229658766257
+
+[71] 71MilmanN.BygK.-E.OvesenL.KirchhoffM.JürgensenK. S.-L.Iron status in Danish men 1984-94: a cohort comparison of changes in iron stores and the prevalence of iron deficiency and iron overloadEuropean Journal of Haematology200268633234010.1034/j.1600-0609.2002.01668.x2-s2.0-003662104812225390
+
+[72] 72WhitfieldJ. B.ZhuG.HeathA. C.PowellL. W.MartinN. G.Effects of alcohol consumption on indices of iron stores and of iron stores on alcohol intake markersAlcoholism: Clinical and Experimental Research20012571037104510.1111/j.1530-0277.2001.tb02314.x2-s2.0-003495432511505030
+
+[73] 73ScotetV.MérourM. C.MercierA. YHereditary hemochromatosis: effect of excessive alcohol consumption on disease expression in patients homozygous for the C282Y mutationAmerican Journal of Epidemiology2003158212913410.1093/aje/kwg1232-s2.0-003781878712851225
+
+[74] 74CeladaA.RudolfH.DonathA.Effect of a single ingestion of alcohol on iron absorptionAmerican Journal of Hematology19785322523710.1002/ajh.28300503072-s2.0-0018239869752260
+
+[75] 75OhtakeT.SaitoH.HosokiY.Hepcidin is down-regulated in alcohol loadingAlcoholism: Clinical and Experimental Research20073112810.1111/j.1530-0277.2006.00279.x2-s2.0-3384629365017331161
+
+[76] 76Harrison-FindikD. D.KleinE.CristC.EvansJ.TimchenkoN.GollanJ.Iron-mediated regulation of liver hepcidin expression in rats and mice is abolished by alcoholHepatology20074661979198510.1002/hep.218952-s2.0-3484883899317763462
+
+[77] 77Harrison-FindikD. D.SchaferD.KleinE.Alcohol metabolism-mediated oxidative stress down-regulates hepcidin transcription and leads to increased duodenal iron transporter expressionJournal of Biological Chemistry200628132229742298210.1074/jbc.m6020982002-s2.0-3374735966616737972
+
+[78] 78BridleK. R.CheungT.-K.MurphyT. L.Hepcidin is down-regulated in alcoholic liver injury: implications for the pathogenesis of alcoholic liver diseaseAlcoholism: Clinical and Experimental Research200630110611210.1111/j.1530-0277.2006.00002.x2-s2.0-3364477356916433737
+
+[79] 79Harrison-FindikD. D.Is the iron regulatory hormone hepcidin a risk factor for alcoholic liver disease?World Journal of Gastroenterology200915101186119310.3748/wjg.15.11862-s2.0-6564911238619291818PMC2658862
+
+[80] 80RichardsonC. T.WalshJ. H.HicksM. I.The effect of cimetidine, a new histamine H2-receptor antagonist, on meal-stimulated acid secretion, serum gastrin, and gastric emptying in patients with duodenal ulcerGastroenterology1976711192310.1016/s0016-5085(76)80090-x2-s2.0-00171954596359
+
+[81] 81BlumR. A.HuntR. H.KiddS. L.ShiH.JenningsD. E.Greski-RoseP. A.Dose-response relationship of lansoprazole to gastric acid antisecretory effectsAlimentary Pharmacology and Therapeutics199812432132710.1046/j.1365-2036.1998.00306.x2-s2.0-00319196119690720
+
+[82] 82LamJ. R.SchneiderJ. L.QuesenberryC. P.CorleyD. A.Proton pump inhibitor and histamine-2 receptor antagonist use and iron deficiencyGastroenterology2017152482182910.1053/j.gastro.2016.11.0232-s2.0-8501441243227890768
+
+[83] 83HutchinsonC.GeisslerC. A.PowellJ. J.BomfordA.Proton pump inhibitors suppress absorption of dietary non-haem iron in hereditary haemochromatosisGut20075691291129510.1136/gut.2006.1086132-s2.0-3454812705817344278PMC1954964
+
+[84] 84van AertsR. M. M.van DeursenC. T. B. M.KoekG. H.Proton pump inhibitors reduce the frequency of phlebotomy in patients with hereditary hemochromatosisClinical Gastroenterology and Hepatology201614114715210.1016/j.cgh.2015.06.0432-s2.0-8495894585926240005
+
+[85] 85O’Neil-CuttingM. A.CrosbyW. H.The effect of antacids on the absorption of simultaneously ingested ironJAMA: The Journal of the American Medical Association1986255111468147010.1001/jama.1986.033701100900272-s2.0-00225718853005669
+
+[86] 86HallG. J. L.DavisA. E.Inhibition of iron absorption by magnesium trisilicateMedical Journal of Australia196922959610.5694/j.1326-5377.1969.tb105628.x5803866
+
+[87] 87WallaceK. L.CurryS. C.LoVecchioF.RaschkeR. A.Effect of magnesium hydroxide on iron absorption following simulated mild iron overdose in human subjectsAcademic Emergency Medicine199851096196510.1111/j.1553-2712.1998.tb02771.x2-s2.0-00316922979862585
+
+[88] 88ChaiW.LiebmanM.Effect of different cooking methods on vegetable oxalate contentJournal of Agricultural and Food Chemistry20055383027303010.1021/jf048128d2-s2.0-1714440111115826055
+
+[89] 89MitchellT.KumarP.ReddyT.Dietary oxalate and kidney stone formationAmerican Journal of Physiology-Renal Physiology2013163F409F41310.1152/ajprenal.00373.20182-s2.0-8506160796630566003PMC6459305
+
+[90] 90HeaneyR. P.WeaverC. M.ReckerR. R.Calcium absorbability from spinachThe American Journal of Clinical Nutrition198847470770910.1093/ajcn/47.4.7072-s2.0-00239163163354496
+
+[91] 91Iron Disorders InstituteAchieving iron balance with diet2020http://www.irondisorders.org/diet
+
+[92] 92NutriticsWhy most iron in spinach is useless is spinach really the superfood our grandmothers touted?September 2020https://www.nutritics.com/p/news_Why-Most-Iron-In-Spinach-Is-Useless
+
+[93] 93genannt BonsmannS. S.WalczykT.RenggliS.HurrellR. F.Oxalic acid does not influence nonhaem iron absorption in humans: a comparison of kale and spinach mealsEuropean Journal of Clinical Nutrition200862333634110.1038/sj.ejcn.16027212-s2.0-4054914042517440529
+
+[94] 94SchlemmerU.FrølichW.PrietoR. M.GrasesF.Phytate in foods and significance for humans: food sources, intake, processing, bioavailability, protective role and analysisMolecular Nutrition & Food Research200953S2S330S37510.1002/mnfr.2009000992-s2.0-7034998710119774556
+
+[95] 95FrølichW.MejbornH.TetensI.Phytate–a natural component in plant foodDTU National Food Institute. E-artikel fra DTU Fødevareinstituttet20111
+
+[96] 96HallbergL.RossanderL.SkånbergA. B.Phytates and the inhibitory effect of bran on iron absorption in manThe American Journal of Clinical Nutrition198745598899610.1093/ajcn/45.5.9882-s2.0-00232609493034044
+
+[97] 97HallbergL.BruneM.RossanderL.Iron absorption in man: ascorbic acid and dose-dependent inhibition by phytateThe American Journal of Clinical Nutrition198949114014410.1093/ajcn/49.1.1402-s2.0-00245203262911999
+
+[98] 98SiegenbergD.BaynesR. D.BothwellT. H.Ascorbic acid prevents the dose-dependent inhibitory effects of polyphenols and phytates on nonheme-iron absorptionThe American Journal of Clinical Nutrition199153253754110.1093/ajcn/53.2.5372-s2.0-00259116861989423
+
+[99] 99HurrellR. F.JuilleratM. A.ReddyM. B.LynchS. R.DassenkoS. A.CookJ. D.Soy protein, phytate, and iron absorption in humansThe American Journal of Clinical Nutrition199256357357810.1093/ajcn/56.3.5732-s2.0-00268006291503071
+
+[100] 100LayrisseM.García-CasalM. N.SolanoL.Iron bioavailability in humans from breakfasts enriched with iron bis-glycine chelate, phytates and polyphenolsThe Journal of Nutrition200013092195219910.1093/jn/130.9.219510958812
+
+[101] 101KristensenM. B.TetensI.JørgensenA. B. AA decrease in iron status in young healthy women after long-term daily consumption of the recommended daily intake of fibre-rich wheat breadEuropean Journal of Nutrition2005443343401534973810.1007/s00394-004-0529-4
+
+[102] 102YangJ.DwyerJ. T.PetersonJ. J.Polyphenols in foodsNutrition Today201651629030010.1097/NT.00000000000001832-s2.0-85002776314
+
+[103] 103WilliamsonG.The role of polyphenols in modern nutritionNutrition Bulletin201742322623510.1111/nbu.122782-s2.0-8502755726228983192PMC5601283
+
+[104] 104BruneM.HallbergL.SkånbergA. B.Determination of iron-binding phenolic groups in foodsJournal of Food Science199156112813110.1111/j.1365-2621.1991.tb07992.x2-s2.0-84985264934
+
+[105] 105AndjelkovicM.VancampJ.DemeulenaerB.Iron-chelation properties of phenolic acids bearing catechol and galloyl groupsFood Chemistry2006981233110.1016/j.foodchem.2005.05.0442-s2.0-33644904982
+
+[106] 106DislerP. B.LynchS. R.CharltonR. W.The effect of tea on iron absorptionGut197516319320010.1136/gut.16.3.1932-s2.0-00166522541168162PMC1410962
+
+[107] 107MorckT. A.LynchS. R.CookJ. D.Inhibition of food iron absorption by coffeeThe American Journal of Clinical Nutrition198337341642010.1093/ajcn/37.3.4162-s2.0-00209579396402915
+
+[108] 108BruneM.RossanderL.HallbergL.Iron absorption and phenolic compounds: importance of different phenolic structuresEuropean Journal of Clinical Nutrition19894385475572598894
+
+[109] 109HurrellR. F.ReddyM.CookJ. D.Inhibition of non-haem iron absorption in man by polyphenolic-containing beveragesBritish Journal of Nutrition199981428929510.1017/s000711459900053710999016
+
+[110] 110KaltwasserJ. P.WernerE.SchalkK.HansenC.GottschalkR.SeidlC.Clinical trial on the effect of regular tea drinking on iron accumulation in genetic haemochromatosisGut199843569970410.1136/gut.43.5.6992-s2.0-00317430579824354PMC1727318
+
+[111] 111TuntipopipatS.JudprasongK.ZederC.Chili, but not turmeric, inhibits iron absorption in young women from an iron-fortified composite mealThe Journal of Nutrition2006136122970297410.1093/jn/136.12.297017116705
+
+[112] 112INGFive things about soya beansSeptember 2020https://www.ing.com/Newsroom/News/Five-things-about-soya-beans.htm
+
+[113] 113FoodData Central, U.S.A Department of Agriculture https://fdc.nal.usda.gov/fdc-app.html#/food-details/174270/nutrients
+
+[114] 114RoseA.Daily Iron: daily iron on your dinner plate2020https://www.dailyiron.net/soybeans/
+
+[115] 115National Food InstituteFood data. Frida.fooddata.dk, version 42019Kongens Lyngby, DenmarkTechnical University of Denmark
+
+[116] 116CookJ. D.MorckT. A.LynchS. R.The inhibitory effect of soy products on nonheme iron absorption in manThe American Journal of Clinical Nutrition198134122622262910.1093/ajcn/34.12.26227198374
+
+[117] 117LynchS. R.DassenkoS. A.CookJ. D.JuilleratM. A.HurrellR. F.Inhibitory effect of a soybean-protein-related moiety on iron absorption in humansThe American Journal of Clinical Nutrition199460456757210.1093/ajcn/60.4.5672-s2.0-00280970358092092
+
+[118] 118HurrellR. F.LynchS. R.TrinidadT. P.DassenkoS. A.CookJ. D.Iron absorption in humans as influenced by bovine milk proteinsThe American Journal of Clinical Nutrition198949354655210.1093/ajcn/49.3.5462-s2.0-00245116022923087
+
+[119] 119KibangouI. B.BouhallabS.HenryG.Milk proteins and iron absorption: contrasting effects of different caseinophosphopeptidesPediatric Research200558473173410.1203/01.pdr.0000180555.27710.462-s2.0-2544445075016189201
+
+[120] 120TurnlundJ. R.SmithR. G.KretschM. J.KeyesW. R.ShahA. G.Milk’s effect on the bioavailability of iron from cereal-based diets in young women by use of in vitro and in vivo methodsThe American Journal of Clinical Nutrition199052237337810.1093/ajcn/52.2.3732-s2.0-00253751232375304
+
+[121] 121CallenderS. T.MarneyS. R.WarnerG. T.Eggs and iron absorptionBritish Journal of Haematology197019665766610.1111/j.1365-2141.1970.tb07010.x2-s2.0-849904704245492486
+
+[122] 122HurrellR. F.LynchS. R.TrinidadT. P.DassenkoS. A.CookJ. D.Iron absorption in humans: bovine serum albumin compared with beef muscle and egg whiteThe American Journal of Clinical Nutrition198847110210710.1093/ajcn/47.1.1022-s2.0-00238773713337027
+
+[123] 123IshikawaS.-I.TamakiS.AriharaK.ItohM.Egg yolk protein and egg yolk phosvitin inhibit calcium, magnesium, and iron absorptions in ratsJournal of Food Science2007726S412S41910.1111/j.1750-3841.2007.00417.x2-s2.0-3454782976317995699
+
+[124] 124National Institute for Public Health and the Environment in the NetherlandsDutch food composition tables2020https://nevo-online.rivm.nl/ProductDetails.aspx
+
+[125] 125LoweB.Experimental Cookery from the Chemical and Physical Standpoint1937Hoboken, NJ, USAJohn Wiley & Sonshttps://chestofbooks.com/food/science/Experimental-Cookery/index.html
+
+[126] 126National Health ServiceVitamins and Minerals: Calcium2020London, UKNational Health Servicehttps://www.nhs.uk/conditions/vitamins-and-minerals/calcium/
+
+[127] 127MinihaneA. M.Fairweather-TaitS. J.Effect of calcium supplementation on daily nonheme-iron absorption and long-term iron statusThe American Journal of Clinical Nutrition19986819610210.1093/ajcn/68.1.962-s2.0-00317489439665102
+
+[128] 128CookJ. D.DassenkoS. A.WhittakerP.Calcium supplementation: effect on iron absorptionThe American Journal of Clinical Nutrition199153110611110.1093/ajcn/53.1.1062-s2.0-00259703991984334
+
+[129] 129HallbergL.BruneM.ErlandssonM.SandbergA. S.Rossander-HulténL.Calcium: effect of different amounts on nonheme and heme-iron absorption in humansThe American Journal of Clinical Nutrition199153111211910.1093/ajcn/53.1.1122-s2.0-00260878871984335
+
+[130] 130HallbergL.Rossander-HulthènL.BruneM.GleerupA.Inhibition of haem-iron absorption in man by calciumBritish Journal of Nutrition199369253354010.1079/bjn199300532-s2.0-00275226978490006
+
+[131] 131LynchS. R.The effect of calcium on iron absorptionNutrition Research Reviews200013214115810.1079/0954422001087290432-s2.0-003449301619087437
+
+[132] 132van de VijverL. P. L.KardinaalA. F. M.CharzewskaJ.Calcium intake is weakly but consistently negatively associated with iron status in girls and women in six European countriesThe Journal of Nutrition1999129596396810.1093/jn/129.5.96310222387
+
+[133] 133BendichA.Calcium supplementation and iron status of femalesNutrition2001171465110.1016/s0899-9007(00)00482-22-s2.0-003514329411165888
+
+[134] 134LönnerdalB.Calcium and iron absorption -mechanisms and public health relevanceInternational Journal for Vitamin and Nutrition Research2010804529329910.1024/0300-9831/a0000362-s2.0-7995380222521462112
+
+[135] 135Benefits of Turmeric for HemochromatosisThe best natural remedy shown by clinical research to reliably reduce the build-up of iron in the body turmeric can lower ferritin by chelating iron from the body2020https://hemochromatosishelp.com/turmeric-benefit-for-hemochromatosis/
+
+[136] 136MenonV. P.SudheerA. R.Antioxidant and anti-inflammatory properties of curcuminAdvances in Experimental Medicine and Biology20075951051251756920710.1007/978-0-387-46401-5_3
+
+[137] 137Bernabé-PinedaM.Ramírez-SilvaM. T.Romero-RomoM. A.González-VergaraE.Rojas-HernándezA.Spectrophotometric and electrochemical determination of the formation constants of the complexes Curcumin-Fe(III)-water and Curcumin-Fe(II)-waterSpectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy20046051105111310.1016/s1386-1425(03)00344-52-s2.0-184284294415084330
+
+[138] 138JiaoY.WilkinsonJ.DiX.Curcumin, a cancer chemopreventive and chemotherapeutic agent, is a biologically active iron chelatorBlood2009113246246910.1182/blood-2008-05-1559522-s2.0-5884910267418815282PMC2615657
+
+[139] 139FatihN.CamberleinE.IslandM. L.Natural and synthetic STAT3 inhibitors reduce hepcidin expression in differentiated mouse hepatocytes expressing the active phosphorylated STAT3 formJournal of Molecular Medicine201088547748610.1007/s00109-009-0588-32-s2.0-7795456324720169331
+
+[140] 140LainéF.LaviolleB.Bardou-JacquetE.Curcuma decreases serum hepcidin levels in healthy volunteers: a placebo-controlled, randomized, double-blind, cross-over studyFundamental & Clinical Pharmacology201731556757310.1111/fcp.122882-s2.0-8501904310428370178
+
+[141] 141MilmanN.Anemia-still a major health problem in many parts of the worldAnnals of Hematology201190436937710.1007/s00277-010-1144-52-s2.0-7995593833421221586
+
+[142] 142RamettaR.FracanzaniA. L.FargionS.DongiovanniP.Dysmetabolic hyperferritinemia and dysmetabolic iron overload syndrome (DIOS): two related conditions or different entities?Current Pharmaceutical Design20202610p. 102510.2174/138161282666620013110301832003680
+
+[143] 143VelaD.Low hepcidin in liver fibrosis and cirrhosis; a tale of progressive disorder and a case for a new biochemical markerMolecular Medicine2018241p. 510.1186/s10020-018-0008-72-s2.0-85045512224PMC601689030134796
+
+[144] 144GarrisonC.The Hemochromatosis Cookbook: Recipes and Meals for Reducing the Absorption of Iron in Your Diet2008Cumberland House, Canada
+
+[145] 145LawsonS.The Hemochromatosis Cookbook 80+ Easy Wholesome Recipes to Reduce Iron Absorption and Fight Iron Overload2018Scotts Valley, CA, USACreatespace Independent Publishing Platform
+
+[146] 146PedersenP.MilmanN.Extrinsic factors modifying expressivity of the HFE variant C282Y, H63D, S65C phenotypes in 1,294 Danish menAnnals of Hematology2009881095796510.1007/s00277-009-0714-x2-s2.0-6924922033619271219
+
+[147] 147Haemochromatosis AssociationDanish2020https://www.haemokromatose.dk/
+
+[148] 148MilmanN. T.Hvad blev der af diætisten? (What became of the dietician?)Diætisten202016468
+
+[149] 149MilmanN. T.Stort behov for diætetisk rådgivning til personer med arvelig hæmokromatose (Great need for dietary counceling in persons with hereditary haemochromatosis)Diætisten20191621419
+
+[150] 150GoodnoughL. T.Erythropoietin and iron-restricted erythropoiesisExperimental Hematology200735416717210.1016/j.exphem.2007.01.0262-s2.0-3394719211117379103
+
+[151] 151HurrellR.EgliI.Iron bioavailability and dietary reference valuesThe American Journal of Clinical Nutrition201091S1461S146710.3945/ajcn.2010.28674f2-s2.0-7795196088620200263
+
+[152] 152LynchS.The precision of in vitro methods and algorithms for predicting the bioavailability of dietary ironInternational Journal for Vitamin and Nutrition Research200575643644510.1024/0300-9831.75.6.4362-s2.0-3364624084216711477

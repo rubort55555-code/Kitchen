@@ -1,0 +1,59 @@
+Название: Dietary Phytic Acid, Dephytinization, and Phytase Supplementation Alter Trace Element Bioavailability—A Narrative Review of Human Interventions
+Авторы: Thiresia Chondrou, Nikoleta Adamidi, Dimosthenis Lygouras, Simon A. Hirota, Odysseas Androutsos, Vaios Svolos
+Журнал: Nutrients, 2024
+DOI: https://doi.org/10.3390/nu16234069   PMID: 39683463   PMC: PMC11643945
+Лицензия: CC BY 4.0 (открытый доступ). © 2024 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 11 из 13: References
+============================================================
+
+[1] 1. GuptaR.K. GangoliyaS.S. SinghN.K. Reduction of phytic acid and enhancement of bioavailable micronutrients in food grainsJ. Food Sci. Technol.20155267668410.1007/s13197-013-0978-y25694676PMC4325021
+
+[2] 2. Hadi AlkarawiH. ZotzG. Phytic acid in green leavesPlant Biol.20141669770110.1111/plb.1213624341824
+
+[3] 3. BrounsF. Phytic Acid and Whole Grains for Health ControversyNutrients2021142510.3390/nu1401002535010899PMC8746346
+
+[4] 4. WangR. GuoS. Phytic acid and its interactions: Contributions to protein functionality, food processing, and safetyCompr. Rev. Food Sci. Food Saf.2021202081210510.1111/1541-4337.1271433559386
+
+[5] 5. RimbachG. PallaufJ. MoehringJ. KraemerK. MinihaneA.M. Effect of dietary phytate and microbial phytase on mineral and trace element bioavailability—A literature reviewCurr. Top. Nutraceutical Res.20086131144
+
+[6] 6. KumarV. SinhaA.K. MakkarH.P. BeckerK. Dietary roles of phytate and phytase in human nutrition: A reviewFood Chem.201012094595910.1016/j.foodchem.2009.11.052
+
+[7] 7. MaG. LiY. JinY. ZhaiF. KokF.J. YangX. Phytate intake and molar ratios of phytate to zinc, iron and calcium in the diets of people in ChinaEur. J. Clin. Nutr.20076136837410.1038/sj.ejcn.160251316929240
+
+[8] 8. DeweyK.G. Increasing iron intake of children through complementary foodsFood Nutr. Bull.200728(Suppl. S4)S595S60910.1177/15648265070284S41218297897
+
+[9] 9. GibsonR.S. FergusonE.L. LehrfeldJ. Complementary foods for infant feeding in developing countries: Their nutrient adequacy and improvementEur. J. Clin. Nutr.19985276477010.1038/sj.ejcn.16006459805226
+
+[10] 10. BurgosR. BretónI. CeredaE. DesportJ.C. DziewasR. GentonL. GomesF. JésusP. LeischkerA. MuscaritoliM. ESPEN guideline clinical nutrition in neurologyClin. Nutr.20183735439610.1016/j.clnu.2017.09.00329274834
+
+[11] 11. MacMasterM.J. DamianopoulouS. ThomsonC. TalwarD. StefanowiczF. CatchpoleA. GerasimidisK. GayaD.R. A prospective analysis of micronutrient status in quiescent inflammatory bowel diseaseClin. Nutr.20214032733110.1016/j.clnu.2020.05.01032517876
+
+[12] 12. MaulanaH. WidyastutiY. HerlinaN. HasbunaA. Al-IslahiA.S.H. TriratnaL. MayasariN. Bioinformatics study of phytase from Aspergillus niger for use as feed additive in livestock feedJ. Genet. Eng. Biotechnol.20232114210.1186/s43141-023-00600-y38008870PMC10678861
+
+[13] 13. Herter-AeberliI. FischerM.M. EgliI.M. ZederC. ZimmermannM.B. HurrellR.F. Addition of Whole Wheat Flour During Injera Fermentation Degrades Phytic Acid and Triples Iron Absorption from Fortified Tef in Young WomenJ. Nutr.20201502666267210.1093/jn/nxaa21132805002
+
+[14] 14. ZybaS.J. WegmüllerR. WoodhouseL.R. CeesayK. PrenticeA.M. BrownK.H. WessellsK.R. Effect of exogenous phytase added to small-quantity lipid-based nutrient supplements (SQ-LNS) on the fractional and total absorption of zinc from a millet-based porridge consumed with SQ-LNS in young Gambian children: A randomized controlled trialAm. J. Clin. Nutr.20191101465147510.1093/ajcn/nqz20531504101
+
+[15] 15. MonnardA. MorettiD. ZederC. SteingötterA. ZimmermannM.B. The effect of lipids, a lipid-rich ready-to-use therapeutic food, or a phytase on iron absorption from maize-based meals fortified with micronutrient powdersAm. J. Clin. Nutr.20171051521152710.3945/ajcn.116.14297628468891
+
+[16] 16. BrnićM. WegmüllerR. Melse-BoonstraA. StomphT. ZederC. TayF.M. HurrellR.F. Zinc Absorption by Adults Is Similar from Intrinsically Labeled Zinc-Biofortified Rice and from Rice Fortified with Labeled Zinc SulfateJ. Nutr.2016146768010.3945/jn.115.21342126674764
+
+[17] 17. BrnićM. WegmüllerR. ZederC. SentiG. HurrellR.F. Influence of phytase, EDTA, and polyphenols on zinc absorption in adults from porridges fortified with zinc sulfate or zinc oxideJ. Nutr.20141441467147310.3945/jn.113.18532224966411
+
+[18] 18. CercamondiC.I. EgliI.M. MitchikpeE. TossouF. HessouJ. ZederC. HounhouiganJ.D. HurrellR.F. Iron bioavailability from a lipid-based complementary food fortificant mixed with millet porridge can be optimized by adding phytase and ascorbic acid but not by using a mixture of ferrous sulfate and sodium iron EDTAJ. Nutr.20131431233123910.3945/jn.113.17507523761652
+
+[19] 19. TroeschB. van StuijvenbergM.E. SmutsC.M. KrugerH.S. BiebingerR. HurrellR.F. BaumgartnerJ. ZimmermannM.B. A micronutrient powder with low doses of highly absorbable iron and zinc reduces iron and zinc deficiency and improves weight-for-age Z-scores in South African childrenJ. Nutr.201114123724210.3945/jn.110.12924721178093
+
+[20] 20. TroeschB. EgliI. ZederC. HurrellR.F. de PeeS. ZimmermannM.B. Optimization of a phytase-containing micronutrient powder with low amounts of highly bioavailable iron for in-home fortification of complementary foodsAm. J. Clin. Nutr.20098953954410.3945/ajcn.2008.2702619106242
+
+[21] 21. Bach KristensenM. TetensI. Alstrup JørgensenA.B. Dal ThomsenA. MilmanN. HelsO. SandströmB. HansenM. A decrease in iron status in young healthy women after long-term daily consumption of the recommended intake of fibre-rich wheat breadEur. J. Nutr.20054433434010.1007/s00394-004-0529-415349738
+
+[22] 22. LayrisseM. García-CasalM.N. SolanoL. BarónM.A. ArguelloF. LloveraD. RamírezJ. LeetsI. TropperE. Iron bioavailability in humans from breakfasts enriched with iron bis-glycine chelate, phytates and polyphenolsJ. Nutr.20001302195219910.1093/jn/130.9.219510958812
+
+[23] 23. SandbergA.S. HulthénL.R. TürkM. Dietary Aspergillus niger phytase increases iron absorption in humansJ. Nutr.199612647648010.1093/jn/126.2.4768632221
+
+[24] 24. AdamsC.L. HambidgeM. RaboyV. DorschJ.A. SianL. WestcottJ.L. KrebsN.F. Zinc absorption from a low-phytic acid maizeAm. J. Clin. Nutr.20027655655910.1093/ajcn/76.3.55612197999
+
+[25] 25. ArmahS.M. BoyE. ChenD. CandalP. ReddyM.B. Regular Consumption of a High-Phytate Diet Reduces the Inhibitory Effect of Phytate on Nonheme-Iron Absorption in Women with Suboptimal Iron StoresJ. Nutr.20151451735173910.3945/jn.114.20995726041677
