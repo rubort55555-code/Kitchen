@@ -103,6 +103,7 @@ ok("теги OFF: неизвестное — D, масла и сахар — н�
 ok("теги OFF: слова внутри слов не находятся (peach, pea)", !tags("en:peaches").flags.includes("legume") && !tags("en:nutmeg").flags.includes("nuts"));
 ok("теги на других языках: viande, poissons", tags("fr:viandes").flags.includes("meat") && tags("fr:poissons").flags.includes("fish"));
 ok("USDA: говядина и птица — мясо (B), молочное и яйца (C)", foodIronFromUsdaGroup("Beef Products").grade === "B" && foodIronFromUsdaGroup("Poultry Products").flags.includes("meat") && foodIronFromUsdaGroup("Dairy and Egg Products").grade === "C");
+ok("группы канадской базы CNF (без запятых и в другом регистре)", ["Lamb, Veal and Game", "Sausages and Luncheon meats", "Nuts and Seeds", "Cereals, Grains and Pasta", "Fruits and fruit juices", "Breakfast cereals"].map((g) => foodIronFromUsdaGroup(g).grade).every((g) => g !== "D") && foodIronFromUsdaGroup("Lamb, Veal and Game").flags.includes("meat") && foodIronFromUsdaGroup("Nuts and Seeds").flags.includes("nuts"));
 ok("USDA: смешанные группы — без оценки (D)", ["Fast Foods", "Baby Foods", "Snacks", "Soups, Sauces, and Gravies", "Meals, Entrees, and Side Dishes"].every((g) => foodIronFromUsdaGroup(g).grade === "D"));
 const prod = foodIronOfProduct("Шоколад молочный", ["en:chocolates"]);
 ok("товар: название и категория складываются", prod.flags.includes("polyphenol") && prod.grade === "B");

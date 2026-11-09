@@ -146,8 +146,13 @@ const USDA_GROUPS: Record<string, { flags: IronFlag[]; grade: Grade }> = {
   "Sweets": { flags: [], grade: "C" },
   "Spices and Herbs": { flags: [], grade: "C" },
 };
+// Группы других баз (Canadian Nutrient File и др.) называются почти так же, но с отличиями в запятых и регистре
+const normGroup = (s: string) => s.toLowerCase().replace(/[,]/g, "").replace(/\s+/g, " ").trim();
+const GROUPS_NORM = new Map<string, { flags: IronFlag[]; grade: Grade }>(Object.entries(USDA_GROUPS).map(([k, v]) => [normGroup(k), v]));
+// Дополнительные названия групп канадской базы CNF
+for (const [k, v] of [["nuts and seeds", USDA_GROUPS["Nut and Seed Products"]], ["cereals grains and pasta", USDA_GROUPS["Cereal Grains and Pasta"]], ["fruits and fruit juices", USDA_GROUPS["Fruits and Fruit Juices"]], ["lamb veal and game", USDA_GROUPS["Lamb, Veal, and Game Products"]]] as const) GROUPS_NORM.set(k, v);
 export function foodIronFromUsdaGroup(group: string): FoodIron {
-  const g = USDA_GROUPS[group];
+  const g = GROUPS_NORM.get(normGroup(group));
   return g ? { flags: [...g.flags], grade: g.grade, via: "category" } : { flags: [], grade: "D", via: "none" };
 }
 
