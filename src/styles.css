@@ -512,9 +512,13 @@ select.inp { padding-right: 8px; }
 .today .row2 { margin-top: 8px; }
 .li .ib { flex: none; border: 0; background: transparent; color: var(--muted); font-size: 18px; min-width: 40px; min-height: 40px; }
 
-.mrow { display: grid; grid-template-columns: 1fr; gap: 2px; margin: 8px 0; font-size: 14px; }
-.mrow b { font-size: 13px; font-weight: 700; color: var(--muted); }
-.mrow .dbar { margin: 2px 0; height: 6px; }
+.mrow { display: grid; grid-template-columns: 1fr; gap: 3px; margin: 10px 0; font-size: 14px; }
+.mrow .mh { display: flex; justify-content: space-between; gap: 8px; }
+.mrow .mh b { font-size: 14px; }
+.mrow small { color: var(--muted); font-size: 12px; }
+.mrow .dbar { margin: 2px 0; height: 10px; border-radius: 5px; }
+.dbar i { transition: width .6s ease; }
+@media (prefers-reduced-motion: reduce) { .dbar i { transition: none; } }
 .dbar i.low { background: var(--bad); }
 .dbar i.mid { background: var(--soon-bar); }
 .dbar i.full { background: var(--ok-bar); }

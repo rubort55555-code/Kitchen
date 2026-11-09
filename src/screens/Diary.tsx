@@ -149,7 +149,7 @@ const fmt = (x: number) => (x >= 100 ? Math.round(x) : x >= 10 ? Math.round(x * 
 
 /** Витамины и минералы за день против нормы (МР 2.3.1.0253-21) и то, чего не хватает. Считаются только блюда из рецептов и продукты из справочника. */
 function MicroBlock({ eaten, body, hasMeals }: { eaten: Record<NutrientKey, number>; body: BodyProfile; hasMeals: boolean }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const all = micros(body);
   const rows = all.filter((x) => TRACKED.has(x.key) && x.key !== "na").map((x) => ({ ...x, v: eaten[x.key as NutrientKey] || 0, pct: Math.round(((eaten[x.key as NutrientKey] || 0) / x.amount) * 100) }));
   const na = all.find((x) => x.key === "na");
@@ -157,7 +157,11 @@ function MicroBlock({ eaten, body, hasMeals }: { eaten: Record<NutrientKey, numb
   const lowest = [...rows].sort((a, b) => a.pct - b.pct).slice(0, 3);
   const vit = rows.filter((x) => VITAMINS.has(x.key)), min = rows.filter((x) => !VITAMINS.has(x.key));
   const Row = ({ x }: { x: (typeof rows)[number] }) => (
-    <div className="mrow"><span>{x.title}</span><div className="dbar"><i className={x.pct >= 100 ? "full" : x.pct >= 50 ? "mid" : "low"} style={{ width: Math.min(100, x.pct) + "%" }} /></div><b>{fmt(x.v)} из {fmt(x.amount)} {x.unit} · {x.pct}%</b></div>
+    <div className="mrow" role="progressbar" aria-label={x.title} aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.min(100, x.pct)}>
+      <div className="mh"><span>{x.title}</span><b>{x.pct}%</b></div>
+      <div className="dbar"><i className={x.pct >= 100 ? "full" : x.pct >= 50 ? "mid" : "low"} style={{ width: Math.min(100, x.pct) + "%" }} /></div>
+      <small>{fmt(x.v)} из {fmt(x.amount)} {x.unit}</small>
+    </div>
   );
   return (
     <div className="card">
@@ -165,7 +169,7 @@ function MicroBlock({ eaten, body, hasMeals }: { eaten: Record<NutrientKey, numb
       {hasMeals ? (
         <p className="small" style={{ margin: "2px 0 6px" }}>Меньше всего пока: {lowest.map((x) => `${x.title.toLowerCase()} ${x.pct}%`).join(", ")}.</p>
       ) : <p className="muted small mt0">Появятся, когда запишете еду из рецептов или справочника.</p>}
-      <button className="link" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? "Скрыть подробности" : "Все витамины и минералы"}</button>
+      <button className="link" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? "Свернуть список" : "Показать все витамины и минералы"}</button>
       {open && (
         <>
           <h4 className="nut-h">Витамины</h4>

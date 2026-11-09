@@ -70,11 +70,14 @@ with sync_playwright() as p:
         ok(S + "дневник: заголовок «Сегодня»", "Сегодня" in sh)
         # витамины и минералы
         ok(S + "витамины: блок есть, показано, чего меньше всего", "Витамины и минералы" in pg.inner_text(D) and "Меньше всего пока:" in pg.inner_text(D), pg.inner_text(D)[:600])
-        pg.click(D + ' .link:has-text("Все витамины и минералы")')
+        ok(S + "витамины: список открыт сразу, полоски заполнения у каждого", len(pg.query_selector_all(D + ' .mrow[role=progressbar]')) >= 20, len(pg.query_selector_all(D + ' .mrow')))
+        w = pg.evaluate("Array.from(document.querySelectorAll('.mrow .dbar i')).map(i => parseFloat(i.style.width))")
+        ok(S + "витамины: полоски частично заполнены (от 0 до 100%)", any(0 < x < 100 for x in w) and all(0 <= x <= 100 for x in w), w[:10])
         mt = pg.inner_text(D)
         ok(S + "витамины: перечень витаминов и минералов с % нормы", all(w in mt for w in ["Витамин C", "Витамин B12", "Кальций", "Железо", "Магний"]) and "%" in mt, mt[:500])
         ok(S + "витамины: сказано, что не учитывается", "Не учитываются" in mt and "хром" in mt)
-        pg.click(D + ' .link:has-text("Скрыть подробности")')
+        pg.click(D + ' .link:has-text("Свернуть список")')
+        ok(S + "витамины: список сворачивается", len(pg.query_selector_all(D + ' .mrow')) == 0)
         # вода
         pg.click(D + ' .chip:has-text("+ стакан")'); pg.click(D + ' .chip:has-text("+ стакан")')
         ok(S + "вода: 500 мл", "500 мл" in pg.inner_text(D + ' .wrow'), pg.inner_text(D + ' .wrow'))
