@@ -5,7 +5,7 @@ import { setSettings, useStore } from "../lib/store";
 import { goPage } from "../lib/ui";
 import type { Member } from "../lib/types";
 import {
-  GOALS, HEALTH_QUESTIONS, bmr, dayEnergy, hasHealthFlag, fromHours, hm, micros, newProfile, normSegs, parseHm, planFor, templateDay,
+  GOALS, HEALTH_QUESTIONS, STAGES,  bmr, dayEnergy, hasHealthFlag, fromHours, hm, micros, newProfile, normSegs, parseHm, planFor, templateDay,
   type BodyProfile, type DayLog, type Goal, type Plan,
 } from "../lib/nutrition";
 import { ACTIVITIES, ACT_GROUPS, actByKey, actKey, searchActs, type ActGroup, type Activity } from "../lib/activities";
@@ -52,7 +52,7 @@ export function Nutrition() {
         <ul className="small">
           <li>Основной обмен — формула Миффлина — Сан-Жеора (1990): вес, рост, возраст, пол.</li>
           <li>Расход за день — по дневнику: каждое занятие из таблицы 2024 Adult Compendium of Physical Activities (код и MET). Энергия = MET × основной обмен × минуты, плюс 10% на переваривание пищи.</li>
-          <li>Белки, жиры, углеводы, клетчатка, витамины и минералы — МР 2.3.1.0253-21 Роспотребнадзора (2021).</li>
+          <li>Белки, жиры, углеводы, клетчатка, вода (таблица 7), витамины и минералы, беременность и кормление (таблицы 19–20) — МР 2.3.1.0253-21 Роспотребнадзора (2021).</li>
           <li>ИМТ и окружность талии — пороги ВОЗ.</li>
           <li>Источник норм: МР 2.3.1.0253-21 «Нормы физиологических потребностей в энергии и пищевых веществах для различных групп населения Российской Федерации», Роспотребнадзор, утверждены 22.07.2021. Основной обмен — по формуле МР (9,99 × масса + 6,25 × рост − 4,92 × возраст).</li>
           <li>Приложение справочное и не заменяет врача. При болезнях, беременности и кормлении, расстройствах пищевого поведения питание обсуждайте с врачом.</li>
@@ -118,6 +118,9 @@ function PersonCard({ m, plan, onEdit }: { m: Member; plan: Plan | null; onEdit:
             <span>Основной обмен</span><span>{kcalText(plan.bmr)} ккал</span>
             <span>Активность (КФА)</span><span>{n1(plan.pal)}</span>
             <span>Группа по МР</span><span>{plan.group.title}</span>
+            {plan.mr && <><span>Норма МР для вашей группы</span><span>{kcalText(plan.mr.kcal)} ккал · белок {plan.mr.protein} г · жиры {plan.mr.fat} г · углеводы {plan.mr.carbs} г ({plan.mr.label}). Ориентир для населения; ваша цель считается индивидуально.</span></>}
+            <span>Животный белок</span><span>около {plan.animalProtein} г (половина белка)</span>
+            {plan.fats.map((f) => <Fragment key={f.key}><span>{f.title}</span><span>{f.from === f.to ? `≈ ${f.from}` : `${f.from}–${f.to}`} г</span></Fragment>)}
             <span>Насыщенные жиры</span><span>не больше {plan.satFatMax} г</span>
             <span>Добавленный сахар</span><span>не больше {plan.sugarMax} г</span>
             <span>Холестерин</span><span>менее {plan.cholMax} мг</span>
@@ -245,9 +248,16 @@ function ProfileSheet({ m, onSave, onClose }: { m: Member; onSave: (b: BodyProfi
 
       {b.sex === "f" && (
         <div className="chips" style={{ marginTop: 12 }}>
-          <button type="button" className="chip" aria-pressed={!!b.pregnant} onClick={() => up({ pregnant: !b.pregnant, lactating: false })}>Беременность</button>
-          <button type="button" className="chip" aria-pressed={!!b.lactating} onClick={() => up({ lactating: !b.lactating, pregnant: false })}>Кормлю грудью</button>
-        </div>
+          <button type="button" className="chip" aria-pressed={!!b.pregnant} onClick={() => up({ pregnant: !b.pregnant, lactating: false, stage: undefined })}>Беременность</button>
+          <button type="button" className="chip" aria-pressed={!!b.lactating} onClick={() => up({ lactating: !b.lactating, pregnant: false, stage: undefined })}>Кормлю грудью</button>
+        </div>)}
+      {b.sex === "f" && (b.pregnant || b.lactating) && (
+        <>
+          <div className="chips">
+            {(b.pregnant ? (["t1", "t2", "t3"] as const) : (["l1", "l2"] as const)).map((st) => <button type="button" key={st} className="chip" aria-pressed={b.stage === st} onClick={() => up({ stage: st })}>{STAGES[st]}</button>)}
+          </div>
+          <p className="issue little small">Нормы в этот период показаны как справочные (таблицы 19–20 МР). Питание обсуждайте с врачом.</p>
+        </>
       )}
 
       <label className="f">Здоровье (для безопасности)</label>
