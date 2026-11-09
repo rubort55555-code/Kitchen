@@ -2,6 +2,7 @@
 import type { Meal, MealSlot, Recipe } from "./types";
 import { NUTRIENTS, compositionOf, recipeNutrition, type NutrientKey } from "./recipeNutrition";
 import type { OffProduct } from "./off";
+import type { Drink } from "./interactions";
 import type { Plan } from "./nutrition";
 import { norm, uid } from "./util";
 import DATA from "./compositionData.json";
@@ -65,6 +66,14 @@ export function mealCustom(name: string, v: { kcal: number; protein?: number; fa
   if (v.fat !== undefined) n.fat = v.fat;
   if (v.carbs !== undefined) n.carbs = v.carbs;
   return mk(date, slot, name.trim(), n, who);
+}
+
+/** Напиток с кофеином: количество порций × кофеин и калории порции. */
+export function mealDrink(d: Drink, count: number, date: string, slot: MealSlot, who?: string): Meal | null {
+  if (!(count > 0)) return null;
+  const k = count;
+  const ml = d.ml * k;
+  return mk(date, slot, d.name, { kcal: d.kcal * k }, who, { qty: `${Math.round(ml)} мл`, caffeine: Math.round(d.caffeine * k) });
 }
 
 /** Та же запись на другую дату или в другое время суток («повторить вчера», «ещё раз»). */

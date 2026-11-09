@@ -49,7 +49,7 @@ with sync_playwright() as p:
 
         # Быстрая запись: рецепт
         pg.click(".today .btn:has-text('Записать еду')"); pg.wait_for_selector("text=Что вы съели")
-        pg.click(M + ' .seg button:has-text("Рецепт")')
+        pg.click(M + ' .chip:has-text("Рецепт")')
         pg.fill('[aria-label="Поиск рецепта"]', "Омлет классический")
         pg.click(M + ' .li:has-text("Омлет классический")')
         ok(S + "рецепт: показана ценность на порцию", "на порцию ≈" in pg.inner_text(M), pg.inner_text(M)[:200])
@@ -83,7 +83,7 @@ with sync_playwright() as p:
         ok(S + "вода: 500 мл", "500 мл" in pg.inner_text(D + ' .wrow'), pg.inner_text(D + ' .wrow'))
         # своё блюдо
         pg.click(D + ' .btn:has-text("Записать приём пищи")'); pg.wait_for_selector("text=Что вы съели")
-        pg.click(M + ' .seg button:has-text("Своё")')
+        pg.click(M + ' .chip:has-text("Своё")')
         ok(S + "«Своё»: кнопка выключена без данных", pg.is_disabled(M + ' .btn:has-text("Записать")'))
         pg.fill("#on", "Обед в кафе"); pg.fill("#ok", "650"); pg.fill("#op", "30")
         pg.click(M + ' .btn:has-text("Записать")'); pg.wait_for_selector(".toast")
@@ -98,7 +98,7 @@ with sync_playwright() as p:
         ok(S + "повтор из «Недавнего»: омлет теперь дважды", pg.inner_text(D).count("Омлет классический") == 2)
         # продукт из справочника
         pg.click(D + ' .btn:has-text("Записать приём пищи")'); pg.wait_for_selector("text=Что вы съели")
-        pg.click(M + ' .seg button:has-text("Продукт")')
+        pg.click(M + ' .chip:has-text("Продукт")')
         pg.fill('[aria-label="Поиск продукта"]', "ябл")
         pg.click(M + ' .li:has-text("Яблок")')
         pg.fill("#pg", "200")
@@ -106,6 +106,21 @@ with sync_playwright() as p:
         pg.click(M + ' .btn:has-text("Записать")'); pg.wait_for_selector(".toast")
         pg.wait_for_function("document.querySelectorAll('.sheet').length === 1")
         ok(S + "продукт в дневнике", "Яблок" in pg.inner_text(D))
+        # напиток с кофеином и подсказки о сочетаниях
+        pg.click(D + ' .btn:has-text("Записать приём пищи")'); pg.wait_for_selector("text=Что вы съели")
+        pg.click(M + ' .chip:has-text("Напиток")')
+        pg.click(M + ' .li:has-text("Кофе заварной")')
+        for _ in range(4): pg.click(M + ' button[aria-label="Больше"]')
+        ok(S + "напиток: 3 порции кофе — 285 мг кофеина", "285 мг" in pg.inner_text(M), pg.inner_text(M)[:300])
+        pg.click(M + ' .btn:has-text("Записать")'); pg.wait_for_selector(".toast")
+        pg.wait_for_function("document.querySelectorAll('.sheet').length === 1")
+        sh = pg.inner_text(D)
+        ok(S + "кофеин в дневнике: 285 мг из 400", "Кофеин: 285 мг из 400 мг" in sh.replace("\n", " "), sh[:900])
+        ok(S + "подсказка: больше 200 мг за раз", "больше 200 мг за раз" in sh, sh[:900])
+        pg.click(D + ' .hint summary >> nth=0')
+        ok(S + "подсказка раскрывается и показывает источник EFSA", "EFSA" in pg.inner_text(D))
+        pg.click(D + ' button[aria-label^="Удалить Кофе заварной"]')
+        ok(S + "после удаления кофе блок кофеина исчезает", "Кофеин:" not in pg.inner_text(D))
         # удаление и отмена
         n0 = len(pg.query_selector_all(D + ' .li'))
         pg.click(D + ' button[aria-label^="Удалить Яблок"]')

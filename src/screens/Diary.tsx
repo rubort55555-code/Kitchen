@@ -1,6 +1,6 @@
 // Дневник питания и экран «Сегодня»: что съедено, сколько осталось до нормы, вода, быстрая запись блюда.
 import { useMemo, useState } from "react";
-import { Seg, Sheet } from "../components/ui";
+import { Sheet } from "../components/ui";
 import { BarcodeScan } from "../components/BarcodeScan";
 import { addMeals, addWater, deleteMeals, diaryWho, repeatDay, setDiaryWho, useStore, waterOf } from "../lib/store";
 import { closeAll, closeSheet, goPage, openSheet, toast } from "../lib/ui";
@@ -8,7 +8,8 @@ import { MEAL_SLOTS, type Meal, type MealSlot } from "../lib/types";
 import { micros, planFor, type BodyProfile } from "../lib/nutrition";
 import { NUTRIENTS, recipeNutrition, type NutrientKey } from "../lib/recipeNutrition";
 import { lookupOff, nameFor, type OffProduct } from "../lib/off";
-import { copyMeal, defaultGrams, dayView, mealCustom, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
+import { DRINKS, SOURCES, caffeineLimit, caffeineOf, interactionHints, type Drink } from "../lib/interactions";
+import { copyMeal, defaultGrams, dayView, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
 import { addDays, cap, norm, ymd } from "../lib/util";
 
 const kcalText = (x: number) => Math.round(x).toLocaleString("ru-RU");
@@ -107,6 +108,7 @@ export function Diary({ date: start }: { date?: string }) {
         {view.hints.map((h, i) => <div key={i} className="issue little small">💡 {h}</div>)}
       </div>
 
+      <CombosBlock meals={list} limit={caffeineLimit(!!(member?.body?.pregnant || member?.body?.lactating))} />
       {plan && member?.body && <MicroBlock eaten={e} body={member.body} hasMeals={list.length > 0} />}
 
       <div className="card">
@@ -185,11 +187,38 @@ function MicroBlock({ eaten, body, hasMeals }: { eaten: Record<NutrientKey, numb
   );
 }
 
+/** Кофеин за день против предела и подсказки по сочетаниям (что усваивается лучше или хуже). */
+function CombosBlock({ meals, limit }: { meals: Meal[]; limit: number }) {
+  const caf = caffeineOf(meals);
+  const hints = useMemo(() => interactionHints(meals, { caffeineLimit: limit }), [meals, limit]);
+  if (!caf && !hints.length) return null;
+  return (
+    <div className="card">
+      <h3>Сочетания и усвоение</h3>
+      {caf > 0 && (
+        <>
+          <p className="small" style={{ margin: "2px 0" }}>☕ Кофеин: <b>{Math.round(caf)} мг</b> из {limit} мг</p>
+          <Bar v={caf} max={limit} cls={caf > limit ? "bad" : ""} />
+        </>
+      )}
+      {hints.map((h) => (
+        <details key={h.id} className="hint" open={h.id.startsWith("caf-limit") || h.id.startsWith("caf-single")}>
+          <summary>{h.text}</summary>
+          <ul className="small muted">{h.src.map((id) => <li key={id}>{SOURCES[id].cite}</li>)}</ul>
+        </details>
+      ))}
+      {!hints.length && <p className="muted small">Сочетаний, о которых стоит предупредить, пока нет.</p>}
+      <p className="muted small">Это подсказки по опубликованным исследованиям, а не расчёт усвоения. Эффект кофеина на магний и кальций небольшой.</p>
+    </div>
+  );
+}
+
 function MacroCell({ t, v, n }: { t: string; v: number; n?: number }) {
   return <div><b>{Math.round(v)}</b><span>{n ? `из ${n} ` : ""}{t}</span></div>;
 }
 
-type Tab = "recent" | "recipe" | "product" | "own" | "scan";
+type Tab = "recent" | "recipe" | "product" | "drink" | "own" | "scan";
+const TABS: { v: Tab; t: string }[] = [{ v: "recent", t: "Недавнее" }, { v: "recipe", t: "Рецепт" }, { v: "product", t: "Продукт" }, { v: "drink", t: "Напиток" }, { v: "own", t: "Своё" }, { v: "scan", t: "Штрихкод" }];
 
 /** Запись приёма пищи: недавнее, рецепт, продукт из справочника, своё блюдо, штрихкод. */
 export function AddMeal({ date, slot: slot0 }: { date: string; slot?: MealSlot }) {
@@ -213,7 +242,9 @@ export function AddMeal({ date, slot: slot0 }: { date: string; slot?: MealSlot }
       <div className="chips">
         {MEAL_SLOTS.map((s) => <button key={s} className="chip" aria-pressed={slot === s} onClick={() => setSlot(s)}>{SLOT_EMOJI[s]} {cap(s)}</button>)}
       </div>
-      <Seg<Tab> label="Откуда" value={tab} onChange={setTab} options={[{ v: "recent", t: "Недавнее" }, { v: "recipe", t: "Рецепт" }, { v: "product", t: "Продукт" }, { v: "own", t: "Своё" }, { v: "scan", t: "Код" }]} />
+      <div className="chips" role="group" aria-label="Откуда">
+        {TABS.map((x) => <button key={x.v} type="button" className="chip" aria-pressed={tab === x.v} onClick={() => setTab(x.v)}>{x.t}</button>)}
+      </div>
       <div style={{ marginTop: 12 }}>
         {tab === "recent" && (
           recent.length ? (
@@ -229,6 +260,7 @@ export function AddMeal({ date, slot: slot0 }: { date: string; slot?: MealSlot }
         )}
         {tab === "recipe" && <RecipePick recipes={recipes} onPick={(r, k) => save(mealFromRecipe(r, k, date, slot, who))} />}
         {tab === "product" && <ProductPick onPick={(name, g) => save(mealFromComposition(name, g, date, slot, who))} />}
+        {tab === "drink" && <DrinkPick onPick={(d, k) => save(mealDrink(d, k, date, slot, who))} />}
         {tab === "own" && <OwnForm onSave={(name, v) => save(mealCustom(name, v, date, slot, who))} />}
         {tab === "scan" && <ScanPick custom={custom} onPick={(p, name, g) => save(mealFromOff(p, name, g, date, slot, who))} />}
       </div>
@@ -304,6 +336,26 @@ function ProductPick({ onPick }: { onPick: (name: string, grams: number) => void
         {!list.length && <p className="muted small" style={{ padding: 12 }}>В справочнике состава такого нет. Запишите как «Своё» или отсканируйте штрихкод.</p>}
       </div>
     </>
+  );
+}
+
+function DrinkPick({ onPick }: { onPick: (d: Drink, count: number) => void }) {
+  const [sel, setSel] = useState<Drink | null>(null);
+  const [k, setK] = useState(1);
+  if (sel) {
+    return (
+      <>
+        <div className="card"><h3>{sel.name}</h3><p className="muted small mt0">порция {sel.ml} мл ≈ {sel.caffeine} мг кофеина, {sel.kcal} ккал (типичные значения: зависят от крепости)</p></div>
+        <Stepper v={k} set={setK} step={0.5} min={0.5} unit={k === 1 ? "порция" : "порции"} />
+        <button className="btn" style={{ marginTop: 12 }} onClick={() => onPick(sel, k)}>Записать · {Math.round(sel.caffeine * k)} мг кофеина</button>
+        <button className="btn ghost" onClick={() => setSel(null)}>Другой напиток</button>
+      </>
+    );
+  }
+  return (
+    <div className="list">
+      {DRINKS.map((d) => <button className="li" key={d.key} onClick={() => { setSel(d); setK(1); }}><div className="main"><div className="name">{d.name}</div><div className="meta">{d.ml} мл · кофеин ≈ {d.caffeine} мг</div></div></button>)}
+    </div>
   );
 }
 

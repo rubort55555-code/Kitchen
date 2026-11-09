@@ -522,3 +522,7 @@ select.inp { padding-right: 8px; }
 .dbar i.low { background: var(--bad); }
 .dbar i.mid { background: var(--soon-bar); }
 .dbar i.full { background: var(--ok-bar); }
+
+.hint { margin: 8px 0; padding: 10px 12px; border-radius: 12px; background: var(--card2); font-size: 14px; }
+.hint summary { cursor: pointer; font-weight: 600; line-height: 1.35; }
+.hint ul { margin: 6px 0 0; padding-left: 18px; }

@@ -212,6 +212,8 @@ export interface Meal {
   planEntryId?: string;
   /** Сколько: «1 порция», «150 г». */
   qty?: string;
+  /** Кофеин, мг (для напитков). */
+  caffeine?: number;
   /** Пищевая ценность съеденного; ключи — как в recipeNutrition.ts. */
   n: Partial<Record<import("./recipeNutrition").NutrientKey, number>>;
 }
