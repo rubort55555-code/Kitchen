@@ -31,6 +31,17 @@ export interface DayRoutine {
   heavy: number;
 }
 
+export interface HealthFlags { diabetes?: boolean; kidney?: boolean; gi?: boolean; eating?: boolean; meds?: boolean }
+export const HEALTH_QUESTIONS: { key: keyof HealthFlags; text: string }[] = [
+  { key: "diabetes", text: "Есть диабет" },
+  { key: "kidney", text: "Есть болезни почек" },
+  { key: "gi", text: "Есть болезни желудка или кишечника" },
+  { key: "eating", text: "Было или есть расстройство пищевого поведения" },
+  { key: "meds", text: "Регулярно принимаю лекарства" },
+];
+/** Есть ли хоть один ответ «да» в фильтр-вопросах. */
+export const hasHealthFlag = (h?: HealthFlags) => !!h && Object.values(h).some(Boolean);
+
 export interface Workout { kind: WorkoutKind; minutes: number; perWeek: number }
 
 /** Отрезок дня: с какой минуты (0–1439) и что делал (ключ занятия из activities.ts). Длится до следующего отрезка. */
@@ -54,6 +65,8 @@ export interface BodyProfile {
   goal: Goal;
   pregnant?: boolean;
   lactating?: boolean;
+  /** Фильтр-вопросы безопасности: при «да» план с дефицитом калорий не строим, только справочные данные и совет врача. */
+  health?: HealthFlags;
   /** Ограничения по здоровью от врача — приложение их не назначает, только напоминает. */
   medical?: string;
   /** Когда обновляли вес. */
@@ -116,7 +129,7 @@ export const needsBasics = (b: BodyProfile | undefined) => !!basicsError(b);
 
 /** Основной обмен, ккал/сутки (Миффлин — Сан-Жеор). */
 export function bmr(p: BodyProfile, now = new Date()): number {
-  return 10 * p.weight + 6.25 * p.height - 5 * ageOf(p, now) + (p.sex === "m" ? 5 : -161);
+  return 9.99 * p.weight + 6.25 * p.height - 4.92 * ageOf(p, now) + (p.sex === "m" ? 5 : -161);
 }
 
 /** Часы «отдыха сидя» — всё, что не распределено по другим занятиям и тренировкам. */
@@ -287,6 +300,9 @@ export function micros(p: BodyProfile, now = new Date()): Micro[] {
     { key: "se", title: "Селен", amount: m ? 70 : 55, unit: "мкг" },
     { key: "cu", title: "Медь", amount: 1, unit: "мг" },
     { key: "mn", title: "Марганец", amount: 2, unit: "мг" },
+    { key: "cr", title: "Хром", amount: 40, unit: "мкг" },
+    { key: "mo", title: "Молибден", amount: 70, unit: "мкг" },
+    { key: "cl", title: "Хлориды", amount: 2300, unit: "мг" },
   ];
 }
 
@@ -306,6 +322,11 @@ export interface Plan {
   satFatMax: number; // г
   carbs: number; // г
   sugarMax: number; // г
+  /** Пределы «не больше» по МР 2.3.1.0253-21. */
+  cholMax: number; // мг
+  transMax: number; // г (1% ккал)
+  naMax: number; // мг
+  saltMax: number; // г
   fiber: number; // г
   /** Питьевая вода, л/сутки (ориентир). */
   water: number;
@@ -337,6 +358,7 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
 
   let goal = p.goal;
   if (goal === "lose" && (p.pregnant || p.lactating)) { goal = "keep"; warnings.push("Во время беременности и кормления худеть не рекомендуется — расчёт сделан на сохранение веса. Обсудите питание с врачом."); }
+  if ((goal === "lose" || goal === "gain") && hasHealthFlag(p.health)) { goal = "keep"; warnings.push("Вы отметили состояние здоровья, при котором план питания лучше составлять с врачом. Показаны только общие нормы — без дефицита и набора калорий."); }
   if (goal === "lose" && bmi.level === "low") { goal = "keep"; warnings.push("ИМТ ниже 18,5 — снижать вес не нужно. Расчёт сделан на сохранение веса."); }
   if (goal === "lose" && bmi.bmi < 20 && bmi.level === "ok") warnings.push("Вес уже у нижней границы нормы — худеть дальше обычно не нужно.");
   if (bmi.level === "low") warnings.push("ИМТ ниже нормы. Если вес снижается без причины — покажитесь врачу.");
@@ -384,7 +406,7 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   return {
     age, bmr: Math.round(b), pal: k, group, tee: Math.round(tee), kcal: Math.round(kcal / 10) * 10, goal,
     protein: Math.round(protein), fat: Math.round(fat), satFatMax: Math.round(satFatMax), carbs: Math.round(carbs),
-    sugarMax: Math.round(sugarMax), fiber: Math.round(fiber), water: round(water, 1), weekly: round(weekly, 2),
+    sugarMax: Math.round(sugarMax), cholMax: 300, transMax: round((kcal * 0.01) / 9, 1), naMax: 2000, saltMax: 5, fiber: Math.round(fiber), water: round(water, 1), weekly: round(weekly, 2),
     bmi, waist: waistRisk(p), notes, warnings, diary: diary ? diary.days : undefined,
   };
 }

@@ -5,7 +5,7 @@ import { setSettings, useStore } from "../lib/store";
 import { goPage } from "../lib/ui";
 import type { Member } from "../lib/types";
 import {
-  GOALS, bmr, dayEnergy, fromHours, hm, micros, newProfile, normSegs, parseHm, planFor, templateDay,
+  GOALS, HEALTH_QUESTIONS, bmr, dayEnergy, hasHealthFlag, fromHours, hm, micros, newProfile, normSegs, parseHm, planFor, templateDay,
   type BodyProfile, type DayLog, type Goal, type Plan,
 } from "../lib/nutrition";
 import { ACTIVITIES, ACT_GROUPS, actByKey, actKey, searchActs, type ActGroup, type Activity } from "../lib/activities";
@@ -54,6 +54,8 @@ export function Nutrition() {
           <li>Расход за день — по дневнику: каждое занятие из таблицы 2024 Adult Compendium of Physical Activities (код и MET). Энергия = MET × основной обмен × минуты, плюс 10% на переваривание пищи.</li>
           <li>Белки, жиры, углеводы, клетчатка, витамины и минералы — МР 2.3.1.0253-21 Роспотребнадзора (2021).</li>
           <li>ИМТ и окружность талии — пороги ВОЗ.</li>
+          <li>Источник норм: МР 2.3.1.0253-21 «Нормы физиологических потребностей в энергии и пищевых веществах для различных групп населения Российской Федерации», Роспотребнадзор, утверждены 22.07.2021. Основной обмен — по формуле МР (9,99 × масса + 6,25 × рост − 4,92 × возраст).</li>
+          <li>Приложение справочное и не заменяет врача. При болезнях, беременности и кормлении, расстройствах пищевого поведения питание обсуждайте с врачом.</li>
           <li>Снижение веса — не больше 20% от расхода и не больше 750 ккал в день, не ниже 1200 ккал (женщины) и 1500 ккал (мужчины).</li>
           <li>Сколько калорий в блюдах и меню — следующий шаг: для этого нужен справочник состава продуктов.</li>
         </ul>
@@ -106,6 +108,7 @@ function PersonCard({ m, plan, onEdit }: { m: Member; plan: Plan | null; onEdit:
         <span>Вода</span><span>≈ {n1(plan.water)} л питья</span>
       </div>
       {plan.warnings.map((w, i) => <div key={i} className="issue small">⚠️ {w}</div>)}
+      {hasHealthFlag(b.health) && <div className="issue small">🩺 Вы отметили состояние здоровья: приложение не строит план с дефицитом или набором калорий. Питание лучше обсудить с врачом.</div>}
       {!b.days?.length && <p className="muted small">Активность посчитана по умолчанию (сидячая работа). Нажмите «Изменить» и распишите обычный день — расчёт станет точнее.</p>}
       <button className="link" onClick={() => setMore(!more)} aria-expanded={more}>{more ? "Скрыть подробности" : "Подробнее: обмен, активность, витамины"}</button>
       {more && (
@@ -117,6 +120,9 @@ function PersonCard({ m, plan, onEdit }: { m: Member; plan: Plan | null; onEdit:
             <span>Группа по МР</span><span>{plan.group.title}</span>
             <span>Насыщенные жиры</span><span>не больше {plan.satFatMax} г</span>
             <span>Добавленный сахар</span><span>не больше {plan.sugarMax} г</span>
+            <span>Холестерин</span><span>менее {plan.cholMax} мг</span>
+            <span>Транс-жиры</span><span>не больше {n1(plan.transMax)} г (1% ккал)</span>
+            <span>Натрий</span><span>не больше {kcalText(plan.naMax)} мг (≈ {plan.saltMax} г соли)</span>
           </div>
           {plan.waist && <div className={"nut-waist" + (plan.waist.level === "high" ? " bad" : plan.waist.level === "up" ? " soon" : "")}>Талия: {plan.waist.text}</div>}
           {plan.diary && (
@@ -243,6 +249,13 @@ function ProfileSheet({ m, onSave, onClose }: { m: Member; onSave: (b: BodyProfi
           <button type="button" className="chip" aria-pressed={!!b.lactating} onClick={() => up({ lactating: !b.lactating, pregnant: false })}>Кормлю грудью</button>
         </div>
       )}
+
+      <label className="f">Здоровье (для безопасности)</label>
+      <p className="muted small mt0">Если что-то из списка подходит, приложение не будет предлагать худеть или набирать вес — только общие нормы. Ответы остаются на телефоне.</p>
+      <div className="chips">
+        {HEALTH_QUESTIONS.map((q) => <button type="button" key={q.key} className="chip" aria-pressed={!!b.health?.[q.key]} onClick={() => up({ health: { ...b.health, [q.key]: !b.health?.[q.key] } })}>{q.text}</button>)}
+      </div>
+      {hasHealthFlag(b.health) && <p className="issue little small">Питание при таких состояниях подбирает врач. Приложение покажет только справочные нормы.</p>}
 
       <label className="f" htmlFor="nmed">Рекомендации врача по питанию</label>
       <textarea id="nmed" className="inp" rows={2} value={b.medical || ""} placeholder="Например: меньше соли, без сахара" onChange={(e: any) => up({ medical: e.target.value })} />
