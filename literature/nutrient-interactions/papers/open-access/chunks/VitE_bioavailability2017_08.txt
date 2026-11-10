@@ -1,0 +1,57 @@
+Название: Vitamin E Bioavailability: Mechanisms of Intestinal Absorption in the Spotlight
+Авторы: Emmanuelle Reboul
+Журнал: Antioxidants, 2017
+DOI: https://doi.org/10.3390/antiox6040095   PMID: 29165370   PMC: PMC5745505
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 8 из 10: References (часть 2)
+============================================================
+
+[28] 28.MuralidharaK.S.HollanderD.Intestinal absorption of alpha-tocopherol in the unanesthetized rat. The influence of luminal constituents on the absorptive processJ. Lab. Clin. Med.197790859117643
+
+[29] 29.HollanderD.RimE.MuralidharaK.S.Mechanism and site of small intestinal absorption of alpha-tocopherol in the ratGastroenterology197568149214991132630
+
+[30] 30.ReboulE.KleinA.BietrixF.GleizeB.Malezet-DesmoulinsC.SchneiderM.MargotatA.LagrostL.ColletX.BorelP.Scavenger receptor class B type I (SR-BI) is involved in vitamin E transport across the enterocyteJ. Biol. Chem.20062814739474510.1074/jbc.M50904220016380385PMC2045115
+
+[31] 31.NarushimaK.TakadaT.YamanashiY.SuzukiH.Niemann-pick C1-like 1 mediates alpha-tocopherol transportMol. Pharmacol.200874424910.1124/mol.107.04303418403720
+
+[32] 32.ReboulE.SoayfaneZ.GoncalvesA.CantielloM.BottR.NauzeM.TerceF.ColletX.ComeraC.Respective contributions of intestinal Niemann-Pick C1-like 1 and scavenger receptor class B type I to cholesterol and tocopherol uptake: In vivo v. in vitro studiesBr. J. Nutr.20121071296130410.1017/S000711451100440521929836
+
+[33] 33.AbuasalB.SylvesterP.W.KaddoumiA.Intestinal absorption of gamma-tocotrienol is mediated by Niemann-Pick C1-like 1: In situ rat intestinal perfusion studiesDrug Metab. Dispos.20103893994510.1124/dmd.109.03156720207946
+
+[34] 34.GoncalvesA.RoiS.NowickiM.NiotI.ReboulE.Cluster-determinant 36 (CD36) impacts on vitamin E postprandial responseMol. Nutr. Food Res.2014582297230610.1002/mnfr.20140033925174330
+
+[35] 35.WerderM.HanC.H.WehrliE.BimmlerD.SchulthessG.HauserH.Role of scavenger receptors SR-BI and CD36 in selective sterol uptake in the small intestineBiochemistry200140116431165010.1021/bi010982011560515
+
+[36] 36.AltmannS.W.DavisH.R.Jr.ZhuL.J.YaoX.HoosL.M.TetzloffG.IyerS.P.MaguireM.GolovkoA.ZengM.Niemann-Pick C1 Like 1 protein is critical for intestinal cholesterol absorptionScience20043031201120410.1126/science.109313114976318
+
+[37] 37.BorelP.LietzG.GoncalvesA.Szabo de EdelenyiF.LecompteS.CurtisP.GoumidiL.CaslakeM.J.MilesE.A.PackardC.CD36 and SR-BI Are Involved in Cellular Uptake of Provitamin A Carotenoids by Caco-2 and HEK Cells, and Some of Their Genetic Variants Are Associated with Plasma Concentrations of These Micronutrients in HumansJ. Nutr.201314344845610.3945/jn.112.17273423427331
+
+[38] 38.ReboulE.AbouL.MikailC.GhiringhelliO.AndreM.PortugalH.Jourdheuil-RahmaniD.AmiotM.J.LaironD.BorelP.Lutein transport by Caco-2 TC-7 cells occurs partly by a facilitated process involving the scavenger receptor class B type I (SR-BI)Biochem. J.200538745546110.1042/BJ2004055415554873PMC1134974
+
+[39] 39.ReboulE.GoncalvesA.ComeraC.BottR.NowickiM.LandrierJ.F.Jourdheuil-RahmaniD.DufourC.ColletX.BorelP.Vitamin D intestinal absorption is not a simple passive diffusion: Evidences for involvement of cholesterol transportersMol. Nutr. Food Res.20115569170210.1002/mnfr.20100055321280209
+
+[40] 40.GoncalvesA.MargierM.RoiS.ColletX.NiotI.GoupyP.Caris-VeyratC.ReboulE.Intestinal scavenger receptors are involved in vitamin K1 absorptionJ. Biol. Chem.2014289307433075210.1074/jbc.M114.58765925228690PMC4215251
+
+[41] 41.DavisH.R.Jr.ZhuL.J.HoosL.M.TetzloffG.MaguireM.LiuJ.YaoX.IyerS.P.LamM.H.LundE.G.Niemann-Pick C1 Like 1 (NPC1L1) is the intestinal phytosterol and cholesterol transporter and a key modulator of whole-body cholesterol homeostasisJ. Biol. Chem.2004279335863359210.1074/jbc.M40581720015173162
+
+[42] 42.TakadaT.YamanashiY.KonishiK.YamamotoT.ToyodaY.MasuoY.YamamotoH.SuzukiH.NPC1L1 is a key regulator of intestinal vitamin K absorption and a modulator of warfarin therapySci. Transl. Med.2015710.1126/scitranslmed.301032925696002
+
+[43] 43.SatoY.SuzukiR.KobayashiM.ItagakiS.HiranoT.NodaT.MizunoS.SugawaraM.IsekiK.Involvement of cholesterol membrane transporter Niemann-Pick C1-like 1 in the intestinal absorption of luteinJ. Pharm. Pharm. Sci.20121525626410.18433/J38K5622579005
+
+[44] 44.DroverV.A.NguyenD.V.BastieC.C.DarlingtonY.F.AbumradN.A.PessinJ.E.LondonE.SahooD.PhillipsM.C.CD36 mediates both cellular uptake of very long chain fatty acids and their intestinal absorption in miceJ. Biol. Chem.2008283131081311510.1074/jbc.M70808620018332148PMC2442355
+
+[45] 45.HansenG.H.Niels-ChristiansenL.L.ImmerdalL.DanielsenE.M.Scavenger receptor class B type I (SR-BI) in pig enterocytes: Trafficking from the brush border to lipid droplets during fat absorptionGut2003521424143110.1136/gut.52.10.142412970134PMC1773834
+
+[46] 46.GeL.WangJ.QiW.MiaoH.H.CaoJ.QuY.X.LiB.L.SongB.L.The cholesterol absorption inhibitor ezetimibe acts by blocking the sterol-induced internalization of NPC1L1Cell Metab.2008750851910.1016/j.cmet.2008.04.00118522832
+
+[47] 47.KamishikiryoJ.HaraguchiM.NakashimaS.TasakaY.NaraharaH.SugiharaN.NakamuraT.MoritaT.N-terminal domain of the cholesterol transporter Niemann-Pick C1-like 1 (NPC1L1) is essential for alpha-tocopherol transportBiochem. Biophys. Res. Commun.201748647648010.1016/j.bbrc.2017.03.06528315682
+
+[48] 48.TranT.T.PoirierH.ClementL.NassirF.PelsersM.M.PetitV.DegraceP.MonnotM.C.GlatzJ.F.AbumradN.A.Luminal lipid regulates CD36 levels and downstream signaling to stimulate chylomicron synthesisJ. Biol. Chem.2011286252012521010.1074/jbc.M111.23355121610069PMC3137091
+
+[49] 49.BeaslasO.CueilleC.DelersF.ChateauD.ChambazJ.RoussetM.CarriereV.Sensing of dietary lipids by enterocytes: A new role for SR-BI/CLA-1PLoS ONE20094e427810.1371/journal.pone.000427819169357PMC2627924
+
+[50] 50.ButtetM.TraynardV.TranT.T.BesnardP.PoirierH.NiotI.From fatty-acid sensing to chylomicron synthesis: Role of intestinal lipid-binding proteinsBiochimie201496374710.1016/j.biochi.2013.08.01123958439
+
+[51] 51.BriandO.ToucheV.ColinS.BrufauG.DavalosA.SchonewilleM.BovengaF.CarriereV.de BoerJ.F.DugardinC.Liver X Receptor Regulates Triglyceride Absorption Through Intestinal Down-regulation of Scavenger Receptor Class B, Type 1Gastroenterology201615065065810.1053/j.gastro.2015.11.01526602218

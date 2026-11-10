@@ -1,0 +1,57 @@
+Название: Mechanisms of Carotenoid Intestinal Absorption: Where Do We Stand?
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2019
+DOI: https://doi.org/10.3390/nu11040838   PMID: 31013870   PMC: PMC6520933
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 9 из 11: References (часть 2)
+============================================================
+
+[29] 29.ReboulE.SoayfaneZ.GoncalvesA.CantielloM.BottR.NauzeM.TerceF.ColletX.ComeraC.Respective contributions of intestinal niemann-pick c1-like 1 and scavenger receptor class b type i to cholesterol and tocopherol uptake: In vivo v. In vitro studiesBr. J. Nutr.20121071296130410.1017/S000711451100440521929836
+
+[30] 30.HauserH.DyerJ.H.NandyA.VegaM.A.WerderM.BieliauskaiteE.WeberF.E.CompassiS.GemperliA.BoffelliD.Identification of a receptor mediating absorption of dietary cholesterol in the intestineBiochemistry199837178431785010.1021/bi982404y9922151
+
+[31] 31.BietrixF.YanD.NauzeM.RollandC.Bertrand-MichelJ.ComeraC.SchaakS.BarbarasR.GroenA.K.PerretB.Accelerated lipid absorption in mice overexpressing intestinal sr-biJ. Biol. Chem.20062817214721910.1074/jbc.M50886820016421100PMC2034750
+
+[32] 32.NguyenD.V.DroverV.A.KnopfelM.DhanasekaranP.HauserH.PhillipsM.C.Influence of class b scavenger receptors on cholesterol flux across the brush border membrane and intestinal absorptionJ. Lipid Res.2009502235224410.1194/jlr.M900036-JLR20019454765PMC2759829
+
+[33] 33.SaddarS.CarriereV.LeeW.R.TanigakiK.YuhannaI.S.ParathathS.MorelE.WarrierM.SawyerJ.K.GerardR.D.Scavenger receptor class b type i is a plasma membrane cholesterol sensorCirc. Res.201311214015110.1161/CIRCRESAHA.112.28008123023567PMC3564583
+
+[34] 34.LinoM.FarrS.BakerC.FullerM.TrigattiB.AdeliK.Intestinal scavenger receptor class b type i as a novel regulator of chylomicron production in healthy and diet-induced obese statesAm. J. Physiol. Gastrointest. Liver Physiol.2015309G350G35910.1152/ajpgi.00086.201526138463
+
+[35] 35.MoussaM.LandrierJ.F.ReboulE.GhiringhelliO.ComeraC.ColletX.FrohlichK.BohmV.BorelP.Lycopene absorption in human intestinal cells and in mice involves scavenger receptor class b type i but not niemann-pick c1-like 1J. Nutr.20081381432143610.1093/jn/138.8.143218641187
+
+[36] 36.BorelP.LietzG.GoncalvesA.Szabo de EdelenyiF.LecompteS.CurtisP.GoumidiL.CaslakeM.J.MilesE.A.PackardC.Cd36 and sr-bi are involved in cellular uptake of provitamin a carotenoids by caco-2 and hek cells, and some of their genetic variants are associated with plasma concentrations of these micronutrients in humansJ. Nutr.201314344845610.3945/jn.112.17273423427331
+
+[37] 37.ReboulE.GoncalvesA.ComeraC.BottR.NowickiM.LandrierJ.F.Jourdheuil-RahmaniD.DufourC.ColletX.BorelP.Vitamin d intestinal absorption is not a simple passive diffusion: Evidences for involvement of cholesterol transportersMol. Nutr. Food Res.20115569170210.1002/mnfr.20100055321280209
+
+[38] 38.ReboulE.KleinA.BietrixF.GleizeB.Malezet-DesmoulinsC.SchneiderM.MargotatA.LagrostL.ColletX.BorelP.Scavenger receptor class b type i (sr-bi) is involved in vitamin e transport across the enterocyteJ. Biol. Chem.20062814739474510.1074/jbc.M50904220016380385PMC2045115
+
+[39] 39.GoncalvesA.MargierM.RoiS.ColletX.NiotI.GoupyP.Caris-VeyratC.ReboulE.Intestinal scavenger receptors are involved in vitamin k1 absorptionJ. Biol. Chem.2014289307433075210.1074/jbc.M114.58765925228690PMC4215251
+
+[40] 40.TerpstraV.van AmersfoortE.S.van VelzenA.G.KuiperJ.van BerkelT.J.Hepatic and extrahepatic scavenger receptors: Function in relation to diseaseArterioscler. Thromb. Vasc. Biol.2000201860187210.1161/01.ATV.20.8.186010938005
+
+[41] 41.DroverV.A.NguyenD.V.BastieC.C.DarlingtonY.F.AbumradN.A.PessinJ.E.LondonE.SahooD.PhillipsM.C.Cd36 mediates both cellular uptake of very long chain fatty acids and their intestinal absorption in miceJ. Biol. Chem.2008283131081311510.1074/jbc.M70808620018332148PMC2442355
+
+[42] 42.RigottiA.ActonS.L.KriegerM.The class b scavenger receptors sr-bi and cd36 are receptors for anionic phospholipidsJ. Biol. Chem.1995270162211622410.1074/jbc.270.27.162217541795
+
+[43] 43.EndemannG.StantonL.W.MaddenK.S.BryantC.M.WhiteR.T.ProtterA.A.Cd36 is a receptor for oxidized low density lipoproteinJ. Biol. Chem.199326811811118167685021
+
+[44] 44.ButtetM.TraynardV.TranT.T.BesnardP.PoirierH.NiotI.From fatty-acid sensing to chylomicron synthesis: Role of intestinal lipid-binding proteinsBiochimie201496374710.1016/j.biochi.2013.08.01123958439
+
+[45] 45.GoncalvesA.RoiS.NowickiM.NiotI.ReboulE.Cluster-determinant 36 (cd36) impacts on vitamin e postprandial responseMol. Nutr. Food Res.2014582297230610.1002/mnfr.20140033925174330
+
+[46] 46.MoussaM.GourantonE.GleizeB.El YazidiC.NiotI.BesnardP.BorelP.LandrierJ.F.Cd36 is involved in lycopene and lutein uptake by adipocytes and adipose tissue culturesMol. Nutr. Food Res.20115557858410.1002/mnfr.20100039921462325
+
+[47] 47.van BennekumA.WerderM.ThuahnaiS.T.HanC.H.DuongP.WilliamsD.L.WettsteinP.SchulthessG.PhillipsM.C.HauserH.Class b scavenger receptor-mediated intestinal absorption of dietary beta-carotene and cholesterolBiochemistry2005444517452510.1021/bi048432015766282
+
+[48] 48.DavisH.R.Jr.AltmannS.W.Niemann-pick c1 like 1 (npc1l1) an intestinal sterol transporterBiochim. Biophys. Acta2009179167968310.1016/j.bbalip.2009.01.00219272334
+
+[49] 49.DuringA.DawsonH.D.HarrisonE.H.Carotenoid transport is decreased and expression of the lipid transporters sr-bi, npc1l1, and abca1 is downregulated in caco-2 cells treated with ezetimibeJ. Nutr.20051352305231210.1093/jn/135.10.230516177187
+
+[50] 50.SatoY.SuzukiR.KobayashiM.ItagakiS.HiranoT.NodaT.MizunoS.SugawaraM.IsekiK.Involvement of cholesterol membrane transporter niemann-pick c1-like 1 in the intestinal absorption of luteinJ. Pharm. Pharm. Sci.20121525626410.18433/J38K5622579005
+
+[51] 51.MargierM.ColletX.le MayC.DesmarchelierC.AndreF.LebrunC.DefoortC.BluteauA.BorelP.LespineA.Abcb1 (p-glycoprotein) regulates vitamin d absorption and contributes to its transintestinal effluxFASEB J.2019332084209410.1096/fj.201800956R30222077
+
+[52] 52.HerronK.L.McGraneM.M.WatersD.LofgrenI.E.ClarkR.M.OrdovasJ.M.FernandezM.L.The abcg5 polymorphism contributes to individual responses to dietary cholesterol and carotenoids in eggsJ. Nutr.20061361161116510.1093/jn/136.5.116116614398

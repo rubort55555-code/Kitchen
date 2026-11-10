@@ -1,0 +1,57 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 32 из 39: References (часть 6)
+============================================================
+
+[126] 126 Lindqvist, A. , He, Y. G. , Andersson, S. , Cell type‐specific expression of beta‐carotene 9',10'‐monooxygenase in human tissues. J. Histochem. Cytochem. 2005, 53, 1403–1412.1598311410.1369/jhc.5A6705.2005
+
+[127] 127 Gireesh, T. , Sudhakaran, P. R. , In vitro uptake of beta‐carotene by human exfoliated colonic epithelial cells. Int. J. Food Sci. Nutr. 2009, 60, 109–118.10.1080/0963748070161052518608567
+
+[128] 128 Baskaran, V. , Sugawara, T. , Nagao, A. , Phospholipids affect the intestinal absorption of carotenoids in mice. Lipids 2003, 38, 705–711.1450683310.1007/s11745-003-1118-5
+
+[129] 129 Sugawara, T. , Kushiro, M. , Zhang, H. , Nara, E. et al., Lysophosphatidylcholine enhances carotenoid uptake from mixed micelles by Caco‐2 human intestinal cells. J. Nutr. 2001, 131, 2921–2927.1169461910.1093/jn/131.11.2921
+
+[130] 130 Sen, A. , Ren, J. , Ruffin, M. T. , Turgeon, D. K. et al., Relationships between serum and colon concentrations of carotenoids and fatty acids in randomized dietary intervention trial. Cancer Prev. Res. (Phila) 2013, 6, 558–565.2359274110.1158/1940-6207.CAPR-13-0019PMC4021591
+
+[131] 131 Oshima, S. , Inakuma, T. , Narisawa, T. , Absorption and distribution of lycopene in rat colon. J. Nutr. Sci. Vitaminol. (Tokyo) 1999, 45, 129–134.1036024710.3177/jnsv.45.129
+
+[132] 132 Jayasinghe, T. N. , Chiavaroli, V. , Holland, D. J. , Cutfield, W. S. et al., The new era of treatment for obesity and metabolic disorders: evidence and expectations for gut microbiome transplantation. Front. Cell Inf. Microbiol. 2016, 6, 15.10.3389/fcimb.2016.00015PMC475926526925392
+
+[133] 133 Karlsson, F. H. , Fak, F. , Nookaew, I. , Tremaroli, V. et al., Symptomatic atherosclerosis is associated with an altered gut metagenome. Nat. Commun. 2012, 3, 1245.2321237410.1038/ncomms2266PMC3538954
+
+[134] 134 Drai, J. , Borel, P. , Faure, H. , Galabert, C. et al., Fasting plasma carotenoids concentrations in Crohn's and pancreatic cancer patients compared to control subjects. Int .J. Vitam. Nutr. Res. 2009, 79, 87–94.2010821010.1024/0300-9831.79.2.87
+
+[135] 135 Geerling, B. J. , Badart‐Smook, A. , Stockbrugger, R. W. , Brummer, R. J. , Comprehensive nutritional status in patients with long‐standing Crohn disease currently in remission. Am. J. Clin. Nutr. 1998, 67, 919–926.958385010.1093/ajcn/67.5.919
+
+[136] 136 Genser, D. , Kang, M. H. , Vogelsang, H. , Elmadfa, I. , Status of lipidsoluble antioxidants and TRAP in patients with Crohn's disease and healthy controls. Eur. J. Clin. Nutr. 1999, 53, 675–679.1050976110.1038/sj.ejcn.1600764
+
+[137] 137 Granado‐Lorencio, F. , Simal‐Anton, A. , Blanco‐Navarro, I. , Gonzalez‐Dominguez, T. et al., Depletion of serum carotenoid and other fat‐soluble vitamin concentrations following obesity surgery. Obes. Surg. 2011, 21, 1605–1611.2152351710.1007/s11695-011-0413-2
+
+[138] 138 Ward, M. S. , Zhao, D. Y. , Bernstein, P. S. , Macular and serum carotenoid concentrations in patients with malabsorption syndromes. J. Ocul. Biol. Dis. Infor. 2008, 1, 12–18.1908174510.1007/s12177-008-9008-0PMC2600549
+
+[139] 139 Edes, T. E. , Walk, B. E. , Thornton, W. H., Jr. , Fritsche, K. L. , Essential fatty acid sufficiency does not preclude fat‐soluble‐vitamin deficiency in short‐bowel syndrome. Am. J. Clin Nutr. 1991, 53, 499–502.198941710.1093/ajcn/53.2.499
+
+[140] 140 Luo, M. , Estivariz, C. F. , Schleicher, R. L. , Bazargan, N. et al., Prospective analysis of serum carotenoids, vitamin A, and tocopherols in adults with short bowel syndrome undergoing intestinal rehabilitation. Nutrition 2009, 25, 400–407.1908170610.1016/j.nut.2008.10.003PMC2670964
+
+[141] 141 Husemann, B. , Groitl, H. , Zirngibl, H. , [Metabolic and surgical aspects of total gastrectomy (author's transl)]. MMW Munch. Med. Wochenschr. 1978, 120, 561–564.306045
+
+[142] 142 Jalal, F. , Nesheim, M. C. , Agus, Z. , Sanjur, D. et al., Serum retinol concentrations in children are affected by food sources of beta‐carotene, fat intake, and anthelmintic drug treatment. Am. J. Clin. Nutr. 1998, 68, 623–629.973473910.1093/ajcn/68.3.623
+
+[143] 143 Ramakrishna, B. S. , Venkataraman, S. , Mukhopadhya, A. , Tropical malabsorption. Postgrad. Med. J. 2006, 82, 779–787.1714869810.1136/pgmj.2006.048579PMC2653921
+
+[144] 144 Reboul, E. , Goncalves, A. , Comera, C. , Bott, R. et al., Vitamin D intestinal absorption is not a simple passive diffusion: evidences for involvement of cholesterol transporters. Mol. Nutr. Food Res. 2011, 55, 691–702.2128020910.1002/mnfr.201000553
+
+[145] 145 Bhosale, P. , Li, B. , Sharifzadeh, M. , Gellermann, W. et al., Purification and partial characterization of a lutein‐binding protein from human retina. Biochemistry (Mosc.) 2009, 48, 4798–4807.10.1021/bi900447819402606
+
+[146] 146 Sakudoh, T. , Iizuka, T. , Narukawa, J. , Sezutsu, H. et al., A CD36‐related transmembrane protein is coordinated with an intracellular lipid‐binding protein in selective carotenoid transport for cocoon coloration. J. Biol. Chem. 2010, 285, 7739–7751.2005398810.1074/jbc.M109.074435PMC2844218
+
+[147] 147 Tyssandier, V. , Cardinault, N. , Caris‐Veyrat, C. , Amiot, M. J. et al., Vegetable‐borne lutein, lycopene, and beta‐carotene compete for incorporation into chylomicrons, with no adverse effect on the medium‐term (3‐wk) plasma status of carotenoids in humans. Am. J. Clin. Nutr. 2002, 75, 526–534.1186485910.1093/ajcn/75.3.526
+
+[148] 148 Unlu, N. Z. , Bohn, T. , Francis, D. M. , Nagaraja, H. N. et al., Lycopene from heat‐induced cis‐isomer‐rich tomato sauce is more bioavailable than from all‐trans‐rich tomato sauce in human subjects. Br. J. Nutr. 2007, 98, 140–146.1739156810.1017/S0007114507685201
+
+[149] 149 Unlu, N. Z. , Bohn, T. , Francis, D. , Clinton, S. K. et al., Carotenoid absorption in humans consuming tomato sauces obtained from tangerine or high‐beta‐carotene varieties of tomatoes. J. Agric. Food Chem. 2007, 55, 1597–1603.1724370010.1021/jf062337b

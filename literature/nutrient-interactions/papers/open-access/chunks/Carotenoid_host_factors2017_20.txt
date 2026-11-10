@@ -1,0 +1,17 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 20 из 39: Further transport and biodistribution to potential target tissues (часть 5)
+============================================================
+
+Carotenoids occur in almost all human tissues. However, some were in the focus of research. Based on epidemiological studies, it was proposed that a frequent intake of tomato products rich in lycopene is associated with a decreased risk for prostate cancer 230, though it is unclear whether lycopene is selectively taken up in the prostate and which mechanisms may be relevant in this context. Levels of lycopene in prostate tissue have been reported around 1.7 ng/mg tissue following supplementation 231; similar to levels in adipose and liver (Table 5).
+
+In the human brain carotenes and xanthophylls were detected and the latter accounted for about 70% of total carotenoids, with lutein and zeaxanthin dominating 232. Levels were different in different brain areas and ranged from 2.8 to 11.8 pmol/g for lutein, 1.8 to 9.2 pmol/g zeaxanthin, and 7.6 to 15.2 pmol/g β‐carotene. A supplementation study with rhesus monkeys has shown that the brain levels of lutein and zeaxanthin are significantly related to their levels in the macula lutea 233, and therefore, macular pigment density may be used as a surrogate biomarker of lutein and zeaxanthin in primate brain tissue. Analyses of human brain tissues revealed a relationship between StARD3 levels and the concentration of lutein 234, with strongest correlations observed in infant (versus. adult or centenarian) brains.
+
+Colostrum contains significant amounts of α‐ and β‐carotene, lycopene, β‐cryptoxanthin, canthaxanthin, lutein and zeaxanthin, which are responsible for the yellow color. With ongoing lactation the content of carotenoids in mature milk declines, and the carotenoid pattern changes 235, being correlated with lower lipid content of breast milk 236. This could suggest that a temporal specific mechanism is involved in the transfer of carotenoids to human milk, though via which mechanism is not understood. On the other hand, breast adipose tissue carotenoid concentrations from tumor patients were significantly related to serum concentrations, and were highest for β‐cryptoxanthin (3.5 μmol/kg), β‐carotene (2.3 μmol/kg) and lutein (1.8 μmol/kg), not indicating a considerable change of patterns 237.
+
+Kidney concentrations, as other organ carotenoid levels, appear more variable than plasma concentrations, and have been reported to be in the range of 0.2–12.7 nmol/g for total carotenoids 173. However, a significant correlation for total carotenoids was found between liver, kidney and lung, thus additional discriminations of patterns could not be concluded. Again, host related factors especially those regarding the genetic variations of the proteins mention above might have impact on carotenoid distribution in these tissues.

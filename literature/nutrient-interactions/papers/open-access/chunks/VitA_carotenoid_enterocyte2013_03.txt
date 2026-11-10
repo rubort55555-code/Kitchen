@@ -1,0 +1,35 @@
+Название: Absorption of Vitamin A and Carotenoids by the Enterocyte: Focus on Transport Proteins
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2013
+DOI: https://doi.org/10.3390/nu5093563   PMID: 24036530   PMC: PMC3798921
+Лицензия: http://creativecommons.org/licenses/by/3.0/ (открытый доступ). © 2013 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 3 из 14: 2. Overview of Vitamin A and Carotenoid Fate during the Digestion Process
+============================================================
+
+Fat-soluble micronutrients including vitamin A and carotenoids are assumed to follow the fate of lipids in the upper gastrointestinal tract [5], and their absorption presumably occurs in the upper half of the small intestine.
+
+Table 1. Main dietary retinoids and carotenoids.
+
+ | Molecular structure | Main food sources (µg/100 g) [6,7,8,9] | Transport proteins in the enterocyte
+
+Retinol |  | Liver: 10,800–23,500 Fatty fish: 800−1000Butter: 700 | CRBPII, possibly ABCA1
+
+Retinyl palmitate |  | 
+
+β-carotene |  | Raw carrot: 8840 Canned carrot: 5780Cooked spinach: 5240 | SR-BI, CD36
+
+α-carotene |  | Cooked carrot: 468
+
+β-cryptoxanthin |  | Orange juice: 880 Mandarin juice: 920
+
+Lutein |  | Cooked spinach: 7040 Lettuce: 2640 | SR-BI, NPC1L1, possibly ABCG5
+
+Lycopene |  | Tomato sauce: 15,920 Tomatoes: 3030Watermelon: 4870 | SR-BI
+
+The first phase of the process of digestion/absorption is the dissolution of carotenoids [10,11] and vitamin A [12] in the fat phase of the meal. This phase is emulsified into lipid droplets in the stomach and duodenum. The size of the droplets has apparently no effect on the efficiency of the absorption of vitamin A in healthy humans, and no degradation or absorption of vitamin A has been detected at the stomach level [11,12].
+
+It seems that only the free forms of fat-soluble vitamins and carotenoids are absorbed by the intestinal mucosa, suggesting that the esterified forms are first hydrolyzed. Studies on this topic mainly concern retinyl esters. Their hydrolysis may begin in the stomach, where gastric lipase hydrolyses about 17.5% of the triacylglycerols [13]. However, the data obtained in healthy subjects have shown that gastric lipase does not significantly hydrolyse retinyl palmitate [12]. The hydrolysis of esters of vitamin A thus occurs essentially in the duodenum. The pancreatic juice contains two main enzymes that could perform this hydrolysis: cholesterol ester hydrolase (CEH) and pancreatic lipase (LP). It has been shown that the CEH can achieve this hydrolysis in vitro [14,15,16,17]. However, studies in CEH-deficient mice showed that this enzyme was not significantly involved in the hydrolysis of retinyl esters in vivo [18,19]. Since some studies showed that the LP could hydrolyse retinyl palmitate in vitro [18,20,21,22] and as the CEH was not involved, it is assumed that the luminal hydrolysis of retinyl esters is achieved by the LP, together with the pancreatic lipase-related protein 2 [22]. The enzymes described above are all good candidates for the hydrolysis of esters of carotenoids. In a study on the bioavailability of lutein esters, it was suggested that CEH could allow the release of free lutein [17]. The esters that have not been hydrolyzed by LPs or CEH may be cleaved by mucosal enzymes, given that a retinyl ester hydrolase probably due to a phospholipase B [23] was identified at the brush border membrane (BBM) level of rat and human intestine [24,25]. Finally, it is conceivable that some esters are taken up intact by the intestinal cell and hydrolyzed intracellularly [8].
+
+During the process of digestion, carotenoids and fat-soluble vitamins are incorporated with other lipids into the mixed micelles [5], presumably necessary for their absorption by the enterocyte. Mixed micelles are a mixture of phospholipids, cholesterol, lipid digestion products (such as free fatty acids, monoacylglycerols and lysophospholipids) and bile salts. Fat-soluble micronutrient transfer to mixed micelles during dietary lipid lipolysis by the gut lipases can be affected by several factors, including the micronutrient molecular structure [5,26], pH and bile lipid concentration [27,28], and the presence of a minimal amount of dietary fat [29]. Dietary fat stimulates pancreatic juice and biliary secretion, both necessary for lipid digestion and micelle formation, and provide the lipids necessary to structure the mixed micelles. It is assumed that the higher the percentage of lipid micronutrient incorporated in micelles (a percentage called “bioaccessibility”), the higher its absorption efficiency. Although it is assumed that retinol and carotenoids globally transfer to the mixed micelles, some may be incorporated into other proteic or lipid structures (vesicles and liposomes) present in the same aqueous fraction. It has been shown that vitamin A can be incorporated in phospholipid bilayers [30,31] and that vesicle stability to the bile salt deoxycholate is enhanced by the presence of vitamin A [30]. Also, β-lactoglobulin, a lipocalin recovered in cow milk, is able to bind both retinol and β-carotene [32,33,34,35]. It is therefore possible that some proteins found in the diet and/or the pancreatic/biliary secretions bind a fraction of retinol and/or carotenoids and transport them to the brush border membrane (BBM) of the enterocyte. The mechanisms of absorption may then depend on their associated vehicles. In the case of mixed micelles, the particles are isolated from the rest of the intestinal contents in the unstirred water layer of the glycocalyx area and dissociated by pH effect. Indeed, the acidic microclimate of this area promotes the protonation of fatty acids. This phenomenon reduces fatty acid solubility in micelles, causing their release and thus micelle dissociation near the BBM. Components released are then picked up by various more or less specific systems responsible for their uptake by the enterocyte.

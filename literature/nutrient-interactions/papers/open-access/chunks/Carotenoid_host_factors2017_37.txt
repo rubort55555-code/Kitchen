@@ -1,0 +1,61 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 37 из 39: References (часть 11)
+============================================================
+
+[247] 247 Adoncecchi, L. , Marrocco, W. , Suraci, C. , Pecora, P. et al., [Effect of renal and liver failure on blood levels of vitamin A, its precursor (beta‐carotene) and its carrier proteins (prealbumin and retinol binding protein)]. Boll. Soc. Ital. Biol. Sper. 1984, 60, 881–886.6539619
+
+[248] 248 Leo, M. A. , Rosman, A. S. , Lieber, C. S. , Differential depletion of carotenoids and tocopherol in liver disease. Hepatology 1993, 17, 977–986.8514270
+
+[249] 249 Socha, P. , Skorupa, E. , Pawlowska, J. , Wierzbicka, A. et al., beta‐Carotene deficiency in cholestatic liver disease of childhood is caused by beta‐carotene malabsorption. J. Pediatr. Gastroenterol. Nutr. 2010, 51, 106–109.2047968210.1097/MPG.0b013e3181d1afff
+
+[250] 250 Truong, T. Q. , Aubin, D. , Falstrault, L. , Brodeur, M. R. et al., SR‐BI, CD36, and caveolin‐1 contribute positively to cholesterol efflux in hepatic cells. Cell. Biochem. Funct. 2010, 28, 480–489.2062903710.1002/cbf.1680
+
+[251] 251 Leo, M. A. , Ahmed, S. , Aleynik, S. I. , Siegel, J. H. et al., Carotenoids and tocopherols in various hepatobiliary conditions. J. Hepatol. 1995, 23, 550–556.858314310.1016/0168-8278(95)80061-1
+
+[252] 252 Kaulmann, A. , Bohn, T. , Carotenoids, inflammation, and oxidative stress–implications of cellular signaling pathways and relation to chronic disease prevention. Nutr. Res. 2014, 34, 907–929.2513445410.1016/j.nutres.2014.07.010
+
+[253] 253 McLernon, P. C. , Wood, L. G. , Murphy, V. E. , Hodyl, N. A. et al., Circulating antioxidant profile of pregnant women with asthma. Clin. Nutr. 2012, 31, 99–107.2196239910.1016/j.clnu.2011.09.006
+
+[254] 254 Aktuna, D. , Buchinger, W. , Langsteger, W. , Meister, E. et al., [Beta‐carotene, vitamin A and carrier proteins in thyroid diseases]. Acta Med. Austriaca 1993, 20, 17–20.8475673
+
+[255] 255 Ribaya‐Mercado, J. D. , Solon, F. S. , Solon, M. A. , Cabal‐Barza, M. A. et al., Bioconversion of plant carotenoids to vitamin A in Filipino school‐aged children varies inversely with vitamin A status. Am. J. Clin. Nutr. 2000, 72, 455–465.1091994110.1093/ajcn/72.2.455
+
+[256] 256 Grummer, M. A. , Erdman, J. W., Jr. , Effect of chronic alcohol consumption and moderate fat diet on vitamin A status in rats fed either vitamin a or beta‐carotene. J. Nutr. 1983, 113, 350–364.668162910.1093/jn/113.2.350
+
+[257] 257 Veeramachaneni, S. , Ausman, L. M. , Choi, S. W. , Russell, R. M. et al., High dose lycopene supplementation increases hepatic cytochrome P4502E1 protein and inflammation in alcohol‐fed rats. J. Nutr. 2008, 138, 1329–1335.1856775610.1093/jn/138.7.1329PMC2543121
+
+[258] 258 Hessel, S. , Eichinger, A. , Isken, A. , Amengual, J. et al., CMO1 deficiency abolishes vitamin A production from beta‐carotene and alters lipid metabolism in mice. J. Biol. Chem. 2007, 282, 33553–33561.1785535510.1074/jbc.M706763200
+
+[259] 259 Lindqvist, A. , Andersson, S. , Biochemical properties of purified recombinant human beta‐carotene 15,15'‐monooxygenase. J. Biol. Chem. 2002, 277, 23942–23948.1196099210.1074/jbc.M202756200
+
+[260] 260 van Helden, Y. G. , Heil, S. G. , van Schooten, F. J. , Kramer, E. et al., Knockout of the Bcmo1 gene results in an inflammatory response in female lung, which is suppressed by dietary beta‐carotene. Cell Mol. Life Sci. 2010, 67, 2039–2056.2037296610.1007/s00018-010-0341-7PMC2877315
+
+[261] 261 van Helden, Y. G. , Godschalk, R. W. , Heil, S. G. , Bunschoten, A. et al., Downregulation of Fzd6 and Cthrc1 and upregulation of olfactory receptors and protocadherins by dietary beta‐carotene in lungs of Bcmo1−/− mice. Carcinogenesis 2010, 31, 1329–1337.2047261010.1093/carcin/bgq083
+
+[262] 262 Krinsky, N. I. , Yeum, K. J. , Carotenoid‐radical interactions. Biochem. Biophys. Res. Commun. 2003, 305, 754–760.1276305710.1016/s0006-291x(03)00816-7
+
+[263] 263 Winterhalter, P. , Ebeler, S. E. , Carotenoid Cleavage Products (vol. 1134), American Chemical Society, Washington, D.C 2013 .
+
+[264] 264 Sharoni, Y. , Linnewiel‐Hermoni, K. , Khanin, M. , Salman, H. et al., Carotenoids and apocarotenoids in cellular signaling related to cancer: A review. Mol. Nutr. Food Res. 2012, 56, 259–269.2210243110.1002/mnfr.201100311
+
+[265] 265 Blomhoff, R. , Blomhoff, H. K. , Overview of retinoid metabolism and function. J. Neurobiol. 2006, 66, 606–630.1668875510.1002/neu.20242
+
+[266] 266 Aydemir, G. , Kasiri, Y. , Bartok, E. M. , Birta, E. et al., Lycopene supplementation restores vitamin A deficiency in mice and possesses thereby partial pro‐vitamin A activity transmitted via RAR signaling. Mol. Nutr. Food Res. 2016, 60, 2413–2420.2729631710.1002/mnfr.201600031
+
+[267] 267 Mangelsdorf, D. J. , Ong, E. S. , Dyck, J. A. , Evans, R. M. , Nuclear receptor that identifies a novel retinoic acid response pathway. Nature 1990, 345, 224–229.215911110.1038/345224a0
+
+[268] 268 Pijnappel, W. W. , Hendriks, H. F. , Folkers, G. E. , van den Brink, C. E. et al., The retinoid ligand 4‐oxo‐retinoic acid is a highly active modulator of positional specification. Nature 1993, 366, 340–344.824712710.1038/366340a0
+
+[269] 269 Allenby, G. , Bocquel, M. T. , Saunders, M. , Kazmer, S. et al., Retinoic acid receptors and retinoid X receptors: interactions with endogenous retinoic acids. Proc. Natl. Acad. Sci. U S A 1993, 90, 30–34.838049610.1073/pnas.90.1.30PMC45593
+
+[270] 270 Moise, A. R. , Alvarez, S. , Dominguez, M. , Alvarez, R. et al., Activation of retinoic acid receptors by dihydroretinoids. Mol. Pharmacol. 2009, 76, 1228–1237.1977035010.1124/mol.109.060038PMC2784734
+
+[271] 271 Aydemir, G. , Carlsen, H. , Blomhoff, R. , Rühl, R. , Lycopene induces retinoic acid receptor transcriptional activation in mice. Mol. Nutr. Food Res. 2012, 56, 702–712.2264861710.1002/mnfr.201100681
+
+[272] 272 Faure, H. , Preziosi, P. , Roussel, A. M. , Bertrais, S. et al., Factors influencing blood concentration of retinol, alpha‐tocopherol, vitamin C, and beta‐carotene in the French participants of the SU.VI.MAX trial. Eur. J. Clin. Nutr. 2006, 60, 706–717.1639158610.1038/sj.ejcn.1602372

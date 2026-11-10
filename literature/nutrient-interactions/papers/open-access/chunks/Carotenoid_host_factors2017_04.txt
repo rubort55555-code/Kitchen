@@ -1,0 +1,81 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 39: Introduction (часть 3)
+============================================================
+
+Body weight, BMI | Observational, n = 2895 women | Obese women had lower plasma levels of α‐carotene, β‐carotene, β‐cryptoxanthin, and lutein‐zeaxanthin, by ca. 10%, compared to normal‐weight women. Plasma lycopene was higher by 10% | 26
+
+ | Observational, n = 194 men | Negative correlation of BMI with serum lutein but not lycopene, β‐carotene, β‐cryptoxanthin, R: ‐0.12 (Spearman rank correlation) | 25
+
+ | Observational, n = 400 adults (males, females) | Higher BMI associated with lower α‐and β‐carotene and xanthophyll serum levels | 164
+
+ | Observational, n = 946 postmenopausal women | Higher BMI correlated with lower plasma lycopene levels | 30
+
+ | Observational, n = 600 healthy adults | Higher abdominal obesity related to lower serum carotenoid levels (α‐,β‐carotene, canthaxanthin | 274
+
+ | Observational, n = 55 women | Similar total adipocyte β‐carotene content in lean and obese, β‐carotene concentration reduced in obese | 194
+
+Gender | Observational, n = 12,500 adults (male, female) | Women had higher serum β‐carotene levels than men | 272
+
+Helicobacter pylori infection | Observational, n = 49 anemic patients (male, female) | Lower gastric mucosal β‐carotene reported with increased H. pylori infection (though no effect on plasma β‐carotene levels) | 22, 275
+
+HIV | Observational, n = 1669 women | Lower serum β‐carotene levels in HIV subjects | 276
+
+Hyperthyroidism | Observational, n = 36 patients | Lower serum β‐carotene in subjects with hyperthyroidism compared to hypo‐and euthyroidism | 254
+
+Low zinc status | Intervention, n = 12 males | Supplementation with zinc (20 mg/d) improved plasma carotenoid concentration | 112
+
+ | Observational, n = 400 women HIV positive | Lower serum β‐carotene associated with markers of disease progression, univariate regression, R: – 0.083‐0.244 | 24
+
+ | Observational, n = 1665 men and women, healthy and diabetic | 20% lower plasma β‐carotene levels in diabetes subjects compared to healthy ones | 277
+
+Blood lipids, cholesterol | Observational, n = 400 adults (male, female) | Higher non‐HDL cholesterol associated with lower serum carotenoids | 164
+
+ | Observational, n = 12,500 (male, female) | Higher total cholesterol and lower triglycerides associated with higher β‐carotene in serum | 272
+
+Drug intake | Intervention, n = 8 volunteers | Intake of simvastatin (lipid‐lowering drug), 40 mg/day for 8 weeks, reduced plasma levels of carotenes (lycopene, α‐and β‐carotene) and xanthophylls (β‐cryptoxanthin, lutein), by 5 and 21%, respectively | 29
+
+ | Intervention trial, n = 6 patients (1 male, 5 female) | Intake of orlistat (lipid‐lowering drug) decreased levels of α‐, and β‐carotene in plasma | 278
+
+ | Intervention trial, n = 228 obese subjects (male, female) | Intake of orlistat (lipid‐lowering drug) decreased β‐carotene levels in plasma | 279
+
+Malaria | Observational, n = 100 malaria and 50 control children (boys, girls) | Lower serum concentration of all major carotenoids compared to control | 280
+
+Menstrual cycle | Intervention trial, n = 9 women | Lower plasma carotenoids during early than late follicular phase | 166
+
+Microbiota | Observational, n = 25 subjects (males, females) | Collinsella spp. were reduced in subjects with atherosclerosis. These subjects had lower β‐carotene in serum and the metagenome showed lower phytoene‐dehydrogenase. | 133
+
+Physical activity | Observational, n = 2895 women | Exercising women (>1 time/week) had higher levels of α‐carotene, β‐carotene, β‐cryptoxanthin, and lutein‐zeaxanthin, by ca. 5–10%, compared to normal‐weight individuals without exercise. No effect on lycopene | 26
+
+ | Observational, n = 194 men | Positive correlation of plasma levels of β‐cryptoxanthin and lutein with physical activity, rho: 0.12 to 0.17 | 25
+
+Race/Ethnicity | Observational, n = 4231 children and adolescents (male, female) | African American children had higher β‐cryptoxanthin, lutein, zeaxanthin, & lycopene serum concentrations but lower α‐carotene conc. than white children (not adjusted for dietary intake) | 281
+
+ | Observational, n = 285 healthy adolescents (male, female) | African‐American participants had lower serum concentrations of α‐carotene, but higher conc. of lutein + zeaxanthin compared with Caucasians (not adjusted for dietary intake) | 282
+
+Smoking | Observational, n = 194 men | No relation of smoking to plasma levels of lycopene, β‐carotene, β‐cryptoxanthin, lutein | 25
+
+ | Observational, n = 1198 adults (male, female) | Increased smoking related to lower plasma lycopene, α‐ and β‐carotene, lutein, β‐cryptoxanthin (ca. 10–30%), total carotenoids ca. 50% lower | 283
+
+ | Observational, n = 400 adults (male, female) | Smoking correlated with lower serum carotenoids | 164
+
+ | Observational, n = 12,500 adults (male, female) | Smoking correlated with lower β‐carotene blood concentrations (not adjusted for dietary intake) | 272
+
+Table 2. Studies investigating the variability of carotenoids in blood and target tissues, following intervention trials and observational studies
+
+Study design | Carotenoid(s) | Tissue/Compartment | Variability | Reference
+
+Observational: 901adult subjects during 4 years (male, female) | Lycopene, lutein, α‐carotene, β‐carotene, β‐cryptoxanthin | Plasma conc. | Intraindividual variance:Lutein/zeaxanthin: 20.7%β‐carotene: 21.0%α ‐carotene: 21.9%Lycopene: 35.0%β‐cryptoxanthin: 27.1%Interindividual variance:Lutein/zeaxanthin: 70.5%β‐carotene: 70.7%α ‐carotene: 67.5%Lycopene: 61.0%β‐cryptoxanthin: 66.6% | 284
+
+Observational: 381 adult women, 4‐month intervals, 4 visits | Lutein | Plasma conc. | Interindividual: 47% RSDIntraindividual: 44% of interind. variation | 243
+
+ | β‐carotene | Plasma conc. | Interindividual: 80%RSDIntraindividual: 34% of interind. variation | 
+
+ | Lycopene | Plasma conc. | Interindividual: 41% RSDIntraindividual: as interind. variation | 
+
+Observational: 21 adult subjects over 1 year (male, female), 6 measurements | β‐carotene | Plasma conc. | Interindividual: 100% RSDIntraindividual: 21% of interind. variation | 244

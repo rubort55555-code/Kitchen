@@ -1,0 +1,57 @@
+Название: Absorption of Vitamin A and Carotenoids by the Enterocyte: Focus on Transport Proteins
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2013
+DOI: https://doi.org/10.3390/nu5093563   PMID: 24036530   PMC: PMC3798921
+Лицензия: http://creativecommons.org/licenses/by/3.0/ (открытый доступ). © 2013 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 12 из 14: References (часть 3)
+============================================================
+
+[57] 57.ReboulE.ThapS.TourniaireF.AndreM.JuhelC.MorangeS.AmiotM.J.LaironD.BorelP.Differential effect of dietary antioxidant classes (carotenoids, polyphenols, vitamin C and vitamin E) on lutein absorptionBr. J. Nutr.20079744044610.1017/S000711450735260417313704
+
+[58] 58.HagemanS.H.SheL.FurrH.C.ClarkR.M.Excess vitamin E decreases canthaxanthin absorption in the ratLipids19993462763110.1007/s11745-999-0407-310405977
+
+[59] 59.KieferC.SumserE.WernetM.F.von LintigJ.A class B scavenger receptor mediates the cellular uptake of carotenoids in DrosophilaProc. Natl. Acad. Sci. USA200299105811058610.1073/pnas.16218289912136129PMC124981
+
+[60] 60.LoboM.V.HuertaL.Ruiz-VelascoN.TeixeiroE.de La CuevaP.CeldranA.Martín-HidalgoA.VegaM.A.BragadoR.Localization of the lipid receptors CD36 and CLA-1/SR-BI in the human gastrointestinal tract: Towards the identification of receptors mediating the intestinal absorption of dietary lipidsJ. Histochem. Cytochem.2001491253126010.1177/00221554010490100711561009
+
+[61] 61.TerpstraV.van AmersfoortE.S.van VelzenA.G.KuiperJ.van BerkelT.J.Hepatic and extrahepatic scavenger receptors: Function in relation to diseaseArterioscler. Thromb. Vasc. Biol.2000201860187210.1161/01.ATV.20.8.186010938005
+
+[62] 62.HauserH.DyerJ.H.NandyA.VegaM.A.WerderM.BieliauskaiteE.WeberF.E.CompassiS.GemperliA.BoffelliD.Identification of a receptor mediating absorption of dietary cholesterol in the intestineBiochemistry199837178431785010.1021/bi982404y9922151
+
+[63] 63.BietrixF.YanD.NauzeM.RollandC.Bertrand-MichelJ.ComeraC.SchaakS.BarbarasR.GroenA.K.PerretB.Accelerated lipid absorption in mice overexpressing intestinal SR-BIJ. Biol. Chem.20062817214721910.1074/jbc.M50886820016421100PMC2034750
+
+[64] 64.ReboulE.BorelP.Proteins involved in uptake, intracellular transport and basolateral secretion of fat-soluble vitamins and carotenoids by mammalian enterocytesProg. Lipid Res.20115038840210.1016/j.plipres.2011.07.00121763723
+
+[65] 65.ReboulE.AbouL.MikailC.GhiringhelliO.AndreM.PortugalH.Jourdheuil-RahmaniD.AmiotMJ.LaironD.BorelP.Lutein transport by Caco-2 TC-7 cells occurs partly by a facilitated process involving the scavenger receptor class B type I (SR-BI)Biochem. J.200538745546110.1042/BJ2004055415554873PMC1134974
+
+[66] 66.Van BennekumA.WerderM.ThuahnaiS.T.HanC.H.DuongP.WilliamsD.L.WettsteinP.SchulthessG.PhillipsM.C.Class B scavenger receptor-mediated intestinal absorption of dietary beta-carotene and cholesterolBiochemistry2005444517452510.1021/bi048432015766282
+
+[67] 67.DuringA.DoraiswamyS.HarrisonE.H.Xanthophylls are preferentially taken up compared with beta-carotene by retinal cells via a SRBI-dependent mechanismJ. Lipid Res.2008491715172410.1194/jlr.M700580-JLR20018424859PMC2444002
+
+[68] 68.MoussaM.LandrierJ.F.ReboulE.GhiringhelliO.ComeraC.ColletX.FröhlichK.BöhmV.BorelP.Lycopene absorption in human intestinal cells and in mice involves scavenger receptor class B type I but not Niemann-Pick C1-like 1J. Nutr.2008138143214361864118710.1093/jn/138.8.1432
+
+[69] 69.TandonN.N.KraliszU.JamiesonG.A.Identification of glycoprotein IV (CD36) as a primary receptor for platelet-collagen adhesionJ. Biol. Chem.1989264757675832468670
+
+[70] 70.GoudriaanJ.R.DahlmansV.E.FebbraioM.TeusinkB.RomijnJ.A.HavekesL.M.VosholP.J.Intestinal lipid absorption is not affected in CD36 deficient miceMol. Cell. Biochem.200223919920210.1023/A:102057541278912479586
+
+[71] 71.DroverV.A.AjmalM.NassirF.DavidsonN.O.NauliA.M.SahooD.TsoP.AbumradN.A.CD36 deficiency impairs intestinal lipid secretion and clearance of chylomicrons from the bloodJ. Clin. Investig.2005115129012971584120510.1172/JCI21514PMC1074677
+
+[72] 72.SakudohT.IizukaT.NarukawaJ.SezutsuH.KobayashiI.KuwazakiS.BannoY.KitamuraA.SugiyamaH.TakadaN.A CD36-related transmembrane protein is coordinated with an intracellular lipid-binding protein in selective carotenoid transport for cocoon colorationJ. Biol. Chem.20102857739775110.1074/jbc.M109.07443520053988PMC2844218
+
+[73] 73.MoussaM.GourantonE.GleizeB.YazidiC.E.NiotI.BesnardP.BorelP.LandrierJ.F.CD36 is involved in lycopene and lutein uptake by adipocytes and adipose tissue culturesMol. Nutr. Food Res.20115557858410.1002/mnfr.20100039921462325
+
+[74] 74.RingA.Le LayS.PohlJ.VerkadeP.StremmelW.Caveolin-1 is required for fatty acid translocase (FAT/CD36) localization and function at the plasma membrane of mouse embryonic fibroblastsBiochim. Biophys. Acta2006176141642310.1016/j.bbalip.2006.03.01616702023
+
+[75] 75.DaviesJ.P.LevyB.IoannouY.A.Evidence for a Niemann-pick C (NPC) gene family: Identification and characterization of NPC1L1Genomics20006513714510.1006/geno.2000.615110783261
+
+[76] 76.AltmannS.W.DavisH.R.Jr.ZhuL.J.YaoX.HoosL.M.TetzloffG.IyerS.P.MaguireM.GolovkoA.ZengM.Niemann-Pick C1 Like 1 protein is critical for intestinal cholesterol absorptionScience20043031201120410.1126/science.109313114976318
+
+[77] 77.DaviesJ.P.ScottC.OishiK.LiapisA.IoannouY.A.Inactivation of NPC1L1 causes multiple lipid transport defects and protects against diet-induced hypercholesterolemiaJ. Biol. Chem.200528012710127201567103210.1074/jbc.M409110200
+
+[78] 78.Garcia-CalvoM.LisnockJ.BullH.G.HawesB.E.BurnettD.A.BraunM.P.CronaJ.H.DavisH.R.Jr.DeanD.C.DetmersP.A.The target of ezetimibe is Niemann-Pick C1-Like 1 (NPC1L1)Proc. Natl. Acad. Sci. USA20051028132813710.1073/pnas.050026910215928087PMC1149415
+
+[79] 79.DuvalC.ToucheV.TailleuxA.FruchartJ.C.FievetC.ClaveyV.StaelsB.LestavelS.Niemann-Pick C1 like 1 gene expression is down-regulated by LXR activators in the intestineBiochem. Biophys. Res. Commun.20063401259126310.1016/j.bbrc.2005.12.13716414355
+
+[80] 80.DavisH.R.Jr.ZhuL.J.HoosL.M.TetzloffG.MaguireM.LiuJ.YaoX.IyerS.P.LamM.H.LundE.G.Niemann-Pick C1 Like 1 (NPC1L1) is the intestinal phytosterol and cholesterol transporter and a key modulator of whole-body cholesterol homeostasisJ. Biol. Chem.2004279335863359210.1074/jbc.M40581720015173162

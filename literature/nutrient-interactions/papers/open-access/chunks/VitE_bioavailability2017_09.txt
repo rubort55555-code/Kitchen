@@ -1,0 +1,65 @@
+Название: Vitamin E Bioavailability: Mechanisms of Intestinal Absorption in the Spotlight
+Авторы: Emmanuelle Reboul
+Журнал: Antioxidants, 2017
+DOI: https://doi.org/10.3390/antiox6040095   PMID: 29165370   PMC: PMC5745505
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 9 из 10: References (часть 3)
+============================================================
+
+[52] 52.GoncalvesA.GonteroB.NowickiM.MargierM.MassetG.AmiotM.J.ReboulE.Micellar lipid composition affects micelle interaction with class B scavenger receptor extracellular loopsJ. Lipid Res.2015561123113310.1194/jlr.M05761225833688PMC4442870
+
+[53] 53.AnwarK.KaydenH.J.HussainM.M.Transport of vitamin E by differentiated Caco-2 cellsJ. Lipid Res.2006471261127310.1194/jlr.M500523-JLR20016569910
+
+[54] 54.ZimmerS.StockerA.SarboloukiM.N.SpycherS.E.SassoonJ.AzziA.A novel human tocopherol-associated protein—Cloning, in vitro expression, and characterizationJ. Biol. Chem.2000275256722568010.1074/jbc.M00085120010829015
+
+[55] 55.ManorD.AtkinsonJ.Is tocopherol associated protein a misnomer?J. Nutr. Biochem20031442142210.1016/S0955-2863(03)00073-112915224
+
+[56] 56.ZinggJ.M.KempnaP.ParisM.ReiterE.VillacortaL.CipolloneR.MunteanuA.De PascaleC.MeniniS.CueffA.Characterization of three human sec14p-like proteins: Alpha-tocopherol transport activity and expression pattern in tissuesBiochimie2008901703171510.1016/j.biochi.2008.07.00818725265
+
+[57] 57.AnwarK.IqbalJ.HussainM.M.Mechanisms involved in vitamin E transport by primary enterocytes and in vivo absorptionJ. Lipid Res.2007482028203810.1194/jlr.M700207-JLR20017582142
+
+[58] 58.ReboulE.TrompierD.MoussaM.KleinA.LandrierJ.F.ChiminiG.BorelP.ATP-binding cassette transporter A1 is significantly involved in the intestinal absorption of alpha- and gamma-tocopherol but not in that of retinyl palmitate in miceAm. J. Clin. Nutr.20098917718410.3945/ajcn.2008.2655919056557
+
+[59] 59.OlivierM.BottG.R.FrisdalE.NowickM.PlengpanichW.DesmarchelierC.RoiS.QuinnC.M.GelissenI.JessupW.ABCG1 is involved in vitamin E effluxBiochim. Biophys. Acta201418411741175110.1016/j.bbalip.2014.10.00325462452
+
+[60] 60.NicodN.ParkerR.S.Vitamin E secretion by Caco-2 monolayers to APOA1, but not to HDL, is vitamer selectiveJ. Nutr.20131431565157210.3945/jn.113.17683423946344PMC3771812
+
+[61] 61.RamasamyI.Update on the molecular biology of dyslipidemiasClin. Chim. Acta201645414318510.1016/j.cca.2015.10.03326546829
+
+[62] 62.CuerqC.RestierL.DraiJ.BlondE.RouxA.CharriereS.MichalskiM.C.Di FilippoM.LevyE.LachauxA.Establishment of reference values of alpha-tocopherol in plasma, red blood cells and adipose tissue in healthy children to improve the management of chylomicron retention disease, a rare genetic hypocholesterolemiaOrphanet J. Rare Dis.20161111410.1186/s13023-016-0498-827520363PMC4982212
+
+[63] 63.BurnettJ.R.HooperA.J.Vitamin E and oxidative stress in abetalipoproteinemia and familial hypobetalipoproteinemiaFree Radic. Biol. Med.201588596210.1016/j.freeradbiomed.2015.05.04426086616
+
+[64] 64.ReboulE.BorelP.Proteins involved in uptake, intracellular transport and basolateral secretion of fat-soluble vitamins and carotenoids by mammalian enterocytesProg. Lipid Res.20115038840210.1016/j.plipres.2011.07.00121763723
+
+[65] 65.GoncalvesA.RoiS.NowickiM.DhaussyA.HuertasA.AmiotM.J.ReboulE.Fat-soluble vitamin intestinal absorption: Absorption sites in the intestine and interactions for absorptionFood Chem.201517215516010.1016/j.foodchem.2014.09.02125442537
+
+[66] 66.NassirF.WilsonB.HanX.GrossR.W.AbumradN.A.CD36 is important for fatty acid and cholesterol uptake by the proximal but not distal intestineJ. Biol. Chem.2007282194931950110.1074/jbc.M70333020017507371
+
+[67] 67.BietrixF.YanD.NauzeM.RollandC.Bertrand-MichelJ.ComeraC.SchaakS.BarbarasR.GroenA.K.PerretB.Accelerated lipid absorption in mice overexpressing intestinal SR-BIJ. Biol. Chem.20062817214721910.1074/jbc.M50886820016421100PMC2034750
+
+[68] 68.CaiS.F.KirbyR.J.HowlesP.N.HuiD.Y.Differentiation-dependent expression and localization of the class B type I scavenger receptor in intestineJ. Lipid Res.20014290290911369797
+
+[69] 69.MassonC.J.PlatJ.MensinkR.P.NamiotA.KisielewskiW.NamiotZ.FullekrugJ.EhehaltR.GlatzJ.F.PelsersM.M.Fatty acid- and cholesterol transporter protein expression along the human intestinal tractPLoS ONE20105e1038010.1371/journal.pone.001038020454462PMC2861623
+
+[70] 70.DrevonC.A.Absorption, transport and metabolism of vitamin EFree Radic. Res. Commun.19911422924610.3109/107157691090889521874454
+
+[71] 71.TraberM.G.SiesH.Vitamin E in humans: Demand and deliveryAnnu. Rev. Nutr.19961632134710.1146/annurev.nu.16.070196.0015418839930
+
+[72] 72.CohnW.Bioavailability of vitamin EEur. J. Clin. Nutr.199751S80S859023489
+
+[73] 73.BrunoR.S.LeonardS.W.ParkS.I.ZhaoY.TraberM.G.Human vitamin E requirements assessed with the use of apples fortified with deuterium-labeled alpha-tocopheryl acetateAm. J. Clin. Nutr.2006832993041646998710.1093/ajcn/83.2.299
+
+[74] 74.TraberM.G.BurtonG.W.IngoldK.U.KaydenH.J.RRR- and SRR-alpha-tocopherols are secreted without discrimination in human chylomicrons, but RRR-alpha-tocopherol is preferentially secreted in very low density lipoproteinsJ. Lipid Res.1990316756852351872
+
+[75] 75.TraberM.G.KaydenH.J.Preferential incorporation of alpha-tocopherol vs. gamma-tocopherol in human lipoproteinsAm. J. Clin. Nutr.198949517526292308410.1093/ajcn/49.3.517
+
+[76] 76.PorsgaardT.HoyC.E.Absorption by rats of tocopherols present in edible vegetable oilsLipids2000351073107810.1007/s11745-000-0621-z11104012
+
+[77] 77.BardowellS.A.DingX.ParkerR.S.Disruption of P450-mediated vitamin E hydroxylase activities alters vitamin E status in tocopherol supplemented mice and reveals extra-hepatic vitamin E metabolismJ. Lipid Res.2012532667267610.1194/jlr.M03073422969154PMC3494260
+
+[78] 78.RiedlJ.LinseisenJ.HoffmannJ.WolframG.Some dietary fibers reduce the absorption of carotenoids in womenJ. Nutr.1999129217021761057354510.1093/jn/129.12.2170
+
+[79] 79.GreenwoodD.C.CadeJ.E.WhiteK.BurleyV.J.SchorahC.J.The impact of high non-starch polysaccharide intake on serum micronutrient concentrations in a cohort of womenPublic Health Nutr.2004754354810.1079/PHN200357115153260

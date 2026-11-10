@@ -1,0 +1,55 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 33 из 39: References (часть 7)
+============================================================
+
+[150] 150 Failla, M. L. , Chitchumroonchokchai, C. , Ishida, B. K. , In vitro micellarization and intestinal cell uptake of cis isomers of lycopene exceed those of all‐trans lycopene. J. Nutr. 2008, 138, 482–486.1828735310.1093/jn/138.3.482
+
+[151] 151 Shaish, A. , Harari, A. , Hananshvili, L. , Cohen, H. et al., 9‐cis beta‐carotene‐rich powder of the alga Dunaliella bardawil increases plasma HDL‐cholesterol in fibrate‐treated patients. Atherosclerosis 2006, 189, 215–221.1641355610.1016/j.atherosclerosis.2005.12.004
+
+[152] 152 During, A. , Hussain, M. M. , Morel, D. W. , Harrison, E. H. , Carotenoid uptake and secretion by CaCo‐2 cells: beta‐carotene isomer selectivity and carotenoid interactions. J. Lipid Res. 2002, 43, 1086–1095.1209149310.1194/jlr.m200068-jlr200
+
+[153] 153 During, A. , Harrison, E. H. , Mechanisms of provitamin A (carotenoid) and vitamin A (retinol) transport into and out of intestinal Caco‐2 cells. J. Lipid Res. 2007, 48, 2283–2294.1764477610.1194/jlr.M700263-JLR200
+
+[154] 154 Skrede, B. , Blomhoff, R. , Maelandsmo, G. M. , Ose, L. et al., Uptake of chylomicron remnant retinyl esters in human leukocytes in vivo. Eur. J. Clin. Invest. 1992, 22, 229–234.149963910.1111/j.1365-2362.1992.tb01456.x
+
+[155] 155 Eroglu, A. , Hruszkewycz, D. P. , dela Sena, C. , Narayanasamy, S. et al., Naturally occurring eccentric cleavage products of provitamin A beta‐carotene function as antagonists of retinoic acid receptors. J. Biol. Chem. 2012, 287, 15886–15895.2241843710.1074/jbc.M111.325142PMC3346154
+
+[156] 156 Niesor, E. J. , Chaput, E. , Mary, J. L. , Staempfli, A. et al., Effect of compounds affecting ABCA1 expression and CETP activity on the HDL pathway involved in intestinal absorption of lutein and zeaxanthin. Lipids 2014, 49, 1233–1243.2530095310.1007/s11745-014-3958-8
+
+[157] 157 Borel, P. , Grolier, P. , Armand, M. , Partier, A. et al., Carotenoids in biological emulsions: solubility, surface‐to‐core distribution, and release from lipid droplets. J. Lipid Res. 1996, 37, 250–261.9026524
+
+[158] 158 Tyssandier, V. , Choubert, G. , Grolier, P. , Borel, P. , Carotenoids, mostly the xanthophylls, exchange between plasma lipoproteins. Int. J. Vitam. Nutr. Res. 2002, 72, 300–308.1246310510.1024/0300-9831.72.5.300
+
+[159] 159 Kostic, D. , White, W. S. , Olson, J. A. , Intestinal absorption, serum clearance, and interactions between lutein and beta‐carotene when administered to human adults in separate or combined oral doses. Am. J. Clin. Nutr. 1995, 62, 604–610.766112310.1093/ajcn/62.3.604
+
+[160] 160 Diwadkar‐Navsariwala, V. , Novotny, J. A. , Gustin, D. M. , Sosman, J. A. et al., A physiological pharmacokinetic model describing the disposition of lycopene in healthy men. J. Lipid Res. 2003, 44, 1927–1939.1286753910.1194/jlr.M300130-JLR200
+
+[161] 161 Johnson, E. J. , Russell, R. M. , Distribution of orally administered beta‐carotene among lipoproteins in healthy men. Am. J. Clin. Nutr. 1992, 56, 128–135.160974910.1093/ajcn/56.1.128
+
+[162] 162 Herbeth, B. , Gueguen, S. , Leroy, P. , Siest, G. et al., The lipoprotein lipase serine 447 stop polymorphism is associated with altered serum carotenoid concentrations in the Stanislas Family Study. J. Am. Coll. Nutr. 2007, 26, 655–662.1818743010.1080/07315724.2007.10719644
+
+[163] 163 Borel, P. , Moussa, M. , Reboul, E. , Lyan, B. et al., Human fasting plasma concentrations of vitamin E and carotenoids, and their association with genetic variants in apo C‐III, cholesteryl ester transfer protein, hepatic lipase, intestinal fatty acid binding protein and microsomal triacylglycerol transfer protein. Br. J. Nutr. 2009, 101, 680–687.1866242710.1017/S0007114508030754
+
+[164] 164 Brady, W. E. , Mares‐Perlman, J. A. , Bowen, P. , Stacewicz‐Sapuntzakis, M. , Human serum carotenoid concentrations are related to physiologic and lifestyle factors. J. Nutr. 1996, 126, 129–137.855829210.1093/jn/126.1.129
+
+[165] 165 Cardinault, N. , Tyssandier, V. , Grolier, P. , Winklhofer‐Roob, B. M. et al., Comparison of the postprandial chylomicron carotenoid responses in young and older subjects. Eur. J. Nutr. 2003, 42, 315–323.1467360410.1007/s00394-003-0426-2
+
+[166] 166 Forman, M. R. , Johnson, E. J. , Lanza, E. , Graubard, B. I. et al., Effect of menstrual cycle phase on the concentration of individual carotenoids in lipoproteins of premenopausal women: a controlled dietary study. Am. J. Clin. Nutr. 1998, 67, 81–87.944037910.1093/ajcn/67.1.81
+
+[167] 167 Mumford, S. L. , Browne, R. W. , Schliep, K. C. , Schmelzer, J. et al., Serum antioxidants are associated with serum reproductive hormones and ovulation among healthy women. J. Nutr. 2016, 146, 98–106.2658167910.3945/jn.115.217620PMC4700980
+
+[168] 168 Goulinet, S. , Chapman, M. J. , Plasma LDL and HDL subspecies are heterogenous in particle content of tocopherols and oxygenated and hydrocarbon carotenoids. Relevance to oxidative resistance and atherogenesis. Arterioscler. Thromb. Vasc. Biol. 1997, 17, 786–796.910879510.1161/01.atv.17.4.786
+
+[169] 169 Stahl, W. , van den Berg, H. , Arthur, J. , Bast, A. et al., Bioavailability and metabolism. Mol. Aspects Med. 2002, 23, 39–100.1207977010.1016/s0098-2997(02)00016-x
+
+[170] 170 Korytko, P. J. , Rodvold, K. A. , Crowell, J. A. , Stacewicz‐Sapuntzakis, M. et al., Pharmacokinetics and tissue distribution of orally administered lycopene in male dogs. J. Nutr. 2003, 133, 2788–2792.1294936610.1093/jn/133.9.2788
+
+[171] 171 van, L. M. , West, C. E. , van Breemen, R. B. , Isotopic tracer techniques for studying the bioavailability and bioefficacy of dietary carotenoids, particularly beta‐carotene, in humans: a review. Am. J. Clin. Nutr. 2003, 77, 12–28.1249931810.1093/ajcn/77.1.12
+
+[172] 172 Kaplan, L. A. , Lau, J. M. , Stein, E. A. , Carotenoid composition, concentrations, and relationships in various human organs. Clin. Physiol. Biochem. 1990, 8, 1–10.2323157

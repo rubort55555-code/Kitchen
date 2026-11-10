@@ -1,0 +1,19 @@
+Название: Mechanisms of Carotenoid Intestinal Absorption: Where Do We Stand?
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2019
+DOI: https://doi.org/10.3390/nu11040838   PMID: 31013870   PMC: PMC6520933
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 2 из 11: 1. Introduction
+============================================================
+
+Carotenoids are hydrophobic molecules synthesized by plants and by some microorganisms (bacteria, algae, or fungi). Carotenoid physicochemical properties determine their distribution in the cellular environment: carotenoids are associated with membrane lipid bilayers and cytosolic lipid droplets. More than 600 different carotenoids have been found in nature, but only 40 in the human diet and about 20 have been clearly identified in human blood and tissues [1,2].
+
+Carotenoids are polymers of isopentenyl diphosphate with 40 carbon atoms. They derive chemically from a basic structure formed by the linear sequence of 8 isoprenic units, associated in two groups of four units head to tail. The first molecule of this biosynthesis pathway is phytoene, which presents 3 conjugated double bonds in the center of the molecule and 6 other unconjugated double bonds through the length of the molecule. Phytoene is then enzymatically desaturated to produce phytofluene and eventually lycopene, a linear basic structure (C40H56) with many conjugated double bonds showing a characteristic red color [3]. Other carotenes derive from lycopene by cyclization and dehydrogenation, and xanthophylls derive from carotenes by oxidation [4] (Table 1). Some xanthophyll carotenoids such as β-cryptoxanthin [5] or lutein [6] can be found in esterified forms. Additionally, each carotenoid double bond can take a trans or cis configuration. Most of natural carotenoids are all-trans molecules, but cis-isomers can be produced during heat treatments [7]. Finally, it is worth mentioning that small amounts of apocarotenoids, i.e., cleavage products of parent 40-C carotenoids, can be naturally found in foods and/or produced during food processing, but usually represent less than 5% of the parent carotenoid levels [8,9].
+
+The main dietary sources of carotenoids are colored fruits and vegetables (Table 1).
+
+Carotenoid health properties were initially mainly accredited to their antioxidant properties as carotenoid are, at least in vitro, powerful radical quenchers [12]. Later, new investigations have highlighted the carotenoid ability to regulate intracellular signalling cascades, thus influencing both gene expression and protein translation in a broad number of metabolic pathways related to inflammatory and oxidative stress modulation [13]. However, the physiological relevance of these observations still needs to be fully established in humans. Interestingly, randomized placebo-controlled clinical trials have evidenced that supplementation with the xanthophylls lutein and zeaxanthin, which specifically accumulate into the human macula, was associated with improved visual function and decreased risk of progression to late age macular degeneration. These xanthophylls also display encouraging preventive and therapeutic effects on cataracts and retinopathies [14]. Finally, some carotenoids, such as α-carotene, β-carotene and β-cryptoxanthin, are vitamin A precursors. Indeed, they can be cleaved, mainly at the intestinal level, and metabolized into retinol (cf. Section 3.2).
+
+After a short description of carotenoid fate in the human upper gastrointestinal lumen, a focus will be put on the identified proteins participating in carotenoid transport and metabolism in intestinal cells and on the regulation of these processes.

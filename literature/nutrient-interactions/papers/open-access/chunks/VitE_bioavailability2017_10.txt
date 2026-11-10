@@ -1,0 +1,37 @@
+Название: Vitamin E Bioavailability: Mechanisms of Intestinal Absorption in the Spotlight
+Авторы: Emmanuelle Reboul
+Журнал: Antioxidants, 2017
+DOI: https://doi.org/10.3390/antiox6040095   PMID: 29165370   PMC: PMC5745505
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 10 из 10: References (часть 4)
+============================================================
+
+[80] 80.RoodenburgA.J.LeenenR.van het HofK.H.WeststrateJ.A.TijburgL.B.Amount of fat in the diet affects bioavailability of lutein esters but not of alpha-carotene, beta-carotene, and vitamin E in humansAm. J. Clin. Nutr.200071118711931079938210.1093/ajcn/71.5.1187
+
+[81] 81.JeanesY.M.HallW.L.EllardS.LeeE.LodgeJ.K.The absorption of vitamin E is influenced by the amount of fat in a meal and the food matrixBr. J. Nutr.20049257557910.1079/BJN2004124915522126
+
+[82] 82.KimJ.E.FerruzziM.G.CampbellW.W.Egg Consumption Increases Vitamin E Absorption from Co-Consumed Raw Mixed Vegetables in Healthy Young MenJ. Nutr.20161462199220510.3945/jn.116.23630727655756PMC5086793
+
+[83] 83.MahE.SapperT.N.ChitchumroonchokchaiC.FaillaM.L.SchillK.E.ClintonS.K.BobeG.TraberM.G.BrunoR.S.alpha-Tocopherol bioavailability is lower in adults with metabolic syndrome regardless of dairy fat co-ingestion: A randomized, double-blind, crossover trialAm. J. Clin. Nutr.20151021070108010.3945/ajcn.115.11857026447154PMC4625597
+
+[84] 84.PreveraudD.P.DevillardE.BorelP.Dietary fat modulates dl-alpha-tocopheryl acetate (vitamin E) bioavailability in adult cockerelsBr. Poult. Sci.2015569410210.1080/00071668.2014.98207425354175
+
+[85] 85.FaillaM.L.ChitchumronchokchaiC.FerruzziM.G.GoltzS.R.CampbellW.W.Unsaturated fatty acids promote bioaccessibility and basolateral secretion of carotenoids and alpha-tocopherol by Caco-2 cellsFood Funct.201451101111210.1039/C3FO60599J24710065
+
+[86] 86.KooS.I.NohS.K.Phosphatidylcholine inhibits and lysophosphatidylcholine enhances the lymphatic absorption of alpha-tocopherol in adult ratsJ. Nutr.20011317177221123874910.1093/jn/131.3.717
+
+[87] 87.NishimukaiM.HaraH.Enteral administration of soybean phosphatidylcholine enhances the lymphatic absorption of lycopene, but reduces that of alpha-tocopherol in ratsJ. Nutr.2004134186218661528436710.1093/jn/134.8.1862
+
+[88] 88.ReboulE.ThapS.PerrotE.AmiotM.J.LaironD.BorelP.Effect of the main dietary antioxidants (carotenoids, gamma-tocopherol, polyphenols, and vitamin C) on alpha-tocopherol absorptionEur. J. Clin. Nutr.2007611167117310.1038/sj.ejcn.160263517268411
+
+[89] 89.SklanD.DonoghueS.Vitamin E response to high dietary vitamin A in the chickJ. Nutr.1982112759765706951110.1093/jn/112.4.759
+
+[90] 90.GriffithsD.W.The inhibition of digestive enzymes by polyphenolic compoundsAdv. Exp. Med. Biol.1986199509516379929010.1007/978-1-4757-0022-0_29
+
+[91] 91.FardetA.MoriseA.KalonjiE.MargaritisI.MariottiF.Influence of phytosterol and phytostanol food supplementation on plasma liposoluble vitamins and provitamin A carotenoid levels in humans: An updated review of the evidenceCrit. Rev. Food Sci. Nutr.2017571906192110.1080/10408398.2015.103361126193046
+
+[92] 92.RichelleM.EnslenM.HagerC.GrouxM.TavazziI.GodinJ.P.BergerA.MetaironS.QuaileS.Piguet-WelschC.Both free and esterified plant sterols reduce cholesterol absorption and the bioavailability of beta-carotene and alpha-tocopherol in normocholesterolemic humansAm. J. Clin. Nutr.2004801711771521304510.1093/ajcn/80.1.171
+
+[93] 93.BorelP.DesmarchelierC.Genetic Variations Involved in Vitamin E StatusInt. J. Mol. Sci.20161710.3390/ijms1712209427983595PMC5187894

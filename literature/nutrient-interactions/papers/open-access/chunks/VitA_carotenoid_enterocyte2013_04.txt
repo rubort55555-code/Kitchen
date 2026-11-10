@@ -1,0 +1,11 @@
+Название: Absorption of Vitamin A and Carotenoids by the Enterocyte: Focus on Transport Proteins
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2013
+DOI: https://doi.org/10.3390/nu5093563   PMID: 24036530   PMC: PMC3798921
+Лицензия: http://creativecommons.org/licenses/by/3.0/ (открытый доступ). © 2013 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 14: 2. Overview of Vitamin A and Carotenoid Fate during the Digestion Process (часть 2)
+============================================================
+
+Retinol absorption efficiency ranges between 75% [36] and 100% [37,38,39,40,41,42]. Absorption efficiency of β-carotene ranges from 3% to 90% for [43,44,45]. Nevertheless, it is assumed that retinol displays a higher absorption efficiency than carotenoids, as confirmed by recent data obtained in our laboratory using Caco-2 cells. Micellar retinol absorption efficiency was around 30% in 1 h, but less than 5% for micellar provitamin A carotenoids [46]. This may be explained by the presence of an efficient specific transporter for retinol, whereas provitamin A carotenoids are absorbed via non-specific transporters (see below).

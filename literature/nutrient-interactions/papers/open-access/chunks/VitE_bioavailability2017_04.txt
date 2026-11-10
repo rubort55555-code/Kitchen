@@ -1,0 +1,35 @@
+Название: Vitamin E Bioavailability: Mechanisms of Intestinal Absorption in the Spotlight
+Авторы: Emmanuelle Reboul
+Журнал: Antioxidants, 2017
+DOI: https://doi.org/10.3390/antiox6040095   PMID: 29165370   PMC: PMC5745505
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 10: 3. Vitamin E Absorption Mechanisms by the Enterocyte
+============================================================
+
+## 3.1. Apical Transport at the Brush Border Level
+
+When approaching the brush border membrane, mixed micelles are supposed to dissociate due to the existing pH gradient. The released constituents can then be captured by different more or less specific systems to be absorbed by the enterocyte. For more than 30 years, due to the first results obtained in rat intestinal everted sacs [28,29], vitamin E absorption has been considered to occur by passive diffusion through enterocyte apical membrane. However, we showed for the first time in 2006 that α- and γ-tocopherol absorption was mediated, at least partly, by scavenger receptor class B type I (SR-BI) [30]. It was also shown that NPC1 like intracellular cholesterol transporter 1 (NPC1L1) was involved in α-tocopherol [31,32] and γ-tocotrienol [33] absorption. We finally highlighted the additional role of CD36 molecule (CD36) in the tocopherol absorption process [34].
+
+These three membrane proteins have primarily been described as cholesterol transporters in the intestine [35,36]. However, they do display a relatively broad substrate specificity. Besides cholesterol, SRBI can mediate carotenoid [37,38], vitamin D [39], and K [40] transport; NPC1L1 is involved in phytosterols [41], vitamin D [39], K [42] and lutein [43] uptake; and CD36 is involved in very long chain fatty acid [44], vitamin D [39], K [40] and carotenoid [37] absorption. It is thus not surprising that they are involved in vitamin E uptake as well. Both SR-BI [45] and NPC1L1 [46] were showed to traffic in clathrin-coated lipid vesicles after a lipid load. The fact that these transporters seem to selectively mediate the transport of some molecules present in mixed micelles is an argument in favor of a direct interaction with their ligands. Interestingly, it was recently demonstrated that α-tocopherol competed with cholesterol to bind to the NPC1L1-N terminal domain, promoting NPC1L1 endocytosis [47].
+
+CD36 [48] and SR-BI [49] have recently been described as intestinal lipid sensors, and they appear to be key modulators of chylomicron secretion [50,51]. These roles suggest that their impact on vitamin E transport may actually be a consequence of their role in other lipid absorption process. Indeed, by promoting lipid fluxes through the enterocyte, these receptors would create a driving force for absorption of minor lipids such as micronutrients, due to the lipid gradient.
+
+We observed that the presence of tocopherol in structures mimicking mixed micelles (i.e., containing a biliary salt and at least oleic acid) was necessary for transporter-dependent absorption in Caco-2 cells [32]. This is in agreement with another study in which we showed that both SR-BI and CD36 extracellular loops were able to bind postprandial mixed micelles in a more efficient manner than interprandial micelles [52]. However, this does not indicate whether this interaction is the first step of either a sensing or an absorptive process—or if the two phenomena are coexisting.
+
+Finally, it is worth mentioning that we observed that vitamin E could be effluxed back to the lumen after being absorbed in Caco-2 cells. This efflux was SR-BI-dependent and was increased in the presence of acceptors, e.g., mixed micelles that did not contain vitamin E [30]. The in vivo relevance of such observation should be further investigated.
+
+## 3.2. Vitamin E Trafficking across the Enterocyte
+
+Once absorbed, the fate of vitamin E across the enterocyte has been poorly described. Being hydrophobic, vitamin E likely localizes into organelle membranes, cytosolic lipid droplets, or traffic bound to binding proteins. Subcellular localization revealed that vitamin E could accumulate in microsomal membranes, i.e., the endoplasmic reticulum, Golgi, lysosomal and peroxisomal membranes [53]. However, it should be noted that in this study, vitamin E was delivered to cells with Tween 40, which may have influenced its targeting within the cells compared to a delivery in its physiological vehicles (i.e., mixed micelles).
+
+Targeting to microsomal membranes may occur either via clathrin-coated vesicles as mentioned above, or thanks to the intervention of cytosolic carriers. A tocopherol-associated protein (TAP) expressed in the intestine has been shown to bind vitamin E in human tissues [54], but it actually displays a weak affinity towards tocopherols [55]. Sec14p-like proteins TAP1, 2 and 3, also expressed in the human intestine, are probably better candidates as they improved tocopherol transport to mitochondria as efficiently as the α-tocopherol transport protein (α-TTP) [56]. Additional research is needed to definitely confirm their role in the enterocyte.
+
+## 3.3. Basolateral Secretion to the Lymph or to the Blood Circulation
+
+Most of the vitamin E is incorporated into chylomicrons in its free form at the Golgi apparatus level before being released to the lymph.
+
+In mice, it has been showed that in addition to this apolipoprotein-B (apoB)-dependent route, an non-apoB pathway could exist [57]. This non-apoB route involves ATB-binding cassette A1 (ABCA1) that allows the secretion of vitamin E via intestinal High Density Lipoproteins (HDL) [58], and maybe the ATP binding cassette sub-family G member 1 ABCG1 [59,60]. However, this pathway seems to remain minor in humans. Indeed, mutations in microsomal triglyceride transfer protein (MTP) or in secretion-associated Ras related GTPase 1B (SAR1B), lead to abetalipoproteinemia and chylomicron retention diseases, respectively [61]. These pathologies, characterized by a lack of chylomicrons, are associated with a massive impairment of vitamin E absorption that is not balanced by another pathway [62,63].
+
+## 3.4. Vitamin E Absorption Site in the Intestine

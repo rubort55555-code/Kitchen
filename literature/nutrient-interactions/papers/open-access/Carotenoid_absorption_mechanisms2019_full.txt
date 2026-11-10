@@ -1,0 +1,276 @@
+Название: Mechanisms of Carotenoid Intestinal Absorption: Where Do We Stand?
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2019
+DOI: https://doi.org/10.3390/nu11040838   PMID: 31013870   PMC: PMC6520933
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+### Abstract
+
+A growing literature is dedicated to the understanding of carotenoid beneficial health effects. However, the absorption process of this broad family of molecules is still poorly understood. These highly lipophilic plant metabolites are usually weakly absorbed. It was long believed that β-carotene absorption (the principal provitamin A carotenoid in the human diet), and thus all other carotenoid absorption, was driven by passive diffusion through the brush border of the enterocytes. The identification of transporters able to facilitate carotenoid uptake by the enterocytes has challenged established statements. After a brief overview of carotenoid metabolism in the human upper gastrointestinal tract, a focus will be put on the identified proteins participating in the transport and the metabolism of carotenoids in intestinal cells and the regulation of these processes. Further progress in the understanding of the molecular mechanisms regulating carotenoid intestinal absorption is still required to optimize their bioavailability and, thus, their health effects.
+
+### 1. Introduction
+
+Carotenoids are hydrophobic molecules synthesized by plants and by some microorganisms (bacteria, algae, or fungi). Carotenoid physicochemical properties determine their distribution in the cellular environment: carotenoids are associated with membrane lipid bilayers and cytosolic lipid droplets. More than 600 different carotenoids have been found in nature, but only 40 in the human diet and about 20 have been clearly identified in human blood and tissues [1,2].
+
+Carotenoids are polymers of isopentenyl diphosphate with 40 carbon atoms. They derive chemically from a basic structure formed by the linear sequence of 8 isoprenic units, associated in two groups of four units head to tail. The first molecule of this biosynthesis pathway is phytoene, which presents 3 conjugated double bonds in the center of the molecule and 6 other unconjugated double bonds through the length of the molecule. Phytoene is then enzymatically desaturated to produce phytofluene and eventually lycopene, a linear basic structure (C40H56) with many conjugated double bonds showing a characteristic red color [3]. Other carotenes derive from lycopene by cyclization and dehydrogenation, and xanthophylls derive from carotenes by oxidation [4] (Table 1). Some xanthophyll carotenoids such as β-cryptoxanthin [5] or lutein [6] can be found in esterified forms. Additionally, each carotenoid double bond can take a trans or cis configuration. Most of natural carotenoids are all-trans molecules, but cis-isomers can be produced during heat treatments [7]. Finally, it is worth mentioning that small amounts of apocarotenoids, i.e., cleavage products of parent 40-C carotenoids, can be naturally found in foods and/or produced during food processing, but usually represent less than 5% of the parent carotenoid levels [8,9].
+
+The main dietary sources of carotenoids are colored fruits and vegetables (Table 1).
+
+Carotenoid health properties were initially mainly accredited to their antioxidant properties as carotenoid are, at least in vitro, powerful radical quenchers [12]. Later, new investigations have highlighted the carotenoid ability to regulate intracellular signalling cascades, thus influencing both gene expression and protein translation in a broad number of metabolic pathways related to inflammatory and oxidative stress modulation [13]. However, the physiological relevance of these observations still needs to be fully established in humans. Interestingly, randomized placebo-controlled clinical trials have evidenced that supplementation with the xanthophylls lutein and zeaxanthin, which specifically accumulate into the human macula, was associated with improved visual function and decreased risk of progression to late age macular degeneration. These xanthophylls also display encouraging preventive and therapeutic effects on cataracts and retinopathies [14]. Finally, some carotenoids, such as α-carotene, β-carotene and β-cryptoxanthin, are vitamin A precursors. Indeed, they can be cleaved, mainly at the intestinal level, and metabolized into retinol (cf. Section 3.2).
+
+After a short description of carotenoid fate in the human upper gastrointestinal lumen, a focus will be put on the identified proteins participating in carotenoid transport and metabolism in intestinal cells and on the regulation of these processes.
+
+### 2. Digestion Process of Carotenoids
+
+Fat-soluble micronutrients, including carotenoids, follow the fate of lipids in the human upper digestive tract. The first step of their digestion is thus their dissolution in the fat phase of the meal [15,16]. This phase is emulsified into lipid droplets in the stomach and duodenum.
+
+The hypothesis that a carotenoid cis-isomerization could take place during gastric digestion was emitted [17], but finally refuted by a study in humans [16]. Recently, in vitro digestion experiments mimicking duodenal conditions showed that no significant isomerization of lycopene, β-carotene, or lutein occurred either [18].
+
+It has been suggested that xanthophyll ester hydrolysis by lipases is indispensable prior to absorption. The cholesterol ester hydrolase (CEH) from pancreatic juice is likely responsible for the release of free xanthophyll from xanthophyll esters [5]. The remaining xanthophyll esters, if any, may either be cleaved at the brush border level or enter the enterocyte to be hydrolyzed in the cytosol [19].
+
+During duodenal digestion, carotenoids are incorporated with other lipids (i.e., cholesterol, phospholipids) and lipid digestion products (i.e., free fatty acids, monoacylglycerols, lysophospholipids) into mixed micelles [20]. A fraction of carotenoids may also associate with proteins. For instance, the milk lipocalin β-lactoglobulin is able to bind β-carotene and does not alter its absorption compared to mixed micelles [21]. However, the mechanisms of carotenoid absorption may depend on carotenoid binding vehicles. Mixed micelles are likely isolated from the rest of the bolus in the unstirred water layer of the glycocalyx area and approach the brush border membrane [22] where carotenoids can be absorbed by passive diffusion and/or via a transporter-dependent process (see Section 3).
+
+Carotenoid bioaccessibility (i.e., the fraction of carotenoids released form their food matrix and included in mixed micelles—which represents the fraction of carotenoids potentially able to be absorbed by the intestine) is highly variable. An in vitro digestion study highlighted that lycopene bioaccessibility was very limited (from 0.1% in raw tomatoes to 1.5% in tomato puree), β-carotene bioaccessibility was fairly low (from about 4% in carrot puree to 14% in carrot juice), while lutein bioaccessibility was the highest (from 37% in raw spinach leaves to 48% in boiled spinach). These values correlate with in vivo data and highlight the fact that the disruption of the food matrix by thermal treatment or processing can increase carotenoid bioaccessibility [10]. Xanthophylls were consistently shown to display a higher bioaccessibility than carotenes in different studies [10,11], probably because the presence of one or two hydroxylated group(s) increases their solubility into the micellar structures. Interestingly, phytoene and phytofluene also displayed a very high bioaccessibility. This may be linked to their more flexible molecular structure, compared to other carotenoids, which likely increase their incorporation into mixed micelles as well [11].
+
+### 3. Carotenoid Absorption through the Enterocyte
+
+Absorption efficiency of labelled β-carotene is widely variable among clinical studies, fluctuating from ≈3% to 80%, but usually ranging from 10% to 30% [23,24]. This can partly be due to the variable bioaccessibility of β-carotene (see above), but it may also reflect its moderate uptake and transport through the enterocyte. It should be mentioned that β-carotene absorption efficiency was usually measured following a single meal. However, the intestine can store β-carotene from a first meal to release it during subsequent postprandial phases in humans [25]. β-carotene absorption efficiency may, thus, be underestimated in some trials.
+
+Studies using differentiated Caco-2 cell monolayers showed that phytofluene, β-carotene, and lutein uptakes were similar and significantly higher than that of phytoene, while lycopene uptake was the lowest [26,27]. In the same way as bioaccessibility, uptake efficiency thus seems to correlate with carotenoid polarity and flexibility. This may be explained by the fact that polar and flexible carotenoids present a better affinity for lipid transporters and/or for plasma membranes, which would lead to an increased absorption.
+
+## 3.1. Apical Transport Across the Brush Border Membrane of the Enterocyte
+
+Carotenoid uptake by the enterocytes has been considered to occur by passive diffusion for four decades, which was inconsistent with the high inter-individual variability in absorption observed in humans, as well as with the isomer selectivity and the competition for absorption between carotenoids and other fat-soluble micronutrients observed at the intestinal level (see [20] for review). Different teams started to re-explore carotenoid absorption mechanisms in the 2000s and several lipid transporters playing a role in carotenoid uptake by the intestinal cell have since been identified.
+
+A first critical result was the identification of the gene ninaD encoding a class B scavenger receptor, essential for xanthophyll cellular distribution in Drosophila [28]. In 2005, we then identified the Scavenger Receptor class B type I: SR-BI as a key transporter of lutein in human intestinal Caco2 TC7 cells. This ubiquitous transmembrane glycoprotein found at the apical membrane of the enterocytes is expressed following a decreasing gradient from the duodenum to the colon [29]. Intestinal SR-BI was shown to facilitate the uptake of free cholesterol, but also of other lipids such as cholesterol esters, phospholipids, and triacylglycerol hydrolysis products, thus presenting a low substrate specificity [30,31]. The effective role of SR-BI in terms of cholesterol transport is still subject to debate [32] and SR-BI was recently presented as a cholesterol sensor [33], regulating chylomicron secretion [34]. Its involvement in the intestinal uptake of carotenoids has been extended to lycopene [35], provitamin A carotenoids [36], as well as to phytoene and phytofluene [27]. As SR-BI is also involved in the uptake of vitamin D [37], E [38], and K [39], in cultured cells and in mice, we suggest that another primary role of SR-BI in the gut is the transport of minor molecules, such as fat-soluble vitamins and carotenoids. However, we specifically showed, using both Caco2 cells and transfected HEK cells, that SR-BI was not involved in the uptake of micellar preformed vitamin A (retinol) [36].
+
+Another pervasive scavenger receptor of interest is CD36 (CD 36 molecule). This membrane protein is highly expressed at the brush border level of the duodenum and the jejunum [40]. It is supposed to play a key role in the intestinal uptake of long-chain fatty acids [41], but also displays a broad substrate specificity [42,43]. Recently, CD36 has been described as a lipid sensor and its impact on chylomicron secretion has been established in many studies [44]. Besides, CD36 facilitates, directly or indirectly, fat-soluble vitamin uptake in the intestine [37,39,45]. CD36 was also shown to facilitate the uptake of lycopene, β-carotene, α-carotene, β-crypthoxanthine, and lutein, but not that of phytoene and phytofluene, in transfected Griptite cells and/or cultured adipocytes [27,36,46]. This result was confirmed ex vivo for β-carotene using brush-border membrane vesicles from CD36-deficient and wild-type mouse intestines [47].
+
+A last candidate for carotenoid uptake is the NPC1-like transporter 1 (NPC1L1), which is a major sterol transporter in the intestine [37,48]. NPC1L1 was suggested to be involved in α-carotene, β-carotene, β-cryptoxanthin, and lutein intestinal uptake [49,50], but not in that of lycopene, phytoene, and phytofluene [27,35].
+
+It is still possible that a fraction of carotenoid is absorption via a passive diffusion process, depending on the carotenoid concentration in the lumen. We previously showed in Caco-2 cells that vitamin D absorption is carrier-mediated at physiological concentrations and occurs by passive diffusion at pharmacological concentrations [37]. We suggest that a similar phenomenon occurs for carotenoids.
+
+Recently, we showed that a fraction of phytoene and phytofluene taken up by the intestinal cells could be effluxed back to the lumen [27]. This phenomenon was previously acknowledged for fat-soluble vitamins such as vitamin D, E, and K and was shown to be, at least partly, SR-B-dependent [37,38,39]. This efflux may contribute to the limited absorption efficiency of carotenoids. Further research is needed to clearly identify the membrane transporters participating in this pathway. Besides SR-BI, ABCB1 (ATP binding cassette B1, also known as P-glycoprotein) and ABCG transporters, such as ABCG5, appear as good candidates. Indeed, a recent study combining in silico, cell culture, animal, and genetic approaches showed that ABCB1 was involved in vitamin D intestinal efflux [51]. Additionally, polymorphisms in the ABCG5 gene tended to contribute to individual response to lutein supplementation in humans [52].
+
+## 3.2. Cytosolic Transport and Intracellular Metabolism
+
+No carotenoid carrier protein has clearly been identified in the human gut so far. However, the lutein-binding protein HR-LBP (Human Retinal Lutein-Binding Protein) present in the human retina cross-reacts with antibodies raised against a carotenoid-binding protein present in the Bombyx mori midgut [53], suggesting that it could be an intestinal intracellular transporter of xanthophylls [54]. As carotenoid membrane transporters SR-BI, CD36, and NPC1L1 can traffic in the enterocyte, especially after a fat load, we previously suggested that they may act as cytosolic carotenoid transporters [20]. However, this hypothesis still remains to be verified. Similarly, the association found between a genetic variant in the Intestinal Fatty-Acid Binding Protein (IFABP) and the fasting plasma lycopene concentrations in humans [55] still need to be challenged to assess whether IFABP is actually a carotenoid-carrier.
+
+Up to 40% of absorbed carotenoids remain unmetabolized [56]. β-carotene can be cleaved into retinal by a cytosolic enzyme, BCO1 (β-carotene oxygenase 1), via a one-step process in the enterocyte [57]. β-Carotene “low-converter” phenotypes, which have been reported in several clinical studies [58], are likely due to genetic variation in BCO1 gene. Other provitamin A carotenoids, such as β-crypthoxanthin, can be cleaved into retinal though a multi-step process involving both mitochondrial BCO2 (β-carotene oxygenase 2) and cytosolic BCO1 [59]. The produced retinal is subsequently converted into retinol and esterified into retinyl esters by the lecithin:retinol acyltransferase (LRAT) and probably by the diacylglycerol acyltransferase 1 (DGAT1) that displays an acyl-CoA:retinol acyltransferase activity [60,61]. Both provitamin A and nonprovitamin A carotenoids can also be cleaved asymmetrically in apocarotenoids by BCO2 [62]. However, a recent study showed that only traces of asymmetric [13C]-β-apo-carotenals were found in plasma after [13C]-β-carotene ingestion, suggesting a lack of significant postprandial intestinal BCO2 activity in healthy humans [63].
+
+No cis-trans isomerization of β-carotene was measured in intestinal cultured cells [26]. As cis-isomerization does not occur in the gastrointestinal lumen (see above), the site of the 9-cis isomerization of β-carotene reported in vivo [64] remain undetermined. Conversely, lycopene isomerization in cis-isomers was identified to occur at the enterocyte level [65].
+
+A summary of carotenoid transport pathways across the enterocyte is depicted in Figure 1.
+
+## 3.3. Secretion Through the Basolateral Membrane of the Enterocyte
+
+During the postprandial period, the major fraction of free carotenoids and retinyl esters originating from provitamin A carotenoid cleavage are packaged into chylomicrons (apoB-dependent pathway) that are secreted into the lymph to further join the bloodstream [20]. A non-apoB-dependent pathway (via high-density lipoproteins, HDL), mediated by the ABCA1 transporter, has been involved in vitamin E absorption [66] and possibly allows a part of free retinol absorption [20]. This HDL pathway may also exist for xanthophylls, such as lutein and zeaxanthin [67], but has not been proven to occur for other carotenoids. However, recent studies showed that several genetic variants in ABCA1 gene were associated with lycopene [68], β-carotene [69], and lutein [70] postprandial responses in healthy subjects. Thus, further research is needed to fully understand the contribution of the intestinal HDL pathway to carotenoid absorption in humans.
+
+### 4. Regulation of Carotenoid Transporter Expressions in the Enterocyte
+
+Crucial factors modulating the expression and/or the activity of intestinal proteins involved in carotenoid absorption are provitamin A carotenoids, through a feedback regulation. Indeed, studies have pointed out that SR-BI activity is partly controlled by retinoids. Using both mouse models and human cell lines, it was specifically shown that retinoic acid produced from dietary precursors by BCO1 induced the expression of the intestinal transcription factor ISX that repressed the expression of both BCO1 [71] and SR-B1 [72], thus impacting both carotenoid conversion and uptake [73].
+
+Additionally, many dietary factors other than retinoids were shown to regulate transporter expression in the intestine and may, thus, indirectly impact on carotenoid absorption.
+
+Among these dietary factors, fat and fatty acids seem to play major roles. For instance, SR-BI expression in Caco-2 cells is increased by micellar oleic and ecosapentaenoic acids [74]. Conversely, CD36, NPC1L1, or ABCA1 expressions in rodent intestines are downregulated by dietary fat, including oleic acid [75,76] and cholesterol [77]. Such downregulation in NPC1L1 and ABCA1 expressions was also found after exposure of cultured intestinal FHs 74 or Caco-2 cells to phytosterols [78,79] and to long-chain polyunsaturated fatty acids [74,80].
+
+In addition, dietary glucose increases SR-BI expression in both Caco-2 cells and mouse intestines [81] and decreases Caco2 cell ABCA1 expression [82].
+
+Finally, some polyphenols were shown to decrease both SR-BI, NPCL1, and ABCA1 expressions in Caco-2 cells [83,84] and so did the cholesterol-lowering drug ezetimibe [49].
+
+Host factors can also regulate carotenoid transporters. Among them, insulin resistance increases SR-BI intestinal expression in hamsters [85]. SR-BI post-transcriptional regulation also seems be dependent on bile secretion, with bile salts leading to a rise of intestinal SR-BI expression in rodents [86]. Finally, NPC1L1 expression was increased by estrogen [87] and cholecystokinin [88] in mouse intestines, while its expression was decreased by peptide YY in Caco-2 cells [89] (see [90] for review).
+
+As the above results were exclusively obtained in cultured cells and animal studies, further investigations are deeply needed to address their relevance in humans.
+
+### 5. Conclusions
+
+To conclude, the understanding of carotenoid intestinal absorption by the intestine is far from being fully understood. Proteins including lipid membrane transporters (i.e., SR-BI, CD36, NPC1L1), the cleavage enzyme BCO1, and the transcription factor ISX have been showed to play important roles in carotenoid intestinal uptake and metabolism, but other proteins likely remain to be identified.
+
+Genome-wide association studies (GWAS) and candidate gene association studies have identified correlations between single nucleotide polymorphisms in SCARB1 (encoding SR-BI), CD36, NPC1L1, BCO1, and ISX and carotenoid blood concentrations. Interestingly, these studies also highlighted the impact of polymorphisms in genes encoding proteins likely indirectly linked to carotenoid metabolism (i.e., ELOVL fatty acid elongase 2). The involvement of such proteins in carotenoid intestinal metabolism still needs to be defined [91].
+
+Carotenoid “low responder” or “high responder” phenotypes presumably correspond to individuals bearing associations of several “disadvantageous” or “advantageous” polymorphisms, respectively. In the future, it would thus be of major interest to take into account the carotenoid “low responder” or “high responder” phenotypes that are due to different transport and/or conversion efficiency, to propose tailored dietary recommendations to individuals and to thus optimize carotenoid health benefits.
+
+### References
+
+[1] 1.KhachikF.SpanglerC.J.SmithJ.C.Jr.CanfieldL.M.SteckA.PfanderH.Identification, quantification, and relative concentrations of carotenoids and their metabolites in human milk and serumAnal. Chem.19976918731881916416010.1021/ac961085i
+
+[2] 2.TapieroH.TownsendD.M.TewK.D.The role of carotenoids in the prevention of human pathologiesBiomed. Pharmacother.20045810011010.1016/j.biopha.2003.12.00614992791PMC6361147
+
+[3] 3.EngelmannN.J.ClintonS.K.ErdmanJ.W.Jr.Nutritional aspects of phytoene and phytofluene, carotenoid precursors to lycopeneAdv. Nutr.2011251612221118910.3945/an.110.000075PMC3042793
+
+[4] 4.MoiseA.R.Al-BabiliS.WurtzelE.T.Mechanistic aspects of carotenoid biosynthesisChem. Rev.201411416419310.1021/cr400106y24175570PMC3898671
+
+[5] 5.BreithauptD.E.BamediA.WirtU.Carotenol fatty acid esters: Easy substrates for digestive enzymes?Comp. Biochem. Physiol. B Biochem. Mol. Biol.200213272172810.1016/S1096-4959(02)00096-912128058
+
+[6] 6.BowenP.E.Herbst-EspinosaS.M.HussainE.A.Stacewicz-SapuntzakisM.Esterification does not impair lutein bioavailability in humansJ. Nutr.20021323668367310.1093/jn/132.12.366812468605
+
+[7] 7.ShiJ.Le MaguerM.Lycopene in tomatoes: Chemical and physical properties affected by food processingCrit. Rev. Biotechnol.20002029333410.1080/0738855009114421211192026
+
+[8] 8.RodriguezE.B.Rodriguez-AmayaD.B.Formation of apocarotenals and epoxycarotenoids from beta-carotene by chemical reactions and by autoxidation in model systems and processed foodsFood Chem.200710156357210.1016/j.foodchem.2006.02.015
+
+[9] 9.KopecR.E.RiedlK.M.HarrisonE.H.CurleyR.W.Jr.HruszkewyczD.P.ClintonS.K.SchwartzS.J.Identification and quantification of apo-lycopenals in fruits, vegetables, and human plasmaJ. Agric. Food Chem.2010583290329610.1021/jf100415z20178389PMC2851402
+
+[10] 10.ReboulE.RichelleM.PerrotE.Desmoulins-MalezetC.PirisiV.BorelP.Bioaccessibility of carotenoids and vitamin e from their main dietary sourcesJ. Agric. Food Chem.2006548749875510.1021/jf061818s17090117
+
+[11] 11.Mapelli-BrahmP.Corte-RealJ.Melendez-MartinezA.J.BohnT.Bioaccessibility of phytoene and phytofluene is superior to other carotenoids from selected fruit and vegetable juicesFood Chem.201722930431110.1016/j.foodchem.2017.02.07428372178
+
+[12] 12.KrinskyN.I.YeumK.J.Carotenoid-radical interactionsBiochem. Biophys. Res. Commun.200330575476010.1016/S0006-291X(03)00816-712763057
+
+[13] 13.KaulmannA.BohnT.Carotenoids, inflammation, and oxidative stress—Implications of cellular signaling pathways and relation to chronic disease preventionNutr. Res.20143490792910.1016/j.nutres.2014.07.01025134454
+
+[14] 14.ScripsemaN.K.HuD.N.RosenR.B.Lutein, zeaxanthin, and meso-zeaxanthin in the clinical management of eye diseaseJ. Ophthalmol.2015201586517910.1155/2015/86517926819755PMC4706936
+
+[15] 15.BorelP.GrolierP.ArmandM.PartierA.LafontH.LaironD.Azais-BraescoV.Carotenoids in biological emulsions: Solubility, surface-to-core distribution, and release from lipid dropletsJ. Lipid Res.1996372502619026524
+
+[16] 16.TyssandierV.ReboulE.DumasJ.F.Bouteloup-DemangeC.ArmandM.MarcandJ.SallasM.BorelP.Processing of vegetable-borne carotenoids in the human stomach and duodenumAm. J. Physiol. Gastrointest. Liver Physiol.2003284G913G92310.1152/ajpgi.00410.200212736146
+
+[17] 17.ReR.FraserP.D.LongM.BramleyP.M.Rice-EvansC.Isomerization of lycopene in the gastric milieuBiochem. Biophys. Res. Commun.200128157658110.1006/bbrc.2001.436611181086
+
+[18] 18.KopecR.E.GleizeB.BorelP.DesmarchelierC.Caris-VeyratC.Are lutein, lycopene, and beta-carotene lost through the digestive process?Food Funct.201781494150310.1039/C7FO00021A28350027
+
+[19] 19.Dhuique-MayerC.BorelP.ReboulE.CaporiccioB.BesanconP.AmiotM.J.Beta-cryptoxanthin from citrus juices: Assessment of bioaccessibility using an in vitro digestion/caco-2 cell culture modelBr. J. Nutr.20079788389010.1017/S000711450767082217381979
+
+[20] 20.ReboulE.Absorption of vitamin a and carotenoids by the enterocyte: Focus on transport proteinsNutrients201353563358110.3390/nu509356324036530PMC3798921
+
+[21] 21.MensiA.BorelP.GoncalvesA.NowickiM.GleizeB.RoiS.ChobertJ.M.HaertleT.ReboulE.Beta-lactoglobulin as a vector for beta-carotene food fortificationJ. Agric. Food Chem.2014625916592410.1021/jf501683s24857546
+
+[22] 22.PhanC.T.TsoP.Intestinal lipid absorption and transportFront. Biosci.20016D299D31910.2741/A61211229876
+
+[23] 23.van LieshoutM.WestC.E.van BreemenR.B.Isotopic tracer techniques for studying the bioavailability and bioefficacy of dietary carotenoids, particularly beta-carotene, in humans: A reviewAm. J. Clin. Nutr.200377122810.1093/ajcn/77.1.1212499318
+
+[24] 24.Van Loo-BouwmanC.A.NaberT.H.van BreemenR.B.ZhuD.DickeH.SiebelinkE.HulshofP.J.RusselF.G.SchaafsmaG.WestC.E.Vitamin a equivalency and apparent absorption of beta-carotene in ileostomy subjects using a dual-isotope dilution techniqueBr. J. Nutr.20101031836184310.1017/S000711450999384920132586
+
+[25] 25.BorelP.GrolierP.MekkiN.BoirieY.RochetteY.Le RoyB.Alexandre-GouabauM.C.LaironD.Azais-BraescoV.Low and high responders to pharmacological doses of beta-carotene: Proportion in the population, mechanisms involved and consequences on beta-carotene metabolismJ. Lipid Res.199839225022609799811
+
+[26] 26.DuringA.HussainM.M.MorelD.W.HarrisonE.H.Carotenoid uptake and secretion by caco-2 cells: Beta-carotene isomer selectivity and carotenoid interactionsJ. Lipid Res.2002431086109510.1194/jlr.M200068-JLR20012091493
+
+[27] 27.Mapelli-BrahmP.DesmarchelierC.MargierM.ReboulE.Melendez MartinezA.J.BorelP.Phytoene and phytofluene isolated from a tomato extract are readily incorporated in mixed micelles and absorbed by caco-2 cells, as compared to lycopene, and sr-bi is involved in their cellular uptakeMol. Nutr. Food Res.201862e180070310.1002/mnfr.20180070330192047
+
+[28] 28.KieferC.SumserE.WernetM.F.Von LintigJ.A class b scavenger receptor mediates the cellular uptake of carotenoids in drosophilaProc. Natl. Acad. Sci. USA200299105811058610.1073/pnas.16218289912136129PMC124981
+
+[29] 29.ReboulE.SoayfaneZ.GoncalvesA.CantielloM.BottR.NauzeM.TerceF.ColletX.ComeraC.Respective contributions of intestinal niemann-pick c1-like 1 and scavenger receptor class b type i to cholesterol and tocopherol uptake: In vivo v. In vitro studiesBr. J. Nutr.20121071296130410.1017/S000711451100440521929836
+
+[30] 30.HauserH.DyerJ.H.NandyA.VegaM.A.WerderM.BieliauskaiteE.WeberF.E.CompassiS.GemperliA.BoffelliD.Identification of a receptor mediating absorption of dietary cholesterol in the intestineBiochemistry199837178431785010.1021/bi982404y9922151
+
+[31] 31.BietrixF.YanD.NauzeM.RollandC.Bertrand-MichelJ.ComeraC.SchaakS.BarbarasR.GroenA.K.PerretB.Accelerated lipid absorption in mice overexpressing intestinal sr-biJ. Biol. Chem.20062817214721910.1074/jbc.M50886820016421100PMC2034750
+
+[32] 32.NguyenD.V.DroverV.A.KnopfelM.DhanasekaranP.HauserH.PhillipsM.C.Influence of class b scavenger receptors on cholesterol flux across the brush border membrane and intestinal absorptionJ. Lipid Res.2009502235224410.1194/jlr.M900036-JLR20019454765PMC2759829
+
+[33] 33.SaddarS.CarriereV.LeeW.R.TanigakiK.YuhannaI.S.ParathathS.MorelE.WarrierM.SawyerJ.K.GerardR.D.Scavenger receptor class b type i is a plasma membrane cholesterol sensorCirc. Res.201311214015110.1161/CIRCRESAHA.112.28008123023567PMC3564583
+
+[34] 34.LinoM.FarrS.BakerC.FullerM.TrigattiB.AdeliK.Intestinal scavenger receptor class b type i as a novel regulator of chylomicron production in healthy and diet-induced obese statesAm. J. Physiol. Gastrointest. Liver Physiol.2015309G350G35910.1152/ajpgi.00086.201526138463
+
+[35] 35.MoussaM.LandrierJ.F.ReboulE.GhiringhelliO.ComeraC.ColletX.FrohlichK.BohmV.BorelP.Lycopene absorption in human intestinal cells and in mice involves scavenger receptor class b type i but not niemann-pick c1-like 1J. Nutr.20081381432143610.1093/jn/138.8.143218641187
+
+[36] 36.BorelP.LietzG.GoncalvesA.Szabo de EdelenyiF.LecompteS.CurtisP.GoumidiL.CaslakeM.J.MilesE.A.PackardC.Cd36 and sr-bi are involved in cellular uptake of provitamin a carotenoids by caco-2 and hek cells, and some of their genetic variants are associated with plasma concentrations of these micronutrients in humansJ. Nutr.201314344845610.3945/jn.112.17273423427331
+
+[37] 37.ReboulE.GoncalvesA.ComeraC.BottR.NowickiM.LandrierJ.F.Jourdheuil-RahmaniD.DufourC.ColletX.BorelP.Vitamin d intestinal absorption is not a simple passive diffusion: Evidences for involvement of cholesterol transportersMol. Nutr. Food Res.20115569170210.1002/mnfr.20100055321280209
+
+[38] 38.ReboulE.KleinA.BietrixF.GleizeB.Malezet-DesmoulinsC.SchneiderM.MargotatA.LagrostL.ColletX.BorelP.Scavenger receptor class b type i (sr-bi) is involved in vitamin e transport across the enterocyteJ. Biol. Chem.20062814739474510.1074/jbc.M50904220016380385PMC2045115
+
+[39] 39.GoncalvesA.MargierM.RoiS.ColletX.NiotI.GoupyP.Caris-VeyratC.ReboulE.Intestinal scavenger receptors are involved in vitamin k1 absorptionJ. Biol. Chem.2014289307433075210.1074/jbc.M114.58765925228690PMC4215251
+
+[40] 40.TerpstraV.van AmersfoortE.S.van VelzenA.G.KuiperJ.van BerkelT.J.Hepatic and extrahepatic scavenger receptors: Function in relation to diseaseArterioscler. Thromb. Vasc. Biol.2000201860187210.1161/01.ATV.20.8.186010938005
+
+[41] 41.DroverV.A.NguyenD.V.BastieC.C.DarlingtonY.F.AbumradN.A.PessinJ.E.LondonE.SahooD.PhillipsM.C.Cd36 mediates both cellular uptake of very long chain fatty acids and their intestinal absorption in miceJ. Biol. Chem.2008283131081311510.1074/jbc.M70808620018332148PMC2442355
+
+[42] 42.RigottiA.ActonS.L.KriegerM.The class b scavenger receptors sr-bi and cd36 are receptors for anionic phospholipidsJ. Biol. Chem.1995270162211622410.1074/jbc.270.27.162217541795
+
+[43] 43.EndemannG.StantonL.W.MaddenK.S.BryantC.M.WhiteR.T.ProtterA.A.Cd36 is a receptor for oxidized low density lipoproteinJ. Biol. Chem.199326811811118167685021
+
+[44] 44.ButtetM.TraynardV.TranT.T.BesnardP.PoirierH.NiotI.From fatty-acid sensing to chylomicron synthesis: Role of intestinal lipid-binding proteinsBiochimie201496374710.1016/j.biochi.2013.08.01123958439
+
+[45] 45.GoncalvesA.RoiS.NowickiM.NiotI.ReboulE.Cluster-determinant 36 (cd36) impacts on vitamin e postprandial responseMol. Nutr. Food Res.2014582297230610.1002/mnfr.20140033925174330
+
+[46] 46.MoussaM.GourantonE.GleizeB.El YazidiC.NiotI.BesnardP.BorelP.LandrierJ.F.Cd36 is involved in lycopene and lutein uptake by adipocytes and adipose tissue culturesMol. Nutr. Food Res.20115557858410.1002/mnfr.20100039921462325
+
+[47] 47.van BennekumA.WerderM.ThuahnaiS.T.HanC.H.DuongP.WilliamsD.L.WettsteinP.SchulthessG.PhillipsM.C.HauserH.Class b scavenger receptor-mediated intestinal absorption of dietary beta-carotene and cholesterolBiochemistry2005444517452510.1021/bi048432015766282
+
+[48] 48.DavisH.R.Jr.AltmannS.W.Niemann-pick c1 like 1 (npc1l1) an intestinal sterol transporterBiochim. Biophys. Acta2009179167968310.1016/j.bbalip.2009.01.00219272334
+
+[49] 49.DuringA.DawsonH.D.HarrisonE.H.Carotenoid transport is decreased and expression of the lipid transporters sr-bi, npc1l1, and abca1 is downregulated in caco-2 cells treated with ezetimibeJ. Nutr.20051352305231210.1093/jn/135.10.230516177187
+
+[50] 50.SatoY.SuzukiR.KobayashiM.ItagakiS.HiranoT.NodaT.MizunoS.SugawaraM.IsekiK.Involvement of cholesterol membrane transporter niemann-pick c1-like 1 in the intestinal absorption of luteinJ. Pharm. Pharm. Sci.20121525626410.18433/J38K5622579005
+
+[51] 51.MargierM.ColletX.le MayC.DesmarchelierC.AndreF.LebrunC.DefoortC.BluteauA.BorelP.LespineA.Abcb1 (p-glycoprotein) regulates vitamin d absorption and contributes to its transintestinal effluxFASEB J.2019332084209410.1096/fj.201800956R30222077
+
+[52] 52.HerronK.L.McGraneM.M.WatersD.LofgrenI.E.ClarkR.M.OrdovasJ.M.FernandezM.L.The abcg5 polymorphism contributes to individual responses to dietary cholesterol and carotenoids in eggsJ. Nutr.20061361161116510.1093/jn/136.5.116116614398
+
+[53] 53.TabunokiH.SugiyamaH.TanakaY.FujiiH.BannoY.JouniZ.E.KobayashiM.SatoR.MaekawaH.TsuchidaK.Isolation, characterization, and cdna sequence of a carotenoid binding protein from the silk gland of bombyx mori larvaeJ. Biol. Chem.2002277321333214010.1074/jbc.M20450720012052833
+
+[54] 54.BhosaleP.LiB.SharifzadehM.GellermannW.FrederickJ.M.TsuchidaK.BernsteinP.S.Purification and partial characterization of a lutein-binding protein from human retinaBiochemistry2009484798480710.1021/bi900447819402606
+
+[55] 55.BorelP.MoussaM.ReboulE.LyanB.DefoortC.Vincent-BaudryS.MaillotM.GastaldiM.DarmonM.PortugalH.Human fasting plasma concentrations of vitamin e and carotenoids, and their association with genetic variants in apo c-iii, cholesteryl ester transfer protein, hepatic lipase, intestinal fatty acid binding protein and microsomal triacylglycerol transfer proteinBr. J. Nutr.20091016806871866242710.1017/S0007114508030754
+
+[56] 56.CastenmillerJ.J.M.WestC.E.Bioavailability and bioconversion of carotenoidsAnnu. Rev. Nutr.199818193810.1146/annurev.nutr.18.1.199706217
+
+[57] 57.dela SenaC.RiedlK.M.NarayanasamyS.CurleyR.W.Jr.SchwartzS.J.HarrisonE.H.The human enzyme that converts dietary provitamin a carotenoids to vitamin a is a dioxygenaseJ. Biol. Chem.2014289136611366610.1074/jbc.M114.55771024668807PMC4036370
+
+[58] 58.LoboG.P.AmengualJ.PalczewskiG.BabinoD.von LintigJ.Mammalian carotenoid-oxygenases: Key players for carotenoid function and homeostasisBiochim. Biophys. Acta20121821788710.1016/j.bbalip.2011.04.01021569862PMC3162997
+
+[59] 59.AmengualJ.Widjaja-AdhiM.A.Rodriguez-SantiagoS.HesselS.GolczakM.PalczewskiK.von LintigJ.Two carotenoid oxygenases contribute to mammalian provitamin a metabolismJ. Biol. Chem.2013288340813409610.1074/jbc.M113.50104924106281PMC3837149
+
+[60] 60.O’ByrneS.M.WongsirirojN.LibienJ.VogelS.GoldbergI.J.BaehrW.PalczewskiK.BlanerW.S.Retinoid absorption and storage is impaired in mice lacking lecithin:Retinol acyltransferase (lrat)J. Biol. Chem.2005280356473565710.1074/jbc.M50792420016115871PMC1352312
+
+[61] 61.WongsirirojN.PiantedosiR.PalczewskiK.GoldbergI.J.JohnstonT.P.LiE.BlanerW.S.The molecular basis of retinoid absorption: A genetic dissectionJ. Biol. Chem.2008283135101351910.1074/jbc.M80077720018348983PMC2376245
+
+[62] 62.PalczewskiG.AmengualJ.HoppelC.L.von LintigJ.Evidence for compartmentalization of mammalian carotenoid metabolismFASEB J.2014284457446910.1096/fj.14-25241125002123PMC4202098
+
+[63] 63.KopecR.E.Caris-VeyratC.NowickiM.GleizeB.CarailM.BorelP.Production of asymmetric oxidative metabolites of [13c]-beta-carotene during digestion in the gastrointestinal lumen of healthy menAm. J. Clin. Nutr.201810880381310.1093/ajcn/nqy18330256893
+
+[64] 64.YouC.S.ParkerR.S.GoodmanK.J.SwansonJ.E.CorsoT.N.Evidence of cis-trans isomerization of 9-cis-beta-carotene during absorption in humansAm. J. Clin. Nutr.19966417718310.1093/ajcn/64.2.1778694017
+
+[65] 65.RichelleM.SanchezB.TavazziI.LambeletP.BortlikK.WilliamsonG.Lycopene isomerisation takes place within enterocytes during absorption in human subjectsBr. J. Nutr.20101031800180710.1017/S000711451000010320211042
+
+[66] 66.ReboulE.TrompierD.MoussaM.KleinA.LandrierJ.F.ChiminiG.BorelP.Atp-binding cassette transporter a1 is significantly involved in the intestinal absorption of alpha- and gamma-tocopherol but not in that of retinyl palmitate in miceAm. J. Clin. Nutr.20098917718410.3945/ajcn.2008.2655919056557
+
+[67] 67.NiesorE.J.ChaputE.MaryJ.L.StaempfliA.ToppA.StaufferA.WangH.DurrwellA.Effect of compounds affecting abca1 expression and cetp activity on the hdl pathway involved in intestinal absorption of lutein and zeaxanthinLipids2014491233124310.1007/s11745-014-3958-825300953
+
+[68] 68.BorelP.DesmarchelierC.NowickiM.BottR.Lycopene bioavailability is associated with a combination of genetic variantsFree Radic. Biol. Med.20158323824410.1016/j.freeradbiomed.2015.02.03325772008
+
+[69] 69.BorelP.DesmarchelierC.NowickiM.BottR.A combination of single-nucleotide polymorphisms is associated with interindividual variability in dietary beta-carotene bioavailability in healthy menJ. Nutr.20151451740174710.3945/jn.115.21283726063065
+
+[70] 70.BorelP.DesmarchelierC.NowickiM.BottR.MorangeS.LesavreN.Interindividual variability of lutein bioavailability in healthy men: Characterization, genetic variants involved, and relation with fasting plasma lutein concentrationAm. J. Clin. Nutr.201410016817510.3945/ajcn.114.08572024808487
+
+[71] 71.SeinoY.MikiT.KiyonariH.AbeT.FujimotoW.KimuraK.TakeuchiA.TakahashiY.OisoY.IwanagaT.Isx participates in the maintenance of vitamin a metabolism by regulation of beta-carotene 15,15′-monooxygenase (bcmo1) expressionJ. Biol. Chem.20082834905491110.1074/jbc.M70792820018093975
+
+[72] 72.ChoiM.Y.RomerA.I.HuM.LepourceletM.MechoorA.YesilaltayA.KriegerM.GrayP.A.ShivdasaniR.A.A dynamic expression survey identifies transcription factors relevant in mouse digestive tract developmentDevelopment20061334119412910.1242/dev.0253716971476
+
+[73] 73.LoboG.P.HesselS.EichingerA.NoyN.MoiseA.R.WyssA.PalczewskiK.von LintigJ.Isx is a retinoic acid-sensitive gatekeeper that controls intestinal beta,beta-carotene absorption and vitamin a productionFASEB J.2010241656166610.1096/fj.09-15099520061533PMC2874479
+
+[74] 74.GoncalvesA.GleizeB.RoiS.NowickiM.DhaussyA.HuertasA.AmiotM.J.ReboulE.Fatty acids affect micellar properties and modulate vitamin d uptake and basolateral efflux in caco-2 cellsJ. Nutr. Biochem.2013241751175710.1016/j.jnutbio.2013.03.00423769762
+
+[75] 75.de Vogel-van den BoschH.M.de WitN.J.HooiveldG.J.VermeulenH.van der VeenJ.N.HoutenS.M.KuipersF.MullerM.van der MeerR.A cholesterol-free, high-fat diet suppresses gene expression of cholesterol transporters in murine small intestineAm. J. Physiol. Gastrointest. Liver Physiol.2008294G1171G118010.1152/ajpgi.00360.200718356535
+
+[76] 76.ChenM.YangY.BraunsteinE.GeorgesonK.E.HarmonC.M.Gut expression and regulation of fat/cd36: Possible role in fatty acid transport in rat enterocytesAm. J. Physiol. Endocrinol. Metab.2001281E916E92310.1152/ajpendo.2001.281.5.E91611595646
+
+[77] 77.DavisH.R.Jr.ZhuL.J.HoosL.M.TetzloffG.MaguireM.LiuJ.YaoX.IyerS.P.LamM.H.LundE.G.Niemann-pick c1 like 1 (npc1l1) is the intestinal phytosterol and cholesterol transporter and a key modulator of whole-body cholesterol homeostasisJ. Biol. Chem.2004279335863359210.1074/jbc.M40581720015173162
+
+[78] 78.JeschE.D.SeoJ.M.CarrT.P.LeeJ.Y.Sitosterol reduces messenger rna and protein expression levels of niemann-pick c1-like 1 in fhs 74 int cellsNutr. Res.20092985986610.1016/j.nutres.2009.10.01619963159
+
+[79] 79.BraunerR.JohannesC.PloesslF.BracherF.LorenzR.L.Phytosterols reduce cholesterol absorption by inhibition of 27-hydroxycholesterol generation, liver x receptor alpha activation, and expression of the basolateral sterol exporter atp-binding cassette a1 in caco-2 enterocytesJ. Nutr.201214298198910.3945/jn.111.15719822535758
+
+[80] 80.AlvaroA.RosalesR.MasanaL.VallveJ.C.Polyunsaturated fatty acids down-regulate in vitro expression of the key intestinal cholesterol absorption protein npc1l1: No effect of monounsaturated nor saturated fatty acidsJ. Nutr. Biochem.20102151852510.1016/j.jnutbio.2009.02.01019443194
+
+[81] 81.MalhotraP.BoddyC.S.SoniV.SaksenaS.DudejaP.K.GillR.K.AlrefaiW.A.D-glucose modulates intestinal niemann-pick c1-like 1 (npc1l1) gene expression via transcriptional regulationAm. J. Physiol. Gastrointest. Liver Physiol.2013304G203G21010.1152/ajpgi.00288.201223139223PMC3543648
+
+[82] 82.BoztepeT.GulecS.Investigation of the influence of high glucose on molecular and genetic responses: An in vitro study using a human intestine modelGenes Nutr.2018131110.1186/s12263-018-0602-x29736189PMC5928582
+
+[83] 83.KimB.ParkY.WegnerC.J.BollingB.W.LeeJ.Polyphenol-rich black chokeberry (aronia melanocarpa) extract regulates the expression of genes critical for intestinal cholesterol flux in caco-2 cellsJ. Nutr. Biochem.2013241564157010.1016/j.jnutbio.2013.01.00523517916
+
+[84] 84.FengD.ZouJ.ZhangS.LiX.LuM.Hypocholesterolemic activity of curcumin is mediated by down-regulating the expression of niemann-pick c1-like 1 in hamstersJ. Agric. Food Chem.20176527628010.1021/acs.jafc.6b0410228000447
+
+[85] 85.HayashiA.A.WebbJ.ChoiJ.BakerC.LinoM.TrigattiB.TrajcevskiK.E.HawkeT.J.AdeliK.Intestinal sr-bi is upregulated in insulin-resistant states and is associated with overproduction of intestinal apob48-containing lipoproteinsAm. J. Physiol. Gastrointest. Liver Physiol.2011301G326G33710.1152/ajpgi.00425.201021546579
+
+[86] 86.VosholP.J.SchwarzM.RigottiA.KriegerM.GroenA.K.KuipersF.Down-regulation of intestinal scavenger receptor class b, type i (sr-bi) expression in rodents under conditions of deficient bile delivery to the intestineBiochem. J.200135631732510.1042/bj356031711368757PMC1221841
+
+[87] 87.DuanL.P.WangH.H.OhashiA.WangD.Q.Role of intestinal sterol transporters abcg5, abcg8, and npc1l1 in cholesterol absorption in mice: Gender and age effectsAm. J. Physiol. Gastrointest. Liver Physiol.2006290G269G27610.1152/ajpgi.00172.200516179600
+
+[88] 88.ZhouL.YangH.OkoroE.U.GuoZ.Up-regulation of cholesterol absorption is a mechanism for cholecystokinin-induced hypercholesterolemiaJ. Biol. Chem.2014289129891299910.1074/jbc.M113.53438824692543PMC4036314
+
+[89] 89.GrenierE.GarofaloC.DelvinE.LevyE.Modulatory role of pyy in transport and metabolism of cholesterol in intestinal epithelial cellsPLoS ONE20127e4099210.1371/journal.pone.004099222844422PMC3402548
+
+[90] 90.ReboulE.Vitamin e intestinal absorption: Regulation of membrane transport across the enterocyteIUBMB Life20197141642310.1002/iub.195530308094
+
+[91] 91.DesmarchelierC.LandrierJ.F.BorelP.Genetic factors involved in the bioavailability of tomato carotenoidsCurr. Opin. Clin. Nutr. Metab. Care20182148949710.1097/MCO.000000000000051530277929

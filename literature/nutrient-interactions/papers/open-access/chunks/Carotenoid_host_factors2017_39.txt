@@ -1,0 +1,27 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 39 из 39: References (часть 13)
+============================================================
+
+[295] 295 Meyers, K. J. , Mares, J. A. , Igo, R. P., Jr. , Truitt, B. et al., Genetic evidence for role of carotenoids in age‐related macular degeneration in the Carotenoids in Age‐Related Eye Disease Study (CAREDS). Invest. Ophthalmol. Vis. Sci. 2014, 55, 587–599.2434617010.1167/iovs.13-13216PMC3908680
+
+[296] 296 D'Adamo, C. R. , D'Urso, A. , Ryan, K. A. , Yerges‐Armstrong, L. M. et al., A common variant in the SETD7 gene predicts serum lycopene concentrations. Nutrients 2016, 8, 82.2686138910.3390/nu8020082PMC4772045
+
+[297] 297 Hendrickson, S. J. , Hazra, A. , Chen, C. , Eliassen, A. H. et al., beta‐Carotene 15,15'‐monooxygenase 1 single nucleotide polymorphisms in relation to plasma carotenoid and retinol concentrations in women of European descent. Am. J. Clin. Nutr. 2012, 96, 1379–1389.2313489310.3945/ajcn.112.034934PMC3497927
+
+[298] 298 Wang, T. T. , Edwards, A. J. , Clevidence, B. A. , Strong and weak plasma response to dietary carotenoids identified by cluster analysis and linked to beta‐carotene 15,15'‐monooxygenase 1 single nucleotide polymorphisms. J. Nutr. Biochem. 2013, 24, 1538–1546.2351791310.1016/j.jnutbio.2013.01.001
+
+[299] 299 Merle, B. M. , Maubaret, C. , Korobelnik, J. F. , Delyfer, M. N. et al., Association of HDL‐related loci with age‐related macular degeneration and plasma lutein and zeaxanthin: the Alienor study. PLoS One 2013, 8, e79848.2422319910.1371/journal.pone.0079848PMC3819249
+
+[300] 300 Bhosale, P. , Larson, A. J. , Frederick, J. M. , Southwick, K. et al., Identification and characterization of a Pi isoform of glutathione S‐transferase (GSTP1) as a zeaxanthin‐binding protein in the macula of the human eye. J. Biol. Chem. 2004, 279, 49447–49454.1535598210.1074/jbc.M405334200
+
+[301] 301 Walfisch, Y. , Walfisch, S. , Agbaria, R. , Levy, J. et al., Lycopene in serum, skin and adipose tissues after tomato‐oleoresin supplementation in patients undergoing haemorrhoidectomy or peri‐anal fistulotomy. Br. J. Nutr. 2003, 90, 759–766.1312944410.1079/bjn2003955
+
+[302] 302 Molina, D. K. , DiMaio, V. J. Normal organ weights in men: part II‐the brain, lungs, liver, spleen, and kidneys. Am. J. Forensic Med. Pathol. 2012, 33, 368–372.2218298410.1097/PAF.0b013e31823d29ad
+
+[303] 303 Salans, L. B. , Cushman, S. W. , Weismann, R. E. , Studies of human adipose tissue. Adipose cell size and number in nonobese and obese patients. J. Clin. Invest. 1973, 52, 929–941.469365610.1172/JCI107258PMC302341

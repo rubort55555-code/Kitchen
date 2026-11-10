@@ -1,0 +1,59 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 28 из 39: References (часть 2)
+============================================================
+
+[26] 26 Wang, L. , Gaziano, J. M. , Norkus, E. P. , Buring, J. E. et al., Associations of plasma carotenoids with risk factors and biomarkers related to cardiovascular disease in middle‐aged and older women. Am. J. Clin. Nutr. 2008, 88, 747–754.1877929210.1093/ajcn/88.3.747PMC2559966
+
+[27] 27 van der Gaag, M. S. , van den Berg, R. , van den Berg, H. , Schaafsma, G. et al., Moderate consumption of beer, red wine and spirits has counteracting effects on plasma antioxidants in middle‐aged men. Eur. J. Clin. Nutr. 2000, 54, 586–591.1091847010.1038/sj.ejcn.1601061
+
+[28] 28 Walmsley, C. M. , Bates, C. J. , Prentice, A. , Cole, T. J. , Relationship between alcohol and nutrient intakes and blood status indices of older people living in the UK: further analysis of data from the National Diet and Nutrition Survey of people aged 65 years and over, 1994/5. Public Health Nutr. 1998, 1, 157–167.1093341310.1079/phn19980025
+
+[29] 29 Ryden, M. , Leanderson, P. , Kastbom, K. O. , Jonasson, L. , Effects of simvastatin on carotenoid status in plasma. Nutr. Metab. Cardiovasc. Dis. 2012, 22, 66–71.2067890610.1016/j.numecd.2010.04.009
+
+[30] 30 Casso, D. , White, E. , Patterson, R. E. , Agurs‐Collins, T. et al., Correlates of serum lycopene in older women. Nutr. Cancer 2000, 36, 163–169.1089002610.1207/S15327914NC3602_4
+
+[31] 31 Borel, P. , Genetic variations involved in interindividual variability in carotenoid status. Mol. Nutr. Food. Res. 2012, 56, 228–240.2195706310.1002/mnfr.201100322
+
+[32] 32 Borel, P. , Desmarchelier, C. , Nowicki, M. , Bott, R. , A combination of single‐nucleotide polymorphisms is associated with interindividual variability in dietary beta‐carotene bioavailability in healthy men. J. Nutr. 2015, 145, 1740–1747.2606306510.3945/jn.115.212837
+
+[33] 33 van den Berg, H. , Carotenoid interactions. Nutr. Rev. 1999, 57, 1–10.1004769910.1111/j.1753-4887.1999.tb01769.x
+
+[34] 34 Micozzi, M. S. , Brown, E. D. , Edwards, B. K. , Bieri, J. G. et al., Plasma carotenoid response to chronic intake of selected foods and beta‐carotene supplements in men. Am. J. Clin. Nutr. 1992, 55, 1120–1125.159558410.1093/ajcn/55.6.1120
+
+[35] 35 Alminger, M. , Aura, A. M. , Bohn, T. , Dufour, C. et al., In vitro models for studying secondary plant metabolite digestion and bioaccessibility. Comp. Rev. Food Sci. Food Saf. 2014, 13, 413–436.10.1111/1541-4337.1208133412708
+
+[36] 36 Reboul, E. , Borel, P. , Proteins involved in uptake, intracellular transport and basolateral secretion of fat‐soluble vitamins and carotenoids by mammalian enterocytes. Prog. Lipid Res. 2011, 50, 388–402.2176372310.1016/j.plipres.2011.07.001
+
+[37] 37 Harrison, P. J. , Bugg, T. D. , Enzymology of the carotenoid cleavage dioxygenases: reaction mechanisms, inhibition and biochemical roles. Arch. Biochem. Biophys. 2014, 544, 105–111.2414452510.1016/j.abb.2013.10.005
+
+[38] 38 Moran, N. E. , Erdman, J. W., Jr. , Clinton, S. K. , Complex interactions between dietary and genetic factors impact lycopene metabolism and distribution. Arch. Biochem. Biophys. 2013, 539, 171–180.2384585410.1016/j.abb.2013.06.017PMC3818361
+
+[39] 39 Amengual, J. , Widjaja‐Adhi, M. A. , Rodriguez‐Santiago, S. , Hessel, S. et al., Two carotenoid oxygenases contribute to mammalian provitamin A metabolism. J. Biol. Chem. 2013, 288, 34081–34096.2410628110.1074/jbc.M113.501049PMC3837149
+
+[40] 40 Ortega, H. , Castilla, P. , Gomez‐Coronado, D. , Garces, C. et al., Influence of apolipoprotein E genotype on fat‐soluble plasma antioxidants in Spanish children. Am. J. Clin. Nutr. 2005, 81, 624–632.1575583210.1093/ajcn/81.3.624
+
+[41] 41 Meyers, K. J. , Johnson, E. J. , Bernstein, P. S. , Iyengar, S. K. et al., Genetic determinants of macular pigments in women of the Carotenoids in Age‐Related Eye Disease Study. Invest. Ophthalmol. Vis. Sci. 2013, 54, 2333–2345.2340412410.1167/iovs.12-10867PMC3626525
+
+[42] 42 Bonet, M. L. , Canas, J. A. , Ribot, J. , Palou, A. , Carotenoids and their conversion products in the control of adipocyte function, adiposity and obesity. Arch. Biochem. Biophys. 2015, 572, 112–125.2572149710.1016/j.abb.2015.02.022
+
+[43] 43 Gradelet, S. , Astorg, P. , Pineau, T. , Canivenc, M. C. et al., Ah receptor‐dependent CYP1A induction by two carotenoids, canthaxanthin and beta‐apo‐8'‐carotenal, with no affinity for the TCDD binding site. Biochem. Pharmacol. 1997, 54, 307–315.927133610.1016/s0006-2952(97)00176-7
+
+[44] 44 Sayin, S. I. , Wahlstrom, A. , Felin, J. , Jantti, S. et al., Gut microbiota regulates bile acid metabolism by reducing the levels of tauro‐beta‐muricholic acid, a naturally occurring FXR antagonist. Cell Metab. 2013, 17, 225–235.2339516910.1016/j.cmet.2013.01.003
+
+[45] 45 Grolier, P. , Borel, P. , Duszka, C. , Lory, S. et al., The bioavailability of alpha‐ and beta‐carotene is affected by gut microflora in the rat. Br. J. Nutr. 1998, 80, 199–204.9828762
+
+[46] 46 Bohn, T. , McDougall, G. J. , Alegria, A. , Alminger, M. et al., Mind the gap‐deficits in our knowledge of aspects impacting the bioavailability of phytochemicals and their metabolites–a position paper focusing on carotenoids and polyphenols. Mol. Nutr. Food Res. 2015, 59, 1307–1323.2598837410.1002/mnfr.201400745PMC5033009
+
+[47] 47 Sy, C. , Gleize, B. , Dangles, O. , Landrier, J. F. et al., Effects of physicochemical properties of carotenoids on their bioaccessibility, intestinal cell uptake, and blood and tissue concentrations. Mol. Nutr. Food Res. 2012, 56, 1385–1397.2281525110.1002/mnfr.201200041
+
+[48] 48 Kulkarni, B. V. , Mattes, R. D. , Lingual lipase activity in the orosensory detection of fat by humans. Am. J. Physiol. Regul. Integr. Comp. Physiol. 2014, 306, R879–R885.2469438410.1152/ajpregu.00352.2013PMC4159735
+
+[49] 49 Phan, C. T. , Tso, P. , Intestinal lipid absorption and transport. Front. Biosci. 2001, 6, D299–D319.1122987610.2741/phan
+
+[50] 50 Voigt, N. , Stein, J. , Galindo, M. M. , Dunkel, A. et al., The role of lipolysis in human orosensory fat perception. J. Lipid Res. 2014, 55, 870–882.2468810310.1194/jlr.M046029PMC3995465

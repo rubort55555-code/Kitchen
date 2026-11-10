@@ -1,0 +1,225 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 8 из 39: Host factors influencing digestion aspects – from matrix release to bioaccessibility (часть 3)
+============================================================
+
+Though pancreatic triglyceride lipase activity is usually reduced by bile‐salts, this effect is offset by colipase, also secreted by the pancreas 70. Formation of colipase preprotein is regulated by the CLPS gene, and mice deficient for CLPS showed lower survival and weight gain on a high‐fat diet, suggesting the inability to cope with lipids on a high fat diet 71. A polymorphism for the gene encoding procolipase has been related to lipid metabolism and diabetes risk 72, and would be an interesting candidate also regarding carotenoid metabolism. In a recent study, a SNP in PNLIP (rs11197742) was found in a combination of SNPs associated with chylomicron secretion of lycopene 73, although its contribution was rather low and did not reach statistical significance when investigated individually (p = 0.086). Several SNPs in PNLIP have been reported in children, and the latter was related to altered plasma lipoprotein and total cholesterol concentrations 74, as well as with lycopene bioavailability (Table 4).
+
+Table 4. List of SNPs known, or speculated, to influence carotenoid metabolism
+
+Aspect of bioavailability | Gene | SNP | Carotenoid/other | Function | Reference
+
+Digestion | PNLIP | rs11197742 | Lycopenec | Pancreatic lipase | 73
+
+ |  | 96A/Ca exon 3 |  |  | 74
+
+ |  | 486C/T exon 6 |  |  | 74
+
+ |  | 1359C/T exon 13 | Plasma lipoproteins |  | 74
+
+ | CLPS | Arg92Cys (rs370885215) | Cholesterol, apolipoproteinsd | Colipase | 72
+
+ | LIPF | unknown | unknown | Gastric lipase | 46
+
+Absorption | SCARB1 f | Intron‐5 | β‐carotened | Transporter | 103
+
+ |  | Allele A, exon 1 | β‐cryptoxanthind |  | 103
+
+ |  | Allele T, exon 8 | β‐cryptoxanthind |  | 103
+
+ |  | rs11057820 | Luteine |  | 294
+
+ |  | rs11057841 | Luteind |  | 294
+
+ |  | rs10773109 | Luteind |  | 294
+
+ |  | rs11057830 | Luteind |  | 294
+
+ |  | rs11608336 | Luteind |  | 294
+
+ |  | rs12581963 | Luteind |  | 294
+
+ |  | rs10846744 | Lutein/zeaxd |  | 295
+
+ |  | rs11057841 | Lycopened |  | 296
+
+ |  | rs61932577 | β‐carotene, α‐carotened |  | 84
+
+ |  | rs5888 | β‐cryptoxanthin |  | 84
+
+ | CD36 f | rs4112274 | Lycopenec | Transporter | 73
+
+ |  | rs1524598 | Lutein/zeaxanthind |  | 295
+
+ |  | rs1761667 | Lutein/zeaxanthind |  | 215
+
+ |  | rs13230419 | Lutein/zeaxanthind |  | 215
+
+ |  | rs1761667 | Lutein/zeaxanthine |  | 215
+
+ |  | rs1984112 | β‐cryptoxanthind |  | 84
+
+ |  | rs1761667 | β‐cryptoxanthind |  | 84
+
+ |  | rs7755 | β‐cryptoxanthind |  | 84
+
+ |  | rs1984112 | α‐carotened |  | 84
+
+ |  | rs1761667 | α‐carotened |  | 84
+
+ |  | rs1527479 | α‐carotened |  | 84
+
+ | NPC1L1 | rs17725246 | Lycopenec | Transporter | 73
+
+ |  | rs217430 | Lutein/zeaxd |  | 295
+
+ |  | rs217428 | Luteind ?h |  | 215
+
+ |  | rs17655652 | Luteind? |  | 215
+
+ |  | rs217434 | Luteind? |  | 215
+
+ | ABCG5 | rs2278357 | β‐carotenec | Transporter | 32
+
+ |  | rs10205816 | Lutein/zeaxanthind |  | 295
+
+ | ABCG8 | rs13405698 | Lutein/zeaxanthind |  | 295
+
+ |  | rs4953028 | Lutein/zeaxanthind |  | 295
+
+ |  | rs4148211 | Luteind ? |  | 215
+
+ |  | rs4148217 | Luteind ? |  | 215
+
+ |  | rs6544718 | Luteind ? |  | 215
+
+ | ABCG2 | rs17731631 | Luteinc | Transporter | 14
+
+ |  | rs6532059 | Luteinc |  | 14
+
+ |  | rs1871744 | Lycopenec |  | 73
+
+ | ABCA1 | rs2791952 | β‐carotenec, lycopenec | Transporter | 32, 73
+
+ |  | rs1331924 | Lycopenec |  | 73
+
+ |  | rs10991408 | β‐carotenec |  | 32
+
+ |  | rs3887137 | β‐carotenec, lycopenec |  | 32, 73
+
+ |  | rs390253 | Luteinc |  | 14
+
+ |  | rs4149316 | Luteinc, lycopenec |  | 73
+
+ |  | rs4149299 | Lycopenec |  | 
+
+ |  | rs9919066 | Luteinc |  | 14
+
+ |  | rs2020926 | Luteinc |  | 14
+
+ |  | rs2274873 | Lutein/zeaxanthind |  | 295
+
+ |  | rs1331924 | Lutein/zeaxanthind |  | 295
+
+ | ABCB1 | rs10248420 | Lycopenec |  | 73
+
+ |  | rs10280101 | Lycopenec |  | 73
+
+ | ISX g | rs137252 | Luteinc | Regulates BCO1 | 14
+
+ |  | rs5749706 | Luteinc | Expression | 14
+
+ |  | rs137269 | Luteinc |  | 14
+
+ |  | rs137238 | Luteinc |  | 14
+
+ |  | rs5755368 | β‐carotenec, luteinc |  | 14, 32
+
+ |  | rs202313 | β‐carotenec |  | 32
+
+ |  | rs16994824 | β‐carotenec |  | 32
+
+ |  | rs2056983 | Lycopenec |  | 73
+
+Intracellular cleavage | BCO1 | rs7196470 | β‐carotenec | Cleavage enzyme | 32
+
+ |  | promotor | β‐carotened |  | 107
+
+ |  | rs11645428 | Lutein/zeaxanthind |  | 295
+
+ |  | rs6564851 | Lutein/zeaxanthind |  | 295
+
+ |  | rs7500996 | Lutein/zeaxanthind |  | 295
+
+ |  | rs6564851 | β‐carotene, α‐carotene, lycopene, zeaxanthin, luteind |  | 32, 104
+
+ |  | rs4889286 | β‐carotened |  | 297
+
+ |  | rs12934922 | β‐carotened |  | 297
+
+ |  | rs4889293 | α‐carotened |  | 297
+
+ |  | rs4889286 | α‐carotened |  | 297
+
+ |  | rs12918164 | β‐cryptoxanthind |  | 297
+
+ |  | rs4889293 | β‐cryptoxanthind |  | 297
+
+ |  | rs56389940 | Lutein/zeaxanthind |  | 297
+
+ |  | rs10048138 | Lutein/zeaxanthind |  | 297
+
+ |  | rs7501331 | Luteind , e |  | 215
+
+ |  | rs12934922 | β‐carotened |  | 298
+
+ |  | rs7501331 | β‐carotened |  | 298
+
+ |  | rs12934922 | β‐carotened |  | 298
+
+ | BCO2 | rs12796114 | Association with AMD | Cleavage enzyme | 295
+
+ |  | rs2250417 | Association with AMD |  | 295
+
+Intracellular transport (gut epithelium) and other functions | ELOVL2 | rs9468304 | β‐carotenec, luteinc | Fatty acid elongase, precursor membrane | 14, 32
+
+ |  |  | Lycopenec | Lipids | 73
+
+ |  | rs3798709 | β‐carotenec, luteinc, lycopenec |  | 14, 32, 73
+
+ |  | rs911196 | β‐carotenec, lycopenec |  | 73
+
+ | INSIG2 | rs17006621 | Luteinc, lycopenec | Sterol binding | 14
+
+ | I‐FABP | IFABP‐Thr | Lycopened | Fatty acid transport | 103
+
+ | SLC27A6 | rs10053477 | Lycopenec | Fatty acid transport | 73
+
+Chylomicron secretion | MTP | rs17029213 | Luteinc | Triglyceride | 14
+
+ |  | rs17029173 | Lycopenec | Transporter | 73
+
+ |  | rs1032355 | Lycopenec |  | 73
+
+ |  | rs745075 | Lycopenec |  | 73
+
+Blood, liver metabolism, lipoprotein distribution | LPL | rs7821631 | Luteinc | Lipoprotein lipase | 14
+
+ |  | rs10096561 | Luteinc |  | 14
+
+ |  | rs1441778 | Luteinc |  | 14
+
+ |  | rs7841189 | Lycopenec |  | 73
+
+ |  | rs7005359 | Lycopenec |  | 73
+
+ |  | rs17482753 | Lycopenec |  | 73
+
+ |  | X447 allele | Lutein, β‐carotene, α‐carotene, β‐cryptoxanthinb |  | 162
+
+ | APOA1 | rs2070665 | Luteinc | Protein of HDL | 14

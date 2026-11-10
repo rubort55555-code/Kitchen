@@ -1,0 +1,11 @@
+Название: Absorption of Vitamin A and Carotenoids by the Enterocyte: Focus on Transport Proteins
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2013
+DOI: https://doi.org/10.3390/nu5093563   PMID: 24036530   PMC: PMC3798921
+Лицензия: http://creativecommons.org/licenses/by/3.0/ (открытый доступ). © 2013 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 9 из 14: 5. Conclusions
+============================================================
+
+To conclude, the full understanding of vitamin A and carotenoid absorption by the enterocyte is still in progress. Although some specific proteins such as the cytosolic CRBPII, and several non-specific transporters such as SR-BI, NPC1-L1, and ABCA1 have been identified, other transporters such as the dietary vitamin A apical membrane transporter remain to be identified.

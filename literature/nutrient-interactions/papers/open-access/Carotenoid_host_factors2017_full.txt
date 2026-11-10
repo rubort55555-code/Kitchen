@@ -1,0 +1,1366 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+### Abstract
+
+Carotenoid dietary intake and their endogenous levels have been associated with a decreased risk of several chronic diseases. There are indications that carotenoid bioavailability depends, in addition to the food matrix, on host factors. These include diseases (e.g. colitis), life‐style habits (e.g. smoking), gender and age, as well as genetic variations including single nucleotide polymorphisms that govern carotenoid metabolism. These are expected to explain interindividual differences that contribute to carotenoid uptake, distribution, metabolism and excretion, and therefore possibly also their association with disease risk. For instance, digestion enzymes fostering micellization (PNLIP, CES), expression of uptake/efflux transporters (SR‐BI, CD36, NPC1L1), cleavage enzymes (BCO1/2), intracellular transporters (FABP2), secretion into chylomicrons (APOB, MTTP), carotenoid metabolism in the blood and liver (LPL, APO C/E, LDLR), and distribution to target tissues such as adipose tissue or macula (GSTP1, StARD3) depend on the activity of these proteins. In addition, human microbiota, e.g. via altering bile‐acid concentrations, may play a role in carotenoid bioavailability. In order to comprehend individual, variable responses to these compounds, an improved knowledge on intra‐/interindividual factors determining carotenoid bioavailability, including tissue distribution, is required. Here, we highlight the current knowledge on factors that may explain such intra‐/interindividual differences.
+
+### Introduction
+
+Carotenoids are natural pigments with a C‐30 or C‐40 backbone. They can be produced by most plants, bacteria, and fungi, but not by animals or humans, making diet their sole source. Carotenoids have recently been investigated with much interest, as their dietary intake and endogenous concentrations have been associated with a reduced risk of several chronic diseases. For example, carotenoid intake has been positively associated with a reduced risk of cancer 1, type 2 diabetes mellitus (T2D) 2, cardiovascular diseases 3, and asthma 4, while plasma carotene concentration was shown to be significantly associated with reduced total mortality 5. In addition, some carotenoids, including α‐, β‐carotene and β‐cryptoxanthin (Fig. 1), are vitamin A precursors, constituting the predominant source of vitamin A in most developing countries (up to 90% 6) as well as in Western countries especially with respect to vegetarians. Recently, it has also been suggested that cis‐carotenoids are even more beneficial for the prevention of atherosclerosis and T2D than their all‐trans isomers 7, 8. Finally, it is now acknowledged that lutein and zeaxanthin play a role in vision by improving contrast sensitivity and visual acuity 9 and participate in the prevention of age‐related macular degeneration 10.
+
+Figure 1. Predominant carotenoids in our diet, common metabolites and nomenclature.
+
+However, several intervention trials with carotenoid supplements have not supported these beneficial associations, or even found negative health effects 11, 12. To explain this discrepancy, it is hypothesized that the food matrix (missing synergistic effects, e.g. with other antioxidants such as polyphenols), a larger array of natural occurring carotenoids compared to single carotenoids in high amounts, presentation in the form of carotenoid supplements (powder, solid matrix) and continuous intake in case of supplements, influence absorption, distribution, metabolism and excretion (ADME), and therefore also their bioactivity. However, it has also been emphasized that ADME‐related factors, including digestion and matrix release, solubilisation in mixed micelles, epithelial uptake in the (small) intestine, and further bio‐distribution, all prerequisites for exerting potential biological effects, can be different between individuals. This likely results in variable blood/tissue concentrations 13, 14, 15. However, blood plasma/serum alone may not constitute the best indicator to assess carotenoid status, and additional methods, such as isotopic labelling, similar as for retinoids 16 or easy accessible compartments such as white blood cells 17 or buccal cells 18, may allow for more insights regarding endogenous carotenoid levels, carotenoid compartments, and turnover 19.
+
+This intra‐ and interindividual variability can be attributed, in addition to dietary habits 20, 21, to host‐related factors (Table 1) including disease state 22, 23, 24, possibly physical activity 25, 26, being overweight/obese 26, alcohol use 25, 27, 28, smoking habits 26, drug intake 29, age 30, and genetic aspects 31, 32. However, the underlying mechanisms for this variability – e.g. lower bioaccessibility, reduced absorption, altered tissue distribution, turnover, and excretion as well as possible interactions of individual carotenoids on absorption and bio‐activation of other carotenoids 33, 34, are only poorly understood. These factors can result in huge variability of carotenoid absorption and circulating plasma levels (Table 2). In a double tracer study 13 with D6 β‐carotene (37 μmol), lowest AUC (area under the plasma‐concentration‐time curve, μmol h/L) versus highest AUC were found to be 0.01 and 30.00, respectively. Major host factors influencing carotenoid ADME patterns are likely to include: Factors influencing carotenoid release from the food matrix, and their transition from lipid droplets to mixed micelles, i.e. factors impacting bioaccessibility. This includes genes responsible for the expression of digestive enzymes (e.g. gastric lipase, cholesterol esterase, pancreatic lipase, etc.), and bile acid formation aiding in carotenoid micellization 20, 35;Factors altering carotenoid uptake into (or efflux out of) the intestinal epithelium. This encompasses uptake/efflux transporters such as scavenger receptor class B member 1 (SR‐BI), cluster of differentiation 36 (CD36), and Niemann‐Pick C1 like intracellular cholesterol transporter 1 (NPC1L1), and perhaps other ATP‐binding cassette (ABC) proteins such as ABCG5/G8, or ABCA1 31, 36, but also small intestinal surface available for absorption;Factors contributing to intracellular cleavage, especially BCO1/2 (β‐carotene oxygenase 1/2), responsible for centric/asymmetric cleavage of carotenoids, respectively, producing a variety of retinoids and potential endogenous occurring apocarotenoids 37, 38, 39;Factors that impinge on carotenoid intracellular transport in the gut epithelium, i.e. lecithin‐retinol acyltransferase (LRAT) for retinol (and perhaps other β‐carotene cleavage products), and maybe intestinal fatty acid binding protein (FABP2/I‐FABP);Factors altering the secretion of carotenoid‐containing chylomicrons into the lymphatic system, such as apolipoprotein B 48 (APOB48), APOAIV, SAR1B (secretion associated Ras related GTPase1B), and microsomal triglyceride transfer protein (MTTP) 38;Factors influencing carotenoid transport in the blood plasma/serum, such as their further distribution into lipoproteins, e.g. lipoprotein lipase (LPL), APOA‐I, APOB, APOE and perhaps APOC3, and low density lipoprotein receptor (LDLR) 40; and the liver such as by hepatic lipase (LIPC);Deposition of carotenoids in “target tissues”, e.g. the macula (lutein, zeaxanthin), influenced by SR‐BI, glutathione S‐transferase P1 isoform (GSTP1), StAR‐related lipid transfer domain protein 3 (StARD3), BCO1, cholesterol transporters (SR‐BI, ABCA1, ABCG5/8), retinal pigment epithelial‐specific protein (RPE65), elongation of very long chain fatty acids like 2 (ELOVL2), and those involved in visual pigment metabolism 41. However, also deposition in adipocytes, involving e.g. LDLR, could play a role 42;Any factor associated with carotenoid catabolism and excretion (in addition to BCO1/2), possibly those involving cytochrome P450 enzymes or the aryl‐hydrocarbon‐receptor 43;The microbiota. This may alter e.g. patterns and concentrations of secondary bile acids 44, or possibly carotenoid absorption or degradation patterns 45, though it is not sure if a significant fraction of carotenoids can be absorbed from the colon 46.Effects of individual carotenoids on the absorption, binding, transport and bioactivation of other carotenoids as well as selective absorption, binding, transport and bioactivation of individual carotenoids 33.Any factor associated with vitamin A/retinoid storage and metabolism.
+
+Table 1. Overview of host (non‐dietary) factors proposed to influence (in addition to genetic make‐up and malabsorption diseases of the GI) intra‐and interindividual differences regarding carotenoid ADME
+
+Factor | Type of study | Carotenoids investigated and variability | Reference
+
+Age | Observational, n = 400 adults (males, females) | Younger age correlated with lower serum carotenoids | 164
+
+ | Observational, n = 946 postmenopausal women | Lower serum lycopene levels associated with higher age | 30
+
+ | Observational, n = 12500 | Lower serum β‐carotene levels with older age | 272
+
+ | Review | Higher plasma carotenoid levels with older age | 273
+
+Alcohol | Observational, n = 2895 women | No consistent effect of alcohol consumption on plasma levels of α‐carotene, β‐carotene, β‐cryptoxanthin, and lutein‐zeaxanthin | 26
+
+ | Observational, n = 194 men | Negative correlations of plasma levels of lycopene, β‐carotene, β‐cryptoxanthin (not lutein) with units of alcohol/day, Spearman's rank correlation: ‐0.27 to ‐0.51 | 25
+
+ | Observational, n = 1198 subjects | Higher alcohol consumption related to higher plasma lycopene (ca. 20%), no effect on α‐and β‐carotene, lutein, and β‐cryptoxanthin | 28
+
+ | Intervention, n = 12 healthy men | Consumption of wine, beer, or spirits for 3 weeks reduced plasma β‐carotene by 15%, no effect on lycopene, lutein, zeaxanthin, ‐cryptoxanthin, and α‐carotene | 27
+
+ | Observational, n = 400 adults (male, female) | Higher alcohol consumption correlated with lower serum carotenoids | 164
+
+ | Observational, n = 12500 adults (male, female) | Lower β‐carotene levels with alcohol consumption | 272
+
+Asthma | Observational, women with (n = 84) & without asthma (n = 47) | Higher plasma total‐carotenoids in women with asthma | 253
+
+Body weight, BMI | Observational, n = 2895 women | Obese women had lower plasma levels of α‐carotene, β‐carotene, β‐cryptoxanthin, and lutein‐zeaxanthin, by ca. 10%, compared to normal‐weight women. Plasma lycopene was higher by 10% | 26
+
+ | Observational, n = 194 men | Negative correlation of BMI with serum lutein but not lycopene, β‐carotene, β‐cryptoxanthin, R: ‐0.12 (Spearman rank correlation) | 25
+
+ | Observational, n = 400 adults (males, females) | Higher BMI associated with lower α‐and β‐carotene and xanthophyll serum levels | 164
+
+ | Observational, n = 946 postmenopausal women | Higher BMI correlated with lower plasma lycopene levels | 30
+
+ | Observational, n = 600 healthy adults | Higher abdominal obesity related to lower serum carotenoid levels (α‐,β‐carotene, canthaxanthin | 274
+
+ | Observational, n = 55 women | Similar total adipocyte β‐carotene content in lean and obese, β‐carotene concentration reduced in obese | 194
+
+Gender | Observational, n = 12,500 adults (male, female) | Women had higher serum β‐carotene levels than men | 272
+
+Helicobacter pylori infection | Observational, n = 49 anemic patients (male, female) | Lower gastric mucosal β‐carotene reported with increased H. pylori infection (though no effect on plasma β‐carotene levels) | 22, 275
+
+HIV | Observational, n = 1669 women | Lower serum β‐carotene levels in HIV subjects | 276
+
+Hyperthyroidism | Observational, n = 36 patients | Lower serum β‐carotene in subjects with hyperthyroidism compared to hypo‐and euthyroidism | 254
+
+Low zinc status | Intervention, n = 12 males | Supplementation with zinc (20 mg/d) improved plasma carotenoid concentration | 112
+
+ | Observational, n = 400 women HIV positive | Lower serum β‐carotene associated with markers of disease progression, univariate regression, R: – 0.083‐0.244 | 24
+
+ | Observational, n = 1665 men and women, healthy and diabetic | 20% lower plasma β‐carotene levels in diabetes subjects compared to healthy ones | 277
+
+Blood lipids, cholesterol | Observational, n = 400 adults (male, female) | Higher non‐HDL cholesterol associated with lower serum carotenoids | 164
+
+ | Observational, n = 12,500 (male, female) | Higher total cholesterol and lower triglycerides associated with higher β‐carotene in serum | 272
+
+Drug intake | Intervention, n = 8 volunteers | Intake of simvastatin (lipid‐lowering drug), 40 mg/day for 8 weeks, reduced plasma levels of carotenes (lycopene, α‐and β‐carotene) and xanthophylls (β‐cryptoxanthin, lutein), by 5 and 21%, respectively | 29
+
+ | Intervention trial, n = 6 patients (1 male, 5 female) | Intake of orlistat (lipid‐lowering drug) decreased levels of α‐, and β‐carotene in plasma | 278
+
+ | Intervention trial, n = 228 obese subjects (male, female) | Intake of orlistat (lipid‐lowering drug) decreased β‐carotene levels in plasma | 279
+
+Malaria | Observational, n = 100 malaria and 50 control children (boys, girls) | Lower serum concentration of all major carotenoids compared to control | 280
+
+Menstrual cycle | Intervention trial, n = 9 women | Lower plasma carotenoids during early than late follicular phase | 166
+
+Microbiota | Observational, n = 25 subjects (males, females) | Collinsella spp. were reduced in subjects with atherosclerosis. These subjects had lower β‐carotene in serum and the metagenome showed lower phytoene‐dehydrogenase. | 133
+
+Physical activity | Observational, n = 2895 women | Exercising women (>1 time/week) had higher levels of α‐carotene, β‐carotene, β‐cryptoxanthin, and lutein‐zeaxanthin, by ca. 5–10%, compared to normal‐weight individuals without exercise. No effect on lycopene | 26
+
+ | Observational, n = 194 men | Positive correlation of plasma levels of β‐cryptoxanthin and lutein with physical activity, rho: 0.12 to 0.17 | 25
+
+Race/Ethnicity | Observational, n = 4231 children and adolescents (male, female) | African American children had higher β‐cryptoxanthin, lutein, zeaxanthin, & lycopene serum concentrations but lower α‐carotene conc. than white children (not adjusted for dietary intake) | 281
+
+ | Observational, n = 285 healthy adolescents (male, female) | African‐American participants had lower serum concentrations of α‐carotene, but higher conc. of lutein + zeaxanthin compared with Caucasians (not adjusted for dietary intake) | 282
+
+Smoking | Observational, n = 194 men | No relation of smoking to plasma levels of lycopene, β‐carotene, β‐cryptoxanthin, lutein | 25
+
+ | Observational, n = 1198 adults (male, female) | Increased smoking related to lower plasma lycopene, α‐ and β‐carotene, lutein, β‐cryptoxanthin (ca. 10–30%), total carotenoids ca. 50% lower | 283
+
+ | Observational, n = 400 adults (male, female) | Smoking correlated with lower serum carotenoids | 164
+
+ | Observational, n = 12,500 adults (male, female) | Smoking correlated with lower β‐carotene blood concentrations (not adjusted for dietary intake) | 272
+
+Table 2. Studies investigating the variability of carotenoids in blood and target tissues, following intervention trials and observational studies
+
+Study design | Carotenoid(s) | Tissue/Compartment | Variability | Reference
+
+Observational: 901adult subjects during 4 years (male, female) | Lycopene, lutein, α‐carotene, β‐carotene, β‐cryptoxanthin | Plasma conc. | Intraindividual variance:Lutein/zeaxanthin: 20.7%β‐carotene: 21.0%α ‐carotene: 21.9%Lycopene: 35.0%β‐cryptoxanthin: 27.1%Interindividual variance:Lutein/zeaxanthin: 70.5%β‐carotene: 70.7%α ‐carotene: 67.5%Lycopene: 61.0%β‐cryptoxanthin: 66.6% | 284
+
+Observational: 381 adult women, 4‐month intervals, 4 visits | Lutein | Plasma conc. | Interindividual: 47% RSDIntraindividual: 44% of interind. variation | 243
+
+ | β‐carotene | Plasma conc. | Interindividual: 80%RSDIntraindividual: 34% of interind. variation | 
+
+ | Lycopene | Plasma conc. | Interindividual: 41% RSDIntraindividual: as interind. variation | 
+
+Observational: 21 adult subjects over 1 year (male, female), 6 measurements | β‐carotene | Plasma conc. | Interindividual: 100% RSDIntraindividual: 21% of interind. variation | 244
+
+ | Lycopene | Plasma conc. | Interindividual: 42%Intraindividual: 72% of interind. variation | 
+
+Double stable isotope to 11 healthy men (37μmol β‐carotene) | β‐carotene | Plasma AUC | Interindividual: 137%%RSD300 fold differences in AUC dose response observed | 13
+
+Intervention: 8 adult subjects (4 males, 4 females), 0.5 μmol/kg bw. | β‐carotene | Plasma AUC | Intraindividual: 68% RSD | 159
+
+Intervention: 8 adult subjects, 0.5 μmol/kg bw. | Lutein | Plasma AUC | Intraindividual: 43% RSD | 
+
+Administration of isotopically labelled lycopene (10.2 mg) to 8 subjects (4 males, 4 females) | Lycopene | Absorption % based on plasma AUC | Interindividual: 504% RSD for all trans‐lycopene | 15
+
+Administration of lycopene (10‐120 mg) in a tomato beverage (5 male adults) | Lycopene | Absorption (%) | Interindividual: 77% RSD for highest dose, 53% RSD for lowest dose | 160
+
+Administration of soup, juice or tablets to 6 adult males (ca. 20 mg lycopene) | Lycopene | Plasma AUC | Interindividual: <28% RSD | 285
+
+Feeding trial (5 weeks, 9 mg lutein/d) to young males | Lutein | Plasma conc. | Interindividual: ca. 70% RSD | 286
+
+Administration of tomato puree, spinach (12 mg β‐carotene, 8 mg lutein), and pills containing β‐carotene and lutein (20 young females) | Lycopeneβ‐caroteneLutein | PlasmaPlasmaTRL AUC | Interindividual: 40 % RSDInterindividual: 40% RSDInterindividual: ca. 45% RSD from spinach | 147
+
+Administration of tomato puree to 33 adult men (0.4 mg β‐carotene) | β‐carotene | TRL AUC | Interindividual: 105% RSD | 32
+
+β‐arotene in oil within a meal (120 mg), 80 males | β‐carotene | TRL AUC | Interindividual: 61% RSD | 287
+
+Administration of tomato sauce (17 mg β‐carotene) to 12 adults (male, female) | β‐carotene | TRL AUC | Interindividual: 64% RSD | 149
+
+Administration of tomato puree, 33 adult men, 10 mg lycopene | Lycopene | TRL AUC | Interindividual: 70% RSD | 73
+
+Administration of tomato juice to n = 18 adults (male, female). Ca. 22 mg lycopene | Lycopene | TRL AUC | Interindividual: <67% RSD | 288
+
+Administration of tomato sauce to 12 adults (male, female). Ca. 47 mg lycopene | Lycopene | TRL AUC | Interindividual fractional absorption: 2.4% (RSD: 83%) | 148
+
+Administration of tomato preparations to 30 adult men, 25 mg lycopene | Lycopene | TRL AUC | Interindividual: 96% RSD for tomato paste | 289
+
+Administration of supplement (s) or tomato puree (tp) to 39 healthy men, ca. 5 mg lutein | Lutein | TRL AUC | Interindividual: RSD of 75% and 137% for s and tp, respectively | 14
+
+Administration of salad and avocado oil to n = 11 healthy subjects (male, female). 12 mg β‐carotene, 6 mg lutein, 7 mg α ‐carotene | Luteinβ‐caroteneα‐carotene | TRL AUCTRL AUCTRL AUC | Interindividual RSD: 54%69%82% | 290
+
+Administration of tomato puree, carrots, spinach, intragastrically to 10 adult males. 10 mg of each carotenoid | LycopeneLuteinβ‐carotene | Duodenum, micellar phase | Interindividual RSD: 32%23%20% | 66
+
+Observational, 20 ceased subjects (male, female), 0.4 months‐86 years of age | Lycopeneβ‐caroteneα‐caroteneLuteinβ‐cryptoxanthin | Liver | Interindividual RSD: 123%124%149%123%243% | 173
+
+Observational, 15 ceased adults (male, female), 0.4 months‐86 years of age | Lycopeneβ‐caroteneα‐caroteneLuteinβ‐cryptoxanthin | Kidney | Interindividual RSD: 100%132%132%234%234% | 173
+
+Observational, 13 ceased adults (male, female), 0.4 months‐86 years of age | Lycopeneβ‐caroteneα‐caroteneLuteinβ‐cryptoxanthin | Lung | Interindividual: 196% RSD125%117%136%180% | 173
+
+Intervention: 30 mg β‐carotene/d for 43 days in patients with adenomatous polyps (n = 7, male, female) | Lutein/zeaxanthinβ‐cryptoxanthinLycopeneα‐caroteneβ‐carotene | Colon | Interindividual RSD: 71%126%68%76%66% | 291
+
+Thus, as individual responses can depend on many varying factors, it is paramount to understand these and their influence on the biological variability of carotenoid ADME. In this review, it is aimed to highlight known host‐related factors that predispose for variations in carotenoid metabolism, such as genetic factors (e.g. single nucleotide polymorphisms (SNPs)), though additional ones (disease state, body weight, smoking, physical activity etc.) are also briefly reviewed. The manuscript structure is oriented around the metabolic path of carotenoids, from digestion (chapter 2) to intestinal absorption (chapter 3) and further transport to the liver (chapter 4) and distribution to target tissues (chapter 5) to storage and excretion related pathways (chapter 6). Searched databased included Pubmed and Scopus, for all years, in English language, employing the following search terms (abstract and title) to start with: “Human* AND (lutein OR lycopene OR xanthophyll OR carotene*) AND (bioavailab* OR pharmacokinetic* OR kinetic* OR absorption OR postprandial OR metabol* OR microb* OR microflora OR biliary OR enterhohepatic* OR chylomicron OR plasma OR tissue OR metabolism OR enterocyte OR lipoproteins OR transporters OR Single nucleotide polymorphism* OR genetic varia* OR SNP OR cleavage OR enzym* OR intestine) AND (intra* OR inter*) NOT (drug‐interaction OR in‐vitro)”, though additional literature following the primary search results were surveyed.
+
+### Host factors influencing digestion aspects – from matrix release to bioaccessibility
+
+## General aspects and oral phase of digestion
+
+Bioavailability of carotenoids depends on their bioaccessibility, i.e. the release from the food matrix and subsequent availability for absorption. As carotenoids are apolar, with octanol/water partition coefficients of 8–12 47, their incorporation into mixed micelles is necessary prior to their cellular uptake, which is assumed to take place predominantly in the small intestine.
+
+Mastication during oral digestion results in enhanced surface area and the breakdown into smaller particles. In addition, saliva appears to contain some lipase activity 48, though not necessarily lingual lipase (a triacylglycerol‐lipase, EC 3.1.1.3) 49, 50 (Table 3). As exposure in the oral cavity is rather short (usually less than 1 min), the enzymatic effect on carotenoid bioavailability is presumably small, though smaller particle size has been related to improved carotenoid bioavailability 51. To our knowledge, no mutagenesis on or polymorphisms with effects on oral lipases and lipid digestion has been reported to date.
+
+Table 3. Host factors influencing carotenoid release from food matrix and bioaccessibility
+
+Phase of digestion | Factor | Study description | Carotenoids investigated | Possible role in bioavailability | Reference
+
+Oral | Lingual lipase, other lipase | No data available | n/n | Low | n/n
+
+ | α‐amylase | No data available | n/n | Low | n/n
+
+Gastric | Non‐dietary phospholipids/ mucin | No data available | n/n | Low compared to dietary phospholipids | n/n
+
+ | Gastric lipase (GL) | GL from fungi (Rhizopus oryzae), pH optimum 5–9, in‐vitro | β‐carotene | No effect of gastric lipase detected | 64
+
+ | Pepsin | No effect in in vitro trials | Lutein, β‐carotene, lycopene | Presumable low effect in most carotenoid rich foods | 57, 58
+
+ | Pepsin | Tomato puree in vitro | Lycopene | Enhancing effect on lycopene micellization | 59
+
+ | pH | Digestion of spinach, in vitro | β‐carotene, lutein | Presumably negligibleb, though extreme pH may facilitate degradation | 55, 292
+
+Duodenum | Pancreatic lipase | Digestion of spinach, in vitro | β‐carotene, lutein, zeaxanthin | Low micellization (<5% original conc.) without pancreatina | 57
+
+ |  | Digestion of carrots+spinach+ tomato, in vitro | Total carotenoids | Micellization drop to 50% without pancreatin | 58
+
+ | Pancreatic amylase | Intake of amylase inhibitor ascarbose reduced vit. A levels in blood | Only vit. A | Low | 293
+
+ | Pancreatic proteases, PLRP2 | No data available | n/n | Low | n/n
+
+ | Pancreatic colipase | Tomato puree, in vitro digestion | Lycopene | Reduced intestinal recovery without colipase, no effect on micellization | 59
+
+ | Carboxyl‐esterase | Digestion of wolfberry, pepper, squash in vitro | Zeaxanthin‐esters | Enhanced xanthophyll bioavailability | 77
+
+ | Bile salts | Digestion of spinach, in vitro | β‐carotene, lutein, zeaxanthin | Micellization drop to 30% original conc. without bile salts | 57
+
+ | Bile salts | Digestion of carrots+spinach+ tomato, in vitro | Total carotenoids | Low micellization (<2% original conc.) without bile extract | 58
+
+Colon | Microbiota | Lower circulating carotenoids in subjects with higher Collinsella and atherosclerosis | β‐carotene | Unclear | 133
+
+ | Microbiota | Higher liver storage of α ‐and β‐carotene in germ‐free rats | α‐, β‐carotene | Prevention of breakdown products? Transit time? Bile‐salts? | 45
+
+As salivary alpha‐amylase (EC 3.2.1.1) participates in the break‐down of starch, food matrices rich in both starch and carotenoids, such as sweet potato, may be influenced by alterations in alpha‐amylase levels. It has been reported that in populations traditionally exposed to high levels of starch, more copies of the salivary amylase gene (AMY1) and higher enzyme levels were found 52, though its influence on the digestion of carotenoids has never been investigated.
+
+## Gastric phase of digestion
+
+In the stomach, the primary digestion enzymes include pepsin (3.4.23.1) and gastric lipase (3.1.1.3), though orally secreted lipases may still be active. In addition, a small amount of phospholipids 53 is released from the mucus layer 54, aiding in the emulsification of lipophilic constituents. The pH may have an influence, as low pH can result in the degradation of epoxy‐carotenoids (e.g. violaxanthin, neoxanthin), resulting in epoxide‐furanoid transitions 55. Human gastric pH is influenced mostly by meal, with a complex meal increasing the pH from initially 2 to 3–5, though interindividual differences in fasting pH exist 35.
+
+A few native foods are rich in both proteins and carotenoids, including egg yolk, salmon, and some types of cheese, and protein digestion could contribute to the release of carotenoids. In addition, (partly) digested proteins may aid in emulsifying carotenoids 51. Expression of pepsin has been reported to depend on the pepsinogen genes PGA3, PGA4, PGA5, and progastricsin (PGC) 56. However, varying the amount of pepsin in in vitro trials did not appear to have measurable effects on carotenoid bioaccessibility from leafy vegetables 57, and at least for such and similar sources, variations in pepsin are not expected to contribute to plasma level variability. Similarly, using a test meal composed of meat, carrots, spinach and tomato paste, gastric digestion (in vitro) had no significant influence on carotenoid bioaccessibility 58, suggesting rather small effects on carotenoid bioavailability at this step, though in these trials, gastric lipase was not involved. By contrast, Periago et al. 59 reported a positive effect of pepsin on lycopene micellization from a puree in vitro. It is possible that for this very apolar carotenoid, protein degradation products added to the emulsifying effect, or aided in matrix breakdown.
+
+The genes related to the production and secretion of mucus containing phospholipids, which could aid in the emulsification process, are not clearly identified. Concentration variations of phospholipids between 0.03 and 0.6 mM have been reported, 60 and may be expected to have some influence on carotenoid micellization. However, their influence and strengths of effect are unknown and would also be superseded by dietary phospholipids, which are expected to play a more important role. This would be true especially following ingestion of lipid‐rich meals (a mean intake of 2–8 g/d of phosphatidylcholine has been reported 61, which would translate into ca. 8 mM (if taken within 1 out of 3 major meals per day, and dissolved in 1 L gastric fluid).
+
+Gastric lipase, encoded by the LIPF (lipase F, gastric type) gene 62 and secreted by gastric chief cells, can digest up to 25% of the ingested lipids 35. It thus could be expected to influence the accumulation of carotenoids in lipid droplets, and their degradation, important for the following transition of carotenoids from lipid droplets to mixed micelles. This occurs mostly in the small intestine. Unfortunately, gastric lipase cannot, at present, be studied in vitro, due to the unavailability of human gastric lipase. Other sources, such as those from fungi, have different cleavage kinetics, differing in their pH optimum and also the type sequence of cleavage 63. Rabbit lipase would be an interesting option, but is not commercially available. Some, such as lipase from the fungus Rhizopus oryzae have been tested (cleavage optimum pH 5–9), though no significant improvement in bioaccessibility was found 64.
+
+## Small intestinal phase of digestion
+
+The most crucial step influencing carotenoid bioacessibility is the small intestinal phase. Here, micellization occurs or is completed, following the secretion of bile salts, in addition to pancreatic lipase, and additional enzymes (pancreatic amylase, nucleosidases, trypsinogen, chymotrypsinogen, carboxypeptidase, elastases, phospholipases, and carboxyl ester lipase). Bile salts aid in the emulsification process and formation and stability of the mixed micelles, while pancreatic lipase produces free fatty acids and monoglycerides, fostering emulsification. Thus, it can be expected that modifications of both bile‐acid and pancreatic lipase secretions have strong effects on the micellization of carotenoids, a pre‐requisite for their diffusion to the unstirred water layer prior to absorption 65. This has been confirmed by several in vitro studies, where micellization and resulting bioaccessibility was very much compromised when either bile salts or pancreatic lipase were missing. Without bile, bioaccessibility of total carotenoids fell to 30%, and without pancreatic lipase or both, to below 5% of their original value 57. Similar strong effect were found by Garret et al. 58, where total carotenoid micellization dropped below 5% of the original values without bile salts. The effect of pancreatin was less drastic (reduction by approximately 50%), possibly due to differences between test meals. In order to study factors influencing lycopene bioaccessibility, tomato puree was digested under various conditions, testing among other factors gastric pH, gastric digestion time, pepsin concentration, intestinal pH, pancreatin concentration, bile salt concentration, colipase addition and intestinal digestion time 59. It was found that only pepsin positively influenced micellization, while olive oil had a slightly negative effect, likely due to entrapment of lycopene by non‐hydrolysed olive oil.
+
+Following intragastric in vivo administration of carotenoid rich meals, duodenal fluid was aspirated, and micellization determined 66. Variability between subjects’ micellization efficacy (fractional bioaccessibility) was considerably lower compared to plasma or triacylglycerol‐rich lipoprotein (TRL) carotenoid variability following interventions, being 20, 23, and 32%, respectively for β‐carotene, lutein and lycopene, vs. typically 50–80% for plasma, though variations between studies can be considerable (Table 3). This may point out that, although enzyme or bile salt concentrations surely play a role in interindividual variation, an additional and about equal portion of variability is added during and after absorption.
+
+Bile acid production by the liver is governed by a variety of genes, involving for instance bile acid synthetic enzyme (CYP7A1), activators of CYP7A1 expression such as HNF4α (hepatocyte nuclear factor 4 alpha, encoded by HNF4A), and PGC1α (encoded by PPARGC1A), repressors of CYP7A1 (farnesoid X receptor (FXR, encoded by NR1H4)), short heterodimer partner (SHP, encoded by NR0B2), G protein pathway suppressor 2 (GPS 2, encoded by GPS2), pregnane X receptor (PXR, encoded by NR1I2), fibroblast growth factor 19 (FGF19; encoded by FGF19), fibroblast growth factor receptor 4 (FGFR4; encoded by FGFR4), klotho B (encoded by KLB), and forkhead box O1 (FOXO1; encoded by FOXO1) 67, however, their role in carotenoid absorption and tissue variability has not been examined.
+
+At least three lipases are secreted from the pancreas, including pancreatic triglyceride lipase (encoded by PNLIP), which is the most abundant lipase (producing sn2‐monoacylglycerol and free fatty acids), but also two homologues, pancreatic lipase‐related proteins 1 (not apparently active regarding lipolysis) and 2 (PLRP1 and PLRP2) 68. PLRP2 possess a broader substrate specificity, also cleaving, unlike PNLIP, phospholipids and galactolipids. The frequency of a SNP in the PLRP2 gene (rs4751995) has been associated with populations historically consuming a diet rich in cereals, and may have repercussions on lipid digestion 69.
+
+Though pancreatic triglyceride lipase activity is usually reduced by bile‐salts, this effect is offset by colipase, also secreted by the pancreas 70. Formation of colipase preprotein is regulated by the CLPS gene, and mice deficient for CLPS showed lower survival and weight gain on a high‐fat diet, suggesting the inability to cope with lipids on a high fat diet 71. A polymorphism for the gene encoding procolipase has been related to lipid metabolism and diabetes risk 72, and would be an interesting candidate also regarding carotenoid metabolism. In a recent study, a SNP in PNLIP (rs11197742) was found in a combination of SNPs associated with chylomicron secretion of lycopene 73, although its contribution was rather low and did not reach statistical significance when investigated individually (p = 0.086). Several SNPs in PNLIP have been reported in children, and the latter was related to altered plasma lipoprotein and total cholesterol concentrations 74, as well as with lycopene bioavailability (Table 4).
+
+Table 4. List of SNPs known, or speculated, to influence carotenoid metabolism
+
+Aspect of bioavailability | Gene | SNP | Carotenoid/other | Function | Reference
+
+Digestion | PNLIP | rs11197742 | Lycopenec | Pancreatic lipase | 73
+
+ |  | 96A/Ca exon 3 |  |  | 74
+
+ |  | 486C/T exon 6 |  |  | 74
+
+ |  | 1359C/T exon 13 | Plasma lipoproteins |  | 74
+
+ | CLPS | Arg92Cys (rs370885215) | Cholesterol, apolipoproteinsd | Colipase | 72
+
+ | LIPF | unknown | unknown | Gastric lipase | 46
+
+Absorption | SCARB1 f | Intron‐5 | β‐carotened | Transporter | 103
+
+ |  | Allele A, exon 1 | β‐cryptoxanthind |  | 103
+
+ |  | Allele T, exon 8 | β‐cryptoxanthind |  | 103
+
+ |  | rs11057820 | Luteine |  | 294
+
+ |  | rs11057841 | Luteind |  | 294
+
+ |  | rs10773109 | Luteind |  | 294
+
+ |  | rs11057830 | Luteind |  | 294
+
+ |  | rs11608336 | Luteind |  | 294
+
+ |  | rs12581963 | Luteind |  | 294
+
+ |  | rs10846744 | Lutein/zeaxd |  | 295
+
+ |  | rs11057841 | Lycopened |  | 296
+
+ |  | rs61932577 | β‐carotene, α‐carotened |  | 84
+
+ |  | rs5888 | β‐cryptoxanthin |  | 84
+
+ | CD36 f | rs4112274 | Lycopenec | Transporter | 73
+
+ |  | rs1524598 | Lutein/zeaxanthind |  | 295
+
+ |  | rs1761667 | Lutein/zeaxanthind |  | 215
+
+ |  | rs13230419 | Lutein/zeaxanthind |  | 215
+
+ |  | rs1761667 | Lutein/zeaxanthine |  | 215
+
+ |  | rs1984112 | β‐cryptoxanthind |  | 84
+
+ |  | rs1761667 | β‐cryptoxanthind |  | 84
+
+ |  | rs7755 | β‐cryptoxanthind |  | 84
+
+ |  | rs1984112 | α‐carotened |  | 84
+
+ |  | rs1761667 | α‐carotened |  | 84
+
+ |  | rs1527479 | α‐carotened |  | 84
+
+ | NPC1L1 | rs17725246 | Lycopenec | Transporter | 73
+
+ |  | rs217430 | Lutein/zeaxd |  | 295
+
+ |  | rs217428 | Luteind ?h |  | 215
+
+ |  | rs17655652 | Luteind? |  | 215
+
+ |  | rs217434 | Luteind? |  | 215
+
+ | ABCG5 | rs2278357 | β‐carotenec | Transporter | 32
+
+ |  | rs10205816 | Lutein/zeaxanthind |  | 295
+
+ | ABCG8 | rs13405698 | Lutein/zeaxanthind |  | 295
+
+ |  | rs4953028 | Lutein/zeaxanthind |  | 295
+
+ |  | rs4148211 | Luteind ? |  | 215
+
+ |  | rs4148217 | Luteind ? |  | 215
+
+ |  | rs6544718 | Luteind ? |  | 215
+
+ | ABCG2 | rs17731631 | Luteinc | Transporter | 14
+
+ |  | rs6532059 | Luteinc |  | 14
+
+ |  | rs1871744 | Lycopenec |  | 73
+
+ | ABCA1 | rs2791952 | β‐carotenec, lycopenec | Transporter | 32, 73
+
+ |  | rs1331924 | Lycopenec |  | 73
+
+ |  | rs10991408 | β‐carotenec |  | 32
+
+ |  | rs3887137 | β‐carotenec, lycopenec |  | 32, 73
+
+ |  | rs390253 | Luteinc |  | 14
+
+ |  | rs4149316 | Luteinc, lycopenec |  | 73
+
+ |  | rs4149299 | Lycopenec |  | 
+
+ |  | rs9919066 | Luteinc |  | 14
+
+ |  | rs2020926 | Luteinc |  | 14
+
+ |  | rs2274873 | Lutein/zeaxanthind |  | 295
+
+ |  | rs1331924 | Lutein/zeaxanthind |  | 295
+
+ | ABCB1 | rs10248420 | Lycopenec |  | 73
+
+ |  | rs10280101 | Lycopenec |  | 73
+
+ | ISX g | rs137252 | Luteinc | Regulates BCO1 | 14
+
+ |  | rs5749706 | Luteinc | Expression | 14
+
+ |  | rs137269 | Luteinc |  | 14
+
+ |  | rs137238 | Luteinc |  | 14
+
+ |  | rs5755368 | β‐carotenec, luteinc |  | 14, 32
+
+ |  | rs202313 | β‐carotenec |  | 32
+
+ |  | rs16994824 | β‐carotenec |  | 32
+
+ |  | rs2056983 | Lycopenec |  | 73
+
+Intracellular cleavage | BCO1 | rs7196470 | β‐carotenec | Cleavage enzyme | 32
+
+ |  | promotor | β‐carotened |  | 107
+
+ |  | rs11645428 | Lutein/zeaxanthind |  | 295
+
+ |  | rs6564851 | Lutein/zeaxanthind |  | 295
+
+ |  | rs7500996 | Lutein/zeaxanthind |  | 295
+
+ |  | rs6564851 | β‐carotene, α‐carotene, lycopene, zeaxanthin, luteind |  | 32, 104
+
+ |  | rs4889286 | β‐carotened |  | 297
+
+ |  | rs12934922 | β‐carotened |  | 297
+
+ |  | rs4889293 | α‐carotened |  | 297
+
+ |  | rs4889286 | α‐carotened |  | 297
+
+ |  | rs12918164 | β‐cryptoxanthind |  | 297
+
+ |  | rs4889293 | β‐cryptoxanthind |  | 297
+
+ |  | rs56389940 | Lutein/zeaxanthind |  | 297
+
+ |  | rs10048138 | Lutein/zeaxanthind |  | 297
+
+ |  | rs7501331 | Luteind , e |  | 215
+
+ |  | rs12934922 | β‐carotened |  | 298
+
+ |  | rs7501331 | β‐carotened |  | 298
+
+ |  | rs12934922 | β‐carotened |  | 298
+
+ | BCO2 | rs12796114 | Association with AMD | Cleavage enzyme | 295
+
+ |  | rs2250417 | Association with AMD |  | 295
+
+Intracellular transport (gut epithelium) and other functions | ELOVL2 | rs9468304 | β‐carotenec, luteinc | Fatty acid elongase, precursor membrane | 14, 32
+
+ |  |  | Lycopenec | Lipids | 73
+
+ |  | rs3798709 | β‐carotenec, luteinc, lycopenec |  | 14, 32, 73
+
+ |  | rs911196 | β‐carotenec, lycopenec |  | 73
+
+ | INSIG2 | rs17006621 | Luteinc, lycopenec | Sterol binding | 14
+
+ | I‐FABP | IFABP‐Thr | Lycopened | Fatty acid transport | 103
+
+ | SLC27A6 | rs10053477 | Lycopenec | Fatty acid transport | 73
+
+Chylomicron secretion | MTP | rs17029213 | Luteinc | Triglyceride | 14
+
+ |  | rs17029173 | Lycopenec | Transporter | 73
+
+ |  | rs1032355 | Lycopenec |  | 73
+
+ |  | rs745075 | Lycopenec |  | 73
+
+Blood, liver metabolism, lipoprotein distribution | LPL | rs7821631 | Luteinc | Lipoprotein lipase | 14
+
+ |  | rs10096561 | Luteinc |  | 14
+
+ |  | rs1441778 | Luteinc |  | 14
+
+ |  | rs7841189 | Lycopenec |  | 73
+
+ |  | rs7005359 | Lycopenec |  | 73
+
+ |  | rs17482753 | Lycopenec |  | 73
+
+ |  | X447 allele | Lutein, β‐carotene, α‐carotene, β‐cryptoxanthinb |  | 162
+
+ | APOA1 | rs2070665 | Luteinc | Protein of HDL | 14
+
+ | APOA4 | Ser‐347 | Lycopened | Chylomicron protein | 103
+
+ | APOE | ɛ4 | AMD | Chylomicron protein | 295
+
+ | APOB | rs1042031 | β‐carotenec, lycopenec | Protein of LDL, VLDL, chylomicrons | 32, 73
+
+ |  | rs4643493 | β‐carotenec |  | 32
+
+ |  | rs35364714 | β‐carotenec |  | 32
+
+ |  | rs2854725 | Luteinc |  | 14
+
+ |  | 516 | β‐carotened |  | 103
+
+ |  | 516 | Lycopened |  | 103
+
+ | LDLR | rs6511720 | Tocopherol | Lipoprotein receptor | 104
+
+ | LIPC | rs1869138 | β‐carotenec | Hepatic lipase | 32
+
+ |  | rs11857380 | β‐carotenec |  | 32
+
+ |  | rs12185072 | β‐carotenec |  | 32
+
+ |  | rs12591216 | Luteinc |  | 14
+
+ |  | rs12593880 | Luteinc |  | 14
+
+ |  | rs8035357 | Lycopenec |  | 73
+
+ |  | rs12914035 | Lycopenec |  | 73
+
+ |  | rs493258 | Zeaxanthind |  | 299
+
+ |  | rs493258 | Luteind |  | 299
+
+ |  | HL C‐480T | α‐,β‐carotene |  | 103
+
+ | CYP26B1 | rs2241057 | Retinol | Degradation of retinol | 182
+
+ | CETP | rs708272 | Lutein/zeaxanthind | Cholesteryl and perhaps carotenoids ester transfer | 295
+
+Tissue | GSTP1 | Pi (isoform) | Lutein/zeaxanthin | Uptake into retina | 300
+
+incorporation | STARD3 | rs9892427 | Lutein/zeaxanthind | Lipid transfer, binding to retina | 295
+
+ | RPE65 | rs12139131 | β‐carotenec |  | 32
+
+ |  | rs4926340 | β‐carotenec |  | 32
+
+ |  | rs1924546 | Luteinc |  | 14
+
+ |  | rs12744671 | Lutein/zeaxanthind |  | 295
+
+Other functions | SOD2 | rs2501175 | β‐carotenec | Antioxidant enzyme | 32
+
+ |  | rs9365046 | Lycopenec |  | 73
+
+ | COBLL1 | rs3769877 | Luteinc | Insulin metabolism | 14
+
+ | CXCL8 | rs1247620 | β ‐carotenec | IL‐8 precursor | 32
+
+ |  | rs1358594 | β ‐carotenec |  | 32
+
+ |  | rs6834586 | β‐carotenec |  | 32
+
+ | TCF7L2 | rs946199 | β‐carotenec | Transcription factor related to diabetes | 32
+
+ | PKD1L2 | rs8043708 | β‐carotenec | Related to pore channels? | 32
+
+ |  | rs12596941 | Luteinc | Ion channel? | 14
+
+ |  | rs935933 | Lycopenec |  | 73
+
+ | MC4R | rs11873337 | Luteinc | Obesity | 14
+
+ | IRS1 | rs2178704 | Luteinc | Signal transduction | 14
+
+ |  | rs1316328 | Luteinc |  | 14
+
+ | SETD7 | rs7680948 | Lycopened | Insulin metabolism, inflammation | 296
+
+Carboxyl‐ester lipase (CEL), also termed cholesterol‐esterase, typically cleaves cholesterol esters in the gut, and its ability to cleave carotenoid esters, such as of lutein, present in many leafy vegetables, has been controversially discussed 75. At least five types of CEL are known, though human carboxylesterases CES1 and CES2 may play the most important role during digestion 76. These are situated on the gut mucosa (brush border enzymes), and have shown to cleave carotenoid esters 77. Its origin (pancreatic vs. enterocyte) remains somewhat unclear. However, this cleavage is expected to influence bioavailability, as the more apolar esters are characterized by lower micellization efficiency and absorption than the cleaved carotenoids 78. In fact, in plasma and circulating chylomicrons, free xanthophylls are almost exclusively found, suggesting that cleavage is in fact quite complete 79, though reduced absorption of the esters could play a role. A number of SNPs have been described in humans for CES1 and CES2 80, though not in relation to carotenoid or lipophilic phytochemical/micronutrient metabolism.
+
+Certain diseases such as pancreatitis may also result in lower secretion of digestion enzymes 81. Also during older age reduction of lipid absorption has been reported, perhaps also due to reduced epithelial surface 82, which may thus be expected to correlate with lower carotenoid absorption, as suggested by some, though not all studies (Table 1).
+
+### Host factors determining aspects of intestinal absorption
+
+## Factors influencing cellular uptake and cleavage
+
+Following their extraction from the food matrix and incorporation, at least in part, into mixed micelles, carotenoids are taken up by enterocytes. This process is not only passive, as previously thought 83, and several apical membrane proteins have been shown to facilitate carotenoid uptake 36. SR‐BI, encoded by SCARB1, is involved in the uptake of β‐carotene 84, 85, lutein 86 and lycopene 87. CD36 facilitates β‐carotene 84 uptake and could facilitate lycopene uptake 88, while NPC1L1 participates in the uptake of lutein 89. All of these proteins have SNPs in their encoding genes associated with carotenoid plasma concentrations (Table 4), and their contribution to carotenoid uptake has been confirmed in cellular models (e.g. human Caco‐2 cell line), but also in models employing transfected kidney (HEK) cells. After enterocyte uptake, carotenoids can be metabolized by BCO1 90 and BCO2 39. BCO1 catalyses the oxidative cleavage of provitamin A carotenoids (chiefly β‐carotene, α‐carotene, β‐cryptoxanthin), apo‐carotenals, and lycopene, but not that of lutein 91. BCO1 is presumably the main cleaving‐enzyme for β‐carotene 92. Lycopene was suggested to be predominantly cleaved by BCO2 93, while recently lycopene cleavage by BCO1 was also reported 94. However, until now no lycopene derived BCO1‐products were determined 95, 96 and were only postulated 97, 98. BCO2 has also been shown to be involved in lutein metabolism 99. Most β‐carotene conversion (>70%) is thought to occur in the intestine; by using stable isotope techniques it was estimated that about 20–30% occurs after absorption 100, contributing to overall vitamin A homeostasis. In addition, a controlled temporal and spatial conversion of carotenoids to bioactive retinoids is also of physiological importance, indicated by a specific pattern of BCO1 expression in various tissues 101. This expression is linked to RAR‐mediated signaling 39, 102.
+
+The involvement of several proteins in the intestinal absorption of carotenoids (apical uptake) suggests that variations in the genes encoding these proteins could modulate carotenoid absorption efficiency. This has been confirmed in an association study by Borel et al. 103 where the influence of candidate SNPs of genes involved in lipid metabolism on the fasting blood concentration of several carotenoids was investigated. More specifically, SNPs in SCARB1 were associated with β‐carotene but not with lycopene concentrations. These SNPs explained differences in β‐carotene plasma concentrations by up to 50%. Several additional SNPs have meanwhile been identified, including several in BCO1 in genome‐wide association studies 31, 104, 105. Three recent studies have reported associations of combinations of SNPs involved in interindividual variability of the bioavailability of lutein 14, lycopene 73 and β‐carotene 32, employing a candidate gene approach in postprandial studies. In these, plasma‐TRL carotenoids, representing newly absorbed carotenoids, were measured in healthy male adults. These combinations were associated with 73, 72, and 69% of the interindividual variability of the bioavailability of lutein, lycopene and β‐carotene, respectively. While some SNPs were located in genes expressed in other tissues or were closely involved in plasma‐TRL metabolism, others were involved with carotenoid transport or metabolism at the enterocyte level. These included ABCA1, ABCG5, BCMO1, CD36, ELOVL2, and ISX (intestine specific homeobox). Interestingly, one SNP in ELOVL2 (rs9468304) was very strongly associated with all three phenotypes, possibly due to the inhibitory effect of eicosapentaenoic acid, which is further elongated to docosapentaenoic acid and docosahexaenoic acid by ELOVL2, on carotenoid absorption, as has been shown with β‐carotene 106.
+
+## Influence of nutritional status
+
+Host vitamin A status has been linked with β‐carotene absorption variability. Lobo et al. 107 demonstrated that the intestinal transcription factor ISX acts as a repressor of SCARBI and BCO1 expression following retinoic acid induction. This mechanism is thought to serve as a negative feedback loop regulating retinal and further retinoic acid, retinyl esters and retinol status through modulation of provitamin A carotenoid absorption and cleavage efficiencies. Interestingly, the same team has reported the existence of an SNP in the ISX binding site in the BCO1 promoter (rs6564851) which was associated with decreased conversion rates by 50% and increased fasting blood levels of β‐carotene 108.
+
+Though the mechanisms are not fully elucidated, low iron status was suggested to interact with retinol homeostasis, resulting in decreased mobilization of liver vitamin A and thus low serum concentrations 109, possibly involving altered BCO1 activity 110. Also a low zinc status appears to reduce β‐carotene absorption from the gut 111, perhaps as phospholipase A2 can bind zinc and may be more active. These effects were confirmed in human studies, where supplementation with iron and zinc following a vitamin A deficient diet improved retinol and carotenoid plasma appearance, respectively 112. Also low protein status appears to hinder conversion of β‐carotene to vitamin A, contributing to carotenoid variability 113.
+
+BCO1 and BCO2 were also described to be controlled by peroxisome proliferator‐activated receptor (PPAR) – retinoid X receptor (RXR) mediated signaling 114, 115. The endogenous ligands of the PPARs α, β/δ and γ are ranging from free fatty acids to various eicosanoids such as prostaglandins, leukotrienes and mono‐hydroxylated fatty acids 116. The RXR was described to be activated by 9‐cis‐retinoic acid (9CRA) 117, as well as the newly found endogenous relevant ligand 9‐cis‐13, 14‐dihydro‐retinoic acid/9CDHRA 118. It is debated whether 9CRA occurs endogenously 119. Currently, 9CRA is considered mainly as a ligand that is present after high non‐physiological and non‐nutritional relevant vitamin A intake, leaving 9CDHRA as the principal endogenous and the nutritional relevant RXR ligand. PPAR ligands are mainly food derived 116, while the nutritional precursors of the endogenous RXR ligand 9CDHRA were not yet identified. The PPAR‐regulatory pathway of BCO1/2 expression and further carotenoid bioactivation is thus controlled by the amount and fractional distribution of lipids present in the food matrix. In addition to genomic regulation of BCO1/2 expression, carotenoid cleavage can also be modulated by inhibitory effects of lutein on β‐carotene cleavage 120. This indicated that not just the individual carotenoid concentration is of relevance to bioactivation towards retinoic acid and further transcriptomic regulation, but also the concentration of carotenoids inhibiting this metabolic step, as well as their concentration relative to β‐carotene. The consequences of BCO1/2 mediated regulation of retinoic acid synthesis and further transcriptional signaling by additional factors and its consequences for our health will be discussed later (chapter 7), highlighting the special importance of BCO1/2 on explaining interindividual variability, likely related to the beneficial health effects of carotenoids.
+
+## Colonic fermentation as an interindividual source
+
+To date, it is unclear to what extent the microbiota contributes to carotenoid metabolism, and whether carotenoids/ their metabolites can be taken up in the colon. It is known that a large proportion of carotenoids reaches the colon, as only 5–50% are absorbed in the small intestine. It is also known that carotenoids are partly bioaccessible in the colon 121. However, only 10–50% of the carotenoids remain intact after fermentation, while the remainder reacts to unknown compounds 121, 122, 123. This was supported by carotenoid standards as the only fermentation source in vitro, as >98% losses for β‐carotene and zeaxanthin were reported 123.
+
+Very little is known on carotenoid interaction with the microbiota 124. Unlike polyphenols, which are heavily metabolized, no carotenoid degradation products/bacterial metabolites have been identified. In general, bacteria in the colon are able to deglycosylate, hydrolyse, deglucuronidate, demethylate, and cause ring‐fission in some molecules, among other 46, 125. However, in germ‐free rats, higher carotenoid utilization (of α‐ and β‐carotene) as measured by their liver levels, has been reported compared to rats with intact microbiota 45. It was suggested that indirect effects, such as decreased intestinal transit time and an altered bile pool in the absence of bacteria could have played a role, though a reduced level of bacterial breakdown products and more remaining native compounds could have been involved. In support of a potential absorption of carotenoids in the colon, a study in mice found BCO1 to be expressed in many cells including mucosal, glandular cells in the stomach, small intestine, and the colon 126. BCO2 is known to be expressed in almost all cell types known to express BCO1. However, BCO2 was not found in the colon, suggesting that only symmetric cleavage of carotenoids may happen in the mucosal cells in the colon.
+
+In a previous study, β‐carotene uptake into human exfoliated epithelial cells of the colon, separated from feces, has been demonstrated 127. Following the consumption of β‐carotene rich spirulina, the concentration of β‐carotene in the cells increased approximately 3‐fold, demonstrating colonic cellular presence. However, this may have occurred not necessarily through direct cellular uptake via colonocytes, as carotenoids could have been absorbed via the small intestine and then distributed via the circulatory system to the colonocytes. Furthermore, the same constituents known to enhance carotenoid bioavailability, namely bile salts, emulsifiers such as lecithin 128, 129, enhanced colonic cellular uptake. Though carotenoids can be taken up by colonic derived Caco‐2 cells, direct colonic uptake is not easy to prove, and studies so far have not suggested a strong correlation between dietary intake of carotenoids and colon concentrations 130. Oshima et al. 131 investigated colonic absorption and distribution of lycopene in rats with or without a colostomy at mid colon that diverted the fecal stream but without resection of the distal colon. In rats given intragastric treatment, lycopene was found in the mucosa in the proximal colon and in the distal colon, also of the colostomized rats, whose distal colon was isolated from the faecal stream, indicating that lycopene may be transported via the blood into the colon. Moreover, lycopene reached the liver to an appreciable extent even when administered into the isolated distal colon, indicating that absorption is possible from the distal colon in rats.
+
+Taken together, these results indicate that carotenoid absorption from the colon could be relevant and contribute to interindividual variation in carotenoid bioavailability, depending on the food matrix and microbiota. Furthermore, as faecal transplants have shown to be able to trigger obesity, at least in animal models 132, and obese subjects having generally lower concentrations of circulating carotenoids (Table 1), a potential direct or indirect link between the microbiota and carotenoid tissue levels may exist. In a study with atherosclerotic subjects, patients showed a metagenome with reduced phytoene‐dehydrogenase and lower β‐carotene serum levels compared to healthy controls, which was associated with a higher level of Collinsella spp. in diseased subjects 133, highlighting the potential role of the microbiota.
+
+## Diseases and medical intervention effecting the intestine and colon
+
+Any condition reducing the intestinal mucosal surface area can be expected to reduce carotenoid absorption. As most studies do not directly measure carotenoid absorption efficiency but rather look at blood carotenoid levels (or a plasma fraction), it is important to distinguish between direct effects on carotenoid absorption (i.e. through reduced mucosal surface area or limited transport capacity) and indirect effects (through dietary adaptations, e.g. high fiber or low fat diet). This is usually achieved by controlling for carotenoid dietary intake.
+
+A study with 20 Crohn's disease patients reported lower fasting blood carotenoid concentrations, independent of dietary intake 134, suggesting that malabsorption affected carotenoid uptake, though increased turnover rate and colonic losses via e.g. bleeding could not be excluded. Similar results were obtained by Geerling et al. 135 in a study with 32 Crohn's disease patients and Genser et al. 136 with 24 patients. Crohn's disease usually affects the ileum but only three of the 20 patients in the study had ileal inflammation, indicating the importance of the colonic mucosal integrity for carotenoid absorption. Patients undergoing bariatric surgery (Roux‐en‐Y gastric bypass and biliopancreatic diversion) also displayed lower blood carotenoid levels 137. Since fruit and vegetable consumption was apparently normal, the effect was attributed to malabsorption due to reduced mucosal surface area and also due to limited capacity of transport related to decreased lipoprotein concentration. Also reduced gastric digestion (via gastric lipase, or mechanic dispersion), could have played a role, as could have biliopancreatic diversion, affecting bile and pancreatic enzyme concentrations in the gut. In another study, subjects with Celiac disease and Crohn's disease (n = 22) showed significantly 37% decreased levels of macular carotenoids compared to controls (n = 25 138.
+
+Short bowel syndrome, usually due to large resections of the small intestine to treat pathologies such as Crohn's disease or gastrointestinal tumors, have also been associated with carotenoid malabsorption. Edes et al. 139 reported undetectable β‐carotene blood levels following supplementation, despite adequate fat absorption, in a patient with extensive small intestinal resection (serum vitamin A levels appeared normal). Perhaps carotenoid absorption occurred in a more limited section of the intestine, or absorbed β‐carotene was fully converted to vitamin A. Luo et al. 140 reported no increase in blood carotenoid levels in subjects with short bowel syndrome undergoing intestinal rehabilitation, despite a 12‐week‐long supplementation with β‐carotene, lutein and lycopene. This was attributed to low fat absorption (about 30 versus >95% in healthy subjects) in these patients. However, no estimates of the contribution of the colon to the observed differences in absorption efficiencies were reported. Therefore, it is uncertain if it is the disease affecting the lower gut, the limited length of residual ileum, the presence or absence of the colon, the patient's lifestyle, or a combination that results in low plasma carotenoids. Similar low levels were observed in 63 patients with total gastrectomy 141, possibly due to duodenal bypass and short interposition of a small intestine loop.
+
+Intestinal parasites and bacterial overgrowth can also damage mucosal cells and result in increased permeability and decreased absorption of nutrients. In Indonesian children receiving red sweet potato, serum retinol concentrations increased to a greater extent when children infected with intestinal helminths were dewormed, than when the intensity of infection was high 142, though the effect may have been also due to improved fat absorption. In tropical countries, also enteropathies, resulting in inflamed epithelium and reduced surface available for absorption, are likely to contribute to low carotenoid and vitamin A status 143.
+
+### Host factors influencing intracellular transport and transport to the liver
+
+## Intracellular transport within the enterocyte
+
+After their uptake at the apical side of the enterocyte by membrane proteins, which are involved in the uptake of other liposoluble micronutrients, e.g. vitamin E/D 144, carotenoids have to cross the aqueous environment of the cell to reach its basolateral side. As carotenoids are very hydrophobic 21 it is assumed that they need to be associated with intracellular proteins to move through this medium 36. Though candidate proteins have been suggested, limited evidence of their involvement is available yet. A first one is human retinal lutein‐binding protein 145, as it shows a good cross‐reactivity with antibodies raised against carotenoid‐binding protein, which has been shown to transport carotenoids in the midgut cytosol of the silkworm Bombyx mori 146. However, its expression in the enterocyte should be verified. Other candidates could be the enterocyte FABPs (FABP2/I‐FABP and FABP1/L‐FABP) that allow the transport of various lipids. Finally, it can be hypothesized that the main enzyme responsible for carotenoid cleavage in the enterocyte, i.e. BCO1 39, 96, could also be involved, as it attracts and binds carotenoids for further cleavage, and it may also function as a non‐identified but predicted selective carotenoid‐transporter. The involvement of some of these candidate proteins in carotenoid transport within the enterocyte is supported by studies that have observed associations between SNPs in genes encoding these proteins and carotenoid status or bioavailability. This is the case for FABP and lycopene 103 and BCO1 and β‐carotene 32, though this second association can also be due to the catalytic activity of this protein. Functional studies employing cell cultures or transgenic mice should be performed to identify the respective proteins. Nevertheless, it can be hypothesized that variations in genes encoding proteins involved in the transport of carotenoids within the enterocyte contribute to the observed interindividual variability in carotenoid bioavailability.
+
+The previously described interaction of lutein and β‐carotene was not investigated further in detail, but it was predicted also to be of relevance regarding mutual interferences during absorption 33, 120, 147. A different fractional absorption efficacy was also suggested for cis‐isomers of lycopene 20, 148, 149, 150. Unfortunately, for lutein and β‐carotene as well as for lycopene and β‐carotene cis‐isomers, the mechanism of this altered transport efficiency was not examined further, but it appears to have an important physiological importance due to the different and possibly augmented health beneficial effects of especially 9‐cis‐β‐carotene versus all‐trans‐ β‐carotene, at least in respect to atherosclerosis 151.
+
+## Secretion at the basolateral and apical side of the enterocyte
+
+During the postprandial period following the intake of a meal providing carotenoids, the latter are recovered in chylomicrons and their remnants, circulating in the blood 14, 32, 73. This allows physiologists to conclude that carotenoids are incorporated into chylomicrons within the enterocyte, then secreted into the lymph, and finally transported to the blood. Two observations support this paradigm. First, studies on Caco‐2 cell monolayers, an acknowledged model of the human intestinal epithelium, have shown that carotenoids added to the apical side of these cells are recovered in the lipoprotein chylomicron‐rich fraction secreted at the basolateral side 152, 153. Second, clinical studies have shown associations between SNPs in MTP, involved in chylomicron formation within the enterocyte, and APOB (the main chylomicron apoprotein), and carotenoid bioavailability 14, 32, 73. Secretion via chylomicrons implies that polymorphisms of genes involved in chylomicron formation, such as those involved in cholesterol biosynthesis, may potentially have a role in explaining inter‐individual variation in carotenoid uptake or processing, as has been suggested for patients with hypercholesterolemia 154.
+
+Although it is acknowledged that a significant fraction of newly absorbed carotenoids is secreted by the enterocyte via chylomicrons, it should be noted that another fraction is metabolized within the intestinal cell. The size of this fraction depends on several factors such as the carotenoid species and the vitamin A status, affecting provitamin A carotenoid absorption and cleavage 108. As stated above, BCO1 and BCO2 are responsible for this mechanism. Their action results in several carotenoid metabolites, e.g. retinal, apo‐carotenals etc. 155, which may not share a fate similar to that of the parent molecules, and thus are not necessarily incorporated into chylomicrons. As at least some of these metabolites are water soluble (logP‐values around 5, such as for retinoic acid ‐ 4.4, http://www.drugbank.ca/drugs/DB00982), it can be hypothesized that they may be secreted to the portal vein and then reach the liver.
+
+Another pathway involved in carotenoid secretion at the basolateral side of the enterocyte may be via APOA1. This involves the membrane protein ABCA1, responsible for the lipid transfer from this membrane to APOA1/HDL in the lymph. Though it was shown that ABCA1 is not involved in the efflux of carotenoids to HDL at the basolateral side of Caco‐2 cells 153, a recent study demonstrated that a fraction of carotenoids, at least the xanthophylls, is transferred via ABCA1 to APOA1, not directly to HDL 156.
+
+Thus, the complex mechanisms that are involved in the secretion of carotenoids, and of their metabolites at the basolateral side of the enterocyte involve several genes and are likely to be modulated by genetic variations affecting the expression or activity of the proteins encoded by these genes. It was thus hypothesized that SNPs in these genes correlate with interindividual variability of carotenoid bioavailability. This hypothesis was supported by results of three recent human clinical studies. These have shown that SNPs in MTP and in APOB, involved in the APOB dependent pathway, as well as SNPs in ABCA1, involved in the APOA1 dependent pathway, are associated with lutein 14, lycopene 73, and β‐carotene 32 bioavailability. SNPs in APOB were associated with β‐carotene concentrations while SNPs in apolipoprotein A4 (APOA4) and APOB were associated with lycopene concentrations 103. These SNPs explained differences in e.g. β‐carotene plasma concentrations by up to 50%.
+
+Finally, carotenoids may also be re‐excreted via the apical side into the gut lumen. Results from a human intervention trial (with tomato puree) suggested that the ABCB1 gene plays a key role in lycopene transport, possibly by effluxing a fraction of the absorbed lycopene back into the intestinal lumen 73. This hypothesis needs to be examined further.
+
+## Postprandial chylomicron transport and blood plasma appearance
+
+It is believed that most newly‐absorbed carotenoids are postprandially secreted in chylomicrons, and that the role of chylomicrons, among other, is to carry carotenoids and their lipophilic metabolites from the intestine to the liver. During their transport, chylomicron triglycerides undergo hydrolysis by LPL, resulting in the generation of smaller chylomicrons termed chylomicron remnants. After their uptake by the liver, a fraction of carotenoids appears to be stored in the liver, another one is metabolized (e.g. into vitamin A for the provitamin A carotenoids). The remaining fraction is re‐secreted into the blood within VLDL. VLDL, via their metabolism into LDL, are thought to be responsible for the further tissue distribution of carotenoids. Due to their hydrophobicity, it is thought that carotenoids stay located within the core of the chylomicron(remnant)s during their transport in blood 157. Thus, it is hypothesized that chylomicron carotenoids i) are not significantly transferred to other circulating lipoproteins (VLDL, LDL, HDL), and ii) they are not significantly transferred to tissues. However, an in vitro study has suggested that this assumption needs to be revisited because an exchange of carotenoids between VLDL and HDL was found 158.
+
+Although it is possible that some chylomicron carotenoids can be transferred to other lipoprotein classes or to tissues during lipoprotein metabolism, it is assumed that this transfer is rather limited. Thus, the postprandial blood metabolism of carotenoids embedded in chylomicrons is closely related to lipoprotein metabolism. The metabolism of chylomicrons involves several proteins, starting with the apolipoproteins that are associated with these lipoparticles during their synthesis, i.e. APOB48 and APOA1, followed by the apoproteins that are transferred from other lipoprotein classes during chylomicron blood transport, e.g. APOE, and ending with enzymes that transfer or hydrolyse chylomicron lipids, e.g. cholesterol ester transfer protein (CETP) and LPL. Again, it is likely, though not yet demonstrated in humans, that some carotenoids, i.e. the less hydrophobic xanthophylls, can transfer from chylomicrons to other lipoproteins. Furthermore, in vitro data have suggested that CETP and LCAT (lecithin cholesterol acyl transferase) can be involved in this transfer 158.
+
+Any variability of affinity of the above‐described transporters/proteins involved in chylomicron metabolism would alter carotenoid kinetics. However, only few human studies have examined these, including studies on lutein and β‐carotene 159, lycopene 160, and also retinyl esters 154. In the latter study, a 7‐compartment model demonstrated a saturable absorption process, in support of the uptake mostly via transporters. Variability of absorption was similar over the range of dosing (10‐120 mg), with a relative standard deviation (RSD) of ca. 50%. In an intervention study by Kostic et al. 159, adult subjects were given single equimolar doses (0.5 μmol/kg body weight) of lutein and/or β‐carotene solubilized in oil. Absorption had an RSD of 43 and 68%, respectively. A single peak of mean serum lutein concentration at 16 h was found, while for β‐carotene a small initial peak appeared at 6 h, and a second peak at around 32 h. The first peak was assumed to be chylomicron‐borne, the second peak was believed to represent newly absorbed β‐carotene from the liver circulating as VLDL/HDL 161, whereas the intermediate peak for lutein was unexplained. This suggests different mechanisms for the distribution of the two carotenoids, leading to a different time‐course of serum peaks, in line with an altered transfer between lipoproteins compared to carotenes.
+
+It is unclear whether any differences in serum carotenoids described in the literature are related to any of the above proteins involved in uptake, transport and chylomicron metabolism, but it can be hypothesized. A variety of apolipoprotein polymorphisms were studied regarding concentrations of several carotenoids in children (n = 447), in a sample of the Stanislas Study. Lower concentrations of lutein/zeaxanthin (19%), β‐cryptoxanthin (51%), α‐carotene (55%) and β‐carotene (47%) were found in children expressing the S447X allele versus the S447S allele of the LPL gene 162, though no other correlations were found. In another study 163, human fasting concentrations of α‐ and β‐carotene were associated with genetic variants in FABP and LIPC, while α‐ and γ‐ tocopherol were influenced also by APOC3 (a component of LDL), CETP, and MTP (required for lipoprotein assembly), indicating that these may be involved also in carotenoid metabolism. In an earlier study, serum concentrations of carotenoids (Table 4) were associated with SNPs in APOB and APOA4 103.
+
+In addition to these proteins, other factors may play a role (Table 1). Brady et al. investigated the association between serum carotenoids and physiological and life‐style factors. Lower serum levels of several carotenes and xanthophylls were associated with being male (perhaps related to lower fruit/vegetable intake), smoker, of younger age, having lower non‐HDL cholesterol, higher alcohol consumption and higher body mass; only serum lycopene was not associated with these factors but with age 164. Age also showed to be significantly associated with chylomicron response of lycopene 165, but not with other carotenoids. However, the underlying mechanisms of these associations are unclear. It can be speculated that all factors are related to dietary pattern, though a higher body mass and a higher amount of adipose tissue may result in increased carotenoid storage in adipocytes, while smoking may increase the turnover of carotenoids due to enhanced oxidative stress (Table 1, 26). Similarly, in the SU.VI.MAX study (n>12 000 participants), it was found that β‐carotene plasma levels correlated (negatively) with smoking status, blood triglycerides, alcohol consumption and age. Again, females had higher β‐carotene serum levels than men (Table 1). Menstrual cycle also showed to influence plasma carotenoids. In an intervention trial with nine women consuming standardized diets for two cycles, carotenoid plasma concentration was usually lower in the earlier follicular phase compared to the late follicular phase and in part higher than in the luteal phase, possibly due to hormonal influences on the blood concentration of lipoproteins as carotenoid carriers 166. In a larger study, higher serum retinol levels were associated with higher serum estradiol and testosterone levels during the menstrual cycle 167.
+
+### Further transport and biodistribution to potential target tissues
+
+## Introduction
+
+Carotenoids are transported in the blood stream associated with lipoproteins, where carotenes dominate carotenoid pattern in the LDL fraction and xanthophylls are almost equally distributed between LDL and HDL 168. Especially the potential exchange of xanthophylls between lipoproteins is important in this context and may depend on the activity of CETP and LCAT 158. Consequently, changes of the lipoprotein pattern, due to external or host‐related factors, may modulate tissue distribution of carotenoids 169. At the site of the target tissue, selective uptake systems may be operative to accumulate particular carotenoids, which are further transported to specific cells of the tissue; or within a cell, directed to subcellular compartments. Uptake might be hindered by tissue barriers (e.g. the blood–brain barrier), permeable only for certain compounds, though the lipophilic carotenoids would be expected to pass. Also, due to their lipophilicity, their volume of distribution (VD) in the body is quite large 170, and plasma concentrations will only to some extent reflect tissue levels. Thus, plasma concentrations are expected to be influenced if the VD is altered, which may explain lower circulating carotenoid levels in obese subjects (Table 3). Consequently, this limits measuring plasma carotenoids as the most suitable marker of body status, and assessing additional compartments, such as following biopsies, or estimating various pools following isotopically labelled carotenoids, may constitute alternatives, though being more invasive or costly 19, 171. Unfortunately, only little is known about host related factors such as genetic makeup (e.g. SNPs) or other individual determinants and their impact on carotenoid tissue distribution.
+
+## Liver
+
+Data from animal and human studies provide evidence that the hepatic tissue is a major site of carotenoid accumulation and metabolism 172, 173, 174, 175. β‐Carotene and lycopene e.g. are found in the nmol range per gram wet tissue, however, individual values widely vary (Table 5). Carotenoids travel with lipoproteins and the liver is a central hub for lipoprotein assembling and release. Hepatic endocytosis of chylomicron remnants, which contain newly absorbed carotenoids, depends on the interaction of the APOE protein with the membrane receptor LRP1 or to some extent with the LDL‐receptor. Also involved in the uptake mechanism is hepatic LPL. Carotenoids remain in the liver for storage, alternatively, they are secreted with VLDLs, which are further processed to LDLs. Mechanisms involved in the coordination of storage, cleavage and secretion are however not known yet. It is likely that the regulation of the specific cleaving enzymes plays a major role in carotenoid plasma levels.
+
+Table 5. Carotenoid levels in liver and adipose tissue (nmol/g wet weight)
+
+Tissue | nmol/g wet tissue (range), or ± SD | Reference
+
+ | β‐carotene | Lycopene | Lutein/zeaxanthin | 
+
+Liver | 0.98 | 1.31 | 0.29 | 172
+
+ | (0.21‐3.94) | (0.16‐10.3) | (0.10‐0.66) | 
+
+Liver | 4.41 | 5.74 | 3.22 | 173
+
+ | (0‐19.4) | (0‐20.7) | (0‐12.2) | 
+
+Liver | 3.02 | 1.28 | n.m. | 175
+
+ | (0.16‐8.62) | (0.1‐4.08) |  | 
+
+Liver | 15.06 | 25.46 | 2.94 | 174
+
+ | (9.1‐24.8) | (10.2‐55.1) | (0.2‐5.8) | 
+
+Mean across study | 5.9 ± 6.3 | 8.4 ± 11.5 | 2.2 ± 1.6 | 
+
+Total carotenoids in livera (nmol) | 9.2 | 13.2 | 3.4 | 
+
+Adipose | 0.2 | 0.7 | 0.79 | 172
+
+ | (0.05‐2.37) | (0.02‐3.7) | (0.29‐2.7) | 
+
+Adipose | 0.38 | 0.2 | n.m. | 175
+
+ | (0‐1.05) | (0‐0.51) |  | 
+
+Adipose | n.m. | 0.23 ± 0.16 | n.m. | 301
+
+Adipose | 0.37 ± 0.34 | 0.32 ± 0.35 | 1.58 ± 0.93 | 188
+
+Mean across study | 0.32 ± 0.10 | 0.36 ± 0.23 | 1.19 ± 0.56 | 
+
+Total carotenoid in adipose tissueb | 4.4 | 5.1 | 16.6 | 
+
+As noted in earlier publications, tissues such as the liver (or testes and adrenals) which possess a large number of LDL receptors, exhibit high levels of carotenoids. On the other hand, lipids from circulating HDL are taken up by this organ, too. The central role of the liver in lipid metabolism makes it likely that individual differences (polymorphisms) in proteins affecting this process can influence carotenoid distribution. SNPs in LDL receptors may play a role, as they are critical for the endocytosis of the remnant chylomicron particle into liver hepatocytes, influenced by the binding of APOE to the surface of chylomicrons 176, and may therefore be suspected to play a role in carotenoid distribution. Though carotenoid levels in plasma have been associated with genetic polymorphisms in genes related to lipid metabolism 103, an impact on tissue distribution or uptake has not been proven so far in humans. By contrast, mice expressing APOE4 as compared to APOE3 had lower levels of β‐carotene in the bloodstream and lower levels of β‐carotene and lutein in adipose tissue 177, while hepatic expression of BCO1/2 was significantly higher, suggesting a correlation of both factors.
+
+In addition to the conversion of provitamin A carotenoids into retinal by BCO1, the liver is also a central tissue for xenobiotic metabolism, mediated by an array of phase I/II enzymes. Especially the metabolism of carotenoids by cytochrome P450‐dependent monooxygenases has been topic of research, and an active hepatic P450 dependent metabolism was shown for several carotenoids 178, 179. Several metabolites have been detected 180 and thus a great deal of P450 related genes expressed in the liver including CYPs 3A4, 2C9, 2C8, 2E1, and 1A2, and to a lesser extent 2A6, 2D6, 2B6, 2C19, plus the extrahepatically expressed CYPs 2J2, 1A1, and 1B1, are expected to potentially influence carotenoid tissue levels 181. Phase I and II enzymes are usually inducible and respond to internal and external challenges (stress) a host is exposed to. Thus, in addition to genetic factors, also external factors can influence the extent of metabolism and metabolic pattern. A number of different polymorphisms involved in phase I/II enzymes in humans have already been revealed. They individually affect the metabolism of drugs or endogenous compounds. Little is known with respect to carotenoids, but it was shown that a polymorphism regarding CYP26B1 (rs2241057) influences the degradation of retinoic acid, and is likely related to the risk of Crohn's disease 182 and atherosclerosis 183.
+
+## Adipose tissue
+
+Adipose tissue and in particular the lipid fraction of adipocytes is an important site of carotenoid accumulation 172, 184, 185. Vitamin A is stored in adipose tissue primarily as unesterified retinol 186, 187. Concentrations of carotenoids in adipose tissue have been reported by several groups 188, 189, 190 (Table 5). According to these studies, concentrations of β‐carotene, β‐cryptoxanthin, lycopene and lutein/zeaxanthin were comparable in variation and concentration to their plasma concentration. Although concentrations of carotenoids per g tissue are higher in some other organs, adipose tissue contains the highest total amounts, and is assumed to contribute to carotenoid storage. Unfortunately, knowledge is scarce on the mechanisms involved in the regulation of carotenoid uptake/release in this tissue.
+
+LPL, expressed in adipose‐ and other tissues, is the primary enzyme responsible for triacylglycerol lipolysis, provided by chylomicron‐ and VLDL transport vehicles for carotenoids, and implicated in fatty acid uptake. Thus, it may also play a role in adipocyte carotenoid uptake. Cell culture studies suggest that CD36 is involved in the uptake of lycopene and lutein by adipocytes 88. Hormone sensitive lipases are implicated in the release of retinol from storage tissue due to cleavage of retinyl esters, and may aid in releasing retinol by hydrolyzing triglycerides of the intracellular fat droplets 191. However, their impact on carotenoid release from adipose compartments is unclear. Retinol binding protein 4 (RBP4) is synthesized by adipocytes as a signaling molecule. It was shown to coordinate bidirectional retinol uptake in adipose tissue together with its membrane receptor STRA6 (stimulated by retinoic acid gene 6) 192. Retinol‐loaded holo‐RBP4 blocked adipocyte differentiation by activating RARα, while retinol‐free apo‐RBP4 triggered retinol efflux, resulting in reduced cellular retinoids and RARα mediated transcription and enhanced adipogenesis 192.
+
+Several host related factors have been identified in EURAMIC (European multicenter case‐control study on antioxidants, myocardial infarction and breast cancer), scrutinizing correlations of carotenoid levels in adipose tissue 193. In another trial, obesity was associated with carotenoid levels in adipose tissue, though it is not quite clear whether this could also be due to decreased dietary intake. A correlation was also observed between higher alcohol intake and lower levels of β‐carotene and lycopene in adipose tissue of men and women, respectively. Although the concentration of β‐carotene in the adipocytes of obese subjects was lower compared to non‐obese, the total amount of β‐carotene in all lipid stores was similar 194. Whether this implies a regulation of total lipid body stores is still controversial. Regarding alcohol consumption, lower intake, altered liver‐metabolism, decreased small intestinal uptake, or enhanced consumption due to oxidative stress may play a role. In this context, the activity of β‐carotene metabolizing enzymes is likely important and genetic differences but also alcohol intake is expected to affect a balanced distribution in adipose tissues.
+
+Mice in which BCO1 is deleted and receiving marginal vitamin A sufficient diet with β‐carotene, accumulate β‐carotene in adipose tissue 102. This illustrates the role of adipose tissue as a storage tissue for lipophilic compounds such as carotenoids. Recently, in yellow rabbits, a triplet deletion was identified in the BCO2 gene, resulting in the absence of an asparagine in BCO2. This was suggested to cause accumulation of carotenoids in adipose tissue 195. This agrees with an earlier finding in sheep, where a BCO2 mutation was found to be tightly associated with white adipose tissue carotenoid accumulation 196, and in bovines where BCO2 mutations were associated with carotenoid accumulation in adipose tissue and milk 197, 198. These observations were lately confirmed by BCO2 inactivation in sheep using CRISPR/Cas9 technology, resulting in yellow fat, establishing a causal relationship between BCO2 activity and carotenoid accumulation in white adipose tissue 199. Together, these findings not only illustrate the importance of white adipose tissue as a carotenoid storage organ, but also show whole body physiological regulation of carotenoid homeostasis, posing another layer of complexity on understanding inter‐individual variation (see also 6.4). This is exemplified by sex specific responses resulting from β‐carotene accumulation in white adipose tissue, which showed that 4970 genes were affected in WT female mice, while only 407 were affected in male mice 200, with the majority of the commonly affected genes (141 out of 144) showing a strong negative, rather than positive, correlation of expression between males and females. This negative correlation was also seen in BCO1 knockout mice, although the number of genes affected were more similar between the two sexes (1522 gene in females and 1202 in males, 33 overlapping) 201. In both WT and BCO1 knockout mice, only a minority of genes is commonly affected by β‐carotene in females and males. Strikingly, the opposite regulation of genes in response to β‐carotene exposure was also prominent in the lung of BCO1 knockout mice, but this was not seen in WT mice in this tissue 202. On the other hand, WT liver showed a strong positive correlation of β‐carotene responsive genes between males and females 201.
+
+Adipose tissue is distributed over various depots in the body. Functional differences between depots exist and visceral adipose tissue is especially associated with adverse health effects. In a study aiming to identify differences between adipose tissue depots, it was found that many of the genes differentially expressed in subcutaneous and visceral adipose tissue were regulated by retinoic acid 203. The master regulator of adipogenesis, PPARG is functionally active as an obligatory dimer with RXRA, linking adipogenesis with vitamin A metabolism. Retinoic acids are generated from retinaldehyde in adipose tissue by aldehyde dehydrogenase 1 (ALDH1), though this is discussed controversially 187. Female mice with inactivated ALDH1A1 were resistant to high‐fat diet‐induced visceral adipose formation. This was not seen in male mice, while subcutaneous adipose tissue was reduced to the same extent in males and females 204. Together, this underlines a role for vitamin A metabolism in differential adipose tissue (i.e. visceral versus. subcutaneous) formation. It has been suggested that estrogen mediated suppression of ALDH1A2/3 mRNA expression is involved in differential retinoic acid formation between males and females 205. Although major gaps in our knowledge exist, genetic variation in uptake, storage and processing in adipose tissue of various carotenoids may influence adipose tissue distribution and functionality and associated health outcomes, and, if so, will likely do this in a sex dependent manner. Effects of carotenoids on adipose tissue biology have been reviewed recently 206, while effects of genetic ablation of genes encoding various retinoid metabolism enzymes, including BCO1 and ALDH1A1, but also RBP1, RBP3 and retinol saturase (RESTAT) on adiposity in mice are reviewed elsewhere 203.
+
+## Skin
+
+The carotenoid pattern in human skin comprises carotenes and xanthophylls. Plasma levels of lycopene and less notably β‐carotene are correlated with their respective concentration in the skin 207. However, no such correlation was observed for lutein, zeaxanthin, and β‐cryptoxanthin, and thus skin measurements may not be representative of total carotenoid exposure or status. Carotenoids are not equally distributed in the different skin areas. Highest levels occur in skin of the forehead and in the palms of the hands and lower levels in dorsal skin, inside of the arm or back of hand. LDL‐receptors are expressed in human skin 208 and may play a role regarding selective uptake. Skin can be divided into epidermis and dermis with underlying subcutaneous adipose tissue. Blood vessels reach the dermis but not the epidermis, and different ways of how carotenoids may be transported and distributed to and within the different layers of our skin have been discussed 209. Subcutaneous tissue is a storage compartment for carotenoids and part of the balanced distribution system of carotenoids in adipose depots. Thus, host factors already mentioned above are expected to also play a role in carotenoid uptake and storage in the skin. There is some evidence that other host‐related factors influence carotenoid skin levels 210. On the long term, a carotenoid‐rich diet may increase carotenoid skin levels. However, smoking and alcohol intake induced a rapid decrease in carotenoid levels of the skin. Skin lycopene levels are sensitive to UV‐irradiation 211. Upon irradiation in vivo, lycopene concentration in the skin is significantly lowered. This effect is less pronounced with β‐carotene. Therefore, individual preferences regarding sun or UV exposure (tanning beds) would affect skin carotenoid concentrations.
+
+## Macula lutea
+
+The macula lutea is a small yellow area of the retina. It is the region of maximum visual acuity and its yellow color is due to xanthophylls, mainly lutein, zeaxanthin and meso‐zeaxanathin, located in the cone axons of the Henle fiber layer. It was shown that macular pigment density was positively correlated with serum concentrations of lutein and zeaxanthin, and inversely correlated with serum oxidized low‐density lipoprotein 212. Consequently, host related oxidative stress conditions would impact the supply of the retina with oxo‐carotenoids. Absolute levels and the patterns of lutein and zeaxanthin differ within an individual retina sample 213. Large interindividual differences have also been described 214. In the center of the macula lutea, levels of lutein and zeaxanthin have been reported, with 2.4 and 3.4 pmol/mm², respectively. Much lower concentrations are found in peripheral areas; medial 0.22 pmol lutein/mm² and 0.14 pmol zeaxanthin/mm². Levels further decrease in outer circles while the ratio of lutein:zeaxanthin increases. Since carotenes are not present in the macula lutea, selective mechanisms of uptake must be operative.
+
+It is likely that host related factors (individual differences) have an impact on the density of the macula pigment. In a 6 months intervention study with a lutein‐rich supplement the impact of genetic variances in four genes (ABCG8, BCO1, CD36, and NPC1L1) on lutein plasma levels and macular pigment optical density was evaluated 215. The results provide evidence that (as with plasma) retina levels, i.e. macula pigment optical density of lutein are affected by SNPs of CD36 and BCO1. The TT variant at the BCO1 rs7501331 locus was associated with a higher macula pigment optical density. Study subjects with GG at the CD36 locus rs1761667 had a higher macula pigment optical density compared to those with an A allele, although the underlying mechanisms remain to be established. Compounds delivered to the retina must pass the blood–retinal barrier, provided by tight junctions between endothelial cells. This barrier is sensitive to inflammatory and oxidative damage often associated with hyperglycemia 216. HDLs as the transport vehicles of lutein and zeaxanthin have been discussed to play an important role in the transport of macular carotenoids 217. There is evidence that SR‐BI, a tissue receptor for HDL, plays a role in the delivery of carotenoids to this tissue 218.
+
+It was further suggested that the delivery of macular carotenoids involves the inter‐photoreceptor‐retinoid binding protein. Retinoids and lutein/zeaxanthin have similar affinities to this protein, which facilitates the transfer of lipids across the inter‐photoreceptor space 219. GSTP1 has been identified as the macular binding protein for zeaxanthin/meso‐zeaxanthin in humans 220. It was shown that StARD3 acts as the lutein binding protein in the human macula 221. In‐vitro studies have proven the selectivity of both proteins with respect to either zeaxanthin or lutein. Equilibrium dissociation constants (KD values) for the complex of GSTP1 with zeaxanthin/meso‐zeaxanthin are in the range of 0.14 ‐ 0.19 μM while for lutein/β‐carotene they are >6‐fold higher. Contrarily, StARD3 exhibited a high affinity to lutein (KD ca. 0.59 μM), compared to zeaxanthin/meso‐zeaxanthin (KD‐values ca. 1.6 μM).
+
+An alternative mechanism contributing to the selective enrichment of the macula carotenoids in primates has been suggested 222. The affinity of the human xanthophyll metabolizing BCO2 for lutein, zeaxanthin, and meso‐zeaxanthin is 10–40 fold lower than the affinity observed in mice, who do not accumulate these carotenoids in the retina. Thus, it has been speculated that ineffective cleavage of xanthophylls contributes to their accumulation in the macula lutea. BCO2 knockout mice, unlike WT mice, accumulate zeaxanthin in their retinas. Thus, genetic variances in the respective enzymes or transport proteins likely affect the accumulation, distribution, and metabolism of oxo‐carotenoids in the macula lutea.
+
+## Tissues relevant for cardiovascular diseases
+
+Besides the adipose tissue, other tissues such as the pancreas and various cells of the vascular system, including endothelial cells and macrophages, are important targets of related health beneficial effects of carotenoids. In an older study, carotenoid levels in the pancreas were found to be comparable (1.8‐4.5 μg/g wet weight 223 or 4.5‐95 μg/g 224) to those in adipose tissue levels. The beneficial and risk preventive effects of carotenoids on atherosclerosis development were suggested to be mediated in macrophages and the endothelial cells of the blood vessels 225, 226. Unfortunately, a direct mechanistic connection of carotenoid levels in white blood cells and especially monocytes/macrophages, as well as endothelial cells and further induced biological effects was never examined and confirmed.
+
+As carotenoids were described in relation to the prevention of T2D, a potential target organ is the pancreas as a major regulator for insulin and glucagon production and secretion. Recently, RAR‐ and RXR‐mediated signaling pathways were positively and negatively correlated with insulin and glucagon secretion 227, respectively. As pro‐vitamin A carotenoids are the major precursor for the physiological and nutritional ligands of these two receptor subclasses 228, a further genetic regulation related to carotenoids appears plausible, but has not yet fully confirmed and described. This plausible correlation to T2D, starting from beneficial regulatory pathways of retinoids as carotenoid metabolites via RAR‐ and RXR‐mediated signaling pathways seems also to be highly dependent on carotenoid accumulation for substrate availability 229.
+
+## Other tissues
+
+Carotenoids occur in almost all human tissues. However, some were in the focus of research. Based on epidemiological studies, it was proposed that a frequent intake of tomato products rich in lycopene is associated with a decreased risk for prostate cancer 230, though it is unclear whether lycopene is selectively taken up in the prostate and which mechanisms may be relevant in this context. Levels of lycopene in prostate tissue have been reported around 1.7 ng/mg tissue following supplementation 231; similar to levels in adipose and liver (Table 5).
+
+In the human brain carotenes and xanthophylls were detected and the latter accounted for about 70% of total carotenoids, with lutein and zeaxanthin dominating 232. Levels were different in different brain areas and ranged from 2.8 to 11.8 pmol/g for lutein, 1.8 to 9.2 pmol/g zeaxanthin, and 7.6 to 15.2 pmol/g β‐carotene. A supplementation study with rhesus monkeys has shown that the brain levels of lutein and zeaxanthin are significantly related to their levels in the macula lutea 233, and therefore, macular pigment density may be used as a surrogate biomarker of lutein and zeaxanthin in primate brain tissue. Analyses of human brain tissues revealed a relationship between StARD3 levels and the concentration of lutein 234, with strongest correlations observed in infant (versus. adult or centenarian) brains.
+
+Colostrum contains significant amounts of α‐ and β‐carotene, lycopene, β‐cryptoxanthin, canthaxanthin, lutein and zeaxanthin, which are responsible for the yellow color. With ongoing lactation the content of carotenoids in mature milk declines, and the carotenoid pattern changes 235, being correlated with lower lipid content of breast milk 236. This could suggest that a temporal specific mechanism is involved in the transfer of carotenoids to human milk, though via which mechanism is not understood. On the other hand, breast adipose tissue carotenoid concentrations from tumor patients were significantly related to serum concentrations, and were highest for β‐cryptoxanthin (3.5 μmol/kg), β‐carotene (2.3 μmol/kg) and lutein (1.8 μmol/kg), not indicating a considerable change of patterns 237.
+
+Kidney concentrations, as other organ carotenoid levels, appear more variable than plasma concentrations, and have been reported to be in the range of 0.2–12.7 nmol/g for total carotenoids 173. However, a significant correlation for total carotenoids was found between liver, kidney and lung, thus additional discriminations of patterns could not be concluded. Again, host related factors especially those regarding the genetic variations of the proteins mention above might have impact on carotenoid distribution in these tissues.
+
+### Host factors interacting with carotenoid storage and excretion pathways
+
+## Storage and turnover aspects
+
+Very little is known on the metabolism of especially non‐provitamin A carotenoids in xenobiotic pathways and on the extent of degradation and elimination of the parent compounds 238. Lutein and β‐carotene may interact with each other during postprandial serum clearance when administered together. Both mutually enhancing and inhibiting actions have been observed in the limited number of volunteers studied. Interindividual differences in the response were studied after a high dose (0.5 μmol/kg body weight) of either or both carotenoids followed by blood sampling 159, 239. On average, the volunteers showed faster postprandial serum elimination (up to 120 h) of both carotenoids when given together, while subsequent elimination (up to 32 days) was unaffected by the other carotenoid. In line with this trial, the loss of liver vitamin A in rats dosed with β‐carotene was not affected by concomitant dosing with lutein; however, the initial storage was enhanced by smaller lutein doses and inhibited by larger doses 240. Effects during β‐carotene absorption appear more likely to explain the inhibitory actions of lutein, whereas the enhanced vitamin A storage following β‐carotene dosing by low concomitant doses of lutein is more difficult to explain, and may involve interactions other than at the step of absorption. However, it is apparent from this study that (at least in rats) lutein does not affect subsequent loss of hepatic or renal stores of vitamin A. Whether a similar phenomenon on initial retinol storage exists in humans, which could partially explain interindividual variation in body stores of carotenoids is not known.
+
+Carotenoid kinetic aspects were determined in depletion studies of 70–80 days in females (18–42 years) with and without isotope dilution by Burri et al. 241. Following a carotenoid controlled diet, carotenoids were measured in blood plasma of 19 healthy adults, and half‐lives recorded. Lutein had the longest half‐life (76 ± 17 days), followed by α‐carotene, β‐cryptoxanthin, zeaxanthin, β‐carotene and lycopene (45 ± 7, 40 ± 5, 38 ± 7, 37 ± 5, and 27 ± 3 days, respectively), with lutein and lycopene differing significantly in half‐lives from other carotenoids. Other studies based on postprandial designs have reported other half‐lives, such as 2–3 days for lycopene and 5–7 days for β‐carotene 242, likely to reflect plasma exchange with deeper compartments, while the longer reported half‐lives would reflect losses from those deeper compartments. In the study by Burri et al., all carotenoids followed similar first order kinetic rates, indicating a small variation in plasma kinetics but clear differences in carotenoid half‐lives. Concentrations of all carotenoids were highly correlated. The differences in carotenoid half‐lives were unexplained, though differences in degradation by acting as antioxidants or transfer to deeper compartments were suspected. Half‐lives were unrelated to physical or demographic characteristics (BMI, energy metabolism, cholesterol and triglyceride levels, ethnicity, or age). However, the number of subjects was small and participants in this study rather homogenous. Thus, it is difficult to judge the effect of half‐lives on interindividual carotenoid variations regarding blood levels.
+
+In a study by Shvetsov et al. 243, the shorter half‐life of lycopene was considered as an explanation for the higher intraindividual variability of plasma lycopene compared to other carotenoids (lutein, β‐carotene). In their study, plasma carotenoids of 381 women were measured repeatedly (4 times) with 4 month intervals, and intraindividual variability was approximately half of that of interindividual variability, except for lycopene, where it was equal. Similar higher intraindividual variability for lycopene was also found by Cooney et al. 244. The source of intra‐individual variation is unclear. Seasonal variations appeared to be low (below 3% in the study by Shvetsov, partly due to the constant climate of Hawaii). When adjusted for age, race, alcohol drinking, and tobacco smoking, intraclass correlation coefficients were 0.69, 0.45, and 0.74 for total plasma lutein, lycopene, and β‐carotene, respectively. Dietary factors, age, gender, ethnicity, geographic location, and season were employed as main factors to explain intraindividual variability. A slightly better correlation with increased age was also reported, for reasons unknown. Further studies need to investigate the potential effect of diet, life‐style and additional factors on carotenoid depletion rates.
+
+Not much is known regarding carotenoid excretion pathways. Khachick et al. reported on polar metabolites of lycopene in humans 179, approximately 5% of an isotopically labelled β‐carotene (14C) dose was excreted in urine (70% in feces) during 12 d 245. The minor fraction excreted in urine likely represents polar metabolites. In rat hepatocytes, it was shown that astaxanthin could be metabolized into 3‐hydroxy‐4‐oxo‐β‐ionol, 3‐hydroxy‐4‐oxo‐β‐ionone, and their reduced forms, 3‐hydroxy‐4‐oxo‐7,8‐dihydro‐β‐ionol and 3‐hydroxy‐4‐oxo‐7,8‐dihydro‐β‐ionone, and that this was associated with induction of the cytochrome P450 enzyme (CYP3A4 as well as of CYP2B6) 180. Thus, alterations in P450 enzyme activity may influence carotenoid metabolism. In human keratinocyte cells, it was shown that various CYP enzymes metabolized all‐trans retinoic acid and cis‐isomers into water soluble products 246.
+
+## Disease conditions altering carotenoid turnover
+
+Several clinical conditions related to carotenoid status affect carotenoid concentrations in human plasma, in addition to those involved in hampering carotenoid uptake (see chapter 3.4). However, it is often difficult to assess whether this happens by interference with carotenoid uptake, excretion and/or metabolism. In patients with renal failure, plasma β‐carotene levels increased 247. In the same study, decreased plasma levels of β‐carotene were observed in subjects with liver cirrhosis. Similarly, a study measuring carotenoids in tissues by needle biopsies showed much lower hepatic levels at all stages of liver disease 248. Another study examined β‐carotene plasma concentration in 53 Filipino children with cholestatic liver disease and found decreased concentrations in 45 patients 249. This suggests that liver diseases interfere with storage and excretion of carotenoids. In the same study, six children received a single dose of 10 mg/kg body weight of β‐carotene. No increased plasma levels were detectable in 5/6 children, pointing to a main effect of the disease on β‐carotene absorption rather than further metabolism (re‐distribution or excretion). This was explained by missing bile salt secretion and reduced solubilisation and cellular uptake. However, infections (e.g. helminths) could not be excluded as an additional factor.
+
+The liver, via the bile, also plays an important part in the excretion of carotenoids back into the gut. As many transporters expressed in the intestine are also present in liver cells 250, it can be assumed that genetic differences in e.g. SCARB1 and CD36 do also influence biliary excretion, however, this constitutes a gap in our knowledge. In a study with the purpose of comparing plasma and biliary concentrations of carotenoids among controls and patients with biliary and pancreatic diseases, both plasma and bile concentrations of β‐carotene were significantly decreased in patients with bile duct stones, impairing biliary excretion. Moreover, the plasma/bile ratio was maintained as well as the correlation between them, and plasma β‐carotene decreased even more in patients with complete biliary obstruction, probably reflecting malabsorption due to limited carotenoid solubilisation in the gut. A tight correlation between plasma and bile β‐carotene still persisted in patients with pancreatic disease, confirming the role of plasma β‐carotene in determining bile concentrations 251. The authors concluded that carotenoids undergo, at least in part, biliary excretion, that biliary concentrations reflect plasma levels in both normal and pathologic states, and that a decreased biliary excretion does not increase plasma concentrations. The study thus mainly highlights the importance of the bile for carotenoid absorption and the consequent tight link between bile and plasma levels.
+
+Obesity was associated with circulating plasma carotenoids in several studies (Table 1), however, the amount of carotenoids in the total adipose tissue has been found constant among obese and normal‐weight subjects 194. It is possible that a higher amount of adipose tissue with its high affinity to store carotenoids merely reduces the release of carotenoids into the bloodstream or enhances their uptake from the circulatory system, possibly via LDL receptors. As obesity is related to chronic inflammation, it cannot be excluded that upregulation of nuclear factor kappa‐B (NF‐κB) and nuclear factor erythroid‐derived 2 like 2 (NRF2) 252 is somehow related to a higher degradation rate of carotenoids, but this remains hypothetical. On the other hand, it is possible that the body may adapt to increased oxidative stress by upregulating circulating plasma antioxidants. For example, in a study with asthmatic women, higher levels of total carotenoids were found compared to non‐asthmatic control women 253.
+
+An enhanced conversion of β‐carotene to retinol was suggested to explain significantly lower (by approximately 50%) serum levels of β‐carotene in hyperthyroid patients compared to those with hypo‐ and euthyroidism 254. However, the detailed mechanism remains unclear. Hypothyroidism also led to increased (2‐fold) β‐carotene absorption in this study, explaining the yellowing of the skin in these patients. Thyroid hormones may thus alter β‐carotene absorption, however an effect on its distribution cannot be ruled out.
+
+## Effect of vitamin A status and lifestyle on carotenoid status
+
+It has been demonstrated that vitamin A status modulates β‐carotene absorption and cleavage (see chapter 3.2). A study examined the ability of deuterated retinol‐dilution to detect changes in the body pool size and status of vitamin A and the effect on the bioconversion of carotenoids to vitamin A 255. Changes were detected in the body pool size after 3 days. The bioconversion of dietary mixed plant food carotenoids varied inversely with vitamin A status, and improvements in status after intervention were strongly affected by total body stores of vitamin A, which can be explained by feed‐back mechanism of vitamin A status and BCO1, highlighting the relation of circulating pro‐vitamin A carotenoids and vitamin A status.
+
+Chronic alcohol consumption may perturb vitamin A and carotenoid metabolism. A study in rats given vitamin A or β‐carotene examined the effect of chronic alcohol consumption on vitamin A status and found a decrease in hepatic vitamin A storage, which was not due to malabsorption of either retinyl acetate or β‐carotene, nor to altered activities of several enzymes involved in ethanol or vitamin A metabolism 256. However, other studies show inconsistent findings; studies suggested inhibition of BCO1/2 by ethanol 257.
+
+## BCO1/2 aspects with respect to carotenoid tissue levels
+
+As for the intestine, disruption of BCO1 expression is well known to reduce vitamin A and increase β‐carotene concentration in tissues, identifying BCO1 as the major enzyme for vitamin A production and for carotenoid cleavage 258. The role of carotenoid oxygenases involved in the cleavage and storage of carotenoids is confirmed by other studies. For example, expression of BCO1 was documented by RNA blotting and immunostaining methods in a wide selection of human tissues 126, 259. In the study by Lindquist et al. in mice, BCO1 was expressed in virtually all tissues, and the same is assumed for humans. An animal study examined the effect of knockout BCO1/2 in mice given a controlled diet primarily providing β‐carotene 39. Accumulated levels of β‐carotene in serum, liver and lungs in BCO1(−/−) and BCO1(−/−)/BCO2 (−/−) mice were found. BCO1(−/−) mice showed 100 fold higher concentrations of β‐carotene in tissues compared to wildtype and BCO2(−/−) mice, confirming the role of BCO1 as the major β‐carotene‐metabolizing enzyme. This does not negate a role for BCO2, since BCO2 inactivation in sheep resulted in carotenoid accumulation in adipose tissue 199.
+
+Another study in mice investigated the effect of gene expression induced by β‐carotene supplementation, knockout of BCO1, and differences in gender on β‐carotene levels in lungs, liver and inguinal white adipose tissue 200. Lungs were mainly affected by knockout, liver by knockout and gender, while the white adipose tissue was mainly affected by gender. Hardly any β‐carotene affected genes were in common in the three tissues, suggesting that changes in gene expression are primarily determined by tissue and gender.
+
+β‐Carotene exposure increases β‐carotene concentration in the lung, but also the concentrations of retinol and retinyl esters 260. Inactivation of BCO1 increases β‐carotene concentrations, and decreases retinyl ester concentrations in males and females, while retinol concentration are only decreased in females 261. Differential regulation of genes involved in vitamin A metabolism in the lung upon β‐carotene exposure, for example LRAT (conversion of retinol in retinyl esters) and ADH7 (conversion of retinol into retinal) suggest that polymorphisms in these genes can also have a role in interindividual responses, which could be relevant because these genes can functionally determine retinoid sufficiency 260.
+
+### Bioactivation ‐ from carotenoids to nuclear hormone receptor ligands and further induced transcriptional signaling
+
+The mechanisms of action of carotenoids regarding beneficial health effects comprises two major pathways: a) functioning as direct antioxidants via various pathways 262, which has recently been discussed controversially due of lack of sufficiently high concentrations to transmit these effects endogenously 252 and b) functioning as precursors of various oxidative cleavage products 263. These can further interact with various nuclear hormone receptors such as the RAR, RXR, PPARs, LXRs, FXR, NF‐κB, and NRF2 252, 264. This conversion was mainly demonstrated in cellular and mouse studies, while in humans merely individual steps of this activation cascade were confirmed 97, 98, 229, 265, 266.
+
+Assuming that that carotenoids function mainly via precursors of nuclear hormone receptors implies that not the serum and organ levels of native carotenoids are of major importance, but mainly the conversion of these endogenous present carotenoids to oxidative cleavage products. This again highlights the importance of the two carotenoid oxygenases BCO1/2. When focussing on health related effects of carotenoids, the focus should be placed on correlating carotenoid intake with resulting endogenous carotenoid metabolite levels and their effects on nuclear hormone receptor mediated signaling, not merely on the concentrations of the native carotenoids, however, data on these are still scant. In this regard, the retinoic acid receptors (RARs), with the isotypes RARα, β and γ, are activated mainly by the provitamin A carotenoid metabolite all‐trans‐apo‐15´‐carotenoic acid (all‐trans retinoic acid 267). In addition, non‐well examined pathways with low affinity activation ligands such as all‐trans‐4‐oxo‐retinoic acid 268, all‐trans‐3,4‐didehydro retinoic acid 269 and all‐trans‐13,14‐dihydroretinoic acid activation were described 270. The activation of the RAR as well as the RXR (RXRα, β and γ) by 9CRA seems to be of non‐physiological relevance, due to low or even non‐existing transcriptional activation of both RARs and RXRs by relevant endogenous levels 118, 119.
+
+Recently, in addition to β‐carotene functioning as the major precursors for nuclear hormone receptor ligands for RARs and RXRs, the acyclic carotenoid lycopene was described to transmit further RAR‐mediated signaling 97, 271. Alternatively, RXR‐ and PPAR‐mediated signaling was postulated to be mediated via lycopene oxidative metabolites. The detailed mechanisms including the actively involved lycopene oxidative metabolites remains still controversial but it is likely involving apo‐15´‐lycopenoids for further RXR‐mediated signaling 97 and apo‐10´‐lycopenoids for further PPAR‐mediated signaling 98. Future research should focus on correlating carotenoid intake with carotenoid levels in the individual, further metabolic conversion to bioactive oxidative carotenoid metabolites, and the identification and quantification of marker genes related to beneficial health effects.
+
+### Conclusion and perspective
+
+Interindividual carotenoid variability following intervention studies with dietary carotenoids has been investigated in a number of body compartments, including digesta, chylomicrons, blood, skin, and the retina. Additional variation has been observed in observational studies (Fig. 2). Variability in the carotenoid bioaccessible fraction is approximately half of that of plasma concentrations, approximately 20–30%. This may indicate that about half the variability may be explained by factors influencing carotenoid bioaccessibility, namely digestion enzyme concentrations, bile salts, and intestinal transit time. These are influenced by diseases (e.g. short bowel syndrome), the microbiota, and also gene expression related to enzymes (gastric lipase, PNLIP, CEL, CLPS). Factors influencing absorption also include parasites, such as hookworms, i.e. factors decreasing absorptive surface. Carotenoid absorption itself may be influenced by uptake transporters and associated SNPs (e.g. in the CD36, NPC1L1, and SCARB1 genes). Intracellular transport and chylomicron or also HDL secretion (ABCA1) have been associated with ABCG5/8, FABP2, ELOVL2, INSIG2, SLC27A6, and MTP, and intracellular cleavage with BCO1, likely involving BCO2 for some carotenoids. Further biodistribution, affecting plasma levels, likely include LPL, LIPC, CETP, and APOA1, APOA4, APOE and APOB. Tissue incorporation is influenced by all these preceding processes, in addition to specific uptake transporters such as GSTP1, StARD3, and RPE65, in case of the retina. Many other SNPs, involved in inflammatory processes and certain diseases have been shown to correlate with carotenoid tissue levels (Table 4), though their exact role and contribution to variability remains to be elucidated. Hormones and gender play a role, as do possibly age and percentage of adipose tissue, though again the mechanisms are not comprehended. Several diseases have also been reported to influence carotenoid turnover and excretion, including hyperthyroidism and diseases of the liver and kidney, though the underlying mechanisms are not understood. While thus many of the potential candidates explaining interindividual variability, especially concerning cellular uptake and cleavage in the epithelium, have been determined, much less is known on their actual contribution to interindividual variability, and less is known on factors effecting intraindividual variability, which appears to be approximately half of interindividual variability according to some studies (Table 3). Influences of season and diet are most likely to contribute. In addition, we tried to emphasize connections between the individual carotenoid levels in the organisms and their bioactivation, resulting in oxidative carotenoid cleavage metabolites, mainly retinoids, and further mediation of transcriptional signaling of health related marker genes.
+
+Figure 2. Overview of factors likely to contribute to interindividual variation of carotenoid bioavailability and thus tissue concentrations.
+
+In the future, studies should aim at identifying additional SNPs related to carotenoid ADME parameters, to increase our knowledge on the contribution of genetic variations to interindividual variability. This may include SNPs in genes encoding for digestion enzymes and proteins involved in further tissue distribution, which so far have received limited attention. Furthermore, the connection between SNPs and health related marker genes should be in the focus of research to scrutinize carotenoid health protective effects. In addition, epigenetic factors and the microbiota are areas which until to date have been mostly overlooked. These will reveal new insights into explaining the variability of carotenoid concentrations in human tissues, but perhaps also explain varying biological responses to dietary intervention, opening the door to personalized nutrition and “food to health” strategies employing carotenoids.
+
+### (без названия)
+
+The authors have declared no conflict of interest.
+
+### References
+
+[1] 1 van Poppel, G. , Epidemiological evidence for beta‐carotene in prevention of cancer and cardiovascular disease. Eur. J. Clin. Nutr. 1996, 50(Suppl 3), S57–61.8841775
+
+[2] 2 Hamer, M. , Chida, Y. , Intake of fruit, vegetables, and antioxidants and risk of type 2 diabetes: systematic review and meta‐analysis. J. Hypertens. 2007, 25, 2361–2369.1798465410.1097/HJH.0b013e3282efc214
+
+[3] 3 Wang, Y. , Chung, S. J. , McCullough, M. L. , Song, W. O. et al., Dietary carotenoids are associated with cardiovascular disease risk biomarkers mediated by serum carotenoid concentrations. J. Nutr. 2014, 144, 1067–1074.2474430610.3945/jn.113.184317
+
+[4] 4 Wood, L. G. , Garg, M. L. , Blake, R. J. , Garcia‐Caraballo, S. et al., Airway and circulating levels of carotenoids in asthma and healthy controls. J. Am. Coll. Nutr. 2005, 24, 448–455.1637394110.1080/07315724.2005.10719490
+
+[5] 5 Buijsse, B. , Feskens, E. J. , Schlettwein‐Gsell, D. , Ferry, M. et al., Plasma carotene and alpha‐tocopherol in relation to 10‐y all‐cause and cause‐specific mortality in European elderly: the Survey in Europe on Nutrition and the Elderly, a Concerted Action (SENECA). Am. J. Clin. Nutr. 2005, 82, 879–886.1621072010.1093/ajcn/82.4.879
+
+[6] 6 FAO, F. a. N. D. , Vitamin A. In Human Vitamin and Mineral Requirements: FAO, 2001.
+
+[7] 7 Harari, A. , Abecassis, R. , Relevi, N. , Levi, Z. et al., Prevention of atherosclerosis progression by 9‐cis‐beta‐carotene rich alga Dunaliella in apoE‐deficient mice. Biomed. Res. Int. 2013, 2013, 169517.2417528310.1155/2013/169517PMC3794645
+
+[8] 8 Zolberg Relevy, N. , Bechor, S. , Harari, A. , Ben‐Amotz, A. et al., The inhibition of macrophage foam cell formation by 9‐cis beta‐carotene is driven by BCMO1 activity. PLoS One 2015, 10, e0115272.2562960110.1371/journal.pone.0115272PMC4309590
+
+[9] 9 Liu, R. , Wang, T. , Zhang, B. , Qin, L. et al., Lutein and zeaxanthin supplementation and association with visual function in age‐related macular degeneration. Invest. Ophthalmol. Vis. Sci 2015, 56, 252–258.10.1167/iovs.14-1555325515572
+
+[10] 10 Ma, L. , Dou, H. L. , Wu, Y. Q. , Huang, Y. M. et al., Lutein and zeaxanthin intake and the risk of age‐related macular degeneration: a systematic review and meta‐analysis. Br. J. Nutr. 2012, 107, 350–359.2189980510.1017/S0007114511004260
+
+[11] 11 Bjelakovic, G. , Nikolova, D. , Gluud, L. L. , Simonetti, R. G. et al., Mortality in randomized trials of antioxidant supplements for primary and secondary prevention: systematic review and meta‐analysis. JAMA 2007, 297, 842–857.1732752610.1001/jama.297.8.842
+
+[12] 12 Omenn, G. S. , Goodman, G. , Thornquist, M. , Barnhart, S. et al., Chemoprevention of lung cancer: the beta‐Carotene and Retinol Efficacy Trial (CARET) in high‐risk smokers and asbestos‐exposed workers. IARC Sci. Publ. 1996, 67–85.8791118
+
+[13] 13 Hickenbottom, S. J. , Lemke, S. L. , Dueker, S. R. , Lin, Y. et al., Dual isotope test for assessing beta‐carotene cleavage to vitamin A in humans. Eur. J. Nutr. 2002, 41, 141–147.1224258110.1007/s00394-002-0368-0
+
+[14] 14 Borel, P. , Desmarchelier, C. , Nowicki, M. , Bott, R. et al., Interindividual variability of lutein bioavailability in healthy men: characterization, genetic variants involved, and relation with fasting plasma lutein concentration. Am. J. Clin. Nutr. 2014, 100, 168–175.2480848710.3945/ajcn.114.085720
+
+[15] 15 Moran, N. E. , Cichon, M. J. , Riedl, K. M. , Grainger, E. M. et al., Compartmental and noncompartmental modeling of (1)(3)C‐lycopene absorption, isomerization, and distribution kinetics in healthy adults. Am. J. Clin. Nutr. 2015, 102, 1436–1449.2656162910.3945/ajcn.114.103143PMC4658456
+
+[16] 16 Tanumihardjo, S. A. , Usefulness of vitamin A isotope methods for status assessment: from deficiency through excess. Int. J. Vitam. Nutr. Res. 2014, 84(Suppl 1), 16–24.2553710210.1024/0300-9831/a000182
+
+[17] 17 Chew, B. P. , Park, J. S. , Weng, B. C. , Wong, T. S. et al., Dietary beta‐carotene is taken up by blood plasma and leukocytes in dogs. J. Nutr. 2000, 130, 1788–1791.1086705110.1093/jn/130.7.1788
+
+[18] 18 Paetau, I. , Rao, D. , Wiley, E. R. , Brown, E. D. et al., Carotenoids in human buccal mucosa cells after 4 wk of supplementation with tomato juice or lycopene supplements. Am. J. Clin. Nutr. 1999, 70, 490–494.1050001710.1093/ajcn/70.4.490
+
+[19] 19 Kurilich, A. C. , Britz, S. J. , Clevidence, B. A. , Novotny, J. A. , Isotopic labeling and LC‐APCI‐MS quantification for investigating absorption of carotenoids and phylloquinone from kale (Brassica oleracea). J. Agric. Food Chem. 2003, 51, 4877–4883.1290393910.1021/jf021245t
+
+[20] 20 Bohn, T. , Bioavailabilty of non‐provitamin A carotenoids. Curr. Nutr. Food. Sci. 2008, 4, 240–258.
+
+[21] 21 Borel, P. , Factors affecting intestinal absorption of highly lipophilic food microconstituents (fat‐soluble vitamins, carotenoids and phytosterols). Clin. Chem. Lab. Med. 2003, 41, 979–994.1296480210.1515/CCLM.2003.151
+
+[22] 22 Annibale, B. , Capurso, G. , Delle Fave, G. , Consequences of Helicobacter pylori infection on the absorption of micronutrients. Dig. Liver Dis. 2002, 34(Suppl 2), S72–77.1240844610.1016/s1590-8658(02)80170-0
+
+[23] 23 Azar, M. , Basu, A. , Jenkins, A. J. , Nankervis, A. J. et al., Serum carotenoids and fat‐soluble vitamins in women with type 1 diabetes and preeclampsia: a longitudinal study. Diabetes Care 2011, 34, 1258–1264.2149878510.2337/dc10-2145PMC3114346
+
+[24] 24 Baeten, J. M. , McClelland, R. S. , Wener, M. H. , Bankson, D. D. et al., Relationship between markers of HIV‐1 disease progression and serum beta‐carotene concentrations in Kenyan women. Int. J. STD AIDS 2007, 18, 202–206.1736255610.1258/095646207780132541
+
+[25] 25 Kitamura, Y. , Tanaka, K. , Kiyohara, C. , Hirohata, T. et al., Relationship of alcohol use, physical activity and dietary habits with serum carotenoids, retinol and alpha‐tocopherol among male Japanese smokers. Int. J. Epidemiol. 1997, 26, 307–314.916916510.1093/ije/26.2.307
+
+[26] 26 Wang, L. , Gaziano, J. M. , Norkus, E. P. , Buring, J. E. et al., Associations of plasma carotenoids with risk factors and biomarkers related to cardiovascular disease in middle‐aged and older women. Am. J. Clin. Nutr. 2008, 88, 747–754.1877929210.1093/ajcn/88.3.747PMC2559966
+
+[27] 27 van der Gaag, M. S. , van den Berg, R. , van den Berg, H. , Schaafsma, G. et al., Moderate consumption of beer, red wine and spirits has counteracting effects on plasma antioxidants in middle‐aged men. Eur. J. Clin. Nutr. 2000, 54, 586–591.1091847010.1038/sj.ejcn.1601061
+
+[28] 28 Walmsley, C. M. , Bates, C. J. , Prentice, A. , Cole, T. J. , Relationship between alcohol and nutrient intakes and blood status indices of older people living in the UK: further analysis of data from the National Diet and Nutrition Survey of people aged 65 years and over, 1994/5. Public Health Nutr. 1998, 1, 157–167.1093341310.1079/phn19980025
+
+[29] 29 Ryden, M. , Leanderson, P. , Kastbom, K. O. , Jonasson, L. , Effects of simvastatin on carotenoid status in plasma. Nutr. Metab. Cardiovasc. Dis. 2012, 22, 66–71.2067890610.1016/j.numecd.2010.04.009
+
+[30] 30 Casso, D. , White, E. , Patterson, R. E. , Agurs‐Collins, T. et al., Correlates of serum lycopene in older women. Nutr. Cancer 2000, 36, 163–169.1089002610.1207/S15327914NC3602_4
+
+[31] 31 Borel, P. , Genetic variations involved in interindividual variability in carotenoid status. Mol. Nutr. Food. Res. 2012, 56, 228–240.2195706310.1002/mnfr.201100322
+
+[32] 32 Borel, P. , Desmarchelier, C. , Nowicki, M. , Bott, R. , A combination of single‐nucleotide polymorphisms is associated with interindividual variability in dietary beta‐carotene bioavailability in healthy men. J. Nutr. 2015, 145, 1740–1747.2606306510.3945/jn.115.212837
+
+[33] 33 van den Berg, H. , Carotenoid interactions. Nutr. Rev. 1999, 57, 1–10.1004769910.1111/j.1753-4887.1999.tb01769.x
+
+[34] 34 Micozzi, M. S. , Brown, E. D. , Edwards, B. K. , Bieri, J. G. et al., Plasma carotenoid response to chronic intake of selected foods and beta‐carotene supplements in men. Am. J. Clin. Nutr. 1992, 55, 1120–1125.159558410.1093/ajcn/55.6.1120
+
+[35] 35 Alminger, M. , Aura, A. M. , Bohn, T. , Dufour, C. et al., In vitro models for studying secondary plant metabolite digestion and bioaccessibility. Comp. Rev. Food Sci. Food Saf. 2014, 13, 413–436.10.1111/1541-4337.1208133412708
+
+[36] 36 Reboul, E. , Borel, P. , Proteins involved in uptake, intracellular transport and basolateral secretion of fat‐soluble vitamins and carotenoids by mammalian enterocytes. Prog. Lipid Res. 2011, 50, 388–402.2176372310.1016/j.plipres.2011.07.001
+
+[37] 37 Harrison, P. J. , Bugg, T. D. , Enzymology of the carotenoid cleavage dioxygenases: reaction mechanisms, inhibition and biochemical roles. Arch. Biochem. Biophys. 2014, 544, 105–111.2414452510.1016/j.abb.2013.10.005
+
+[38] 38 Moran, N. E. , Erdman, J. W., Jr. , Clinton, S. K. , Complex interactions between dietary and genetic factors impact lycopene metabolism and distribution. Arch. Biochem. Biophys. 2013, 539, 171–180.2384585410.1016/j.abb.2013.06.017PMC3818361
+
+[39] 39 Amengual, J. , Widjaja‐Adhi, M. A. , Rodriguez‐Santiago, S. , Hessel, S. et al., Two carotenoid oxygenases contribute to mammalian provitamin A metabolism. J. Biol. Chem. 2013, 288, 34081–34096.2410628110.1074/jbc.M113.501049PMC3837149
+
+[40] 40 Ortega, H. , Castilla, P. , Gomez‐Coronado, D. , Garces, C. et al., Influence of apolipoprotein E genotype on fat‐soluble plasma antioxidants in Spanish children. Am. J. Clin. Nutr. 2005, 81, 624–632.1575583210.1093/ajcn/81.3.624
+
+[41] 41 Meyers, K. J. , Johnson, E. J. , Bernstein, P. S. , Iyengar, S. K. et al., Genetic determinants of macular pigments in women of the Carotenoids in Age‐Related Eye Disease Study. Invest. Ophthalmol. Vis. Sci. 2013, 54, 2333–2345.2340412410.1167/iovs.12-10867PMC3626525
+
+[42] 42 Bonet, M. L. , Canas, J. A. , Ribot, J. , Palou, A. , Carotenoids and their conversion products in the control of adipocyte function, adiposity and obesity. Arch. Biochem. Biophys. 2015, 572, 112–125.2572149710.1016/j.abb.2015.02.022
+
+[43] 43 Gradelet, S. , Astorg, P. , Pineau, T. , Canivenc, M. C. et al., Ah receptor‐dependent CYP1A induction by two carotenoids, canthaxanthin and beta‐apo‐8'‐carotenal, with no affinity for the TCDD binding site. Biochem. Pharmacol. 1997, 54, 307–315.927133610.1016/s0006-2952(97)00176-7
+
+[44] 44 Sayin, S. I. , Wahlstrom, A. , Felin, J. , Jantti, S. et al., Gut microbiota regulates bile acid metabolism by reducing the levels of tauro‐beta‐muricholic acid, a naturally occurring FXR antagonist. Cell Metab. 2013, 17, 225–235.2339516910.1016/j.cmet.2013.01.003
+
+[45] 45 Grolier, P. , Borel, P. , Duszka, C. , Lory, S. et al., The bioavailability of alpha‐ and beta‐carotene is affected by gut microflora in the rat. Br. J. Nutr. 1998, 80, 199–204.9828762
+
+[46] 46 Bohn, T. , McDougall, G. J. , Alegria, A. , Alminger, M. et al., Mind the gap‐deficits in our knowledge of aspects impacting the bioavailability of phytochemicals and their metabolites–a position paper focusing on carotenoids and polyphenols. Mol. Nutr. Food Res. 2015, 59, 1307–1323.2598837410.1002/mnfr.201400745PMC5033009
+
+[47] 47 Sy, C. , Gleize, B. , Dangles, O. , Landrier, J. F. et al., Effects of physicochemical properties of carotenoids on their bioaccessibility, intestinal cell uptake, and blood and tissue concentrations. Mol. Nutr. Food Res. 2012, 56, 1385–1397.2281525110.1002/mnfr.201200041
+
+[48] 48 Kulkarni, B. V. , Mattes, R. D. , Lingual lipase activity in the orosensory detection of fat by humans. Am. J. Physiol. Regul. Integr. Comp. Physiol. 2014, 306, R879–R885.2469438410.1152/ajpregu.00352.2013PMC4159735
+
+[49] 49 Phan, C. T. , Tso, P. , Intestinal lipid absorption and transport. Front. Biosci. 2001, 6, D299–D319.1122987610.2741/phan
+
+[50] 50 Voigt, N. , Stein, J. , Galindo, M. M. , Dunkel, A. et al., The role of lipolysis in human orosensory fat perception. J. Lipid Res. 2014, 55, 870–882.2468810310.1194/jlr.M046029PMC3995465
+
+[51] 51 Soukoulis, C. , Bohn, T. , A comprehensive overview on the micro‐ and nano‐technological encapsulation advances for enhancing the chemical stability and bioavailability of carotenoids. Crit. Rev. Food Sci. Nutr. 2015, in press.10.1080/10408398.2014.97135326065668
+
+[52] 52 Perry, G. H. , Dominy, N. J. , Claw, K. G. , Lee, A. S. et al., Diet and the evolution of human amylase gene copy number variation. Nat. Genet. 2007, 39, 1256–1260.1782826310.1038/ng2123PMC2377015
+
+[53] 53 Minekus, M. , Alminger, M. , Alvito, P. , Ballance, S. et al., A standardised static in vitro digestion method suitable for food ‐ an international consensus. Food. Funct. 2014, 5, 1113–1124.2480311110.1039/c3fo60702j
+
+[54] 54 Slomiany, B. L. , Slomiany, A. , Secretion of gastric mucus phospholipids in response to beta‐adrenergic G protein‐coupled receptor activation is mediated by SRC kinase‐dependent epidermal growth factor receptor transactivation. J. Physiol. Pharmacol. 2004, 55, 627–638.15381832
+
+[55] 55 Biehler, E. , Hoffmann, L. , Krause, E. , Bohn, T. , Divalent minerals decrease micellarization and uptake of carotenoids and digestion products into Caco‐2 cells. J. Nutr. 2011, 141, 1769–1776.2186555810.3945/jn.111.143388
+
+[56] 56 Pals, G. , Meijerink Ph Fau ‐ Defize, J. , Defize J Fau ‐ Bebelman, J. P. , Bebelman Jp Fau ‐ Strunk, M. et al., Transcription regulation of human and porcine pepsinogen A. Adv. Exp. Med. Biol. 1995, 362, 67–75.854038210.1007/978-1-4615-1871-6_7
+
+[57] 57 Biehler, E. , Kaulmann, A. , Hoffmann, L. , Krause, E. et al., Dietary and host‐related factors influencing carotenoid bioaccessibility from spinach (Spinacia oleracea). Food Chem. 2011, 125, 1328–1334.
+
+[58] 58 Garrett, D. A. , Failla, M. L. , Sarama, R. J. , Development of an in vitro digestion method to assess carotenoid bioavailability from meals. J. Agric. Food Chem. 1999, 47, 4301–4309.1055280610.1021/jf9903298
+
+[59] 59 Periago, M. J. , Bravo, S. , Garcia‐Alonso, F. J. , Rincon, F. , Detection of key factors affecting lycopene in vitro accessibility. J. Agric. Food Chem. 2013, 61, 3859–3867.2354794210.1021/jf3052994
+
+[60] 60 Culen, M. , Rezacova, A. , Jampilek, J. , Dohnal, J. , Designing a dynamic dissolution method: a review of instrumental options and corresponding physiology of stomach and small intestine. J. Pharm. Sci. 2013, 102, 2995–3017.2349481510.1002/jps.23494
+
+[61] 61 Kullenberg, D. , Taylor, L. A. , Schneider, M. , Massing, U. , Health effects of dietary phospholipids. Lipids Health Dis. 2012, 11, 3.2222148910.1186/1476-511X-11-3PMC3316137
+
+[62] 62 Holmes, R. S. , Cox, L. A. , VandeBerg, J. L. , Comparative studies of mammalian acid lipases: Evidence for a new gene family in mouse and rat (Lipo). Comp. Biochem. Physiol. Part D Genomics Proteomics 2010, 5, 217–226.2059866310.1016/j.cbd.2010.05.004PMC2917524
+
+[63] 63 Sams, L. , Paume, J. , Giallo, J. , Carriere, F. , Relevant pH and lipase for in vitro models of gastric digestion. Food Funct. 2016, 7, 30–45.2652736810.1039/c5fo00930h
+
+[64] 64 Corte‐Real, J. , Richling, E. , Hoffmann, L. , Bohn, T. , Selective factors governing in vitro beta‐carotene bioaccessibility: negative influence of low filtration cutoffs and alterations by emulsifiers and food matrices. Nutr. Res. 2014, 34, 1101–1110.2547619310.1016/j.nutres.2014.04.010
+
+[65] 65 Bohn, T. , Provitamin A Carotenoids ‐ Occurrence, intake, and bioavailability in: PreedyV. (Ed.), In Vitamin A and Carotenoids: Chemistry, Analysis, Function and Effects (Food and Nutritional Components in Focus), RSC Publishing, London 2012.
+
+[66] 66 Tyssandier, V. , Reboul, E. , Dumas, J. F. , Bouteloup‐Demange, C. et al., Processing of vegetable‐borne carotenoids in the human stomach and duodenum. Am. J. Physiol Gastrointest. Liver Physiol. 2003, 284, G913–G923.1273614610.1152/ajpgi.00410.2002
+
+[67] 67 Inamine, T. , Higa, S. , Noguchi, F. , Kondo, S. et al., Association of genes involved in bile acid synthesis with the progression of primary biliary cirrhosis in Japanese patients. J. Gastroenterol. 2013, 48, 1160–1170.2335462010.1007/s00535-012-0730-9
+
+[68] 68 Lowe, M. E. , Properties and function of pancreatic lipase related protein 2. Biochimie 2000, 82, 997–1004.1109979610.1016/s0300-9084(00)01184-6
+
+[69] 69 Hancock, A. M. , Witonsky, D. B. , Ehler, E. , Alkorta‐Aranburu, G. et al., Colloquium paper: human adaptations to diet, subsistence, and ecoregion are due to subtle shifts in allele frequency. Proc. Natl. Acad Sci. U S A 2010, 107(Suppl 2), 8924–8930.2044509510.1073/pnas.0914625107PMC3024024
+
+[70] 70 Iqbal, J. , Hussain, M. M. , Intestinal lipid absorption. Am. J. Physiol. Endocrinol. Metab. 2009, 296, E1183–1194.1915832110.1152/ajpendo.90899.2008PMC2692399
+
+[71] 71 D'Agostino, D. , Cordle, R. A. , Kullman, J. , Erlanson‐Albertsson, C. et al., Decreased postnatal survival and altered body weight regulation in procolipase‐deficient mice. J. Biol. Chem. 2002, 277, 7170–7177.1175190010.1074/jbc.M108328200PMC2528063
+
+[72] 72 D'Silva, S. , Xiao, X. , Lowe, M. E. , A polymorphism in the gene encoding procolipase produces a colipase, Arg92Cys, with decreased function against long‐chain triglycerides. J. Lipid Res. 2007, 48, 2478–2484.1771542310.1194/jlr.M700371-JLR200PMC3684974
+
+[73] 73 Borel, P. , Desmarchelier, C. , Nowicki, M. , Bott, R. , Lycopene bioavailability is associated with a combination of genetic variants. Free. Radic. Biol. Med. 2015, 83, 238–244.2577200810.1016/j.freeradbiomed.2015.02.033
+
+[74] 74 Hegele, R. A. , Ramdath, D. D. , Ban, M. R. , Carruthers, M. N. et al., Polymorphisms in PNLIP, encoding pancreatic lipase, and associations with metabolic traits. J. Hum. Genet. 2001, 46, 320–324.1139353410.1007/s100380170066
+
+[75] 75 Breithaupt, D. E. , Bamedi, A. , Wirt, U. , Carotenol fatty acid esters: easy substrates for digestive enzymes? Comp. Biochem. Physiol. B. Biochem. Mol. Biol. 2002, 132, 721–728.1212805810.1016/s1096-4959(02)00096-9
+
+[76] 76 Imai, T. , Human carboxylesterase isozymes: catalytic properties and rational drug design. Drug Metab. Pharmacokinet. 2006, 21, 173–185.1685812010.2133/dmpk.21.173
+
+[77] 77 Chitchumroonchokchai, C. , Failla, M. L. , Hydrolysis of zeaxanthin esters by carboxyl ester lipase during digestion facilitates micellarization and uptake of the xanthophyll by Caco‐2 human intestinal cells. J. Nutr. 2006, 136, 588–594.1648452910.1093/jn/136.3.588
+
+[78] 78 Biehler, E. , Bohn, T. , Methods for assessing aspects of carotenoid bioavailability. Curr. Nutr. Food Sci. 2010, 6, 44–69.
+
+[79] 79 Coral‐Hinostroza, G. N. , Ytrestoyl, T. , Ruyter, B. , Bjerkeng, B. , Plasma appearance of unesterified astaxanthin geometrical E/Z and optical R/S isomers in men given single doses of a mixture of optical 3 and 3'R/S isomers of astaxanthin fatty acyl diesters. Comp. Biochem. Physiol. C Toxicol. Pharmacol. 2004, 139, 99–110.1555607110.1016/j.cca.2004.09.011
+
+[80] 80 Kim, S. R. , Nakamura, T. , Saito, Y. , Sai, K. et al., Twelve novel single nucleotide polymorphisms in the CES2 gene encoding human carboxylesterase 2 (hCE‐2). Drug Metab. Pharmacokinet. 2003, 18, 327–332.1561875210.2133/dmpk.18.327
+
+[81] 81 Layer, P. , Keller, J. , Pancreatic enzymes: secretion and luminal nutrient digestion in health and disease. J. Clin. Gastroenterol. 1999, 28, 3–10.991665710.1097/00004836-199901000-00002
+
+[82] 82 Meier, J. , Sturm, A. , The intestinal epithelial barrier: does it become impaired with age? Dig. Dis. 2009, 27, 240–245.1978674710.1159/000228556
+
+[83] 83 Hollander, D. , Ruble, P. E., Jr. , beta‐carotene intestinal absorption: bile, fatty acid, pH, and flow rate effects on transport. Am. J. Physiol. 1978, 235, E686–691.3277310.1152/ajpendo.1978.235.6.E686
+
+[84] 84 Borel, P. , Lietz, G. , Goncalves, A. , Szabo de Edelenyi, F. et al., CD36 and SR‐BI are involved in cellular uptake of provitamin A carotenoids by Caco‐2 and HEK cells, and some of their genetic variants are associated with plasma concentrations of these micronutrients in humans. J. Nutr. 2013, 143, 448–456.2342733110.3945/jn.112.172734
+
+[85] 85 van Bennekum, A. , Werder, M. , Thuahnai, S. T. , Han, C. H. et al., Class B scavenger receptor‐mediated intestinal absorption of dietary beta‐carotene and cholesterol. Biochemistry 2005, 44, 4517–4525.1576628210.1021/bi0484320
+
+[86] 86 During, A. , Dawson, H. D. , Harrison, E. H. , Carotenoid transport is decreased and expression of the lipid transporters SR‐BI, NPC1L1, and ABCA1 is downregulated in Caco‐2 cells treated with ezetimibe. J. Nutr. 2005, 135, 2305–2312.1617718710.1093/jn/135.10.2305
+
+[87] 87 Moussa, M. , Landrier, J. F. , Reboul, E. , Ghiringhelli, O. et al., Lycopene absorption in human intestinal cells and in mice involves scavenger receptor class B type I but not Niemann‐Pick C1‐like 1. J. Nutr. 2008, 138, 1432–1436.1864118710.1093/jn/138.8.1432
+
+[88] 88 Moussa, M. , Gouranton, E. , Gleize, B. , Yazidi, C. E. et al., CD36 is involved in lycopene and lutein uptake by adipocytes and adipose tissue cultures. Mol. Nutr. Food Res. 2011, 55, 578–584.2146232510.1002/mnfr.201000399
+
+[89] 89 Sato, Y. , Suzuki, R. , Kobayashi, M. , Itagaki, S. et al., Involvement of cholesterol membrane transporter Niemann‐Pick C1‐like 1 in the intestinal absorption of lutein. J. Pharm. Pharm. Sci. 2012, 15, 256–264.2257900510.18433/j38k56
+
+[90] 90 dela Sena, C. , Riedl, K. M. , Narayanasamy, S. , Curley, R. W., Jr. et al., The human enzyme that converts dietary provitamin A carotenoids to vitamin A is a dioxygenase. J. Biol. Chem. 2014, 289, 13661–13666.2466880710.1074/jbc.M114.557710PMC4036370
+
+[91] 91 dela Sena, C. , Narayanasamy, S. , Riedl, K. M. , Curley, R. W., Jr. et al., Substrate specificity of purified recombinant human beta‐carotene 15,15'‐oxygenase (BCO1). J. Biol. Chem. 2013, 288, 37094–37103.2418713510.1074/jbc.M113.507160PMC3873565
+
+[92] 92 von Lintig, J. , Provitamin A metabolism and functions in mammalian biology. Am. J. Clin. Nutr. 2012, 96, 1234s–1244s.2305354910.3945/ajcn.112.034629PMC3471205
+
+[93] 93 Lindshield, B. L. , Canene‐Adams, K. , Erdman, J. W., Jr. , Lycopenoids: are lycopene metabolites bioactive? Arch. Biochem Biophys. 2007, 458, 136–140.1706754510.1016/j.abb.2006.09.012
+
+[94] 94 Sena, C. D. , Narayanasamy, S. , Curley, R. W. , Harrison, E. H. , Purified recombinant human β‐carotene 15‐15′‐oxygenase 1 (BCO1) cleaves β‐apocarotenals and lycopene. The FASEB J. 2013, 27, 38.35–38.35.
+
+[95] 95 Dela Sena, C. , Sun, J. , Narayanasamy, S. , Riedl, K. M. et al., substrate specificity of purified recombinant chicken beta‐carotene 9',10'‐oxygenase (BCO2). J Biol. Chem. 2016, 291, 14609–14619.2714347910.1074/jbc.M116.723684PMC4938182
+
+[96] 96 Lobo, G. P. , Amengual, J. , Palczewski, G. , Babino, D. et al., Mammalian carotenoid‐oxygenases: key players for carotenoid function and homeostasis. Biochim. Biophys. Acta 2012, 1821, 78–87.2156986210.1016/j.bbalip.2011.04.010PMC3162997
+
+[97] 97 Aydemir, G. , Kasiri, Y. , Birta, E. , Beke, G. et al., Lycopene‐derived bioactive retinoic acid receptors/retinoid‐X receptors‐activating metabolites may be relevant for lycopene's anti‐cancer potential. Mol. Nutr. Food Res. 2013, 57, 739–747.2337804510.1002/mnfr.201200548
+
+[98] 98 Rühl, R. , Caris‐Veyrat, C. , Garcia, A. L. , Reynaud, E. et al., Lycopene‐induced nuclear hormone receptor signaling in inflammation and lipid metabolism via still unknown endogenous apo‐10´‐lycopenoids. Int. J. Vitam. Nutr. Res. 2016, in press.10.1024/0300-9831/a00040429052471
+
+[99] 99 Amengual, J. , Lobo, G. P. , Golczak, M. , Li, H. N. et al., A mitochondrial enzyme degrades carotenoids and protects against oxidative stress. Faseb J. 2011, 25, 948–959.2110693410.1096/fj.10-173906PMC3042841
+
+[100] 100 Tang, G. , Qin, J. , Dolnikowski, G. G. , Russell, R. M. , Short‐term (intestinal) and long‐term (postintestinal) conversion of beta‐carotene to retinol in adults as assessed by a stable‐isotope reference method. Am. J. Clin. Nutr. 2003, 78, 259–266.1288570610.1093/ajcn/78.2.259
+
+[101] 101 Palczewski, G. , Amengual, J. , Hoppel, C. L. , von Lintig, J. , Evidence for compartmentalization of mammalian carotenoid metabolism. FASEB J. 2014, 28, 4457–4469.2500212310.1096/fj.14-252411PMC4202098
+
+[102] 102 Amengual, J. , Gouranton, E. , van Helden, Y. G. , Hessel, S. et al., Beta‐carotene reduces body adiposity of mice via BCMO1. PLoS One 2011, 6, e20644.2167381310.1371/journal.pone.0020644PMC3106009
+
+[103] 103 Borel, P. , Moussa, M. , Reboul, E. , Lyan, B. et al., Human plasma levels of vitamin E and carotenoids are associated with genetic polymorphisms in genes involved in lipid metabolism. J. Nutr. 2007, 137, 2653–2659.1802947910.1093/jn/137.12.2653
+
+[104] 104 Ferrucci, L. , Perry, J. R. , Matteini, A. , Perola, M. et al., Common variation in the beta‐carotene 15,15'‐monooxygenase 1 gene affects circulating levels of carotenoids: a genome‐wide association study. Am. J. Hum. Genet. 2009, 84, 123–133.1918528410.1016/j.ajhg.2008.12.019PMC2668002
+
+[105] 105 Wood, A. R. , Perry, J. R. , Tanaka, T. , Hernandez, D. G. et al., Imputation of variants from the 1000 Genomes Project modestly improves known associations and can identify low‐frequency variant‐phenotype associations undetected by HapMap based imputation. PloS One 2013, 8, e64343.2369688110.1371/journal.pone.0064343PMC3655956
+
+[106] 106 Mashurabad, P. C. , Kondaiah, P. , Palika, R. , Ghosh, S. et al., Eicosapentaenoic acid inhibits intestinal beta‐carotene absorption by downregulation of lipid transporter expression via PPAR‐alpha dependent mechanism. Arch. Biochem. Biophys. 2016, 590, 118–124.2657702110.1016/j.abb.2015.11.002
+
+[107] 107 Lobo, G. P. , Hessel, S. , Eichinger, A. , Noy, N. et al., ISX is a retinoic acid‐sensitive gatekeeper that controls intestinal beta,beta‐carotene absorption and vitamin A production. Faseb J. 2010, 24, 1656–1666.2006153310.1096/fj.09-150995PMC2874479
+
+[108] 108 Lobo, G. P. , Amengual, J. , Baus, D. , Shivdasani, R. A. et al., Genetics and diet regulate vitamin A production via the homeobox transcription factor ISX. J. Biol. Chem. 2013, 288, 9017–9027.2339314110.1074/jbc.M112.444240PMC3610974
+
+[109] 109 Jang, J. T. , Green, J. B. , Beard, J. L. , Green, M. H. , Kinetic analysis shows that iron deficiency decreases liver vitamin A mobilization in rats. J. Nutr. 2000, 130, 1291–1296.1080193210.1093/jn/130.5.1291
+
+[110] 110 During, A. , Fields, M. , Lewis, C. G. , Smith, J. C. , Beta‐carotene 15,15'‐dioxygenase activity is responsive to copper and iron concentrations in rat small intestine. J. Am. Coll. Nutr. 1999, 18, 309–315.1203847310.1080/07315724.1999.10718869
+
+[111] 111 Noh, S. K. , Koo, S. I. , Low zinc intake decreases the lymphatic output of retinol in rats infused intraduodenally with beta‐carotene. J. Nutr. Biochem. 2003, 14, 147–153.1274254210.1016/s0955-2863(02)00277-2
+
+[112] 112 Kana‐Sop, M. M. , Gouado, I. , Achu, M. B. , Van Camp, J. et al., The influence of iron and zinc supplementation on the bioavailability of provitamin A carotenoids from papaya following consumption of a vitamin A‐deficient diet. J. Nutr. Sci. Vitaminol. (Tokyo) 2015, 61, 205–214.2622695610.3177/jnsv.61.205
+
+[113] 113 Lietz, G. , Lange, J. , Rimbach, G. , Molecular and dietary regulation of beta,beta‐carotene 15,15'‐monooxygenase 1 (BCMO1). Arch. Biochem. Biophys. 2010, 502, 8–16.2059966610.1016/j.abb.2010.06.032
+
+[114] 114 Lobo, G. P. , Amengual, J. , Li, H. N. , Golczak, M. et al., Beta,beta‐carotene decreases peroxisome proliferator receptor gamma activity and reduces lipid storage capacity of adipocytes in a beta,beta‐carotene oxygenase 1‐dependent manner. J. Biol. Chem. 2010, 285, 27891–27899.2057396110.1074/jbc.M110.132571PMC2934656
+
+[115] 115 Zaripheh, S. , Nara, T. Y. , Nakamura, M. T. , Erdman, J. W., Jr. Dietary lycopene downregulates carotenoid 15,15'‐monooxygenase and PPAR‐gamma in selected rat tissues. J. Nutr. 2006, 136, 932–938.1654945310.1093/jn/136.4.932
+
+[116] 116 Schupp, M. , Lazar, M. A. , Endogenous ligands for nuclear receptors: digging deeper. J. Biol. Chem. 2010, 285, 40409–40415.2095652610.1074/jbc.R110.182451PMC3003339
+
+[117] 117 Carlberg, C. , Saurat, J. H. , Siegenthaler, G. , 9‐cis‐retinoic acid is a natural antagonist for the retinoic acid receptor response pathway. Biochem. J. 1993, 295(Pt 2), 343–346.824023110.1042/bj2950343PMC1134887
+
+[118] 118 Rühl, R. , Krzyzosiak, A. , Niewiadomska‐Cimicka, A. , Rochel, N. et al., 9‐cis‐13,14‐dihydroretinoic acid is an endogenous retinoid acting as RXR ligand in mice. PLoS Genet. 2015, 11, e1005213.2603062510.1371/journal.pgen.1005213PMC4451509
+
+[119] 119 de Lera, A. R. , Krezel, W. , Rühl, R. , An endogenous mammalian retinoid X receptor ligand, at last! Chem. Med. Chem. 2016, 11, 1027–1037.2715114810.1002/cmdc.201600105
+
+[120] 120 van den Berg, H. , Effect of lutein on beta‐carotene absorption and cleavage. Int. J. Vitam. Nutr. Res. 1998, 68, 360–365.9857262
+
+[121] 121 Goni, I. , Serrano, J. , Saura‐Calixto, F. , Bioaccessibility of beta‐carotene, lutein, and lycopene from fruits and vegetables. J. Agric. Food Chem. 2006, 54, 5382–5387.1684852110.1021/jf0609835
+
+[122] 122 Kaulmann, A. , Andre, C. M. , Schneider, Y. J. , Hoffmann, L. et al., Carotenoid and polyphenol bioaccessibility and cellular uptake from plum and cabbage varieties. Food Chem. 2015, 197 325–332.2661695610.1016/j.foodchem.2015.10.049
+
+[123] 123 Serrano, J. , Goni, I. , Saura‐Calixto, F. , Determination of beta‐carotene and lutein available from green leafy vegetables by an in vitro digestion and colonic fermentation method. J. Agric. Food Chem. 2005, 53, 2936–2940.1582604210.1021/jf0480142
+
+[124] 124 Bohn, T. , Bioactivity of carotenoids – chasms of knowledge. Int. J Vitam. Nutr. Res. 2016, in press.10.1024/0300-9831/a00040028186459
+
+[125] 125 Marin, L. , Miguelez, E. M. , Villar, C. J. , Lombo, F. , Bioavailability of dietary polyphenols and gut microbiota metabolism: antimicrobial properties. Biomed. Res. Int. 2015, 2015, 905215.2580287010.1155/2015/905215PMC4352739
+
+[126] 126 Lindqvist, A. , He, Y. G. , Andersson, S. , Cell type‐specific expression of beta‐carotene 9',10'‐monooxygenase in human tissues. J. Histochem. Cytochem. 2005, 53, 1403–1412.1598311410.1369/jhc.5A6705.2005
+
+[127] 127 Gireesh, T. , Sudhakaran, P. R. , In vitro uptake of beta‐carotene by human exfoliated colonic epithelial cells. Int. J. Food Sci. Nutr. 2009, 60, 109–118.10.1080/0963748070161052518608567
+
+[128] 128 Baskaran, V. , Sugawara, T. , Nagao, A. , Phospholipids affect the intestinal absorption of carotenoids in mice. Lipids 2003, 38, 705–711.1450683310.1007/s11745-003-1118-5
+
+[129] 129 Sugawara, T. , Kushiro, M. , Zhang, H. , Nara, E. et al., Lysophosphatidylcholine enhances carotenoid uptake from mixed micelles by Caco‐2 human intestinal cells. J. Nutr. 2001, 131, 2921–2927.1169461910.1093/jn/131.11.2921
+
+[130] 130 Sen, A. , Ren, J. , Ruffin, M. T. , Turgeon, D. K. et al., Relationships between serum and colon concentrations of carotenoids and fatty acids in randomized dietary intervention trial. Cancer Prev. Res. (Phila) 2013, 6, 558–565.2359274110.1158/1940-6207.CAPR-13-0019PMC4021591
+
+[131] 131 Oshima, S. , Inakuma, T. , Narisawa, T. , Absorption and distribution of lycopene in rat colon. J. Nutr. Sci. Vitaminol. (Tokyo) 1999, 45, 129–134.1036024710.3177/jnsv.45.129
+
+[132] 132 Jayasinghe, T. N. , Chiavaroli, V. , Holland, D. J. , Cutfield, W. S. et al., The new era of treatment for obesity and metabolic disorders: evidence and expectations for gut microbiome transplantation. Front. Cell Inf. Microbiol. 2016, 6, 15.10.3389/fcimb.2016.00015PMC475926526925392
+
+[133] 133 Karlsson, F. H. , Fak, F. , Nookaew, I. , Tremaroli, V. et al., Symptomatic atherosclerosis is associated with an altered gut metagenome. Nat. Commun. 2012, 3, 1245.2321237410.1038/ncomms2266PMC3538954
+
+[134] 134 Drai, J. , Borel, P. , Faure, H. , Galabert, C. et al., Fasting plasma carotenoids concentrations in Crohn's and pancreatic cancer patients compared to control subjects. Int .J. Vitam. Nutr. Res. 2009, 79, 87–94.2010821010.1024/0300-9831.79.2.87
+
+[135] 135 Geerling, B. J. , Badart‐Smook, A. , Stockbrugger, R. W. , Brummer, R. J. , Comprehensive nutritional status in patients with long‐standing Crohn disease currently in remission. Am. J. Clin. Nutr. 1998, 67, 919–926.958385010.1093/ajcn/67.5.919
+
+[136] 136 Genser, D. , Kang, M. H. , Vogelsang, H. , Elmadfa, I. , Status of lipidsoluble antioxidants and TRAP in patients with Crohn's disease and healthy controls. Eur. J. Clin. Nutr. 1999, 53, 675–679.1050976110.1038/sj.ejcn.1600764
+
+[137] 137 Granado‐Lorencio, F. , Simal‐Anton, A. , Blanco‐Navarro, I. , Gonzalez‐Dominguez, T. et al., Depletion of serum carotenoid and other fat‐soluble vitamin concentrations following obesity surgery. Obes. Surg. 2011, 21, 1605–1611.2152351710.1007/s11695-011-0413-2
+
+[138] 138 Ward, M. S. , Zhao, D. Y. , Bernstein, P. S. , Macular and serum carotenoid concentrations in patients with malabsorption syndromes. J. Ocul. Biol. Dis. Infor. 2008, 1, 12–18.1908174510.1007/s12177-008-9008-0PMC2600549
+
+[139] 139 Edes, T. E. , Walk, B. E. , Thornton, W. H., Jr. , Fritsche, K. L. , Essential fatty acid sufficiency does not preclude fat‐soluble‐vitamin deficiency in short‐bowel syndrome. Am. J. Clin Nutr. 1991, 53, 499–502.198941710.1093/ajcn/53.2.499
+
+[140] 140 Luo, M. , Estivariz, C. F. , Schleicher, R. L. , Bazargan, N. et al., Prospective analysis of serum carotenoids, vitamin A, and tocopherols in adults with short bowel syndrome undergoing intestinal rehabilitation. Nutrition 2009, 25, 400–407.1908170610.1016/j.nut.2008.10.003PMC2670964
+
+[141] 141 Husemann, B. , Groitl, H. , Zirngibl, H. , [Metabolic and surgical aspects of total gastrectomy (author's transl)]. MMW Munch. Med. Wochenschr. 1978, 120, 561–564.306045
+
+[142] 142 Jalal, F. , Nesheim, M. C. , Agus, Z. , Sanjur, D. et al., Serum retinol concentrations in children are affected by food sources of beta‐carotene, fat intake, and anthelmintic drug treatment. Am. J. Clin. Nutr. 1998, 68, 623–629.973473910.1093/ajcn/68.3.623
+
+[143] 143 Ramakrishna, B. S. , Venkataraman, S. , Mukhopadhya, A. , Tropical malabsorption. Postgrad. Med. J. 2006, 82, 779–787.1714869810.1136/pgmj.2006.048579PMC2653921
+
+[144] 144 Reboul, E. , Goncalves, A. , Comera, C. , Bott, R. et al., Vitamin D intestinal absorption is not a simple passive diffusion: evidences for involvement of cholesterol transporters. Mol. Nutr. Food Res. 2011, 55, 691–702.2128020910.1002/mnfr.201000553
+
+[145] 145 Bhosale, P. , Li, B. , Sharifzadeh, M. , Gellermann, W. et al., Purification and partial characterization of a lutein‐binding protein from human retina. Biochemistry (Mosc.) 2009, 48, 4798–4807.10.1021/bi900447819402606
+
+[146] 146 Sakudoh, T. , Iizuka, T. , Narukawa, J. , Sezutsu, H. et al., A CD36‐related transmembrane protein is coordinated with an intracellular lipid‐binding protein in selective carotenoid transport for cocoon coloration. J. Biol. Chem. 2010, 285, 7739–7751.2005398810.1074/jbc.M109.074435PMC2844218
+
+[147] 147 Tyssandier, V. , Cardinault, N. , Caris‐Veyrat, C. , Amiot, M. J. et al., Vegetable‐borne lutein, lycopene, and beta‐carotene compete for incorporation into chylomicrons, with no adverse effect on the medium‐term (3‐wk) plasma status of carotenoids in humans. Am. J. Clin. Nutr. 2002, 75, 526–534.1186485910.1093/ajcn/75.3.526
+
+[148] 148 Unlu, N. Z. , Bohn, T. , Francis, D. M. , Nagaraja, H. N. et al., Lycopene from heat‐induced cis‐isomer‐rich tomato sauce is more bioavailable than from all‐trans‐rich tomato sauce in human subjects. Br. J. Nutr. 2007, 98, 140–146.1739156810.1017/S0007114507685201
+
+[149] 149 Unlu, N. Z. , Bohn, T. , Francis, D. , Clinton, S. K. et al., Carotenoid absorption in humans consuming tomato sauces obtained from tangerine or high‐beta‐carotene varieties of tomatoes. J. Agric. Food Chem. 2007, 55, 1597–1603.1724370010.1021/jf062337b
+
+[150] 150 Failla, M. L. , Chitchumroonchokchai, C. , Ishida, B. K. , In vitro micellarization and intestinal cell uptake of cis isomers of lycopene exceed those of all‐trans lycopene. J. Nutr. 2008, 138, 482–486.1828735310.1093/jn/138.3.482
+
+[151] 151 Shaish, A. , Harari, A. , Hananshvili, L. , Cohen, H. et al., 9‐cis beta‐carotene‐rich powder of the alga Dunaliella bardawil increases plasma HDL‐cholesterol in fibrate‐treated patients. Atherosclerosis 2006, 189, 215–221.1641355610.1016/j.atherosclerosis.2005.12.004
+
+[152] 152 During, A. , Hussain, M. M. , Morel, D. W. , Harrison, E. H. , Carotenoid uptake and secretion by CaCo‐2 cells: beta‐carotene isomer selectivity and carotenoid interactions. J. Lipid Res. 2002, 43, 1086–1095.1209149310.1194/jlr.m200068-jlr200
+
+[153] 153 During, A. , Harrison, E. H. , Mechanisms of provitamin A (carotenoid) and vitamin A (retinol) transport into and out of intestinal Caco‐2 cells. J. Lipid Res. 2007, 48, 2283–2294.1764477610.1194/jlr.M700263-JLR200
+
+[154] 154 Skrede, B. , Blomhoff, R. , Maelandsmo, G. M. , Ose, L. et al., Uptake of chylomicron remnant retinyl esters in human leukocytes in vivo. Eur. J. Clin. Invest. 1992, 22, 229–234.149963910.1111/j.1365-2362.1992.tb01456.x
+
+[155] 155 Eroglu, A. , Hruszkewycz, D. P. , dela Sena, C. , Narayanasamy, S. et al., Naturally occurring eccentric cleavage products of provitamin A beta‐carotene function as antagonists of retinoic acid receptors. J. Biol. Chem. 2012, 287, 15886–15895.2241843710.1074/jbc.M111.325142PMC3346154
+
+[156] 156 Niesor, E. J. , Chaput, E. , Mary, J. L. , Staempfli, A. et al., Effect of compounds affecting ABCA1 expression and CETP activity on the HDL pathway involved in intestinal absorption of lutein and zeaxanthin. Lipids 2014, 49, 1233–1243.2530095310.1007/s11745-014-3958-8
+
+[157] 157 Borel, P. , Grolier, P. , Armand, M. , Partier, A. et al., Carotenoids in biological emulsions: solubility, surface‐to‐core distribution, and release from lipid droplets. J. Lipid Res. 1996, 37, 250–261.9026524
+
+[158] 158 Tyssandier, V. , Choubert, G. , Grolier, P. , Borel, P. , Carotenoids, mostly the xanthophylls, exchange between plasma lipoproteins. Int. J. Vitam. Nutr. Res. 2002, 72, 300–308.1246310510.1024/0300-9831.72.5.300
+
+[159] 159 Kostic, D. , White, W. S. , Olson, J. A. , Intestinal absorption, serum clearance, and interactions between lutein and beta‐carotene when administered to human adults in separate or combined oral doses. Am. J. Clin. Nutr. 1995, 62, 604–610.766112310.1093/ajcn/62.3.604
+
+[160] 160 Diwadkar‐Navsariwala, V. , Novotny, J. A. , Gustin, D. M. , Sosman, J. A. et al., A physiological pharmacokinetic model describing the disposition of lycopene in healthy men. J. Lipid Res. 2003, 44, 1927–1939.1286753910.1194/jlr.M300130-JLR200
+
+[161] 161 Johnson, E. J. , Russell, R. M. , Distribution of orally administered beta‐carotene among lipoproteins in healthy men. Am. J. Clin. Nutr. 1992, 56, 128–135.160974910.1093/ajcn/56.1.128
+
+[162] 162 Herbeth, B. , Gueguen, S. , Leroy, P. , Siest, G. et al., The lipoprotein lipase serine 447 stop polymorphism is associated with altered serum carotenoid concentrations in the Stanislas Family Study. J. Am. Coll. Nutr. 2007, 26, 655–662.1818743010.1080/07315724.2007.10719644
+
+[163] 163 Borel, P. , Moussa, M. , Reboul, E. , Lyan, B. et al., Human fasting plasma concentrations of vitamin E and carotenoids, and their association with genetic variants in apo C‐III, cholesteryl ester transfer protein, hepatic lipase, intestinal fatty acid binding protein and microsomal triacylglycerol transfer protein. Br. J. Nutr. 2009, 101, 680–687.1866242710.1017/S0007114508030754
+
+[164] 164 Brady, W. E. , Mares‐Perlman, J. A. , Bowen, P. , Stacewicz‐Sapuntzakis, M. , Human serum carotenoid concentrations are related to physiologic and lifestyle factors. J. Nutr. 1996, 126, 129–137.855829210.1093/jn/126.1.129
+
+[165] 165 Cardinault, N. , Tyssandier, V. , Grolier, P. , Winklhofer‐Roob, B. M. et al., Comparison of the postprandial chylomicron carotenoid responses in young and older subjects. Eur. J. Nutr. 2003, 42, 315–323.1467360410.1007/s00394-003-0426-2
+
+[166] 166 Forman, M. R. , Johnson, E. J. , Lanza, E. , Graubard, B. I. et al., Effect of menstrual cycle phase on the concentration of individual carotenoids in lipoproteins of premenopausal women: a controlled dietary study. Am. J. Clin. Nutr. 1998, 67, 81–87.944037910.1093/ajcn/67.1.81
+
+[167] 167 Mumford, S. L. , Browne, R. W. , Schliep, K. C. , Schmelzer, J. et al., Serum antioxidants are associated with serum reproductive hormones and ovulation among healthy women. J. Nutr. 2016, 146, 98–106.2658167910.3945/jn.115.217620PMC4700980
+
+[168] 168 Goulinet, S. , Chapman, M. J. , Plasma LDL and HDL subspecies are heterogenous in particle content of tocopherols and oxygenated and hydrocarbon carotenoids. Relevance to oxidative resistance and atherogenesis. Arterioscler. Thromb. Vasc. Biol. 1997, 17, 786–796.910879510.1161/01.atv.17.4.786
+
+[169] 169 Stahl, W. , van den Berg, H. , Arthur, J. , Bast, A. et al., Bioavailability and metabolism. Mol. Aspects Med. 2002, 23, 39–100.1207977010.1016/s0098-2997(02)00016-x
+
+[170] 170 Korytko, P. J. , Rodvold, K. A. , Crowell, J. A. , Stacewicz‐Sapuntzakis, M. et al., Pharmacokinetics and tissue distribution of orally administered lycopene in male dogs. J. Nutr. 2003, 133, 2788–2792.1294936610.1093/jn/133.9.2788
+
+[171] 171 van, L. M. , West, C. E. , van Breemen, R. B. , Isotopic tracer techniques for studying the bioavailability and bioefficacy of dietary carotenoids, particularly beta‐carotene, in humans: a review. Am. J. Clin. Nutr. 2003, 77, 12–28.1249931810.1093/ajcn/77.1.12
+
+[172] 172 Kaplan, L. A. , Lau, J. M. , Stein, E. A. , Carotenoid composition, concentrations, and relationships in various human organs. Clin. Physiol. Biochem. 1990, 8, 1–10.2323157
+
+[173] 173 Schmitz, H. H. , Poor, C. L. , Wellman, R. B. , Erdman, J. W., Jr. , Concentrations of selected carotenoids and vitamin A in human liver, kidney and lung tissue. J. Nutr. 1991, 121, 1613–1621.176582610.1093/jn/121.10.1613
+
+[174] 174 Tanumihardjo, S. A. , Furr, H. C. , Amedee‐Manesme, O. , Olson, J. A. , Retinyl ester (vitamin A ester) and carotenoid composition in human liver. Int. J. Vitam. Nutr. Res. 1990, 60, 307–313.2101821
+
+[175] 175 Stahl, W. , Schwarz, W. , Sundquist, A. R. , Sies, H. , cis‐trans isomers of lycopene and beta‐carotene in human serum and tissues. Arch. Biochem. Biophys. 1992, 294, 173–177.155034310.1016/0003-9861(92)90153-n
+
+[176] 176 Shmarakov, I. O. , Yuen, J. J. , Blaner, W. S. , Carotenoid metabolism and enzymology, in: TanumihardjoS. (Ed.), In Carotenoids and Human Health, Humana Press, Madison, WI 2013.
+
+[177] 177 Huebbe, P. , Lange, J. , Lietz, G. , Rimbach, G. , Dietary beta‐carotene and lutein metabolism is modulated by the APOE genotype. Biofactors 2016, 42, 388–396.2704093310.1002/biof.1284
+
+[178] 178 Nagao, A. , Maoka, T. , Ono, H. , Kotake‐Nara, E. et al., A 3‐hydroxy beta‐end group in xanthophylls is preferentially oxidized to a 3‐oxo epsilon‐end group in mammals. J Lipid Res 2015, 56, 449–462.2550284410.1194/jlr.P055459PMC4306698
+
+[179] 179 Khachik, F. , Spangler, C. J. , Smith, J. C., Jr. , Canfield, L. M. et al., Identification, quantification, and relative concentrations of carotenoids and their metabolites in human milk and serum. Anal. Chem. 1997, 69, 1873–1881.916416010.1021/ac961085i
+
+[180] 180 Kistler, A. , Liechti, H. , Pichard, L. , Wolz, E. et al., Metabolism and CYP‐inducer properties of astaxanthin in man and primary human hepatocytes. Arch. Toxicol. 2002, 75, 665–675.1187649910.1007/s00204-001-0287-5
+
+[181] 181 Zanger, U. M. , Schwab, M. , Cytochrome P450 enzymes in drug metabolism: regulation of gene expression, enzyme activities, and impact of genetic variation. Pharmacol. Ther. 2013, 138, 103–141.2333332210.1016/j.pharmthera.2012.12.007
+
+[182] 182 Fransen, K. , Franzen, P. , Magnuson, A. , Elmabsout, A. A. et al., Polymorphism in the retinoic acid metabolizing enzyme CYP26B1 and the development of Crohn's Disease. PLoS One 2013, 8, e72739.2397734810.1371/journal.pone.0072739PMC3747106
+
+[183] 183 Krivospitskaya, O. , Elmabsout, A. A. , Sundman, E. , Soderstrom, L. A. et al., A CYP26B1 polymorphism enhances retinoic acid catabolism and may aggravate atherosclerosis. Mol. Med. 2012, 18, 712–718.2241501210.2119/molmed.2012.00094PMC3388133
+
+[184] 184 Parker, R. S. , Carotenoids in human blood and tissues. J. Nutr. 1989, 119, 101–104.264369010.1093/jn/119.1.101
+
+[185] 185 Gouranton, E. , Yazidi, C. E. , Cardinault, N. , Amiot, M. J. et al., Purified low‐density lipoprotein and bovine serum albumin efficiency to internalise lycopene into adipocytes. Food. Chem. Toxicol. 2008, 46, 3832–3836.1895731510.1016/j.fct.2008.10.006
+
+[186] 186 Tsutsumi, C. , Okuno, M. , Tannous, L. , Piantedosi, R. et al., Retinoids and retinoid‐binding protein expression in rat adipocytes. J. Biol. Chem. 1992, 267, 1805–1810.1370481
+
+[187] 187 Landrier, J. F. , Kasiri, E. , Karkeni, E. , Mihaly, J. et al., Reduced adiponectin expression after high‐fat diet is associated with selective up‐regulation of ALDH1A1 and further retinoic acid receptor signaling in adipose tissue. Faseb J. 2016.10.1096/fj.201600263RRPMC516151527729412
+
+[188] 188 El‐Sohemy, A. , Baylin, A. , Kabagambe, E. , Ascherio, A. et al., Individual carotenoid concentrations in adipose tissue and plasma as biomarkers of dietary intake. Am. J. Clin. Nutr. 2002, 76, 172–179.1208183110.1093/ajcn/76.1.172
+
+[189] 189 Chung, H. Y. , Ferreira, A. L. , Epstein, S. , Paiva, S. A. et al., Site‐specific concentrations of carotenoids in adipose tissue: relations with dietary and serum carotenoid concentrations in healthy adults. Am. J. Clin. Nutr. 2009, 90, 533–539.1958709010.3945/ajcn.2009.27712
+
+[190] 190 Kohlmeier, L. , Kohlmeier, M. , Adipose tissue as a medium for epidemiologic exposure assessment. Environ. Health Perspect. 1995, 103(Suppl 3), 99–106.10.1289/ehp.95103s399PMC15190127635122
+
+[191] 191 D'Ambrosio, D. N. , Clugston, R. D. , Blaner, W. S. , Vitamin A metabolism: an update. Nutrients 2011, 3, 63–103.2135067810.3390/nu3010063PMC3042718
+
+[192] 192 Muenzner, M. , Tuvia, N. , Deutschmann, C. , Witte, N. et al., Retinol‐binding protein 4 and its membrane receptor STRA6 control adipogenesis by regulating cellular retinoid homeostasis and retinoic acid receptor alpha activity. Mol. Cell. Biol. 2013, 33, 4068–4082.2395980210.1128/MCB.00221-13PMC3811689
+
+[193] 193 Virtanen, S. M. , van't, V. P. , Kok, F. , Kardinaal, A. F. et al., Predictors of adipose tissue carotenoid and retinol levels in nine countries. The EURAMIC Study. Am. J. Epidemiol. 1996, 144, 968–979.891650810.1093/oxfordjournals.aje.a008867
+
+[194] 194 Östh, M. , Öst, A. , Kjolhede, P. , Strålfors, P. , The concentration of β‐carotene in human adipocytes, but not the whole‐body adipocyte stores, is reduced in obesity. PLoS One 2014, 9.10.1371/journal.pone.0085610PMC388571624416432
+
+[195] 195 Strychalski, J. , Brym, P. , Czarnik, U. , Gugolek, A. , A novel AAT‐deletion mutation in the coding sequence of the BCO2 gene in yellow‐fat rabbits. J. Appl. Genet. 2015, 56, 535–537.2600269410.1007/s13353-015-0290-9
+
+[196] 196 Vage, D. I. , Boman, I. A. , A nonsense mutation in the beta‐carotene oxygenase 2 (BCO2) gene is tightly associated with accumulation of carotenoids in adipose tissue in sheep (Ovis aries). BMC Genet. 2010, 11, 10.2012225110.1186/1471-2156-11-10PMC2828402
+
+[197] 197 Berry, S. D. , Davis, S. R. , Beattie, E. M. , Thomas, N. L. et al., Mutation in bovine beta‐carotene oxygenase 2 affects milk color. Genetics 2009, 182, 923–926.1939877110.1534/genetics.109.101741PMC2710170
+
+[198] 198 Tian, R. , Pitchford, W. S. , Morris, C. A. , Cullen, N. G. et al., Genetic variation in the beta, beta‐carotene‐9', 10'‐dioxygenase gene and association with fat colour in bovine adipose tissue and milk. Anim. Genet. 2010, 41, 253–259.1996864910.1111/j.1365-2052.2009.01990.x
+
+[199] 199 Niu, Y. , Jin, M. , Li, Y. , Li, P. et al., Biallelic beta‐carotene oxygenase 2 knockout results in yellow fat in sheep via CRISPR/Cas9. Anim. Genet. 2016. In press.10.1111/age.1251527862083
+
+[200] 200 van Helden, Y. G. , Godschalk, R. W. , von Lintig, J. , Lietz, G. et al., Gene expression response of mouse lung, liver and white adipose tissue to beta‐carotene supplementation, knockout of Bcmo1 and sex. Mol. Nutr. Food Res. 2011, 55, 1466–1474.2177005010.1002/mnfr.201100194
+
+[201] 201 van Helden, Y. G. , Godschalk, R. W. , van Schooten, F. J. , Keijer, J. , Organ specificity of beta‐carotene induced lung gene‐expression changes in Bcmo1−/− mice. Mol. Nutr. Food Res. 2013, 57, 307–319.2320372510.1002/mnfr.201200277
+
+[202] 202 van Helden, Y. G. , Godschalk, R. W. , Swarts, H. J. , Hollman, P. C. et al., Beta‐carotene affects gene expression in lungs of male and female Bcmo1 (−/−) mice in opposite directions. Cell. Mol. Life Sci. 2011, 68, 489–504.2082085310.1007/s00018-010-0461-0PMC3021199
+
+[203] 203 van Beek, E. A. , Bakker, A. H. , Kruyt, P. M. , Hofker, M. H. et al., Intra‐ and interindividual variation in gene expression in human adipose tissue. Pflugers Arch. 2007, 453, 851–861.1706112010.1007/s00424-006-0164-4
+
+[204] 204 Yasmeen, R. , Reichert, B. , Deiuliis, J. , Yang, F. et al., Autocrine function of aldehyde dehydrogenase 1 as a determinant of diet‐ and sex‐specific differences in visceral adiposity. Diabetes 2013, 62, 124–136.2293311310.2337/db11-1779PMC3526050
+
+[205] 205 Petrosino, J. M. , Disilvestro, D. , Ziouzenkova, O. , Aldehyde dehydrogenase 1A1: friend or foe to female metabolism? Nutrients 2014, 6, 950–973.2459450410.3390/nu6030950PMC3967171
+
+[206] 206 Bonet, M. L. , Canas, J. A. , Ribot, J. , Palou, A. , Carotenoids in Adipose Tissue Biology and Obesity. Subcell. Biochem. 2016, 79, 377–414.2748523110.1007/978-3-319-39126-7_15
+
+[207] 207 Scarmo, S. , Cartmel, B. , Lin, H. , Leffell, D. J. et al., Significant correlations of dermal total carotenoids and dermal lycopene with their respective plasma levels in healthy adults. Arch. Biochem. Biophys. 2010, 504, 34–39.2063717810.1016/j.abb.2010.07.004PMC2957565
+
+[208] 208 Rudling, M. J. , Reihner, E. , Einarsson, K. , Ewerth, S. et al., Low density lipoprotein receptor‐binding activity in human tissues: quantitative importance of hepatic receptors and evidence for regulation of their expression in vivo. Proc. Natl. Acad. Sci. U S A 1990, 87, 3469–3473.211036310.1073/pnas.87.9.3469PMC53922
+
+[209] 209 Richelle, M. , Sabatier, M. , Steiling, H. , Williamson, G. , Skin bioavailability of dietary vitamin E, carotenoids, polyphenols, vitamin C, zinc and selenium. Br. J. Nutr. 2006, 96, 227–238.1692321510.1079/bjn20061817
+
+[210] 210 Darvin, M. E. , Patzelt, A. , Knorr, F. , Blume‐Peytavi, U. et al., One‐year study on the variation of carotenoid antioxidant substances in living human skin: influence of dietary supplementation and stress factors. J. Biomed. Opt. 2008, 13, 044028.1902135510.1117/1.2952076
+
+[211] 211 Ribaya‐Mercado, J. D. , Garmyn, M. , Gilchrest, B. A. , Russell, R. M. , Skin lycopene is destroyed preferentially over beta‐carotene during ultraviolet irradiation in humans. J. Nutr. 1995, 125, 1854–1859.761630110.1093/jn/125.7.1854
+
+[212] 212 Nagai, N. , Izumi‐Nagai, K. , Suzuki, M. , Shinoda, H. et al., Association of macular pigment optical density with serum concentration of oxidized low‐density lipoprotein in healthy adults. Retina 2015, 35, 820–826.2547378610.1097/IAE.0000000000000382
+
+[213] 213 Landrum, J. T. , Bone, R. A. , Moore, L. L. , Gomez, C. M. , Analysis of zeaxanthin distribution within individual human retinas. Methods Enzymol. 1999, 299, 457–467.991621910.1016/s0076-6879(99)99043-2
+
+[214] 214 Bhosale, P. , Zhao, D. Y. , Bernstein, P. S. , HPLC measurement of ocular carotenoid levels in human donor eyes in the lutein supplementation era. Invest. Ophthalmol. Vis. Sci. 2007, 48, 543–549.1725144810.1167/iovs.06-0558
+
+[215] 215 Borel, P. , de Edelenyi, F. S. , Vincent‐Baudry, S. , Malezet‐Desmoulin, C. et al., Genetic variants in BCMO1 and CD36 are associated with plasma lutein concentrations and macular pigment optical density in humans. Ann. Med. 2011, 43, 47–59.2109122810.3109/07853890.2010.531757
+
+[216] 216 Zhang, Z. , Yan, J. , Shi, H. , Hyperglycemia as a Risk Factor of Ischemic Stroke. J. Drug Metab. Toxicol. 2013, 4.10.4172/2157-7609.1000153PMC419793225328819
+
+[217] 217 During, A. , Doraiswamy, S. , Harrison, E. H. , Xanthophylls are preferentially taken up compared with beta‐carotene by retinal cells via a SRBI‐dependent mechanism. J. Lipid Res. 2008, 49, 1715–1724.1842485910.1194/jlr.M700580-JLR200PMC2444002
+
+[218] 218 Abdel‐Aal, E. S. M. , Akhtar, H. , Zaheer, K. , Ali, R. , Dietary sources of lutein and zeaxanthin carotenoids and their role in eye health. Nutrients 2013, 5, 1169–1185.2357164910.3390/nu5041169PMC3705341
+
+[219] 219 Parker, R. O. , Crouch, R. K. , The interphotoreceptor retinoid binding (IRBP) is essential for normal retinoid processing in cone photoreceptors. Adv. Exp. Med. Biol. 2010, 664, 141–149.2023801210.1007/978-1-4419-1399-9_17
+
+[220] 220 Vachali, P. , Li, B. , Nelson, K. , Bernstein, P. S. , Surface plasmon resonance (SPR) studies on the interactions of carotenoids and their binding proteins. Arch. Biochem. Biophys. 2012, 519, 32–37.2228602910.1016/j.abb.2012.01.006PMC3289994
+
+[221] 221 Li, B. , Vachali, P. , Frederick, J. M. , Bernstein, P. S. , Identification of StARD3 as a lutein‐binding protein in the macula of the primate retina. Biochemistry 2011, 50, 2541–2549.2132254410.1021/bi101906yPMC3070171
+
+[222] 222 Li, B. , Vachali, P. P. , Gorusupudi, A. , Shen, Z. et al., Inactivity of human beta,beta‐carotene‐9',10'‐dioxygenase (BCO2) underlies retinal accumulation of the human macular carotenoid pigment. Proc. Natl. Acad. Sci. U S A 2014, 111, 10173–10178.2498213110.1073/pnas.1402526111PMC4104844
+
+[223] 223 Blankenhorn, D. H. , Carotenoids in man. J. Biol. Chem. 1957, 229, 809–816.13502343
+
+[224] 224 Dagadu, J. M. , Distribution of carotene and vitamin A in liver, pancreas and body fat of Ghanaians. Br. J. Nutr. 1967, 21, 453–456.495227410.1079/bjn19670046
+
+[225] 225 Klipstein‐Grobusch, K. , Launer, L. J. , Geleijnse, J. M. , Boeing, H. et al., Serum carotenoids and atherosclerosis. The Rotterdam Study. Atherosclerosis 2000, 148, 49–56.1058017010.1016/s0021-9150(99)00221-x
+
+[226] 226 Martin, K. R. , Wu, D. , Meydani, M. , The effect of carotenoids on the expression of cell surface adhesion molecules and binding of monocytes to human aortic endothelial cells. Atherosclerosis 2000, 150, 265–274.1085651810.1016/s0021-9150(99)00375-5
+
+[227] 227 Brun, P. J. , Wongsiriroj, N. , Blaner, W. S. , Retinoids in the pancreas. Hepatobil. Surg. Nutr. 2016, 5, 1–14.10.3978/j.issn.2304-3881.2015.09.03PMC473994126904552
+
+[228] 228 Eroglu, A. , Harrison, E. H. , Carotenoid metabolism in mammals, including man: formation, occurrence, and function of apocarotenoids. J. Lipid Res. 2013, 54, 1719–1730.2366717810.1194/jlr.R039537PMC3679377
+
+[229] 229 Rühl, R. , Bub, A. , Watzl, B. , Modulation of plasma all‐trans retinoic acid concentrations by the consumption of carotenoid‐rich vegetables. Nutrition 2008, 24, 1224–1226.1865331510.1016/j.nut.2008.05.022
+
+[230] 230 Paur, I. , Lilleby, W. , Bohn, S. K. , Hulander, E. et al., Tomato‐based randomized controlled trial in prostate cancer patients: Effect on PSA. Clin. Nutr. 2016, S0261‐5614, 30147–30149.10.1016/j.clnu.2016.06.01427406859
+
+[231] 231 Mariani, S. , Lionetto, L. , Cavallari, M. , Tubaro, A. et al., Low prostate concentration of lycopene is associated with development of prostate cancer in patients with high‐grade prostatic intraepithelial neoplasia. Int. J. Mol. Sci. 2014, 15, 1433–1440.2445113010.3390/ijms15011433PMC3907878
+
+[232] 232 Craft, N. E. , Haitema, T. B. , Garnett, K. M. , Fitch, K. A. et al., Carotenoid, tocopherol, and retinol concentrations in elderly human brain. J. Nutr. Health Aging 2004, 8, 156–162.15129301
+
+[233] 233 Vishwanathan, R. , Neuringer, M. , Snodderly, D. M. , Schalch, W. et al., Macular lutein and zeaxanthin are related to brain lutein and zeaxanthin in primates. Nutr. Neurosci. 2013, 16, 21–29.2278094710.1179/1476830512Y.0000000024PMC3824968
+
+[234] 234 Tanprasertsuk, J. , Li, B. , Bernstein, P. S. , Vishwanathan, R. et al., Relationship between concentrations of lutein and StARD3 among pediatric and geriatric human brain tissue. PLoS One 2016, 11, e0155488.2720589110.1371/journal.pone.0155488PMC4874591
+
+[235] 235 Schweigert, F. J. , Bathe, K. , Chen, F. , Buscher, U. et al., Effect of the stage of lactation in humans on carotenoid levels in milk, blood plasma and plasma lipoprotein fractions. Eur. J. Nutr. 2004, 43, 39–44.1499126810.1007/s00394-004-0439-5
+
+[236] 236 Lipkie, T. E. , Morrow, A. L. , Jouni, Z. E. , McMahon, R. J. et al., Longitudinal survey of carotenoids in human milk from urban cohorts in China, Mexico, and the USA. PLoS One 2015, 10, e0127729.2606188510.1371/journal.pone.0127729PMC4465022
+
+[237] 237 Yeum, K. J. , Ahn, S. H. , Rupp de Paiva, S. A. , Lee‐Kim, Y. C. et al., Correlation between carotenoid concentrations in serum and normal breast adipose tissue of women with benign breast tumor or breast cancer. J. Nutr. 1998, 128, 1920–1926.980864310.1093/jn/128.11.1920
+
+[238] 238 Mathews‐Roth, M. M. , Welankiwar, S. , Sehgal, P. K. , Lausen, N. C. et al., Distribution of [14C]canthaxanthin and [14C]lycopene in rats and monkeys. J. Nutr. 1990, 120, 1205–1213.212039810.1093/jn/120.10.1205
+
+[239] 239 White, W. S. , Stacewicz‐Sapuntzakis, M. , Erdman, J. W., Jr. , Bowen, P. E. , Pharmacokinetics of beta‐carotene and canthaxanthin after ingestion of individual and combined doses by human subjects. J. Am. Coll. Nutr. 1994, 13, 665–671.770660210.1080/07315724.1994.10718463
+
+[240] 240 High, E. G. , Day, H. G. , Effects of different amounts of lutein, squalene, phytol and related substances on the utilization of carotene and vitamin A for storage and growth in the rat. J. Nutr. 1951, 43, 245–260.1485104210.1093/jn/43.2.245
+
+[241] 241 Burri, B. J. , Neidlinger, T. R. , Clifford, A. J. , Serum carotenoid depletion follows first‐order kinetics in healthy adult women fed naturally low carotenoid diets. J. Nutr. 2001, 131, 2096–2100.1148140010.1093/jn/131.8.2096
+
+[242] 242 Schwedhelm, E. , Maas, R. , Troost, R. , Boger, R. H. , Clinical pharmacokinetics of antioxidants and their impact on systemic oxidative stress. Clin. Pharmacokinet. 2003, 42, 437–459.1273998310.2165/00003088-200342050-00003
+
+[243] 243 Shvetsov, Y. B. , Hernandez, B. Y. , Wong, S. H. , Wilkens, L. R. et al., Intraindividual variability in serum micronutrients: effects on reliability of estimated parameters. Epidemiology 2009, 20, 36–43.1881302410.1097/EDE.0b013e318187865ePMC2663917
+
+[244] 244 Cooney, R. V. , Franke, A. A. , Hankin, J. H. , Custer, L. J. et al., Seasonal variations in plasma micronutrients and antioxidants. Cancer Epidemiol. Biomarkers Prev. 1995, 4, 207–215.7606195
+
+[245] 245 Dueker, S. R. , Lin, Y. , Buchholz, B. A. , Schneider, P. D. et al., Long‐term kinetic study of beta‐carotene, using accelerator mass spectrometry in an adult volunteer. J. Lipid Res. 2000, 41, 1790–1800.11060348
+
+[246] 246 Taimi, M. , Helvig, C. , Wisniewski, J. , Ramshaw, H. et al., A novel human cytochrome P450, CYP26C1, involved in metabolism of 9‐cis and all‐trans isomers of retinoic acid. J. Biol. Chem. 2004, 279, 77–85.1453229710.1074/jbc.M308337200
+
+[247] 247 Adoncecchi, L. , Marrocco, W. , Suraci, C. , Pecora, P. et al., [Effect of renal and liver failure on blood levels of vitamin A, its precursor (beta‐carotene) and its carrier proteins (prealbumin and retinol binding protein)]. Boll. Soc. Ital. Biol. Sper. 1984, 60, 881–886.6539619
+
+[248] 248 Leo, M. A. , Rosman, A. S. , Lieber, C. S. , Differential depletion of carotenoids and tocopherol in liver disease. Hepatology 1993, 17, 977–986.8514270
+
+[249] 249 Socha, P. , Skorupa, E. , Pawlowska, J. , Wierzbicka, A. et al., beta‐Carotene deficiency in cholestatic liver disease of childhood is caused by beta‐carotene malabsorption. J. Pediatr. Gastroenterol. Nutr. 2010, 51, 106–109.2047968210.1097/MPG.0b013e3181d1afff
+
+[250] 250 Truong, T. Q. , Aubin, D. , Falstrault, L. , Brodeur, M. R. et al., SR‐BI, CD36, and caveolin‐1 contribute positively to cholesterol efflux in hepatic cells. Cell. Biochem. Funct. 2010, 28, 480–489.2062903710.1002/cbf.1680
+
+[251] 251 Leo, M. A. , Ahmed, S. , Aleynik, S. I. , Siegel, J. H. et al., Carotenoids and tocopherols in various hepatobiliary conditions. J. Hepatol. 1995, 23, 550–556.858314310.1016/0168-8278(95)80061-1
+
+[252] 252 Kaulmann, A. , Bohn, T. , Carotenoids, inflammation, and oxidative stress–implications of cellular signaling pathways and relation to chronic disease prevention. Nutr. Res. 2014, 34, 907–929.2513445410.1016/j.nutres.2014.07.010
+
+[253] 253 McLernon, P. C. , Wood, L. G. , Murphy, V. E. , Hodyl, N. A. et al., Circulating antioxidant profile of pregnant women with asthma. Clin. Nutr. 2012, 31, 99–107.2196239910.1016/j.clnu.2011.09.006
+
+[254] 254 Aktuna, D. , Buchinger, W. , Langsteger, W. , Meister, E. et al., [Beta‐carotene, vitamin A and carrier proteins in thyroid diseases]. Acta Med. Austriaca 1993, 20, 17–20.8475673
+
+[255] 255 Ribaya‐Mercado, J. D. , Solon, F. S. , Solon, M. A. , Cabal‐Barza, M. A. et al., Bioconversion of plant carotenoids to vitamin A in Filipino school‐aged children varies inversely with vitamin A status. Am. J. Clin. Nutr. 2000, 72, 455–465.1091994110.1093/ajcn/72.2.455
+
+[256] 256 Grummer, M. A. , Erdman, J. W., Jr. , Effect of chronic alcohol consumption and moderate fat diet on vitamin A status in rats fed either vitamin a or beta‐carotene. J. Nutr. 1983, 113, 350–364.668162910.1093/jn/113.2.350
+
+[257] 257 Veeramachaneni, S. , Ausman, L. M. , Choi, S. W. , Russell, R. M. et al., High dose lycopene supplementation increases hepatic cytochrome P4502E1 protein and inflammation in alcohol‐fed rats. J. Nutr. 2008, 138, 1329–1335.1856775610.1093/jn/138.7.1329PMC2543121
+
+[258] 258 Hessel, S. , Eichinger, A. , Isken, A. , Amengual, J. et al., CMO1 deficiency abolishes vitamin A production from beta‐carotene and alters lipid metabolism in mice. J. Biol. Chem. 2007, 282, 33553–33561.1785535510.1074/jbc.M706763200
+
+[259] 259 Lindqvist, A. , Andersson, S. , Biochemical properties of purified recombinant human beta‐carotene 15,15'‐monooxygenase. J. Biol. Chem. 2002, 277, 23942–23948.1196099210.1074/jbc.M202756200
+
+[260] 260 van Helden, Y. G. , Heil, S. G. , van Schooten, F. J. , Kramer, E. et al., Knockout of the Bcmo1 gene results in an inflammatory response in female lung, which is suppressed by dietary beta‐carotene. Cell Mol. Life Sci. 2010, 67, 2039–2056.2037296610.1007/s00018-010-0341-7PMC2877315
+
+[261] 261 van Helden, Y. G. , Godschalk, R. W. , Heil, S. G. , Bunschoten, A. et al., Downregulation of Fzd6 and Cthrc1 and upregulation of olfactory receptors and protocadherins by dietary beta‐carotene in lungs of Bcmo1−/− mice. Carcinogenesis 2010, 31, 1329–1337.2047261010.1093/carcin/bgq083
+
+[262] 262 Krinsky, N. I. , Yeum, K. J. , Carotenoid‐radical interactions. Biochem. Biophys. Res. Commun. 2003, 305, 754–760.1276305710.1016/s0006-291x(03)00816-7
+
+[263] 263 Winterhalter, P. , Ebeler, S. E. , Carotenoid Cleavage Products (vol. 1134), American Chemical Society, Washington, D.C 2013 .
+
+[264] 264 Sharoni, Y. , Linnewiel‐Hermoni, K. , Khanin, M. , Salman, H. et al., Carotenoids and apocarotenoids in cellular signaling related to cancer: A review. Mol. Nutr. Food Res. 2012, 56, 259–269.2210243110.1002/mnfr.201100311
+
+[265] 265 Blomhoff, R. , Blomhoff, H. K. , Overview of retinoid metabolism and function. J. Neurobiol. 2006, 66, 606–630.1668875510.1002/neu.20242
+
+[266] 266 Aydemir, G. , Kasiri, Y. , Bartok, E. M. , Birta, E. et al., Lycopene supplementation restores vitamin A deficiency in mice and possesses thereby partial pro‐vitamin A activity transmitted via RAR signaling. Mol. Nutr. Food Res. 2016, 60, 2413–2420.2729631710.1002/mnfr.201600031
+
+[267] 267 Mangelsdorf, D. J. , Ong, E. S. , Dyck, J. A. , Evans, R. M. , Nuclear receptor that identifies a novel retinoic acid response pathway. Nature 1990, 345, 224–229.215911110.1038/345224a0
+
+[268] 268 Pijnappel, W. W. , Hendriks, H. F. , Folkers, G. E. , van den Brink, C. E. et al., The retinoid ligand 4‐oxo‐retinoic acid is a highly active modulator of positional specification. Nature 1993, 366, 340–344.824712710.1038/366340a0
+
+[269] 269 Allenby, G. , Bocquel, M. T. , Saunders, M. , Kazmer, S. et al., Retinoic acid receptors and retinoid X receptors: interactions with endogenous retinoic acids. Proc. Natl. Acad. Sci. U S A 1993, 90, 30–34.838049610.1073/pnas.90.1.30PMC45593
+
+[270] 270 Moise, A. R. , Alvarez, S. , Dominguez, M. , Alvarez, R. et al., Activation of retinoic acid receptors by dihydroretinoids. Mol. Pharmacol. 2009, 76, 1228–1237.1977035010.1124/mol.109.060038PMC2784734
+
+[271] 271 Aydemir, G. , Carlsen, H. , Blomhoff, R. , Rühl, R. , Lycopene induces retinoic acid receptor transcriptional activation in mice. Mol. Nutr. Food Res. 2012, 56, 702–712.2264861710.1002/mnfr.201100681
+
+[272] 272 Faure, H. , Preziosi, P. , Roussel, A. M. , Bertrais, S. et al., Factors influencing blood concentration of retinol, alpha‐tocopherol, vitamin C, and beta‐carotene in the French participants of the SU.VI.MAX trial. Eur. J. Clin. Nutr. 2006, 60, 706–717.1639158610.1038/sj.ejcn.1602372
+
+[273] 273 Haller, J. , The vitamin status and its adequacy in the elderly: an international overview. Int. J. Vitam. Nutr. Res. 1999, 69, 160–168.1038902210.1024/0300-9831.69.3.160
+
+[274] 274 Suzuki, K. , Inoue, T. , Hioki, R. , Ochiai, J. et al., Association of abdominal obesity with decreased serum levels of carotenoids in a healthy Japanese population. Clin. Nutr. 2006, 25, 780–789.1669814610.1016/j.clnu.2006.01.025
+
+[275] 275 Sanderson, M. J. , White, K. L. , Drake, I. M. , Schorah, C. J. , Vitamin E and carotenoids in gastric biopsies: the relation to plasma concentrations in patients with and without Helicobacter pylori gastritis. Am. J. Clin. Nutr. 1997, 65, 101–106.898892010.1093/ajcn/65.1.101
+
+[276] 276 Friis, H. , Gomo, E. , Koestel, P. , Ndhlovu, P. et al., HIV and other predictors of serum beta‐carotene and retinol in pregnancy: a cross‐sectional study in Zimbabwe. Am. J. Clin. Nutr. 2001, 73, 1058–1065.1138266010.1093/ajcn/73.6.1058
+
+[277] 277 Ford, E. S. , Will, J. C. , Bowman, B. A. , Narayan, K. M. , Diabetes mellitus and serum carotenoids: findings from the Third National Health and Nutrition Examination Survey. Am. J. Epidemiol. 1999, 149, 168–176.992196210.1093/oxfordjournals.aje.a009783
+
+[278] 278 Sundl, I. , Pail, E. , Mellitzer, K. , Toplak, H. et al., Effects of orlistat therapy on plasma concentrations of oxygenated and hydrocarbon carotenoids. Lipids 2006, 41, 113–118.1770797610.1007/s11745-006-5078-6
+
+[279] 279 Finer, N. , James, W. P. , Kopelman, P. G. , Lean, M. E. et al., One‐year treatment of obesity: a randomized, double‐blind, placebo‐controlled, multicentre study of orlistat, a gastrointestinal lipase inhibitor. Int. J. Obes. Relat. Metab. Disord. 2000, 24, 306–313.1075762310.1038/sj.ijo.0801128
+
+[280] 280 Das, B. S. , Thurnham, D. I. , Das, D. B. , Plasma alpha‐tocopherol, retinol, and carotenoids in children with falciparum malaria. Am. J. Clin. Nutr. 1996, 64, 94–100.866942110.1093/ajcn/64.1.94
+
+[281] 281 Ford, E. S. , Gillespie, C. , Ballew, C. , Sowell, A. et al., Serum carotenoid concentrations in US children and adolescents. Am. J. Clin. Nutr. 2002, 76, 818–827.1232429610.1093/ajcn/76.4.818
+
+[282] 282 Neuhouser, M. L. , Rock, C. L. , Eldridge, A. L. , Kristal, A. R. et al., Serum concentrations of retinol, alpha‐tocopherol and the carotenoids are influenced by diet, race and obesity in a sample of healthy adolescents. J. Nutr. 2001, 131, 2184–2191.1148141510.1093/jn/131.8.2184
+
+[283] 283 Walmsley, C. M. , Bates, C. J. , Prentice, A. , Cole, T. J. , Relationship between cigarette smoking and nutrient intakes and blood status indices of older people living in the UK: further analysis of data from the National Diet and Nutrition Survey of people aged 65 years and over, 1994/95. Public Health Nutr. 1999, 2, 199–208.1044724810.1017/s1368980099000257
+
+[284] 284 Forman, M. R. , Borkowf, C. B. , Cantwell, M. M. , Steck, S. et al., Components of variation in serum carotenoid concentrations: the Polyp Prevention Trial. Eur. J. Clin. Nutr. 2009, 63, 763–770.1841450410.1038/ejcn.2008.26PMC6959512
+
+[285] 285 Cohn, W. , Thurmann, P. , Tenter, U. , Aebischer, C. et al., Comparative multiple dose plasma kinetics of lycopene administered in tomato juice, tomato soup or lycopene tablets. Eur. J. Nutr. 2004, 43, 304–312.1530945110.1007/s00394-004-0476-0
+
+[286] 286 Cardinault, N. , Gorrand, J. M. , Tyssandier, V. , Grolier, P. et al., Short‐term supplementation with lutein affects biomarkers of lutein status similarly in young and elderly subjects. Exp. Gerontol. 2003, 38, 573–582.1274253510.1016/s0531-5565(03)00039-1
+
+[287] 287 Borel, P. , Grolier, P. , Mekki, N. , Boirie, Y. et al., Low and high responders to pharmacological doses of beta‐carotene: proportion in the population, mechanisms involved and consequences on beta‐carotene metabolism. J. Lipid. Res. 1998, 39, 2250–2260.9799811
+
+[288] 288 Bohn, T. , Blackwood, M. , Francis, D. , Tian, Q. et al., Bioavailability of phytochemical constituents from a novel soy fortified lycopene rich tomato juice developed for targeted cancer prevention trials. Nutr. Cancer 2013, 65, 919–929.2209822410.1080/01635581.2011.630156PMC3850031
+
+[289] 289 Richelle, M. , Lambelet, P. , Rytz, A. , Tavazzi, I. et al., The proportion of lycopene isomers in human plasma is modulated by lycopene isomer profile in the meal but not by lycopene preparation. Br. J. Nutr. 2012, 107, 1482–1488.2190285910.1017/S0007114511004569
+
+[290] 290 Unlu, N. Z. , Bohn, T. , Clinton, S. K. , Schwartz, S. J. , Carotenoid absorption from salad and salsa by humans is enhanced by the addition of avocado or avocado oil. J. Nutr. 2005, 135, 431–436.1573507410.1093/jn/135.3.431
+
+[291] 291 Pappalardo, G. , Maiani, G. , Mobarhan, S. , Guadalaxara, A. et al., Plasma (carotenoids, retinol, alpha‐tocopherol) and tissue (carotenoids) levels after supplementation with beta‐carotene in subjects with precancerous and cancerous lesions of sigmoid colon. Eur. J. Clin. Nutr. 1997, 51, 661–666.934728510.1038/sj.ejcn.1600457
+
+[292] 292 Boon, C. S. , McClements, D. J. , Weiss, J. , Decker, E. A. , Factors influencing the chemical stability of carotenoids in foods. Crit. Rev. Food Sci. Nutr. 2010, 50, 515–532.2054444210.1080/10408390802565889
+
+[293] 293 Couet, C. , Ulmer M Fau ‐ Hamdaoui, M. , Hamdaoui M Fau ‐ Bau, H. M. , Bau Hm Fau ‐ Debry, G. et al., Metabolic effects of acarbose in young healthy men. Eur. J. Clin. Nutr. 1989, 43, 187–196.2659314
+
+[294] 294 McKay, G. J. , Loane, E. , Nolan, J. M. , Patterson, C. C. et al., Investigation of genetic variation in scavenger receptor class B, member 1 (SCARB1) and association with serum carotenoids. Ophthalmology 2013, 120, 1632–1640.2356230210.1016/j.ophtha.2013.01.030PMC3946979
+
+[295] 295 Meyers, K. J. , Mares, J. A. , Igo, R. P., Jr. , Truitt, B. et al., Genetic evidence for role of carotenoids in age‐related macular degeneration in the Carotenoids in Age‐Related Eye Disease Study (CAREDS). Invest. Ophthalmol. Vis. Sci. 2014, 55, 587–599.2434617010.1167/iovs.13-13216PMC3908680
+
+[296] 296 D'Adamo, C. R. , D'Urso, A. , Ryan, K. A. , Yerges‐Armstrong, L. M. et al., A common variant in the SETD7 gene predicts serum lycopene concentrations. Nutrients 2016, 8, 82.2686138910.3390/nu8020082PMC4772045
+
+[297] 297 Hendrickson, S. J. , Hazra, A. , Chen, C. , Eliassen, A. H. et al., beta‐Carotene 15,15'‐monooxygenase 1 single nucleotide polymorphisms in relation to plasma carotenoid and retinol concentrations in women of European descent. Am. J. Clin. Nutr. 2012, 96, 1379–1389.2313489310.3945/ajcn.112.034934PMC3497927
+
+[298] 298 Wang, T. T. , Edwards, A. J. , Clevidence, B. A. , Strong and weak plasma response to dietary carotenoids identified by cluster analysis and linked to beta‐carotene 15,15'‐monooxygenase 1 single nucleotide polymorphisms. J. Nutr. Biochem. 2013, 24, 1538–1546.2351791310.1016/j.jnutbio.2013.01.001
+
+[299] 299 Merle, B. M. , Maubaret, C. , Korobelnik, J. F. , Delyfer, M. N. et al., Association of HDL‐related loci with age‐related macular degeneration and plasma lutein and zeaxanthin: the Alienor study. PLoS One 2013, 8, e79848.2422319910.1371/journal.pone.0079848PMC3819249
+
+[300] 300 Bhosale, P. , Larson, A. J. , Frederick, J. M. , Southwick, K. et al., Identification and characterization of a Pi isoform of glutathione S‐transferase (GSTP1) as a zeaxanthin‐binding protein in the macula of the human eye. J. Biol. Chem. 2004, 279, 49447–49454.1535598210.1074/jbc.M405334200
+
+[301] 301 Walfisch, Y. , Walfisch, S. , Agbaria, R. , Levy, J. et al., Lycopene in serum, skin and adipose tissues after tomato‐oleoresin supplementation in patients undergoing haemorrhoidectomy or peri‐anal fistulotomy. Br. J. Nutr. 2003, 90, 759–766.1312944410.1079/bjn2003955
+
+[302] 302 Molina, D. K. , DiMaio, V. J. Normal organ weights in men: part II‐the brain, lungs, liver, spleen, and kidneys. Am. J. Forensic Med. Pathol. 2012, 33, 368–372.2218298410.1097/PAF.0b013e31823d29ad
+
+[303] 303 Salans, L. B. , Cushman, S. W. , Weismann, R. E. , Studies of human adipose tissue. Adipose cell size and number in nonobese and obese patients. J. Clin. Invest. 1973, 52, 929–941.469365610.1172/JCI107258PMC302341

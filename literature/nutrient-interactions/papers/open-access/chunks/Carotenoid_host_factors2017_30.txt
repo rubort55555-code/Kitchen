@@ -1,0 +1,59 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 30 из 39: References (часть 4)
+============================================================
+
+[76] 76 Imai, T. , Human carboxylesterase isozymes: catalytic properties and rational drug design. Drug Metab. Pharmacokinet. 2006, 21, 173–185.1685812010.2133/dmpk.21.173
+
+[77] 77 Chitchumroonchokchai, C. , Failla, M. L. , Hydrolysis of zeaxanthin esters by carboxyl ester lipase during digestion facilitates micellarization and uptake of the xanthophyll by Caco‐2 human intestinal cells. J. Nutr. 2006, 136, 588–594.1648452910.1093/jn/136.3.588
+
+[78] 78 Biehler, E. , Bohn, T. , Methods for assessing aspects of carotenoid bioavailability. Curr. Nutr. Food Sci. 2010, 6, 44–69.
+
+[79] 79 Coral‐Hinostroza, G. N. , Ytrestoyl, T. , Ruyter, B. , Bjerkeng, B. , Plasma appearance of unesterified astaxanthin geometrical E/Z and optical R/S isomers in men given single doses of a mixture of optical 3 and 3'R/S isomers of astaxanthin fatty acyl diesters. Comp. Biochem. Physiol. C Toxicol. Pharmacol. 2004, 139, 99–110.1555607110.1016/j.cca.2004.09.011
+
+[80] 80 Kim, S. R. , Nakamura, T. , Saito, Y. , Sai, K. et al., Twelve novel single nucleotide polymorphisms in the CES2 gene encoding human carboxylesterase 2 (hCE‐2). Drug Metab. Pharmacokinet. 2003, 18, 327–332.1561875210.2133/dmpk.18.327
+
+[81] 81 Layer, P. , Keller, J. , Pancreatic enzymes: secretion and luminal nutrient digestion in health and disease. J. Clin. Gastroenterol. 1999, 28, 3–10.991665710.1097/00004836-199901000-00002
+
+[82] 82 Meier, J. , Sturm, A. , The intestinal epithelial barrier: does it become impaired with age? Dig. Dis. 2009, 27, 240–245.1978674710.1159/000228556
+
+[83] 83 Hollander, D. , Ruble, P. E., Jr. , beta‐carotene intestinal absorption: bile, fatty acid, pH, and flow rate effects on transport. Am. J. Physiol. 1978, 235, E686–691.3277310.1152/ajpendo.1978.235.6.E686
+
+[84] 84 Borel, P. , Lietz, G. , Goncalves, A. , Szabo de Edelenyi, F. et al., CD36 and SR‐BI are involved in cellular uptake of provitamin A carotenoids by Caco‐2 and HEK cells, and some of their genetic variants are associated with plasma concentrations of these micronutrients in humans. J. Nutr. 2013, 143, 448–456.2342733110.3945/jn.112.172734
+
+[85] 85 van Bennekum, A. , Werder, M. , Thuahnai, S. T. , Han, C. H. et al., Class B scavenger receptor‐mediated intestinal absorption of dietary beta‐carotene and cholesterol. Biochemistry 2005, 44, 4517–4525.1576628210.1021/bi0484320
+
+[86] 86 During, A. , Dawson, H. D. , Harrison, E. H. , Carotenoid transport is decreased and expression of the lipid transporters SR‐BI, NPC1L1, and ABCA1 is downregulated in Caco‐2 cells treated with ezetimibe. J. Nutr. 2005, 135, 2305–2312.1617718710.1093/jn/135.10.2305
+
+[87] 87 Moussa, M. , Landrier, J. F. , Reboul, E. , Ghiringhelli, O. et al., Lycopene absorption in human intestinal cells and in mice involves scavenger receptor class B type I but not Niemann‐Pick C1‐like 1. J. Nutr. 2008, 138, 1432–1436.1864118710.1093/jn/138.8.1432
+
+[88] 88 Moussa, M. , Gouranton, E. , Gleize, B. , Yazidi, C. E. et al., CD36 is involved in lycopene and lutein uptake by adipocytes and adipose tissue cultures. Mol. Nutr. Food Res. 2011, 55, 578–584.2146232510.1002/mnfr.201000399
+
+[89] 89 Sato, Y. , Suzuki, R. , Kobayashi, M. , Itagaki, S. et al., Involvement of cholesterol membrane transporter Niemann‐Pick C1‐like 1 in the intestinal absorption of lutein. J. Pharm. Pharm. Sci. 2012, 15, 256–264.2257900510.18433/j38k56
+
+[90] 90 dela Sena, C. , Riedl, K. M. , Narayanasamy, S. , Curley, R. W., Jr. et al., The human enzyme that converts dietary provitamin A carotenoids to vitamin A is a dioxygenase. J. Biol. Chem. 2014, 289, 13661–13666.2466880710.1074/jbc.M114.557710PMC4036370
+
+[91] 91 dela Sena, C. , Narayanasamy, S. , Riedl, K. M. , Curley, R. W., Jr. et al., Substrate specificity of purified recombinant human beta‐carotene 15,15'‐oxygenase (BCO1). J. Biol. Chem. 2013, 288, 37094–37103.2418713510.1074/jbc.M113.507160PMC3873565
+
+[92] 92 von Lintig, J. , Provitamin A metabolism and functions in mammalian biology. Am. J. Clin. Nutr. 2012, 96, 1234s–1244s.2305354910.3945/ajcn.112.034629PMC3471205
+
+[93] 93 Lindshield, B. L. , Canene‐Adams, K. , Erdman, J. W., Jr. , Lycopenoids: are lycopene metabolites bioactive? Arch. Biochem Biophys. 2007, 458, 136–140.1706754510.1016/j.abb.2006.09.012
+
+[94] 94 Sena, C. D. , Narayanasamy, S. , Curley, R. W. , Harrison, E. H. , Purified recombinant human β‐carotene 15‐15′‐oxygenase 1 (BCO1) cleaves β‐apocarotenals and lycopene. The FASEB J. 2013, 27, 38.35–38.35.
+
+[95] 95 Dela Sena, C. , Sun, J. , Narayanasamy, S. , Riedl, K. M. et al., substrate specificity of purified recombinant chicken beta‐carotene 9',10'‐oxygenase (BCO2). J Biol. Chem. 2016, 291, 14609–14619.2714347910.1074/jbc.M116.723684PMC4938182
+
+[96] 96 Lobo, G. P. , Amengual, J. , Palczewski, G. , Babino, D. et al., Mammalian carotenoid‐oxygenases: key players for carotenoid function and homeostasis. Biochim. Biophys. Acta 2012, 1821, 78–87.2156986210.1016/j.bbalip.2011.04.010PMC3162997
+
+[97] 97 Aydemir, G. , Kasiri, Y. , Birta, E. , Beke, G. et al., Lycopene‐derived bioactive retinoic acid receptors/retinoid‐X receptors‐activating metabolites may be relevant for lycopene's anti‐cancer potential. Mol. Nutr. Food Res. 2013, 57, 739–747.2337804510.1002/mnfr.201200548
+
+[98] 98 Rühl, R. , Caris‐Veyrat, C. , Garcia, A. L. , Reynaud, E. et al., Lycopene‐induced nuclear hormone receptor signaling in inflammation and lipid metabolism via still unknown endogenous apo‐10´‐lycopenoids. Int. J. Vitam. Nutr. Res. 2016, in press.10.1024/0300-9831/a00040429052471
+
+[99] 99 Amengual, J. , Lobo, G. P. , Golczak, M. , Li, H. N. et al., A mitochondrial enzyme degrades carotenoids and protects against oxidative stress. Faseb J. 2011, 25, 948–959.2110693410.1096/fj.10-173906PMC3042841
+
+[100] 100 Tang, G. , Qin, J. , Dolnikowski, G. G. , Russell, R. M. , Short‐term (intestinal) and long‐term (postintestinal) conversion of beta‐carotene to retinol in adults as assessed by a stable‐isotope reference method. Am. J. Clin. Nutr. 2003, 78, 259–266.1288570610.1093/ajcn/78.2.259

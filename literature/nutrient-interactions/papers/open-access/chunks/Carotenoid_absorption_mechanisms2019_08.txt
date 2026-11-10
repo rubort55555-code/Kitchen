@@ -1,0 +1,65 @@
+Название: Mechanisms of Carotenoid Intestinal Absorption: Where Do We Stand?
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2019
+DOI: https://doi.org/10.3390/nu11040838   PMID: 31013870   PMC: PMC6520933
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 8 из 11: References
+============================================================
+
+[1] 1.KhachikF.SpanglerC.J.SmithJ.C.Jr.CanfieldL.M.SteckA.PfanderH.Identification, quantification, and relative concentrations of carotenoids and their metabolites in human milk and serumAnal. Chem.19976918731881916416010.1021/ac961085i
+
+[2] 2.TapieroH.TownsendD.M.TewK.D.The role of carotenoids in the prevention of human pathologiesBiomed. Pharmacother.20045810011010.1016/j.biopha.2003.12.00614992791PMC6361147
+
+[3] 3.EngelmannN.J.ClintonS.K.ErdmanJ.W.Jr.Nutritional aspects of phytoene and phytofluene, carotenoid precursors to lycopeneAdv. Nutr.2011251612221118910.3945/an.110.000075PMC3042793
+
+[4] 4.MoiseA.R.Al-BabiliS.WurtzelE.T.Mechanistic aspects of carotenoid biosynthesisChem. Rev.201411416419310.1021/cr400106y24175570PMC3898671
+
+[5] 5.BreithauptD.E.BamediA.WirtU.Carotenol fatty acid esters: Easy substrates for digestive enzymes?Comp. Biochem. Physiol. B Biochem. Mol. Biol.200213272172810.1016/S1096-4959(02)00096-912128058
+
+[6] 6.BowenP.E.Herbst-EspinosaS.M.HussainE.A.Stacewicz-SapuntzakisM.Esterification does not impair lutein bioavailability in humansJ. Nutr.20021323668367310.1093/jn/132.12.366812468605
+
+[7] 7.ShiJ.Le MaguerM.Lycopene in tomatoes: Chemical and physical properties affected by food processingCrit. Rev. Biotechnol.20002029333410.1080/0738855009114421211192026
+
+[8] 8.RodriguezE.B.Rodriguez-AmayaD.B.Formation of apocarotenals and epoxycarotenoids from beta-carotene by chemical reactions and by autoxidation in model systems and processed foodsFood Chem.200710156357210.1016/j.foodchem.2006.02.015
+
+[9] 9.KopecR.E.RiedlK.M.HarrisonE.H.CurleyR.W.Jr.HruszkewyczD.P.ClintonS.K.SchwartzS.J.Identification and quantification of apo-lycopenals in fruits, vegetables, and human plasmaJ. Agric. Food Chem.2010583290329610.1021/jf100415z20178389PMC2851402
+
+[10] 10.ReboulE.RichelleM.PerrotE.Desmoulins-MalezetC.PirisiV.BorelP.Bioaccessibility of carotenoids and vitamin e from their main dietary sourcesJ. Agric. Food Chem.2006548749875510.1021/jf061818s17090117
+
+[11] 11.Mapelli-BrahmP.Corte-RealJ.Melendez-MartinezA.J.BohnT.Bioaccessibility of phytoene and phytofluene is superior to other carotenoids from selected fruit and vegetable juicesFood Chem.201722930431110.1016/j.foodchem.2017.02.07428372178
+
+[12] 12.KrinskyN.I.YeumK.J.Carotenoid-radical interactionsBiochem. Biophys. Res. Commun.200330575476010.1016/S0006-291X(03)00816-712763057
+
+[13] 13.KaulmannA.BohnT.Carotenoids, inflammation, and oxidative stress—Implications of cellular signaling pathways and relation to chronic disease preventionNutr. Res.20143490792910.1016/j.nutres.2014.07.01025134454
+
+[14] 14.ScripsemaN.K.HuD.N.RosenR.B.Lutein, zeaxanthin, and meso-zeaxanthin in the clinical management of eye diseaseJ. Ophthalmol.2015201586517910.1155/2015/86517926819755PMC4706936
+
+[15] 15.BorelP.GrolierP.ArmandM.PartierA.LafontH.LaironD.Azais-BraescoV.Carotenoids in biological emulsions: Solubility, surface-to-core distribution, and release from lipid dropletsJ. Lipid Res.1996372502619026524
+
+[16] 16.TyssandierV.ReboulE.DumasJ.F.Bouteloup-DemangeC.ArmandM.MarcandJ.SallasM.BorelP.Processing of vegetable-borne carotenoids in the human stomach and duodenumAm. J. Physiol. Gastrointest. Liver Physiol.2003284G913G92310.1152/ajpgi.00410.200212736146
+
+[17] 17.ReR.FraserP.D.LongM.BramleyP.M.Rice-EvansC.Isomerization of lycopene in the gastric milieuBiochem. Biophys. Res. Commun.200128157658110.1006/bbrc.2001.436611181086
+
+[18] 18.KopecR.E.GleizeB.BorelP.DesmarchelierC.Caris-VeyratC.Are lutein, lycopene, and beta-carotene lost through the digestive process?Food Funct.201781494150310.1039/C7FO00021A28350027
+
+[19] 19.Dhuique-MayerC.BorelP.ReboulE.CaporiccioB.BesanconP.AmiotM.J.Beta-cryptoxanthin from citrus juices: Assessment of bioaccessibility using an in vitro digestion/caco-2 cell culture modelBr. J. Nutr.20079788389010.1017/S000711450767082217381979
+
+[20] 20.ReboulE.Absorption of vitamin a and carotenoids by the enterocyte: Focus on transport proteinsNutrients201353563358110.3390/nu509356324036530PMC3798921
+
+[21] 21.MensiA.BorelP.GoncalvesA.NowickiM.GleizeB.RoiS.ChobertJ.M.HaertleT.ReboulE.Beta-lactoglobulin as a vector for beta-carotene food fortificationJ. Agric. Food Chem.2014625916592410.1021/jf501683s24857546
+
+[22] 22.PhanC.T.TsoP.Intestinal lipid absorption and transportFront. Biosci.20016D299D31910.2741/A61211229876
+
+[23] 23.van LieshoutM.WestC.E.van BreemenR.B.Isotopic tracer techniques for studying the bioavailability and bioefficacy of dietary carotenoids, particularly beta-carotene, in humans: A reviewAm. J. Clin. Nutr.200377122810.1093/ajcn/77.1.1212499318
+
+[24] 24.Van Loo-BouwmanC.A.NaberT.H.van BreemenR.B.ZhuD.DickeH.SiebelinkE.HulshofP.J.RusselF.G.SchaafsmaG.WestC.E.Vitamin a equivalency and apparent absorption of beta-carotene in ileostomy subjects using a dual-isotope dilution techniqueBr. J. Nutr.20101031836184310.1017/S000711450999384920132586
+
+[25] 25.BorelP.GrolierP.MekkiN.BoirieY.RochetteY.Le RoyB.Alexandre-GouabauM.C.LaironD.Azais-BraescoV.Low and high responders to pharmacological doses of beta-carotene: Proportion in the population, mechanisms involved and consequences on beta-carotene metabolismJ. Lipid Res.199839225022609799811
+
+[26] 26.DuringA.HussainM.M.MorelD.W.HarrisonE.H.Carotenoid uptake and secretion by caco-2 cells: Beta-carotene isomer selectivity and carotenoid interactionsJ. Lipid Res.2002431086109510.1194/jlr.M200068-JLR20012091493
+
+[27] 27.Mapelli-BrahmP.DesmarchelierC.MargierM.ReboulE.Melendez MartinezA.J.BorelP.Phytoene and phytofluene isolated from a tomato extract are readily incorporated in mixed micelles and absorbed by caco-2 cells, as compared to lycopene, and sr-bi is involved in their cellular uptakeMol. Nutr. Food Res.201862e180070310.1002/mnfr.20180070330192047
+
+[28] 28.KieferC.SumserE.WernetM.F.Von LintigJ.A class b scavenger receptor mediates the cellular uptake of carotenoids in drosophilaProc. Natl. Acad. Sci. USA200299105811058610.1073/pnas.16218289912136129PMC124981

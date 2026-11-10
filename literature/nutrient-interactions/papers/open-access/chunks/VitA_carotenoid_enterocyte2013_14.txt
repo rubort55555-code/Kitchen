@@ -1,0 +1,57 @@
+Название: Absorption of Vitamin A and Carotenoids by the Enterocyte: Focus on Transport Proteins
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2013
+DOI: https://doi.org/10.3390/nu5093563   PMID: 24036530   PMC: PMC3798921
+Лицензия: http://creativecommons.org/licenses/by/3.0/ (открытый доступ). © 2013 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 14 из 14: References (часть 5)
+============================================================
+
+[107] 107.SaneA.T.SinnettD.DelvinE.BendayanM.MarcilV.MenardD.MenardD.BeaulieuJ.F.LevyE.Localization and role of NPC1L1 in cholesterol absorption in human intestineJ. Lipid Res.2006472112212010.1194/jlr.M600174-JLR20016829661
+
+[108] 108.PohlJ.RingA.KorkmazU.EhehaltR.StremmelW.FAT/CD36-mediated long-chain fatty acid uptake in adipocytes requires plasma membrane raftsMol. Biol. Cell20051624311549645510.1091/mbc.E04-07-0616PMC539148
+
+[109] 109.HansenG.H.Niels-ChristiansenL.L.ImmerdalL.DanielsenE.M.Scavenger receptor class B type I (SR-BI) in pig enterocytes: Trafficking from the brush border to lipid droplets during fat absorptionGut2003521424143110.1136/gut.52.10.142412970134PMC1773834
+
+[110] 110.VelkovT.LimM.L.HorneJ.SimpsonJ.S.PorterC.J.ScanlonM.J.Characterization of lipophilic drug binding to rat intestinal fatty acid binding proteinMol. Cell. Biochem.2009326879510.1007/s11010-008-0009-x19160019
+
+[111] 111.ChuangS.VelkovT.HorneJ.PorterC.J.ScanlonM.J.Characterization of the drug binding specificity of rat liver fatty acid binding proteinJ. Med. Chem.2008513755376410.1021/jm701192w18533710
+
+[112] 112.BesnardP.NiotI.PoirierH.ClementL.BernardA.New insights into the fatty acid-binding protein (FABP) family in the small intestineMol. Cell. Biochem.200223913914710.1023/A:102050551236412479579
+
+[113] 113.HanhoffT.LuckeC.SpenerF.Insights into binding of fatty acids by fatty acid binding proteinsMol. Cell. Biochem.2002239455410.1023/A:102050262423412479567
+
+[114] 114.BorelP.MoussaM.ReboulE.LyanB.DefoortC.Vincent-BaudryS.MaillotM.GastaldiM.DarmonM.PortugalH.Human fasting plasma concentrations of vitamin E and carotenoids, and their association with genetic variants in apo C-III, cholesteryl ester transfer protein, hepatic lipase, intestinal fatty acid binding protein and microsomal triacylglycerol transfer proteinBr. J. Nutr.200910168068710.1017/S000711450803075418662427
+
+[115] 115.NayakN.HarrisonE.H.HussainM.M.Retinyl ester secretion by intestinal cells: A specific and regulated process dependent on assembly and secretion of chylomicronsJ. Lipid Res.20014227228011181758
+
+[116] 116.HussainM.M.FatmaS.PanX.IqbalJ.Intestinal lipoprotein assemblyCurr. Opin. Lipidol.20051628128510.1097/01.mol.0000169347.53568.5a15891388
+
+[117] 117.HuangH.S.GoodmanD.S.Intestinal absorbtion and metabolism of c-labeled viatamin a alcohol and b-carotene in the ratJ. Biol. Chem.19652402839284414342304
+
+[118] 118.GourasP.CarrR.E.GunkelR.D.Retinitis pigmentosa in abetalipoproteinemia: Effects of vitamin AInvestig. Ophthalmol.1971107847935124019
+
+[119] 119.BrunhamL.R.KruitJ.K.IqbalJ.FievetC.TimminsJ.M.PapeT.D.CoburnB.A.BissadaN.StaelsB.GroenA.K.Intestinal ABCA1 directly contributes to HDL biogenesis in vivoJ. Clin. Investig.20061161052106210.1172/JCI2735216543947PMC1401485
+
+[120] 120.ReboulE.DykaF.M.QuaziF.MoldayR.S.Cholesterol transport via ABCA1: New insights from solid-phase binding assayBiochimie20139595796110.1016/j.biochi.2012.11.00923201557
+
+[121] 121.DrobnikW.LindenthalB.LieserB.RitterM.WeberT.C.LiebischG.GiesaU.IgelM.BorsukovaH.BuchlerC.ATP-Binding Cassette transporter A1 (ABCA1) affects total body sterol metabolismGastroenterology20011201203121110.1053/gast.2001.2325011266384
+
+[122] 122.MulliganJ.D.FlowersM.T.TebonA.BitgoodJ.J.WellingtonC.HaydenM.R.AttieA.D.ABCA1 is essential for efficient basolateral cholesterol efflux during the absorption of dietary cholesterol in chickensJ. Biol. Chem.200327813356133661255194510.1074/jbc.M212377200
+
+[123] 123.NielandT.J.ChroniA.FitzgeraldM.L.MaligaZ.ZannisV.I.KirchhausenT.KriegerM.Cross-inhibition of SR-BI- and ABCA1-mediated cholesterol transport by the small molecules BLT-4 and glyburideJ. Lipid Res.2004451256126510.1194/jlr.M300358-JLR20015102890
+
+[124] 124.LoboG.P.HesselS.EichingerA.NoyN.MoiseA.R.WyssA.PalczewskiK.von LintigJ.ISX is a retinoic acid-sensitive gatekeeper that controls intestinal beta,beta-carotene absorption and vitamin A productionFASEB J.2010241656166610.1096/fj.09-15099520061533PMC2874479
+
+[125] 125.LevinM.S.DavisA.E.Retinoic acid increases cellular retinol binding protein II mRNA and retinol uptake in the human intestinal Caco-2 cell lineJ. Nutr.19971271317904053710.1093/jn/127.1.13
+
+[126] 126.De Vogel-Van Den BoschH.M.de WitN.J.HooiveldG.J.VermeulenH.van Der VeenJ.N.HoutenS.M.KuipersF.MullerM.van der MeerR.A cholesterol-free, high-fat diet suppresses gene expression of cholesterol transporters in murine small intestineAm. J. Physiol. Gastrointest. Liver Physiol.2008294G1171G118010.1152/ajpgi.00360.200718356535
+
+[127] 127.GreenwaltD.E.ScheckS.H.Rhinehart-JonesT.Heart CD36 expression is increased in murine models of diabetes and in mice fed a high fat dietJ. Clin. Investig.1995961382138810.1172/JCI1181737544802PMC185760
+
+[128] 128.SpadyD.K.KearneyD.M.HobbH.H.Polyunsaturated fatty acids up-regulate hepatic scavenger receptor B1 (SR-BI) expression and HDL cholesteryl ester uptake in the hamsterJ. Lipid Res.1999401384139410428974
+
+[129] 129.BorelP.MoussaM.ReboulE.LyanB.DefoortC.Vincent-BaudryS.MaillotM.GastaldiM.DarmonM.PortugalH.Human plasma levels of vitamin E and carotenoids are associated with genetic polymorphisms in genes involved in lipid metabolismJ. Nutr.2007137265326591802947910.1093/jn/137.12.2653
+
+[130] 130.BorelP.de EdelenyiF.S.Vincent-BaudryS.Malezet-DesmoulinC.MargotatA.LyanB.GorrandJ.M.MeunierN.Drouault-HolowaczS.BieuveletS.Genetic variants in BCMO1 and CD36 are associated with plasma lutein concentrations and macular pigment optical density in humansAnn. Med.20104347592109122810.3109/07853890.2010.531757

@@ -1,8 +1,7 @@
-// Сочетания продуктов и усвоение нутриентов: жирорастворимые витамины и кофеин. Железо — в iron.ts.
+// Сочетания продуктов и усвоение нутриентов: кофеин. Железо — в iron.ts, цинк, кальций, магний — в minerals.ts, жирорастворимые витамины — в fatsoluble.ts.
 // Правила опираются на опубликованные работы (список — SOURCES; обзор и ссылки — literature/nutrient-interactions/).
 // Это подсказки к рациону, а не расчёт биодоступности: в справочнике состава нет данных о гемовом железе, фитатах и дубильных веществах.
-import type { Meal, MealSlot } from "./types";
-import { sumMeals } from "./diary";
+import type { Meal } from "./types";
 
 export interface Source { id: string; cite: string }
 export const SOURCES: Record<string, Source> = {
@@ -23,6 +22,11 @@ export const SOURCES: Record<string, Source> = {
   shkembi2021zn: { id: "shkembi2021zn", cite: "Shkembi B., Huppertz T. Influence of dairy products on bioavailability of zinc from other food products: a review of complementarity at a meal level. Nutrients, 2021 (CC BY 4.0)" },
   groeber2015: { id: "groeber2015", cite: "Gröber U., Schmidt J., Kisters K. Magnesium in prevention and therapy. Nutrients, 2015 (CC BY 4.0)" },
   maares2020: { id: "maares2020", cite: "Maares M., Haase H. A guide to human zinc absorption: general overview and recent advances of in vitro intestinal models. Nutrients, 2020 (CC BY 4.0)" },
+  reboul2017e: { id: "reboul2017e", cite: "Reboul E. Vitamin E bioavailability: mechanisms of intestinal absorption in the spotlight. Antioxidants, 2017 (CC BY 4.0)" },
+  reboul2019: { id: "reboul2019", cite: "Reboul E. Mechanisms of carotenoid intestinal absorption: where do we stand? Nutrients, 2019 (CC BY 4.0)" },
+  reboul2013: { id: "reboul2013", cite: "Reboul E. Absorption of vitamin A and carotenoids by the enterocyte: focus on transport proteins. Nutrients, 2013 (CC BY 3.0)" },
+  bohn2017: { id: "bohn2017", cite: "Bohn T. и др. Host-related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans. Mol Nutr Food Res, 2017 (CC BY 4.0)" },
+  moran2017: { id: "moran2017", cite: "Moran N.E. и др. Closer to clarity on the effect of lipid consumption on fat-soluble vitamin and carotenoid absorption. Am J Clin Nutr, 2017 (комментарий к работе White W.S. и др.; только реферат)" },
   efsa2015: { id: "efsa2015", cite: "EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific opinion on the safety of caffeine. EFSA Journal, 2015" },
 };
 
@@ -50,15 +54,6 @@ export interface Hint { id: string; text: string; src: string[] }
 /** Подсказки по сочетаниям на основе записей одного дня. Порог ниже — не истина в последней инстанции, а повод обратить внимание. */
 export function interactionHints(meals: Meal[], opts: { caffeineLimit: number } = { caffeineLimit: 400 }): Hint[] {
   const out: Hint[] = [];
-  const bySlot = new Map<MealSlot, Meal[]>();
-  for (const m of meals) bySlot.set(m.slot, [...(bySlot.get(m.slot) || []), m]);
-  for (const [slot, list] of bySlot) {
-    const s = sumMeals(list);
-    // Жирорастворимые витамины и каротиноиды — с жиром
-    if ((s.vitA >= 300 || s.vitE >= 4 || s.vitK >= 60) && s.fat < 5) {
-      out.push({ id: "fat-sol:" + slot, text: `В приёме «${slot}» много витаминов A, E или K, но почти нет жира. С чайной ложкой масла, сметаной или орехами они усвоятся лучше.`, src: ["white2017", "yao2023"] });
-    }
-  }
   // Кофеин
   const total = caffeineOf(meals);
   if (total > opts.caffeineLimit) out.push({ id: "caf-limit", text: `Кофеина ${Math.round(total)} мг — выше суточного предела ${opts.caffeineLimit} мг. Предел: взрослым 400 мг, при беременности и кормлении 200 мг.`, src: ["efsa2015"] });

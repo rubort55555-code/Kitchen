@@ -1,0 +1,37 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 3 из 39: Introduction (часть 2)
+============================================================
+
+This intra‐ and interindividual variability can be attributed, in addition to dietary habits 20, 21, to host‐related factors (Table 1) including disease state 22, 23, 24, possibly physical activity 25, 26, being overweight/obese 26, alcohol use 25, 27, 28, smoking habits 26, drug intake 29, age 30, and genetic aspects 31, 32. However, the underlying mechanisms for this variability – e.g. lower bioaccessibility, reduced absorption, altered tissue distribution, turnover, and excretion as well as possible interactions of individual carotenoids on absorption and bio‐activation of other carotenoids 33, 34, are only poorly understood. These factors can result in huge variability of carotenoid absorption and circulating plasma levels (Table 2). In a double tracer study 13 with D6 β‐carotene (37 μmol), lowest AUC (area under the plasma‐concentration‐time curve, μmol h/L) versus highest AUC were found to be 0.01 and 30.00, respectively. Major host factors influencing carotenoid ADME patterns are likely to include: Factors influencing carotenoid release from the food matrix, and their transition from lipid droplets to mixed micelles, i.e. factors impacting bioaccessibility. This includes genes responsible for the expression of digestive enzymes (e.g. gastric lipase, cholesterol esterase, pancreatic lipase, etc.), and bile acid formation aiding in carotenoid micellization 20, 35;Factors altering carotenoid uptake into (or efflux out of) the intestinal epithelium. This encompasses uptake/efflux transporters such as scavenger receptor class B member 1 (SR‐BI), cluster of differentiation 36 (CD36), and Niemann‐Pick C1 like intracellular cholesterol transporter 1 (NPC1L1), and perhaps other ATP‐binding cassette (ABC) proteins such as ABCG5/G8, or ABCA1 31, 36, but also small intestinal surface available for absorption;Factors contributing to intracellular cleavage, especially BCO1/2 (β‐carotene oxygenase 1/2), responsible for centric/asymmetric cleavage of carotenoids, respectively, producing a variety of retinoids and potential endogenous occurring apocarotenoids 37, 38, 39;Factors that impinge on carotenoid intracellular transport in the gut epithelium, i.e. lecithin‐retinol acyltransferase (LRAT) for retinol (and perhaps other β‐carotene cleavage products), and maybe intestinal fatty acid binding protein (FABP2/I‐FABP);Factors altering the secretion of carotenoid‐containing chylomicrons into the lymphatic system, such as apolipoprotein B 48 (APOB48), APOAIV, SAR1B (secretion associated Ras related GTPase1B), and microsomal triglyceride transfer protein (MTTP) 38;Factors influencing carotenoid transport in the blood plasma/serum, such as their further distribution into lipoproteins, e.g. lipoprotein lipase (LPL), APOA‐I, APOB, APOE and perhaps APOC3, and low density lipoprotein receptor (LDLR) 40; and the liver such as by hepatic lipase (LIPC);Deposition of carotenoids in “target tissues”, e.g. the macula (lutein, zeaxanthin), influenced by SR‐BI, glutathione S‐transferase P1 isoform (GSTP1), StAR‐related lipid transfer domain protein 3 (StARD3), BCO1, cholesterol transporters (SR‐BI, ABCA1, ABCG5/8), retinal pigment epithelial‐specific protein (RPE65), elongation of very long chain fatty acids like 2 (ELOVL2), and those involved in visual pigment metabolism 41. However, also deposition in adipocytes, involving e.g. LDLR, could play a role 42;Any factor associated with carotenoid catabolism and excretion (in addition to BCO1/2), possibly those involving cytochrome P450 enzymes or the aryl‐hydrocarbon‐receptor 43;The microbiota. This may alter e.g. patterns and concentrations of secondary bile acids 44, or possibly carotenoid absorption or degradation patterns 45, though it is not sure if a significant fraction of carotenoids can be absorbed from the colon 46.Effects of individual carotenoids on the absorption, binding, transport and bioactivation of other carotenoids as well as selective absorption, binding, transport and bioactivation of individual carotenoids 33.Any factor associated with vitamin A/retinoid storage and metabolism.
+
+Table 1. Overview of host (non‐dietary) factors proposed to influence (in addition to genetic make‐up and malabsorption diseases of the GI) intra‐and interindividual differences regarding carotenoid ADME
+
+Factor | Type of study | Carotenoids investigated and variability | Reference
+
+Age | Observational, n = 400 adults (males, females) | Younger age correlated with lower serum carotenoids | 164
+
+ | Observational, n = 946 postmenopausal women | Lower serum lycopene levels associated with higher age | 30
+
+ | Observational, n = 12500 | Lower serum β‐carotene levels with older age | 272
+
+ | Review | Higher plasma carotenoid levels with older age | 273
+
+Alcohol | Observational, n = 2895 women | No consistent effect of alcohol consumption on plasma levels of α‐carotene, β‐carotene, β‐cryptoxanthin, and lutein‐zeaxanthin | 26
+
+ | Observational, n = 194 men | Negative correlations of plasma levels of lycopene, β‐carotene, β‐cryptoxanthin (not lutein) with units of alcohol/day, Spearman's rank correlation: ‐0.27 to ‐0.51 | 25
+
+ | Observational, n = 1198 subjects | Higher alcohol consumption related to higher plasma lycopene (ca. 20%), no effect on α‐and β‐carotene, lutein, and β‐cryptoxanthin | 28
+
+ | Intervention, n = 12 healthy men | Consumption of wine, beer, or spirits for 3 weeks reduced plasma β‐carotene by 15%, no effect on lycopene, lutein, zeaxanthin, ‐cryptoxanthin, and α‐carotene | 27
+
+ | Observational, n = 400 adults (male, female) | Higher alcohol consumption correlated with lower serum carotenoids | 164
+
+ | Observational, n = 12500 adults (male, female) | Lower β‐carotene levels with alcohol consumption | 272
+
+Asthma | Observational, women with (n = 84) & without asthma (n = 47) | Higher plasma total‐carotenoids in women with asthma | 253

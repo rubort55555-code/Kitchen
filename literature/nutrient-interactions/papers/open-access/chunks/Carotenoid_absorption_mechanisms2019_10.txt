@@ -1,0 +1,55 @@
+Название: Mechanisms of Carotenoid Intestinal Absorption: Where Do We Stand?
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2019
+DOI: https://doi.org/10.3390/nu11040838   PMID: 31013870   PMC: PMC6520933
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 10 из 11: References (часть 3)
+============================================================
+
+[53] 53.TabunokiH.SugiyamaH.TanakaY.FujiiH.BannoY.JouniZ.E.KobayashiM.SatoR.MaekawaH.TsuchidaK.Isolation, characterization, and cdna sequence of a carotenoid binding protein from the silk gland of bombyx mori larvaeJ. Biol. Chem.2002277321333214010.1074/jbc.M20450720012052833
+
+[54] 54.BhosaleP.LiB.SharifzadehM.GellermannW.FrederickJ.M.TsuchidaK.BernsteinP.S.Purification and partial characterization of a lutein-binding protein from human retinaBiochemistry2009484798480710.1021/bi900447819402606
+
+[55] 55.BorelP.MoussaM.ReboulE.LyanB.DefoortC.Vincent-BaudryS.MaillotM.GastaldiM.DarmonM.PortugalH.Human fasting plasma concentrations of vitamin e and carotenoids, and their association with genetic variants in apo c-iii, cholesteryl ester transfer protein, hepatic lipase, intestinal fatty acid binding protein and microsomal triacylglycerol transfer proteinBr. J. Nutr.20091016806871866242710.1017/S0007114508030754
+
+[56] 56.CastenmillerJ.J.M.WestC.E.Bioavailability and bioconversion of carotenoidsAnnu. Rev. Nutr.199818193810.1146/annurev.nutr.18.1.199706217
+
+[57] 57.dela SenaC.RiedlK.M.NarayanasamyS.CurleyR.W.Jr.SchwartzS.J.HarrisonE.H.The human enzyme that converts dietary provitamin a carotenoids to vitamin a is a dioxygenaseJ. Biol. Chem.2014289136611366610.1074/jbc.M114.55771024668807PMC4036370
+
+[58] 58.LoboG.P.AmengualJ.PalczewskiG.BabinoD.von LintigJ.Mammalian carotenoid-oxygenases: Key players for carotenoid function and homeostasisBiochim. Biophys. Acta20121821788710.1016/j.bbalip.2011.04.01021569862PMC3162997
+
+[59] 59.AmengualJ.Widjaja-AdhiM.A.Rodriguez-SantiagoS.HesselS.GolczakM.PalczewskiK.von LintigJ.Two carotenoid oxygenases contribute to mammalian provitamin a metabolismJ. Biol. Chem.2013288340813409610.1074/jbc.M113.50104924106281PMC3837149
+
+[60] 60.O’ByrneS.M.WongsirirojN.LibienJ.VogelS.GoldbergI.J.BaehrW.PalczewskiK.BlanerW.S.Retinoid absorption and storage is impaired in mice lacking lecithin:Retinol acyltransferase (lrat)J. Biol. Chem.2005280356473565710.1074/jbc.M50792420016115871PMC1352312
+
+[61] 61.WongsirirojN.PiantedosiR.PalczewskiK.GoldbergI.J.JohnstonT.P.LiE.BlanerW.S.The molecular basis of retinoid absorption: A genetic dissectionJ. Biol. Chem.2008283135101351910.1074/jbc.M80077720018348983PMC2376245
+
+[62] 62.PalczewskiG.AmengualJ.HoppelC.L.von LintigJ.Evidence for compartmentalization of mammalian carotenoid metabolismFASEB J.2014284457446910.1096/fj.14-25241125002123PMC4202098
+
+[63] 63.KopecR.E.Caris-VeyratC.NowickiM.GleizeB.CarailM.BorelP.Production of asymmetric oxidative metabolites of [13c]-beta-carotene during digestion in the gastrointestinal lumen of healthy menAm. J. Clin. Nutr.201810880381310.1093/ajcn/nqy18330256893
+
+[64] 64.YouC.S.ParkerR.S.GoodmanK.J.SwansonJ.E.CorsoT.N.Evidence of cis-trans isomerization of 9-cis-beta-carotene during absorption in humansAm. J. Clin. Nutr.19966417718310.1093/ajcn/64.2.1778694017
+
+[65] 65.RichelleM.SanchezB.TavazziI.LambeletP.BortlikK.WilliamsonG.Lycopene isomerisation takes place within enterocytes during absorption in human subjectsBr. J. Nutr.20101031800180710.1017/S000711451000010320211042
+
+[66] 66.ReboulE.TrompierD.MoussaM.KleinA.LandrierJ.F.ChiminiG.BorelP.Atp-binding cassette transporter a1 is significantly involved in the intestinal absorption of alpha- and gamma-tocopherol but not in that of retinyl palmitate in miceAm. J. Clin. Nutr.20098917718410.3945/ajcn.2008.2655919056557
+
+[67] 67.NiesorE.J.ChaputE.MaryJ.L.StaempfliA.ToppA.StaufferA.WangH.DurrwellA.Effect of compounds affecting abca1 expression and cetp activity on the hdl pathway involved in intestinal absorption of lutein and zeaxanthinLipids2014491233124310.1007/s11745-014-3958-825300953
+
+[68] 68.BorelP.DesmarchelierC.NowickiM.BottR.Lycopene bioavailability is associated with a combination of genetic variantsFree Radic. Biol. Med.20158323824410.1016/j.freeradbiomed.2015.02.03325772008
+
+[69] 69.BorelP.DesmarchelierC.NowickiM.BottR.A combination of single-nucleotide polymorphisms is associated with interindividual variability in dietary beta-carotene bioavailability in healthy menJ. Nutr.20151451740174710.3945/jn.115.21283726063065
+
+[70] 70.BorelP.DesmarchelierC.NowickiM.BottR.MorangeS.LesavreN.Interindividual variability of lutein bioavailability in healthy men: Characterization, genetic variants involved, and relation with fasting plasma lutein concentrationAm. J. Clin. Nutr.201410016817510.3945/ajcn.114.08572024808487
+
+[71] 71.SeinoY.MikiT.KiyonariH.AbeT.FujimotoW.KimuraK.TakeuchiA.TakahashiY.OisoY.IwanagaT.Isx participates in the maintenance of vitamin a metabolism by regulation of beta-carotene 15,15′-monooxygenase (bcmo1) expressionJ. Biol. Chem.20082834905491110.1074/jbc.M70792820018093975
+
+[72] 72.ChoiM.Y.RomerA.I.HuM.LepourceletM.MechoorA.YesilaltayA.KriegerM.GrayP.A.ShivdasaniR.A.A dynamic expression survey identifies transcription factors relevant in mouse digestive tract developmentDevelopment20061334119412910.1242/dev.0253716971476
+
+[73] 73.LoboG.P.HesselS.EichingerA.NoyN.MoiseA.R.WyssA.PalczewskiK.von LintigJ.Isx is a retinoic acid-sensitive gatekeeper that controls intestinal beta,beta-carotene absorption and vitamin a productionFASEB J.2010241656166610.1096/fj.09-15099520061533PMC2874479
+
+[74] 74.GoncalvesA.GleizeB.RoiS.NowickiM.DhaussyA.HuertasA.AmiotM.J.ReboulE.Fatty acids affect micellar properties and modulate vitamin d uptake and basolateral efflux in caco-2 cellsJ. Nutr. Biochem.2013241751175710.1016/j.jnutbio.2013.03.00423769762
+
+[75] 75.de Vogel-van den BoschH.M.de WitN.J.HooiveldG.J.VermeulenH.van der VeenJ.N.HoutenS.M.KuipersF.MullerM.van der MeerR.A cholesterol-free, high-fat diet suppresses gene expression of cholesterol transporters in murine small intestineAm. J. Physiol. Gastrointest. Liver Physiol.2008294G1171G118010.1152/ajpgi.00360.200718356535

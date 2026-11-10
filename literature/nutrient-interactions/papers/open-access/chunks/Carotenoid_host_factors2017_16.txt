@@ -1,0 +1,61 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 16 из 39: Further transport and biodistribution to potential target tissues
+============================================================
+
+## Introduction
+
+Carotenoids are transported in the blood stream associated with lipoproteins, where carotenes dominate carotenoid pattern in the LDL fraction and xanthophylls are almost equally distributed between LDL and HDL 168. Especially the potential exchange of xanthophylls between lipoproteins is important in this context and may depend on the activity of CETP and LCAT 158. Consequently, changes of the lipoprotein pattern, due to external or host‐related factors, may modulate tissue distribution of carotenoids 169. At the site of the target tissue, selective uptake systems may be operative to accumulate particular carotenoids, which are further transported to specific cells of the tissue; or within a cell, directed to subcellular compartments. Uptake might be hindered by tissue barriers (e.g. the blood–brain barrier), permeable only for certain compounds, though the lipophilic carotenoids would be expected to pass. Also, due to their lipophilicity, their volume of distribution (VD) in the body is quite large 170, and plasma concentrations will only to some extent reflect tissue levels. Thus, plasma concentrations are expected to be influenced if the VD is altered, which may explain lower circulating carotenoid levels in obese subjects (Table 3). Consequently, this limits measuring plasma carotenoids as the most suitable marker of body status, and assessing additional compartments, such as following biopsies, or estimating various pools following isotopically labelled carotenoids, may constitute alternatives, though being more invasive or costly 19, 171. Unfortunately, only little is known about host related factors such as genetic makeup (e.g. SNPs) or other individual determinants and their impact on carotenoid tissue distribution.
+
+## Liver
+
+Data from animal and human studies provide evidence that the hepatic tissue is a major site of carotenoid accumulation and metabolism 172, 173, 174, 175. β‐Carotene and lycopene e.g. are found in the nmol range per gram wet tissue, however, individual values widely vary (Table 5). Carotenoids travel with lipoproteins and the liver is a central hub for lipoprotein assembling and release. Hepatic endocytosis of chylomicron remnants, which contain newly absorbed carotenoids, depends on the interaction of the APOE protein with the membrane receptor LRP1 or to some extent with the LDL‐receptor. Also involved in the uptake mechanism is hepatic LPL. Carotenoids remain in the liver for storage, alternatively, they are secreted with VLDLs, which are further processed to LDLs. Mechanisms involved in the coordination of storage, cleavage and secretion are however not known yet. It is likely that the regulation of the specific cleaving enzymes plays a major role in carotenoid plasma levels.
+
+Table 5. Carotenoid levels in liver and adipose tissue (nmol/g wet weight)
+
+Tissue | nmol/g wet tissue (range), or ± SD | Reference
+
+ | β‐carotene | Lycopene | Lutein/zeaxanthin | 
+
+Liver | 0.98 | 1.31 | 0.29 | 172
+
+ | (0.21‐3.94) | (0.16‐10.3) | (0.10‐0.66) | 
+
+Liver | 4.41 | 5.74 | 3.22 | 173
+
+ | (0‐19.4) | (0‐20.7) | (0‐12.2) | 
+
+Liver | 3.02 | 1.28 | n.m. | 175
+
+ | (0.16‐8.62) | (0.1‐4.08) |  | 
+
+Liver | 15.06 | 25.46 | 2.94 | 174
+
+ | (9.1‐24.8) | (10.2‐55.1) | (0.2‐5.8) | 
+
+Mean across study | 5.9 ± 6.3 | 8.4 ± 11.5 | 2.2 ± 1.6 | 
+
+Total carotenoids in livera (nmol) | 9.2 | 13.2 | 3.4 | 
+
+Adipose | 0.2 | 0.7 | 0.79 | 172
+
+ | (0.05‐2.37) | (0.02‐3.7) | (0.29‐2.7) | 
+
+Adipose | 0.38 | 0.2 | n.m. | 175
+
+ | (0‐1.05) | (0‐0.51) |  | 
+
+Adipose | n.m. | 0.23 ± 0.16 | n.m. | 301
+
+Adipose | 0.37 ± 0.34 | 0.32 ± 0.35 | 1.58 ± 0.93 | 188
+
+Mean across study | 0.32 ± 0.10 | 0.36 ± 0.23 | 1.19 ± 0.56 | 
+
+Total carotenoid in adipose tissueb | 4.4 | 5.1 | 16.6 | 
+
+As noted in earlier publications, tissues such as the liver (or testes and adrenals) which possess a large number of LDL receptors, exhibit high levels of carotenoids. On the other hand, lipids from circulating HDL are taken up by this organ, too. The central role of the liver in lipid metabolism makes it likely that individual differences (polymorphisms) in proteins affecting this process can influence carotenoid distribution. SNPs in LDL receptors may play a role, as they are critical for the endocytosis of the remnant chylomicron particle into liver hepatocytes, influenced by the binding of APOE to the surface of chylomicrons 176, and may therefore be suspected to play a role in carotenoid distribution. Though carotenoid levels in plasma have been associated with genetic polymorphisms in genes related to lipid metabolism 103, an impact on tissue distribution or uptake has not been proven so far in humans. By contrast, mice expressing APOE4 as compared to APOE3 had lower levels of β‐carotene in the bloodstream and lower levels of β‐carotene and lutein in adipose tissue 177, while hepatic expression of BCO1/2 was significantly higher, suggesting a correlation of both factors.

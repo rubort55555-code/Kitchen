@@ -11,6 +11,7 @@ import { lookupOff, nameFor, type OffProduct } from "../lib/off";
 import { DRINKS, SOURCES, caffeineLimit, caffeineOf, interactionHints, type Drink } from "../lib/interactions";
 import { LEVEL_TEXT, ironDay, ironHints } from "../lib/iron";
 import { CA_TEXT, calciumDay, mineralHints } from "../lib/minerals";
+import { FAT_TEXT, fatSolubleDay, fatSolubleHints } from "../lib/fatsoluble";
 import { copyMeal, defaultGrams, dayView, hasMicroData, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
 import { addDays, cap, norm, ymd } from "../lib/util";
 
@@ -194,10 +195,11 @@ function MicroBlock({ eaten, body, hasMeals, noData, total }: { eaten: Record<Nu
 /** Кофеин за день против предела и подсказки по сочетаниям (что усваивается лучше или хуже). */
 function CombosBlock({ meals, limit, recipes }: { meals: Meal[]; limit: number; recipes: import("../lib/types").Recipe[] }) {
   const caf = caffeineOf(meals);
-  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...mineralHints(meals, { recipes }), ...interactionHints(meals, { caffeineLimit: limit })], [meals, limit, recipes]);
+  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...mineralHints(meals, { recipes }), ...fatSolubleHints(meals, { recipes }), ...interactionHints(meals, { caffeineLimit: limit })], [meals, limit, recipes]);
   const irons = useMemo(() => ironDay(meals, { recipes }), [meals, recipes]);
   const cas = useMemo(() => calciumDay(meals, { recipes }), [meals, recipes]);
-  if (!caf && !hints.length && !irons.length && !cas.length) return null;
+  const fss = useMemo(() => fatSolubleDay(meals, { recipes }), [meals, recipes]);
+  if (!caf && !hints.length && !irons.length && !cas.length && !fss.length) return null;
   return (
     <div className="card">
       <h3>Сочетания и усвоение</h3>
@@ -218,6 +220,13 @@ function CombosBlock({ meals, limit, recipes }: { meals: Meal[]; limit: number; 
         <div className="ironrows">
           {cas.map((r) => (
             <p key={r.slot} className="small" style={{ margin: "4px 0" }}>🦴 {cap(r.slot)}: кальция <b>{Math.round(r.mg)} мг</b> — {CA_TEXT[r.quality]}</p>
+          ))}
+        </div>
+      )}
+      {fss.length > 0 && (
+        <div className="ironrows">
+          {fss.map((r) => (
+            <p key={r.slot} className="small" style={{ margin: "4px 0" }}>🥑 {cap(r.slot)}: жира <b>{String(Math.round(r.fat * 10) / 10).replace(".", ",")} г</b> — {FAT_TEXT[r.level]}</p>
           ))}
         </div>
       )}

@@ -1,0 +1,19 @@
+Название: Mechanisms of Carotenoid Intestinal Absorption: Where Do We Stand?
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2019
+DOI: https://doi.org/10.3390/nu11040838   PMID: 31013870   PMC: PMC6520933
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 3 из 11: 2. Digestion Process of Carotenoids
+============================================================
+
+Fat-soluble micronutrients, including carotenoids, follow the fate of lipids in the human upper digestive tract. The first step of their digestion is thus their dissolution in the fat phase of the meal [15,16]. This phase is emulsified into lipid droplets in the stomach and duodenum.
+
+The hypothesis that a carotenoid cis-isomerization could take place during gastric digestion was emitted [17], but finally refuted by a study in humans [16]. Recently, in vitro digestion experiments mimicking duodenal conditions showed that no significant isomerization of lycopene, β-carotene, or lutein occurred either [18].
+
+It has been suggested that xanthophyll ester hydrolysis by lipases is indispensable prior to absorption. The cholesterol ester hydrolase (CEH) from pancreatic juice is likely responsible for the release of free xanthophyll from xanthophyll esters [5]. The remaining xanthophyll esters, if any, may either be cleaved at the brush border level or enter the enterocyte to be hydrolyzed in the cytosol [19].
+
+During duodenal digestion, carotenoids are incorporated with other lipids (i.e., cholesterol, phospholipids) and lipid digestion products (i.e., free fatty acids, monoacylglycerols, lysophospholipids) into mixed micelles [20]. A fraction of carotenoids may also associate with proteins. For instance, the milk lipocalin β-lactoglobulin is able to bind β-carotene and does not alter its absorption compared to mixed micelles [21]. However, the mechanisms of carotenoid absorption may depend on carotenoid binding vehicles. Mixed micelles are likely isolated from the rest of the bolus in the unstirred water layer of the glycocalyx area and approach the brush border membrane [22] where carotenoids can be absorbed by passive diffusion and/or via a transporter-dependent process (see Section 3).
+
+Carotenoid bioaccessibility (i.e., the fraction of carotenoids released form their food matrix and included in mixed micelles—which represents the fraction of carotenoids potentially able to be absorbed by the intestine) is highly variable. An in vitro digestion study highlighted that lycopene bioaccessibility was very limited (from 0.1% in raw tomatoes to 1.5% in tomato puree), β-carotene bioaccessibility was fairly low (from about 4% in carrot puree to 14% in carrot juice), while lutein bioaccessibility was the highest (from 37% in raw spinach leaves to 48% in boiled spinach). These values correlate with in vivo data and highlight the fact that the disruption of the food matrix by thermal treatment or processing can increase carotenoid bioaccessibility [10]. Xanthophylls were consistently shown to display a higher bioaccessibility than carotenes in different studies [10,11], probably because the presence of one or two hydroxylated group(s) increases their solubility into the micellar structures. Interestingly, phytoene and phytofluene also displayed a very high bioaccessibility. This may be linked to their more flexible molecular structure, compared to other carotenoids, which likely increase their incorporation into mixed micelles as well [11].

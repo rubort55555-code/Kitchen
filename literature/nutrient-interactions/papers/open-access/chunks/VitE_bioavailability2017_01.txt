@@ -1,0 +1,11 @@
+Название: Vitamin E Bioavailability: Mechanisms of Intestinal Absorption in the Spotlight
+Авторы: Emmanuelle Reboul
+Журнал: Antioxidants, 2017
+DOI: https://doi.org/10.3390/antiox6040095   PMID: 29165370   PMC: PMC5745505
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 10: Abstract
+============================================================
+
+Vitamin E is an essential fat-soluble micronutrient whose effects on human health can be attributed to both antioxidant and non-antioxidant properties. A growing number of studies aim to promote vitamin E bioavailability in foods. It is thus of major interest to gain deeper insight into the mechanisms of vitamin E absorption, which remain only partly understood. It was long assumed that vitamin E was absorbed by passive diffusion, but recent data has shown that this process is actually far more complex than previously thought. This review describes the fate of vitamin E in the human gastrointestinal lumen during digestion and focuses on the proteins involved in the intestinal membrane and cellular transport of vitamin E across the enterocyte. Special attention is also given to the factors modulating both vitamin E micellarization and absorption. Although these latest results significantly improve our understanding of vitamin E intestinal absorption, further studies are still needed to decipher the molecular mechanisms driving this multifaceted process.

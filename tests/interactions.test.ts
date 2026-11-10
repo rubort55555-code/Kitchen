@@ -22,10 +22,6 @@ ok("у каждого напитка есть кофеин, объём и кал
 ok("пустой день — без подсказок", interactionHints([]).length === 0);
 ok("обычная еда без особенностей — без подсказок", interactionHints([food("Суп", "обед", { vitC: 30, fat: 10 })]).length === 0);
 
-// Жирорастворимые витамины
-ok("витамин A без жира — подсказка про жир", ids(interactionHints([food("Салат из моркови", "обед", { vitA: 800, fat: 1 })])).includes("fat-sol"));
-ok("витамин A с жиром — без подсказки", !ids(interactionHints([food("Морковь с маслом", "обед", { vitA: 800, fat: 12 })])).includes("fat-sol"));
-ok("мало витаминов A, E, K — без подсказки про жир", !ids(interactionHints([food("Рис", "обед", { vitA: 10, vitE: 0.5, vitK: 2, fat: 0.5 })])).includes("fat-sol"));
 // Кофеин
 const many = [drink("coffee", 2, "завтрак"), drink("coffee", 2, "обед")];
 const h = interactionHints(many);
@@ -37,10 +33,9 @@ ok("больше 200 мг за раз — предупреждение", ids(int
 ok("немного кофе — без подсказок про минералы", !ids(interactionHints([drink("coffee")])).includes("caf-mineral"));
 
 // Источники: у каждой подсказки есть ссылки, и они описаны
-const all = interactionHints([food("Салат", "обед", { vitA: 500, fat: 1 }), drink("coffee", 5, "обед")]);
-ok("подсказки сработали всех видов", ["fat-sol", "caf-limit", "caf-single", "caf-mineral"].every((x) => ids(all).includes(x)), ids(all));
+const all = interactionHints([drink("coffee", 5, "обед")]);
+ok("подсказки сработали всех видов", ["caf-limit", "caf-single", "caf-mineral"].every((x) => ids(all).includes(x)), ids(all));
 ok("у каждой подсказки есть источники из списка", all.every((x) => x.src.length > 0 && x.src.every((s) => SOURCES[s] && SOURCES[s].cite.length > 20)));
-ok("подсказки по приёмам называют приём пищи", all.filter((x) => /^fat/.test(x.id)).every((x) => x.text.includes("обед")));
 
 console.log(`interactions: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);
