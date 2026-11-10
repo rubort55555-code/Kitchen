@@ -2,7 +2,7 @@
 import { useMemo, useState } from "react";
 import { Sheet } from "../components/ui";
 import { BarcodeScan } from "../components/BarcodeScan";
-import { addMeals, addWater, deleteMeals, diaryWho, repeatDay, setDiaryWho, useStore, waterOf } from "../lib/store";
+import { addMeals, addWater, deleteMeals, diaryWho, rememberBarcode, repeatDay, setDiaryWho, useStore, waterOf } from "../lib/store";
 import { closeAll, closeSheet, goPage, openSheet, toast } from "../lib/ui";
 import { MEAL_SLOTS, type Meal, type MealSlot } from "../lib/types";
 import { micros, planFor, type BodyProfile } from "../lib/nutrition";
@@ -132,7 +132,7 @@ export function Diary({ date: start }: { date?: string }) {
           <div className="list">
             {items.map((m) => (
               <div className="li" key={m.id}>
-                <div className="main"><div className="name">{m.name}</div><div className="meta">{m.qty ? m.qty + " · " : ""}Б {Math.round(m.n.protein || 0)} · Ж {Math.round(m.n.fat || 0)} · У {Math.round(m.n.carbs || 0)}</div></div>
+                <div className="main"><div className="name">{m.name}</div><div className="meta">{m.qty ? m.qty + " · " : ""}Б {Math.round(m.n.protein || 0)} · Ж {Math.round(m.n.fat || 0)} · У {Math.round(m.n.carbs || 0)}{m.estimated ? " · микроэлементы оценены" : ""}</div></div>
                 <span className="end">{kcalText(m.n.kcal || 0)}</span>
                 <button className="ib" aria-label={"Удалить " + m.name} onClick={() => remove(m)}>✕</button>
               </div>
@@ -400,19 +400,43 @@ function OwnForm({ onSave }: { onSave: (name: string, v: { kcal: number; protein
 }
 
 function ScanPick({ custom, onPick }: { custom: import("../lib/types").CatalogItem[]; onPick: (p: OffProduct, name: string, grams: number) => void }) {
+  const known = useStore((s) => s.settings.barcodes);
   const [scan, setScan] = useState(false);
   const [busy, setBusy] = useState(false);
-  const [found, setFound] = useState<{ p: OffProduct; name: string } | null>(null);
+  const [found, setFound] = useState<{ p: OffProduct; name: string; own?: boolean } | null>(null);
   const [g, setG] = useState("100");
   const [msg, setMsg] = useState("");
+  // Товар не найден: вводим данные с этикетки сами (на 100 г) — запомним по штрихкоду
+  const [miss, setMiss] = useState<{ code: string } | null>(null);
+  const [f, setF] = useState({ name: "", kcal: "", p: "", f: "", c: "", pack: "" });
+  const showFound = (p: OffProduct, name: string, own = false) => {
+    setFound({ p, name, own });
+    setG(String(p.qty && (p.unit === "г" || p.unit === "мл") ? p.qty : 100));
+  };
   async function onCode(code: string) {
-    setScan(false); setBusy(true); setMsg("");
+    setScan(false); setMsg(""); setMiss(null);
+    // 1. Свои запомненные товары — без интернета
+    const mem = known?.[code];
+    if (mem?.off?.per100 && typeof mem.off.per100.kcal === "number") return showFound(mem.off, mem.name, true);
+    setBusy(true);
     const r = await lookupOff(code);
     setBusy(false);
-    if (!r.ok) return setMsg(r.why === "offline" ? "Нет интернета — поиск товара по коду недоступен. Запишите как «Своё»." : "Сервис Open Food Facts не ответил. Попробуйте позже.");
-    if (!r.product || !r.product.per100 || typeof r.product.per100.kcal !== "number") return setMsg("Товар не найден или на упаковке нет калорийности. Запишите как «Своё».");
-    setFound({ p: r.product, name: nameFor(r.product, custom).name });
-    setG(String(r.product.qty && (r.product.unit === "г" || r.product.unit === "мл") ? r.product.qty : 100));
+    if (!r.ok) { setMiss({ code }); return setMsg(r.why === "offline" ? "Нет интернета, а этого товара в вашей памяти нет. Введите данные с этикетки — приложение запомнит товар." : "Open Food Facts не ответил. Введите данные с этикетки — приложение запомнит товар."); }
+    if (!r.product || !r.product.per100 || typeof r.product.per100.kcal !== "number") { setMiss({ code }); return setMsg(r.product ? "У товара в базе нет калорийности. Введите данные с этикетки — приложение запомнит товар." : "Этого товара нет в Open Food Facts (российских товаров там около 37 тысяч). Введите данные с этикетки — приложение запомнит товар."); }
+    const name = nameFor(r.product, custom).name;
+    rememberBarcode(code, name, r.product);
+    showFound(r.product, name);
+  }
+  const num = (x: string) => { const v = parseFloat(x.replace(",", ".")); return isNaN(v) ? undefined : v; };
+  function saveOwn() {
+    const kcal = num(f.kcal);
+    if (!miss || !f.name.trim() || kcal === undefined) return;
+    const per100 = { kcal, ...(num(f.p) !== undefined ? { p: num(f.p) } : {}), ...(num(f.f) !== undefined ? { f: num(f.f) } : {}), ...(num(f.c) !== undefined ? { c: num(f.c) } : {}) };
+    const pack = num(f.pack);
+    const p: OffProduct = { code: miss.code, title: f.name.trim(), per100, ...(pack ? { qty: pack, unit: "г" as const } : {}) };
+    rememberBarcode(miss.code, p.title, p);
+    setMiss(null); setMsg("");
+    showFound(p, p.title, true);
   }
   if (scan) return <BarcodeScan onCode={onCode} onClose={() => setScan(false)} />;
   if (found) {
@@ -420,7 +444,8 @@ function ScanPick({ custom, onPick }: { custom: import("../lib/types").CatalogIt
     const m = mealFromOff(found.p, found.name, grams, "", "перекус");
     return (
       <>
-        <div className="card"><h3>{found.name}</h3><p className="muted small mt0">на 100 г: {Math.round(found.p.per100!.kcal!)} ккал. © участники Open Food Facts, ODbL</p></div>
+        <div className="card"><h3>{found.name}</h3><p className="muted small mt0">на 100 г: {Math.round(found.p.per100!.kcal!)} ккал{found.own ? ". Из вашей памяти (введено вами или найдено раньше)." : ". © участники Open Food Facts, ODbL"}</p>
+          {m?.estimated && <p className="small" style={{ margin: "4px 0" }}>ℹ️ Железо, кальций и витамины на упаковке не указаны — оценены по справочнику для такого продукта.</p>}</div>
         <label className="f" htmlFor="sg">Сколько съели, г</label>
         <input id="sg" className="inp big" inputMode="decimal" value={g} onChange={(e: any) => setG(e.target.value)} />
         <button className="btn" style={{ marginTop: 12 }} disabled={!m} onClick={() => onPick(found.p, found.name, grams)}>Записать{m ? ` · ${kcalText(m.n.kcal || 0)} ккал` : ""}</button>
@@ -428,11 +453,30 @@ function ScanPick({ custom, onPick }: { custom: import("../lib/types").CatalogIt
       </>
     );
   }
+  if (miss) {
+    return (
+      <>
+        <p className="err" role="alert">{msg}</p>
+        <p className="muted small">Код {miss.code}. Значения — на 100 г, как на этикетке.</p>
+        <label className="f" htmlFor="mn">Название</label>
+        <input id="mn" className="inp" value={f.name} onChange={(e: any) => setF({ ...f, name: e.target.value })} placeholder="Например: Творог 5% Простоквашино" />
+        <div className="nut-grid">
+          <div><label className="f" htmlFor="mk">Ккал</label><input id="mk" className="inp" inputMode="decimal" value={f.kcal} onChange={(e: any) => setF({ ...f, kcal: e.target.value })} /></div>
+          <div><label className="f" htmlFor="mp">Белки, г</label><input id="mp" className="inp" inputMode="decimal" value={f.p} onChange={(e: any) => setF({ ...f, p: e.target.value })} /></div>
+          <div><label className="f" htmlFor="mf">Жиры, г</label><input id="mf" className="inp" inputMode="decimal" value={f.f} onChange={(e: any) => setF({ ...f, f: e.target.value })} /></div>
+          <div><label className="f" htmlFor="mc">Углеводы, г</label><input id="mc" className="inp" inputMode="decimal" value={f.c} onChange={(e: any) => setF({ ...f, c: e.target.value })} /></div>
+          <div><label className="f" htmlFor="mpk">Вес упаковки, г</label><input id="mpk" className="inp" inputMode="decimal" placeholder="по желанию" value={f.pack} onChange={(e: any) => setF({ ...f, pack: e.target.value })} /></div>
+        </div>
+        <button className="btn" style={{ marginTop: 12 }} disabled={!f.name.trim() || num(f.kcal) === undefined} onClick={saveOwn}>Запомнить товар</button>
+        <button className="btn ghost" onClick={() => { setMiss(null); setMsg(""); }}>Отмена</button>
+      </>
+    );
+  }
   return (
     <>
       <button className="btn" disabled={busy} onClick={() => setScan(true)}>{busy ? "Ищу товар…" : "Сканировать штрихкод"}</button>
       {msg && <p className="err" role="alert">{msg}</p>}
-      <p className="muted small">Калорийность берётся из Open Food Facts. Нужен интернет.</p>
+      <p className="muted small">Сначала ищу среди ваших запомненных товаров (без интернета), потом в Open Food Facts. Если товара нет — введите данные с этикетки один раз, и в следующий раз он найдётся сразу.</p>
     </>
   );
 }

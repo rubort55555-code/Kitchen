@@ -1,6 +1,6 @@
 // Проверка действий дневника в хранилище (без браузера, запись в IndexedDB отключена): node node_modules/.bin/tsx tests/diary-store.test.ts
 console.error = () => {}; // в Node нет IndexedDB — ошибки сохранения ожидаемы, в памяти всё работает
-import { addMeals, addWater, deleteMeals, diaryWho, getState, makeBackup, repeatDay, saveRecipes, setDiaryWho, setSettings, syncPlanMeal, updateMeal, waterOf } from "../src/lib/store";
+import { addMeals, addWater, deleteMeals, diaryWho, rememberBarcode, getState, makeBackup, repeatDay, saveRecipes, setDiaryWho, setSettings, syncPlanMeal, updateMeal, waterOf } from "../src/lib/store";
 import { toggleDone } from "../src/lib/plan";
 import { mealCustom, mealFromRecipe } from "../src/lib/diary";
 import { parseRecipeText } from "../tools/recipes.mjs";
@@ -54,6 +54,13 @@ ok("вода: у каждого человека своя", waterOf(today) === 0
 addWater(today, 250);
 setDiaryWho("m1");
 ok("вода: стакан Миши не попал Ане", waterOf(today) === 0 && waterOf(today, getState().settings, "m2") === 250);
+
+// Запомненные штрихкоды
+rememberBarcode("4600000000017", "Творог 5%", { code: "4600000000017", title: "Творог 5%", per100: { kcal: 121, p: 17, f: 5, c: 1.8 } });
+const mem = getState().settings.barcodes?.["4600000000017"];
+ok("штрихкод запомнен вместе с данными этикетки", mem?.name === "Творог 5%" && mem.off?.per100?.kcal === 121 && mem.t > 0);
+rememberBarcode("4600000000024", "Хлеб", null);
+ok("запоминание второго кода не стирает первый", !!getState().settings.barcodes?.["4600000000017"] && !!getState().settings.barcodes?.["4600000000024"]);
 
 // Меню ↔ дневник
 const e = { id: "pe1", date: today, slot: "завтрак" as const, name: omelet.name, recipeId: omelet.id };

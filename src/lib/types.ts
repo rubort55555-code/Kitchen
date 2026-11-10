@@ -212,6 +212,8 @@ export interface Meal {
   planEntryId?: string;
   /** Сколько: «1 порция», «150 г». */
   qty?: string;
+  /** Микроэлементы (железо, кальций, витамины...) оценены по справочнику состава, а не взяты с упаковки. */
+  estimated?: boolean;
   /** Категории Open Food Facts и состав с упаковки — для оценки усвоения железа по штрихкоду. */
   cats?: string[];
   ingredients?: string;

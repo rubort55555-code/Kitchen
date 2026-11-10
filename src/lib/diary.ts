@@ -58,7 +58,24 @@ export function mealFromOff(p: OffProduct, name: string, grams: number, date: st
   if (c.fe !== undefined) n.fe = c.fe * k;
   if (c.ca !== undefined) n.ca = c.ca * k;
   if (c.vitC !== undefined) n.vitC = c.vitC * k;
-  return mk(date, slot, name, n, who, { qty: `${Math.round(grams)} г`, ...(p.cats ? { cats: p.cats } : {}), ...(p.ingredients ? { ingredients: p.ingredients } : {}) });
+  // На российских этикетках микроэлементы обычно не указаны (в выборке Open Food Facts для России железо есть у 5% товаров):
+  // недостающее оцениваем по справочнику состава для такого же продукта и помечаем как оценку
+  const estimated = estimateMissing(n, name, grams);
+  return mk(date, slot, name, n, who, { qty: `${Math.round(grams)} г`, ...(estimated ? { estimated: true } : {}), ...(p.cats ? { cats: p.cats } : {}), ...(p.ingredients ? { ingredients: p.ingredients } : {}) });
+}
+
+const MACRO_KEYS = new Set<NutrientKey>(["kcal", "protein", "fat", "carbs", "fiber", "sugar"]);
+/** Дополняет микроэлементы по справочнику состава (на 100 г × вес). Возвращает true, если что-то добавлено. */
+export function estimateMissing(n: N, name: string, grams: number): boolean {
+  const e = compositionOf(name);
+  if (!e || !(grams > 0)) return false;
+  let added = false;
+  NUTRIENTS.forEach((x, i) => {
+    if (MACRO_KEYS.has(x.key) || n[x.key] !== undefined || e.v[i] == null) return;
+    n[x.key] = ((e.v[i] as number) * grams) / 100;
+    added = true;
+  });
+  return added;
 }
 
 /** Своё блюдо: человек вводит калории и БЖУ на всё съеденное. */

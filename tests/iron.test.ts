@@ -143,11 +143,19 @@ ok("OFF: железо 0,0035 г → 3,5 мг, кальций 12 мг, витам
 ok("OFF: категории и состав сохранены", op.cats?.[0] === "en:meats" && op.ingredients!.startsWith("Говядина"));
 const om = mealFromOff(op, op.title, 150, D, "обед", "m1")!;
 ok("запись по штрихкоду: железо на 150 г = 5,25 мг", om.n.fe === 5.3 || Math.abs(om.n.fe! - 5.25) < 0.06, om.n.fe);
+ok("железо с этикетки сохраняется как есть, оценка дополняет только недостающее", Math.abs(om.n.fe! - 5.25) < 0.06);
 ok("запись по штрихкоду хранит категории и состав", om.cats?.includes("en:meats") === true && !!om.ingredients);
 const oa = analyzeIron("обед", [om], ctx)!;
 ok("железо по штрихкоду: мясо по категории — усилитель", oa.enhancers.includes("мясо или рыба") && oa.level === "better", oa);
-const noFe = mealFromOff({ code: "1", title: "Йогурт", per100: { kcal: 60 } }, "Йогурт", 100, D, "обед", "m1")!;
-ok("без железа на упаковке — оценки нет", noFe.n.fe === undefined && analyzeIron("обед", [noFe], ctx) === null);
+// На этикетке нет железа и кальция — оцениваем по справочнику и помечаем
+const est = mealFromOff({ code: "1", title: "Говядина тушёная", per100: { kcal: 220, p: 16, f: 17, c: 0 } }, "Говядина", 200, D, "обед", "m1")!;
+ok("нет железа на упаковке: оценка по справочнику для такого же продукта, с пометкой", est.estimated === true && (est.n.fe || 0) > 1 && (est.n.zn || 0) > 1, est.n);
+ok("оценка не затирает данные этикетки (калории, БЖУ)", est.n.kcal === 440 && est.n.protein === 32 && est.n.fat === 34);
+const real = mealFromOff({ code: "2", title: "Говядина", per100: { kcal: 220, fe: 5 } }, "Говядина", 100, D, "обед", "m1")!;
+ok("железо с этикетки не заменяется оценкой", real.n.fe === 5);
+const unknownFood = mealFromOff({ code: "3", title: "Зюзюка", per100: { kcal: 60 } }, "Зюзюка", 100, D, "обед", "m1")!;
+ok("неизвестный продукт: оценки нет, пометки нет", unknownFood.estimated === undefined && unknownFood.n.fe === undefined && analyzeIron("обед", [unknownFood], ctx) === null);
+ok("оценка железа по справочнику работает в расчёте приёма пищи", analyzeIron("обед", [est], ctx)?.enhancers.includes("мясо или рыба") === true);
 
 console.log(`iron: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

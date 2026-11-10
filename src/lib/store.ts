@@ -435,6 +435,11 @@ export function diaryWho(s: Settings = state.settings): string {
 }
 export const setDiaryWho = (id: string) => setSettings({ diaryWho: id });
 
+/** Запоминает товар по штрихкоду (найденный в Open Food Facts или введённый вручную), чтобы в следующий раз узнать его сразу и без интернета. */
+export function rememberBarcode(code: string, name: string, off: import("./off").OffProduct | null) {
+  setSettings({ barcodes: { ...(state.settings.barcodes || {}), [code]: { name, off, t: Date.now() } } });
+}
+
 export function addMeals(list: Meal[]) {
   if (!list.length) return;
   set({ meals: [...state.meals, ...list] });

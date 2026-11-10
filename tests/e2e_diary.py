@@ -37,6 +37,12 @@ with sync_playwright() as p:
     for scheme in ["light", "dark"]:
         ctx = br.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True, color_scheme=scheme)
         pg = ctx.new_page()
+        # Open Food Facts в тесте: любой код — «товара нет» (проверка ручного ввода с этикетки); после запоминания интернет не нужен
+        off_calls = []
+        def off_route(route):
+            off_calls.append(route.request.url)
+            route.fulfill(status=404, content_type="application/json", headers={"Access-Control-Allow-Origin": "*"}, body=json.dumps({"code": "x", "status": 0, "status_verbose": "product not found"}))
+        pg.route("https://world.openfoodfacts.org/**", off_route)
         errs = []
         pg.on("pageerror", lambda e: errs.append(str(e)))
         pg.goto(URL); pg.wait_for_selector("h1")
@@ -108,6 +114,28 @@ with sync_playwright() as p:
         pg.click(M + ' .btn:has-text("Записать")'); pg.wait_for_selector(".toast")
         pg.wait_for_function("document.querySelectorAll('.sheet').length === 1")
         ok(S + "продукт в дневнике", "Яблок" in pg.inner_text(D))
+        # штрихкод: товара нет в базе → данные с этикетки → запомнили → второй раз находится без интернета
+        pg.click(D + ' .btn:has-text("Записать приём пищи")'); pg.wait_for_selector("text=Что вы съели")
+        pg.click(M + ' .chip:has-text("Штрихкод")')
+        pg.click(M + ' .btn:has-text("Сканировать штрихкод")')
+        pg.fill('[aria-label="Цифры штрихкода"]', "4607001771531"); pg.click(".scan-manual button")
+        pg.wait_for_selector("#mn")
+        ok(S + "штрихкод: товара нет в базе — предложено ввести данные с этикетки", "Введите данные с этикетки" in pg.inner_text(M) or "нет в Open Food Facts" in pg.inner_text(M), pg.inner_text(M)[:300])
+        pg.fill("#mn", "Творог 5% Простоквашино"); pg.fill("#mk", "121"); pg.fill("#mp", "17"); pg.fill("#mf", "5"); pg.fill("#mc", "1.8")
+        pg.click(M + ' .btn:has-text("Запомнить товар")'); pg.wait_for_selector("#sg")
+        ok(S + "после ввода: показан товар из «вашей памяти»", "Из вашей памяти" in pg.inner_text(M) and "121" in pg.inner_text(M), pg.inner_text(M)[:300])
+        pg.fill("#sg", "200")
+        ok(S + "оценка микроэлементов по справочнику помечена", "оценены по справочнику" in pg.inner_text(M), pg.inner_text(M)[:400])
+        pg.click(M + ' .btn:has-text("Записать")'); pg.wait_for_selector(".toast")
+        pg.wait_for_function("document.querySelectorAll('.sheet').length === 1")
+        ok(S + "товар по штрихкоду записан (242 ккал на 200 г)", "Творог 5% Простоквашино" in pg.inner_text(D) and "242" in pg.inner_text(D), pg.inner_text(D)[:500])
+        calls_before = len(off_calls)
+        pg.click(D + ' .btn:has-text("Записать приём пищи")'); pg.wait_for_selector("text=Что вы съели")
+        pg.click(M + ' .chip:has-text("Штрихкод")'); pg.click(M + ' .btn:has-text("Сканировать штрихкод")')
+        pg.fill('[aria-label="Цифры штрихкода"]', "4607001771531"); pg.click(".scan-manual button")
+        pg.wait_for_selector("#sg")
+        ok(S + "второй скан того же кода: найден в памяти, запрос в интернет не отправлялся", len(off_calls) == calls_before and "Из вашей памяти" in pg.inner_text(M), (calls_before, len(off_calls)))
+        pg.click(M + ' .btn:has-text("Другой товар")'); pg.click(M + ' .x:has-text("Готово")')
         # напиток с кофеином и подсказки о сочетаниях
         pg.click(D + ' .btn:has-text("Записать приём пищи")'); pg.wait_for_selector("text=Что вы съели")
         pg.click(M + ' .chip:has-text("Напиток")')
