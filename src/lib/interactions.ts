@@ -19,6 +19,10 @@ export const SOURCES: Record<string, Source> = {
   dahdouh2019: { id: "dahdouh2019", cite: "Dahdouh S. и др. Development of the FAO/INFOODS/IZINCG global food composition database for phytate. J Food Compost Anal, 2019 (CC BY 4.0)" },
   prentice2017: { id: "prentice2017", cite: "Prentice A.M. и др. Dietary strategies for improving iron status: balancing safety and efficacy. Nutr Rev, 2017 (CC BY 4.0)" },
   weaver2025: { id: "weaver2025", cite: "Weaver C. и др. Perspective: framework for developing prediction equations for estimating the absorption and bioavailability of nutrients from foods. Adv Nutr, 2025 (CC BY 4.0)" },
+  shkembi2021ca: { id: "shkembi2021ca", cite: "Shkembi B., Huppertz T. Calcium absorption from food products: food matrix effects. Nutrients, 2021 (CC BY 4.0)" },
+  shkembi2021zn: { id: "shkembi2021zn", cite: "Shkembi B., Huppertz T. Influence of dairy products on bioavailability of zinc from other food products: a review of complementarity at a meal level. Nutrients, 2021 (CC BY 4.0)" },
+  groeber2015: { id: "groeber2015", cite: "Gröber U., Schmidt J., Kisters K. Magnesium in prevention and therapy. Nutrients, 2015 (CC BY 4.0)" },
+  maares2020: { id: "maares2020", cite: "Maares M., Haase H. A guide to human zinc absorption: general overview and recent advances of in vitro intestinal models. Nutrients, 2020 (CC BY 4.0)" },
   efsa2015: { id: "efsa2015", cite: "EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific opinion on the safety of caffeine. EFSA Journal, 2015" },
 };
 

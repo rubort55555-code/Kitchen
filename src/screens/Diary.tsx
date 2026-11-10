@@ -10,6 +10,7 @@ import { NUTRIENTS, recipeNutrition, type NutrientKey } from "../lib/recipeNutri
 import { lookupOff, nameFor, type OffProduct } from "../lib/off";
 import { DRINKS, SOURCES, caffeineLimit, caffeineOf, interactionHints, type Drink } from "../lib/interactions";
 import { LEVEL_TEXT, ironDay, ironHints } from "../lib/iron";
+import { CA_TEXT, calciumDay, mineralHints } from "../lib/minerals";
 import { copyMeal, defaultGrams, dayView, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
 import { addDays, cap, norm, ymd } from "../lib/util";
 
@@ -192,9 +193,10 @@ function MicroBlock({ eaten, body, hasMeals }: { eaten: Record<NutrientKey, numb
 /** Кофеин за день против предела и подсказки по сочетаниям (что усваивается лучше или хуже). */
 function CombosBlock({ meals, limit, recipes }: { meals: Meal[]; limit: number; recipes: import("../lib/types").Recipe[] }) {
   const caf = caffeineOf(meals);
-  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...interactionHints(meals, { caffeineLimit: limit })], [meals, limit, recipes]);
+  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...mineralHints(meals, { recipes }), ...interactionHints(meals, { caffeineLimit: limit })], [meals, limit, recipes]);
   const irons = useMemo(() => ironDay(meals, { recipes }), [meals, recipes]);
-  if (!caf && !hints.length && !irons.length) return null;
+  const cas = useMemo(() => calciumDay(meals, { recipes }), [meals, recipes]);
+  if (!caf && !hints.length && !irons.length && !cas.length) return null;
   return (
     <div className="card">
       <h3>Сочетания и усвоение</h3>
@@ -208,6 +210,13 @@ function CombosBlock({ meals, limit, recipes }: { meals: Meal[]; limit: number; 
         <div className="ironrows">
           {irons.map((r) => (
             <p key={r.slot} className="small" style={{ margin: "4px 0" }}>🩸 {cap(r.slot)}: железа <b>{String(Math.round(r.mg * 10) / 10).replace(".", ",")} мг</b> — {LEVEL_TEXT[r.level]}{r.enhancers.length ? ` (помогают: ${r.enhancers.join(", ")})` : ""}{r.inhibitors.length ? ` (мешают: ${r.inhibitors.join(", ")})` : ""}</p>
+          ))}
+        </div>
+      )}
+      {cas.length > 0 && (
+        <div className="ironrows">
+          {cas.map((r) => (
+            <p key={r.slot} className="small" style={{ margin: "4px 0" }}>🦴 {cap(r.slot)}: кальция <b>{Math.round(r.mg)} мг</b> — {CA_TEXT[r.quality]}</p>
           ))}
         </div>
       )}

@@ -1,0 +1,39 @@
+Название: Modeling Zinc Absorption in the Adult Population of Colombia: Insights for Nutritional Evaluation and Intervention Strategies
+Авторы: José Alexander Alvarez-Bustamante, Angélica María Muñoz
+Журнал: Biological Trace Element Research, 2024
+DOI: https://doi.org/10.1007/s12011-024-04180-x   PMID: 38739259   PMC: PMC11700909
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2024
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 11 из 12: References (часть 2)
+============================================================
+
+[15] 15.RyuM-SAydemirTBMarriottBPBirtDFStallingsVAYatesAAZincPresent Knowledge in Nutrition202011Cambridge, MassachusettsWiley-Blackwell393408Ryu M-S, Aydemir TB (2020) Zinc. In: Marriott BP, Birt DF, Stallings VA, Yates AA (eds) Present Knowledge in Nutrition, 11th edn. Wiley-Blackwell, Cambridge, Massachusetts, pp 393–408
+
+[16] 16.Ministerio de Salud y Protección Social de Colombia, Instituto Colombiano de Bienestar Familiar (2006) Encuesta Nacional de la Situación Nutricional, ENSIN 2005 [National Survey of the Nutritional Situation, ENSIN 2005]. https://www.icbf.gov.co/bienestar/nutricion/encuesta-nacional-situacion-nutricional. Accessed 12 Jan 2023
+
+[17] 17.Ministerio de Salud y Protección Social de Colombia, Instituto Colombiano de Bienestar Familiar (2019) Encuesta Nacional de la Situación Nutricional, ENSIN 2015 [National Survey of the Nutritional Situation, ENSIN 2015]. https://www.icbf.gov.co/bienestar/nutricion/encuesta-nacional-situacion-nutricional. Accessed 14 Jan 2023.
+
+[18] 18.MbaCMJonesKSForouhiNGImamuraFAssahFMbanyaJCWarehamNJThe association between plasma zinc concentrations and markers of glucose metabolism in adults in CameroonBr J Nutr202313071220122710.1017/S000711452300022336693633PMC7615052Mba CM, Jones KS, Forouhi NG, Imamura F, Assah F, Mbanya JC, Wareham NJ (2023) The association between plasma zinc concentrations and markers of glucose metabolism in adults in Cameroon. Br J Nutr 130(7):1220–1227. 10.1017/S000711452300022336693633 10.1017/S0007114523000223PMC7615052
+
+[19] 19.HallAGKingJCZinc fortification: current trends and strategiesNutrients202214389510.3390/nu1419389536235548PMC9572300Hall AG, King JC (2022) Zinc fortification: current trends and strategies. Nutrients 14:3895. 10.3390/nu1419389536235548 10.3390/nu14193895PMC9572300
+
+[20] 20.Institute of Medicine (US) Panel on Micronutrients (2001) Dietary reference intakes for vitamin A, vitamin K, arsenic, boron, chromium, copper, iodine, iron, manganese, molybdenum, nickel, silicon, vanadium, and zinc. National Academies Press (US), Washington (DC). https://www.ncbi.nlm.nih.gov/books/NBK222317/25057538
+
+[21] 21.EFSA Panel on Dietetic Products, Nutrition and Allergies (NDA)Scientific opinion on dietary reference values for zincEFSA J201412384410.2903/j.efsa.2014.3844)PMC1313699242087959EFSA Panel on Dietetic Products, Nutrition and Allergies (NDA) (2014) Scientific opinion on dietary reference values for zinc. EFSA J 12:3844. 10.2903/j.efsa.2014.3844)10.2903/j.efsa.2014.3844PMC1313699242087959
+
+[22] 22.LönnerdalBDietary factors influencing zinc absorptionJ Nutr20001301378S83S10.1093/jn/130.5.1378S10801947Lönnerdal B (2000) Dietary factors influencing zinc absorption. J Nutr 130:1378S–83S. 10.1093/jn/130.5.1378S10801947 10.1093/jn/130.5.1378S
+
+[23] 23.ArmahSMFractional zinc absorption for men, women, and adolescents is overestimated in the current dietary reference intakesJ Nutr20161461276128010.3945/jn.115.22560727146920Armah SM (2016) Fractional zinc absorption for men, women, and adolescents is overestimated in the current dietary reference intakes. J Nutr 146:1276–1280. 10.3945/jn.115.22560727146920 10.3945/jn.115.225607
+
+[24] 24.KrebsNEHambidgeKMZinc metabolism and homeostasis: the application of tracer techniques to human zinc physiologyBiometals20011439741210.1023/A:101294240927411831468Krebs NE, Hambidge KM (2001) Zinc metabolism and homeostasis: the application of tracer techniques to human zinc physiology. Biometals 14:397–412. 10.1023/A:101294240927411831468 10.1023/a:1012942409274
+
+[25] 25.TranCDGopalsamyGLMortimerEKYoungGPThe potential for zinc stable isotope techniques and modelling to determine optimal zinc supplementationNutrients201574271429510.3390/nu706427126035248PMC4488783Tran CD, Gopalsamy GL, Mortimer EK, Young GP (2015) The potential for zinc stable isotope techniques and modelling to determine optimal zinc supplementation. Nutrients 7:4271–4295. 10.3390/nu706427126035248 10.3390/nu7064271PMC4488783
+
+[26] 26.Energy AgencyIAAssessment of zinc metabolism in humans using stable zinc isotope techniques2018IAEA Human Health Series No. 35Energy Agency IA (2018) Assessment of zinc metabolism in humans using stable zinc isotope techniques. IAEA Human Health Series No. 35
+
+[27] 27.YasunoTOkamotoHNagaiMKimuraSYamamotoTNaganoKFurubayashiTYoshikawaYYasuiHKatsumiHSakaneTYamamotoAIn vitro study on the transport of zinc across intestinal epithelial cells using Caco-2 monolayers and isolated rat intestinal membranesBiol Pharm Bull20123558859310.1248/bpb.35.58822466565Yasuno T, Okamoto H, Nagai M, Kimura S, Yamamoto T, Nagano K, Furubayashi T, Yoshikawa Y, Yasui H, Katsumi H, Sakane T, Yamamoto A (2012) In vitro study on the transport of zinc across intestinal epithelial cells using Caco-2 monolayers and isolated rat intestinal membranes. Biol Pharm Bull 35:588–593. 10.1248/bpb.35.58822466565 10.1248/bpb.35.588
+
+[28] 28.LoweNMShamesDMWoodhouseLRMatelJSRoehlRSaccomaniMPToffoloGCobelliCKingJCA compartmental model of zinc metabolism in healthy women using oral and intravenous stable isotope tracersAm J Clin Nutr1997651810181910.1093/ajcn/65.6.18109174477Lowe NM, Shames DM, Woodhouse LR, Matel JS, Roehl R, Saccomani MP, Toffolo G, Cobelli C, King JC (1997) A compartmental model of zinc metabolism in healthy women using oral and intravenous stable isotope tracers. Am J Clin Nutr 65:1810–1819. 10.1093/ajcn/65.6.18109174477 10.1093/ajcn/65.6.1810
+
+[29] 29.MillerLVKrebsNFHambidgeKMA mathematical model of zinc absorption in humans as a function of dietary zinc and phytateJ Nutr200713713514110.1093/jn/137.1.13517182814PMC1995555Miller LV, Krebs NF, Hambidge KM (2007) A mathematical model of zinc absorption in humans as a function of dietary zinc and phytate. J Nutr 137:135–141. 10.1093/jn/137.1.13517182814 10.1093/jn/137.1.135PMC1995555

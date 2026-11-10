@@ -1,0 +1,49 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 29 из 29: References (часть 12)
+============================================================
+
+[322] 322.CarterK.P.YoungA.M.PalmerA.E.Fluorescent sensors for measuring metal ions in living systemsChem. Rev.20141144564460110.1021/cr400546e24588137PMC4096685
+
+[323] 323.AckermanC.M.LeeS.ChangC.J.Analytical methods for imaging metals in biology: From transition metal metabolism to transition metal signalingAnal. Chem.201789224110.1021/acs.analchem.6b0463127976855PMC5827935
+
+[324] 324.HesselsA.M.ChabosseauP.BakkerM.H.EngelenW.RutterG.A.TaylorK.M.MerkxM.Ezinch-2: A versatile, genetically encoded fret sensor for cytosolic and intraorganelle zn(2+) imagingAcs Chem. Biol.2015102126213410.1021/acschembio.5b0021126151333PMC4577962
+
+[325] 325.VinkenborgJ.L.NicolsonT.J.BellomoE.A.KoayM.S.RutterG.A.MerkxM.Genetically encoded fret sensors to monitor intracellular zn2+ homeostasisNat. Methods2009673774010.1038/nmeth.136819718032PMC6101214
+
+[326] 326.QinY.MirandaJ.G.StoddardC.I.DeanK.M.GalatiD.F.PalmerA.E.Direct comparison of a genetically encoded sensor and small molecule indicator: Implications for quantification of cytosolic zn2+ACS Chem. Biol.201382366237110.1021/cb400385923992616PMC4022295
+
+[327] 327.ParkJ.G.QinY.GalatiD.F.PalmerA.E.New sensors for quantitative measurement of mitochondrial zn2+ACS Chem. Biol.201271636164010.1021/cb300171p22850482PMC3477250
+
+[328] 328.AperS.J.DierickxP.MerkxM.Dual readout bret/fret sensors for measuring intracellular zincACS Chem. Biol.2016112854286410.1021/acschembio.6b0045327547982PMC5080634
+
+[329] 329.QinY.SammondD.W.BraselmannE.CarpenterM.C.PalmerA.E.Development of an optical zn(2+) probe based on a single fluorescent proteinACS Chem. Biol.2016112744275110.1021/acschembio.6b0044227467056PMC5081268
+
+[330] 330.WallrabeH.PeriasamyA.Imaging protein molecules using fret and flim microscopyCurr. Opin. Biotechnol.200516192710.1016/j.copbio.2004.12.00215722011
+
+[331] 331.BouteN.JockersR.IssadT.The use of resonance energy transfer in high-throughput screening: Bret versus fretTrends Pharmacol. Sci.20022335135410.1016/S0165-6147(02)02062-X12377570
+
+[332] 332.PflegerK.D.G.SeeberR.M.EidneK.A.Bioluminescence resonance energy transfer (bret) for the real-time detection of protein-protein interactionsNat. Protoc.2006133734510.1038/nprot.2006.5217406254
+
+[333] 333.DittmerP.J.MirandaJ.G.GorskiJ.A.PalmerA.E.Genetically encoded sensors to elucidate spatial distribution of cellular zincJ. Biol. Chem.2009284162891629710.1074/jbc.M90050120019363034PMC2713558
+
+[334] 334.ChabosseauP.TuncayE.MeurG.BellomoE.A.HesselsA.HughesS.JohnsonP.R.BuglianiM.MarchettiP.TuranB.Mitochondrial and er-targeted ecalwy probes reveal high levels of free zn2+ACS Chem. Biol.201492111212010.1021/cb500406425011072PMC6101202
+
+[335] 335.QinY.DittmerP.J.ParkJ.G.JansenK.B.PalmerA.E.Measuring steady-state and dynamic endoplasmic reticulum and golgi zn(2+) with genetically encoded sensorsProc. Natl. Acad. Sci. USA20111087351735610.1073/pnas.101568610821502528PMC3088641
+
+[336] 336.PancholiJ.HodsonD.J.JobeK.RutterG.A.GoldupS.M.WatkinsonM.Biologically targeted probes for zn2+: A diversity oriented modular “click-snar-click” approachChem. Sci.201453528353510.1039/C4SC01249F25580213PMC4285101
+
+[337] 337.LiD.ChenS.BellomoE.A.TarasovA.I.KautC.RutterG.A.LiW.-H.Imaging dynamic insulin release using a fluorescent zinc indicator for monitoring induced exocytotic release (zimir)Proc. Natl. Acad. Sci. USA2011108210632106810.1073/pnas.110977310922160693PMC3248484
+
+[338] 338.RadfordR.J.ChyanW.LippardS.J.Peptide-based targeting of fluorescent zinc sensors to the plasma membrane of live cellsChem. Sci.201343080308410.1039/c3sc50974e23878718PMC3712541
+
+[339] 339.RanaldiG.FerruzzaS.CanaliR.LeoniG.ZalewskiP.D.SambuyY.PerozziG.MurgiaC.Intracellular zinc is required for intestinal cell survival signals triggered by the inflammatory cytokine tnf-alphaJ. Nutr. Biochem.20132496797610.1016/j.jnutbio.2012.06.02022967671
+
+[340] 340.KrezelA.MaretW.Zinc-buffering capacity of a eukaryotic cell at physiological pznJ. Biol. Inorg. Chem.2006111049106210.1007/s00775-006-0150-516924557
+
+[341] 341.KindermannB.DöringF.FuchsD.PfafflM.W.DanielH.Effects of increased cellular zinc levels on gene and protein expression in ht-29 cellsBioMetals20051824325310.1007/s10534-005-1247-y15984569

@@ -1,0 +1,61 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 22 из 29: References (часть 5)
+============================================================
+
+[124] 124.Lanningham-FosterL.GreenC.L.Langkamp-HenkenB.DavisB.A.NguyenK.T.BenderB.S.CousinsR.J.Overexpression of crip in transgenic mice alters cytokine patterns and the immune responseAm. J. Physiol. Endocrinol. Metab.2002282E1197E120310.1152/ajpendo.00508.200112006348
+
+[125] 125.NishitoY.KambeT.Absorption mechanisms of iron, copper, and zinc: An overviewJ. Nutr. Sci. Vitaminol.2018641710.3177/jnsv.64.129491267
+
+[126] 126.AndrewsG.K.Regulation and function of zip4, the acrodermatitis enteropathica geneBiochem. Soc. Trans.2008361242124610.1042/BST036124219021533PMC2634863
+
+[127] 127.Dufner-BeattieJ.WangF.KuoY.-M.GitschierJ.EideD.AndrewsG.K.The acrodermatitis enteropathica gene zip4 encodes a tissue-specific, zinc-regulated zinc transporter in miceJ. Biol. Chem.2003278334743348110.1074/jbc.M30500020012801924
+
+[128] 128.KasanaS.DinJ.MaretW.Genetic causes and gene-nutrient interactions in mammalian zinc deficiencies: Acrodermatitis enteropathica and transient neonatal zinc deficiency as examplesJ. Trace Elem. Med. Biol.201529476210.1016/j.jtemb.2014.10.00325468189
+
+[129] 129.KimB.E.WangF.Dufner-BeattieJ.AndrewsG.K.EideD.J.PetrisM.J.Zn2+-stimulated endocytosis of the mzip4 zinc transporter regulates its location at the plasma membraneJ. Biol. Chem.20042794523453010.1074/jbc.M31079920014612438
+
+[130] 130.WeaverB.P.Dufner-BeattieJ.KambeT.AndrewsG.K.Novel zinc-responsive post-transcriptional mechanisms reciprocally regulate expression of the mouse slc39a4 and slc39a5 zinc transporters (zip4 and zip5)Biol. Chem.20073881301131210.1515/BC.2007.14918020946PMC2376820
+
+[131] 131.Dufner-BeattieJ.KuoY.M.GitschierJ.AndrewsG.K.The adaptive response to dietary zinc in mice involves the differential cellular localization and zinc regulation of the zinc transporters zip4 and zip5J. Biol. Chem.2004279490824909010.1074/jbc.M40996220015358787
+
+[132] 132.HashimotoA.NakagawaM.TsujimuraN.MiyazakiS.KizuK.GotoT.KomatsuY.MatsunagaA.ShirakawaH.NaritaH.Properties of zip4 accumulation during zinc deficiency and its usefulness to evaluate zinc status: A study of the effects of zinc deficiency during lactationAm. J. Physiol. Regul. Integr. Comp. Physiol.2016310R459R46810.1152/ajpregu.00439.201526702153
+
+[133] 133.MaoX.KimB.E.WangF.EideD.J.PetrisM.J.A histidine-rich cluster mediates the ubiquitination and degradation of the human zinc transporter, hzip4, and protects against zinc cytotoxicityJ. Biol. Chem.20072826992700010.1074/jbc.M61055220017202136
+
+[134] 134.HuangZ.L.Dufner-BeattieJ.AndrewsG.K.Expression and regulation of slc39a family zinc transporters in the developing mouse intestineDev. Biol.200629557157910.1016/j.ydbio.2006.03.04516682017
+
+[135] 135.LichtenL.A.CousinsR.J.Mammalian zinc transporters: Nutritional and physiologic regulationAnnu. Rev. Nutr.20092915317610.1146/annurev-nutr-033009-08331219400752
+
+[136] 136.LiuzziJ.P.BoboJ.A.LichtenL.A.SamuelsonD.A.CousinsR.J.Responsive transporter genes within the murine intestinal-pancreatic axis form a basis of zinc homeostasisProc. Natl. Acad. Sci. USA2004101143551436010.1073/pnas.040621610115381762PMC521973
+
+[137] 137.LiuzziJ.P.BlanchardR.K.CousinsR.J.Differential regulation of zinc transporter 1, 2, and 4 mrna expression by dietary zinc in ratsJ. Nutr.2001131465210.1093/jn/131.1.4611208937
+
+[138] 138.NishitoY.KambeT.Zinc transporter 1 (znt1) expression on the cell surface is elaborately controlled by cellular zinc levelsJ. Biol. Chem.2019294156861569710.1074/jbc.RA119.01022731471319PMC6816103
+
+[139] 139.JouM.Y.HallA.G.PhilippsA.F.KelleherS.L.LonnerdalB.Tissue-specific alterations in zinc transporter expression in intestine and liver reflect a threshold for homeostatic compensation during dietary zinc deficiency in weanling ratsJ. Nutr.200913983584110.3945/jn.108.10097419297427
+
+[140] 140.AndrewsG.K.WangH.DeyS.K.PalmiterR.D.Mouse zinc transporter 1 gene provides an essential function during early embryonic developmentGenesis200440748110.1002/gene.2006715452870
+
+[141] 141.YuY.Y.KirschkeC.P.HuangL.Immunohistochemical analysis of znt1, 4, 5, 6, and 7 in the mouse gastrointestinal tractJ. Histochem. Cytochem. Off. J. Histochem. Soc.20075522323410.1369/jhc.6A7032.200617101726
+
+[142] 142.InoueK.MatsudaK.ItohM.KawaguchiH.TomoikeH.AoyagiT.NagaiR.HoriM.NakamuraY.TanakaT.Osteopenia and male-specific sudden cardiac death in mice lacking a zinc transporter gene, znt5Hum. Mol. Genet.2002111775178410.1093/hmg/11.15.177512095919
+
+[143] 143.PalmiterR.D.ColeT.B.FinleyS.D.Znt-2, a mammalian protein that confers resistance to zinc by facilitating vesicular sequestrationEMBO J.1996151784179110.1002/j.1460-2075.1996.tb00527.x8617223PMC450094
+
+[144] 144.JouM.Y.PhilippsA.F.KelleherS.L.LonnerdalB.Effects of zinc exposure on zinc transporter expression in human intestinal cells of varying maturityJ. Pediatric Gastroenterol. Nutr.20105058759510.1097/MPG.0b013e3181d98e8520479680
+
+[145] 145.LiuzziJ.P.BoboJ.A.CuiL.McMahonR.J.CousinsR.J.Zinc transporters 1, 2 and 4 are differentially expressed and localized in rats during pregnancy and lactationJ. Nutr.200313334235110.1093/jn/133.2.34212566465
+
+[146] 146.PodanyA.B.WrightJ.LamendellaR.SoybelD.I.KelleherS.L.Znt2-mediated zinc import into paneth cell granules is necessary for coordinated secretion and paneth cell function in miceCell. Mol. Gastroenterol. Hepatol.2016236938310.1016/j.jcmgh.2015.12.00628174721PMC5042355
+
+[147] 147.MurgiaC.VespignaniI.CeraseJ.NobiliF.PerozziG.Cloning, expression, and vesicular localization of zinc transporter dri 27/znt4 in intestinal tissue and cellsAm. J. Physiol.1999277G1231G123910.1152/ajpgi.1999.277.6.G123110600821
+
+[148] 148.KirschkeC.P.HuangL.Znt7, a novel mammalian zinc transporter, accumulates zinc in the golgi apparatusJ. Biol. Chem.20032784096410210.1074/jbc.M20764420012446736
+
+[149] 149.HuangL.KirschkeC.P.GitschierJ.Functional characterization of a novel mammalian zinc transporter, znt6J. Biol. Chem.2002277263892639510.1074/jbc.M20046220011997387

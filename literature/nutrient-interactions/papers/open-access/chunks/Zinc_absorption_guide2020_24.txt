@@ -1,0 +1,73 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 24 из 29: References (часть 7)
+============================================================
+
+[181] 181.SandströmB.CederbladA.Zinc absorption from composite meals. Ii. Influence of the main protein sourceAm. J. Clin. Nutr.1980331778178310.1093/ajcn/33.8.17786893252
+
+[182] 182.SandströmB.AlmgrenA.KivistoB.CederbladA.Effect of protein level and protein source on zinc absorption in humansJ. Nutr.1989119485310.1093/jn/119.1.482492337
+
+[183] 183.DavidssonL.AlmgrenA.SandströMB.JuilleratM.E.-A.HurrellR.F.Zinc absorption in adult humans: The effect of protein sources added to liquid test mealsBr. J. Nutr.19967560761310.1079/BJN199601638672412
+
+[184] 184.KielaP.R.GhishanF.K.Physiology of intestinal absorption and secretionBest Pract. Res. Clin. Gastroenterol.20163014515910.1016/j.bpg.2016.02.00727086882PMC4956471
+
+[185] 185.SandströmB.DavidssonL.CederbladA.LönnerdalB.Oral iron, dietary ligands and zinc absorptionJ. Nutr.198511541141410.1093/jn/115.3.4113973750
+
+[186] 186.WapnirR.A.StielL.Zinc intestinal absorption in rats: Specificity of amino acids as ligandsJ. Nutr.19861162171217910.1093/jn/116.11.21713794825
+
+[187] 187.HempeJ.M.CousinsR.J.Effect of edta and zinc-methionine complex on zinc absorption by rat intestineJ. Nutr.19891191179118710.1093/jn/119.8.11792506318
+
+[188] 188.SandsteadH.H.SmithJ.C.Jr.Deliberations and evaluations of approaches, endpoints and paradigms for determining zinc dietary recommendationsJ. Nutr.19961262410s2418s10.1093/jn/126.suppl_9.2410S8811806
+
+[189] 189.DavidssonL.KastenmayerP.HurrellR.F.Sodium iron edta [nafe(iii)edta] as a food fortificant: The effect on the absorption and retention of zinc and calcium in womenAm. J. Clin. Nutr.19946023123710.1093/ajcn/60.2.2318030601
+
+[190] 190.DavidssonL.AlmgrenA.SandströmB.HurrellR.F.Zinc absorption in adult humans: The effect of iron fortificationBr. J. Nutr.19957441742510.1079/BJN199501457547854
+
+[191] 191.TurnlundJ.R.KeyesW.R.HudsonC.A.BetschartA.A.KretschM.J.SauberlichH.E.A stable-isotope study of zinc, copper, and iron absorption and retention by young women fed vitamin b-6-deficient dietsAm. J. Clin. Nutr.1991541059106410.1093/ajcn/54.6.10591957821
+
+[192] 192.SolomonsN.W.JacobR.A.Studies on the bioavailability of zinc in humans: Effects of heme and nonheme iron on the absorption of zincAm. J. Clin. Nutr.19813447548210.1093/ajcn/34.4.4757223699
+
+[193] 193.SandströmB.Micronutrient interactions: Effects on absorption and bioavailabilityBr. J. Nutr.200185Suppl. 2S181S18511509108
+
+[194] 194.AugustD.JanghorbaniM.YoungV.R.Determination of zinc and copper absorption at three dietary zn-cu ratios by using stable isotope methods in young adult and elderly subjectsAm. J. Clin. Nutr.1989501457146310.1093/ajcn/50.6.14572596436
+
+[195] 195.SandsteadH.H.Requirements and toxicity of essential trace elements, illustrated by zinc and copperAm. J. Clin. Nutr.199561621s624s10.1093/ajcn/61.3.621S7879727
+
+[196] 196.BlakeboroughP.SalterD.N.The intestinal transport of zinc studied using brush-border-membrane vesicles from the pigletBr. J. Nutr.198757455510.1079/BJN198700083801384
+
+[197] 197.ValbergL.S.FlanaganP.R.ChamberlainM.J.Effects of iron, tin, and copper on zinc absorption in humansAm. J. Clin. Nutr.19844053654110.1093/ajcn/40.3.5366475824
+
+[198] 198.JohnsonM.A.BaierM.J.GregerJ.L.Effects of dietary tin on zinc, copper, iron, manganese, and magnesium metabolism of adult malesAm. J. Clin. Nutr.1982351332133810.1093/ajcn/35.6.13327081116
+
+[199] 199.SolomonsN.W.JacobR.A.PinedaO.ViteriF.E.Studies on the bioavailability of zinc in man. Iii. Effects of ascorbic acid on zinc absorptionAm. J. Clin. Nutr.1979322495249910.1093/ajcn/32.12.2495506973
+
+[200] 200.NairK.M.BrahmamG.N.RadhikaM.S.DriptaR.C.RavinderP.BalakrishnaN.ChenZ.HawthorneK.M.AbramsS.A.Inclusion of guava enhances non-heme iron bioavailability but not fractional zinc absorption from a rice-based meal in adolescentsJ. Nutr.201314385285810.3945/jn.112.17170223596161PMC3652882
+
+[201] 201.WegmullerR.TayF.ZederC.BrnicM.HurrellR.F.Zinc absorption by young adults from supplemental zinc citrate is comparable with that from zinc gluconate and higher than from zinc oxideJ. Nutr.201414413213610.3945/jn.113.18148724259556PMC3901420
+
+[202] 202.PabónM.L.LönnerdalB.Effect of citrate on zinc bioavailability from milk, milk fractions and infant formulasNutr. Res.19931310311110.1016/S0271-5317(05)80661-X
+
+[203] 203.LönnerdalB.StanislowskiA.G.HurleyL.S.Isolation of a low molecular weight zinc binding ligand from human milkJ. Inorg. Biochem.198012717810.1016/S0162-0134(00)80044-67189547
+
+[204] 204.SandströmB.CederbladA.LonnerdalB.Zinc absorption from human milk, cow’s milk, and infant formulasAm. J. Dis. Child.198313772672910.1001/archpedi.1983.021403400100026869328
+
+[205] 205.GharibzahediS.M.T.JafariS.M.The importance of minerals in human nutrition: Bioavailability, food fortification, processing effects and nanoencapsulationTrends Food Sci. Technol.20176211913210.1016/j.tifs.2017.02.017
+
+[206] 206.FurnissD.E.VuichoudJ.FinotP.A.HurrellR.F.The effect of maillard reaction products on zinc metabolism in the ratBr. J. Nutr.19896273974910.1079/BJN198900742513873
+
+[207] 207.O’BrienJ.MorrisseyP.A.Metal ion complexation by products of the maillard reactionFood Chem.199758172710.1016/S0308-8146(96)00162-8
+
+[208] 208.KumarV.SinhaA.K.MakkarH.P.S.BeckerK.Dietary roles of phytate and phytase in human nutrition: A reviewFood Chem.201012094595910.1016/j.foodchem.2009.11.052
+
+[209] 209.QuartermanJ.Metal absorption and the intestinal mucus layerDigestion1987371910.1159/0001994803609500
+
+[210] 210.KrezelA.MaretW.The biological inorganic chemistry of zinc ionsArch. Biochem. Biophys.201661131910.1016/j.abb.2016.04.01027117234PMC5120989
+
+[211] 211.WhiteheadM.W.ThompsonR.P.PowellJ.J.Regulation of metal absorption in the gastrointestinal tractGut19963962562810.1136/gut.39.5.6259026473PMC1383382
+
+[212] 212.PowellJ.J.JugdaohsinghR.ThompsonR.P.The regulation of mineral absorption in the gastrointestinal tractProc. Nutr. Soc.19995814715310.1079/PNS1999002010343352

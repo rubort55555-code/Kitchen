@@ -1,0 +1,51 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 3 из 23: 2. Functions of Magnesium
+============================================================
+
+Magnesium is primarily found within the cell where it acts as a counter ion for the energy-rich ATP and nuclear acids. Magnesium is a cofactor in more than 300 enzyme systems that regulate diverse biochemical reactions in the body, including protein synthesis, muscle and nerve transmission, neuromuscular conduction, signal transduction, blood glucose control, and blood pressure regulation. Some magnesium dependent enzymes are Na+/K+-ATPase, hexokinase, creatine kinase, protein kinase, and cyclases (see Table 1). Magnesium is also necessary for structural function of proteins, nucleic acids or mitochondria. It is required for DNA and RNA synthesis, and for both aerobic and anaerobic energy production—oxidative phosphorylation and glycolysis—either indirectly as a part of magnesium-ATP complex, or directly as an enzyme activator.
+
+Magnesium also plays a key role in the active transport of calcium and potassium ions across cell membranes, a process that is important for nerve impulse conduction, muscle contraction, vasomotor tone and normal heart rhythm. As natural calcium antagonist the block of N-methyl-d-aspartate (NMDA) receptor channels by external magnesium is believed to be of great physiological importance. Moreover, it contributes to the structural development of bone and is required for the adenosine triphosphate-dependent synthesis of the most important intracellular antioxidant glutathione [6,7,8,9,10,11].
+
+The most important reservoir for magnesium is the bone (about 60% of total body magnesium), the remaining 40% is located extra- and intracellularly. Magnesium excretion is mainly regulated by the kidney. About 100 mmol/L magnesium is filtered daily [12,13,14,15]. The total magnesium content of the human body is reported to be ~20 mmol/kg of fat-free tissue. In other words, total magnesium in the average 70 kg adult with 20% (w/w) fat is ~1000 to 1120 mmol or ~24 g [10,13,15].
+
+Magnesium is beside sodium, potassium and calcium an important electrolyte for human metabolism. About 99% of total body magnesium is located in bone, muscles and non-muscular soft tissue [12,13]. Approximately 50%–60% of magnesium resides as surface substituents of the hydroxyapatite mineral component of bone. Most of the remaining magnesium is contained in skeletal muscle and soft tissue. The magnesium content of bone decreases with age, and magnesium that is stored in this way is not completely bioavailable during magnesium deprivation.
+
+Table 1. Functions of magnesium (selection) [6,7,8,9,10].
+
+Magnesium is involved in more than 300 essential metabolic reactions (e.g., all Adenosine Triphosphate (ATP)-dependent reactions).
+
+Energy production (→ ATP production)
+
+Breakdown and energetic utilization of carbohydrates, proteins and fats in intermediate metabolism (e.g., glycolysis, respiratory chain phosphorylation). ATP exists primarily as a complex with magnesium (MgATP).
+
+Enzyme activation (examples)
+
+Mitochondrial ATP synthase, Na+/K+-ATPase, Hexokinase, Creatine kinase, Adenylate cyclase, Phosphofructokinase, tyrosine kinase activity of the insulin receptor.
+
+Calcium antagonist/NMDA-receptor antagonist
+
+Control of calcium influx at the cell membrane (course of contractions, regulation of vascular muscle tone): muscle contraction/relaxation, neurotransmitter release, action potential conduction in nodal tissue, neuromuscular impulse conduction (inhibition of calcium-dependent acetylcholine release at the motor end plate), maintenance and stabilization of membrane physiology, muscle contraction.
+
+Cardiovascular system
+
+Economization of cardiac pump function, regulation of potassium movement in myocardial cells, protection against stress, vasodilation of the coronary and peripheral arteries, reduction of platelet aggregation.
+
+Membrane function
+
+Transmembrane electrolyte flux, active transport of potassium and calcium across cell membranes, regulation of cell adhesion and cell migration.
+
+Structural roles
+
+Component of mineralized bone (structure, microarchitecture), multiple enzyme complexes, mitochondria, proteins, polyribosomes, and nucleic acids.
+
+Nutrient metabolism
+
+Metabolic activation and utilisation of vitamin D, B-vitamins (e.g., thiamine) and glutathione.
+
+Intracellular magnesium concentrations range from 5–20 mmol/L; 1%–5% is ionized, the remainder is bound to proteins, negatively charged molecules and adenosine triphosphate (ATP) [14,15]. Extracellular magnesium accounts for about 1%–3% of total body magnesium [13,15] which is primarily found in serum and red blood cells. Normal serum magnesium concentration is about 0.76–1.15 mmol/L [7,16,17,18,19]. It is categorized into three fractions. It is either ionized (55%–70%), bound to protein (20%–30%) or complexed with anions (5%–15%) such as phosphate, bicarbonate and citrate or sulphate. Red blood cells/serum magnesium ratio is about 2.8 [14,15].

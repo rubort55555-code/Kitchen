@@ -1,0 +1,13 @@
+Название: Modeling Zinc Absorption in the Adult Population of Colombia: Insights for Nutritional Evaluation and Intervention Strategies
+Авторы: José Alexander Alvarez-Bustamante, Angélica María Muñoz
+Журнал: Biological Trace Element Research, 2024
+DOI: https://doi.org/10.1007/s12011-024-04180-x   PMID: 38739259   PMC: PMC11700909
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2024
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 9 из 12: Conclusions
+============================================================
+
+This investigation has highlighted the complex interplay between dietary factors and zinc absorption in the Colombian adult population. Utilizing the Miller et al. (2013) model, our study has revealed significant shortcomings in the absorption of zinc, challenging the current RDA and EAR for this vital micronutrient. Furthermore, an analysis of dietary intake patterns separately indicated deficiencies in zinc consumption. These findings underscore the need for age-related dietary adjustments and the consideration of unique Colombian dietary patterns to develop more effective nutritional guidelines.
+
+Future research should focus on longitudinal studies to observe the long-term impact of these adjustments and expand to include bioavailability studies, which could further refine the application of the Miller model. Ultimately, our study advocates for a more tailored approach to dietary recommendations that specifically address the nutritional needs of the Colombian population, aiming to improve zinc nutritional status and overall public health.

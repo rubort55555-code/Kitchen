@@ -1,0 +1,11 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 6 из 23: 4. Magnesium Absorption and Excretion (часть 2)
+============================================================
+
+In recent years, gene-linkage studies in families with hypomagnesemia have been performed. Some of these diseases are familial hypomagnesemia with hypercalciuria and nephrocalcinosis. Mutations in the claudin-16 gene have been shown to be responsible for this rare inherited disorder. Bartter’s syndrome is often linked to mild hypomagnesemia. It belongs to a group of autosomal-recessive disorders characterized by reduced salt absorption in the thick ascending limb. Mutations in the TRPM6 gene are associated with hypomagnesemia and secondary hypocalcemia. Other human magnesium genetic transport disorders are the isolated autosomal recessive hypomagnesemia (gene: Epidermal Growth Factor/EGF), autosomal dominant hypomagnesemia (gene: potassium channel, voltage gated shaker related subfamily A, member 1/KCNA1), Gitelman syndrome (gene: Na-Cl-Co-transporter/NCC), isolated dominant hypomagnesemia (gene: Na+/K+-ATPase), maturity-onset diabetes of young (gene: Hepatocyte Nuclear Factor-1 Beta/HNF1B), and the SeSAME syndrome (gene: potassium channel, inwardly rectifying subfamily J, member 10/KCNJ10) [15,37].

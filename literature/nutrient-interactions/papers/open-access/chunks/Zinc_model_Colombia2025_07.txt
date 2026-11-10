@@ -1,0 +1,31 @@
+Название: Modeling Zinc Absorption in the Adult Population of Colombia: Insights for Nutritional Evaluation and Intervention Strategies
+Авторы: José Alexander Alvarez-Bustamante, Angélica María Muñoz
+Журнал: Biological Trace Element Research, 2024
+DOI: https://doi.org/10.1007/s12011-024-04180-x   PMID: 38739259   PMC: PMC11700909
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2024
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 7 из 12: Discussion
+============================================================
+
+## Nutrient Intake Analysis
+
+For individuals aged 19 to 70, the RDA for calcium is set between 1000 and 1200 mg/day [34], while the WHO suggests a daily protein consumption of 0.83 g/kg [35], and in Colombia, it is 1.11 g/kg [33]. For example, adults weighing between 50 and 70 kg should aim to consume 42 to 58 g of protein per day, respectively. Our dietary intake analysis (Table 1) reveals that the median calcium intake of the Colombian sample is 284.7 mg/day, significantly below the recommended range, indicating a widespread deficiency in this crucial nutrient. In contrast, the median protein intake is 47.7 g/day, which is within the nutritionally sufficient range.
+
+Notably, the median phytate intake for the total population is reported as 487.0 mg/day (Table 1). This level is significantly lower than the 710 mg/day reference value reported by Larvie and Armah [36] in the USA (p < 0.001, Wilcoxon one-sample test). It is pertinent to mention that there is no RDA for phytate, with the average daily intake in the Western diet ranging between 250 and 800 mg [37], aligning with our sample’s intake. These insights are valuable as they provide context for the potential dietary limitations affecting zinc absorption in the Colombian population.
+
+## Analysis of the Phytate-to-Zinc Molar Ratio
+
+An essential aspect in assessing zinc adequacy in the diet is understanding the impact of the P/Z molar ratio on zinc bioavailability. Conducting a Wilcoxon one-sample test revealed that the median P/Z molar ratios in our studied population were significantly below the critical threshold of 15 (p < 0.001), suggesting that zinc absorption might not be severely impaired despite the presence of dietary phytate. This observation aligns with previous research indicating significant reductions in zinc absorption for P/Z ratios exceeding 15 [38]. These findings underscore the complex relationship between dietary zinc and phytate, highlighting the need for considering both the quantities consumed and their specific interaction to ensure optimal zinc absorption and inform effective dietary guidelines.
+
+## Understanding Zinc Absorption in the Colombian Population
+
+This study presents a critical evaluation of zinc absorption in the Colombian adult population by employing the 2013 Miller et al. model [31], considering the influences of dietary protein and calcium on zinc bioavailability. Nutritionists face the considerable challenge of accurately determining nutrient absorption from a mixed diet [39] a complexity that our study acknowledges and addresses with this refined model. This model surpasses earlier ones by embracing the intricate dynamics of nutrient interactions within the human digestive system and factoring in the synergistic effects of these nutrients on zinc metabolism [29, 30, 40].
+
+In Colombia, the lack of serum zinc level measurements in the adult population from national surveys, historically limited to children, underscores a significant gap in nutritional data. Our study addresses this void and provides novel insights with the potential to inform public health interventions and nutritional guidelines for adults [16, 17].
+
+The protein intake in adults may offer protection against inadequate zinc absorption [22]. The inclusion of protein, particularly from animal sources, is crucial as it enhances zinc absorption through amino acids that bind zinc, such as histidine and methionine, thereby increasing its solubility and uptake [22]. Additionally, the model’s incorporation of calcium’s competitive inhibition is vital in phytate diets [22, 29], which are characteristic of Colombian diets (see Table 1). By leveraging this comprehensive model, our study not only assesses zinc absorption but also contributes to the advancement in modeling techniques, offering a more accurate reflection of the complexities inherent in zinc metabolism.
+
+Our findings on the FAZ underscore the complexity of zinc absorption in the Colombian adult population. The broad distribution of FAZ values, ranging from 8.9 to 84.8%, not only underscores significant variability in zinc bioavailability among individuals but also reflects the nuanced nature of zinc absorption dynamics observed across different studies. This variability, while initially appearing to exceed the commonly cited range of 16–50% for fractional absorption [8], is in fact aligned with the findings from other studies, such as those by Hunt et al. [41], which have documented a similar wide range of absorption efficiencies within populations. Such observations emphasize the variability in human zinc nutrition and support the need for considering a broader spectrum of individual differences in dietary zinc utilization. The detailed presentation of FAZ metrics, including minimum, maximum, mean, and standard deviation, enriches our understanding of this variability and offers valuable insights for future research and the development of dietary guidelines that account for these variances.
+
+## Reevaluation of Dietary Zinc Recommendations

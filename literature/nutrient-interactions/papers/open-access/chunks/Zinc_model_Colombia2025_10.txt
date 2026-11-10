@@ -1,0 +1,37 @@
+Название: Modeling Zinc Absorption in the Adult Population of Colombia: Insights for Nutritional Evaluation and Intervention Strategies
+Авторы: José Alexander Alvarez-Bustamante, Angélica María Muñoz
+Журнал: Biological Trace Element Research, 2024
+DOI: https://doi.org/10.1007/s12011-024-04180-x   PMID: 38739259   PMC: PMC11700909
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2024
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 10 из 12: References
+============================================================
+
+[1] 1.AndreiniCBanciLBertiniIRosatoACounting the zinc-proteins encoded in the human genomeJ Proteome Res2005519620110.1021/pr050361j16396512Andreini C, Banci L, Bertini I, Rosato A (2005) Counting the zinc-proteins encoded in the human genome. J Proteome Res 5:196–201. 10.1021/pr050361j10.1021/pr050361j16396512
+
+[2] 2.KingJCZinc: an essential but elusive nutrientAm J Clin Nutr201194679S684S10.3945/ajcn.110.00574421715515PMC3142737King JC (2011) Zinc: an essential but elusive nutrient. Am J Clin Nutr 94:679S–684S. 10.3945/ajcn.110.00574421715515 10.3945/ajcn.110.005744PMC3142737
+
+[3] 3.MaretWThe metals in the biological periodic system of the elements: concepts and conjecturesInt J Mol Sci2016176610.3390/ijms1701006626742035PMC4730311Maret W (2016) The metals in the biological periodic system of the elements: concepts and conjectures. Int J Mol Sci 17:66. 10.3390/ijms1701006626742035 10.3390/ijms17010066PMC4730311
+
+[4] 4.HiggsJDThe changing nature of red meat: 20 years of improving nutritional qualityTrends Food Sci Technol200011859510.1016/S0924-2244(00)00055-8Higgs JD (2000) The changing nature of red meat: 20 years of improving nutritional quality. Trends Food Sci Technol 11:85–95. 10.1016/S0924-2244(00)00055-8
+
+[5] 5.ShkembiBHuppertzTInfluence of dairy products on bioavailability of zinc from other food products: a review of complementarity at a meal levelNutrients202113425310.3390/nu1312425334959808PMC8705257Shkembi B, Huppertz T (2021) Influence of dairy products on bioavailability of zinc from other food products: a review of complementarity at a meal level. Nutrients 13:4253. 10.3390/nu1312425334959808 10.3390/nu13124253PMC8705257
+
+[6] 6.BabaaliERahmdelSBeriziEAkhlaghiMGötzFMazloomiSMDietary intakes of zinc, copper, magnesium, calcium, phosphorus, and sodium by the general adult population aged 20–50 years in Shiraz, Iran: a total diet study approachNutrients202012337010.3390/nu1211337033139663PMC7693320Babaali E, Rahmdel S, Berizi E, Akhlaghi M, Götz F, Mazloomi SM (2020) Dietary intakes of zinc, copper, magnesium, calcium, phosphorus, and sodium by the general adult population aged 20–50 years in Shiraz, Iran: a total diet study approach. Nutrients 12:3370. 10.3390/nu1211337033139663 10.3390/nu12113370PMC7693320
+
+[7] 7.RoohaniNHurrellRKelishadiRSchulinRZinc and its importance for human health: an integrative reviewJ Res Med Sci20131814415723914218PMC3724376Roohani N, Hurrell R, Kelishadi R, Schulin R (2013) Zinc and its importance for human health: an integrative review. J Res Med Sci 18:144–15723914218 PMC3724376
+
+[8] 8.MaaresMHaaseHA guide to human zinc absorption: general overview and recent advances of in vitro intestinal modelsNutrients20201276210.3390/nu1203076232183116PMC7146416Maares M, Haase H (2020) A guide to human zinc absorption: general overview and recent advances of in vitro intestinal models. Nutrients 12:762. 10.3390/nu1203076232183116 10.3390/nu12030762PMC7146416
+
+[9] 9.GuptaSBrazierAKMLoweNMZinc deficiency in low- and middle-income countries: prevalence and approaches for mitigationJ Hum Nutr Diet20203362464310.1111/jhn.1279132627912Gupta S, Brazier AKM, Lowe NM (2020) Zinc deficiency in low- and middle-income countries: prevalence and approaches for mitigation. J Hum Nutr Diet 33:624–643. 10.1111/jhn.1279132627912 10.1111/jhn.12791
+
+[10] 10.CedielGOlivaresMBritoACoriHLópez de RomañaDZinc deficiency in Latin America and the CaribbeanFood Nutr Bull201536S129S13810.1177/037957211558578126125198Cediel G, Olivares M, Brito A, Cori H, López de Romaña D (2015) Zinc deficiency in Latin America and the Caribbean. Food Nutr Bull 36:S129–S138. 10.1177/037957211558578126125198 10.1177/0379572115585781
+
+[11] 11.WessellsKRBrownKHEstimating the global prevalence of zinc deficiency: results based on zinc availability in national food supplies and the prevalence of stuntingPLoS ONE2012711e5056810.1371/journal.pone.005056823209782PMC3510072Wessells KR, Brown KH (2012) Estimating the global prevalence of zinc deficiency: results based on zinc availability in national food supplies and the prevalence of stunting. PLoS ONE 7(11):e50568. 10.1371/journal.pone.005056823209782 10.1371/journal.pone.0050568PMC3510072
+
+[12] 12.HussainAJiangWWangXShahidSSabaNAhmadMDarAMasoodSUImranMMustafaAMechanistic impact of Zinc Deficiency in Human DevelopmentFront Nutr2022971706410.3389/fnut.2022.71706435356730PMC8959901Hussain A, Jiang W, Wang X, Shahid S, Saba N, Ahmad M, Dar A, Masood SU, Imran M, Mustafa A (2022) Mechanistic impact of Zinc Deficiency in Human Development. Front Nutr 9:717064. 10.3389/fnut.2022.71706435356730 10.3389/fnut.2022.717064PMC8959901
+
+[13] 13.International Zinc Nutrition Consultative Group (IZiNCG)BrownKHRiveraJABhuttaZGibsonRSKingJCLönnerdalBRuelMTSandtrömBWasantwisutEHotzCInternational Zinc Nutrition Consultative Group (IZiNCG) technical document #1. Assessment of the risk of zinc deficiency in populations and options for its controlFood Nutr Bull200425S99S20318046856International Zinc Nutrition Consultative Group (IZiNCG), Brown KH, Rivera JA, Bhutta Z, Gibson RS, King JC, Lönnerdal B, Ruel MT, Sandtröm B, Wasantwisut E, Hotz C (2004) International Zinc Nutrition Consultative Group (IZiNCG) technical document #1. Assessment of the risk of zinc deficiency in populations and options for its control. Food Nutr Bull 25:S99–S20318046856
+
+[14] 14.FosterMSammanSVegetarian diets across the lifecycle: impact on zinc intake and statusAdv Food Nutr Res2015749313110.1016/bs.afnr.2014.11.00325624036Foster M, Samman S (2015) Vegetarian diets across the lifecycle: impact on zinc intake and status. Adv Food Nutr Res 74:93–131. 10.1016/bs.afnr.2014.11.00325624036 10.1016/bs.afnr.2014.11.003

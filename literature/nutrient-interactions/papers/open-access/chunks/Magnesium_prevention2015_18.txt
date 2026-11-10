@@ -1,0 +1,75 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 18 из 23: References
+============================================================
+
+[1] 1.CottonF.A.WilkinsonG.Anorganische ChemieChemie GmbHWeilheim, Germany1967
+
+[2] 2.WeastR.C.Handbook of Chemistry and PhysicsCRC PressBoca Raton, FL, USA1987
+
+[3] 3.HollemannA.F.WibergE.Lehrbuch der Anorganischen ChemieDe GruyterBerlin, Germany1964
+
+[4] 4.BodakerI.SharonI.SuzukiM.FeingerschR.ShmoishM.AndreishchevaE.SoginM.L.RosenbergM.MaguiereM.E.BelkinS.Comparative community genomics in the Dead Sea: An increasingly extreme environmentISME J.2010439940710.1038/ismej.2009.14120033072
+
+[5] 5.SongY.RidkerP.M.MansonJ.E.CookN.R.BuringJ.E.LiuS.Magnesium intake, C-reactive protein, and the prevalence of metabolic syndrome in middle-aged and older U.S. WomenDiabetes Care2005281438144410.2337/diacare.28.6.143815920065
+
+[6] 6.Standing Committee on the Scientific Evaluation of Dietary Reference IntakesFood and Nutrition BoardInstitute of Medicine (IOM)Dietary Reference Intakes for Calcium, Phosphorus, Magnesium, Vitamin D, and FluorideNational Academies PressWashington, DC, USA199723115811
+
+[7] 7.GröberU.MagnesiumMicronutrients: Metabolic Tuning-Prevention-Therapy1st ed.GröberU.MedPharm Scientific PublishersStuttgart, Germany2009159166
+
+[8] 8.RudeR.K.MagnesiumEncyclopedia of Dietary Supplements2nd ed.CoatesP.M.BetzJ.M.Informa HealthcareNew York, NY, USA2010527537
+
+[9] 9.RudeR.K.MagnesiumModern Nutrition in Health and Disease11th ed.RossA.C.CaballeroB.CousinsR.J.TuckerK.L.ZieglerT.R.Lippincott Williams & WilkinsBaltimore, MA, USA2012159175
+
+[10] 10.SwaminathanR.Magnesium metabolism and its disordersClin. Biochem. Rev.200324476618568054PMC1855626
+
+[11] 11.CastiglioniS.CazzanigaA.AlbisettiW.MaierJ.A.Magnesium and osteoporosis: Current state of knowledge and future research directionsNutrients201353022303310.3390/nu508302223912329PMC3775240
+
+[12] 12.ClassenH.G.NowitzkiS.The clinical importance of magnesium. 2. The indications for supplementation and therapyFortschr. Med.1990101982002187780
+
+[13] 13.KistersK.Störungen des MagnesiumhaushaltesInternist19983981581910.1007/s0010800502499757384
+
+[14] 14.SeeligM.S.Magnesium requirements in human nutritionJ. Med. Soc. N. J.1982798498506960186
+
+[15] 15.Jahnen-DechentJ.KettelerM.Magnesium basicsClin. Kidney J.20125i3i1410.1093/ndtplus/sfr16326069819PMC4455825
+
+[16] 16.IsmailY.IsmailA.A.The underestimated problem of using serum magnesium measurements to exclude magnesium deficiency in adults; a health warning is needed for “normal” resultsClin. Chem. Lab. Med.20104832332710.1515/CCLM.2010.07720170394
+
+[17] 17.Von EhrlichE.BarbagalloM.ClassenH.G.Guerrero-RomeroF.MorrenF.C.Rodriguez-MoranM.VierlingW.VormannJKistersK.The significance of magnesium in insulin resistance, metabolic syndrome, and diabetes—Recommendations of the Association of Magnesium Research e.VDiabetol. Stoffwechs.2014996100
+
+[18] 18.VormannJ.Update: Magnesium und DiabetesOM—Z. Orthomol. Med.2014168
+
+[19] 19.ŠvagždienėM.ŠirvinskasE.BaranauskienėD.AdukauskienėD.Correlation of magnesium deficiency with C-reactive protein in elective cardiac surgery with cardiopulmonary bypass for ischemic heart diseaseMedicina (Kaunas)20155110010610.1016/j.medici.2015.03.00325975878
+
+[20] 20.MoshfeghA.GoldmanJ.AhujaJ.RhodesD.LaCombR.What We Eat in America, NHANES 2005–2006: Usual Nutrient Intakes from Food and Water Compared to 1997 Dietary Reference Intakes for Vitamin D, Calcium, Phosphorus, and MagnesiumU.S. Department of Agriculture, Agricultural Research ServiceWashington, DC, USA2009
+
+[21] 21.Nationale Verzehrsstudie IIAvailable online: http://www.was-esse-ich.de/uploads/media/NVSII_Abschlussbericht_Teil_2.pdf(accessed on 13 June 2015)
+
+[22] 22.ShahN.C.ShahJ.G.LiZ.JiangX.C.AlturaB.T.AlturaB.M.Short-term magnesium deficiency downregulates telomerase, upregulates neutral sphingomyelinase and induces oxidative DNA damage in cardiovascular tissues: relevance to atherogenesis, cardiovascular diseases and agingInt. J. Clin. Exp. Med.2014749751424753742PMC3992387
+
+[23] 23.MaJ.FolsomA.R.MelnickS.L.EckfeldtJ.H.SharrettA.R.NabulsiA.A.HutchinsonR.G.MetcalfP.A.Associations of serum and dietary magnesium with cardiovascular disease, hypertension, diabetes, insulin, and carotid arterial wall thickness: The ARIC study. Atherosclerosis Risk in Communities StudyJ. Clin. Epidemiol.19954892794010.1016/0895-4356(94)00200-A7782801
+
+[24] 24.AlturaB.M.Introduction: importance of Mg in physiology and medicine and the need for ion selective electrodesScand. J. Clin. Lab. Invest. Suppl.19942175910.3109/003655194090952067939385
+
+[25] 25.MarxA.NeutraR.R.Magnesium in drinking water and ischemic heart diseaseEpidemiol. Rev.19971925827210.1093/oxfordjournals.epirev.a0179579494787
+
+[26] 26.MagnesiumAvailable online: http://fnic.nal.usda.gov/food-composition/vitamins-and-minerals/magnesium(accessed on 8 January 2015)
+
+[27] 27.NielsenF.H.Magnesium, inflammation, and obesity in chronic diseaseNutr Rev.20106833334010.1111/j.1753-4887.2010.00293.x20536778
+
+[28] 28.Centers for Disease Control and Prevention (CDC)National Health and Nutrition Examination SurveyAvailable online: http://www.ars.usda.gov/SP2UserFiles/Place/80400530/pdf/0506/usual_nutrient_intake_vitD_ca_phos_mg_2005-06.pdf(accessed on 8 January 2015)
+
+[29] 29.ChiuveS.E.KorngoldE.C.JanuzziJ.L.Jr.GantzerM.L.AlbertC.M.Plasma and dietary magnesium and risk of sudden cardiac death in womenAm. J. Clin. Nutr.20119325326010.3945/ajcn.110.00225321106914PMC3021423
+
+[30] 30.LarssonS.C.OrsiniN.WolkA.Dietary magnesium intake and risk of stroke: A meta-analysis of prospective studiesAm. J. Clin. Nutr.20129536236610.3945/ajcn.111.02237622205313
+
+[31] 31.DurlachJ.Magnesium depletion and pathogenesis of Alzheimer’s diseaseMagnes. Res.199032172182132752
+
+[32] 32.RosanoffA.PlessetM.R.Oral magnesium supplements decrease high blood pressure (SBP > 155 mm Hg) in hypertensive subjects on anti-hypertensive medications: A targeted meta-analysisMagnes. Res.20132693992413486110.1684/mrh.2013.0343
+
+[33] 33.BarbagalloM.BelvedereM.DominguezL.J.Magnesium homeostasis and agingMagnes. Res.2009222352462022800110.1684/mrh.2009.0187

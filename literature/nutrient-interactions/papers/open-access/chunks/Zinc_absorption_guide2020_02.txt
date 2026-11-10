@@ -1,0 +1,13 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 2 из 29: 1. Introduction
+============================================================
+
+The essential trace element zinc plays a key role for several important biological processes in the human body [1]. To compensate the endogenous zinc loss and maintain a healthy zinc homeostasis, this micronutrient has to be supplied with food on a daily basis [2]. Human body zinc homeostasis is predominantly regulated by its intestinal absorption [3]. In this process, zinc transporters on the apical and basolateral membrane of enterocytes are engaged and regulate cellular and body zinc homeostasis together with the cellular zinc-binding protein metallothionein [4,5]. Despite this knowledge and ongoing research, a deeper understanding of the molecular processes regulating zinc absorption via the intestinal epithelium is still scarce. Zinc absorption does not only depend on an adequate dietary intake, but is also greatly affected by its intestinal availability from the diet. To further illuminate the impact of these factors on zinc absorption by the intestinal epithelium remains one of the determining topics in research [6,7]. Herein, in vivo human studies using (stable) isotope techniques are still the gold standard [8]. During the past 50 years, attempts to establish suitable three-dimensional in vitro cell culture models to mimic in vivo processes have gained more attention. This is mainly due to high costs and ethical standards of animal studies and the benefits of in vitro models providing a microenvironment that advances studies of cellular processes on a molecular level [9,10].
+
+This review aims to provide an overview of the current knowledge on human intestinal zinc absorption, including the major cellular processes and nutritional aspects. In addition, the scope of this review is to illustrate analytical approaches that have been applied to characterize human zinc absorption, particularly the achievements and advantages of in vitro cellular intestinal models to investigate molecular regulatory parameters and transport kinetics of human zinc absorption as well as the bioavailability of this micronutrient from food.

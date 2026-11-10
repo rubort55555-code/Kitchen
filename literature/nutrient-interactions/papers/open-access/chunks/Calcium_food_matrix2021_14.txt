@@ -1,0 +1,11 @@
+Название: Calcium Absorption from Food Products: Food Matrix Effects
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu14010180   PMID: 35011055   PMC: PMC8746734
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 14 из 20: 8. Conclusions
+============================================================
+
+Calcium is an essential nutrient in the human diet, and dietary intake of calcium does not meet recommendations in many parts of the world. In areas of the world where dietary calcium intake does meet recommendations, dairy consumption makes the largest contribution to calcium intake. This important contribution can be made due to the fact that in a single serving, dairy products provide high levels of calcium which become bioavailable under the conditions in the gastrointestinal tract. For other food groups, the presence of phytate and oxalate can strongly limit calcium absorption because the complexes are not solubilized and ionized even at the low pH encountered during gastric transit. In addition, controlled gastric release can also enhance calcium absorption. Hence, calcium fortification strategies which do not consider this aspect run the risk of increasing dietary calcium but not absorbable calcium. Overall, consideration of calcium in food matrices and changes therein during digestion is crucial for enabling optimal utilization of dietary calcium.

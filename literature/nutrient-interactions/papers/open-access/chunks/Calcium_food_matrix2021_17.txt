@@ -1,0 +1,69 @@
+Название: Calcium Absorption from Food Products: Food Matrix Effects
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu14010180   PMID: 35011055   PMC: PMC8746734
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 17 из 20: References (часть 3)
+============================================================
+
+[67] 67. KresselG. Bioavailability and solubility of different calcium-salts as a basis for calcium enrichment of beveragesFood Nutr. Sci.20101535810.4236/fns.2010.12009
+
+[68] 68. GossS.L. LemonsK.A. KerstetterJ.E. BognerR.H. Determination of calcium salt solubility with changes in pH and PCO2, simulating varying gastrointestinal environmentsJ. Pharm. Pharmacol.2007591485149210.1211/jpp.59.11.000417976258
+
+[69] 69. SheikhM.S. Santa AnaC.A. NicarM.J. SchillerL.R. FordtranJ.S. Gastrointestinal absorption of calcium from milk and calcium saltsN. Engl. J. Med.198731753253610.1056/NEJM1987082731709033614304
+
+[70] 70. BaileyR.L. DoddK.W. GoldmanJ.A. GahcheJ.J. DwyerJ.T. MoshfeghA.J. SemposC.T. PiccianoM.F. Estimation of total usual calcium and vitamin D intakes in the United StatesJ. Nutr.201014081782210.3945/jn.109.11853920181782PMC2838624
+
+[71] 71. KellerJ.L. LanouA.J. D BarnardN.E.A.L. The consumer cost of calcium from food and supplementsJ. Am. Diet. Assoc.20021021669167110.1016/S0002-8223(02)90355-X12449293
+
+[72] 72. De VreseM. Tricalcium Citrate (TCC) and HealthJ. Nutr. Health Food Eng.2017613014610.15406/jnhfe.2017.06.00214
+
+[73] 73. HeaneyR.P. ReckerR.R. WeaverC.M. Absorbability of calcium sources: The limited role of solubilityCalcif. Tissue Int.19904630030410.1007/BF025638192110852
+
+[74] 74. ClarksonE.M. McDonaldS.J. De WardenerH.E. The effect of a high intake of calcium carbonate in normal subjects and patients with chronic renal failureClin. Sci.1966304254385914385
+
+[75] 75. ReckerR.R. Calcium absorption and achlorhydriaN. Engl. J. Med.1985313707310.1056/NEJM1985071131302024000241
+
+[76] 76. HeaneyR.P. ReckerR.R. StegmanM.R. MoyA.J. Calcium absorption in women: Relationships to calcium intake, estrogen status, and ageJ. Bone Miner. Res.1989446947510.1002/jbmr.56500404042816496
+
+[77] 77. HuangS. ChenJ.C. HsuC.W. ChangW.H. Effects of nano calcium carbonate and nano calcium citrate on toxicity in ICR mice and on bone mineral density in an ovariectomized mice modelNanotechnology20092037510210.1088/0957-4484/20/37/37510219706952
+
+[78] 78. ElbleA.E. HillK.M. ParkC.Y. MartinB.R. PeacockM. WeaverC.M. Effect of calcium carbonate particle size on calcium absorption and retention in adolescent girlsJ. Am. Coll. Nutr.20113017117710.1080/07315724.2011.1071995721896874
+
+[79] 79. DavidssonL. TanumihardjoS. New frontiers in science and technology: Nuclear techniques in nutritionAm. J. Clin. Nutr.201194691S695S10.3945/ajcn.110.00581921653797PMC3142739
+
+[80] 80. WeaverC.M. HeaneyR.P. ConnorL. MartinB.R. SmithD.L. NielsenS. Bioavailability of calcium from tofu as compared with milk in premenopausal womenJ. Food Sci.2002673144314710.1111/j.1365-2621.2002.tb08873.x
+
+[81] 81. CharoenkiatkulS. KriengsinyosW. TuntipopipatS. SuthutvoravutU. WeaverC.M. Calcium absorption from commonly consumed vegetables in healthy Thai womenJ. Food Sci.200873H218H22110.1111/j.1750-3841.2008.00949.x19021804
+
+[82] 82. BeckA.B. BügelS. StürupS. JensenM. MølgaardC. HansenM. KrogsgaardO.W. SandströmB. A novel dual radio-and stable-isotope method for measuring calcium absorption in humans: Comparison with the whole-body radioisotope retention methodAm. J. Clin. Nutr.20037739940510.1093/ajcn/77.2.39912540400
+
+[83] 83. SandströmB. Fairweather-TaitS. HurrellR. Van DokkumW. Methods for studying mineral and trace element absorption in humans using stable isotopesNutr. Res. Rev.19936719510.1079/NRR1993000719094303
+
+[84] 84. WeaverC.M. ChaneyR.L. Intrinsic mineral labeling of edible plants: Methods and usesCrit. Rev. Food Sci. Nutr.1985237510110.1080/104083985095274203905264
+
+[85] 85. NickelK.P. MartinB.R. SmithD.L. SmithJ.B. MillerG.D. WeaverC.M. Calcium bioavailability from bovine milk and dairy products in premenopausal women using intrinsic and extrinsic labeling techniquesJ. Nutr.19961261406141110.1093/jn/126.5.14068618137
+
+[86] 86. WeaverC.M. HeaneyR.P. MartinB.R. FitzsimmonsM.L. Human calcium absorption from whole-wheat productsJ. Nutr.19911211769177510.1093/jn/121.11.17691941185
+
+[87] 87. HeaneyR.P. DowellM.S. RaffertyK. BiermanJ. Bioavailability of the calcium in fortified soy imitation milk, with some observations on methodAm. J. Clin. Nutr.2000711166116910.1093/ajcn/71.5.116610799379
+
+[88] 88. ZhaoY. MartinB.R. WeaverC.M. Calcium bioavailability of calcium carbonate fortified soymilk is equivalent to cow’s milk in young womenJ. Nutr.20051352379238210.1093/jn/135.10.237916177199
+
+[89] 89. WeaverC.M. HeaneyR.P. Isotopic exchange of ingested calcium between labeled sources. Evidence that ingested calcium does not form a common absorptive poolCalcif. Tissue Int.19914924424710.1007/BF025562121760767
+
+[90] 90. NevilleM.C. Calcium secretion into milkJ. Mammary Gland Biol. Neoplasia20051011912810.1007/s10911-005-5395-z16025219
+
+[91] 91. LentonS. NylanderT. TeixeiraS.C.M. HoltC. A review of the biology of calcium phosphate sequestration with special reference to milkDairy Sci. Technol.20159531410.1007/s13594-014-0177-225632319PMC4302223
+
+[92] 92. HuppertzT. HeckJ. BijlE. PoulsenN.A. LarsenL.B. Variation in casein distribution and mineralisation in the milk from Holstein-Friesian cowsInt. Dairy J.202111910506410.1016/j.idairyj.2021.105064
+
+[93] 93. AkkermanM. LarsenL.B. SørensenJ. PoulsenN.A. Natural variations of citrate and calcium in milk and their effects on milk processing propertiesJ. Dairy Sci.20191026830684110.3168/jds.2018-1619531155267
+
+[94] 94. FaulknerA. PeakerM. Reviews of the progress of dairy science: Secretion of citrate into milkJ. Dairy Res.19824915916910.1017/S002202990002224X7042779
+
+[95] 95. BijlE. van ValenbergH.J.F. HuppertzT. van HooijdonkA.C.M. Protein, casein, and micellar salts in milk: Current content and historical perspectivesJ. Dairy Sci.2013965455546410.3168/jds.2012-649723849643
+
+[96] 96. De KruifC.G. HoltC. Casein micelle structure, functions and interactionsAdvanced Dairy Chemistry—1 Proteins FoxP.F. McSweeneyP.L.H. Kluwer Academic/Plenum PublishersNew York, NY, USA2003233276

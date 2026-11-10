@@ -1,0 +1,864 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+### Abstract
+
+Zinc absorption in the small intestine is one of the main mechanisms regulating the systemic homeostasis of this essential trace element. This review summarizes the key aspects of human zinc homeostasis and distribution. In particular, current knowledge on human intestinal zinc absorption and the influence of diet-derived factors on bioaccessibility and bioavailability as well as intrinsic luminal and basolateral factors with an impact on zinc uptake are discussed. Their investigation is increasingly performed using in vitro cellular intestinal models, which are continually being refined and keep gaining importance for studying zinc uptake and transport via the human intestinal epithelium. The vast majority of these models is based on the human intestinal cell line Caco-2 in combination with other relevant components of the intestinal epithelium, such as mucin-secreting goblet cells and in vitro digestion models, and applying improved compositions of apical and basolateral media to mimic the in vivo situation as closely as possible. Particular emphasis is placed on summarizing previous applications as well as key results of these models, comparing their results to data obtained in humans, and discussing their advantages and limitations.
+
+### 1. Introduction
+
+The essential trace element zinc plays a key role for several important biological processes in the human body [1]. To compensate the endogenous zinc loss and maintain a healthy zinc homeostasis, this micronutrient has to be supplied with food on a daily basis [2]. Human body zinc homeostasis is predominantly regulated by its intestinal absorption [3]. In this process, zinc transporters on the apical and basolateral membrane of enterocytes are engaged and regulate cellular and body zinc homeostasis together with the cellular zinc-binding protein metallothionein [4,5]. Despite this knowledge and ongoing research, a deeper understanding of the molecular processes regulating zinc absorption via the intestinal epithelium is still scarce. Zinc absorption does not only depend on an adequate dietary intake, but is also greatly affected by its intestinal availability from the diet. To further illuminate the impact of these factors on zinc absorption by the intestinal epithelium remains one of the determining topics in research [6,7]. Herein, in vivo human studies using (stable) isotope techniques are still the gold standard [8]. During the past 50 years, attempts to establish suitable three-dimensional in vitro cell culture models to mimic in vivo processes have gained more attention. This is mainly due to high costs and ethical standards of animal studies and the benefits of in vitro models providing a microenvironment that advances studies of cellular processes on a molecular level [9,10].
+
+This review aims to provide an overview of the current knowledge on human intestinal zinc absorption, including the major cellular processes and nutritional aspects. In addition, the scope of this review is to illustrate analytical approaches that have been applied to characterize human zinc absorption, particularly the achievements and advantages of in vitro cellular intestinal models to investigate molecular regulatory parameters and transport kinetics of human zinc absorption as well as the bioavailability of this micronutrient from food.
+
+### 2. Zinc Homeostasis and Its Role in Human Health
+
+Zinc is the second most abundant micronutrient in the human body after iron [11,12]. Based on bioinformatics research, approximately 2800 human proteins are presumed to bind zinc [13], potentially requiring the divalent cation for catalytic, structural, and regulatory functions [5,13]. Hereby, zinc is crucial for gene expression, is needed for the activity of several metalloenzymes, and provides a major structural component in zinc fingers and zinc finger-containing domains [14,15]. Consequently, zinc is essential for various cellular processes such as differentiation, apoptosis, and proliferation, which influences growth and development of an organism [16]. Moreover, in the past two decades, the knowledge about its importance as a signaling molecule increased [17], particularly in the immune system and as a neuro-modulator in synaptic vesicles [18]. To fulfill this multiplicity of functions, zinc needs to be properly distributed into all compartments of the human body, and the differences in zinc content between various organs (Figure 1, left hand side, calculation and references in Supplementary Table S1) highlights the existence of a complex homeostasis ensuring proper allocation. The adult human body contains approximately 2.6 g of zinc. The largest fraction is localized in bone and skeletal muscle (~86%), followed by skin (4.2%), and liver (3.4%). It has to be noted that some zinc-containing entities, such as the thymus and mucous membranes, are not included in the calculation, so the actual total zinc content of the human body is higher than the 2.6 g estimated in Figure 1. Moreover, according to Jackson et al., validity of such calculations is limited since they are mostly based on zinc content from biopsies and sections of tissues assuming that this reflects the total zinc content of the respective live tissue [19].
+
+Plasma or serum zinc levels in healthy individuals vary from 12 to 16 µM [20,21,22], which corresponds to less than 1% of whole-body zinc. It is mainly bound to albumin (60%), α-macroglobulin (30%), and transferrin (10%) [23], which leaves only a sub-nanomolar concentration of free zinc [24,25,26,27]. Still, serum represents a rapidly exchangeable zinc pool of high importance for distributing zinc within the body. In contrast, skeletal muscle and bone comprise zinc with a lower turnover and slower availability for systemic zinc homoeostasis [28].
+
+The importance of zinc homeostasis is highlighted by the remarkable number of diseases associated with alterations in tissue zinc levels, which is summarized in Figure 1 (right hand side). As there is no dedicated compartment for zinc storage in the human body, zinc has to be continuously replenished by dietary intake [2], replacing intestinal and non-intestinal losses of endogenous zinc [16,29]. Based on several human studies, these losses include fecal zinc excretions and excretions with urine, sweat, menstrual flow, and semen (for adults) as well as loss of hair, nails, and desquamated skin [30]. To this end, currently, human requirements are mostly estimated using a factorial approach considering the overall zinc losses including additional physiological requirements during pregnancies, lactation, or early infancy, as well as the bioavailability of the mineral from the diet [29,30]. Table S2 depicts daily recommendations for dietary zinc intake from different governmental agencies and non-governmental organizations.
+
+The main regulatory mechanisms for human zinc homeostasis are absorption and excretion [3], and the small intestine, pancreas, and liver play central roles in its maintenance [3]. Endogenous zinc is continuously excreted into the intestinal lumen, from which parts are reabsorbed [3], while the remainder, varying between 0.8 and 2.7 mg zinc/d, is excreted with feces [31,32,33,34]. Thus, the close interplay of absorption of exogenous zinc as well as the excretion and reabsorption of endogenous zinc provides a stable balance of body zinc homeostasis. The latter is maintained over a wide range of exogenous zinc intakes [3,35,36,37,38]. In zinc-deficient states, fecal and urinal zinc losses are rapidly decreasing [31,39,40]. Only when these mechanisms fail to sustain zinc-requiring processes, plasma zinc declines [35,40]. This is followed by a reduction of the less exchangeable zinc from tissues such as liver, testes, and bones [5,41]. Consequently, the plasma zinc level itself is not a reliable biomarker for body zinc status [5,27], especially since it also changes during inflammation [42] in response to stress or even after a meal [5].
+
+Inadequacy of the zinc status can be connected to insufficient food supply, but mostly results from poor bioavailability from the consumed diet [36]. Zinc deficiency has high prevalence in developing or poor countries [43,44]. Yet, vegans [45], vegetarians [45], elderly [30,44], and people with disorders connected to a diminished zinc absorption, such as acrodermatitis enteropathica or celiac disease [46] as well as diseases that cause increased zinc loss, such as inflammatory bowel diseases [47,48], are also susceptible.
+
+According to the World Health Organization (WHO), one-third of the world’s population are at risk for zinc deficiency [49]. The lack of a suitable biomarker for physiological zinc status, and, thus, a low possibility to recognize insufficient zinc absorption, particularly in the early stages of a mild zinc deficiency, is a major obstacle in this situation [16,50]. An imbalanced zinc status or deficiency of this micronutrient is associated with severe health consequences (Figure 1), which causes high morbidity. Zinc excess, on the other hand, is mainly associated with disturbed copper homeostasis (reviewed in detail in Reference [16]). Symptoms of zinc deficiency are reversible [16,51,52,53]. In most cases, zinc supplementation in addition to dietary zinc provides a convenient option to compensate for inadequate zinc intake, malabsorption, or increased zinc loss due to intestinal diseases [54,55,56].
+
+### 3. Zinc Absorption
+
+Zinc is absorbed throughout the whole small intestine [57,58], but the major site of intestinal zinc absorption in humans remains controversial. In rats, the highest absorption rate is reported either in the duodenum and ileum [59,60,61], or only in the ileum [62] or jejunum [58,63], respectively. In vivo studies investigating the actual site of zinc absorption in humans are scarce. However, using small intestine perfusion techniques in healthy individuals, the major absorption sites in human intestines are found to be both the duodenum [64] and jejunum [58].
+
+Zinc uptake takes place at the intestinal brush border membrane, where it is transported from the lumen into absorptive cells of the epithelium: the enterocytes. The subsequent excretion of the cation at the basolateral side of enterocytes releases it into the portal blood, where it is predominantly bound to albumin, which distributes the metal in the body [3,65]. While several in vitro studies show transport from the basolateral to the luminal site of the intestinal epithelium [66,67,68], this has not been observed in humans so far [69]. Additionally, only a rather low apical zinc secretion into the lumen is reported in vivo using perfused rat intestines and physiological serum zinc concentrations [70].
+
+Zinc absorption kinetics are described by carrier-mediated and saturable processes [58,69,71,72], whereby zinc uptake at the apical membrane of the intestinal mucosa seems to be the rate limiting step [70]. Saturation of these transport mechanisms at a certain luminal zinc level is reflected by an absorption plateau with a half saturation constant (Km) of cellular zinc uptake in vivo of 29–55 µM zinc [38,70,73]. However, at higher luminal zinc concentrations, zinc uptake becomes non-saturable, which indicates passive diffusion [3,57,71]. Notably, the ‘high zinc concentrations’ applied in these studies varied from >200–1000 µM [57,71,72]. This might not be relevant in vivo for normal zinc intake, as physiologically relevant concentrations in the intestinal lumen after consumption of a standard meal vary around 100 µM [58,64,74] for which a saturable and carrier-mediated transport kinetic applies both in in vitro and in vivo studies.
+
+Fractional absorption of dietary zinc in humans is typically in the range of 16–50% [7,30,33,75,76,77], which is inversely related to oral zinc intake [36]. Moreover, net absorption is regulated by body zinc homeostasis and, thus, depend on the individual zinc status adapting to prolonged low zinc diets. Consequently, zinc-deficient humans and animals show increased fractional zinc absorption [34,78,79,80], absorbing up to 92% of dietary zinc [34,80]. Accordingly, human zinc absorption is more efficient from low zinc diets [7]. Zinc absorption is also affected by the form in which it is administered. Net absorption is higher from orally administered aqueous zinc solutions than the absorption of the same amount of zinc included in a meal [57], mainly because absorption of the mineral depends on its bioavailability in the intestinal lumen, which will be discussed in detail in Section 4.1.
+
+## 3.1. Intestinal Zinc Transporters
+
+Intestinal zinc absorption is mainly mediated by the Zrt-, Irt-like protein (ZIP)4 (solute carrier (SLC)39A4), which imports ionic zinc from the lumen into enterocytes [81,82], and ZnT-1 (SLC30A1), which is a basolateral membrane protein exporting zinc on the basolateral side of enterocytes into the portal blood [83] (Figure 2). The basolaterally localized transporters ZIP5 (SLC39A5) and ZIP14 (SLC39A14) complement these two transporters by importing zinc from the blood circulation into enterocytes [84,85]. Moreover, ZnT-5 variant B (SLC30A5B) is localized at the apical membrane of enterocytes [74,86] and functions in a bidirectional manner, transporting both luminal zinc into enterocytes and cellular ions back into the lumen [86,87]. Hence, this suggests that the previously mentioned apical secretion of the mineral could possibly represent an additional regulatory mechanism of cellular and body zinc homeostasis [87,88].
+
+Earlier findings indicated involvement of the divalent metal transporter (DMT)-1, which is a cation transporter of low selectivity, in intestinal zinc uptake [89]. The identification of ZIP4 as the major transporter for zinc uptake and contradictory results in several in vitro studies [90,91,92,93,94], however, challenge the role of DMT-1 in physiological zinc transport.
+
+Even though the exact transport mechanisms of ZIPs and ZnTs are not yet fully elucidated, it is known that these proteins transport ionic zinc [14,95]. Dietary zinc in the intestinal lumen, however, is mainly complexed by food components influencing the actual available and absorbable zinc concentration. In addition to the uptake of the ionic form, zinc is also suggested to be absorbed in complex with certain amino acids by possibly utilizing another transport pathway than ionic zinc [96].
+
+## 3.2. Enterocyte Zinc Homeostasis and Regulation of Intestinal Zinc Absorption
+
+Cellular zinc homeostasis comprises three main zinc pools: zinc bound to proteins, stored in vesicles, and cytoplasmic free zinc (Figure 2A). The latter is only complexed by small molecule ligands [97] and considered to be the biologically active form of the ion [98]. This mobile zinc species is either in transit through the cell, being “re-distributed,” or serves as a signaling molecule [99]. Therefore, the cytoplasmic-free zinc concentration has to be tightly regulated [98] and is buffered to a picomolar level [97], being either transported out of the cell and sequestered into vesicles via ZIP and ZnT transporters, or bound to proteins such as metallothioneins (MTs) [99] (Figure 2A,B). Hence, MTs and zinc transporters represent an elaborate zinc buffering and muffling system [100].
+
+Detailed processes of cellular distribution of zinc into enterocytes and its transfer through the cells after its absorption are not yet completely understood. Examinations of free zinc (pools) in enterocytes in vitro with the eCalwy biosensor [101] and the fluorescent zinc probe Zinpyr-1 [102,103] document that enterocytes contain at least two different free zinc pools that are involved in the maintenance of zinc homeostasis during zinc absorption: cytoplasmic-free zinc and vesicular zinc [101,102,103]. Nevertheless, these processes have to be further scrutinized. In particular, the chronology of the zinc transfer through the enterocytes upon its absorption and its subsequent basolateral release into the blood circulation needs to be unraveled in more detail.
+
+The discovery of intestinal zinc transporters and elucidation of the role of zinc-binding MTs in maintaining enterocyte zinc homeostasis contributed to an increased understanding of regulatory parameters of intestinal zinc absorption. Furthermore, the current knowledge about their regulatory role during this process will be briefly summarized. There are four known MT genes (MT-1–MT-4) encoding eleven functional human MT-isoforms [108,109]. In the intestine, mainly MT-1 and MT-2 are expressed [109]. The singular form “MT” refers to both MT-isoforms for the sake of convenience and readability. Similar to its role in cellular zinc homeostasis in general, MT plays an important role in regulating enterocyte zinc homeostasis by binding zinc that is absorbed into the cells [70]. Thus, the protein controls free levels of the cation and is discussed to mediate zinc trafficking through the cell as well as its transfer to other proteins such as zinc transporters (Figure 3) [108,110]. Hence, MT’s zinc buffering and muffling properties might regulate the amount of zinc that is exported into the portal blood and distributed in the body.
+
+Expression of MT is related to changes in enterocyte zinc levels. Elevated cellular free zinc itself induces mt expression via the metal regulatory transcription factor 1 (MTF-1) [111]. Protein and messenger ribonucleic acid (mRNA) levels of intestinal MT increase the response to elevated dietary zinc in animals and humans in vivo [86,112,113,114], acting as an initial defense mechanism against high luminal zinc concentrations [114], whereas, in zinc-deficient states, MT protein and mRNA are decreasing [86,112,113,114]. Furthermore, MT upregulation appears to affect zinc transport kinetics and decreases luminal zinc absorption [71,115,116,117], which leads to decreased serum and body zinc levels in response to elevated intestinal MT [116,118,119]. In an earlier study, MT was also suggested to be involved in zinc export from enterocytes back into the intestinal lumen [117]. Furthermore, luminal secretion of MT after treatment with physiological zinc concentrations was observed in a three-dimensional in vitro intestinal cell model, indicating that MT might also mediate enterocyte zinc homeostasis by apically sequestering excess zinc [120]. The relevance of MTs for zinc trafficking, however, seems to be limited, as MT knockout mice (for MT-1 and-2 genes) are more sensitive to additional dietary zinc, but still viable and reproductive [118,121]. Furthermore, experimental modeling of MTs as mufflers indicated that they are possibly not the only proteins mediating zinc transfer to transporters [122]. These findings imply that there must be other proteins maintaining zinc trafficking through the cell. Accordingly, Cousins and coworkers proposed the involvement of the cysteine-rich intestinal protein (CRIP) as an additional mediator of enterocyte zinc trafficking, which may compete with MT [123]. Yet, CRIP was later shown to be expressed in nearly all organs and suggested to play a role in the immune response [124]. More likely is the existence of another moiety in zinc muffling and transfer through the cell, possibly similar to metallochaperones involved in enterocyte iron and copper homeostasis [125].
+
+Similar to MT, intestinal zinc transporters are not only required for the maintenance of enterocyte zinc homeostasis, but are also decisive for zinc absorption (Figure 3). The main intestinal zinc importer ZIP4 is essential for zinc absorption. This is demonstrated by the zinc malabsorption disease acrodermatitis enteropathica, originating from different mutations in the gene encoding human ZIP4 [81,82,126,127]. ZIP4 is regulated by dietary zinc in a transcriptional, translational, and post-translational manner [128]. Moreover, surface localization of enterocyte ZIP4 is regulated by cytoplasmic zinc [129]. Under zinc deficiency, zip4 mRNA is stabilized [127,130,131] and the protein accumulates at the apical plasma membrane result in elevated zinc uptake [129,132]. Zinc repletion results in endocytosis of the protein [129], and ubiquitin-mediated degradation at even higher zinc concentrations [133,134], while transcription remains unaltered [86].
+
+In contrast to ZIP4, zip5 mRNA abundance is independent from dietary zinc, whereas its translation is zinc-dependent [130]. During zinc insufficiency, its mRNA remains associated with polysomes without being translated, while the basolateral plasma membrane protein is internalized, which minimizes the secretion of body zinc from the blood into the intestinal tract [130,131]. Due to this polysomal stalling mechanism, the protein is again rapidly expressed and accumulates at the membrane after zinc repletion [130]. Consequently, ZIP5 is important for the control of systemic zinc homeostasis and is considered to be involved in sensing the zinc body status [135]. Regulation of zip14 mRNA, on the other hand, was not altered during dietary zinc deficiency or excess in mice [136].
+
+Znt-1 mRNA expression is zinc-dependent and, similar to MT, regulated by MTF-1 [83,137]. MTF-1 directly senses cytoplasmic zinc concentrations in enterocytes and regulates ZnT-1 expression, which ensures sufficient capacities for export of the cation into the portal blood and controls intracellular zinc-free levels [108]. Furthermore, aside of its transcriptional regulation, the zinc-regulated surface accumulation of ZnT-1 might also be facilitated on a post-transcriptional level, whereas, during zinc deficiency, the protein is degraded via lysosomal and proteasomal pathways [138]. Nevertheless, in vivo data for basolateral ZnT-1 during zinc excess and deficiency are contradictory and scarce regarding its differential expression in humans. In animal studies, high oral zinc doses increase protein [83] and mRNA expression [83,118,137]. Conversely, znt-1 mRNA and the corresponding protein are downregulated after zinc supplementation in humans in vivo [86]. Zinc restriction, on the other hand, leads to downregulation of mRNA and protein in weanling rats [139] but not in mature rats [137]. In contrast to the previously mentioned MT knockout mice, ZnT-1 knockout mice already die in an early embryonic state [140].
+
+The apically localized bidirectional zinc transporter ZnT-5B is not affected by zinc deficiency, but is downregulated [86] or upregulated [74,87] with elevated cellular zinc availability in in vitro and in vivo studies. This converse regulation indicates a rather complex role in zinc homeostasis and was suggested to be based on both transcriptional repression and stabilization of its mRNA [88]. Aside of its apically located variant B, ZnT-5 is also distributed in cytoplasmic organelles of enterocytes and goblet cells [141] and considered to be essential for zinc homeostasis, as ZnT-5 knockout mice display impaired growth and bone development [142].
+
+In addition to the zinc transporters at the apical and basolateral membranes of enterocytes, there is evidence that ZnT-2, ZnT-4, ZnT-6, and ZnT-7 also regulate the cytoplasmic zinc concentration in enterocytes. ZnT-2 is a vesicular zinc exporter [143] expressed in the human in vitro intestinal cell line Caco-2 [144] as well as in rat [137,145] and mouse intestines [136]. There are two ZnT-2 isoforms expressed in the small intestine with different (sub-)cellular localization. Liuzzi et al. detected a small isoform of ZnT-2 on vesicles close to the apical membrane in enterocytes of lactating rats [145], whereas the larger isoform, also found in secretory vesicles in mammary epithelial cells, seems to be restricted to mouse intestinal Paneth cells [146]. ZnT-4 is expressed in rat [137,145] and murine small intestines [136,141], mainly located in the perinuclear region of murine absorptive epithelial cells [141] and associated with endosomal vesicles predominantly accumulating in the basolateral side of rat enterocytes [145,147]. In response to high zinc intake, both znt-2 and znt-4 are upregulated [136,137], which might result in increased sequestration of zinc into vesicles, whereas their mRNA is downregulated after zinc depletion [136]. ZnT-7 and ZnT-6 are also expressed in the small intestine [141,148,149], but appear to be independent of the intracellular zinc concentration since their mRNA abundance does not change in response to low and high zinc diets [136]. Both transporters are detected in the cytoplasm of absorptive epithelia cells. Their subcellular localization in enterocytes, however, remains unknown. However, both transporters are described to be associated with Golgi and vesicular compartments in various cell types [148,149], which indicates that the trans Golgi network could be involved in the cellular zinc transfer through enterocytes [141].
+
+### 4. Zinc in Nutrition and Its Intestinal Bioavailability
+
+## 4.1. Intestinal Zinc Bioavailability
+
+Zinc bioavailability from a mixed or vegetarian diet based on refined cereal grains is estimated to be 26–34%, whereas 18–26% is absorbed from an unrefined cereal-based diet [30]. The actual amount of absorbed zinc not only depends on the zinc content of the consumed diet (for a detailed summary of zinc content of animal and plant-based foods, refer to Reference [30]), but is highly affected by its intestinal zinc bioaccessibility and bioavailability. The term bioaccessibility in this context includes the potentially free and absorbable zinc concentration in the intestinal lumen [151,152]. Bioavailability describes the amount of zinc absorbed by the cells that is subsequently released into the blood and, therefore, available for systemic circulation and body homeostasis [151].
+
+Due to the digestion process, a wide range of different zinc species is present in the intestine, complexed by food-derived macromolecules or low molecular weight ligands [3]. Hence, zinc accessibility and availability depend on its solubility and stability of the respective complexes in the intestinal lumen. This is affected by the diet as well as by physiological factors such as the mucus layer and the intestinal fluid. Together, these luminal factors alter the speciation of the ion as well as its luminal free and available concentration, which, consequently, affects its absorption by the intestinal epithelium. Below, the beneficial or inhibitory impact of these diet-derived and physiological luminal factors on intestinal zinc bioavailability as well as physiological basolateral factors will be briefly summarized (Figure 4).
+
+## 4.2. Dietary Factors Recognized to Influence Zinc Absorption
+
+Fractional zinc absorption preferentially depends on zinc intake, as its efficiency declines with increased zinc consumption [7,8,32]. Additionally, the zinc species influences its intestinal absorption, which is of particular relevance for zinc supplements (for details refer to Reference [30]).
+
+Phytate, which is a natural component of plants, severely decreases intestinal zinc bioavailability and is regarded as the main nutritional inhibitor of zinc absorption. Notably, the term phytate includes magnesium, calcium, or potassium salts of phytic acid and comprises a mixture of myo-inositol hexaphosphates, pentaphosphates, tetraphosphates, and triphosphates [153]. Actually, tetraphosphates and triphosphates were described to have little impact on zinc absorption, whereas inositol hexaphosphates and pentaphosphates severely impaired intestinal zinc availability in in vivo studies [153,157,158]. Nevertheless, phytate can be hydrolyzed by phytase, which is an enzyme that degrades the molecule to tetraphosphates and triphosphates, consequently increasing zinc availability [159,160]. In contrast to sheep and pigs, which are able to degrade phytate with their own intestinal phytase, levels of this enzyme in human small intestine are very low and, thus, phytate degradation is highly dependent on phytogenic and microbiotic phytase [153,159,161,162]. Phytogenic phytase, particularly in grains, can be activated during fermentation and food processing [159,160,163], which, subsequently, enhances zinc absorption [163].
+
+Zinc is bound by phosphates of phytate, yielding a 2:1 stoichiometry of the zinc/phytate-complex [164] with strong binding affinities: 1.8 × 106 L mol−1 (site 1) and 8 × 104 L mol−1 (site 2) for myo-inositol hexaphosphate at 37 °C [165]. Moreover, stability of the zinc/phytate-complex is pH-dependent, which illustrates moderate solubility at low pH and poor solubility at pH 7 [165]. Hence, zinc does not even have to be complexed by phytate in the foodstuffs [166] because, at an intestinal pH (luminal pH 6–7.4 [167]), phytate binds the cation effectively, and forms stable complexes with low solubility and bioaccessibility [168,169]. Consequentially, complexed zinc is not available for absorption and is excreted with the feces [170]. Phytate is also discussed to severely impact body zinc homeostasis by binding endogenous zinc that is excreted into the lumen and inhibiting its reabsorption [3]. Thus, the total phytate content of the diet affects the overall zinc bioavailability of a meal. Since the inhibitory effect of phytate on zinc absorption is concentration-dependent, the molar phytate: zinc-ratio of the diet (Table 1) is applied to estimate zinc bioavailability [49] and was shown to be more important than the phytate content of the product itself [171,172]. In general, plant-based diets contain higher phytate levels than mixed diets, which, consequentially, provides less intestinally-available zinc than meat-based diets [45,173].
+
+Significant changes in human zinc absorption are observed starting at a molar phytate: zinc-ratio of 5. Fractional zinc absorption is reduced from 21% in the absence of phytate to 11–16% at a molar ratio of 5–15, and even lower at 4–11% at molar ratios >15 [174]. Additionally, these complexes are stronger in the presence of calcium, which suggests that calcium might aggravate the inhibition of zinc absorption by phytate [174]. However, calcium does not increase the phytate-mediated inhibition of zinc absorption in several human dietary studies [77,166,175]. Other than phytate, fibers such as cellulose seem to have no significant impact on zinc absorption [160,170].
+
+Dietary protein levels positively correlate with zinc uptake [77,154]. Human zinc absorption is substantially higher in the presence of protein from animal sources than plant-based protein [181] and the addition of animal protein to vegetable-based food significantly improved its zinc bioavailability in vivo [182]. This beneficial impact, however, is discussed to be based on the fact that the amount of protein itself counteracts the impairing effect of phytate and not because of its animal origin [183].
+
+Protein is digested in the gastrointestinal tract and degraded into peptides or amino acids [184]. These low molecular weight compounds form complexes with zinc, which increases its bioavailability by enhancing the solubility of the cation in the intestinal lumen [36] and possibly by being absorbed via amino acid transporters [96]. This increases the relevance of zinc complexes with amino acids for zinc supplementation in malabsorption diseases such as acrodermatitis enteropathica [96]. Several studies investigated the impact of amino acids on zinc absorption, yielding contradictory results [76,155,185,186,187,188]. Hence, to date, it is not yet feasible to provide a general statement on the effect of amino acids on zinc bioavailability.
+
+The interrelation between different micronutrients and their absorption is still subject to ongoing research. The possible inhibitory impact of calcium on intestinal zinc bioavailability was already discussed above. Furthermore, negative effects of both heme-iron and inorganic iron on zinc absorption were reported by several in vivo studies [185,189,190,191,192], whereby the effect is greater when iron is administered as aqueous solution than together with a meal [185,193]. Copper, on the other hand, has no impact on zinc absorption [194]. In contrast, supra-physiological zinc doses critically impair intestinal copper absorption [195]. Lastly, cadmium [196] and tin inhibit zinc absorption [197]. While the latter study applied unrealistically high amounts of tin, naturally occurring tin concentrations seem to affect zinc homeostasis by increasing its fecal excretion [198].
+
+In contrast to its beneficial role in iron absorption [193], ascorbic acid has no effect on intestinal zinc bioavailability [181,199,200] because zinc, unlike iron, does not need to change its oxidation state for intestinal uptake. Citrate, on the other hand, positively influences zinc availability [201]. Citrate is the main low-molecular weight ligand binding zinc in milk, which, possibly, influences zinc bioavailability from milk and milk products [202]. Concentrations of zinc/citrate-complexes are higher in human milk when compared to cow’s milk [203], which might explain the higher zinc absorption from human milk [204].
+
+Lastly, chemical and physical food processing also affect zinc bioaccessibility and availability [205]. In this context, particularly, the formation of heat-derived zinc-binding ligands, such as Maillard browning products [206,207], decreases its availability, whereas fermentation or germination elevates its accessibility due to phytate reduction [159,208].
+
+## 4.3. Physiological Factors Affecting Zinc Absorption
+
+Aside from dietary components, various physiological factors in the intestinal lumen influence the solubility of zinc and its subsequent availability for the intestinal epithelium. One is the gastrointestinal mucus layer, which enhances the luminal accessibility of the cation and positively influences its bioavailability [69,209]. It is presumed to bind luminal zinc while preventing the formation of insoluble zinc hydroxide [210] as well as hydroxypolymers (Zn(OH)n) [211] at intestinal pH of 6–7.4 [167]. Subsequent animal studies confirm this hypothesis and even indicate zinc buffering properties of this physical barrier [211,212,213]. In vitro, gastrointestinal mucins bind zinc with a physiologically relevant affinity, showing a dissociation constant of the mucin/zinc-complex in the same order of magnitude as luminal zinc [103]. Since the mucus layer is not static, but represents a dynamic and viscoelastic gel [214,215], these glycoproteins might assist zinc transport to the underlying epithelium. The ability to bind the cation and buffer free zinc levels that would be available for intestinal cells was studied with human goblet cells and enterocytes [103], and indicates the retention of luminal available zinc [103], corroborating observations from previous animal studies [209,213]. Additionally, a comparison of mucin-producing Caco-2/HT-29-MTX in vitro intestinal model with mucus-lacking Caco-2 monocultures confirmed a beneficial role of mucins for intestinal zinc absorption, which shows enhanced apical zinc uptake and higher fractional absorption when a mucus layer is present [103]. Mucins also bind several other metals, such as iron, lead, calcium, and aluminum [216,217,218] with increasing affinity from M+ < M2+ < M3+ [212]. Consequentially, competitive binding of an ion might influence its luminal availability for the underlying epithelium, while, potentially, explaining the mutual interdependence of intestinal trace element absorption.
+
+Lately, systemic factors were discussed to play a role in intestinal zinc absorption by regulating uptake and transport into the systemic circulation. In this context, Hennigar et al. studied the impact of the liver-derived humoral factor hepcidin, which plays an important role in iron absorption [219], on enterocytic zinc transport [156]. Herein, basolaterally added hepcidin reduces cellular zinc export into the blood by post-translationally downregulating ZnT-1 in the enterocyte cell line Caco-2. Furthermore, the zinc content of enterocytes increases and mt-1a is upregulated, which, possibly, controls subcellular zinc pools in enterocytes [156].
+
+Another physiological factor affecting intestinal zinc absorption is the albumin concentration on the serosal side of the intestinal epithelium. Human blood contains about 30–50 mg mL−1 human serum albumin (HSA) [220], where it is the main zinc binding and transporting protein [23] and has high zinc binding affinity (molecular ratio of the albumin/zinc-complex 1:2, Kd (site A) = 100 nM) [221]. Bovine serum albumin (BSA) acts as a basolateral zinc acceptor, which enhances serosal zinc export on the basolateral side of a three dimensional in vitro Caco-2/HT-19-MTX co-culture model [102]. This remains to be confirmed using HSA, as interspecies differences in the structure of this protein [222] might affect their zinc-binding properties and, consequently, their role as a basolateral zinc acceptor. Notably, in vivo basolaterally applied rat serum albumin enhances fractional zinc absorption in vascular perfusion experiments of rat small intestine, whereas fractional zinc absorption via the intestinal epithelium decreases when no albumin is present [223]. Hence, the presence of albumin in the blood circulation seems to be crucial for the intestinal zinc absorption.
+
+In vitro basolateral zinc excretion of intestinal cells is enhanced by basolateral albumin, whereas cellular zinc uptake from the apical side seems to be unaffected by this zinc acceptor [102]. This also reiterates previous knowledge on intestinal zinc uptake and transport kinetics. The in vivo apical to basolateral zinc transport is a saturable and carrier-mediated process [71], where apical zinc uptake is suggested to be the rate-limiting step [70]. This process is mainly mediated by the apical zinc importer ZIP4 and basolateral zinc exporter ZnT-1 [224], which are both regulated by dietary zinc. Hence, it is rather unlikely that albumin only serves as a thermodynamic sink for the metal in blood and that higher zinc transport in the presence of albumin is only based on a simple diffusion process, following a zinc concentration gradient from the luminal to the basolateral side of the intestinal epithelium. Consequently, this insinuates that albumin might influence the export of zinc from the enterocytes via ZnT-1 into the blood, possibly by interacting with the transporter. However, the underlying regulatory parameters that enhance the basolateral release of zinc in the presence of albumin have to be further investigated.
+
+### 5. In Vitro Studies on Intestinal Zinc Absorption
+
+In the past 50 years, several analytical approaches have been applied to investigate intestinal zinc absorption and its underlying mechanisms. The latter were mainly elucidated with ex vivo animal studies, such as everted rat gut sacs [60,61], Ussing chambers with rat [225,226,227,228,229] and pig [230,231] jejunal segments, and intestinal brush-border membrane vesicles from rat [72] and pig [232,233] small intestines as well as in situ studies with isolated rat intestines using the (vascular) perfusion technique [38,70,115,234] and the intestinal loop method [79]. Moreover, some human studies using perfused intestine were performed as well [58,64]. Conversely, zinc absorption kinetics, fractional absorption, efficiency of transport, and the impact of dietary components on zinc bioavailability were mainly studied in vivo in humans and animals using (stable) isotope techniques [7,32,170,202]. Distinct processes on the cellular level, like the role of zinc transporters and metallothionein, however, were predominantly investigated with in vitro cellular models [74,84,86,129,156], as they provide a standardized and easy platform.
+
+For the three R paradigm of animal testing [235], refined and reduced animal studies can be complemented by in vitro cellular models as vital tools for achieving the “third R” of replacing animal experiments [236]. Moreover, in vitro cellular models provide a standardized microenvironment in which molecular processes can be investigated in detail. Hence, this section will focus on the application of in vitro cellular models in the investigation of intestinal zinc absorption, illustrate aspects to be considered when applying these models, and highlight the advantages of in vitro cellular intestinal models compared to other in vitro or ex vivo methods. The advantages and limitations of these intestinal models for investigating the intestinal zinc absorption are summarized in Table 2.
+
+## 5.1. Investigation of Zinc Uptake and Transport Using In Vitro Cellular Intestinal Models
+
+Until now, predominantly, the human Caco-2 cell model was used to elucidate intestinal zinc absorption and transport with in vitro studies. This model is widely employed to determine the absorption of various drug compounds as well as the uptake and transport kinetics of (micro-) nutrients [244,245,246,247] and is recognized by the FDA, giving promising correlations for fractional absorption of several drug components [248]. When cultured for 21 days, the epithelial colon carcinoma cell line Caco-2 differentiates into a state functionally and morphologically resembling human enterocytes [249,250]. They form an intact monolayer with important characteristics of the intestinal epithelium, including microvilli as well as tight junction proteins, and express several important proteins for intestinal transport [251,252]. In three-dimensional cultures, the cellular monolayer, seeded on Transwell inserts, forms an intact barrier mimicking the intestinal epithelium, whereas the apical transport chamber corresponds to the intestinal lumen and the basolateral side represents the serosal blood side [10] (Figure 5). By these means, a substance of interest, such as zinc, can be tracked from the apical compartment, its transport into the cells, and through the intestinal epithelium into the blood. Furthermore, this model can be combined with in vitro human digestion models to study bioavailability and absorption of the micronutrient from digested complex food samples [243,253,254].
+
+While human zinc absorption and transport kinetics were characterized using three-dimensional Caco-2 models (Table 3), a two-dimensional culture of these cells was additionally applied to investigate zinc uptake parameters. Furthermore, this model was widely used to study the effects of various dietary food components on intestinal zinc bioavailability [96,243,247,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272] and to elucidate the regulatory role of intestinal zinc transporters and metallothionein in zinc absorption [74,86,87,144,242,273,274,275,276,277,278,279,280]. Notably, the impact of dietary zinc on zinc transporters and metallothionein expression in Caco-2 cells is very well comparable to the homeostatic regulation of these proteins in human small intestine [86]. Supplementary Tables S3 and S4 summarize the studies’ design and outcome.
+
+Aside of Caco-2-models, some studies on intestinal zinc uptake and transport were also done using the in vitro intestinal model IPEC-1 [281] and IPEC-J2 cells [242,275,282,283]. The non-transformed cell lines IPEC-1 and IPEC-J2 are derived from porcine intestine and are mainly used as in vitro models for pig intestine [284,285], but are described to resemble human enterocytes closer than any other animal-derived cell line [286].
+
+## 5.2. Buffer Composition of In Vitro Cellular Intestinal Models
+
+Speciation of zinc in cell culture medium or buffer severely affects its availability and cellular uptake in in vitro experiments [220,287]. A particular problem in this context is fetal calf serum (FCS), which proves to be an unpredictable factor due to its variability [288] and contains about 60% albumin in its protein fraction [289]. Notably, FCS is commonly used in cell culture [290] just as 10% FCS is used in many of the in vitro intestinal cell models presented in Table 3, which results in a final albumin concentration of 1.55 mg mL−1 [288] (corresponding to 24.2 µM) in the medium. Since albumin binds zinc with high affinity [221], apically added FCS or BSA severely impact its bioavailability for cells in vitro, as shown by decreased zinc toxicity [102] and uptake in the presence of these proteins [102,220,291,292].
+
+Adding albumin to the apical side of in vitro intestinal models certainly does not represent the in vivo situation in the intestinal lumen and should be avoided when studying intestinal zinc absorption. When this protein is used as an apical component in some of the in vitro zinc transport studies based on three-dimensional Caco-2 models (Table 3), zinc transfer via the in vitro intestinal barrier is altered. Direct comparison of results from studies that were conducted in different laboratories is generally difficult. Nevertheless, comparing the outcome of zinc transport experiments using Caco-2 monocultures where zinc is applied on the apical side together with 10% FCS [67] with a study where no FCS is added to the apical side [103], the presence of 10% FCS diminishes cellular available zinc resulting in considerably smaller zinc transport rates (with 10% FCS: transport rate of apically applied 50 µM zinc after 4 h: 0.02 nmol cm−2 [67]; without FCS: transport rate of 50 µM zinc after 4 h: 0.95 nmol cm−2 [102]). In fact, the authors of this study [67] applied 10% FCS on the apical side of their intestinal model to mimic the luminal protein matrix during transport studies. However, the presence of intact proteins does not accurately reflect the luminal environment in vivo, as they would have been digested into smaller molecules (peptides or amino acids). Apical addition of zinc together with in vitro digested albumin significantly increases the zinc bioavailability for Caco-2 cells compared to undigested protein [102].
+
+In contrast to the apical side of in vitro models, where albumin should be excluded, serum albumin is the main zinc transporting protein in plasma. As already discussed, serum albumin is an important physiological factor for intestinal zinc absorption and influences zinc excretion from enterocytes into the blood circulation [102]. The zinc-accepting role of albumin during the absorption process emphasizes the relevance of this basolateral constituent, which, consequently, has to be added to the basolateral compartment of the intestinal models to resemble the blood in vivo.
+
+Some of the in vitro zinc transport studies performed with Caco-2 models (Table 3) use cell culture medium with 10% FCS for the basolateral compartment [67,68,71,102,103,239]. This FCS concentration, however, yields only 3–5% of the serum albumin concentration in vivo. Although some in vitro studies apply zinc to the basolateral compartment, mainly to investigate the serosal zinc uptake into the intestinal epithelium [66,67,68,239], the apical zinc transport in the presence of physiological zinc and albumin concentrations on the basolateral side has not been investigated in these studies. In this case, the zinc content on the basolateral side originated predominantly from FCS [67,68,71,239]. The exact basolateral zinc concentrations in these studies are unknown. FCS generally contains higher amounts of zinc than cell culture medium [293], but its total zinc content varies significantly, which leads to final zinc concentrations between 3 [74] and 14 µM [294] in complete media. The addition of albumin, apart from the amount already present in FCS, to the basolateral side of the in vitro model, however, was only performed in four of the in vitro transport studies with Caco-2 monocultures or Caco-2/HT-29-MTX co-cultures, respectively, by applying very low (2.5 mg mL−1) [238] or physiological albumin concentrations (5% BSA, corresponding to 50 mg mL−1 albumin [71], and 30 mg mL−1 albumin [102,103]).
+
+## 5.3. Cellular Composition of In Vitro Cellular Intestinal Models
+
+The in vitro Caco-2 model lacks one very important factor of the intestinal epithelium, which is the mucus layer. The intestinal epithelium in vivo is not only composed of enterocytes, but also includes goblet cells, producing and secreting mucins, covering the whole gastrointestinal tract (in detail, reviewed in References [214,295]). As already discussed, the mucus layer provides an important physiological luminal factor for intestinal zinc uptake and absorption [103,212,213]. Consequently, the application of a mucus layer or mucin-producing cells in in vitro models to study intestinal zinc absorption should not be neglected. Simulation of the mucus layer by adding isolated (porcine) mucins on top of three-dimensional Caco-2 monocultures was previously critically discussed in connection with iron transport and zinc uptake studies [103,254,296]. These mucins do not display similar viscoelastic and gel forming properties of the gastrointestinal mucus layer in vivo because of their isolation and purification process [297,298]. Moreover, isolated mucins do not simulate transmembrane mucins, which represent an important fraction of the mucus layer in vivo [295].
+
+Co-culturing Caco-2 cells together with the goblet cell line HT-29-MTX yields an in vitro model that not only constitutes the two main cell types of the intestinal epithelium [255], but also contains mucus covering the whole cell layer [254]. Moreover, this co-culture does not only improve the in vitro intestinal Caco-2 model regarding the presence of a mucus layer, but was also reported to optimize the cellular permeability of conventional Caco-2 monocultures [299,300] and is considered a more physiological in vitro model [256,301]. The Caco-2/HT-29-MTX model is well characterized [299,302,303,304] and was already used to investigate the absorption of different metal species [254,305,306,307], the effect of nanoparticles on nutrient absorption [308], and bacterial adhesion [309]. Recently, a Caco-2/HT-29-MTX model, optimized with respect to its buffer composition and basolateral serum concentration, was applied to study the absorption of zinc via the human intestinal epithelium in the presence of a mucus layer [102,103]. This in vitro intestinal model showed enhanced net absorption and transport rates of apically applied physiological zinc concentrations (25–100 µM) compared to conventional Caco-2 monocultures [67,120,243] and comparable amounts of actually transported zinc to those estimated in vivo [105].
+
+Regarding the cellular composition of the intestinal epithelium and its vicinity, it would certainly be worthwhile to analyze zinc transport via the intestinal barrier in the presence of other intestinal cells in addition to enterocytes and goblet cells. There are various three-dimensional Caco-2 co-cultures or even triple-co-cultures of Caco-/HT-29-MTX with different cell lines, including immune cells such as THP-1 human macrophages or the M-cell-resembling Raji B cell line (reviewed in Reference [310]). Additionally, using a triple-co-culture of Caco-2/HT-29-MTX with peripheral blood mononuclear cells (PBMC) [311,312] would provide the option to study the impact of leukocytes in the blood serum on intestinal zinc absorption.
+
+## 5.4. Comparison of In Vitro Cellular Intestinal Models with the In Vivo Situation
+
+Applying in vitro models to mimic processes in vivo requires critical consideration of their limitations. Even though current research aims to use improved and more physiological in vitro intestinal models, like the mucin-producing in vitro co-culture Caco-2/HT-29-MTX [105,256], for studying zinc transport, there are differences in the in vivo intestinal epithelium that have to be considered. Two important physical factors in the intestine in vivo are lacking in the in vitro models: intestinal and blood fluid flow as well as peristaltic motions. Intestinal peristalsis enables movement of chyme along the intestine and increases mechanical degradation of food components [255], which is important for the digestion process and availability of nutrients for absorption. On the other hand, absorbed zinc is bound to albumin in vivo and continuously transported within the blood circulation, which distributes the cation throughout the whole body [23]. This sink is missing in vitro and absorbed zinc accumulates in the basolateral compartment of three-dimensional cell models.
+
+Table 3 summarizes studies of zinc absorption using three-dimensional Caco-2 mono- and co-cultures, which depicts parameters of cell models including buffer composition and the main outcome of the study. Regardless of the detailed experimental setting, almost all transport studies obtained with Caco-2 models observe saturable apical zinc uptake and transport kinetics. Two different studies using Caco-2 monocultures observed non-saturable zinc uptake from the apical side, both using regular cell culture medium with 10% FCS for their apical zinc treatment [67,68] and either of them unphysiologically high zinc concentrations [68]. Additionally, the transported amount of the micronutrient to the basolateral side is not comparable to that in vivo [67]. This underlines the importance of applying zinc corresponding to physiological concentrations in the intestinal lumen in vivo, particularly when analyzing transport and uptake kinetics, in order to prevent artefacts.
+
+Km values for zinc uptake of 41 µM [66] or 11.7 µM [71] obtained with Caco-2 are in the same order of magnitude as those determined with in vitro rat intestines (Km = 10–12 µM [71]), rat perfused intestines (Km = 32 µM [38]; Km = 29 µM [73], Km = 55 µM [70]), or brush-border membrane vesicles from pig (Km = 67 µM [196] or rat (Km = 24 µM [313]). Accordingly, Caco-2 cells seem well suited for studying intestinal zinc uptake.
+
+Compared to the fractional zinc absorption of in vitro cellular models (~2–6%) [102,103,243], the estimated net absorption of 16–50% for humans in vivo [7,30,33,75,76,77] is significantly higher. Notably, most of these in vivo studies investigate fractional zinc absorption from meals containing dietary ligands that affect zinc bioavailability in the intestinal lumen [36], whereas, in the in vitro studies, zinc is mainly added as liquid solutions and without a food matrix. In vivo studies estimating the fractional zinc absorption from liquid solutions with comparable zinc concentrations to those applied in the in vitro studies are scarce [57,58]. Even though the application of improved and more physiological in vitro intestinal models, which include a mucus layer and basolateral added serum albumin, result in higher zinc net absorption [102], the amounts represent only about 10% of the fractional zinc absorption in vivo when analyzing the absorption of zinc levels typically found in the intestinal lumen after a meal [7,105].
+
+To explain this discrepancy, the ratio of intestinal liquid per absorption area has to be taken into account. The absorption area of in vitro three-dimensional intestinal models (commonly using Transwell inserts with an area of 1.12–4.67 cm2) is a lot smaller than the intestinal epithelium (about 30,000 cm2 [314]). This rough assessment does, however, not include the actual amount of absorptive enterocytes per absorption area and disregards the increase in absorption area in vitro by microvilli formation of Caco-2 cells. The volume of intestinal liquid in lumen in vivo amounts to around 3 L [255] (corresponding to 0.1 mL cm−2), whereas, in an in vitro model with an absorption area of 1.12 cm2 (typical apically added volume: 500 µL), the volume to area ratio is 0.45 mL per cm2, which leads to a 4.5-fold higher apically applied liquid volume per cm2 absorption area in vitro. Hence, the total amount of zinc available for transport per absorption area in vitro is greater than in vivo, which distorts fractional absorption. Assuming that expression and activity of the main zinc transporters in Caco-2 cells in vitro correspond to those in vivo, which we certainly do not know yet, a higher ratio of zinc per cm2 absorption area in the in vitro model could explain a smaller fractional absorption. Regrettably, adjusting the liquid volume applied into apical chambers of in vitro intestinal models to the volume per cm2 ratio in vivo (0.1 mL cm−2) is not an option, as it would impair cellular viability.
+
+Remarkably, the amounts of zinc that are actually transported per cm2 absorption area to the basolateral side of three-dimensional in vitro models are comparable to quantities absorbed per cm2 of intestinal epithelium into the blood circulation in vivo. Table 4 depicts estimated amounts of actual transported zinc in vitro and in vivo, using data of an in vitro Caco-2/HT-29-MTX co-culture [102] and a human in vivo study by Hunt et al. [7], where comparable zinc concentrations are applied with a meal. This also applies to some of the studies using in vitro Caco-2 mono-cultures [66,103,120] and Caco-2/HT-29-MTX co-cultures [103] presented in Table 3. Consequentially, when comparing the results from in vitro cellular intestinal models with the in vivo zinc absorption, it is more relevant to correlate the actual amount transported per cm2 absorption area than net absorption of zinc.
+
+### 6. Analytical Approaches to Studying In Vitro Zinc Absorption and Bioavailability
+
+Zinc absorption and bioavailability in humans is mostly analyzed with (stable) isotope tracer techniques, primarily measuring fractional zinc absorption [315]. In earlier studies, the zinc radioisotope 65Zn was also used to investigate zinc homeostasis [316] and bioavailability in humans [317], but is currently replaced by non-radioactive and stable isotopes [318] and solely employed in vitro [66,71,79].
+
+In three-dimensional in vitro cellular intestinal models, the quantity of the metal in the apical and basolateral compartment as well as the cellular zinc content is analyzed to determine the amount of absorbed and actually transported zinc to the blood side (Figure 6A). Thus, transport kinetics, net absorption, and bioavailability of luminally-added zinc species are investigated. Aside of (stable) isotope techniques, zinc is generally quantified with inductively coupled mass spectrometry (ICP-MS), inductively coupled plasma optical emission spectrometry (ICP-OES), or atomic absorption spectrometry (AAS) [319]. In addition to measuring the most abundant stable zinc isotopes, 64Zn or 66Zn, with ICP-MS, 70Zn was recently used to determine cellular zinc uptake kinetics while simultaneously distinguishing between cellular basal zinc levels and zinc that was actually absorbed by the cells [320]. Hence, applying this method in in vitro intestinal models would provide a fruitful approach for scrutinizing enterocyte homeostasis of this micronutrient during zinc absorption.
+
+Aside of determining enterocyte zinc uptake or transport, in vitro intestinal models offer the great opportunity to scrutinize subcellular compartmentalization of the metal by providing additional information about its disposition and cellular availability after its absorption into enterocytes (Figure 6B). Fluorescent zinc sensors are a versatile tool for analyzing small subcellular changes of free zinc [321]. These sensors bind free or mobile zinc, which represents a particularly small fraction of the cellular zinc content.
+
+Fluorescent zinc sensors can be classified into low molecular weight (LMW) sensors (or chemical sensors) and genetically-encoded biosensors [321]. Below, their function and application in intestinal cell models in vitro as well as advantages and disadvantages of the two classes of sensors are briefly summarized.
+
+The principle of most LMW sensors is based on photo-induced electron transfer (PET) between the fluorophore and a chelating unit, which, in case of a non-radiometric sensor, quenches fluorescence when no metal is present. Metal binding leads to disruption of PET and increase of fluorescence (reviewed in detail in Reference [322]). After entering the cells by passive diffusion, changes in fluorescence upon binding of intracellular free zinc can be analyzed with fluorescence spectrometric methods to quantify free zinc or use fluorescence microscopy to image spatial distribution of the cation [322,323].
+
+The basic concept of genetically-encoded sensors is comparable to LMW probes, which results in measurable fluorescence changes upon zinc binding. Various ratiometric biosensors have been developed based on Förster resonance energy transfer (FRET) between two fluorescent molecules [324,325,326,327]. Generally, these fusion proteins are composed of two fluorescent domains and a metal binding site connected by a flexible linker. Emission wavelength of the donor fluorescent domain overlaps with the excitation wavelength of an acceptor domain, which results in a FRET signal when these fluorescent molecules are in spatial proximity. Conformational changes upon zinc binding consequentially lead to a shift of FRET signals [322]. Moreover, Aper et al. created the first set of zinc-dependent bioluminescence resonance energy transfer (BRET) biosensors, where, instead of a donor fluorophore, a stable NanoLuc luciferase domain is exciting the acceptor fluorescent molecule via BRET [328]. Most recently, Palmer et al. developed a biosensor based on a single fluorescent protein [329]. In contrast to low molecular weight sensors, these probes are genetically encoded and, thus, transfected as plasmids into the cells [325]. Consequently, the cell produces the sensor controlling its subcellular concentrations and distribution, which makes them particularly convenient for long-term measurements and less invasive than chemical probes [97,321]. Introduction of BRET-based biosensors circumvents some disadvantages of FRET-sensors by including autofluorescence and photobleaching of fluorophores due to the illumination of the sample, which is necessary for the excitation of the donor domain [328]. Furthermore, FRET analysis requires an elaborate technical approach based on laser scanning microscopy determining FRET or fluorescence life time imaging (FLIM)-FRET, and is almost exclusively limited to analyzing single cells [330]. BRET-based biosensors can be employed in high throughput screening assays using bioluminescence plate readers [328,331,332].
+
+Of particular interest are zinc biosensors with organelle-specific targeting, which accumulate in distinct organelles within the cell, such as mitochondria, Golgi apparatus, endoplasmic reticulum, and cell membranes [324,333,334,335]. Although subcellular distribution of LMW sensors is generally not easy to control, chemical probes with specific cellular targeting have already been successfully developed [336,337,338].
+
+In terms of application of these sensors in human intestinal cell lines to either measure zinc uptake or analyze its subcellular distribution, low molecular weight sensors Zinpyr-1 [96,102,103], Fluozin-3 [156,339,340], and Zinquin [339] were already used in Caco-2 and the colorectal adenocarcinoma cell line HT-29 (Table 5). Recently, a Caco-2 clone stably expressing the FRET biosensor eCalwy-5, originally generated by Merkx and co-workers [325], was established [101] by providing a well characterized in vitro intestinal model to study intestinal zinc uptake. It can be co-cultured with other cell lines, such as HT-29-MTX, allowing it to specifically analyze free zinc in Caco-2 cells of co-cultures. Consequentially, the micronutrient can be tracked after its absorption into enterocytes in the presence of goblet cells and a mucus layer, while LMW probes would always stain the entire model.
+
+### 7. Conclusions and Outlook
+
+Regarding human intestinal zinc absorption, there are several points that still await to be answered. Accordingly, zinc homeostasis of enterocytes and the molecular processes inside these cells during intestinal zinc absorption have to be further investigated. In particular, the zinc transfer through enterocytes upon its absorption, its subsequent basolateral release into the blood circulation, and the involvement of a zinc-binding or -trafficking protein in this process, other than MTs, need to be studied in more detail. In addition, the involvement of zinc transporters in cytoplasmic organelles of enterocytes (like ZnT-2, ZnT-4, ZnT-6, and ZnT-7) in cellular zinc trafficking and homeostasis has to be addressed. In recent years, the relevance of post-transcriptional modifications of intestinal zinc transporters has been recognized to play an important role in regulating their function as well as transport activity and needs further clarification. Moreover, the role of systemic and humoral factors in regulating enterocyte zinc uptake from the intestinal lumen and excretion via the basolateral exporter ZnT-1 into the blood has to be comprehensively elucidated.
+
+To tackle these challenges, the application of in vitro cellular intestinal models has exceptional potential. As outlined in detail in this review, these models provide a standardized platform to not only analyze zinc absorption and transport kinetics and bioavailability from in vitro digested food samples, but also to elucidate the regulatory parameters of human zinc absorption and transport on a molecular level, offering several advantages compared to other intestinal models. Prospective implementation of these in vitro intestinal microenvironments could include analysis of diet-derived factors impacting intestinal zinc uptake as well as the fast and cost-efficient screening of zinc bioavailability from novel food products and zinc complexes. Consequentially, the role of amino acids and peptides in luminal availability and subsequent absorption of the metal can be studied. Knowledge about the bioavailability of zinc from complex food matrices could be included in nutrition surveys. Most of these are currently only considering the total zinc content of the respective diet.
+
+As discussed in detail in this review, the luminal and basolateral constituents as well as cellular composition of in vitro cellular intestinal models are crucial for investigating zinc absorption and must represent the in vivo human intestinal epithelium and its vicinity as close as possible. Still, there remain important differences to the intestinal epithelium in vivo, as not all cell types present in the epithelium are incorporated in the models, and the intestinal and blood fluid flow and peristaltic motions are not considered. Importantly, it is more relevant to correlate the actual amount of transported metal per absorption area than the net absorption in vitro and in vivo because there are considerable differences of the ratios of liquid volume per absorption area. Hence, several factors and limitations have to be considered when using in vitro intestinal models to study the intestinal zinc absorption, and should be addressed during further development of improved in vitro models.
+
+Taken together, investigating these future perspectives with in vitro cellular intestinal models would not only enhance the current knowledge on intestinal zinc bioavailability and absorption as well as on molecular regulatory parameters of its luminal uptake and transport into the blood circulation, but also contribute to the overall understanding of enterocyte zinc homeostasis in addition to the hitherto obtained results.
+
+### References
+
+[1] 1.MaretW.Zinc in cellular regulation: The nature and significance of “zinc signals”Int. J. Mol. Sci.201718228510.3390/ijms1811228529088067PMC5713255
+
+[2] 2.RinkL.GabrielP.Zinc and the immune systemProc. Nutr. Soc.20005954110.1017/S002966510000078111115789
+
+[3] 3.KrebsN.F.Overview of zinc absorption and excretion in the human gastrointestinal tractJ. Nutr.20001301374S1377S10.1093/jn/130.5.1374S10801946
+
+[4] 4.FordD.Intestinal and placental zinc transport pathwaysProc. Nutr. Soc.200463212910.1079/PNS200332015070437
+
+[5] 5.KingJ.C.Zinc: An essential but elusive nutrientAm. J. Clin. Nutr.2011946795684510.3945/ajcn.110.005744PMC314273721715515
+
+[6] 6.TrameS.WesselsI.HaaseH.RinkL.A short 18 items food frequency questionnaire biochemically validated to estimate zinc status in humansJ. Trace Elem. Med. Biol.20184928529510.1016/j.jtemb.2018.02.02029496418
+
+[7] 7.HuntJ.R.BeiseigelJ.M.JohnsonL.K.Adaptation in human zinc absorption as influenced by dietary zinc and bioavailabilityAm. J. Clin. Nutr.2008871336134510.1093/ajcn/87.5.133618469257
+
+[8] 8.HambidgeK.M.MillerL.V.WestcottJ.E.ShengX.KrebsN.F.Zinc bioavailability and homeostasisAm. J. Clin. Nutr.2010911478S1483S10.3945/ajcn.2010.28674I20200254PMC2854914
+
+[9] 9.DoshR.H.EssaA.Jordan-MahyN.SammonC.Le MaitreC.L.Use of hydrogel scaffolds to develop an in vitro 3d culture model of human intestinal epitheliumActa Biomater.20176212814310.1016/j.actbio.2017.08.03528859901
+
+[10] 10.LangerholcT.MaragkoudakisP.A.WollgastJ.GradisnikL.CencicA.Novel and established intestinal cell line models—An indispensable tool in food science and nutritionTrends Food Sci. Technol.201122S11S2010.1016/j.tifs.2011.03.010PMC717228732336880
+
+[11] 11.MaretW.The metals in the biological periodic system of the elements: Concepts and conjecturesInt. J. Mol. Sci.2016176610.3390/ijms1701006626742035PMC4730311
+
+[12] 12.LimK.H.RiddellL.J.NowsonC.A.BoothA.O.Szymlek-GayE.A.Iron and zinc nutrition in the economically-developed world: A reviewNutrients201353184321110.3390/nu508318423945676PMC3775249
+
+[13] 13.AndreiniC.BanciL.BertiniI.RosatoA.Counting the zinc-proteins encoded in the human genomeJ. Proteome Res.2005519620110.1021/pr050361j16396512
+
+[14] 14.HaraT.TakedaT.A.TakagishiT.FukueK.KambeT.FukadaT.Physiological roles of zinc transporters: Molecular and genetic importance in zinc homeostasisJ. Physiol. Sci.20176728330110.1007/s12576-017-0521-428130681PMC10717645
+
+[15] 15.MatthewsJ.M.BhatiM.LehtomakiE.MansfieldR.E.CubedduL.MackayJ.P.It takes two to tango: The structure and function of lim, ring, phd and mynd domainsCurr. Pharm. Des.2009153681369610.2174/13816120978927186119925420
+
+[16] 16.MaretW.SandsteadH.H.Zinc requirements and the risks and benefits of zinc supplementationJ. Trace Elem. Med. Biol.20062031810.1016/j.jtemb.2006.01.00616632171
+
+[17] 17.FukadaT.YamasakiS.NishidaK.MurakamiM.HiranoT.Zinc homeostasis and signaling in health and diseases: Zinc signalingJ. Biol. Inorg. Chem.2011161123113410.1007/s00775-011-0797-421660546PMC3176402
+
+[18] 18.FredericksonC.J.KohJ.Y.BushA.I.The neurobiology of zinc in health and diseaseNat. Rev. Neurosci.2005644946210.1038/nrn167115891778
+
+[19] 19.JacksonM.J.Physiology of zinc: General aspectsZinc in Human BiologyMillsC.F.SpringerLondon, UK1989114
+
+[20] 20.DriessenC.HirvK.KirchnerH.RinkL.Zinc regulates cytokine induction by superantigens and lipopolysaccharideImmunology1995842722777751004PMC1415110
+
+[21] 21.WessellsK.R.JorgensenJ.M.HessS.Y.WoodhouseL.R.PeersonJ.M.BrownK.H.Plasma zinc concentration responds rapidly to the initiation and discontinuation of short-term zinc supplementation in healthy menJ. Nutr.20101402128213310.3945/jn.110.12281220943956
+
+[22] 22.HessS.Y.PeersonJ.M.KingJ.C.BrownK.H.Use of serum zinc concentration as an indicator of population zinc statusFood Nutr. Bull.200728S403S42910.1177/15648265070283S30317988005
+
+[23] 23.ScottB.J.BradwellA.R.Identification of the serum binding proteins for iron, zinc, cadmium, nickel, and calciumClin. Chem.19832962963310.1093/clinchem/29.4.6296831689
+
+[24] 24.HoegerJ.SimonT.-P.DoemmingS.ThieleC.MarxG.SchuerholzT.HaaseH.Alterations in zinc binding capacity, free zinc levels and total serum zinc in a porcine model of sepsisBioMetals20152869370010.1007/s10534-015-9858-425940830
+
+[25] 25.BloxamD.L.TanJ.C.ParkinsonC.E.Non-protein bound zinc concentration in human plasma and amniotic fluid measured by ultrafiltrationClin. Chim. Acta1984144819310.1016/0009-8981(84)90041-X6529863
+
+[26] 26.MagnesonG.R.PuvathingalJ.M.RayW.J.Jr.The concentrations of free mg2+ and free zn2+ in equine blood plasmaJ. Biol. Chem.198726211140111482956262
+
+[27] 27.AlkerW.SchwerdtleT.SchomburgL.HaaseH.A zinpyr-1-based fluorimetric microassay for free zinc in human serumInt. J. Mol. Sci.201920400610.3390/ijms20164006PMC672086331426452
+
+[28] 28.BrownK.H.WuehlerS.E.PeersonJ.M.The importance of zinc in human nutrition and estimation of the global prevalence of zinc deficiencyFood Nutr. Bull.20012211312510.1177/156482650102200201
+
+[29] 29.GibsonR.S.KingJ.C.LoweN.A review of dietary zinc recommendationsFood Nutr. Bull.20163744346010.1177/037957211665225227312357
+
+[30] 30.International Zinc Nutrition Consultative GroupBrownK.H.RiveraJ.A.BhuttaZ.GibsonR.S.KingJ.C.LonnerdalB.RuelM.T.SandtromB.WasantwisutE.International zinc nutrition consultative group (izincg) technical document #1. Assessment of the risk of zinc deficiency in populations and options for its controlFood Nutr. Bull.200425S99S20318046856
+
+[31] 31.KingJ.C.ShamesD.M.LoweN.M.WoodhouseL.R.SutherlandB.AbramsS.A.TurnlundJ.R.JacksonM.J.Effect of acute zinc depletion on zinc homeostasis and plasma zinc kinetics in menAm. J. Clin. Nutr.20017411612410.1093/ajcn/74.1.11611451726
+
+[32] 32.LoweN.M.WoodhouseL.R.SutherlandB.ShamesD.M.BurriB.J.AbramsS.A.TurnlundJ.R.JacksonM.J.KingJ.C.Kinetic parameters and plasma zinc concentration correlate well with net loss and gain of zinc from menJ. Nutr.20041342178218110.1093/jn/134.9.217815333701
+
+[33] 33.HuntJ.R.MatthysL.A.JohnsonL.K.Zinc absorption, mineral balance, and blood lipids in women consuming controlled lactoovovegetarian and omnivorous diets for 8 wkAm. J. Clin. Nutr.19986742143010.1093/ajcn/67.3.4219497185
+
+[34] 34.TaylorC.M.BaconJ.R.AggettP.J.BremnerI.Homeostatic regulation of zinc absorption and endogenous losses in zinc-deprived menAm. J. Clin. Nutr.19915375576310.1093/ajcn/53.3.7552000832
+
+[35] 35.JohnsonP.E.HuntC.D.MilneD.B.MullenL.K.Homeostatic control of zinc metabolism in men: Zinc excretion and balance in men fed diets low in zincAm. J. Clin. Nutr.19935755756510.1093/ajcn/57.4.5578460612
+
+[36] 36.LönnerdalB.Dietary factors influencing zinc absorptionJ. Nutr.20001301378S1383S10.1093/jn/130.5.1378S10801947
+
+[37] 37.JacksonM.J.JonesD.A.EdwardsR.H.SwainbankI.G.ColemanM.L.Zinc homeostasis in man: Studies using a new stable isotope-dilution techniqueBr. J. Nutr.19845119920810.1079/BJN198400246367817
+
+[38] 38.HoadleyJ.E.LeinartA.S.CousinsR.J.Kinetic analysis of zinc uptake and serosal transfer by vascularly perfused rat intestineAm. J. Physiol.1987252G825G83110.1152/ajpgi.1987.252.6.G8253591948
+
+[39] 39.ZieglerE.E.SerfassR.E.NelsonS.E.Figueroa-ColonR.EdwardsB.B.HoukR.S.ThompsonJ.J.Effect of low zinc intake on absorption and excretion of zinc by infants studied with 70zn as extrinsic tagJ. Nutr.19891191647165310.1093/jn/119.11.16472600669
+
+[40] 40.BaerM.T.KingJ.C.Tissue zinc levels and zinc excretion during experimental zinc depletion in young menAm. J. Clin. Nutr.19843955657010.1093/ajcn/39.4.5566711466
+
+[41] 41.JacksonM.J.JonesD.A.EdwardsR.H.Tissue zinc levels as an index of body zinc statusClin. Physiol.1982233334310.1111/j.1475-097X.1982.tb00038.x6889946
+
+[42] 42.AlkerW.HaaseH.Zinc and sepsisNutrients20181097610.3390/nu1008097630060473PMC6115943
+
+[43] 43.BroadleyD.B.K.EdwardJ.M.J.AnderE.L.MichaelJ.W.ScottD.Y.SueW.MartinR.Dietary calcium and zinc deficiency risks are decreasing but remain prevalentSci. Rep.20155109742609857710.1038/srep10974PMC4476434
+
+[44] 44.TurnlundJ.R.DurkinN.CostaF.MargenS.Stable isotope studies of zinc absorption and retention in young and elderly menJ. Nutr.19861161239124710.1093/jn/116.7.12393746461
+
+[45] 45.FosterM.SammanS.Vegetarian diets across the lifecycle: Impact on zinc intake and statusAdv. Food Nutr. Res.201574931312562403610.1016/bs.afnr.2014.11.003
+
+[46] 46.McClainC.J.Zinc metabolism in malabsorption syndromesJ. Am. Coll. Nutr.19854496410.1080/07315724.1985.107200663886760
+
+[47] 47.ValbergL.S.FlanaganP.R.KerteszA.BondyD.C.Zinc absorption in inflammatory bowel diseaseDig. Dis. Sci.19863172473110.1007/BF012964502873002
+
+[48] 48.SolomonsN.W.RosenbergI.H.SandsteadH.H.Vo-KhactuK.P.Zinc deficiency in crohn’s diseaseDigestion197716879510.1159/000198059615740
+
+[49] 49.World Health Organization/Food and Agricultural OrganizationVitamin and Mineral Requirements in Human Nutrition2nd ed.World Health OrganizationGeneva, Switzerland2004
+
+[50] 50.KingJ.C.BrownK.H.GibsonR.S.KrebsN.F.LoweN.M.SiekmannJ.H.RaitenD.J.Biomarkers of nutrition for development (bond)-zinc reviewJ. Nutr.2016146858S885S10.3945/jn.115.220079PMC480764026962190
+
+[51] 51.PrasadA.S.MialeA.Jr.FaridZ.SandsteadH.H.SchulertA.R.Zinc metabolism in patients with the syndrome of iron deficiency anemia, hepatosplenomegaly, dwarfism, and hypognadismJ. Lab. Clin. Med.19636153754913985937
+
+[52] 52.WalkerC.L.BlackR.E.Zinc for the treatment of diarrhoea: Effect on diarrhoea morbidity, mortality and incidence of future episodesInt. J. Epidemiol.201039Suppl. 1i63i6910.1093/ije/dyq02320348128PMC2845862
+
+[53] 53.CarterJ.P.GrivettiL.E.DavisJ.T.NasiffS.MansourA.MousaW.A.AttaA.E.PatwardhanV.N.Abdel MoneimM.AbdouI.A.Growth and sexual development of adolescent egyptian village boys. Effects of zinc, iron, and placebo supplementationAm. J. Clin. Nutr.196922597810.1093/ajcn/22.1.594885009
+
+[54] 54.PrasadA.S.BeckF.W.BaoB.FitzgeraldJ.T.SnellD.C.SteinbergJ.D.CardozoL.J.Zinc supplementation decreases incidence of infections in the elderly: Effect of zinc on generation of cytokines and oxidative stressAm. J. Clin. Nutr.20078583784410.1093/ajcn/85.3.83717344507
+
+[55] 55.HaaseH.OverbeckS.RinkL.Zinc supplementation for the treatment or prevention of disease: Current status and future perspectivesExp. Gerontol.20084339440810.1016/j.exger.2007.12.00218221847
+
+[56] 56.LiberatoaS.C.SinghaG.MulhollandaK.Zinc supplementation in young children: A review of the literature focusing on diarrhoea prevention and treatmentClin. Nutr.20153418118810.1016/j.clnu.2014.08.00225176404
+
+[57] 57.SandströmB.Dose dependence of zinc and manganese absorption in manProc. Nutr. Soc.19925121121810.1079/PNS199200311438329
+
+[58] 58.LeeH.H.PrasadA.S.BrewerG.J.OwyangC.Zinc absorption in human small intestineAm. J. Physiol.1989256G87G9110.1152/ajpgi.1989.256.1.G872912154
+
+[59] 59.DaviesN.T.Studies on the absorption of zinc by rat intestineBr. J. Nutr.19804318920310.1079/BJN198000787370210
+
+[60] 60.SealC.J.HeatonF.W.Chemical factors affecting the intestinal absorption of zinc in vitro and in vivoBr. J. Nutr.19835031732410.1079/BJN198300996615763
+
+[61] 61.SealC.J.MathersJ.C.Intestinal zinc transfer by everted gut sacs from rats given diets containing different amounts and types of dietary fibreBr. J. Nutr.19896215116310.1079/BJN198900152551362
+
+[62] 62.AntonsonD.L.BarakA.J.VanderhoofJ.A.Determination of the site of zinc absorption in rat small intestineJ. Nutr.197910914214710.1093/jn/109.1.142430207
+
+[63] 63.WangS.C.ChenY.S.ChenS.M.YoungT.K.Possible site of decreased intestinal zinc absorption in chronic uremic ratsNephron20018920821410.1159/00004606911549904
+
+[64] 64.SteinhardtH.J.AdibiS.A.Interaction between transport of zinc and other solutes in human intestineAm. J. Physiol.1984247G176G18210.1152/ajpgi.1984.247.2.G1766465313
+
+[65] 65.ReyesJ.G.Zinc transport in mammalian cellsAm. J. Physiol.1996270C401C41010.1152/ajpcell.1996.270.2.C4018779901
+
+[66] 66.RaffanielloR.D.LeeS.-Y.TeichbercS.WapnirR.A.Distinct mechanisms of zinc uptake at the apical and basolateral membranes of caco-2 cellsJ. Cell. Physiol.199215235636110.1002/jcp.10415202171639868
+
+[67] 67.FinleyJ.W.Briske-AndersonM.ReevesP.G.JohnsonL.K.Zinc uptake and transcellular movement by caco-2 cells: Studies with media containing fetal bovine serumJ. Nutr. Biochem.1995613714410.1016/0955-2863(95)00023-S
+
+[68] 68.RossiA.PoveriniIR.Di LulloG.ModestiA.ModicaA.ScarinosM.L.Heavy metal toxicity following apical and basolateral exposure in the human intestinal cell line caco-2Toxicol. Vitr.199610273610.1016/0887-2333(95)00097-620650179
+
+[69] 69.LönnerdalB.Intestinal absorption of zincZinc in Human BiologyMillsC.F.SpringerLondon, UK19893355
+
+[70] 70.SteelL.CousinsR.J.Kinetics of zinc absorption by luminally and vascularly perfused rat intestineAm. J. Physiol.1985248G46G5310.1152/ajpgi.1985.248.1.G463966560
+
+[71] 71.YasunoT.OkamotoH.NagaiM.KimuraS.YamamotoT.NaganoK.FurubayashiT.YoshikawaY.YasuiH.KatsumiH.In vitro study on the transport of zinc across intestinal epithelial cells using caco-2 monolayers and isolated rat intestinal membranesBiol. Pharm. Bull.20123558859310.1248/bpb.35.58822466565
+
+[72] 72.MenardM.P.CousinsR.J.Zinc transport by brush border membrane vesicles from rat intestineJ. Nutr.19831131434144210.1093/jn/113.7.14346864341
+
+[73] 73.GhishanF.K.SoboG.Intestinal maturation: In vivo zinc transportPediatr. Res.19831714815110.1203/00006450-198302000-000136828332
+
+[74] 74.CraggR.A.ChristieG.R.PhillipsS.R.RussiR.M.KuryS.MathersJ.C.TaylorP.M.FordD.A novel zinc-regulated human zinc transporter, hztl1, is localized to the enterocyte apical membraneJ. Biol. Chem.2002277227892279710.1074/jbc.M20057720011937503
+
+[75] 75.SandströmB.Dietary pattern and zinc supplyZinc in Human BiologyMillsC.F.SpringerLondon, UK1989
+
+[76] 76.ScholmerichJ.FreudemannA.KottgenE.WietholtzH.SteiertB.LohleE.HaussingerD.GerokW.Bioavailability of zinc from zinc-histidine complexes. I. Comparison with zinc sulfate in healthy menAm. J. Clin. Nutr.1987451480148610.1093/ajcn/45.6.14803591728
+
+[77] 77.SandströmB.ArvidssonB.CederbladA.Björn-RasmussenE.Zinc absorption from composite meals. I. The significance of whest extraction rate, zinc, calcium, and protein content in meals based on breadAm. J. Clin. Nutr.198033739745736169110.1093/ajcn/33.4.739
+
+[78] 78.WadaL.TurnlundJ.R.KingJ.C.Zinc utilization in young men fed adequate and low zinc intakesJ. Nutr.19851151345135410.1093/jn/115.10.13454045570
+
+[79] 79.YasunoT.OkamotoH.NagaiM.KimuraS.YamamotoT.NaganoK.FurubayashiT.YoshikawaY.YasuiH.KatsumiH.The disposition and intestinal absorption of zinc in ratsEur. J. Pharm. Sci.20114441041510.1016/j.ejps.2011.08.02421907799
+
+[80] 80.IstfanN.W.JanghorbaniM.YoungV.R.Absorption of stable70 zn in healthy young men in relation to zinc intakeAm. J. Clin. Nutr.19833818719410.1093/ajcn/38.2.1876881077
+
+[81] 81.KuryS.DrenoB.BezieauS.GiraudetS.KharfiM.KamounR.MoisanJ.P.Identification of slc39a4, a gene involved in acrodermatitis enteropathicaNat. Genet.20023123924010.1038/ng91312068297
+
+[82] 82.WangK.ZhouB.KuoY.M.ZemanskyJ.GitschierJ.A novel member of a zinc transporter family is defective in acrodermatitis enteropathicaAm. J. Hum. Genet.200271667310.1086/34112512032886PMC419995
+
+[83] 83.McMahonR.J.CousinsR.J.Regulation of the zinc transporter znt-1 by dietary zincProc. Natl. Acad. Sci. USA1998954841484610.1073/pnas.95.9.48419560190PMC20175
+
+[84] 84.WangF.KimB.E.PetrisM.J.EideD.J.The mammalian zip5 protein is a zinc transporter that localizes to the basolateral surface of polarized cellsJ. Biol. Chem.2004279514335144110.1074/jbc.M40836120015322118
+
+[85] 85.GuthrieG.J.AydemirT.B.TrocheC.MartinA.B.ChangS.M.CousinsR.J.Influence of zip14 (slc39a14) on intestinal zinc processing and barrier functionAm. J. Physiol. Gastrointest. Liver Physiol.2015308G171G17810.1152/ajpgi.00021.201425428902PMC4312952
+
+[86] 86.CraggR.A.PhillipsS.R.PiperJ.M.VarmaJ.S.CampbellF.C.MathersJ.C.FordD.Homeostatic regulation of zinc transporters in the human small intestine by dietary zinc supplementationGut20055446947810.1136/gut.2004.04196215753530PMC1774437
+
+[87] 87.ValentineR.A.JacksonK.A.ChristieG.R.MathersJ.C.TaylorP.M.FordD.Znt5 variant b is a bidirectional zinc transporter and mediates zinc uptake in human intestinal caco-2 cellsJ. Biol. Chem.2007282143891439310.1074/jbc.M70175220017355957
+
+[88] 88.JacksonK.A.HelstonR.M.McKayJ.A.O'NeillE.D.MathersJ.C.FordD.Splice variants of the human zinc transporter znt5 (slc30a5) are differentially localized and regulated by zinc through transcription and mrna stabilityJ. Biol. Chem.2007282104231043110.1074/jbc.M61053520017234632
+
+[89] 89.GunshinH.MackenzieB.BergerU.V.GunshinY.RomeroM.F.BoronW.F.NussbergerS.GollanJ.L.HedigerM.A.Cloning and characterization of a mammalian proton-coupled metal-ion transporterNature199738848248810.1038/413439242408
+
+[90] 90.TandyS.WilliamsM.LeggettA.Lopez-JimenezM.DedesM.RameshB.SraiS.K.SharpP.Nramp2 expression is associated with ph-dependent iron uptake across the apical membrane of human intestinal caco-2 cellsJ. Biol. Chem.20002751023102910.1074/jbc.275.2.102310625641
+
+[91] 91.KordasK.StoltzfusR.J.New evidence of iron and zinc interplay at the enterocyte and neural tissuesJ. Nutr.20041341295129810.1093/jn/134.6.129515173386
+
+[92] 92.FergusonC.J.WareingM.WardD.T.GreenR.SmithC.P.RiccardiD.Cellular localization of divalent metal transporter dmt-1 in rat kidneyAm. J. Physiol. Ren. Physiol.2001280F803F81410.1152/ajprenal.2001.280.5.F80311292622
+
+[93] 93.GarrickM.D.DolanK.G.HorbinskiC.GhioA.J.HigginsD.PorubcinM.MooreE.G.HainsworthL.N.UmbreitJ.N.ConradM.E.Dmt1: A mammalian transporter for multiple metalsBioMetals200316415410.1023/A:102070221309912572663
+
+[94] 94.YamajiS.TennantJ.TandyS.WilliamsM.Singh SraiS.K.SharpP.Zinc regulates the function and expression of the iron transporters dmt1 and ireg1 in human intestinal caco-2 cellsFebs Lett.200150713714110.1016/S0014-5793(01)02953-211684086
+
+[95] 95.FukadaT.KambeT.Molecular and genetic features of zinc transporters in physiology and pathogenesisMet. Integr. Biometal Sci.2011366267410.1039/c1mt00011j21566827
+
+[96] 96.SauerA.K.PfaenderS.HagmeyerS.TaranaL.MattesA.K.BrielF.KuryS.BoeckersT.M.GrabruckerA.M.Characterization of zinc amino acid complexes for zinc delivery in vitro using caco-2 cells and enterocytes from hipscBioMetals20173064366110.1007/s10534-017-0033-y28717982PMC5646115
+
+[97] 97.MaretW.Analyzing free zinc(ii) ion concentrations in cell biology with fluorescent chelating moleculesMet. Integr. Biometal Sci.2015720221110.1039/C4MT00230J25362967
+
+[98] 98.BozymR.A.ChimientiF.GiblinL.J.GrossG.W.KorichnevaI.LiY.LibertS.MaretW.ParvizM.FredericksonC.J.Free zinc ions outside a narrow concentration range are toxic to a variety of cells in vitroExp. Biol. Med.201023574175010.1258/ebm.2010.00925820511678PMC2896872
+
+[99] 99.MaretW.Molecular aspects of human cellular zinc homeostasis: Redox control of zinc potentials and zinc signalsBioMetals20092214915710.1007/s10534-008-9186-z19130267
+
+[100] 100.ColvinR.A.HolmesW.R.FontaineC.P.MaretW.Cytosolic zinc buffering and muffling: Their role in intracellular zinc homeostasisMet. Integr. Biometal Sci.2010230631710.1039/b926662c21069178
+
+[101] 101.MaaresM.KeilC.ThomsenS.GunzelD.WiesnerB.HaaseH.Characterization of caco-2 cells stably expressing the protein-based zinc probe ecalwy-5 as a model system for investigating intestinal zinc transportJ. Trace Elem. Med. Biol. Organ Soc. Miner. Trace Elem.20184929630410.1016/j.jtemb.2018.01.00429395783
+
+[102] 102.MaaresM.DumanA.KeilC.SchwerdtleT.HaaseH.The impact of apical and basolateral albumin on intestinal zinc resorption in the caco-2/ht-29-mtx co-culture modelMet. Integr. Biometal Sci.20181097999110.1039/C8MT00064F29931006
+
+[103] 103.MaaresM.KeilC.KozaJ.StraubingS.SchwerdtleT.HaaseH.In vitro studies on zinc binding and buffering by intestinal mucinsInt. J. Mol. Sci.201819266210.3390/ijms19092662PMC616487530205533
+
+[104] 104.WellenreutherG.CianciM.TucoulouR.Meyer-KlauckeW.HaaseH.The ligand environment of zinc stored in vesiclesBiochem. Biophys. Res. Commun.200938019820310.1016/j.bbrc.2009.01.07419171119
+
+[105] 105.MaaresM.Investigations on Zinc Resorption Using In Vitro Intestinal ModelsBerlin Institute of TechnologyBerlin, Germany2019
+
+[106] 106.MaretW.LiY.Coordination dynamics of zinc in proteinsChem. Rev.20091094682470710.1021/cr800556u19728700
+
+[107] 107.KrezelA.HaoQ.MaretW.The zinc/thiolate redox biochemistry of metallothionein and the control of zinc ion fluctuations in cell signalingArch. Biochem. Biophys.200746318820010.1016/j.abb.2007.02.01717391643
+
+[108] 108.KimuraT.KambeT.The functions of metallothionein and zip and znt transporters: An overview and perspectiveInt. J. Mol. Sci.20161733610.3390/ijms1703033626959009PMC4813198
+
+[109] 109.TapieroH.TewK.D.Trace elements in human physiology and pathology: Zinc and metallothioneinsBiomed. Pharmacother.20035739941110.1016/S0753-3322(03)00081-714652165
+
+[110] 110.CousinsR.J.LiuzziJ.P.LichtenL.A.Mammalian zinc transport, trafficking, and signalsJ. Biol. Chem.2006281240852408910.1074/jbc.R60001120016793761
+
+[111] 111.AndrewsG.K.Regulation of metallothionein gene expression by oxidative stress and metal ionsBiochem. Pharmacol.1999599510410.1016/S0006-2952(99)00301-910605938
+
+[112] 112.RichardsM.P.CousinsR.J.Mammalian zinc homeostasis: Requirement for rna and metallothionein synthesisBiochem. Biophys. Res. Commun.1975641215122310.1016/0006-291X(75)90822-01137597
+
+[113] 113.MenardM.P.McCormickC.C.CousinsR.J.Regulation of intestinal metallothionein biosynthesis in rats by dietary zincJ. Nutr.19811111353136110.1093/jn/111.8.13536115000
+
+[114] 114.ReevesP.G.Adaptation responses in rats to long-term feeding of high-zinc diets: Emphasis on intestinal metallothioneinJ. Nutr. Biochem.19956485410.1016/0955-2863(94)00008-A
+
+[115] 115.SmithK.T.CousinsR.J.Quantitative aspects of zinc absorption by isolated, vascularly perfused rat intestineJ. Nutr.198011031632310.1093/jn/110.2.3167354402
+
+[116] 116.HinskensB.PhilcoxJ.C.CoyleP.RofeA.M.Increased zinc absorption but not secretion in the small intestine of metallothionein-null miceBiol. Trace Elem. Res.20007823124010.1385/BTER:78:1-3:23111314981
+
+[117] 117.HoadleyJ.E.LeinartA.S.CousinsR.J.Relationship of 65zn absorption kinetics to intestinal metallothionein in rats: Effects of zinc depletion and fastingJ. Nutr.198811849750210.1093/jn/118.4.4973357065
+
+[118] 118.DavisS.R.McMahonR.J.CousinsR.J.Metallothionein knockout and transgenic mice exhibit altered intestinal processing of zinc with uniform zinc-dependent zinc transporter-1 expressionJ. Nutr.199812882583110.1093/jn/128.5.8259566988
+
+[119] 119.CoppenD.E.DaviesN.T.Studies on the effects of dietary zinc dose on 65zn absorption in vivo and on the effects of zn status on 65zn absorption and body loss in young ratsBr. J. Nutr.198757354410.1079/BJN198700073801383
+
+[120] 120.MoltedoO.VerdeC.CapassoA.ParisiE.RemondelliP.BonattiS.Alvarez-HernandezX.GlassJ.AlvinoC.G.LeoneA.Zinc transport and metallothionein secretion in the intestinal human cell line caco-2J. Biol. Chem.2000275318193182510.1074/jbc.M00290720010896936
+
+[121] 121.KellyE.J.QuaifeC.J.FroelickG.J.PalmiterR.D.Metallothionein i and ii protect against zinc deficiency and zinc toxicity in miceJ. Nutr.199612617821790868333910.1093/jn/126.7.1782
+
+[122] 122.ColvinR.A.BushA.I.VolitakisI.FontaineC.P.ThomasD.KikuchiK.HolmesW.R.Insights into zn2+ homeostasis in neurons from experimental and modeling studiesAm. J. Physiol. Cell Physiol.2008294C726C74210.1152/ajpcell.00541.200718184873
+
+[123] 123.HempeJ.M.CousinsR.J.Cysteine-rich intestinal protein and intestinal metallothionein: An inverse relationship as a conceptual model for zinc absorption in ratsJ. Nutr.1992122899510.1093/jn/122.1.891729476
+
+[124] 124.Lanningham-FosterL.GreenC.L.Langkamp-HenkenB.DavisB.A.NguyenK.T.BenderB.S.CousinsR.J.Overexpression of crip in transgenic mice alters cytokine patterns and the immune responseAm. J. Physiol. Endocrinol. Metab.2002282E1197E120310.1152/ajpendo.00508.200112006348
+
+[125] 125.NishitoY.KambeT.Absorption mechanisms of iron, copper, and zinc: An overviewJ. Nutr. Sci. Vitaminol.2018641710.3177/jnsv.64.129491267
+
+[126] 126.AndrewsG.K.Regulation and function of zip4, the acrodermatitis enteropathica geneBiochem. Soc. Trans.2008361242124610.1042/BST036124219021533PMC2634863
+
+[127] 127.Dufner-BeattieJ.WangF.KuoY.-M.GitschierJ.EideD.AndrewsG.K.The acrodermatitis enteropathica gene zip4 encodes a tissue-specific, zinc-regulated zinc transporter in miceJ. Biol. Chem.2003278334743348110.1074/jbc.M30500020012801924
+
+[128] 128.KasanaS.DinJ.MaretW.Genetic causes and gene-nutrient interactions in mammalian zinc deficiencies: Acrodermatitis enteropathica and transient neonatal zinc deficiency as examplesJ. Trace Elem. Med. Biol.201529476210.1016/j.jtemb.2014.10.00325468189
+
+[129] 129.KimB.E.WangF.Dufner-BeattieJ.AndrewsG.K.EideD.J.PetrisM.J.Zn2+-stimulated endocytosis of the mzip4 zinc transporter regulates its location at the plasma membraneJ. Biol. Chem.20042794523453010.1074/jbc.M31079920014612438
+
+[130] 130.WeaverB.P.Dufner-BeattieJ.KambeT.AndrewsG.K.Novel zinc-responsive post-transcriptional mechanisms reciprocally regulate expression of the mouse slc39a4 and slc39a5 zinc transporters (zip4 and zip5)Biol. Chem.20073881301131210.1515/BC.2007.14918020946PMC2376820
+
+[131] 131.Dufner-BeattieJ.KuoY.M.GitschierJ.AndrewsG.K.The adaptive response to dietary zinc in mice involves the differential cellular localization and zinc regulation of the zinc transporters zip4 and zip5J. Biol. Chem.2004279490824909010.1074/jbc.M40996220015358787
+
+[132] 132.HashimotoA.NakagawaM.TsujimuraN.MiyazakiS.KizuK.GotoT.KomatsuY.MatsunagaA.ShirakawaH.NaritaH.Properties of zip4 accumulation during zinc deficiency and its usefulness to evaluate zinc status: A study of the effects of zinc deficiency during lactationAm. J. Physiol. Regul. Integr. Comp. Physiol.2016310R459R46810.1152/ajpregu.00439.201526702153
+
+[133] 133.MaoX.KimB.E.WangF.EideD.J.PetrisM.J.A histidine-rich cluster mediates the ubiquitination and degradation of the human zinc transporter, hzip4, and protects against zinc cytotoxicityJ. Biol. Chem.20072826992700010.1074/jbc.M61055220017202136
+
+[134] 134.HuangZ.L.Dufner-BeattieJ.AndrewsG.K.Expression and regulation of slc39a family zinc transporters in the developing mouse intestineDev. Biol.200629557157910.1016/j.ydbio.2006.03.04516682017
+
+[135] 135.LichtenL.A.CousinsR.J.Mammalian zinc transporters: Nutritional and physiologic regulationAnnu. Rev. Nutr.20092915317610.1146/annurev-nutr-033009-08331219400752
+
+[136] 136.LiuzziJ.P.BoboJ.A.LichtenL.A.SamuelsonD.A.CousinsR.J.Responsive transporter genes within the murine intestinal-pancreatic axis form a basis of zinc homeostasisProc. Natl. Acad. Sci. USA2004101143551436010.1073/pnas.040621610115381762PMC521973
+
+[137] 137.LiuzziJ.P.BlanchardR.K.CousinsR.J.Differential regulation of zinc transporter 1, 2, and 4 mrna expression by dietary zinc in ratsJ. Nutr.2001131465210.1093/jn/131.1.4611208937
+
+[138] 138.NishitoY.KambeT.Zinc transporter 1 (znt1) expression on the cell surface is elaborately controlled by cellular zinc levelsJ. Biol. Chem.2019294156861569710.1074/jbc.RA119.01022731471319PMC6816103
+
+[139] 139.JouM.Y.HallA.G.PhilippsA.F.KelleherS.L.LonnerdalB.Tissue-specific alterations in zinc transporter expression in intestine and liver reflect a threshold for homeostatic compensation during dietary zinc deficiency in weanling ratsJ. Nutr.200913983584110.3945/jn.108.10097419297427
+
+[140] 140.AndrewsG.K.WangH.DeyS.K.PalmiterR.D.Mouse zinc transporter 1 gene provides an essential function during early embryonic developmentGenesis200440748110.1002/gene.2006715452870
+
+[141] 141.YuY.Y.KirschkeC.P.HuangL.Immunohistochemical analysis of znt1, 4, 5, 6, and 7 in the mouse gastrointestinal tractJ. Histochem. Cytochem. Off. J. Histochem. Soc.20075522323410.1369/jhc.6A7032.200617101726
+
+[142] 142.InoueK.MatsudaK.ItohM.KawaguchiH.TomoikeH.AoyagiT.NagaiR.HoriM.NakamuraY.TanakaT.Osteopenia and male-specific sudden cardiac death in mice lacking a zinc transporter gene, znt5Hum. Mol. Genet.2002111775178410.1093/hmg/11.15.177512095919
+
+[143] 143.PalmiterR.D.ColeT.B.FinleyS.D.Znt-2, a mammalian protein that confers resistance to zinc by facilitating vesicular sequestrationEMBO J.1996151784179110.1002/j.1460-2075.1996.tb00527.x8617223PMC450094
+
+[144] 144.JouM.Y.PhilippsA.F.KelleherS.L.LonnerdalB.Effects of zinc exposure on zinc transporter expression in human intestinal cells of varying maturityJ. Pediatric Gastroenterol. Nutr.20105058759510.1097/MPG.0b013e3181d98e8520479680
+
+[145] 145.LiuzziJ.P.BoboJ.A.CuiL.McMahonR.J.CousinsR.J.Zinc transporters 1, 2 and 4 are differentially expressed and localized in rats during pregnancy and lactationJ. Nutr.200313334235110.1093/jn/133.2.34212566465
+
+[146] 146.PodanyA.B.WrightJ.LamendellaR.SoybelD.I.KelleherS.L.Znt2-mediated zinc import into paneth cell granules is necessary for coordinated secretion and paneth cell function in miceCell. Mol. Gastroenterol. Hepatol.2016236938310.1016/j.jcmgh.2015.12.00628174721PMC5042355
+
+[147] 147.MurgiaC.VespignaniI.CeraseJ.NobiliF.PerozziG.Cloning, expression, and vesicular localization of zinc transporter dri 27/znt4 in intestinal tissue and cellsAm. J. Physiol.1999277G1231G123910.1152/ajpgi.1999.277.6.G123110600821
+
+[148] 148.KirschkeC.P.HuangL.Znt7, a novel mammalian zinc transporter, accumulates zinc in the golgi apparatusJ. Biol. Chem.20032784096410210.1074/jbc.M20764420012446736
+
+[149] 149.HuangL.KirschkeC.P.GitschierJ.Functional characterization of a novel mammalian zinc transporter, znt6J. Biol. Chem.2002277263892639510.1074/jbc.M20046220011997387
+
+[150] 150.HennigarS.R.McClungJ.P.Zinc transport in the mammalian intestineCompr. Physiol.2018959743054902510.1002/cphy.c180001
+
+[151] 151.HolstB.WilliamsonG.Nutrients and phytochemicals: From bioavailability to bioefficacy beyond antioxidantsCurr. Opin. Biotechnol.200819738210.1016/j.copbio.2008.03.00318406129
+
+[152] 152.Carbonell-CapellaJ.M.BuniowskaM.BarbaF.J.EsteveM.J.FrígolaA.Analytical methods for determining bioavailability and bioaccessibility of bioactive compounds from fruits and vegetables: A reviewCompr. Rev. Food Sci. Food Saf.20141315517110.1111/1541-4337.1204933412647
+
+[153] 153.LönnerdalB.Phytic acid–trace element (zn, cu, mn) interactionsInt. J. Food Sci. Technol.20023774975810.1046/j.1365-2621.2002.00640.x
+
+[154] 154.WapnirR.A.Zinc deficiency, malnutrition and the gastrointestinal tractJ. Nutr.2000130138851392510.1093/jn/130.5.1388S10801949
+
+[155] 155.RaffanielloR.D.WapnirR.A.Zinc uptake by isolated rat enterocytes: Effect of low molecular weight ligandsProc. Soc. Exp. Biol. Med.198919221922410.3181/00379727-192-429882513579
+
+[156] 156.HennigarS.R.McClungJ.P.Hepcidin attenuates zinc efflux in caco-2 cellsJ. Nutr.20161462167217310.3945/jn.116.23708127655758
+
+[157] 157.SandströmB.SandbergA.S.Inhibitory effects of isolated inositol phosphates on zinc absorption in humansJ. Trace Elem. Electrolytes Health Dis.19926991031422186
+
+[158] 158.LönnerdalB.SandbergA.-S.SandströmB.KunzC.Inhibitory effects of phytic acid and other inositol phosphates on zinc and calcium absorption in suckling ratsJ. Nutr.198911921121410.1093/jn/119.2.2112918393
+
+[159] 159.SandbergA.AndlidT.Phytogenic and microbial phytases in human nutritionInt. J. Food Sci. Technol.20023782383310.1046/j.1365-2621.2002.00641.x
+
+[160] 160.NävertB.SandströmB.CederbladA.Reduction of the phytate content of bran by leavening in bread and its effect on zinc absorption in manBr. J. Nutr.1985534753299844010.1079/bjn19850009
+
+[161] 161.KemmeP.A.SchlemmerU.MrozZ.JongbloedA.W.Monitoring the stepwise phytate degradation in the upper gastrointestinal tract of pigsJ. Sci. Food Agric.20068661262210.1002/jsfa.2380
+
+[162] 162.IqbalT.H.LewisK.O.CooperB.T.Phytase activity in the human and rat small intestineGut1994351233123610.1136/gut.35.9.12337959229PMC1375699
+
+[163] 163.TurkM.SandbergA.S.Phytate degradation during breadmaking: Effect of phytase additionJ. Cereal Sci.19921528129410.1016/S0733-5210(09)80126-4
+
+[164] 164.VascaE.MaterazziS.CarusoT.MilanoO.FontanellaC.ManfrediC.Complex formation between phytic acid and divalent metal ions: A solution equilibria and solid state investigationAnal. Bioanal. Chem.200237417317810.1007/s00216-002-1469-612207261
+
+[165] 165.TangN.SkibstedL.H.Zinc bioavailability from phytate-rich foods and zinc supplements. Modeling the effects of food components with oxygen, nitrogen, and sulfur donor ligandsJ. Agric. Food Chem.2017658727874310.1021/acs.jafc.7b0299828905624
+
+[166] 166.LönnerdalB.CederbladA.DavidsonL.SandströmB.The effect of individual components of soy formula and cows’ milk formula on zinc bioavailabilityAm. J. Clin. Nutr.1984401064107010.1093/ajcn/40.5.10646541868
+
+[167] 167.FallingborgJ.Intraluminal ph of the human gastrointestinal tractDan. Med. Bull.19994618319610421978
+
+[168] 168.KhouzamR.B.PohlP.LobinskiR.Bioaccessibility of essential elements from white cheese, bread, fruit and vegetablesTalanta20118642542810.1016/j.talanta.2011.08.04922063561
+
+[169] 169.SimpsonC.J.WiseA.Binding of zinc and calcium to inositol phosphates (phytate) in vitroBr. J. Nutr.19906422523210.1079/BJN199000242400762
+
+[170] 170.TurnlundJ.R.KingJ.C.KeyesW.R.GongB.MichelM.C.A stable isotope study of zinc absorption in young men: Effects of phytate and alpha-celluloseAm. J. Clin. Nutr.1984401071107710.1093/ajcn/40.5.10716496386
+
+[171] 171.OberleasD.HarlandB.F.Phytate content of foods: Effect on dietary zinc bioavailabilityJ. Am. Diet. Assoc.1981794334367288050
+
+[172] 172.DaviesN.T.OlpinS.E.Studies on the phytate: Zinc molar contents in diets as a determinant of zn availability to young ratsBr. J. Nutr.19794159060310.1079/BJN19790074572702
+
+[173] 173.KristensenM.B.HelsO.MorbergC.M.MarvingJ.BugelS.TetensI.Total zinc absorption in young women, but not fractional zinc absorption, differs between vegetarian and meat-based diets with equal phytic acid contentBr. J. Nutr.20069596396710.1079/BJN2005148616611387
+
+[174] 174.FredlundK.IsakssonM.Rossander-HulthénL.AlmgrenA.SandbergA.-S.Absorption of zinc and retention of calcium: Dose-dependent inhibition by phytateJ. Trace Elem. Med. Biol.200620495710.1016/j.jtemb.2006.01.00316632176
+
+[175] 175.HuntJ.R.BeiseigelJ.M.Dietary calcium does not exacerbate phytate inhibition of zinc absorption by women from conventional dietsAm. J. Clin. Nutr.20098983984310.3945/ajcn.2008.2717519176739
+
+[176] 176.AbebeY.BogaleA.HambidgeK.M.StoeckerB.J.BaileyK.GibsonR.S.Phytate, zinc, iron and calcium content of selected raw and prepared foods consumed in rural sidama, southern ethiopia, and implications for bioavailabilityJ. Food Compos. Anal.20072016116810.1016/j.jfca.2006.09.003
+
+[177] 177.LazarteC.E.CarlssonN.-G.AlmgrenA.SandbergA.-S.GranfeldtY.Phytate, zinc, iron and calcium content of common bolivian food, and implications for mineral bioavailabilityJ. Food Compos. Anal.20153911111910.1016/j.jfca.2014.11.015
+
+[178] 178.Magallanes-LópezA.M.Hernandez-EspinosaN.VeluG.Posadas-RomanoG.Ordoñez-VillegasV.M.G.CrossaJ.AmmarK.GuzmánC.Variability in iron, zinc and phytic acid content in a worldwide collection of commercial durum wheat cultivars and the effect of reduced irrigation on these traitsFood Chem.201723749950510.1016/j.foodchem.2017.05.11028764025PMC5544597
+
+[179] 179.UmetaM.WestC.E.FufaH.Content of zinc, iron, calcium and their absorption inhibitors in foods commonly consumed in ethiopiaJ. Food Compos. Anal.20051880381710.1016/j.jfca.2004.09.008
+
+[180] 180.MaG.JinY.PiaoJ.KokF.GuusjeB.JacobsenE.Phytate, calcium, iron, and zinc contents and their molar ratios in foods commonly consumed in chinaJ. Agric. Food Chem.200553102851029010.1021/jf052051r16366728
+
+[181] 181.SandströmB.CederbladA.Zinc absorption from composite meals. Ii. Influence of the main protein sourceAm. J. Clin. Nutr.1980331778178310.1093/ajcn/33.8.17786893252
+
+[182] 182.SandströmB.AlmgrenA.KivistoB.CederbladA.Effect of protein level and protein source on zinc absorption in humansJ. Nutr.1989119485310.1093/jn/119.1.482492337
+
+[183] 183.DavidssonL.AlmgrenA.SandströMB.JuilleratM.E.-A.HurrellR.F.Zinc absorption in adult humans: The effect of protein sources added to liquid test mealsBr. J. Nutr.19967560761310.1079/BJN199601638672412
+
+[184] 184.KielaP.R.GhishanF.K.Physiology of intestinal absorption and secretionBest Pract. Res. Clin. Gastroenterol.20163014515910.1016/j.bpg.2016.02.00727086882PMC4956471
+
+[185] 185.SandströmB.DavidssonL.CederbladA.LönnerdalB.Oral iron, dietary ligands and zinc absorptionJ. Nutr.198511541141410.1093/jn/115.3.4113973750
+
+[186] 186.WapnirR.A.StielL.Zinc intestinal absorption in rats: Specificity of amino acids as ligandsJ. Nutr.19861162171217910.1093/jn/116.11.21713794825
+
+[187] 187.HempeJ.M.CousinsR.J.Effect of edta and zinc-methionine complex on zinc absorption by rat intestineJ. Nutr.19891191179118710.1093/jn/119.8.11792506318
+
+[188] 188.SandsteadH.H.SmithJ.C.Jr.Deliberations and evaluations of approaches, endpoints and paradigms for determining zinc dietary recommendationsJ. Nutr.19961262410s2418s10.1093/jn/126.suppl_9.2410S8811806
+
+[189] 189.DavidssonL.KastenmayerP.HurrellR.F.Sodium iron edta [nafe(iii)edta] as a food fortificant: The effect on the absorption and retention of zinc and calcium in womenAm. J. Clin. Nutr.19946023123710.1093/ajcn/60.2.2318030601
+
+[190] 190.DavidssonL.AlmgrenA.SandströmB.HurrellR.F.Zinc absorption in adult humans: The effect of iron fortificationBr. J. Nutr.19957441742510.1079/BJN199501457547854
+
+[191] 191.TurnlundJ.R.KeyesW.R.HudsonC.A.BetschartA.A.KretschM.J.SauberlichH.E.A stable-isotope study of zinc, copper, and iron absorption and retention by young women fed vitamin b-6-deficient dietsAm. J. Clin. Nutr.1991541059106410.1093/ajcn/54.6.10591957821
+
+[192] 192.SolomonsN.W.JacobR.A.Studies on the bioavailability of zinc in humans: Effects of heme and nonheme iron on the absorption of zincAm. J. Clin. Nutr.19813447548210.1093/ajcn/34.4.4757223699
+
+[193] 193.SandströmB.Micronutrient interactions: Effects on absorption and bioavailabilityBr. J. Nutr.200185Suppl. 2S181S18511509108
+
+[194] 194.AugustD.JanghorbaniM.YoungV.R.Determination of zinc and copper absorption at three dietary zn-cu ratios by using stable isotope methods in young adult and elderly subjectsAm. J. Clin. Nutr.1989501457146310.1093/ajcn/50.6.14572596436
+
+[195] 195.SandsteadH.H.Requirements and toxicity of essential trace elements, illustrated by zinc and copperAm. J. Clin. Nutr.199561621s624s10.1093/ajcn/61.3.621S7879727
+
+[196] 196.BlakeboroughP.SalterD.N.The intestinal transport of zinc studied using brush-border-membrane vesicles from the pigletBr. J. Nutr.198757455510.1079/BJN198700083801384
+
+[197] 197.ValbergL.S.FlanaganP.R.ChamberlainM.J.Effects of iron, tin, and copper on zinc absorption in humansAm. J. Clin. Nutr.19844053654110.1093/ajcn/40.3.5366475824
+
+[198] 198.JohnsonM.A.BaierM.J.GregerJ.L.Effects of dietary tin on zinc, copper, iron, manganese, and magnesium metabolism of adult malesAm. J. Clin. Nutr.1982351332133810.1093/ajcn/35.6.13327081116
+
+[199] 199.SolomonsN.W.JacobR.A.PinedaO.ViteriF.E.Studies on the bioavailability of zinc in man. Iii. Effects of ascorbic acid on zinc absorptionAm. J. Clin. Nutr.1979322495249910.1093/ajcn/32.12.2495506973
+
+[200] 200.NairK.M.BrahmamG.N.RadhikaM.S.DriptaR.C.RavinderP.BalakrishnaN.ChenZ.HawthorneK.M.AbramsS.A.Inclusion of guava enhances non-heme iron bioavailability but not fractional zinc absorption from a rice-based meal in adolescentsJ. Nutr.201314385285810.3945/jn.112.17170223596161PMC3652882
+
+[201] 201.WegmullerR.TayF.ZederC.BrnicM.HurrellR.F.Zinc absorption by young adults from supplemental zinc citrate is comparable with that from zinc gluconate and higher than from zinc oxideJ. Nutr.201414413213610.3945/jn.113.18148724259556PMC3901420
+
+[202] 202.PabónM.L.LönnerdalB.Effect of citrate on zinc bioavailability from milk, milk fractions and infant formulasNutr. Res.19931310311110.1016/S0271-5317(05)80661-X
+
+[203] 203.LönnerdalB.StanislowskiA.G.HurleyL.S.Isolation of a low molecular weight zinc binding ligand from human milkJ. Inorg. Biochem.198012717810.1016/S0162-0134(00)80044-67189547
+
+[204] 204.SandströmB.CederbladA.LonnerdalB.Zinc absorption from human milk, cow’s milk, and infant formulasAm. J. Dis. Child.198313772672910.1001/archpedi.1983.021403400100026869328
+
+[205] 205.GharibzahediS.M.T.JafariS.M.The importance of minerals in human nutrition: Bioavailability, food fortification, processing effects and nanoencapsulationTrends Food Sci. Technol.20176211913210.1016/j.tifs.2017.02.017
+
+[206] 206.FurnissD.E.VuichoudJ.FinotP.A.HurrellR.F.The effect of maillard reaction products on zinc metabolism in the ratBr. J. Nutr.19896273974910.1079/BJN198900742513873
+
+[207] 207.O’BrienJ.MorrisseyP.A.Metal ion complexation by products of the maillard reactionFood Chem.199758172710.1016/S0308-8146(96)00162-8
+
+[208] 208.KumarV.SinhaA.K.MakkarH.P.S.BeckerK.Dietary roles of phytate and phytase in human nutrition: A reviewFood Chem.201012094595910.1016/j.foodchem.2009.11.052
+
+[209] 209.QuartermanJ.Metal absorption and the intestinal mucus layerDigestion1987371910.1159/0001994803609500
+
+[210] 210.KrezelA.MaretW.The biological inorganic chemistry of zinc ionsArch. Biochem. Biophys.201661131910.1016/j.abb.2016.04.01027117234PMC5120989
+
+[211] 211.WhiteheadM.W.ThompsonR.P.PowellJ.J.Regulation of metal absorption in the gastrointestinal tractGut19963962562810.1136/gut.39.5.6259026473PMC1383382
+
+[212] 212.PowellJ.J.JugdaohsinghR.ThompsonR.P.The regulation of mineral absorption in the gastrointestinal tractProc. Nutr. Soc.19995814715310.1079/PNS1999002010343352
+
+[213] 213.GloverC.N.HogstrandC.In vivo characterisation of intestinal zinc uptake in freshwater rainbow troutJ. Exp. Biol.20022051411501181842010.1242/jeb.205.1.141
+
+[214] 214.LealJ.SmythH.D.C.GhoshD.Physicochemical properties of mucus and their impact on transmucosal drug deliveryInt. J. Pharm.201753255557210.1016/j.ijpharm.2017.09.01828917986PMC5744044
+
+[215] 215.McGuckinM.A.LindenS.K.SuttonP.FlorinT.H.Mucin dynamics and enteric pathogensNat. Rev. Microbiol.2011926527810.1038/nrmicro253821407243
+
+[216] 216.RudzkiZ.BakerR.J.DellerD.J.The iron-binding glycoprotein of human gastric juice. Ii. Nature of the interaction of the glycoprotein with ironDigestion19738536710.1159/0001973004776489
+
+[217] 217.CrowtherR.S.MarriottC.Counter-ion binding to mucus glycoproteinsJ. Pharm. Pharmacol.198436212610.1111/j.2042-7158.1984.tb02980.x6141258
+
+[218] 218.ConradM.E.UmbreitJ.N.MooreE.G.A role for mucin in the absorption of inorganic iron and other metal cations. A study in ratsGastroenterology199110012913610.1016/0016-5085(91)90592-91983814
+
+[219] 219.De DomenicoI.WardD.M.KaplanJ.Hepcidin regulation: Ironing out the detailsJ. Clin. Investig.20071171755175810.1172/JCI3270117607352PMC1904333
+
+[220] 220.HaaseH.HebelS.EngelhardtG.RinkL.The biochemical effects of extracellular zn(2+) and other metal ions are severely affected by their speciation in cell culture mediaMet. Integr. Biometal Sci.2015710211110.1039/C4MT00206G25360687
+
+[221] 221.BalW.SokołowskaM.KurowskaaE.FallerP.Binding of transition metal ions to albumin: Sites, affinities and ratesBiochim. Biophys. Acta201318305444545510.1016/j.bbagen.2013.06.01823811338
+
+[222] 222.MelounB.MorávekL.KostkaV.Complete amino acid sequence of human serum albuminFEBS Lett.19755813413710.1016/0014-5793(75)80242-01225573
+
+[223] 223.SmithK.T.FaillaM.L.CousinsR.J.Identification of albumin as the plasma carrier for zinc absorption by perfused rat intestineBiochem. J.197918462763310.1042/bj1840627540055PMC1161847
+
+[224] 224.WangX.ZhouB.Dietary zinc absorption: A play of zips and znts in the gutIubmb Life20106217618210.1002/iub.29120120011
+
+[225] 225.MooradianA.D.SongM.K.The intestinal zinc transport in aged ratsMech. Ageing Dev.19874118919710.1016/0047-6374(87)90039-X3123812
+
+[226] 226.SongM.K.MooradianA.D.Intestinal zinc transport: Influence of streptozotocin-induced diabetes, insulin and arachidonic acidLife Sci.19884268769410.1016/0024-3205(88)90460-23123834
+
+[227] 227.SongM.K.LeeD.B.AdhamN.F.Influence of prostaglandins on unidirectional zinc fluxes across the small intestine of the ratBr. J. Nutr.19885941742810.1079/BJN198800503165032
+
+[228] 228.SongM.K.KimY.Y.HengM.C.AdhamN.F.AmentM.E.Prostaglandin interacts with steroid sex hormones in the regulation of intestinal zinc transportComp. Biochem. Physiol. Comp. Physiol.199210147748110.1016/0300-9629(92)90497-E1348677
+
+[229] 229.BzikV.A.MedaniM.BairdA.W.WinterD.C.BraydenD.J.Mechanisms of action of zinc on rat intestinal epithelial electrogenic ion secretion: Insights into its antidiarrhoeal actionsJ. Pharm. Pharmacol.20126464465310.1111/j.2042-7158.2011.01441.x22471360
+
+[230] 230.CarlsonD.SehestedJ.PoulsenH.D.Zinc reduces the electrophysiological responses in vitro to basolateral receptor mediated secretagogues in piglet small intestinal epitheliumComp. Biochem. Physiol. A Mol. Integr. Physiol.200614451451910.1016/j.cbpa.2006.04.01916757198
+
+[231] 231.CarlsonD.PoulsenH.D.SehestedJ.Influence of weaning and effect of post weaning dietary zinc and copper on electrophysiological response to glucose, theophylline and 5-ht in piglet small intestinal mucosaComp. Biochem. Physiol. A Mol. Integr. Physiol.200413775776510.1016/j.cbpb.2004.02.01115123184
+
+[232] 232.TacnetF.WatkinsD.W.RipocheP.Studies of zinc transport into brush-border membrane-vesicles isolated from pig small-intestineBiochim. Biophys. Acta1990102432333010.1016/0005-2736(90)90361-Q2112950
+
+[233] 233.TacnetF.WatkinsD.W.RipocheP.Zinc binding in intestinal brush-border membrane isolated from pigBiochim. Biophys. Acta19911063515910.1016/0005-2736(91)90352-91901728
+
+[234] 234.SmithK.T.cousinsR.J.SilbonB.L.FaillaM.L.Zinc absorption and metabolism by isolated, vascularly perfused rat intestineJ. Nutr.19781081849185710.1093/jn/108.11.1849712429
+
+[235] 235.RusselM.W.S.BurchR.L.The Principles of Humane Experimental TechniqueMethuenLondon, UK1959
+
+[236] 236.FlecknellP.Replacement, reduction and refinementAltex200219737812098013
+
+[237] 237.WesterhoutJ.WortelboerH.VerhoeckxK.Ussing chamberThe Impact of Food Bioactives on Health: In Vitro and Ex Vivo ModelsVerhoeckxK.CotterP.López-ExpósitoI.KleivelandC.LeaT.MackieA.RequenaT.SwiateckaD.WichersH.Springer International PublishingCham, Switzerland201526327329787039
+
+[238] 238.FleetJ.C.TurnbullA.J.BourcierM.WoodR.J.Vitamine d-sensitive and quinacrine-sensitive zinc transport in human intestinal cell line caco-2Am. J. Physiol.1993264G1037G1045833353010.1152/ajpgi.1993.264.6.G1037
+
+[239] 239.ReevesP.G.Briske-AndersonM.JohnsonL.Pre-treatment of caco-2 cells with zinc during the differentiation phase alters the kinetics of zinc uptake and transportJ. Nutr. Biochem.20011267468410.1016/S0955-2863(01)00185-112031250
+
+[240] 240.HuangC.CuiX.SunX.YangJ.LiM.Zinc transporters are differentially expressed in human non-small cell lung cancerOncotarget20167669356694310.18632/oncotarget.1188427611948PMC5341848
+
+[241] 241.HuangD.ZhuoZ.FangS.YueM.FengJ.Different zinc sources have diverse impacts on gene expression of zinc absorption related transporters in intestinal porcine epithelial cellsBiol. Trace Elem. Res.201617332533210.1007/s12011-016-0655-x26994770
+
+[242] 242.GefellerE.M.BondzioA.AschenbachJ.R.MartensH.EinspanierR.ScharfenF.ZentekJ.PieperR.LodemannU.Regulation of intracellular zn homeostasis in two intestinal epithelial cell models at various maturation time pointsJ. Physiol. Sci.20156531732810.1007/s12576-015-0369-425757458PMC10717430
+
+[243] 243.JouM.Y.DuX.HotzC.LonnerdalB.Biofortification of rice with zinc: Assessment of the relative bioavailability of zinc in a caco-2 cell model and suckling rat pupsJ. Agric. Food Chem.2012603650365710.1021/jf202338t22428952
+
+[244] 244.ShahP.JoganiV.BagchiT.MisraA.Role of caco-2 cell monolayers in prediction of intestinal drug absorptionBiotechnol. Prog.20062218619810.1021/bp050208u16454510
+
+[245] 245.LaparraJ.M.BarberaR.AlegriaA.GlahnR.P.MillerD.D.Purified glycosaminoglycans from cooked haddock may enhance fe uptake via endocytosis in a caco-2 cell culture modelJ. Food Sci.200974H168H17310.1111/j.1750-3841.2009.01216.x19723201
+
+[246] 246.ReevesP.G.Briske-AndersonM.JohnsonL.Physiologic concentrations of zinc affect the kinetics of copper uptake and transport in the human intestinal cell model, caco-2J. Nutr.19981794180110.1093/jn/128.10.17949772151
+
+[247] 247.JovaniM.BarberaR.FarreR.AguileraE.M.D.Calcium, iron, and zinc uptake from digests of infant formulas by caco-2 cellsJ. Agric. Food Chem.2001493480348510.1021/jf010106t11453795
+
+[248] 248.CortiG.MaestrelliF.CirriM.ZerroukN.MuraP.Development and evaluation of an in vitro method for prediction of human drug absorption ii. Demonstration of the method suitabilityEur. J. Pharm. Sci.20062735436210.1016/j.ejps.2005.11.00516364612
+
+[249] 249.DelieF.WernerR.A human colonic cell line sharing similarities with enterocytes as a model to examine oral absorption: Advantages and limitations of the caco-2 modelCrit. Rev. Ther. Drug Carr. Syst.19971422128610.1615/CritRevTherDrugCarrierSyst.v14.i3.209282267
+
+[250] 250.PintoM.RobineleonS.AppayM.D.KedingerM.TriadouN.DussaulxE.LacroixB.SimonassmannP.HaffenK.FoghJ.Enterocyte-like differentiation and polarization of the human colon carcinoma cell-line caco-2 in cultureBiol. Cell198347323330
+
+[251] 251.SambuyY.de AngelisM.RanaldiG.ScarinoM.L.StammatiA.ZuccoF.The caco-2 cell line as a model for the intestinal barrier: Influence of cell and culture-related factors on caco-2 cell functional characteristicsCell Biol. Toxicol.20052112610.1007/s10565-005-0085-615868485
+
+[252] 252.HayeshiR.HilgendorfC.ArturssonP.AugustijnsP.BrodinB.DehertoghP.FisherK.FossatiL.HovenkampE.KorjamoT.Comparison of drug transporter gene expression and functionality in caco-2 cells from 10 different laboratoriesEur. J. Pharm. Sci.20083538339610.1016/j.ejps.2008.08.00418782614
+
+[253] 253.LichtensteinD.EbmeyerJ.KnappeP.JulingS.BohmertL.SelveS.NiemannB.BraeuningA.ThunemannA.F.LampenA.Impact of food components during in vitro digestion of silver nanoparticles on cellular uptake and cytotoxicity in intestinal cellsBiol. Chem.20153961255126410.1515/hsz-2015-014526040006
+
+[254] 254.MahlerG.J.ShulerM.L.GlahnR.P.Characterization of caco-2 and ht29-mtx cocultures in an in vitro digestion/cell culture model used to predict iron bioavailabilityJ. Nutr. Biochem.20092049450210.1016/j.jnutbio.2008.05.00618715773
+
+[255] 255.WelcomeM.O.Gastrointestinal Physiology—Development, Principles and Mechanisms of RegulationSpringer International PublishingCham, Switzerland2018
+
+[256] 256.Lozoya-AgulloI.AraújoF.González-ÁlvarezI.Merino-SanjuánM.González-ÁlvarezM.BermejoM.SarmentoB.Usefulness of caco-2/ht29-mtx and caco-2/ht29-mtx/raji b coculture models to predict intestinal and colonic permeability compared to caco-2 monocultureMol. Pharm.2017141264127010.1021/acs.molpharmaceut.6b0116528263609
+
+[257] 257.Van der FlierL.G.CleversH.Stem cells, self-renewal, and differentiation in the intestinal epitheliumAnnu. Rev. Physiol.20097124126010.1146/annurev.physiol.010908.16314518808327
+
+[258] 258.ChenQ.GuoL.DuF.ChenT.HouH.LiB.The chelating peptide (gpagphgppg) derived from alaska pollock skin enhances calcium, zinc and iron transport in caco-2 cellsInt. J. Food Sci. Technol.2017521283129010.1111/ijfs.13396
+
+[259] 259.SreenivasuluK.RaghuP.NairK.M.Polyphenol-rich beverages enhance zinc uptake and metallothionein expression in caco-2 cellsJ. Food Sci.201075H123H12810.1111/j.1750-3841.2010.01582.x20546406
+
+[260] 260.SreenivasuluK.RaghuP.RavinderP.NairK.M.Effect of dietary ligands and food matrices on zinc uptake in caco-2 cells: Implications in assessing zinc bioavailabilityJ. Agric. Food Chem.200856109671097210.1021/jf802060q18947232
+
+[261] 261.ChengZ.TakoE.YeungA.WelchR.M.GlahnR.P.Evaluation of metallothionein formation as a proxy for zinc absorption in an in vitro digestion/caco-2 cell culture modelFood Funct.2012373273610.1039/c2fo10232c22538397
+
+[262] 262.García-NebotM.J.AlegríaA.BarberáR.ClementeG.RomeroF.Does the addition of caseinophosphopeptides or milk improve zinc in vitro bioavailability in fruit beverages?Food Res. Int.2009421475148210.1016/j.foodres.2009.08.005
+
+[263] 263.CámaraF.BarberáR.AmaroM.A.FarréR.Calcium, iron, zinc and copper transport and uptake by caco-2 cells in school meals: Influence of protein and mineral interactionsFood Chem.20071001085109210.1016/j.foodchem.2005.11.010
+
+[264] 264.IyengarV.PullakhandamR.NairK.M.Dietary ligands as determinants of iron-zinc interactions at the absorptive enterocyteJ. Food Sci.201075H260H26410.1111/j.1750-3841.2010.01796.x21535504
+
+[265] 265.TupeR.S.AgteV.V.Effect of water soluble vitamins on zn transport of caco-2 cells and their implications under oxidative stress conditionsEur. J. Nutr.200949536110.1007/s00394-009-0048-419680705
+
+[266] 266.KimE.-Y.PaiT.-K.HanO.Effect of bioactive dietary polyphenols on zinc transport across the intestinal caco-2 cell monolayersJ. Agric. Food Chem.2011593606361210.1021/jf104260j21410257PMC3087602
+
+[267] 267.ViadelB.BarberáR.FarréR.Uptake and retention of calcium, iron, and zinc from raw legumes and the effect of cooking on lentils in caco-2 cellsNutr. Res.20062659159610.1016/j.nutres.2006.09.016
+
+[268] 268.SalunkeR.RawatN.TiwariV.K.NeelamK.RandhawaG.S.DhaliwalH.S.RoyP.Determination of bioavailable-zinc from biofortified wheat using a coupled in vitro digestion/caco-2 reporter-gene based assayJ. Food Compos. Anal.20122514915910.1016/j.jfca.2011.09.006
+
+[269] 269.KrugerJ.TaylorJ.R.N.DuX.De MouraF.F.LönnerdalB.OelofseA.Effect of phytate reduction of sorghum, through genetic modification, on iron and zinc availability as assessed by an in vitro dialysability bioaccessibility assay, caco-2 cell uptake assay, and suckling rat pup absorption modelFood Chem.20131411019102510.1016/j.foodchem.2013.01.10523790881
+
+[270] 270.HanO.FaillaM.L.HillA.D.MorrisE.R.SmithJ.C.Jr.Inositol phosphates inhibit uptake and transport of iron and zinc by a human intestinal cell lineJ. Nutr.199412458058710.1093/jn/124.4.5808145081
+
+[271] 271.FrontelaC.Effect of dephytinization on bioavailability of iron, calcium and zinc from infant cereals assessed in the caco-2 cell modelWorld J. Gastroenterol.200915197710.3748/wjg.15.197719399930PMC2675088
+
+[272] 272.FrontelaC.RosG.MartínezC.Phytic acid content and “in vitro” iron, calcium and zinc bioavailability in bakery products: The effect of processingJ. Cereal Sci.20115417317910.1016/j.jcs.2011.02.015
+
+[273] 273.ZemannN.ZemannA.KleinP.ElmadfaI.HuettingerM.Differentiation- and polarization-dependent zinc tolerance in caco-2 cellsEur. J. Nutr.20115037938610.1007/s00394-010-0146-321103883
+
+[274] 274.JacksonK.A.ValentineR.A.McKayJ.A.SwanD.C.MathersJ.C.FordD.Analysis of differential gene-regulatory responses to zinc in human intestinal and placental cell linesBr. J. Nutr.20091011474148310.1017/S000711450809463418947441
+
+[275] 275.LodemannU.GefellerE.M.AschenbachJ.R.MartensH.EinspanierR.BondzioA.Dose effects of apical versus basolateral zinc supplementation on epithelial resistance, viability, and metallothionein expression in two intestinal epithelial cell linesJ. Biochem. Mol. Toxicol.20152941041710.1002/jbt.2171025895165
+
+[276] 276.ShenH.QinH.GuoJ.Cooperation of metallothionein and zinc transporters for regulating zinc homeostasis in human intestinal caco-2 cellsNutr. Res.20082840641310.1016/j.nutres.2008.02.01119083439
+
+[277] 277.WangX.ValenzanoM.C.MercadoJ.M.ZurbachE.P.MullinJ.M.Zinc supplementation modifies tight junctions and alters barrier function of caco-2 human intestinal epithelial layersDig. Dis. Sci.201258778710.1007/s10620-012-2328-822903217
+
+[278] 278.PieriM.ChristianH.C.WilkinsR.J.BoydC.A.MeredithD.The apical (hpept1) and basolateral peptide transport systems of caco-2 cells are regulated by amp-activated protein kinaseAm. J. Physiol. Gastrointest. Liver Physiol.2010299G136G14310.1152/ajpgi.00014.201020430871PMC2904111
+
+[279] 279.HardymanJ.E.TysonJ.JacksonK.A.AldridgeC.CockellS.J.WakelingL.A.ValentineR.A.FordD.Zinc sensing by metal-responsive transcription factor 1 (mtf1) controls metallothionein and znt1 expression to buffer the sensitivity of the transcriptome response to zincMet. Integr. Biometal Sci.2016833734310.1039/C5MT00305A26824222
+
+[280] 280.MichalczykA.A.AcklandM.L.Hzip1 (hslc39a1) regulates zinc homoeostasis in gut epithelial cellsGenes Nutr.2013847548610.1007/s12263-013-0332-z23378263PMC3755131
+
+[281] 281.HuangD.HuQ.FangS.FengJ.Dosage effect of zinc glycine chelate on zinc metabolism and gene expression of zinc transporter in intestinal segments on ratBiol. Trace Elem. Res.201617136337010.1007/s12011-015-0535-926507438
+
+[282] 282.LodemannU.EinspanierR.ScharfenF.MartensH.BondzioA.Effects of zinc on epithelial barrier properties and viability in a human and a porcine intestinal cell culture modelToxicol. Vitr. Int. J. Publ. Assoc. Bibra20132783484310.1016/j.tiv.2012.12.01923274768
+
+[283] 283.MartinL.LodemannU.BondzioA.GefellerE.M.VahjenW.AschenbachJ.R.ZentekJ.PieperR.A high amount of dietary zinc changes the expression of zinc transporters and metallothionein in jejunal epithelial cells in vitro and in vivo but does not prevent zinc accumulation in jejunal tissue of pigletsJ. Nutr.20131431205121010.3945/jn.113.17788123761649
+
+[284] 284.ZakrzewskiS.S.RichterJ.F.KrugS.M.JebautzkeB.LeeI.-F.M.RiegerJ.SachtlebenM.BondzioA.SchulzkeJ.D.FrommM.Improved cell line ipec-j2, characterized as a model for porcine jejunal epitheliumPLoS ONE20138e7964310.1371/journal.pone.007964324260272PMC3829867
+
+[285] 285.NossolC.Barta-BoszormenyiA.KahlertS.ZuschratterW.Faber-ZuschratterH.ReinhardtN.PonsuksiliS.WimmersK.DiesingA.K.RothkotterH.J.Comparing two intestinal porcine epithelial cell lines (ipecs): Morphological differentiation, function and metabolismPLoS ONE201510e013232310.1371/journal.pone.013232326147118PMC4493080
+
+[286] 286.VergauwenH.The ipec-j2 cell lineThe Impact of Food Bioactives on Health: In Vitro and Ex Vivo ModelsVerhoeckxK.CotterP.López-ExpósitoI.KleivelandC.LeaT.MackieA.RequenaT.SwiateckaD.WichersH.Springer International PublishingCham, Switzerland201512513429787039
+
+[287] 287.OlligJ.KloubertV.WeßelsI.HaaseH.RinkL.Parameters influencing zinc in experimental systems in vivo and in vitroMetals201667110.3390/met6030071
+
+[288] 288.KennethV.H.JohnA.S.WalterC.Fetal bovine serum: A multivariate standardProc. Soc. Exp. Biol. Med.1975149344347115340810.3181/00379727-149-38804
+
+[289] 289.ZhengX.BakerH.HancockW.S.FawazF.McCamanM.PungorE.Proteomic analysis for the assessment of different lots of fetal bovine serum as a raw material for cell culture. Part iv. Application of proteomics to the manufacture of biological drugsBiotechnol. Prog.2006221294130010.1021/bp060121o17022666
+
+[290] 290.GstraunthalerG.Alternatives to the use of fetal bovine serum: Serum-free cell cultureAltex20032027528114671707
+
+[291] 291.PattisonS.E.CousinsR.J.Kinetics of zinc uptake and exchange by primary cultures of rat hepatocytesAm. J. Physiol. Endocrinol. Metab.1986250E677E68510.1152/ajpendo.1986.250.6.E6773087217
+
+[292] 292.GalvezM.MorenoJ.A.EloseguiL.M.EscaneroJ.F.Zinc uptake by human erythrocytes with and without serum albumins in the mediumBiol. Trace Elem. Res.200184455610.1385/BTER:84:1-3:04511817695
+
+[293] 293.MesserH.H.MurrayE.J.GoebelN.K.Removal of trace metals from culture media and sera for in vitro deficiency studiesJ. Nutr.198211265265710.1093/jn/112.4.6527069507
+
+[294] 294.FinamoreA.MassimiM.Conti DevirgiliisL.MengheriE.Zinc deficiency induces membrane barrier damage and increases neutrophil transmigration in caco-2 cellsJ. Nutr.20081381664167010.1093/jn/138.9.166418716167
+
+[295] 295.JohanssonM.E.SjovallH.HanssonG.C.The gastrointestinal mucus system in health and diseaseNat. Rev. Gastroenterol. Hepatol.20131035236110.1038/nrgastro.2013.3523478383PMC3758667
+
+[296] 296.JinF.WelchR.GlahnR.Moving toward a more physiological model: Application of mucin to refine the in vitro digestion/caco-2 cell culture systemJ. Agric. Food Chem.2006548962896710.1021/jf061684i17090148
+
+[297] 297.SchomigV.J.KasdorfB.T.ScholzC.BidmonK.LielegO.BerensmeierS.An optimized purification process for porcine gastric mucin with preservation of its native functional propertiesRsc Adv.20166449324494310.1039/C6RA07424C
+
+[298] 298.SvenssonO.ArnebrantT.Mucin layers and multilayers—Physicochemical properties and applicationsCurr. Opin. Colloid Interface Sci.20101539540510.1016/j.cocis.2010.05.015
+
+[299] 299.HilgendorfC.Spahn-LangguthH.RegardhC.G.LipkaE.AmidonG.L.LangguthP.Caco-2 versus caco-2/ht29-mtx co-cultured cell lines: Permeabilities via diffusion, inside- and outside-directed carrier-mediated transportJ. Pharm. Sci.200089637510.1002/(SICI)1520-6017(200001)89:1<63::AID-JPS7>3.0.CO;2-610664539
+
+[300] 300.BeduneauA.TempestaC.FimbelS.PellequerY.JanninV.DemarneF.LamprechtA.A tunable caco-2/ht29-mtx co-culture model mimicking variable permeabilities of the human intestine obtained by an original seeding procedureEur. J. Pharm. Biopharm.20148729029810.1016/j.ejpb.2014.03.01724704198
+
+[301] 301.AraujoF.SarmentoB.Towards the characterization of an in vitro triple co-culture intestine cell model for permeability studiesInt. J. Pharm.201345812813410.1016/j.ijpharm.2013.10.00324120728
+
+[302] 302.WalterE.JanichS.RoesslerB.J.HilfigerJ.M.AmidonG.L.Ht29-mtx/caco-2 cocultures as an in vitro model for the intestinal epithelium: In vitro−in vivo correlation with permeability data from rats and humansJ. Pharm. Sci.1996851070107610.1021/js960110x8897273
+
+[303] 303.PontierC.PachotJ.BothamR.LenfantB.ArnaudP.Ht29-mtx and caco-2/tc7 monolayers as predictive models for human intestinal absorption: Role of the mucus layerJ. Pharm. Sci.2001901608161910.1002/jps.111111745719
+
+[304] 304.FerrarettoA.BottaniM.De LucaP.CornaghiL.ArnaboldiF.MaggioniM.FiorilliA.DonettiE.Morphofunctional properties of a differentiated caco2/ht-29 co-culture as an in vitro model of human intestinal epitheliumBiosci. Rep.20183810.1042/BSR20171497PMC592013429540534
+
+[305] 305.CalatayudM.VazquezM.DevesaV.VelezD.In vitro study of intestinal transport of inorganic and methylated arsenic species by caco-2/ht29-mtx coculturesChem. Res. Toxicol.2012252654266210.1021/tx300295n23116229
+
+[306] 306.VazquezM.CalatayudM.VelezD.DevesaV.Intestinal transport of methylmercury and inorganic mercury in various models of caco-2 and ht-29-mtx cellsToxicology201331114715310.1016/j.tox.2013.06.00223793072
+
+[307] 307.LaparraJ.M.GlahnR.P.MillerD.D.Different responses of fe transporters in caco-2/ht29-mtx cocultures than in independent caco-2 cell culturesCell Biol. Int.20093397197710.1016/j.cellbi.2009.06.00119524686
+
+[308] 308.Moreno-OlivasF.TakoE.MahlerG.J.Zno nanoparticles affect nutrient transport in an in vitro model of the small intestineFood Chem. Toxicol.201812411211710.1016/j.fct.2018.11.04830503572PMC6351196
+
+[309] 309.LaparraJ.M.SanzY.Comparison of in vitro models to study bacterial adhesion to the intestinal epitheliumLett. Appl. Microbiol.20094969570110.1111/j.1472-765X.2009.02729.x19843211
+
+[310] 310.Ponce de Leon-RodriguezM.D.C.GuyotJ.P.Laurent-BabotC.Intestinal in vitro cell culture models and their potential to study the effect of food components on intestinal inflammationCrit. Rev. Food Sci. Nutr.2018593648366610.1080/10408398.2018.150673430277794
+
+[311] 311.CalatayudM.Gimeno-AlcanizJ.V.DevesaV.VelezD.Proinflammatory effect of trivalent arsenical species in a co-culture of caco-2 cells and peripheral blood mononuclear cellsArch. Toxicol.20158955556410.1007/s00204-014-1271-124862236
+
+[312] 312.DostalA.GagnonM.ChassardC.ZimmermannM.B.O'MahonyL.LacroixC.Salmonella adhesion, invasion and cellular immune responses are differentially affected by iron concentrations in a combined in vitro gut fermentation-cell modelPLoS ONE20149e9354910.1371/journal.pone.009354924676135PMC3968171
+
+[313] 313.OestreicherP.CousinsR.J.Zinc uptake by basolateral membrane vesicles from rat small intestineJ. Nutr.198911963964610.1093/jn/119.4.6392539449
+
+[314] 314.HelanderH.F.FandriksL.Surface area of the digestive tract—RevisitedScand. J. Gastroenterol.20144968168910.3109/00365521.2014.89832624694282
+
+[315] 315.KrebsN.F.HambidgeK.M.Zinc metabolism and homeostasis: The application of tracer techniquesBioMetals20011439741210.1023/A:101294240927411831468
+
+[316] 316.WastneyM.E.AamodtR.L.RumbleW.F.HenkinR.I.Kinetic analysis of zinc metabolism and its regulation in normal humansAm. J. Physiol.1986251R398R40810.1152/ajpregu.1986.251.2.R3983740321
+
+[317] 317.SandströmB.LönnerdalB.Promoters and antagonists of zinc absorptionZinc in Human BiologyMillsC.F.SpringerLondon, UK19895778
+
+[318] 318.TranC.D.GopalsamyG.L.MortimerE.K.YoungG.P.The potential for zinc stable isotope techniques and modelling to determine optimal zinc supplementationNutrients201574271429510.3390/nu706427126035248PMC4488783
+
+[319] 319.CerchiaroG.ManieriT.M.BertuchiF.R.Analytical methods for copper, zinc and iron quantification in mammalian cellsMet. Integr. Biometal Sci.201351336134510.1039/c3mt00136a23925479
+
+[320] 320.RichardsonC.E.R.NolanE.M.ShouldersM.D.LippardS.J.A sensitive, nonradioactive assay for zn(ii) uptake into metazoan cellsBiochemistry2018576807681510.1021/acs.biochem.8b0104330381945PMC6437758
+
+[321] 321.ChabosseauP.WoodierJ.CheungR.RutterG.A.Sensors for measuring subcellular zinc poolsMet. Integr. Biometal Sci.20181022923910.1039/C7MT00336F29431830
+
+[322] 322.CarterK.P.YoungA.M.PalmerA.E.Fluorescent sensors for measuring metal ions in living systemsChem. Rev.20141144564460110.1021/cr400546e24588137PMC4096685
+
+[323] 323.AckermanC.M.LeeS.ChangC.J.Analytical methods for imaging metals in biology: From transition metal metabolism to transition metal signalingAnal. Chem.201789224110.1021/acs.analchem.6b0463127976855PMC5827935
+
+[324] 324.HesselsA.M.ChabosseauP.BakkerM.H.EngelenW.RutterG.A.TaylorK.M.MerkxM.Ezinch-2: A versatile, genetically encoded fret sensor for cytosolic and intraorganelle zn(2+) imagingAcs Chem. Biol.2015102126213410.1021/acschembio.5b0021126151333PMC4577962
+
+[325] 325.VinkenborgJ.L.NicolsonT.J.BellomoE.A.KoayM.S.RutterG.A.MerkxM.Genetically encoded fret sensors to monitor intracellular zn2+ homeostasisNat. Methods2009673774010.1038/nmeth.136819718032PMC6101214
+
+[326] 326.QinY.MirandaJ.G.StoddardC.I.DeanK.M.GalatiD.F.PalmerA.E.Direct comparison of a genetically encoded sensor and small molecule indicator: Implications for quantification of cytosolic zn2+ACS Chem. Biol.201382366237110.1021/cb400385923992616PMC4022295
+
+[327] 327.ParkJ.G.QinY.GalatiD.F.PalmerA.E.New sensors for quantitative measurement of mitochondrial zn2+ACS Chem. Biol.201271636164010.1021/cb300171p22850482PMC3477250
+
+[328] 328.AperS.J.DierickxP.MerkxM.Dual readout bret/fret sensors for measuring intracellular zincACS Chem. Biol.2016112854286410.1021/acschembio.6b0045327547982PMC5080634
+
+[329] 329.QinY.SammondD.W.BraselmannE.CarpenterM.C.PalmerA.E.Development of an optical zn(2+) probe based on a single fluorescent proteinACS Chem. Biol.2016112744275110.1021/acschembio.6b0044227467056PMC5081268
+
+[330] 330.WallrabeH.PeriasamyA.Imaging protein molecules using fret and flim microscopyCurr. Opin. Biotechnol.200516192710.1016/j.copbio.2004.12.00215722011
+
+[331] 331.BouteN.JockersR.IssadT.The use of resonance energy transfer in high-throughput screening: Bret versus fretTrends Pharmacol. Sci.20022335135410.1016/S0165-6147(02)02062-X12377570
+
+[332] 332.PflegerK.D.G.SeeberR.M.EidneK.A.Bioluminescence resonance energy transfer (bret) for the real-time detection of protein-protein interactionsNat. Protoc.2006133734510.1038/nprot.2006.5217406254
+
+[333] 333.DittmerP.J.MirandaJ.G.GorskiJ.A.PalmerA.E.Genetically encoded sensors to elucidate spatial distribution of cellular zincJ. Biol. Chem.2009284162891629710.1074/jbc.M90050120019363034PMC2713558
+
+[334] 334.ChabosseauP.TuncayE.MeurG.BellomoE.A.HesselsA.HughesS.JohnsonP.R.BuglianiM.MarchettiP.TuranB.Mitochondrial and er-targeted ecalwy probes reveal high levels of free zn2+ACS Chem. Biol.201492111212010.1021/cb500406425011072PMC6101202
+
+[335] 335.QinY.DittmerP.J.ParkJ.G.JansenK.B.PalmerA.E.Measuring steady-state and dynamic endoplasmic reticulum and golgi zn(2+) with genetically encoded sensorsProc. Natl. Acad. Sci. USA20111087351735610.1073/pnas.101568610821502528PMC3088641
+
+[336] 336.PancholiJ.HodsonD.J.JobeK.RutterG.A.GoldupS.M.WatkinsonM.Biologically targeted probes for zn2+: A diversity oriented modular “click-snar-click” approachChem. Sci.201453528353510.1039/C4SC01249F25580213PMC4285101
+
+[337] 337.LiD.ChenS.BellomoE.A.TarasovA.I.KautC.RutterG.A.LiW.-H.Imaging dynamic insulin release using a fluorescent zinc indicator for monitoring induced exocytotic release (zimir)Proc. Natl. Acad. Sci. USA2011108210632106810.1073/pnas.110977310922160693PMC3248484
+
+[338] 338.RadfordR.J.ChyanW.LippardS.J.Peptide-based targeting of fluorescent zinc sensors to the plasma membrane of live cellsChem. Sci.201343080308410.1039/c3sc50974e23878718PMC3712541
+
+[339] 339.RanaldiG.FerruzzaS.CanaliR.LeoniG.ZalewskiP.D.SambuyY.PerozziG.MurgiaC.Intracellular zinc is required for intestinal cell survival signals triggered by the inflammatory cytokine tnf-alphaJ. Nutr. Biochem.20132496797610.1016/j.jnutbio.2012.06.02022967671
+
+[340] 340.KrezelA.MaretW.Zinc-buffering capacity of a eukaryotic cell at physiological pznJ. Biol. Inorg. Chem.2006111049106210.1007/s00775-006-0150-516924557
+
+[341] 341.KindermannB.DöringF.FuchsD.PfafflM.W.DanielH.Effects of increased cellular zinc levels on gene and protein expression in ht-29 cellsBioMetals20051824325310.1007/s10534-005-1247-y15984569

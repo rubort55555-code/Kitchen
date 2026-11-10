@@ -1,0 +1,79 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 19 из 23: References (часть 2)
+============================================================
+
+[34] 34.PalmerB.F.CleggD.J.Electrolyte and Acid-Base Disturbances in Patients with Diabetes MellitusN. Engl. J. Med.20153735485592624430810.1056/NEJMra1503102
+
+[35] 35.GrahamL.A.CaesarJ.J.BurgenA.S.Gastrointestinal absorption and excretion of Mg 28 in manMetabolism1960964665913848379
+
+[36] 36.SarisN.E.MervaalaE.KarppanenH.KhawajaJ.A.LewenstamA.Magnesium: An update on physiological, clinical and analytical aspectsClin. Chim. Acta200029412610.1016/S0009-8981(99)00258-210727669
+
+[37] 37.JeroenH.de BaaijF.JoostG.HoenderopJ.ReneJ.BindelsM.Regulation of magnesium balance: Lessons learned from human genetic diseaseClin. Kidney J.20125i15i242606981710.1093/ndtplus/sfr164PMC4455826
+
+[38] 38.QuammeG.A.Recent developments in intestinal magnesium absorptionCurr. Opin. Gastroenterol.20082423023510.1097/MOG.0b013e3282f37b5918301276
+
+[39] 39.AmashehS.FrommM.GünzelD.Claudins of intestine and nephron—A correlation of molecular tight junction structure and barrier functionActa. Physiol. (Oxf).201120113314010.1111/j.1748-1716.2010.02148.x20518752
+
+[40] 40.TouyzR.M.Magnesium in clinical medicineFront. Biosci.200491278129310.2741/131614977544
+
+[41] 41.Van der WijstJ.BindelsR.J.HoenderopJ.G.Mg2+ homeostasis: The balancing act of TRPM6Curr. Opin. Nephrol. Hypertens.20142336136910.1097/01.mnh.0000447023.59346.ab24906182
+
+[42] 42.TokmakF.KistersK.HausbergM.RumpL.C.Buffer function of the cell membrane for magnesium in chronic kidney diseaseTrace Elem. Electrol.200825234235
+
+[43] 43.ZittermannA.Magnesium deficit? Overlooked cause of low vitamin D status?BMC Med.20131122910.1186/1741-7015-11-22924228832PMC3854088
+
+[44] 44.DenX.SongY.MansonJ.E.SignorelloL.B.ZhangS.M.ShrubsoleM.J.NessR.M.SeidnerD.L.DaiQ.Magnesium, vitamin D status and mortality: Results from US National Health and Nutrition Examination Survey (NHANES) 2001 to 2006 and NHANES IIIBMC Med.2013111872398151810.1186/1741-7015-11-187PMC3765911
+
+[45] 45.GroenestegeW.M.HoenderopJ.G.van den HeuvelL.KnoersN.BindelsR.J.The epithelial Mg2+ channel transient receptor potential melastatin 6 is regulated by dietary Mg2+ content and estrogensJ. Am. Soc. Nephrol.2006171035104310.1681/ASN.200507070016524949
+
+[46] 46.AnastC.S.WinnackerJ.L.ForteL.R.BurnsT.W.Impaired release of parathyroid hormone in magnesium deficiencyJ. Clin. Endocrinol. Metab.19764270771710.1210/jcem-42-4-707177448
+
+[47] 47.ZofkováI.KanchevaR.L.The relationship between magnesium and calciotrophic hormonesMagnes. Res.1995877847669510
+
+[48] 48.TibbettsD.M.AubJ.C.Magnesium metabolism in health and disease. III. In exophthalmic goiter, basophilic adenoma, Addison’s disease and steatorrheaJ. Clin. Investig.1937165115141669449710.1172/JCI100876PMC424889
+
+[49] 49.GaoX.PengL.AdhikariC.M.LinJ.ZuoZ.Spironolactone reduced arrhythmia and maintained magnesium homeostasis in patients with congestive heart failureJ. Card. Fail.20071317017710.1016/j.cardfail.2006.11.01517448413
+
+[50] 50.GibsonR.S.Principles of Nutritional Assessment2nd ed.Oxford University PressNew York, NY, USA2005
+
+[51] 51.WitkowskiM.HubertJ.MazurA.Methods of assessment of magnesium status in humans: A systematic reviewMagnes. Res.2011241631802206432710.1684/mrh.2011.0292
+
+[52] 52.GeigerH.WannerC.Magnesium in diseaseClin. Kidney J.20125i25i3810.1093/ndtplus/sfr16526069818PMC4455821
+
+[53] 53.ElinR.J.Assessment of magnesium status for diagnosis and therapyMagnes. Res.201023S194S1982073614110.1684/mrh.2010.0213
+
+[54] 54.LowensteinF.W.StantonM.F.Serum magnesium levels in the United States, 1971–1974J. Am. Coll. Nutr.1986539941410.1080/07315724.1986.107201433771947
+
+[55] 55.LiebscherD.H.LiebscherD.E.About the misdiagnosis of magnesium deficiencyJ. Am. Coll. Nutr.200423730S731S10.1080/07315724.2004.1071941615637222
+
+[56] 56.EverettC.J.KingD.E.Serum magnesium and the development of diabetesNutrition20062267910.1016/j.nut.2006.04.00116704956
+
+[57] 57.PhamP.C.PhamP.M.PhamP.A.PhamS.V.PhamH.V.MillerJ.M.YanagawaN.PhamP.T.Lower serum magnesium levels are associated with more rapid decline of renal function in patients with diabetes mellitus type 2Clin. Nephrol.20056342943610.5414/CNP6342915960144
+
+[58] 58.PhamP.C.PhamP.M.PhamS.V.MillerJ.M.PhamP.T.Hypomagnesemia in patients with type 2 diabetesClin. J. Am. Soc. Nephrol.2007236637310.2215/CJN.0296090617699436
+
+[59] 59.VierlingW.LiebscherD.H.MickeO.von EhrlichB.KistersK.Magnesium deficiency and therapy in cardiac arrhythmias: Recommendations of the German Society for Magnesium ResearchDtsch. Med. Wochenschr.2013138116511712370030310.1055/s-0033-1343206
+
+[60] 60.ChernowB.BambergerS.StoikoM.VadnaisM.MillsS.HoellerichV.WarshawA.L.Hypomagnesemia in patients in postoperative intensive careChest19899539139710.1378/chest.95.2.3912914492
+
+[61] 61.WhangR.RyderK.W.Frequency of hypomagnesemia and hypermagnesemia. Requested vs. routineJAMA19902633063306410.1001/jama.1990.034402200870362342219
+
+[62] 62.SpätlingL.ClassenH.G.KülpmannW.R.ManzF.RobP.M.SchimatschekH.F.VierlingW.VormannJ.WeigertA.WinkK.Diagnosing magnesium deficiency. Current recommendations of the Society for Magnesium ResearchFortschr. Med. Orig.2000118495315700486
+
+[63] 63.GröberU.Interactions between drugs and micronutrientsMed. Monatsschr. Pharm.200629263510.5414/TEP2700116463551
+
+[64] 64.GröberU.Antihypertensives and magnesium—Update 2007Trace. Elem. Electrolyt.200926151610.5414/TEP26015
+
+[65] 65.ClassenH.G.GröberU.KistersK.Drug-induced magnesium deficiencyMed. Monatsschr. Pharm.20123527428022970526
+
+[66] 66.MassyZ.A.DrüekeT.B.Magnesium and cardiovascular complications of chronic kidney diseaseNat. Rev. Nephrol.201510.1038/nrneph.2015.7425963594
+
+[67] 67.Guerrero-RomeroF.Simental-Mendía L.E.Hernández-RonquilloG.Rodriguez-MoránM.Oral magnesium supplementation improves glycaemic status in subjects with prediabetes and hypomagnesaemia: A double-blind placebo-controlled randomized trialDiabetes Metab.20154120220710.1016/j.diabet.2015.03.01025937055
+
+[68] 68.KistersK.GröberU.Lowered magnesium in hypertensionHypertension201362e1910.1161/HYPERTENSIONAHA.113.0206023959557

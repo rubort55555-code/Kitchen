@@ -1,0 +1,11 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 15 из 23: 8. Dosage and Supplements
+============================================================
+
+Many nutritional experts feel the ideal intake for magnesium should be based on the body weight (e.g., 4–6 mg per kg/day). Magnesium supplements are available as magnesium oxide, magnesium chloride, magnesium citrate, magnesium taurate, magnesium orotate, as well as other amino acid chelates. In the treatment of magnesium deficiency we would recommend, because of their high bioavailability, organic bound magnesium salts, such as magnesium citrate, gluconate, orotate, or aspartate [149].

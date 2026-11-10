@@ -1,0 +1,77 @@
+Название: Calcium Absorption from Food Products: Food Matrix Effects
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu14010180   PMID: 35011055   PMC: PMC8746734
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 15 из 20: References
+============================================================
+
+[1] 1. Word Health Organization Human Vitamin and Mineral RequirementsFAORome, ItalyWHOGeneva, Switzerland2001
+
+[2] 2. BarrS.I. Associations of social and demographic variables with calcium intakes of high school studentsJ. Am. Diet. Assoc.19949426026610.1016/0002-8223(94)90366-28120289
+
+[3] 3. AlbertsonA.M. TobelmannR.C. MarquartL. Estimated dietary calcium intake and food sources for adolescent females: 1980–1992J. Adolesc. Health199720202610.1016/S1054-139X(96)00179-69007655
+
+[4] 4. FlemingK.H. HeimbachJ.T. Consumption of calcium in the U.S.: Food sources and intake levelsJ. Nutr.19941241426S1430S10.1093/jn/124.suppl_8.1426S8064396
+
+[5] 5. Neumark-SztainerD. StoryM. DixonL.B. ResnickM.D. BlumR.W. Correlates of inadequate consumption of dairy products among adolescentsJ. Nutr. Educ. Behav.199729122010.1016/S0022-3182(97)70141-9
+
+[6] 6. SubarA.F. Krebs-SmithS.M. CookA. KahleL.L. Dietary sources of nutrients among US children, 1989–1991Pediatrics199810291399210.1542/peds.102.4.9139755265
+
+[7] 7. JohnsonR.K. PanelyC. WangM. The association between noon beverage consumption and the diet quality of school-age childrenJ. Child. Nutr. Manag.19982295100
+
+[8] 8. WeaverC.M. HeaneyR.P. Calcium in Human HealthHumana PressTotowa, NJ, USA2006
+
+[9] 9. CormickG. BelizanJ.M. Calcium intake and healthNutrients201911160610.3390/nu1107160631311164PMC6683260
+
+[10] 10. HuangF. WangZ. ZhangJ. DuW. SuC. JiangH. JiaX. OuyangY. WangY. LiL. Dietary calcium intake and food sources among Chinese adults in CNTCSPLoS ONE201813e020504510.1371/journal.pone.020504530273413PMC6166981
+
+[11] 11. WelchA.A. FransenH. JenabM. Boutron-RuaultM.C. TuminoR. AgnoliC. EricsonU. JohanssonI. FerrariP. EngesetD. Variation in intakes of calcium, phosphorus, magnesium, iron and potassium in 10 countries in the european prospective investigation into cancer and nutrition studyEur. J. Clin. Nutr.200963S101S12110.1038/ejcn.2009.7719888269
+
+[12] 12. PoliquinS. JosephL. Gray-DonaldK. Calcium and Vitamin d intakes in an adult Canadian populationCan. J. Diet. Pract. Res.200970212710.3148/70.1.2009.2119261203
+
+[13] 13. BalkE.M. AdamG.P. LangbergV.N. EarleyA. ClarkP. EbelingP.R. MithalA. RizzoliR. ZerbiniC.A.F. PierrozD.D. Global dietary calcium intake among adults: A systematic reviewOsteoporos. Int.2017283315332410.1007/s00198-017-4230-x29026938PMC5684325
+
+[14] 14. GuéguenL. PointillartA. The bioavailability of dietary calciumJ. Am. Coll. Nutr.200019119S136S10.1080/07315724.2000.1071808310759138
+
+[15] 15. RoufA.S. SuiZ. RanganA. GrechA. Allman-FarinelliM. Low calcium intakes among Australian adolescents and young adults are associated with higher consumption of discretionary foods and beveragesNutrition201855–5614615310.1016/j.nut.2018.04.00530005331
+
+[16] 16. HarinarayanC. RamalakshmiT. Patterns of dietary calcium intake in south Indian rural, urban and metropolitan city subjectsJ. Clin. Sci. Res.2015414314810.15380/2277-5706.JCSR.15.003
+
+[17] 17. VisioliF. StrataA. Milk, dairy products, and their functional effects in humans: A narrative review of recent evidenceAdv. Nutr.2014513114310.3945/an.113.00502524618755PMC3951796
+
+[18] 18. WeaverC.M. ProulxW.R. HeaneyR. Choices for achieving adequate dietary calcium with a vegetarian dietAm. J. Clin. Nutr.199970543S548S10.1093/ajcn/70.3.543s10479229
+
+[19] 19. MillerG.D. JarvisJ.K. McBeanL.D. The importance of meeting calcium needs with foodsJ. Am. Coll. Nutr.200120168S185S10.1080/07315724.2001.1071902911349940
+
+[20] 20. Di MaioG. PittiaP. MazzarinoL. MaraschinM. KuhnenS. Cow milk enriched with nanoencapsulated phenolic extract of jaboticaba (Plinia peruviana)J. Food Sci. Technol.2019561165117310.1007/s13197-019-03579-y30956296PMC6423216
+
+[21] 21. TheobaldH. Dietary Calcium and healthNutr. Bull.20053023727710.1111/j.1467-3010.2005.00514.x
+
+[22] 22. ShiJ. MaguerM. Le Lycopene in tomatoes: Chemical and physical properties affected by food processingCrit. Rev. Food Sci. Nutr.20004014210.1080/1040869009118927510674200
+
+[23] 23. Camara-MartosF. Amaro-LópezM.A. Influence of dietary factors on calcium bioavailabilityBiol. Trace Elem. Res.200289435210.1385/BTER:89:1:4312413050
+
+[24] 24. HeaneyR.P. Calcium intake and disease preventionArq. Bras. Endocrinol. Metabol.20065068569310.1590/S0004-2730200600040001417117294
+
+[25] 25. IlichJ.Z. KerstetterJ.E. Nutrition in bone health revisited: A story beyond calciumJ. Am. Coll. Nutr.20001971573710.1080/07315724.2000.1071807011194525
+
+[26] 26. WangL. MansonJ.E. SessoH.D. Calcium intake and risk of cardiovascular diseaseAm. J. Cardiovasc. Drugs20121210511610.2165/11595400-000000000-0000022283597PMC3336363
+
+[27] 27. De BarbozaG.D. GuizzardiS. de TalamoniN.T. Molecular aspects of intestinal calcium absorptionWorld J. Gastroenterol.201521714210.3748/wjg.v21.i23.714226109800PMC4476875
+
+[28] 28. ParkY.W. Overview of bioactive components in milk and dairy productsBioactive Components in Milk and Dairy Products ParkY.W. Wiley-BlackwellAmes, IA, USA2009312
+
+[29] 29. ZhuK. PrinceR.L. Calcium and boneClin. Biochem.20124593694210.1016/j.clinbiochem.2012.05.00622609892
+
+[30] 30. RizzoliR. Dairy products, yogurts, and bone healthAm. J. Clin. Nutr.2014991256S1262S10.3945/ajcn.113.07305624695889
+
+[31] 31. TorresM. FrancischettiE.A. GenelhuV. SanjulianiA.F. Effect of a high-calcium energy-reduced diet on abdominal obesity and cardiometabolic risk factors in obese Brazilian subjectsInt. J. Clin. Pract.2010641076108310.1111/j.1742-1241.2009.02312.x20642707
+
+[32] 32. TorresM.R.S.G. SanjulianiA.F. Does calcium intake affect cardiovascular risk factors and/or events?Clinics20126783984410.6061/clinics/2012(07)2222892932PMC3400178
+
+[33] 33. VinarovaL. VinarovZ. TcholakovaS. DenkovN.D. StoyanovS. LipsA. The mechanism of lowering cholesterol absorption by calcium studied by using an in vitro digestion modelFood Funct.2016715116310.1039/C5FO00856E26481461
+
+[34] 34. SchachterD. DowdleE.B. SchenkerH. Active transport of calcium by the small intestine of the ratAm. J. Physiol. Content196019826326810.1152/ajplegacy.1960.198.2.26314442283

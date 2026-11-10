@@ -1,0 +1,25 @@
+Название: Modeling Zinc Absorption in the Adult Population of Colombia: Insights for Nutritional Evaluation and Intervention Strategies
+Авторы: José Alexander Alvarez-Bustamante, Angélica María Muñoz
+Журнал: Biological Trace Element Research, 2024
+DOI: https://doi.org/10.1007/s12011-024-04180-x   PMID: 38739259   PMC: PMC11700909
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2024
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 12: Materials and Methods
+============================================================
+
+## Assessment of Daily Zinc Intake
+
+In our study, we gathered information on the daily intake of zinc, calcium, and protein for each participant. Phytate levels were estimated using data from the ENSIN 2005 survey, supplemented by the FAO/IZiNCG 2018 PhyFoodComp tables [32].
+
+We applied the model developed by Miller et al. [31] to calculate the fraction of absorbed zinc (FAZ) and total absorbed zinc (TAZ). This model includes critical variables such as total daily phytate (TDP), total daily zinc (TDZ), total daily calcium (TDC), and total daily protein (TDPr). The model effectively quantifies zinc absorption, aligning with the methodologies outlined in Armah [23].
+
+We use the estimated average requirement (EAR) and recommended dietary allowance (RDA) as benchmarks for zinc intake, following the guidelines established by the IOM [20] and Colombian legislation [33]. The EAR indicates the daily intake required to meet the needs of half the population, while the RDA is set at 1.2 times the EAR [20]. We calculated EAR and RDA for Colombia (EAR_M and RDA_M) based on the ENSIN 2005 survey data and the FAZ from the Miller et al. [31] model, using Eqs. 1 and 2. In these equations, the required absorbed zinc (RAZ), according to the IOM, is applied, which is 3.84 mg/day for men aged 19 and over and 3.30 mg/day for women aged 19 and over [20].1\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$EAR\_M\left(\frac{\mathrm{m}\mathrm{g}}{\mathrm{d}\mathrm{a}\mathrm{y}}\right)=\frac{RAZ}{FAZ\left(\%\right)}\times 100\%$$\end{document}EAR_Mmgday=RAZFAZ%×100%2\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$RDA\_M\left(\frac{\mathrm{m}\mathrm{g}}{\mathrm{d}\mathrm{a}\mathrm{y}}\right)=1.2\times EAR\_M\left(\frac{\mathrm{m}\mathrm{g}}{\mathrm{d}\mathrm{a}\mathrm{y}}\right)$$\end{document}RDA_Mmgday=1.2×EAR_Mmgday
+
+## Statistical Analysis
+
+Statistical analyses were conducted using R software. The Shapiro-Wilk test was initially applied to assess data normality within each age and sex group, ensuring non-parametric tests were selected for non-normally distributed data. We summarized the data by reporting median values along with their corresponding 25th and 75th percentiles (Q1, Q3). Our emphasis was on assessing the adequacy of zinc intake across different age and sex demographics relative to established nutritional benchmarks.
+
+The Wilcoxon one-sample test was utilized: to compare EAR_M and RDA_M against established EAR and RDA values; to compare TAZ with RAZ benchmarks; and to compare FAZ against the IOM’s zinc absorption rates. This test was selected for its capacity to assess whether the median of a sample significantly deviates from known benchmarks, providing a robust method for evaluating alignment with nutritional standards as well as zinc absorption metrics.
+
+A significance threshold of p < 0.05 was adopted to indicate statistical significance across all tests, with a stricter threshold of p < 0.001 noted for particularly robust findings.

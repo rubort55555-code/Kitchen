@@ -1,0 +1,454 @@
+Название: Calcium Absorption from Food Products: Food Matrix Effects
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu14010180   PMID: 35011055   PMC: PMC8746734
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+### Abstract
+
+This article reviews physicochemical aspects of calcium absorption from foods. Notable differences are observed between different food products in relation to calcium absorption, which range from <10% to >50% of calcium in the foods. These differences can be related to the interactions of calcium with other food components in the food matrix, which are affected by various factors, including fermentation, and how these are affected by the conditions encountered in the gastrointestinal tract. Calcium absorption in the intestine requires calcium to be in an ionized form. The low pH in the stomach is critical for solubilization and ionization of calcium salts present in foods, although calcium oxalate complexes remain insoluble and thus poorly absorbable. In addition, the rate of gastric transit can strongly affect fractional absorption of calcium and a phased release of calcium into the intestine, resulting in higher absorption levels. Dairy products are the main natural sources of dietary calcium in many diets worldwide, which is attributable to their ability to provide high levels of absorbable calcium in a single serving. For calcium from other food products, lower levels of absorbable calcium can limit contributions to bodily calcium requirements.
+
+### 1. Introduction
+
+The human body requires many nutrients for health and development. While some nutrients can be produced by the body, many cannot and these essential nutrients thus need to be supplied via exogenous sources, which are primarily via the diet. Poor quality diets can lead to deficiencies in several essential nutrients, with calcium being a prominent risk factor for deficiency. The World Health Organization (WHO) suggests a recommended daily intake (RDI) of 1000 mg calcium per day for young adults and 1300 mg/d for men over 65 years, for postmenopausal women and for children aged 9 to 18 years [1]. Such an intake, however, is not met in all parts of the world. In many low- and middle-income countries and territories, a large proportion of the population, particularly in rural areas, does not get enough dietary calcium. Table 1 presents the data on the average daily calcium intake and the main sources of calcium in different countries. In Europe and North America, the daily calcium intake is relatively high, with Greece, the Netherlands and Denmark in first, second and third positions, respectively (1039, 1033 and 1011 mg/day), while China and India (rural and urban areas) represent the territories characterized by the lowest calcium intake (369, 269 and 308 mg/day), far below the aforementioned RDI’s suggested by WHO.
+
+Table 1 also includes the main dietary calcium sources listed for the different countries and regions in order of contribution. From this, it is clear that in all countries and regions with high calcium intake for the adult population, milk and dairy products are the main contributor. This is in line with reports that consumption of milk and other dairy products make a great contribution to calcium intake [2,3,4,5,6,7,8]. For example, milk and derivatives provide about 75% of dietary calcium in the United States and about 58% in the Netherlands [9], while in China only 6.7% of calcium comes from dairy products and the main sources of calcium in this country are vegetables (30.2%), legumes (16.7%) and cereals (14.6%) [10].
+
+Milk and dairy products (e.g., cheese, butter, cream, yoghurt and kefir) are an essential component of the diet of billions of people worldwide [17] and do proportionally contribute a lot of calcium. For instance, 100 g of cheese contains can contain up to 1 g of calcium, 100 g of milk and yoghurt contain between 100 mg and 180 mg, whereas 100 g of cereals usually provide 30 mg of calcium [9]. Some other calcium-rich foods, such as kale, broccoli and watercress contain between 100 and 150 mg of calcium per 100 g [9]. In addition to consumption of food naturally rich in calcium, intake via calcium-fortified foods and beverages or calcium supplements is also an option [18,19]. However, any food product should not be considered as solely a source of a single nutrient; e.g., milk is also a rich source of other essential nutrients, e.g., phosphorous, selenium, potassium, magnesium and zinc and vitamins B1, B2 and B12 [20].
+
+The RDI for calcium is notably higher than daily endogenous losses, which is due to the fact that not all the ingested calcium is absorbed in the gastrointestinal tract; hence, an accurate evaluation of calcium sources should not only be on the basis of calcium content, but also on bioavailability [21]. The bioavailability is the proportion of a nutrient present in a food that is actually absorbed and utilized in different metabolic processes [22]. Calcium bioavailability can be influenced by various physiological factors, e.g., vitamin D status, age, pregnancy, disease, but also by the food’s composition of nutrients [21,23]. In this paper, we review calcium absorption from a food matrix perspective, focusing on interactions of calcium with other components in the food matrix and how these are affected in the gastrointestinal tract. For this purpose, the review starts with a brief overview of the importance of dietary calcium and calcium absorption mechanisms and subsequently discusses calcium absorption from foods in this perspective. Given the large focus in literature on dairy products, this product category is dealt with more extensively, and provides an excellent comparative basis for other foods. In the final chapter, we also consider dietary calcium from the perspective of sustainability, i.e., in terms of the carbon footprint associated with calcium intake from different food sources.
+
+### 2. The Importance of Dietary Calcium for Human Health
+
+Calcium is one of the most studied minerals in relation to human health, and is also the most abundant mineral in the human body. The total calcium content in the body of an individual increases from ~25–30 g at birth to ~1000–1500 g in a well-fed adult. Calcium is an essential nutrient which is not synthesized by the human body, and all the calcium necessary for growth, as well as to compensate for daily losses, must be supplied via exogenous sources, which is mainly via food [24]. More than 99% of calcium in the human body is stored in the bone tissue and teeth in the form of hydroxyapatite, which plays a key structural function by providing rigidity to the skeletal system [21,25]. The remaining (less than 1%) bodily calcium is found in the soft tissues and in bodily fluids, i.e., blood and extracellular fluids. In the soft tissues, calcium is mostly stored in various cytoplasmic organelles. In the blood, calcium is present in three different forms: 45–50% is present as free cations, 40–45% is bound to plasma proteins and 8–10% is dissolved and complexed with other ions, such as citrate and lactate. Serum calcium concentration is usually maintained around 1.0–1.2 mmol/L in healthy subjects and is controlled by the action of parathyroid hormone, vitamin D and calcitonin, which regulate intestinal calcium absorption, renal excretion or reabsorption and removal or incorporation into bone tissue, respectively [26].
+
+In addition to its structural function, calcium is involved in a multitude of vital functions, including fertilization, blood coagulation, muscle contraction, transmission of nerve impulses, secretory activity, cell death, immune response, cell differentiation and enzyme activation [8,21,27]. Attaining and retaining the required amount of calcium is essential for the development, strength and density of bones in children and for the prevention of bone loss and osteoporotic fractures in elderly people [28,29,30]. An adequate calcium intake contributes also to reduce the risk of different chronic diseases, e.g., hypertension, hypercholesterolemia, colon cancer, kidney stones and abdominal obesity [8,31,32,33]. Of course, calcium intake alone is not sufficient to achieve these vital functions, as calcium needs to be absorbed. This is covered in Section 3.
+
+### 3. Absorption of Calcium: Physiological and Physicochemical Perspectives
+
+## 3.1. Physiological Perspectives of Calcium Absorption
+
+As outlined previously, calcium can only play its role in the many vital functions if it is absorbed. Calcium is absorbed in the gastrointestinal tract in the ionized form, i.e., as Ca2+ [34,35,36]. Intestinal calcium absorption is an essential process involved in the maintenance of Ca2+ homeostasis [37] and occurs through two distinct transport mechanisms: transcellular active saturable transport and paracellular passive non-saturable transport [38]. Transcellular transport occurs in the duodenum and upper jejunum, is stimulated by vitamin D and consists of three essential steps, i.e., (1) calcium entry into the cell (via positive electrochemical gradient), (2) diffusion and (3) excretion from the cell. The entry of calcium into the brush border membrane of enterocytes is mainly mediated by the epithelial TRPV6, located in the apical region [39,40] and high levels of TRPV6 have been detected in the duodenum and colon of humans, rats and mice [40,41,42].
+
+Once inside the cell, calcium is transported to the basolateral membrane bound to the buffer protein calbindin-D9K (CaBP-9K), which has a high affinity for Ca2+. Calmodulin, another calcium-binding protein, may contribute to the intracellular translocation of calcium, but to a lesser extent than calbindin-D9K [27]. Calcium is extruded from the epithelial cell to the interstitial space by the action of a calcium-pumping ATPase (PMCA1) and by means of a sodium-calcium exchanger (NCX1), which are located in the basolateral membrane [43,44]. PMCA1 is essential for calcium absorption and in humans is present in the duodenum, ileum and colon [45]. PMCA1 activity is regulated by calmodulin (CaM), calbindin-D28K (CaBP-28K) and calcium [14].
+
+Paracellular passive diffusion of calcium mainly occurs in the small intestine, is not saturable and is vitamin D-independent; absorption via paracellular diffusion increases following increased calcium intake [46,47,48,49] and when calcium intake is high paracellular absorption predominates [50]. Paracellular absorption occurs through tight junctions throughout the small intestine [51,52]. Tight junctions are intercellular structures present in the apical region of enterocytes, which regulate paracellular transport of ions and molecules [53]. In rats, most of the calcium passive absorption occurs in the ileum (65–88%) [54,55]. In addition to these physiological aspects of calcium absorption, there are also various physicochemical factors that play a key role. These are covered in Section 3.2.
+
+## 3.2. Physicochemical Aspects of Calcium Absorption
+
+To understand physicochemical factors governing absorption of calcium from foods, it is important to understand both the locations and time-scale of absorption. The small intestine is responsible for more than 90% of the total calcium uptake in humans, whereas ~3–6% of calcium is absorbed in the colon, depending on calcium load [56]. In the colon, calcium is absorbed by both an active and passive process [57]. When calcium intake is adequate or high, in the small intestine most of the calcium uptake occurs in the ileum [55]. The reason why most of the calcium is absorbed in the ileum is to be found in the fact that the transit time of chyme in this last part of the small intestine is significantly longer than in the duodenum and jejunum. As shown in Table 2, the transit time in humans was ~78 min in the ileum, ~102 min in jejunum and ~15 min the duodenum [58].
+
+Rats have also been used often for calcium absorption studies, but as outlined in Table 2, transit times differ notably from human. Although total transit time in the small intestine does not differ notably between rats and humans (Table 2), the ileal transit time is notably longer and the jejunal transit time is notably shorter in rats. These differences could significantly influence the absorption of calcium in the different tracts of the small intestine between the two species, and thus stress the need for caution when translating data from rat studies to the human situation. The importance of consideration of transit times was shown in an in vitro study simulating a canine digestive process, showing that intestinal calcium absorption was lower when the transit time was faster [59].
+
+Another important factor affecting calcium absorption is the concentration of calcium in a specific intestinal segment. Vergne-Marini et al. [60] showed that the ileal absorption of calcium in humans increases proportionally to the increase in luminal concentration, following a linear trend for solutions of calcium gluconate. These authors also showed that, under physiological conditions, the absorption rate in the ileum was slightly lower than in the jejunum with less concentrated calcium gluconate solutions (1 mM and 5 mM) and slightly higher than in the jejunum with more concentrated calcium gluconate solutions (15 and 20 mM). While the work of Vergne-Marini et al. [60] suggests that calcium absorption correlated linearly with calcium concentration, it should be realized that calcium gluconate solution may be considered as a rather ideal system, with most calcium in ionic form and little or no interference from other components. In the chyme of food products, both physical and chemical interference with calcium absorption can occur.
+
+Before it can be absorbed, calcium must be in solution in the ionized form; while some calcium may already be in ionized form when consumed, solubilization and ionization of calcium from foods often occurs in the acidic environment of the stomach, where solubility of calcium salts and complexes increases [14,34,36]. When the chyme is emptied from the stomach into the duodenum, the pH rapidly changes from highly acidic pH in the stomach (1–3) to about pH 6. The intraluminal pH continues to gradually rise, reaching alkaline levels in the terminal ileum. In the cecum, the pH decreases to ~6.4, after which it gradually increases again along the transit into the colon, reaching pH 7 in the rectum [61]. Because of this change in pH between the gastric and the intestinal part, a reduced amount of calcium may be in ionized form. Bronner and Pansu [57] reported that some calcium may reprecipitate due to the alkaline conditions of the ileum. However, even when calcium is precipitated due to the alkaline environment, some calcium ions remain in solution. These will then be absorbed, and other calcium ions will be released in solution, but this process may be time-consuming. The total calcium uptake therefore depends on a combination of factors: the local solubility, the luminal concentration and the sojourn time in the specific intestinal segment [60,62].
+
+Overall, it is clear that calcium absorption is governed by a number of factors affecting three key aspects, i.e., the concentration of ionized calcium, the rate of absorption of ionized calcium and the transit time of the material through the intestine.
+
+The concentration of ionized calcium is mainly governed by salt equilibria and pH. While calcium chloride, for instance, has high solubility which is virtually independent of pH, dietary calcium is present in food matrices often containing calcium salts of phosphate, carbonate, citrate, phytate or oxalate or complexes of calcium with proteins. These have notably lower solubility, and a strong pH-dependence of solubility, which can lead to supersaturation in the intestine, as will be described in subsequent sections. If ionized calcium is absorbed, via either the trans- or paracellular route, some further calcium salts can dissolve and further calcium can again ionize. Hence, the rate of solubilization and ionization of calcium under these conditions will also play an important role in calcium absorption. Diffusion rates in the chyme are also important for enabling calcium absorption and are influenced notably by product types. In the next Section 4, Section 5, Section 6 and Section 7 absorption of calcium from various sources is covered. Section 4 will cover mechanistic insights attained from absorption from different calcium salts, learnings of which are applied in understanding different food products covered in Section 6.
+
+### 4. Calcium Absorption from Calcium Salts
+
+While for many people calcium intake is exclusively in the form of dietary calcium, there are cases when dietary calcium intake is insufficient, calcium supplements can be a help in the prevention or treatment of calcium deficiency [63]. They are commonly recommended to older adults, particularly for postmenopausal women or amenorrheic women for the prevention of osteoporosis [64,65]. Calcium supplements can be in the form of different calcium salts, and while not the primary aim of this paper, studies on supplements illustrate well how calcium absorption differs between different calcium sources and is thus covered briefly in this section.
+
+Calcium carbonate and calcium citrate are the most widely used calcium forms to the consumers [66]. Some other available calcium supplements include calcium phosphates, calcium gluconate, calcium fumarate, calcium malate, calcium lactate and some mixed salts, such as calcium lactate malate or calcium lactate citrate. These mixed salts have also been used to fortify different beverages because of their good water solubility [67]. Calcium lactate and calcium gluconate are more soluble in water than calcium carbonate and citrate, but they are not considered practical for oral supplements because they contain less elemental calcium [67,68] and many tablets need to be consumed to reach the same dose as calcium carbonate [69]. Calcium carbonate contains the highest amount of elemental calcium (around 40%) compared to calcium citrate and other salts, and is also the less expensive calcium source on the market [70,71]. Data in Table 3 show that the solubility of calcium carbonate, calcium citrate and calcium phosphate increased when pH decreased, and the calculated solubility of calcium depends on the solubility of the salt and the calcium content of the salt itself.
+
+In addition to solubility, absorption is another parameter that must be considered when evaluating the calcium supplement effectiveness. Heaney et al. [73] reported that calcium from calcium carbonate and calcium citrate is similarly absorbed (around 24%), even if calcium carbonate is less soluble in water. Calcium carbonate is well solubilized in an acidic gastric environment, which can be considered a hydrochloric acid solution. In the presence of sufficient hydrochloric acid, the following reaction will occur:CaCO3 + HCl → CaCl2 + H2O + CO2 (1) thus, essentially converting calcium carbonate to calcium chloride, with all calcium in ionized form. Part of this calcium is absorbed in the small intestine, but when pH increases again in the intestine, and CO2 converts accordingly to HCO3− or CO32−, this leads to (re)formation of sparingly-soluble calcium carbonate [74]. The importance of acidic solubilization of calcium carbonate is clear from the fact that absorption of calcium carbonate is limited in people with achlorhydria, i.e., those that do not secrete hydrochloric acid; Recker [75] reported that calcium absorption from calcium carbonate was lower in achlorhydric subjects (4.7%) compared to in non-achlorhydric people (22.5%). Interestingly, this situation changed and the calcium absorption rate increased to ~21% when calcium carbonate was consumed by achlorhydric subjects in combination with a standard breakfast, thereby achieving similar calcium absorption levels to people without achlorhydria [75]. This is probably due to the fact that the presence of food delays stomach emptying, thus allowing for better solubilization and dispersion of poorly soluble compounds [76]. Wen and Park [58] reported that gastric emptying time increases from 15 min in a fasting condition to 60 min in fed conditions. On the other hand, calcium citrate is well absorbed both when taken with or without food [76]. Calcium absorption from calcium carbonate (22.5%) and calcium citrate (24.3%) was not significantly different compared with that from skim milk (26%) in non-achlorhydric subjects [75].
+
+Calcium absorption from calcium salts is also affected by particle size. In mice, calcium absorption from calcium carbonate and calcium citrate preparations with smaller particle sizes (average particle sizes 151 ± 19 nm and 398 ± 4 nm, respectively) was higher than from those with larger particle sizes (3773 ± 759 nm and 1793 ± 382 nm, respectively) [77]. In contrast, Elble et al. [78] found in adolescent girls (aged 11 to 14 years) that there was no difference in calcium absorption from a calcium carbonate uptake supplement with small or large particles (13.56 vs. 18 µm). This may be due to the fact that the size difference between the large and small particles in this study was only ~30% [78].
+
+Overall, it is clear that calcium absorption from calcium salts has number of key identifiable factors: i.e., the gastric solubility, particle size but also the presence of other components. Such findings can be considered as the basis for understanding calcium absorption from foods. In addition, methodological aspects should also be considered when studying calcium absorption of food products. This is covered in Section 5.
+
+### 5. Calcium Absorption from Food Products: Methodological Aspects
+
+In subsequent Section 6 and Section 7 of this paper, fractional calcium absorption from different food products is discussed. For this, we considered only data from in vivo studies on humans using an isotopic method. The use of isotopes has greatly improved the accuracy and precision of in vivo nutrient absorption studies [79]. Isotopic methods for the determination of fractional calcium absorption can involve the use of either stable isotopes or radioisotopes, can use either single isotopes or double isotopes and can use intrinsic or extrinsic labeling. Some background of these methods is provided in this section, with the primary aim of facilitating the understanding of fractional absorption data presented in subsequent sections.
+
+As an example of a single stable isotope method, [80] used 44Ca to evaluate the absorption of calcium from milk and tofu by fecal recovery. Stool 44Ca concentration was measured by mass spectrometry and the percentage of calcium absorption from milk and tofu was from the 44Ca excreted in feces, corrected for the baseline, proportional to the 44Ca test dose. Another example of a single isotope technique is the evaluation of the blood concentration of the tracer after the administration of the labeled food. For example, Charoenkiatkul et al. [81] used the stable isotope 44Ca to label milk, ivy gourd and winged bean. The concentration of 44Ca in the blood samples, taken 5 h after the consumption of the labeled test meals, was measured by mass spectrometry and the percentage of calcium absorbed from test meals was calculated as the percentage of the 44Ca found in the blood after 5 h, with concentrations of determined 44Ca in the blood corrected for height and weight of the subjects to estimate total blood volume. As an alternative to the stable isotope 44Ca, it is possible to use a radioisotope, such as 45Ca [80]. The administration of a food labeled with a radioisotope allows very precise determination of calcium absorption; however, for e.g., infants, children and pregnant women, the use of radioisotopes is not recommended.
+
+A double isotope method uses two different calcium isotopes. The two tracers can be both stable isotopes, both radioisotopes or one stable isotope and one radioisotope. Usually, one of the two tracers is used to label the test food, while the second is injected intravenously. The calculation of fractional calcium absorption is performed taking into account the dose of isotope administered orally, the dose administered intravenously and the concentration of the two isotopes in the urine completely collected over 24 h after ingestion of the test food [82].
+
+When conducting a calcium absorption study using an isotope technique, the test food can be labeled intrinsically or extrinsically. Intrinsic labeling of a food involves the biological incorporation of the isotope, while extrinsic labeling is obtained by mixing the isotope with food [83]. Various vegetables can be intrinsically labeled by growing the plants hydroponically and adding the isotope to the nutrient solution. Alternatively, it is possible to label the plants during their growth by direct injection or by foliar application [84]. Foods of animal origin can also be intrinsically labeled by adding the isotope to the diet of the animal or by administering it intravenously, intraperitoneally or intramuscularly. The intrinsic labeling of foods allows the fractional absorption of calcium to be determined more precisely, as well as to identify the absorption of calcium from a single food source as part of a meal. However, intrinsic labeling techniques are much more expensive and difficult to implement and cannot be applied to every food material.
+
+For some foods, including milk, the absorption of calcium has also been determined by extrinsic labeling. Extrinsic labeling techniques have been shown to work quite well for liquid foods [85]. Milk, for instance, was mixed with the tracer and then left to equilibrate for 2–16 h before serving [85,86,87,88]. Nickel et al. [85] compared the calcium fractional absorption from bovine milk, labeled both intrinsically and extrinsically. For the intrinsic labeling, a stable calcium isotope was intravenously injected to the cow and the milk was collected over 3 days. Fractional absorption from the intrinsically and extrinsically labeled milks was 0.31 ± 0.09 and 0.32 ± 0.13 (mean ± SEM) respectively, indicating that there was no significant difference (p = 0.61). For other foods, such as spinach, it has been shown that extrinsic labeling by blending and mixing with an isotopic tracer is not as valid, as it can lead to overestimating calcium absorption due to an incomplete exchange between the tracer and the endogenous calcium [89].
+
+### 6. Calcium Absorption from Foods
+
+## 6.1. Milk and Dairy Products
+
+Given the importance of milk and dairy products as the primary source of calcium in the human diet (Table 1), it is not surprising that this product category is also the most studied in relation to calcium absorption. Because milk is a product intended naturally for consumption by the mammalian neonate as the sole source of nutrition in the early stages of life, it must be able to deliver sufficient calcium in a bioavailable form from the mother to the neonate, without pathological calcification of the mammary gland [90]. Considering bovine milk as an example, as the most consumed milk, the requirements of calcium and phosphate to sustain healthy skeletal development of the calf far exceed those that can be supplied in soluble form. This is because calcium phosphates are only sparingly soluble salts whose solubility is limited to several millimoles per liter at neutral pH [91]. Bovine milk, however, contains approximately 30 millimoles of calcium and 20 millimoles or inorganic phosphate per liter [92], which is more than an order of magnitude above the solubility of calcium phosphate salts. To enable adequate transport of sufficient amounts of calcium phosphate from the mother to the neonate, some of the calcium is complexed with citrate, which is present in milk at levels up to 10 mM [93,94]. Most importantly, however, is the presence of so-called casein micelles which are protein-based colloids which in bovine milk contain ~70% of total calcium and ~50% of total inorganic phosphate [95]. The calcium phosphate is encapsulated in the casein micelles in the form of small nanoclusters, with a typical diameter of 4–5 nm [96,97]. A casein micelle, which contains several hundred calcium phosphate nanoclusters in addition to tens of thousands of casein molecules, can thus be considered a protein-based carrier for calcium phosphate [96,98]. The calcium phosphate in the casein micelles is in an amorphous form and solubilizes when the pH is reduced; at pH < 5, all calcium phosphate in milk is solubilized [99,100]. In addition to acting as a delivery vehicle for calcium and phosphate for neonates, the casein micelles also play further important roles. Under gastric conditions for humans, they are susceptible to enzymatic coagulation leading to gastric curds and the subsequent phased transit of the casein fraction through the stomach [101]. In addition, the controlled coagulation of casein micelles also forms the basis of the conversion of milk into cheese and yoghurt [102].
+
+Factional absorption of calcium from milk as a function of calcium dose, via increasing volume of milk consumed, was studied by Heaney et al. [103], who found a decrease in fractional absorption with increasing calcium dosage. Plotting the natural logarithm of calcium dosage vs. fractional absorption yielded a linear trend [103]. This trend has formed an important basis in comparing different food products, and is widely used. Fractional absorption of calcium from milk, but also various other dairy products, has been the subject of various other studies, as summarized in Table 4. In Figure 1, we show that this relation does not only hold within a single study on a single product, but also across studies and across different dairy products, in addition to milk also including yoghurt and various cheeses. Some deviations can be observed, which may be related to the manner in which the product was ingested (as a single food or as part of a meal) and differences in experimental setup (Table 4).
+
+This trend of exponential decrease in fractional absorption of calcium with increasing intake (Figure 1) yields a number of aspects worth further consideration, i.e., (1) the fact that even at very low intake levels, a fractional absorption of 100% does not appear to be achieved and (2) that the decay in fractional absorption with increasing calcium intake is not linear but log-linear. The first point, i.e., that 100% fractional absorption is not achieved even at very low calcium intake may be related to the fact that in the intestinal conditions in which calcium absorption occurs, not all calcium may be in ionic form. Furthermore, there may be diffusion limitations to the process: i.e., not all calcium may reach the brush border for uptake.
+
+The fact that fractional absorption does not decrease in a linear fashion with calcium intake but in logarithmic fashion can be interpreted in several ways. First and foremost, it should be realized that despite lower fractional absorption, the amount of calcium absorbed with increasing intake increases. In the calcium intake range 10–200 mg (i.e., up to approximately one glass of milk), a good linear relation (R2 > 0.99) is found between intake and absorbed amount, but at higher levels of calcium intake, ‘diminishing returns’ are observed.
+
+When considering the absorption of calcium from milk, a number of processes should be considered. In the oral phase of the digestion process, the milk and its salt balance remain unchanged. However, when milk enters a fasting stomach, it comes into contact with a small amount (e.g., ~50 mL) of gastric juice, which will have a pH between 1 and 2 for an adult [101]. However, given the large volume of milk compared to gastric juice (assuming consumption of a glass of milk on a fasting stomach) and the buffering capacity of the milk, gastric pH will rise rapidly, to values > 6 [121]. At this point, the milk in the stomach is somewhat diluted and slightly acidified, as a result of which some of the calcium phosphate that was present in the casein micelles will solubilize [99,100]. Following this, gastric juice will be secreted into the stomach, which will reduce pH gradually [121]. In addition, the pepsin in the gastric juice will hydrolyze κ-casein, resulting in aggregation of casein micelles to form gastric curd [101]. This process is observed to occur already at pH values > 6 [101] and can lead to curd particles with sizes exceeding several millimeters, i.e., at least 4 orders of magnitude larger than the original casein micelles [122,123]. This thereby notably increases diffusion distances for acid into the particles and solubilized calcium and phosphate from the particles to the surrounding serum, and thereby slows down the rate of solubilization of calcium phosphate. The fact that enzymatic coagula of milk are known to synerese [124,125] further hampers the influx of acid, thereby hindering acidification and calcium solubilization from the coagula. The contraction of the curd matrix as a result of syneresis will also reduce the speed of dissociation [126]. For cheese, which is also a concentrated para-casein matrix, it has been shown that that the diffusion coefficient of salt is 4–5 orders of magnitude smaller than in water [127], indicating that further impairment of diffusion of salts and acid into and from the curd particles. Hence, while gastric pH values < 5 should theoretically be sufficient to solubilize all calcium and phosphate from the casein micelles [99,100], the enzymatic coagulation of the micelles will hinder this process and will delay the release calcium and phosphate from the gastric curd particles. This delayed release can ultimately have benefits for calcium absorption due to reduced concentrations of calcium in the gastric phase that transits to the stomach. Considering an initial volume of 50 mL, gastric juice and consumption of 250 mL milk with a calcium content of 30 mmol/L and an inorganic phosphate content of 20 mmol/L, complete solubilization of all calcium and phosphate will lead to concentrations of ~25 and 17 mmol/L for calcium and phosphate, respectively. However, as outlined above, dilution with gastric fluid and slow release from gastric coagula will notably reduce calcium phosphate concentrations in the digesta leaving the stomach. From buffering curves of milk [128], it can be estimated that the amount of gastric fluid required to acidify 250 mL of milk to pH 2 is approximately equal to the milk volume, thus notably reducing concentrations of soluble calcium and phosphate in the gastric phase to ~15 and 10 mmol/L; as gastric emptying time for a glass of milk is several hours [101], the calcium load leaving the stomach would be in the range of several millimoles per hour, which may be considered a controlled release, thus ensuring adequate uptake of calcium. The rate of gastric emptying is determined by a number of factors, including restrictions on volume flow, caloric density, pH and rheological properties [129].
+
+An interesting perspective, in this respect, is gained from the data by Fairweather-Tait et al. [115] who compared fractional absorption of calcium from skimmed milk and Ca-enriched skimmed milk and noted that the former had a notably higher (45.5%) fractional absorption than the latter (35.7%). This may be explained based on the fact that subjects ingested a smaller volume of the Ca-enriched product (83 mL) compared to the milk (136 mL) for the same Ca intake and thus reduced gastric volume [115]. Furthermore, the use of Ca-gluconate in the preparation of the Ca-enriched milk would have a notable effect on buffering. As a result of the reduced intake of milk for the Ca-enriched product, the amount of protein, phosphate and citrate, the main buffering compounds in milk [128], is also reduced by ~40%. This reduction in buffering is only compensated to a small extent by the addition of Ca-gluconate as a calcium source. Gluconate is only a weak buffer with a pKa < 4. Hence, much less buffering would be observed when this product enters the stomach than for milk, leading to a lower pH upon mixing with the gastric fluid present in the fasting stomach. This would lead to a lower pH and consequently more solubilization of micellar calcium phosphate before pepsin-induced curd formation would commence, in addition to the already higher levels of soluble Ca in the fortified milk than control milk. As a result, fractional absorption of calcium from the aforementioned fortified milk was lower than for the control milk [115], presumably due to more rapid gastric release of calcium into the intestine, thereby reducing overall absorption. For milk fortified with an insoluble calcium source, i.e., tricalcium phosphate, Lopez-Huertas et al. [120] actually observed significantly higher fractionation absorption than from control milk (27.5 vs. 24.5%). This can be related to the fact that tricalcium phosphate is only sparingly soluble and more slowly solubilized than calcium phosphate inside the casein micelles (Huppertz, unpublished data), as a result of which the controlled release of calcium into the intestine is achieved. These studies highlight the importance of careful consideration of calcium fortification of milk, as well as other dairy products, to ensure maximal fractional absorption.
+
+For other dairy product types, e.g., cheese and yoghurt, similar matrix effects may be considered. Particularly interesting, in this respect, is the study of Nickel et al. [85] comparing cheddar cheese and yoghurt and showing a notably higher fractional absorption of calcium from the former (37.4 vs. 24.2%). This difference can probably also be attributed to physicochemical properties and equilibria during the gastric phase. Both cheese and yoghurt have a notably lower pH and higher acidity than milk, but differ strongly in structure. Cheese may be considered a highly concentrated gelled casein matrix whereas yoghurt is also gelled (if set yoghurt is used) or a suspension of microgel particles (if stirred yoghurt is used) but the gel is much less concentrated [130]. Neither yoghurt or cheese are prone to coagulation under gastric conditions [131,132,133], unlike milk, and release of calcium would thus depend on (1) release of calcium from the gelled structure and (2) breakdown and gastric emptying of the structure. Interesting similarities may be drawn to postprandial aminoacidemia for these products. In a recent study, Horstman et al. [133] showed that postprandial amino acid levels in blood increased more quickly and to higher levels, but also decreased much more rapidly on consumption of (stirred) yoghurt compared to cheese, with the latter showing a much more gradual release. As outlined above for milk, this more gradual and sustained release into the intestine is assumed to be beneficial for increasing fraction absorption of calcium from cheese. Hence, although cheese does not coagulate further in the stomach, the fact that it is a highly concentrated product matrix with notable buffering capacity in which mobility is low benefits gradual release of calcium to the intestine, where the matrix can be further broken down by proteases, and the calcium and other components from the matrix are released. In contrast, the much weaker gels and small gel particles in yoghurt, combined with the fact that most of the calcium is already in soluble form at the pH of yoghurt (pH 4.0–4.5) [134] and pH will decrease further in the gastric phase of digestion, which can lead to much more rapid release of calcium into the intestine and therewith lead to reduced fractional absorption. It is, in this perspective, it is thus very important to keep in mind that high levels of soluble calcium in the product are not by definition beneficial for fractional absorption. Static in vitro methods focusing solely on this topic should thus be interpreted with care.
+
+## 6.2. Non-Dairy Products
+
+As outlined above, most of the dietary calcium in many countries comes from dairy products, but some non-dairy products can also contribute notably, e.g., vegetables, starchy foods, dried fruits and water. However, to be considered a suitable source of calcium, it is important that foods not only contain it in adequate quantities, but also that the calcium is also sufficiently bioavailable. Some non-dairy foods are characterized by a lower fractional absorption of calcium, despite containing it in high quantities. In several foods of plant origin, for instance, the absorption of calcium and other minerals is adversely affected by the presence of anti-nutritional factors, such as oxalates and phytates [135].
+
+Table 5 shows the data from different studies on the absorption of calcium in humans from different non-dairy foods. Particularly spinach (American and Chinese varieties) and rhubarb, rich in calcium, are characterized by a very low fractional absorption (5.1%, 9.3% and 9.2% respectively; Table 5).
+
+This may probably be due to the high content of oxalic acid in these products because calcium oxalate is a very insoluble salt [108,139]. Calcium oxalate is insoluble at a neutral or alkaline pH, and even at pH 2 has only very low solubility (Table 6).
+
+Insoluble calcium oxalates, precipitates and is eliminated with the feces but according to Hanes et al. [141], a minimal part of calcium oxalate could be absorbed intact. Instead, the part of the soluble oxalate not bound with calcium is absorbed into the large intestine (colon) through a passive pathway [142]. Although some studies reported that the main site where the absorption of free oxalate is the small intestine [143]. Absorbed soluble oxalate may still bind calcium present in the blood vessels, and precipitate in the kidney or urinary tract leading to the formation of kidney or urinary tract stones [144]. The negative effect of oxalates on calcium absorption increases when the molar ratio of total oxalate: calcium is major than 9:4 and this occurs in spinach and rhubarb [145]. Chai and Liebman [146] suggested that the boiling method is effective in reducing total oxalate (soluble and insoluble) content in spinach and rhubarb stalks compared to steaming (Table 7).
+
+In contrast, fractional calcium absorption is much higher in vegetables which are low in oxalate, e.g., kale, broccoli, bok choy, kai choy and choy sum (Table 5; [105,136]). In addition to oxalates, calcium absorption can also be inhibited by phytates, but to a lesser extent [147]. The inhibitory effect of phytate on calcium absorption was confirmed also by Heaney et al. [106], who found that calcium absorption from low-phytate soybeans was significantly higher than that from high-phytate soybeans (41.4 vs. 31.0%). Furthermore, calcium absorption was higher from tortillas with low phytate content than from their counterparts with regular phytate content (50 vs. 35%; [138]). In rats, phytate content did not affect calcium absorption from intrinsically labeled soybeans [148], but this discrepancy is likely related to the fact that rats have an intestinal phytase activity that is around 30 times higher than that of humans [149].
+
+Phytic acid is a phosphorus-based substance, which is found in cereals, legumes, nuts and seeds, but the highest phytate content was found in soybean (~2 g/100 g) [88,144]. Phytic acid can bind calcium in the stomach (below pH 4), forming a soluble calcium-phytate complex [150]. During the passage through the stomach and small intestine, calcium phytate showed a rapid decrease in solubility due to the increase in pH, and precipitates reducing its absorption [151]. When phytate reaches the colon, it is degraded by phytase enzyme produced by the gastrointestinal microflora, this process depends on calcium level in the diet [152]. Grynspan and Cheryan [150] reported that maximum calcium precipitation (~100%) occurs only when the molar ratio of phytate:calcium is 4:1 and pH ˃ 8. Boiling and cooking processes have only slightly effects in reducing phytate, as it is thermally stable below 150 °C [153].
+
+The influence of phytate was also clear for wheat flour products, which showed higher calcium absorption than wheat bran products, which are rich in phytate [86]. Data reported in Table 5 show also that foods with low amounts of both phytate and oxalate, such as cassia leaves (42.6%), winged beans (39.1%) and the ivy gourd (47.6%) have a high calcium absorption [81,114]. Mineral water has been shown to be a source of absorbable calcium [110,118] but concentrations are relatively low, so this would need considerable amounts of consumption to make meaningful contributions to overall calcium intake.
+
+## 6.3. Calcium-Fortified Foods
+
+Calcium-fortified foods are used all over the world and can help people to fill calcium gaps in their daily diets. Table 8 contains a list of studies on calcium absorption in which various calcium fortified foods were compared with bovine milk that was not fortified. A wide variety of calcium compounds, such as calcium citrate, calcium malate, calcium carbonate, tricalcium phosphate, calcium gluconate, calcium chloride and calcium sulfate, were used as food additives. It can be observed that calcium absorption from soy drink fortified with tricalcium phosphate was lower than that of bovine milk [87]. However, when the soy drink was fortified with calcium carbonate, the absorption of calcium was similar to that of bovine milk (21.1 vs. 21.7%) and both were significantly higher (p < 0.05) than that of the soy drink fortified with tricalcium phosphate (18.1%), with the same calcium load [88].
+
+Weaver et al. [80] studied the absorption of calcium from tofu fortified with calcium chloride and calcium sulfate in Caucasian and Asian populations. The results show that, in both studies, the calcium absorption from fortified tofu was similar to that of milk. In a study carried out by Martin et al. [112], bread fortified with calcium sulfate was tested for calcium absorption in comparison with bovine milk. Calcium absorption was determined in 18 healthy women who ingested a serving of bread containing 300 mg of calcium in a randomized crossover design using a cup of milk as control. It was found that calcium sulfate fortified bread was slightly better absorbed than milk (43.02 vs. 36.27%). Pak et al. [154] studied calcium absorption in orange juice fortified with either calcium citrate or calcium malate in 16 healthy individuals and found that calcium absorption was similar in both orange juices (40.1 vs. 40.6%). Furthermore, the absorption of calcium from calcium sulphate-fortified mineral water was investigated and found to be similar to that from bovine milk [111]. On the other hand, Hawthorne et al. [109] used an innovative strategy to increase calcium absorption in carrots, given their low calcium content. Biotechnology-modified carrots containing high levels of calcium have been developed. The results showed that the absorption of calcium from biotechnologically modified carrots was slightly lower than in milk, even though the portions of modified carrots were too large to be considered as a substitute source for milk.
+
+### 7. Selection of Calcium Sources for Health and Sustainable Diets
+
+As outlined previously, various considerations can form the basis for inclusion of food products as dietary sources of calcium. Calcium content and calcium bioavailability are important aspects to consider from a nutritional aspect. However, consideration of the environmental impact of the production of the food items is also important to ensure that products fit in sustainable diets and do not cause an environmental impact that is disproportional to the nutritional contribution of the product [155,156]. To explore this aspect, a database of 218 Dutch food items was used for which LCA data were released by National Institute for Public Health and the Environment (RIVM) in the Netherlands [157]. Food composition data for these food items were attained from the Dutch food composition database also released by RIVM [158]. For each food item, the amount of product that needed to be consumed to meet 20% of the RDI for calcium in the Netherlands of 1000 mg was calculated, as well as the greenhouse gas (GHG) emissions, expressed in CO2-eq, with this amount of product.
+
+Results are shown in Table 9, with only food items shown that could make at least a proportional contribution to the diet on an energy basis (i.e., Ca/energy > 1000 mg/2250 kcal). This yielded a selection of 60 food items (i.e., just over 25% of all products), of which 21 fell in the category of dairy products (including cheese) and 18 in the category of vegetables, together spanning almost two thirds of the group. Next to this, the selection included some fruits (n = 7) and fish (n = 6) and various other products. For all fruit products, however, amounts required to achieve 20% of RDI were unrealistically high, with the lowest amount being 111 g of dried figs per day, even increasing to 1200 g of strawberries per day. Likewise, for all fish products, intake of >120 g per day was required for 20% of RDI for Ca, is unrealistically high on a daily basis. While these products will of course contribute to overall calcium intake, they are unlikely to be the cornerstones of calcium intake in the diet.
+
+For the vegetables, required intake for kale (78 g) and spinach (111 g) appear more reasonable, but for the latter, it should be remembered that bioavailability of Ca is very low (Table 5, [108]. For milk and dairy products, serving size for almost all products (15 out of 21) to achieve 20% of RDI for Ca could be considered to be single portions, e.g., up to 200 g of milk or yoghurt and up to <25 g of cheese. The only exceptions in this respect were custard-type products, ice cream, cheese spread, mozzarella cheese and fresh goat’s cheese. Another good source of Ca was a vegetarian schnitzel (Table 9), which is actually a dairy-based product.
+
+When considering greenhouse gas (GHG) emissions, expressed as CO2-eq for the portion of each food item required to provide 20% of RDI for Ca, values ranged from 0.09 kg CO2-eq for seaweed kelp to 7.69 kg CO2-eq for strawberries (Table 9). In general, it is clear that mainly calcium-rich foods have lower CO2-eq per 20% RDI for Ca. Again here, dairy products, kale, lettuce and the (dairy-based) vegetarian schnitzel appeared to be the most apparent choices for making a notable impact on calcium intake without excessive impact on GHG emissions. While seaweed kelp and linseed are also apparent sources of Ca with comparatively low CO2-eq, the required levels of consumption for a 20% contribution to RDI for Ca appear unrealistically high, and even exceeded boundaries for safe consumption of products for linseed because iodine intake calculated from this portion would notably exceed the upper intake level recommended by EFSA (i.e., 600 μg per day for adults).
+
+As such, the fact that at present almost 60% of all dietary calcium in a Dutch diet comes dairy products [159] appears logical. This class of products makes large contributions to the RDI of calcium even with single portions (i.e., a glass of milk, a bowl of yoghurt or a slice of cheese). Furthermore, from a perspective of environmental impact, however, dairy appears to be the logical choice, with GHG emissions per unit of Ca for dairy products lower than for most other food items that could be considered credible calcium sources based on the criterium of supplying at least 1000 mg of Ca per 2250 kcal.
+
+Of course, food items should not be judged on single nutrients (i.e., in this case Ca), as virtually all food items are sources of multiple nutrients. To illustrate this, the food items included in Table 9 were also considered in terms of nutrient richness. For this purpose, we explored an additional 21 nutrients and if the portion size identified in Table 9 as required for providing 20% of RDI of Ca also made substantial contributions to RDI of other nutrients. Results are shown in Supplementary Table S1 and highlight some interesting aspects.
+
+For most dairy products, portions required to provide 20% of RDI for Ca provided at least 20% of RDI for one other nutrient, i.e., phosphorus. In fact, for virtually all food items, phosphorus was provided in at least similar proportion of RDI as Ca. For other nutrients, such abundance among food products could not be seen, although dairy products were also shown to be rich sources of vitamin B2 and vitamin B12. For iron, not a single product listed in Supplementary Table S1 could provide 20% of RDI in the portions outlined in Table 9 and for vitamin D, only the fish products were shown as main contributors (Supplementary Table S1).
+
+### 8. Conclusions
+
+Calcium is an essential nutrient in the human diet, and dietary intake of calcium does not meet recommendations in many parts of the world. In areas of the world where dietary calcium intake does meet recommendations, dairy consumption makes the largest contribution to calcium intake. This important contribution can be made due to the fact that in a single serving, dairy products provide high levels of calcium which become bioavailable under the conditions in the gastrointestinal tract. For other food groups, the presence of phytate and oxalate can strongly limit calcium absorption because the complexes are not solubilized and ionized even at the low pH encountered during gastric transit. In addition, controlled gastric release can also enhance calcium absorption. Hence, calcium fortification strategies which do not consider this aspect run the risk of increasing dietary calcium but not absorbable calcium. Overall, consideration of calcium in food matrices and changes therein during digestion is crucial for enabling optimal utilization of dietary calcium.
+
+### References
+
+[1] 1. Word Health Organization Human Vitamin and Mineral RequirementsFAORome, ItalyWHOGeneva, Switzerland2001
+
+[2] 2. BarrS.I. Associations of social and demographic variables with calcium intakes of high school studentsJ. Am. Diet. Assoc.19949426026610.1016/0002-8223(94)90366-28120289
+
+[3] 3. AlbertsonA.M. TobelmannR.C. MarquartL. Estimated dietary calcium intake and food sources for adolescent females: 1980–1992J. Adolesc. Health199720202610.1016/S1054-139X(96)00179-69007655
+
+[4] 4. FlemingK.H. HeimbachJ.T. Consumption of calcium in the U.S.: Food sources and intake levelsJ. Nutr.19941241426S1430S10.1093/jn/124.suppl_8.1426S8064396
+
+[5] 5. Neumark-SztainerD. StoryM. DixonL.B. ResnickM.D. BlumR.W. Correlates of inadequate consumption of dairy products among adolescentsJ. Nutr. Educ. Behav.199729122010.1016/S0022-3182(97)70141-9
+
+[6] 6. SubarA.F. Krebs-SmithS.M. CookA. KahleL.L. Dietary sources of nutrients among US children, 1989–1991Pediatrics199810291399210.1542/peds.102.4.9139755265
+
+[7] 7. JohnsonR.K. PanelyC. WangM. The association between noon beverage consumption and the diet quality of school-age childrenJ. Child. Nutr. Manag.19982295100
+
+[8] 8. WeaverC.M. HeaneyR.P. Calcium in Human HealthHumana PressTotowa, NJ, USA2006
+
+[9] 9. CormickG. BelizanJ.M. Calcium intake and healthNutrients201911160610.3390/nu1107160631311164PMC6683260
+
+[10] 10. HuangF. WangZ. ZhangJ. DuW. SuC. JiangH. JiaX. OuyangY. WangY. LiL. Dietary calcium intake and food sources among Chinese adults in CNTCSPLoS ONE201813e020504510.1371/journal.pone.020504530273413PMC6166981
+
+[11] 11. WelchA.A. FransenH. JenabM. Boutron-RuaultM.C. TuminoR. AgnoliC. EricsonU. JohanssonI. FerrariP. EngesetD. Variation in intakes of calcium, phosphorus, magnesium, iron and potassium in 10 countries in the european prospective investigation into cancer and nutrition studyEur. J. Clin. Nutr.200963S101S12110.1038/ejcn.2009.7719888269
+
+[12] 12. PoliquinS. JosephL. Gray-DonaldK. Calcium and Vitamin d intakes in an adult Canadian populationCan. J. Diet. Pract. Res.200970212710.3148/70.1.2009.2119261203
+
+[13] 13. BalkE.M. AdamG.P. LangbergV.N. EarleyA. ClarkP. EbelingP.R. MithalA. RizzoliR. ZerbiniC.A.F. PierrozD.D. Global dietary calcium intake among adults: A systematic reviewOsteoporos. Int.2017283315332410.1007/s00198-017-4230-x29026938PMC5684325
+
+[14] 14. GuéguenL. PointillartA. The bioavailability of dietary calciumJ. Am. Coll. Nutr.200019119S136S10.1080/07315724.2000.1071808310759138
+
+[15] 15. RoufA.S. SuiZ. RanganA. GrechA. Allman-FarinelliM. Low calcium intakes among Australian adolescents and young adults are associated with higher consumption of discretionary foods and beveragesNutrition201855–5614615310.1016/j.nut.2018.04.00530005331
+
+[16] 16. HarinarayanC. RamalakshmiT. Patterns of dietary calcium intake in south Indian rural, urban and metropolitan city subjectsJ. Clin. Sci. Res.2015414314810.15380/2277-5706.JCSR.15.003
+
+[17] 17. VisioliF. StrataA. Milk, dairy products, and their functional effects in humans: A narrative review of recent evidenceAdv. Nutr.2014513114310.3945/an.113.00502524618755PMC3951796
+
+[18] 18. WeaverC.M. ProulxW.R. HeaneyR. Choices for achieving adequate dietary calcium with a vegetarian dietAm. J. Clin. Nutr.199970543S548S10.1093/ajcn/70.3.543s10479229
+
+[19] 19. MillerG.D. JarvisJ.K. McBeanL.D. The importance of meeting calcium needs with foodsJ. Am. Coll. Nutr.200120168S185S10.1080/07315724.2001.1071902911349940
+
+[20] 20. Di MaioG. PittiaP. MazzarinoL. MaraschinM. KuhnenS. Cow milk enriched with nanoencapsulated phenolic extract of jaboticaba (Plinia peruviana)J. Food Sci. Technol.2019561165117310.1007/s13197-019-03579-y30956296PMC6423216
+
+[21] 21. TheobaldH. Dietary Calcium and healthNutr. Bull.20053023727710.1111/j.1467-3010.2005.00514.x
+
+[22] 22. ShiJ. MaguerM. Le Lycopene in tomatoes: Chemical and physical properties affected by food processingCrit. Rev. Food Sci. Nutr.20004014210.1080/1040869009118927510674200
+
+[23] 23. Camara-MartosF. Amaro-LópezM.A. Influence of dietary factors on calcium bioavailabilityBiol. Trace Elem. Res.200289435210.1385/BTER:89:1:4312413050
+
+[24] 24. HeaneyR.P. Calcium intake and disease preventionArq. Bras. Endocrinol. Metabol.20065068569310.1590/S0004-2730200600040001417117294
+
+[25] 25. IlichJ.Z. KerstetterJ.E. Nutrition in bone health revisited: A story beyond calciumJ. Am. Coll. Nutr.20001971573710.1080/07315724.2000.1071807011194525
+
+[26] 26. WangL. MansonJ.E. SessoH.D. Calcium intake and risk of cardiovascular diseaseAm. J. Cardiovasc. Drugs20121210511610.2165/11595400-000000000-0000022283597PMC3336363
+
+[27] 27. De BarbozaG.D. GuizzardiS. de TalamoniN.T. Molecular aspects of intestinal calcium absorptionWorld J. Gastroenterol.201521714210.3748/wjg.v21.i23.714226109800PMC4476875
+
+[28] 28. ParkY.W. Overview of bioactive components in milk and dairy productsBioactive Components in Milk and Dairy Products ParkY.W. Wiley-BlackwellAmes, IA, USA2009312
+
+[29] 29. ZhuK. PrinceR.L. Calcium and boneClin. Biochem.20124593694210.1016/j.clinbiochem.2012.05.00622609892
+
+[30] 30. RizzoliR. Dairy products, yogurts, and bone healthAm. J. Clin. Nutr.2014991256S1262S10.3945/ajcn.113.07305624695889
+
+[31] 31. TorresM. FrancischettiE.A. GenelhuV. SanjulianiA.F. Effect of a high-calcium energy-reduced diet on abdominal obesity and cardiometabolic risk factors in obese Brazilian subjectsInt. J. Clin. Pract.2010641076108310.1111/j.1742-1241.2009.02312.x20642707
+
+[32] 32. TorresM.R.S.G. SanjulianiA.F. Does calcium intake affect cardiovascular risk factors and/or events?Clinics20126783984410.6061/clinics/2012(07)2222892932PMC3400178
+
+[33] 33. VinarovaL. VinarovZ. TcholakovaS. DenkovN.D. StoyanovS. LipsA. The mechanism of lowering cholesterol absorption by calcium studied by using an in vitro digestion modelFood Funct.2016715116310.1039/C5FO00856E26481461
+
+[34] 34. SchachterD. DowdleE.B. SchenkerH. Active transport of calcium by the small intestine of the ratAm. J. Physiol. Content196019826326810.1152/ajplegacy.1960.198.2.26314442283
+
+[35] 35. MillerD.D. BernerL.A. Is solubility in vitro a reliable predictor of iron bioavailability?Biol. Trace Elem. Res.198919112410.1007/BF029254462484374
+
+[36] 36. SmithR.H. McAllanA.B. Binding of magnesium and calcium in the contents of the small intestine of the calfBr. J. Nutr.19662070371810.1079/BJN196600726006009
+
+[37] 37. PérezA.V. PicottoG. CarpentieriA.R. RivoiraM.A. LópezM.E.P. De TalamoniN.G.T. Minireview on regulation of intestinal calcium absorptionDigestion200877223410.1159/00011662318277073
+
+[38] 38. BronnerF. Calcium absorption—A paradigm for mineral absorptionJ. Nutr.199812891792010.1093/jn/128.5.9179567004
+
+[39] 39. HoenderopJ.G.J. van der KempA.W.C.M. HartogA. van de GraafS.F.J. van OsC.H. WillemsP.H.G.M. BindelsR.J.M. Molecular identification of the apical Ca2+ channel in 1, 25-dihydroxyvitamin D3-responsive epitheliaJ. Biol. Chem.19992748375837810.1074/jbc.274.13.837510085067
+
+[40] 40. PengJ.-B. ChenX.-Z. BergerU.V. VassilevP.M. TsukaguchiH. BrownE.M. HedigerM.A. Molecular cloning and characterization of a channel-like transporter mediating intestinal calcium absorptionJ. Biol. Chem.1999274227392274610.1074/jbc.274.32.2273910428857
+
+[41] 41. KarbachU. FeldmeierH. The cecum is the site with the highest calcium absorption in rat intestineDig. Dis. Sci.1993381815182410.1007/BF012961048404402
+
+[42] 42. NijenhuisT. HoenderopJ.G.J. van der KempA.W.C.M. BindelsR.J.M. Localization and regulation of the epithelial Ca2+ channel TRPV6 in the kidneyJ. Am. Soc. Nephrol.2003142731274010.1097/01.ASN.0000094081.78893.E814569082
+
+[43] 43. KhanalR.C. NemereI. Regulation of intestinal calcium transportAnnu. Rev. Nutr.20082817919610.1146/annurev.nutr.010308.16120218598134
+
+[44] 44. ChristakosS. DhawanP. PortaA. MadyL.J. SethT. Vitamin D and intestinal calcium absorptionMol. Cell Endocrinol.2011347252910.1016/j.mce.2011.05.03821664413PMC3405161
+
+[45] 45. LamerisA.L. NevalainenP.I. ReijnenD. SimonsE. EygensteynJ. MonnensL. BindelsR.J.M. HoenderopJ.G.J. Segmental transport of Ca2+ and Mg2+ along the gastrointestinal tractAm. J. Physiol. Liver Physiol.2015308G206G21610.1152/ajpgi.00093.201425477372
+
+[46] 46. BronnerF. Intestinal calcium absorption: Mechanisms and applicationsJ. Nutr.19871171347135210.1093/jn/117.8.13473305814
+
+[47] 47. BronnerF. Current concepts of calcium absorption: An overviewJ. Nutr.199212264164310.1093/jn/122.suppl_3.6411542025
+
+[48] 48. BellatonC. RocheC. RémyC. PansuD. Absorption du calcium. Données physiologiques récentesGastroentérol. Clin. Biol.1992162392471316300
+
+[49] 49. BeggsM.R. AlexanderR.T. Intestinal absorption and renal reabsorption of calcium throughout postnatal developmentExp. Biol. Med.201724284084910.1177/1535370217699536PMC540754428346014
+
+[50] 50. BronnerF. Recent developments in intestinal calcium absorptionNutr. Rev.20096710911310.1111/j.1753-4887.2008.00147.x19178653
+
+[51] 51. SheikhM.S. SchillerL.R. FordtranJ.S. In vivo intestinal absorption of calcium in humansMiner. Electrolyte Metab.1990161301462250619
+
+[52] 52. AlexanderR.T. RievajJ. DimkeH. Paracellular calcium transport across renal and intestinal epitheliaBiochem. Cell Biol.20149246748010.1139/bcb-2014-006125386841
+
+[53] 53. AndersonJ.M. Molecular structure of tight junctions and their role in epithelial transportPhysiology20011612613010.1152/physiologyonline.2001.16.3.12611443232
+
+[54] 54. MarcusC.S. LengemannF.W. Absorption of Ca 45 and Sr 85 from solid and liquid food at various levels of the alimentary tract of the ratJ. Nutr.19627715516010.1093/jn/77.2.15514469699
+
+[55] 55. WassermanR.H. Vitamin D and the dual processes of intestinal calcium absorptionJ. Nutr.20041343137313910.1093/jn/134.11.313715514288
+
+[56] 56. Barger-LuxM.J. HeaneyR.P. ReckerR.R. Time course of calcium absorption in humans: Evidence for a colonic componentCalcif. Tissue Int.19894430831110.1007/BF025563092496901
+
+[57] 57. BronnerF. PansuD. Nutritional aspects of calcium absorptionJ. Nutr.199912991210.1093/jn/129.1.99915868
+
+[58] 58. WenH. ParkK. Oral Controlled Release Formulation Design and Drug Delivery: Theory to PracticeJohn Wiley & SonsSussex, UK2011
+
+[59] 59. Smeets-PeetersM.J.E. MinekusM. HavenaarR. SchaafsmaG. VerstegenM.W.A. Description of a dynamic in vitro model of the dog gastrointestinal tract and an evaluation of various transit times for protein and calciumAltern. Lab. Anim.19992793594910.1177/02611929990270060825490462
+
+[60] 60. VergneM. ParkerT.F. PakC.Y.C. HullA.R. De LucaH.F. FordtranJ.S. Jejunal and ileal calcium absorption in patients with chronic renal diseaseJ. Clin. Investig.19765786186610.1172/JCI108362947957PMC436729
+
+[61] 61. FallingborgJ. Intraluminal pH of the human gastrointestinal tractDan. Med. Bull.19994618319610421978
+
+[62] 62. DuflosC. BellatonC. PansuD. BronnerF. Calcium solubility, intestinal sojourn time and paracellular permeability codetermine passive calcium absorption in ratsJ. Nutr.19951252348235510.1093/jn/125.9.23487666252
+
+[63] 63. ReidI.R. BristowS.M. BollandM.J. Calcium supplements: Benefits and risksJ. Intern. Med.201527835436810.1111/joim.1239426174589
+
+[64] 64. GenantH.K. CooperC. PoorG. ReidI. EhrlichG. KanisJ. NordinB.E.C. Barrett-ConnorE. BlackD. BonjourJ.P. Interim report and recommendations of the World Health Organization task-force for osteoporosisOsteoporos. Int.19991025910.1007/s00198005022410692972
+
+[65] 65. LiK. KaaksR. LinseisenJ. RohrmannS. Associations of dietary calcium intake and calcium supplementation with myocardial infarction and stroke risk and overall cardiovascular mortality in the Heidelberg cohort of the European Prospective Investigation into Cancer and Nutrition study (EPIC-Heidelberg)Heart2012989209252262690010.1136/heartjnl-2011-301345
+
+[66] 66. OnakpoyaI.J. PerryR. ZhangJ. ErnstE. Efficacy of calcium supplementation for management of overweight and obesity: Systematic review of randomized clinical trialsNutr. Rev.20116933534310.1111/j.1753-4887.2011.00397.x21631515
+
+[67] 67. KresselG. Bioavailability and solubility of different calcium-salts as a basis for calcium enrichment of beveragesFood Nutr. Sci.20101535810.4236/fns.2010.12009
+
+[68] 68. GossS.L. LemonsK.A. KerstetterJ.E. BognerR.H. Determination of calcium salt solubility with changes in pH and PCO2, simulating varying gastrointestinal environmentsJ. Pharm. Pharmacol.2007591485149210.1211/jpp.59.11.000417976258
+
+[69] 69. SheikhM.S. Santa AnaC.A. NicarM.J. SchillerL.R. FordtranJ.S. Gastrointestinal absorption of calcium from milk and calcium saltsN. Engl. J. Med.198731753253610.1056/NEJM1987082731709033614304
+
+[70] 70. BaileyR.L. DoddK.W. GoldmanJ.A. GahcheJ.J. DwyerJ.T. MoshfeghA.J. SemposC.T. PiccianoM.F. Estimation of total usual calcium and vitamin D intakes in the United StatesJ. Nutr.201014081782210.3945/jn.109.11853920181782PMC2838624
+
+[71] 71. KellerJ.L. LanouA.J. D BarnardN.E.A.L. The consumer cost of calcium from food and supplementsJ. Am. Diet. Assoc.20021021669167110.1016/S0002-8223(02)90355-X12449293
+
+[72] 72. De VreseM. Tricalcium Citrate (TCC) and HealthJ. Nutr. Health Food Eng.2017613014610.15406/jnhfe.2017.06.00214
+
+[73] 73. HeaneyR.P. ReckerR.R. WeaverC.M. Absorbability of calcium sources: The limited role of solubilityCalcif. Tissue Int.19904630030410.1007/BF025638192110852
+
+[74] 74. ClarksonE.M. McDonaldS.J. De WardenerH.E. The effect of a high intake of calcium carbonate in normal subjects and patients with chronic renal failureClin. Sci.1966304254385914385
+
+[75] 75. ReckerR.R. Calcium absorption and achlorhydriaN. Engl. J. Med.1985313707310.1056/NEJM1985071131302024000241
+
+[76] 76. HeaneyR.P. ReckerR.R. StegmanM.R. MoyA.J. Calcium absorption in women: Relationships to calcium intake, estrogen status, and ageJ. Bone Miner. Res.1989446947510.1002/jbmr.56500404042816496
+
+[77] 77. HuangS. ChenJ.C. HsuC.W. ChangW.H. Effects of nano calcium carbonate and nano calcium citrate on toxicity in ICR mice and on bone mineral density in an ovariectomized mice modelNanotechnology20092037510210.1088/0957-4484/20/37/37510219706952
+
+[78] 78. ElbleA.E. HillK.M. ParkC.Y. MartinB.R. PeacockM. WeaverC.M. Effect of calcium carbonate particle size on calcium absorption and retention in adolescent girlsJ. Am. Coll. Nutr.20113017117710.1080/07315724.2011.1071995721896874
+
+[79] 79. DavidssonL. TanumihardjoS. New frontiers in science and technology: Nuclear techniques in nutritionAm. J. Clin. Nutr.201194691S695S10.3945/ajcn.110.00581921653797PMC3142739
+
+[80] 80. WeaverC.M. HeaneyR.P. ConnorL. MartinB.R. SmithD.L. NielsenS. Bioavailability of calcium from tofu as compared with milk in premenopausal womenJ. Food Sci.2002673144314710.1111/j.1365-2621.2002.tb08873.x
+
+[81] 81. CharoenkiatkulS. KriengsinyosW. TuntipopipatS. SuthutvoravutU. WeaverC.M. Calcium absorption from commonly consumed vegetables in healthy Thai womenJ. Food Sci.200873H218H22110.1111/j.1750-3841.2008.00949.x19021804
+
+[82] 82. BeckA.B. BügelS. StürupS. JensenM. MølgaardC. HansenM. KrogsgaardO.W. SandströmB. A novel dual radio-and stable-isotope method for measuring calcium absorption in humans: Comparison with the whole-body radioisotope retention methodAm. J. Clin. Nutr.20037739940510.1093/ajcn/77.2.39912540400
+
+[83] 83. SandströmB. Fairweather-TaitS. HurrellR. Van DokkumW. Methods for studying mineral and trace element absorption in humans using stable isotopesNutr. Res. Rev.19936719510.1079/NRR1993000719094303
+
+[84] 84. WeaverC.M. ChaneyR.L. Intrinsic mineral labeling of edible plants: Methods and usesCrit. Rev. Food Sci. Nutr.1985237510110.1080/104083985095274203905264
+
+[85] 85. NickelK.P. MartinB.R. SmithD.L. SmithJ.B. MillerG.D. WeaverC.M. Calcium bioavailability from bovine milk and dairy products in premenopausal women using intrinsic and extrinsic labeling techniquesJ. Nutr.19961261406141110.1093/jn/126.5.14068618137
+
+[86] 86. WeaverC.M. HeaneyR.P. MartinB.R. FitzsimmonsM.L. Human calcium absorption from whole-wheat productsJ. Nutr.19911211769177510.1093/jn/121.11.17691941185
+
+[87] 87. HeaneyR.P. DowellM.S. RaffertyK. BiermanJ. Bioavailability of the calcium in fortified soy imitation milk, with some observations on methodAm. J. Clin. Nutr.2000711166116910.1093/ajcn/71.5.116610799379
+
+[88] 88. ZhaoY. MartinB.R. WeaverC.M. Calcium bioavailability of calcium carbonate fortified soymilk is equivalent to cow’s milk in young womenJ. Nutr.20051352379238210.1093/jn/135.10.237916177199
+
+[89] 89. WeaverC.M. HeaneyR.P. Isotopic exchange of ingested calcium between labeled sources. Evidence that ingested calcium does not form a common absorptive poolCalcif. Tissue Int.19914924424710.1007/BF025562121760767
+
+[90] 90. NevilleM.C. Calcium secretion into milkJ. Mammary Gland Biol. Neoplasia20051011912810.1007/s10911-005-5395-z16025219
+
+[91] 91. LentonS. NylanderT. TeixeiraS.C.M. HoltC. A review of the biology of calcium phosphate sequestration with special reference to milkDairy Sci. Technol.20159531410.1007/s13594-014-0177-225632319PMC4302223
+
+[92] 92. HuppertzT. HeckJ. BijlE. PoulsenN.A. LarsenL.B. Variation in casein distribution and mineralisation in the milk from Holstein-Friesian cowsInt. Dairy J.202111910506410.1016/j.idairyj.2021.105064
+
+[93] 93. AkkermanM. LarsenL.B. SørensenJ. PoulsenN.A. Natural variations of citrate and calcium in milk and their effects on milk processing propertiesJ. Dairy Sci.20191026830684110.3168/jds.2018-1619531155267
+
+[94] 94. FaulknerA. PeakerM. Reviews of the progress of dairy science: Secretion of citrate into milkJ. Dairy Res.19824915916910.1017/S002202990002224X7042779
+
+[95] 95. BijlE. van ValenbergH.J.F. HuppertzT. van HooijdonkA.C.M. Protein, casein, and micellar salts in milk: Current content and historical perspectivesJ. Dairy Sci.2013965455546410.3168/jds.2012-649723849643
+
+[96] 96. De KruifC.G. HoltC. Casein micelle structure, functions and interactionsAdvanced Dairy Chemistry—1 Proteins FoxP.F. McSweeneyP.L.H. Kluwer Academic/Plenum PublishersNew York, NY, USA2003233276
+
+[97] 97. De KruifC.G. HuppertzT. UrbanV.S. PetukhovA.V. Casein micelles and their internal structureAdv. Colloid Interface Sci.2012171–172365210.1016/j.cis.2012.01.00222381008
+
+[98] 98. HuppertzT. GaziI. LuytenH. NieuwenhuijseH. AltingA. SchokkerE. Hydration of casein micelles and caseinates: Implications for casein micelle structureInt. Dairy J.20177411110.1016/j.idairyj.2017.03.006
+
+[99] 99. DalgleishD.G. LawA.J.R. pH-Induced dissociation of bovine casein micelles II. Mineral solubilization and its relation to casein releaseJ. Dairy Res.19895672773510.1017/S0022029900029290
+
+[100] 100. Le GraëtY. GaucheronF. pH-induced solubilization of minerals from casein micelles: Influence of casein concentration and ionic strengthJ. Dairy Res.19996621522410.1017/S0022029999003386
+
+[101] 101. HuppertzT. ChiaL.W. Milk protein coagulation under gastric conditions: A reviewInt. Dairy J.202111310488210.1016/j.idairyj.2020.104882
+
+[102] 102. WalstraP. WoutersJ.T.M. GeurtsT.J. Dairy Science and Technology2nd ed.CRC PressBoca Raton, FL, USA2005
+
+[103] 103. HeaneyR.P. WeaverC.M. Lee FitzsimmonsM. Influence of calcium load on absorption fractionJ. Bone Miner. Res.199051135113810.1002/jbmr.56500511072270776
+
+[104] 104. WeaverC.M. HeaneyR.P. ProulxW.R. HindersS. PackardP.T. Absorbability of calcium from common beansJ. Food Sci.1993581401140310.1111/j.1365-2621.1993.tb06192.x
+
+[105] 105. WeaverC.M. HeaneyR.P. NickelK.P. PackardP.I. Calcium bioavailability from high oxalate vegetables: Chinese vegetables, sweet potatoes and rhubarbJ. Food Sci.19976252452510.1111/j.1365-2621.1997.tb04421.x
+
+[106] 106. HeaneyR.P. WeaverC.M. FitzsimmonsM.L. Soybean phytate content: Effect on calcium absorptionAm. J. Clin. Nutr.19915374574710.1093/ajcn/53.3.7452000830
+
+[107] 107. HeaneyR.P. WeaverC.M. Calcium absorption from kaleAm. J. Clin. Nutr.19905165665710.1093/ajcn/51.4.6562321572
+
+[108] 108. HeaneyR.P. WeaverC.M. ReckerR.R. Calcium absorbability from spinachAm. J. Clin. Nutr.19884770770910.1093/ajcn/47.4.7073354496
+
+[109] 109. HawthorneK.M. MorrisJ. HotzeT. HirschiK.D. AbramsS.A. Biotechnologically-modified carrots: Calcium absorption relative to milkJ. Bioequivalence Bioavailab.200913438
+
+[110] 110. HeaneyR.P. DowellM.S. Absorbability of the calcium in a high-calcium mineral waterOsteoporos. Int.1994432332410.1007/BF016221917696826
+
+[111] 111. CouzyF. KastenmayerP. VigoM. CloughJ. Munoz-BoxR. BarclayD. V Calcium bioavailability from a calcium-and sulfate-rich mineral water, compared with milk, in young adult womenAm. J. Clin. Nutr.1995621239124410.1093/ajcn/62.6.12397491887
+
+[112] 112. MartinB.R. WeaverC.M. HeaneyR.P. PackardP.T. SmithD.L. Calcium absorption from three salts and CaSO4-fortified bread in premenopausal womenJ. Agric. Food Chem.2002503874387610.1021/jf020065g12059174
+
+[113] 113. HansenM. ThilstedS.H. SandströmB. KongsbakK. LarsenT. JensenM. SørensenS.S. Calcium absorption from small soft-boned fishJ. Trace Elem. Med. Biol.19981214815410.1016/S0946-672X(98)80003-59857327
+
+[114] 114. SirichakwalP.P. KamchansuppasinA. AkohC.C. KriengsinyosW. CharoenkiatkulS. O’BrienK.O. Vitamin D status is positively associated with calcium absorption among postmenopausal Thai women with low calcium intakesJ. Nutr.201514599099510.3945/jn.114.20729025809682
+
+[115] 115. Fairweather-TaitS.J. JohnsonA. EaglesJ. GanatraS. KennedyH. GurrM.I. Studies on calcium absorption from milk using a double-label stable isotope techniqueBr. J. Nutr.19896237938810.1079/BJN198900382819021
+
+[116] 116. TangA.L. WalkerK.Z. WilcoxG. StraussB.J. JohnF. Ashton, J.F.; Stojanovska, L. Calcium absorption in Australian osteopenic postmenopausal women: An acute comparative study of fortified soymilk to cows’ milkAsia Pac. J. Clin. Nutr.20101924324920460239
+
+[117] 117. ReckerR.R. BammiA. Barger-LuxM.J. HeaneyR.P. Calcium absorbability from milk products, an imitation milk, and calcium carbonateAm. J. Clin. Nutr.198847939510.1093/ajcn/47.1.933337043
+
+[118] 118. Van DokkumW. De La GueronniereV. SchaafsmaG. BouleyC. LutenJ. LatgeC. Bioavailability of calcium of fresh cheeses, enteral food and mineral water. A study with stable calcium isotopes in young adult womenBr. J. Nutr.19967589390310.1079/BJN199601958774234
+
+[119] 119. van der HeeR.M. MiretS. SlettenaarM. DuchateauG.S.M.J.E. RietveldA.G. WilkinsonJ.E. QuailP.J. BerryM.J. DaintyJ.R. TeucherB. Calcium absorption from fortified ice cream formulations compared with calcium absorption from milkJ. Am. Diet. Assoc.200910983083510.1016/j.jada.2009.02.01719394469PMC2832736
+
+[120] 120. López-HuertasE. TeucherB. BozaJ.J. Martínez-FérezA. Majsak-NewmanG. BaróL. CarreroJ.J. González-SantiagoM. FonolláJ. Fairweather-TaitS. Absorption of calcium from milks enriched with fructooligosaccharides, caseinophosphopeptides, tricalcium phosphate, and milk solidsAm. J. Clin. Nutr.20068331031610.1093/ajcn/83.2.31016469989
+
+[121] 121. GaoK.P. MitsuiT. FujikiK. IshiguroH. KondoT. Effect of lactase preparations in asymptomatic individuals with lactase deficiency-gastric digestion of lactose and breath hydrogen analysisNagoya J. Med. Sci.200265212812083287
+
+[122] 122. HuppertzT. LambersT.T. Influence of micellar calcium phosphate on in vitro gastric coagulation and digestion of milk proteins in infant formula model systemsInt. Dairy J.202010710471710.1016/j.idairyj.2020.104717
+
+[123] 123. Mulet-CaberoA.I. MackieA.R. BrodkorbA. WildeP.J. Dairy structures and physiological responses: A matter of gastric digestionCrit. Rev. Food Sci. Nutr.2020603737375210.1080/10408398.2019.170715932056441
+
+[124] 124. Van VlietT. van DijkH.J.M. ZoonP. WalstraP. Relation between syneresis and rheological properties of particle gelsColloid Polym. Sci.199126962062710.1007/BF00659917
+
+[125] 125. WalstraP. The syneresis of curdCheese: Chemistry, Physics and MicrobiologySpringerBoston, MA, USA1993
+
+[126] 126. HindmarshJ.P. SmithJ.R. CarrA.J. WatkinsonP.J. Expanding solid-state phosphorus nuclear magnetic resonance insights into Mozzarella cheese ageingJ. Food Eng.2019242314610.1016/j.jfoodeng.2018.08.017
+
+[127] 127. FlouryJ. JeansonS. AlyS. LortalS. Determination of the diffusion coefficients of small solutes in cheese: A reviewDairy Sci. Technol.20109047750810.1051/dst/2010011
+
+[128] 128. SalaünF. MiettonB. GaucheronF. Buffering capacity of dairy productsInt. Dairy J.2005159510910.1016/j.idairyj.2004.06.007
+
+[129] 129. LiuW. JinY. WildeP.J. HouY. WangY. HanJ. Mechanisms, physiology, and recent research progress of gastric emptyingCrit. Rev. Food Sci. Nutr.2021612742275510.1080/10408398.2020.178484132602780
+
+[130] 130. LuceyJ.A. Formation and physical properties of milk protein gelsJ. Dairy Sci.20028528129410.3168/jds.S0022-0302(02)74078-211913691
+
+[131] 131. BuchheimW. Influences of Different Technological Treatments of Milk on the Digestion in the Stomach. IV. Electron Microscopical Characterization of the Coagulum and of Lipolytic Processes in the Stomach (German) Milchwissenschaft198439271275
+
+[132] 132. PfeilR. Influence of Different Technological Treatments of Milk on the Digestion in the Stomach. III. Proteolysis in the Stomach (German)Milchwissenschaft198439267270
+
+[133] 133. HorstmanA.M.H. GanzevlesR.A. KudlaU. KardinaalA.F.M. van den BorneJ.J.G.C. HuppertzT. Postprandial blood amino acid concentrations in older adults after consumption of dairy products: The role of the dairy matrixInt. Dairy J.202111310489010.1016/j.idairyj.2020.104890
+
+[134] 134. De La FuenteM.A. MontesF. GuerreroG. JuárezM. Total and soluble contents of calcium, magnesium, phosphorus and zinc in yoghurtsFood Chem.20038057357810.1016/S0308-8146(02)00505-8
+
+[135] 135. PopovaA. MihaylovaD. Antinutrients in plant-based foods: A reviewOpen Biotechnol. J.201913687610.2174/1874070701913010068
+
+[136] 136. HeaneyR.P. WeaverC.M. HindersS.M. MartinB. PackardP.T. Absorbability of calcium from brassica vegetables: Broccoli, bok choy, and kaleJ. Food Sci.1993581378138010.1111/j.1365-2621.1993.tb06187.x
+
+[137] 137. HansenM. SandströmB. JensenM. SørensenS.S. Casein phosphopeptides improve zinc and calcium absorption from rice-based but not from whole-grain infant cerealJ. Pediatr. Gastroenterol. Nutr.199724566210.1097/00005176-199701000-000149093988
+
+[138] 138. HambidgeK.M. KrebsN.F. WestcottJ.L. SianL. MillerL.V. PetersonK.L. RaboyV. Absorption of calcium from tortilla meals prepared from low-phytate maizeAm. J. Clin. Nutr.200582848710.1093/ajcn/82.1.8416002804PMC1592687
+
+[139] 139. WeaverC.M. MartinB.R. EbnerJ.S. KruegerC.A. Oxalic acid decreases calcium absorption in ratsJ. Nutr.19871171903190610.1093/jn/117.11.19033681480
+
+[140] 140. HodgmanC. Handbook of Chemistry and PhysicsCRC Press, Inc.Boca Raton, FL, USA2004
+
+[141] 141. HanesD.A. WeaverC.M. HeaneyR.P. WastneyM. Absorption of calcium oxalate does not require dissociation in ratsJ. Nutr.199912917017310.1093/jn/129.1.1709915895
+
+[142] 142. HughesJ. NormanR.W. Diet and calcium stonesCan. Med. Assoc. J.19921461371310430PMC1488383
+
+[143] 143. PrenenJ.A. BoerP. Dorhout MeesE.J. Absorption kinetics of oxalate from oxalate-rich food in manAm. J. Clin. Nutr.1984401007101010.1093/ajcn/40.5.10076496379
+
+[144] 144. LoD. WangH.I. WuW.J. YangR.Y. Anti-nutrient components and their concentrations in edible parts of vegetable familiesCAB Rev.20181313010.1079/PAVSNNR201813015
+
+[145] 145. NoonanS.C. SavageG.P. Oxalate content of foods and its effect on humansAsia Pac. J. Clin. Nutr.19998647424393738
+
+[146] 146. ChaiW. LiebmanM. Effect of different cooking methods on vegetable oxalate contentJ. Agric. Food Chem.2005533027303010.1021/jf048128d15826055
+
+[147] 147. WeaverC.M. PlaweckiK.L. Dietary calcium: Adequacy of a vegetarian dietAm. J. Clin. Nutr.1994591238S1241S10.1093/ajcn/59.5.1238S8172128
+
+[148] 148. MasonA.C. WeaverC.M. KimmelS. BrownR.K. Effect of soybean phytate content on calcium bioavailability in mature and immature ratsJ. Agric. Food Chem.19934124624910.1021/jf00026a020
+
+[149] 149. IqbalT.H. LewisK.O. CooperB.T. Phytase activity in the human and rat small intestineGut1994351233123610.1136/gut.35.9.12337959229PMC1375699
+
+[150] 150. GrynspanF. CheryanM. Calcium phytate: Effect of pH and molar ratio on in vitro solubilityJ. Am. Oil Chem. Soc.1983601761176410.1007/BF02680350
+
+[151] 151. SchlemmerU. FrølichW. PrietoR.M. GrasesF. Phytate in foods and significance for humans: Food sources, intake, processing, bioavailability, protective role and analysisMol. Nutr. Food Res.200953S330S37510.1002/mnfr.20090009919774556
+
+[152] 152. WalkerA.R.P. FoxF.W. IrvingJ.T. Studies in human mineral metabolism: 1. The effect of bread rich in phytate phosphorus on the metabolism of certain mineral salts with special reference to calciumBiochem. J.19484245210.1042/bj042045216748311PMC1258738
+
+[153] 153. BellostasN. KachlickiP. SørensenJ.C. SørensenH. Glucosinolate profiling of seeds and sprouts of B. oleracea varieties used for foodSci. Hortic.200711423424210.1016/j.scienta.2007.06.015
+
+[154] 154. PakC.Y. StewartA. HaynesS.D. Effect of added citrate or malate on calcium absorption from calcium-fortified orange juiceJ. Am. Coll. Nutr.19941357557710.1080/07315724.1994.107184507706589
+
+[155] 155. JonesA.D. HoeyL. BleshJ. MillerL. GreenA. ShapiroL.F. A systematic review of the measurement of sustainable dietsAdv. Nutr.2016764166410.3945/an.115.01101527422501PMC4942861
+
+[156] 156. JohnstonJ.L. FanzoJ.C. CogillB. Understanding sustainable diets: A descriptive analysis of the determinants and processes that influence diets and their impact on health, food security, and environmental sustainabilityAdv. Nutr.2014541842910.3945/an.113.00555325022991PMC4085190
+
+[157] 157. RIVM Database-Milieubelasting-VoedingsmiddelenAvailable online: https://www.rivm.nl/voedsel-en-voeding/duurzaam-voedsel/database-milieubelasting-voedingsmiddelen(accessed on 4 October 2021)
+
+[158] 158. RIVM Dutch Food Composition Database (NEVO)Available online: https://nevo-online.rivm.nl(accessed on 4 October 2021)
+
+[159] 159. van RossumC.T.M. Buurma-RethansE.J.M. DinnissenC.S. BeukersM.H. BrantsH.A.M. DekkersA.L.M. OckéM.C. The Diet of the Dutch: Results of the Dutch National Food Consumption Survey 2012–2016National Institute for Public Health and the Environment RIVMBilthoven, The Netherlands2020

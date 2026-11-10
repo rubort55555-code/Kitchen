@@ -1,0 +1,63 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 20 из 23: References (часть 3)
+============================================================
+
+[69] 69.IshimuraE.OkunoS.YamakawaT.InabaM.NishizawaY.Serum magnesium concentration is a significant predictor of mortality in maintenance hemodialysis patientsMagnes. Res.20072023724418271493
+
+[70] 70.AlturaB.M.AlturaB.T.Magnesium and cardiovascular biology: An important link between cardiovascular risk factors and atherogenesisCell. Mol. Biol. Res.1995413473598867781
+
+[71] 71.DjurhuusM.S.SkøttP.Hother-NielsonO.KlitgaardN.A.Beck-NielsenH.Insulin increases renal magnesium excretion: A possible cause of magnesium depletion in hyperinsulinaemic statesDiabet. Med.19951266466910.1111/j.1464-5491.1995.tb00566.x7587003
+
+[72] 72.RamadassS.BasuS.SrinivasanA.R.Serum magnesium levels as an indicator of status of Diabetes Mellitus type 2Diabetes Metab. Syndr.20159424510.1016/j.dsx.2014.04.02425470649
+
+[73] 73.PerazellaM.A.Proton pump inhibitors and hypomagnesemia: A rare but serious complicationKidney Int.20138355355610.1038/ki.2012.46223538697
+
+[74] 74.Barragán-RodríguezL.Rodríguez-MoránM.Guerrero-RomeroF.Efficacy and safety of oral magnesium supplementation in the treatment of depression in the elderly with type 2 diabetes: A randomized, equivalent trialMagnes. Res.20082121822319271419
+
+[75] 75.ForbesJ.M.CooperM.E.Mechanisms of diabetic complicationsPhysiol. Rev.20139313718810.1152/physrev.00045.201123303908
+
+[76] 76.LarssonS.C.WolkA.Magnesium intake and risk of type 2 diabetes: A meta-analysisJ. Intern. Med.200726220821410.1111/j.1365-2796.2007.01840.x17645588
+
+[77] 77.KimD.J.XunP.LiuK.LoriaC.YokotaK.JacobsD.R.Jr.HeK.Magnesium intake in relation to systemic inflammation, insulin resistance, and the incidence of diabetesDiabetes Care2010332604261010.2337/dc10-099420807870PMC2992198
+
+[78] 78.DongJ.Y.XunP.HeK.QinL.Q.Magnesium intake and risk of type 2 diabetes: Meta-analysis of prospective cohort studiesDiabetes Care2011342116212210.2337/dc11-051821868780PMC3161260
+
+[79] 79.WangJ.PersuitteG.OlendzkiB.C.WedickN.M.ZhangZ.MerriamP.A.FangH.CarmodyJ.OlendzkiG.F.MaY.Dietary magnesium intake improves insulin resistance among non-diabetic individuals with metabolic syndrome participating in a dietary trialNutrients201353910391910.3390/nu510391024084051PMC3820051
+
+[80] 80.HrubyA.MeigsJ.B.O’DonnellC.J.JacquesP.F.McKeownN.M.Higher magnesium intake reduces risk of impaired glucose and insulin metabolism and progression from prediabetes to diabetes in middle-aged americansDiabetes Care20143741942710.2337/dc13-139724089547PMC3898748
+
+[81] 81.MoorenF.C.KrügerK.VölkerK.GolfS.W.WadepuhlM.KrausA.Oral magnesium supplementation reduces insulin resistance in non-diabetic subjects—A double-blind, placebo-controlled, randomized trialDiabetes Obes. Metab.20111328128410.1111/j.1463-1326.2010.01332.x21205110
+
+[82] 82.Von EhrlichB.WadepuhlM.Erhöhtes Risiko einer diabetischen Retinopathie bei niedrigem Serum-MagnesiumDiabetes Stoffwechs.200312285289
+
+[83] 83.De LeeuwI.EngelenW.de BlockC.van GallL.Long term magnesium supplementation influences favourably the natural evolution of neuropathy in Mg-depleted type 1 diabetic patients (T1DM)Mag. Res.20041710911415319143
+
+[84] 84.PhamP.C.PhamP.M.PhamP.T.PhamS.V.PhamP.A.PhamP.T.The link between lower serum magnesium and kidney function in patients with diabetes mellitus type 2 deserves a closer lookClin. Nephrol.20097137537910.5414/CNP7137519356369
+
+[85] 85.GraftonG.BunceC.M.SheppardM.C.BrownG.BaxterM.A.Effect of Mg2+ on Na(+)-dependent inositol transport. Role for Mg2+ in etiology of diabetic complicationsDiabetes199241353910.2337/diab.41.1.351727737
+
+[86] 86.HuangJ.H.LuY.F.ChengF.C.LeeJ.N.TsaiL.C.Correlation of magnesium intake with metabolic parameters, depression and physical activity in elderly type 2 diabetes patients: A cross-sectional studyNutr. J.2012114110.1186/1475-2891-11-4122695027PMC3439347
+
+[87] 87.Guerrero-RomeroF.Rascón-PachecoR.A.Rodríguez-MoránM.de la PeñaJ.E.WacherN.Hypomagnesaemia and risk for metabolic glucose disorders: A 10-year follow-up studyEur. J. Clin. Investig.20083838939610.1111/j.1365-2362.2008.01957.x18489400
+
+[88] 88.FoxC.RamsoomairD.CarterC.Magnesium: Its proven and potential clinical significanceSouth. Med. J.2001941195120110.1097/00007611-200112000-0001311811859
+
+[89] 89.KistersK.GremmlerB.HausbergM.Pulse pressure, plasma magnesium status, and antihypertensive therapyAm. J. Hypertens.200518113610.1016/j.amjhyper.2005.02.00716109333
+
+[90] 90.KistersK.TepelM.SpiekerC.ZidekW.BarenbrockM.TokmakF.KoschM.HausbergM.RahnK.H.Decreased membrane Mg2+ concentrations in a subgroup of hypertensives: Membrane model for the pathogenesis of primary hypertensionAm. J. Hypertens.1998111390139310.1016/S0895-7061(98)00169-19832186
+
+[91] 91.KoschM.HausbergM.WestermannG.KönekeJ.MatzkiesF.RahnK.H.KistersK.Alterations in calcium and magnesium content of red cell membranes in patients with primary hypertensionAm. J. Hypertens.20011425425810.1016/S0895-7061(00)01271-111281237
+
+[92] 92.KistersK.WesselsF.KüperH.TokmakF.KreftingE.R.GremmlerB.KoschM.BarenbrockM.HausbergM.Increased calcium and decreased magnesium concentrations and an increased calcium/magnesium ratio in spontaneously hypertensive rats versus Wistar-Kyoto rats: Relation to arteriosclerosisAm. J. Hypertens.200417596210.1016/j.amjhyper.2003.08.01214700514
+
+[93] 93.KistersK.WesselsF.TokmakFKreftingE.R.GremmlerB.KoschM.HausbergM.Early-onset increased calcium and decreased magnesium concentrations and an increased calcium/magnesium ratio in SHR versus WKYMagnes. Res.20041726426915726902
+
+[94] 94.NadlerJ.L.BuchananT.NatarajanR.AntonipillaiI.BergmanR.RudeR.Magnesium deficiency produces insulin resistance and increased thromboxane synthesisHypertension1993211024102910.1161/01.HYP.21.6.10248505087
+
+[95] 95.EuserA.G.CipollaM.J.Magnesium sulfate for the treatment of eclampsia: A brief reviewStroke2009401169117510.1161/STROKEAHA.108.52778819211496PMC2663594

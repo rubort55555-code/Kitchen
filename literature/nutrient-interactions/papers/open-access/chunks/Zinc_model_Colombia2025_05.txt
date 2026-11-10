@@ -1,0 +1,31 @@
+Название: Modeling Zinc Absorption in the Adult Population of Colombia: Insights for Nutritional Evaluation and Intervention Strategies
+Авторы: José Alexander Alvarez-Bustamante, Angélica María Muñoz
+Журнал: Biological Trace Element Research, 2024
+DOI: https://doi.org/10.1007/s12011-024-04180-x   PMID: 38739259   PMC: PMC11700909
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2024
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 5 из 12: Results
+============================================================
+
+## Nutrient Intake by Age and Sex
+
+Table 1 presents a summary of the median nutrient intake values, stratified by age and sex categories, which offers an insight into the dietary patterns of the study population. Our findings reflect the distribution of zinc, phytate, protein, and calcium intake within these demographic segments, as well as their respective phytate-to-zinc (P/Z) molar ratios, a marker for zinc bioavailability. We detailed the nutrient intake levels in the context of current nutritional benchmarks, with the aim of discerning the sufficiency of zinc intake among different demographic groups.
+
+Table 1Dietary zinc intake and related nutritional parametersMedian (Q1, Q3)Age group (by years)nZinc, mg/dayPhytate, mg/dayProtein, g/dayCalcium, mg/dayP/Z molar ratioMen 19–3027548.1 (5.5, 11.4)590.6 (320.4, 1040.1)59.9 (42.4, 80.5)317.3 (176.7, 555.6)7.5 (4.2, 12.9) 31–5024317.5 (5.1, 10.5)570.9 (298.9, 976.4)54.7 (40.0, 75.5)304.1 (159.3, 513.9)7.8 (4.2, 13.1) 51–708676.6 (4.6, 9.6)535.1 (287.7, 945.3)48.4 (34.3, 65.9)278.5 (134.8, 488.9)8.4 (4.4, 15.4)Total men60527.6 (5.2, 10.7)573.3 (306.8, 1002.0)56.1 (40.0, 77.0)308.0 (163.6, 530.0)7.7 (4.2, 13.3)Women 19–3030576.2 (4.2, 8.9)458.5 (250.9, 773.2)45.8 (32.4, 62.1)285.0 (144.0, 500.6)7.5 (4.1, 13.0) 31–5027955.5 (3.7, 7.7)409.5 (214.6, 713.5)40.2 (28.7, 54.0)255.1 (125.3, 461.3)7.7 (4.2, 13.4) 51–7010834.7 (3.1, 6.8)410.2 (217.1, 701.8)35.2 (23.8, 47.2)230.6 (113.1, 436.2)8.8 (4.6, 15.0)Total women69355.7 (3.8, 8.1)430.2 (229.2, 741.0)41.5 (29.4, 56.6)266.4 (130.8, 475.7)7.8 (4.2, 13.4)Total population129876.5 (4.3, 9.3)487.0 (260.1, 845.6)47.7 (33.2, 66.3)284.7 (145.2, 499.3)7.7 (4.2, 13.4)Q1 and Q3 represent the 25th percentile (25%ile) and the 75th percentile (75%ile) values, respectively
+
+## Zinc Intake Deficiency Across Demographics
+
+More than half of the Colombian population, irrespective of age, consumes zinc at levels below the EAR and the RDA as per IOM standards (Table 2). Specifically, 62.2% of men aged 19–30, 66.9% of those 31–50, and 73.8% of those 51–70 have zinc intakes below the IOM EAR. This trend is more pronounced when considering the RDA, with 73.3% of men aged 19–30, 77.8% of those 31–50, and 84.5% of those 51–70 not meeting the standard. A sex-based analysis reveals that women have a slightly lower percentage of zinc intake inadequacy compared to men for the IOM EAR, with figures being 55.7%, 66.3%, and 75.0% for the respective age groups.
+
+Table 2Comparison of population percentage below EAR and RDA values according to IOM and Colombian standards, by age groupAge group (by years)% below IOM EAR% below IOM RDA% below Colombia EAR% below Colombia RDAMen 19–3062.273.378.586.4 31–5066.977.881.488.9 51–7073.884.587.893.3Total men65.876.781.088.4Women 19–3055.767.652.867.6 31–5066.377.763.077.7 51–7075.084.171.784.1Total women63.074.259.974.2The percentages reflect the proportion of the population with zinc intake below the estimated average requirement (EAR) and recommended dietary allowance (RDA) according to the Institute of Medicine (IOM) [20] and Colombian nutritional standards [33]. No statistical tests were applied as the table presents descriptive data
+
+When assessed against Colombian standards, the data show an even greater percentage of the population with inadequate zinc intake. The percentages of men aged 19–30, 31–50, and 51–70 below the Colombian EAR are 78.5%, 81.4%, and 87.8%, respectively, with similar trends observed in women (Table 2).
+
+## Evaluation of Zinc Absorption Metrics
+
+In evaluating the zinc absorption metrics detailed in Table 3, our analysis revealed pivotal insights into the nutritional zinc status of different demographics in the Colombian population.
+
+Table 3Comparison of total absorbed zinc (TAZ) with required absorbed zinc, and the fraction of absorbed zinc (FAZ) with zinc absorption according to IOMAge group (by years)Required absorbed zinc (RAZ) according to IOM, mg/dayTAZ, mg/day, median (Q1, Q3)Zinc absorption according to IOM, %FAZ, %Median (Q1, Q3)Mean ± SDMin, maxMen 19–303.842.5 (1.9, 3.2)4131.0 (25.0, 38.2)32.0 ± 9.69.8, 69.1 31–503.842.4 (1.7, 3.1)4131.6 (25.6, 39.3)32.8 ± 10.111.2, 84.8 51–703.842.1 (1.5, 2.9)4132.9 (25.9, 39.8)33.4 ± 9.911.8, 73.4Total men3.842.4 (1.7, 3.1)4131.4 (25.4, 38.8)32.5 ± 9.99.8, 84.8Women 19–303.302.2 (1.5, 2.9)4834.6 (28.8, 41.6)35.4 ± 9.39.7, 71.3 31–503.302.0 (1.4, 2.6)4836.4 (29.8, 43.4)36.8 ± 9.58.9, 71.0 51–703.301.7 (1.1, 2.4)4837.0 (30.5, 43.7)37.4 ± 9.514.6, 63.5Total women3.302.0 (1.4, 2.7)4835.7 (29.5, 42.7)36.2 ± 9.48.9, 71.3Q1 and Q3 are the 25th and 75th percentile values, respectively. TAZ values were compared to the IOM’s RAZ using the Wilcoxon one-sample test, revealing a deficiency across all groups (p < 0.001). FAZ medians also fell below the IOM’s absorption rates for both men (41%) and women (48%), as shown by Wilcoxon one-sample test results (p < 0.001). SD, min, and max represent standard deviation, minimum, and maximum values for FAZ, respectively
+
+The TAZ, expressed as a percentage of the median intake, was consistently lower than the RAZ according to IOM across all age groups and sexes (Table 3). For example, men aged 19–30 had a median TAZ of 2.5 mg/day, which is approximately 65.1% of the IOM’s required 3.84 mg/day. This shortfall was observed across all groups, indicating a widespread deficiency when compared to the IOM standards (p < 0.001, Wilcoxon one-sample test).

@@ -1,0 +1,11 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 29: Abstract
+============================================================
+
+Zinc absorption in the small intestine is one of the main mechanisms regulating the systemic homeostasis of this essential trace element. This review summarizes the key aspects of human zinc homeostasis and distribution. In particular, current knowledge on human intestinal zinc absorption and the influence of diet-derived factors on bioaccessibility and bioavailability as well as intrinsic luminal and basolateral factors with an impact on zinc uptake are discussed. Their investigation is increasingly performed using in vitro cellular intestinal models, which are continually being refined and keep gaining importance for studying zinc uptake and transport via the human intestinal epithelium. The vast majority of these models is based on the human intestinal cell line Caco-2 in combination with other relevant components of the intestinal epithelium, such as mucin-secreting goblet cells and in vitro digestion models, and applying improved compositions of apical and basolateral media to mimic the in vivo situation as closely as possible. Particular emphasis is placed on summarizing previous applications as well as key results of these models, comparing their results to data obtained in humans, and discussing their advantages and limitations.

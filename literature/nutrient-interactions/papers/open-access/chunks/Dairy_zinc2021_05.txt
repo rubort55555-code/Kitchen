@@ -1,0 +1,15 @@
+Название: Influence of Dairy Products on Bioavailability of Zinc from Other Food Products: A Review of Complementarity at a Meal Level
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu13124253   PMID: 34959808   PMC: PMC8705257
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 5 из 12: 4. Zinc Absorption from Dairy Products
+============================================================
+
+In countries with a high dairy intake, dairy products contribute significantly to overall zinc intake. For instance, in the Netherlands, >20% of dietary zinc is supplied by dairy products [48]. Dairy consumption provides ~15% of total energy intake, so dairy products proportionally contribute more to zinc intake than to caloric intake [48]. Bovine milk contains ~3–4 mg/L of zinc, of which 95% is associated with the casein micelles and the rest is associated with citrate molecules in the aqueous phase [49].
+
+Human studies concerning the absorption of zinc from dairy products are rather scarce. Sandstrom et al. [50], investigated the absorption of zinc from 450 mL of human milk (casein-whey protein ratio, 40:60), bovine milk with 3% fat (casein-whey protein ratio, 80:20), humanized bovine milk formula (casein-whey protein ratio, 40:60) and soy formula in 54 healthy human adults. Milks and formulas were extrinsically labeled with a radioisotope (65Zn) and their absorption was determined by measuring the whole-body retention of the isotope. Even though the zinc content of the formulas was similar to, or higher, than that of human milk, zinc absorption from the formulas and bovine milk was found to be significantly lower (p < 0.05) than from human milk (Table 1) [50].
+
+The greater bioavailability of zinc from human milk compared to bovine milk was hypothesized to due to the different chemical composition of the two milks, particularly the different casein:whey protein ratio [50]. This hypothesis based on the importance of the casein:whey protein ratio was later substantiated by findings that proved that adjusting the ratio of casein to whey protein from 80:20 to 40:60 (similar to human milk) significantly (p < 0.001) increased zinc absorption from bovine milk, i.e., from 21% to 32% [51]. Moreover, Sandstrom et al. [50] reported a significantly (p < 0.05) higher zinc absorption from bovine milk compared to a soy formula (28 vs. 14%) that was high in phytic acid (200 mg/L), which is agrees with the understanding that phytates are powerful inhibitors of zinc uptake [15]. Talsma et al. [52], using a dual stable isotope technique, found lower zinc absorption from bovine milk compared to water (25.5 vs. 72.3%). This is probably because water does not contain inhibitory factors that reduce zinc absorption [53].

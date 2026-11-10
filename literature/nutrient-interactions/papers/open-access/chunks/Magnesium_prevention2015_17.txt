@@ -1,0 +1,11 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 17 из 23: 10. Conclusions
+============================================================
+
+Magnesium is an essential electrolyte for living organisms. Magnesium intoxication is rare. A magnesium deficiency is associated with a variety of diseases. In humans, a magnesium deficiency is associated with cardiovascular diseases, e.g., hypertension, pre-eclampsia, arrhythmias, heart failure. Arteriosclerosis, diabetes mellitus, and metabolic syndrome often occur in magnesium deficient humans. Furthermore, neurological symptoms are strengthened in magnesium deficient patients. Magnesium supplementation in those patients can be of benefit in most cases.

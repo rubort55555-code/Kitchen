@@ -1,0 +1,67 @@
+Название: Influence of Dairy Products on Bioavailability of Zinc from Other Food Products: A Review of Complementarity at a Meal Level
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu13124253   PMID: 34959808   PMC: PMC8705257
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 10 из 12: References
+============================================================
+
+[1] 1. HerremanL. NommensenP. PenningsB. LausM.C. Comprehensive overview of the quality of plant-And animal-sourced proteins based on the digestible indispensable amino acid scoreFood Sci. Nutr.202085379539110.1002/fsn3.180933133540PMC7590266
+
+[2] 2. WolfeR.R. BaumJ.I. StarckC. MoughanP.J. Factors contributing to the selection of dietary protein food sourcesClin. Nutr.20183713013810.1016/j.clnu.2017.11.01729233589
+
+[3] 3. WolfeR.R. RutherfurdS.M. KimI.Y. MoughanP.J. Protein quality as determined by the Digestible Indispensable Amino Acid Score: Evaluation of factors underlying the calculationNutr. Rev.20167458459910.1093/nutrit/nuw02227452871PMC6322793
+
+[4] 4. ReynaudY. BuffièreC. CohadeB. VaurisM. LiebermannK. HafnaouiN. LopezM. SouchonI. DupontD. RémondD. True ileal amino acid digestibility and digestible indispensable amino acid scores (DIAASs) of plant-based protein foodsFood Chem.202133812802010.1016/j.foodchem.2020.12802032932087
+
+[5] 5. MathaiJ.K. LiuY. SteinH.H. Values for digestible indispensable amino acid scores (DIAAS) for some dairy and plant proteins may better describe protein quality than values calculated using the concept for protein digestibility-corrected amino acid scores (PDCAAS)Br. J. Nutr.201711749049910.1017/S000711451700012528382889
+
+[6] 6. FanelliN.S. BaileyH.M. GuardiolaL.V. SteinH.H. Values for Digestible Indispensable Amino Acid Score (DIAAS) Determined in Pigs Are Greater for Milk Than for Breakfast Cereals, but DIAAS Values for Individual Ingredients Are Additive in Combined MealsJ. Nutr.202115154054710.1093/jn/nxaa39833561270
+
+[7] 7. KashyapS. ShivakumarN. VarkeyA. PrestonT. DeviS. KurpadA.V. Co-ingestion of black tea reduces the indispensable amino acid digestibility of hens’ egg in Indian adultsJ. Nutr.20191491363136810.1093/jn/nxz09131127832PMC6682489
+
+[8] 8. Cirkovic VelickovicT.D. Stanic-VucinicD.J. The role of dietary phenolic compounds in protein digestion and processing technologies to improve their antinutritive propertiesCompr. Rev. Food Sci. Food Saf.2018178210310.1111/1541-4337.1232033350063
+
+[9] 9. HurrellR.F. ReddyM. CookJ.D. Inhibition of non-haem iron absorption in man by polyphenolic-containing beveragesBr. J. Nutr.19998128929510.1017/S000711459900053710999016
+
+[10] 10. GibsonR.S. RaboyV. KingJ.C. Implications of phytate in plant-based foods for iron and zinc bioavailability, setting dietary requirements, and formulating programs and policiesNutr. Rev.20187679380410.1093/nutrit/nuy02830010865
+
+[11] 11. Castro-AlbaV. LazarteC.E. BergenståhlB. GranfeldtY. Phytate, iron, zinc, and calcium content of common Bolivian foods and their estimated mineral bioavailabilityFood Sci. Nutr.201972854286510.1002/fsn3.112731572579PMC6766547
+
+[12] 12. WelchA. FransenH. JenabM. Boutron-RuaultM. TuminoR. AgnoliC. EricsonU. JohanssonI. FerrariP. EngesetD. Variation in intakes of calcium, phosphorus, magnesium, iron and potassium in 10 countries in the European Prospective Investigation into Cancer and Nutrition studyEur. J. Clin. Nutr.200963S101S12110.1038/ejcn.2009.7719888269
+
+[13] 13. GuéguenL. PointillartA. The bioavailability of dietary calciumJ. Am. Coll. Nutr.200019119S136S10.1080/07315724.2000.1071808310759138
+
+[14] 14. MaretW. SandsteadH.H. Zinc requirements and the risks and benefits of zinc supplementationJ. Trace Elem. Med. Biol.20062031810.1016/j.jtemb.2006.01.00616632171
+
+[15] 15. MaaresM. HaaseH. A guide to human zinc absorption: General overview and recent advances of in vitro intestinal modelsNutrients20201276210.3390/nu1203076232183116PMC7146416
+
+[16] 16. MawsonC.A. FischerM.I. The occurrence of zinc in the human prostate glandCan. J. Appl. Sci.19523033633910.1139/cjms52-04314954495
+
+[17] 17. DriessenC. HirvK. KirchnerH. RinkL. Zinc regulates cytokine induction by superantigens and lipopolysaccharideImmunology1995842727751004PMC1415110
+
+[18] 18. HessS.Y. PeersonJ.M. KingJ.C. BrownK.H. Use of serum zinc concentration as an indicator of population zinc statusFood Nutr. Bull.200728S403S42910.1177/15648265070283S30317988005
+
+[19] 19. WessellsK.R. JorgensenJ.M. HessS.Y. WoodhouseL.R. PeersonJ.M. BrownK.H. Plasma zinc concentration responds rapidly to the initiation and discontinuation of short-term zinc supplementation in healthy menJ. Nutr.20101402128213310.3945/jn.110.12281220943956
+
+[20] 20. SinghA. SmoakB.L. PattersonK.Y. LeMayL.G. VeillonC. DeusterP. Biochemical indices of selected trace minerals in men: Effect of stressAm. J. Clin. Nutr.19915312613110.1093/ajcn/53.1.1261984337
+
+[21] 21. ScottB.J. BradwellA.R. Identification of the serum binding proteins for iron, zinc, cadmium, nickel, and calciumClin. Chem.19832962963310.1093/clinchem/29.4.6296831689
+
+[22] 22. PrasadA.S. HalstedJ.A. NadimiM. Syndrome of iron deficiency anemia, hepatosplenomegaly, hypogonadism, dwarfism and geophagiaAm. J. Med.19613153254610.1016/0002-9343(61)90137-114488490
+
+[23] 23. PrasadA.S. Discovery of human zinc deficiency: 50 years laterJ. Trace Elem. Med. Biol.201226666910.1016/j.jtemb.2012.04.00422664333
+
+[24] 24. SandsteadH.H. Zinc nutrition from discovery to global health impactAdv. Nutr.2012371871910.3945/an.112.00248522983851PMC3648754
+
+[25] 25. WessellsK.R. BrownK.H. Estimating the global prevalence of zinc deficiency: Results based on zinc availability in national food supplies and the prevalence of stuntingPLoS ONE20127e5056810.1371/journal.pone.005056823209782PMC3510072
+
+[26] 26. LivingstoneC. Zinc: Physiology, deficiency, and parenteral nutritionNutr. Clin. Prac.20153037138210.1177/088453361557037625681484
+
+[27] 27. NourZ.G. LotharR. Zinc in infection and inflammationNutrients2017962410.3390/nu9060624PMC549060328629136
+
+[28] 28. LonnerdalB. Dietary factors influencing zinc absorptionJ. Nutr.20001301378S1383S10.1093/jn/130.5.1378S10801947
+
+[29] 29. European Food Safety Authority Dietary Reference Values for Nutrients: Summary ReportEFSA Supporting PublicationsParma, Italy2017

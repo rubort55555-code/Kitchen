@@ -1,0 +1,15 @@
+Название: Influence of Dairy Products on Bioavailability of Zinc from Other Food Products: A Review of Complementarity at a Meal Level
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu13124253   PMID: 34959808   PMC: PMC8705257
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 12: 3. Zinc Absorption
+============================================================
+
+The absorption of zinc occurs within the small intestine and the absorbed zinc is released in portal circulation through transporters [32,33,34]. Small intestinal perfusion studies in humans have shown that the sites of maximal absorption of zinc are the duodenum [35] and the jejunum [32]. Zinc is absorbed in its ionized form, so, for the absorption of dietary zinc, it is important that zinc is released from foods and ionized during the digestion process [36]. These liberated zinc ions, however, may form complexes with ligands such as phytates, phosphates, amino acids and other organic acids [34,37,38], which affects their solubility and absorption.
+
+The absorption of zinc in the small intestine occurs by both active (saturable carrier-mediated process) or passive transport (unsaturable diffusion-mediated process) mechanisms, with the former occurring more often at a low luminal zinc concentration and the latter at high concentrations [39]. An active transport of zinc occurs through the following two carriers: ZIP proteins regulate the influx of zinc into enterocytes from the lumen, serum or intracellular compartments, whereas ZnT proteins facilitate the efflux of zinc from the enterocytes into the extracellular environment or into intracellular organelles [39]. Both ZIP and ZnT transporters are present across the entire the gastrointestinal tract, and also in the colon [40]. Zinc exported into the portal vein binds to albumin (60%), with α-macroglobulin (30%), and transferrin [21] for transport to the peripheral tissues. Zinc accumulated in the intestinal epithelial cells can be excreted through their desquamation [41,42].
+
+In general, ~33% of dietary zinc is absorbed in humans [43,44], but this depends on the state of the foods consumed. Zinc absorption from liquid foods is higher (60–70% in fasting subjects) than from solid foods [45]. The amount of zinc in a meal will, in itself, affect zinc absorption: increasing zinc intake from a meal decreases fractional zinc absorption [28,46], which is probably due to the saturation of zinc transporters [47].

@@ -1,0 +1,59 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 21 из 23: References (часть 4)
+============================================================
+
+[96] 96.JeeS.H.MillerE.R.GuallarE.SinghV.K.AppelL.J.KlagM.J.The effect of magnesium supplementation on blood pressure: A meta-analysis of randomized clinical trialsAm. J. Hypertens.20021569169610.1016/S0895-7061(02)02964-312160191
+
+[97] 97.DickinsonH.O.NicolsonD.J.CampbellF.CookJ.V.BeyerF.R.FordG.A.MasonJ.Magnesium supplementation for the management of essential hypertension in adultsCochrane Database Syst. Rev.200610.1002/14651858PMC1342990716856052
+
+[98] 98.KassL.WeekesJ.CarpenterL.Effect of magnesium supplementation on blood pressure: A meta-analysisEur. J. Clin. Nutr.20126641141810.1038/ejcn.2012.422318649
+
+[99] 99.HatzistavriL.S.SarafidisP.A.GeorgianosP.I.TziolasI.M.AroditisC.P.ZebekakisP.E.PikilidouM.I.LasaridisA.N.Oral magnesium supplementation reduces ambulatory blood pressure in patients with mild hypertensionAm. J. Hypertens.2009221070107510.1038/ajh.2009.12619617879
+
+[100] 100.KistersK.Oral magnesium supplementation improves borderline hypertensionMagnes. Res.201124172142145410.1684/mrh.2011.0273
+
+[101] 101.KassL.S.SkinnerP.PoeiraF.A pilot study on the effects of magnesium supplementation with high and low habitual dietary magnesium intake on resting and recovery from aerobic and resistance exercise and systolic blood pressureJ. Sports Sci. Med.20131214415024149738PMC3761770
+
+[102] 102.PeacockJ.M.OhiraT.PostW.SotoodehniaN.RosamondW.FolsomA.R.Serum magnesium and risk of sudden cardiac death in the Atherosclerosis Risk in Communities (ARIC) StudyAm. Heart. J.201016046447010.1016/j.ahj.2010.06.01220826254PMC2939007
+
+[103] 103.Prevention of REnal and Vascular ENd-stage Disease (PREVEND)Available online: https://www.bioshare.eu/content/prevention-renal-and-vascular-end-stage-disease(accessed on 22 September 2015)
+
+[104] 104.JoostenM.M.GansevoortR.T.MukamalK.J.van der HarstP.GeleijnseJ.M.FeskensE.J.NavisG.BakkerS.J.PREVEND Study GroupUrinary and plasma magnesium and risk of ischemic heart diseaseAm. J. Clin. Nutr.2013971299130610.3945/ajcn.112.05411423485414
+
+[105] 105.Del GobboL.C.ImamuraF.WuJ.H.de Oliveira OttoM.C.ChiuveS.E.MozaffarianD.Circulating and dietary magnesium and risk of cardiovascular disease: A systematic review and meta-analysis of prospective studiesAm. J. Clin. Nutr.20139816017310.3945/ajcn.112.05313223719551PMC3683817
+
+[106] 106.StepuraO.B.MartynowA.I.Magnesium orotate in severe congestive heart failure (MACH)Int. J. Cardiol.200913414514710.1016/j.ijcard.2009.01.04719367681
+
+[107] 107.KistersK.GremmlerB.GröberU.Natriuretic peptides, hypertension, heart insufficiency and magnesiumAdv. Tech. Biol. Med.201510.4172/2379-1764.S2-002
+
+[108] 108.KistersK.GremmlerB.GröberU.Magnesium deficiency in hypertensive heart diseaseJ Hypertens201533e27310.1097/01.hjh.0000468194.11197.50
+
+[109] 109.AdebamowoS.N.SpiegelmanD.WillettW.C.RexrodeK.M.Association between intakes of magnesium, potassium, and calcium and risk of stroke: 2 Cohorts of US women and updated meta-analysesAm. J. Clin. Nutr.20151011269127710.3945/ajcn.114.10035425948665PMC4441806
+
+[110] 110.DrewB.J.AckermanM.J.FunkM.GiblerW.B.KligfieldP.MenonV.PhilippidesG.J.RodenD.M.ZarebaWAmerican Heart Association Acute Cardiac Care Committee of the Council on Clinical Cardiologythe Council on Cardiovascular Nursingthe American College of Cardiology FoundationPrevention of torsade de pointes in hospital settings: A scientific statement from the American Heart Association and the American College of Cardiology FoundationCirculation2010121104710602014245410.1161/CIRCULATIONAHA.109.192704PMC3056123
+
+[111] 111.LiuF.ZhangX.QiH.WangJ.WangM.ZhangY.YanH.ZhuangS.Correlation of serum magnesium with cardiovascular risk factors in maintenance hemodialysis patients—A cross-sectional studyMagnes. Res.2013261001082413487110.1684/mrh.2013.0344
+
+[112] 112.SaverJ.L.StarkmanS.EcksteinM.StrattonS.J.PrattF.D.HamiltonS.ConwitR.LiebeskindD.S.SungG.KramerI.Prehospital use of magnesium sulfate as neuroprotection in acute strokeN. Engl. J. Med.201537252853610.1056/NEJMoa140882725651247PMC4920545
+
+[113] 113.WoodsK.L.FletcherS.RoffeC.HaiderY.Intravenous magnesium sulphate in suspected acute myocardial infarction: Results of the second Leicester Intravenous Magnesium Intervention Trial (LIMIT-2)Lancet19923391553155810.1016/0140-6736(92)91828-V1351547
+
+[114] 114.Fourth International Study of Infarct Survival Collaborative GroupISIS-4: A randomised factorial trial assessing early oral captopril, oral mononitrate, and intravenous magnesium sulphate in 58050 patients with suspected acute myocardial infarctionThe Lancet19953456696827661937
+
+[115] 115.Magnesium in Coronaries (MAGIC) Trial InvestigatorsEarly administration of intravenous magnesium to high-risk patients with acute myocardial infarction in the Magnesium in Coronaries (MAGIC) Trial: A randomised controlled trialLancet2002360118911961240124410.1016/s0140-6736(02)11278-5
+
+[116] 116.AltmanD.CarroliG.DuleyL.FarrellB.MoodleyJ.NeilsonJ.SmithD.Magpie Trial Collaboration Group. Do women with pre-eclampsia, and their babies, benefit from magnesium sulphate? The Magpie Trial: A randomised placebo-controlled trialLancet2002359187718901205754910.1016/s0140-6736(02)08778-0
+
+[117] 117.BelfortM.A.AnthonyJ.SaadeG.R.AllenJ.C.Jr.Nimodipine Study GroupA comparison of magnesium sulfate and nimodipine for the prevention of eclampsiaN. Engl. J. Med.200334830431110.1056/NEJMoa02118012540643
+
+[118] 118.MauskopA.AlturaB.T.CraccoR.Q.AlturaB.M.Intravenous magnesium sulfate rapidly alleviates headaches of various typesHeadache19963615416010.1046/j.1526-4610.1996.3603154.x8984087
+
+[119] 119.MauskopA.AlturaB.T.CraccoR.Q.AlturaB.M.Intravenous magnesium sulfate relieves cluster headaches in patients with low serum ionized magnesium levelsHeadache19953559760010.1111/j.1526-4610.1995.hed3510597.x8550360
+
+[120] 120.PeikertAWilimzigC.Köhne-VollandR.Prophylaxis of migraine with oral magnesium: Results from a prospective, multi-center, placebo-controlled and double-blind randomized studyCephalalgia19961625726310.1046/j.1468-2982.1996.1604257.x8792038

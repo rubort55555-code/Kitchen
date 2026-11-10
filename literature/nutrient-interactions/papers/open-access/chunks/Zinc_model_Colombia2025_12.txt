@@ -1,0 +1,35 @@
+Название: Modeling Zinc Absorption in the Adult Population of Colombia: Insights for Nutritional Evaluation and Intervention Strategies
+Авторы: José Alexander Alvarez-Bustamante, Angélica María Muñoz
+Журнал: Biological Trace Element Research, 2024
+DOI: https://doi.org/10.1007/s12011-024-04180-x   PMID: 38739259   PMC: PMC11700909
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2024
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 12 из 12: References (часть 3)
+============================================================
+
+[30] 30.HambidgeKMMillerLVWestcottJEShengXKrebsNFZinc bioavailability and homeostasisAm J Clin Nutr2010911478S1483S10.3945/ajcn.2010.28674I20200254PMC2854914Hambidge KM, Miller LV, Westcott JE, Sheng X, Krebs NF (2010) Zinc bioavailability and homeostasis. Am J Clin Nutr 91:1478S–1483S. 10.3945/ajcn.2010.28674I20200254 10.3945/ajcn.2010.28674IPMC2854914
+
+[31] 31.MillerLVKrebsNFHambidgeKMMathematical model of zinc absorption: effects of dietary calcium, protein and iron on zinc absorptionBr J Nutr201310969570010.1017/S000711451200195X22617116PMC3683099Miller LV, Krebs NF, Hambidge KM (2013) Mathematical model of zinc absorption: effects of dietary calcium, protein and iron on zinc absorption. Br J Nutr 109:695–700. 10.1017/S000711451200195X22617116 10.1017/S000711451200195XPMC3683099
+
+[32] 32.Nutrition and Food Systems DivisionFAO/INFOODS/IZiNCG Global food composition database for phytate – version 1.0 (PhyFoodComp1.0)2018Rome, ItalyFAO/IZiNCGNutrition and Food Systems Division (2018) FAO/INFOODS/IZiNCG Global food composition database for phytate – version 1.0 (PhyFoodComp1.0). FAO/IZiNCG, Rome, Italy
+
+[33] 33.Ministerio de Salud y Protección Social de Colombia (2016) Resolución 3803 de 2016 [Resolution 3803 of 2016]. https://www.minsalud.gov.co/Normatividad_Nuevo/Resolución%203803%20de%202016.pdf. Accessed 15 Feb 2023
+
+[34] 34.RossACTaylorCLYaktineALDel ValleHBInstitute of Medicine (US) Committee to Review Dietary reference intakes for vitamin D and calcium2011Washington (DC)The National Academies Press (US)21796828Ross AC, Taylor CL, Yaktine AL, Del Valle HB (2011) Institute of Medicine (US) Committee to Review Dietary reference intakes for vitamin D and calcium. The National Academies Press (US), Washington (DC)21796828
+
+[35] 35.World Health OrganizationProtein and amino acid requirements in human nutrition2002Geneva, SwitzerlandWHO technical report series, no. 93518330140World Health Organization (2002) Protein and amino acid requirements in human nutrition. WHO technical report series, no. 935, Geneva, Switzerland18330140
+
+[36] 36.LarvieDYArmahSMEstimated phytate intake is associated with improved cognitive function in the elderly, NHANES 2013–2014Antioxidants202110110410.3390/antiox1007110434356337PMC8301199Larvie DY, Armah SM (2021) Estimated phytate intake is associated with improved cognitive function in the elderly, NHANES 2013–2014. Antioxidants 10:1104. 10.3390/antiox1007110434356337 10.3390/antiox10071104PMC8301199
+
+[37] 37.Frølich W, Mejborn H, Tetens I (2011) Phytate – a natural component in plant food. E-artikel fra DTU Fødevareinstituttet, Issue 1. National Food Institute, Division of Nutrition
+
+[38] 38.Bel-SerratSStammersALWarthon-MedinaMMoranVHIglesia-AltabaIHermosoMMorenoLALoweNMEURRECA NetworkFactors that affect zinc bioavailability and losses in adult and elderly populationsNutr Rev201472533435210.1111/nure.1210524739133Bel-Serrat S, Stammers AL, Warthon-Medina M, Moran VH, Iglesia-Altaba I, Hermoso M, Moreno LA, Lowe NM, EURRECA Network (2014) Factors that affect zinc bioavailability and losses in adult and elderly populations. Nutr Rev 72(5):334–352. 10.1111/nure.1210524739133 10.1111/nure.12105
+
+[39] 39.VermaMHontecillasRTubau-JuniNAbediVBassaganya-RieraJChallenges in personalized nutrition and healthFront Nutr2018511710.3389/fnut.2018.0011730555829PMC6281760Verma M, Hontecillas R, Tubau-Juni N, Abedi V, Bassaganya-Riera J (2018) Challenges in personalized nutrition and health. Front Nutr 5:117. 10.3389/fnut.2018.0011730555829 10.3389/fnut.2018.00117PMC6281760
+
+[40] 40.KingJCShamesDMWoodhouseLRZinc homeostasis in humansJ Nutr20001305S Suppl1360S6S10.1093/jn/130.5.1360S10801944King JC, Shames DM, Woodhouse LR (2000) Zinc homeostasis in humans. J Nutr 130(5S Suppl):1360S–6S. 10.1093/jn/130.5.1360S10801944 10.1093/jn/130.5.1360S
+
+[41] 41.HuntJRBeiseigelJMJohnsonLKAdaptation in human zinc absorption as influenced by dietary zinc and bioavailabilityAm J Clin Nutr20088751336134510.1093/ajcn/87.5.133618469257Hunt JR, Beiseigel JM, Johnson LK (2008) Adaptation in human zinc absorption as influenced by dietary zinc and bioavailability. Am J Clin Nutr 87(5):1336–1345. 10.1093/ajcn/87.5.133618469257 10.1093/ajcn/87.5.1336
+
+[42] 42.Fairweather-TaitSJHarveyLJFordDDoes ageing affect zinc homeostasis and dietary requirements?Exp Gerontol200843538238810.1016/j.exger.2007.10.01518079083Fairweather-Tait SJ, Harvey LJ, Ford D (2008) Does ageing affect zinc homeostasis and dietary requirements? Exp Gerontol 43(5):382–388. 10.1016/j.exger.2007.10.01518079083 10.1016/j.exger.2007.10.015

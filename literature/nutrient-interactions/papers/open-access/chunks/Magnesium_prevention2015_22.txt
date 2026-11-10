@@ -1,0 +1,65 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 22 из 23: References (часть 5)
+============================================================
+
+[121] 121.The International Headache Society CriteriaAvailable online: http://ihs-classification.org/de/(accessed on 22 September 2015)
+
+[122] 122.GaulC.DienerH.C.DaneschU.Migravent® Study GroupImprovement of migraine symptoms with a proprietary supplement containing riboflavin, magnesium and Q10: A randomized, placebo-controlled, double-blind, multicenter trialJ. Headache Pain20151651610.1186/s10194-015-0516-625916335PMC4393401
+
+[123] 123.BigalM.E.BordiniC.A.TepperS.J.SpecialiJ.G.Intravenous magnesium sulphate in the acute treatment of migraine without aura and migraine with aura. A randomized, double-blind, placebo-controlled studyCephalalgia20022234535310.1046/j.1468-2982.2002.00364.x12110110
+
+[124] 124.ShahramiA.AssarzadeganF.HatamabadiH.R.AsgarzadehM.SarehbandiB.AsgarzadehS.Comparison of therapeutic effects of magnesium sulfate vs. dexamethasone/metoclopramide on alleviating acute migraine headacheJ. Emerg. Med.201548697610.1016/j.jemermed.2014.06.05525278139
+
+[125] 125.NogovitsinaO.R.LevitinaE.V.Diagnostic value of examination of the magnesium homeostasis in children with attention deficit syndrome with hyperactivityKlin. Lab. Diagn.20055171915986792
+
+[126] 126.Starobrat-HermelinB.KozielecT.The effects of magnesium physiological supplementation on hyperactivity in children with attention deficit hyperactivity disorder (ADHD). Positive response to magnesium oral loading testMagnes. Res.1997101491569368236
+
+[127] 127.Mousain-BoscM.RocheM.RapinJ.BaliJ.P.Magnesium VitB6 intake reduces central nervous system hyperexcitability in childrenJ. Am. Coll Nutr.200423545S548S10.1080/07315724.2004.1071940015466962
+
+[128] 128.Mousain-BoscM.RocheM.PolgeA.Pradal-PratD.RapinJ.BaliJ.P.Improvement of neurobehavioral disorders in children supplemented with magnesium-vitamin B6. I. Attention deficit hyperactivity disordersMagnes. Res.200619465216846100
+
+[129] 129.Mousain-BoscM.RocheM.PolgeA.Pradal-PratD.RapinJ.BaliJ.P.Improvement of neurobehavioral disorders in children supplemented with magnesium-vitamin B6. II. Pervasive developmental disorder-autismMagnes. Res.200619536216846101
+
+[130] 130.NogovitsinaO.R.LevitinaE.V.Effect of MAGNE-B6 on the clinical and biochemical manifestations of the syndrome of attention deficit and hyperactivity in childrenEksp. Klin. Farmakol.200669747716579066
+
+[131] 131.BardgettM.E.SchultheisP.J.McGillD.L.RichmondR.E.WaggeJ.R.Magnesium deficiency impairs fear conditioning in miceBrain Res.2005103810010610.1016/j.brainres.2005.01.02015748878
+
+[132] 132.BarbagalloM.BelvedereM.Di BellaG.DominguezL.J.Altered ionized magnesium levels in mild-to-moderate Alzheimer’s diseaseMagnes. Res.201124S115S1212195161710.1684/mrh.2011.0287
+
+[133] 133.CherbuinN.KumarR.SachdevP.S.AnsteyK.J.Dietary Mineral Intake and Risk of Mild Cognitive Impairment: The PATH through Life ProjectFront. Aging Neurosci.201410.3389/fnagi.2014.0000424550825PMC3912433
+
+[134] 134.AndrásiE.IgazS.MolnárZ.MakóS.Disturbances of magnesium concentrations in various brain areas in Alzheimer’s diseaseMagnes. Res.20001318919611008926
+
+[135] 135.LiW.YuJ.LiuY.HuangX.AbumariaN.ZhuY.HuangX.XiongW.RenC.LiuX.G.Elevation of brain magnesium prevents and reverses cognitive deficits and synaptic loss in Alzheimer’s disease mouse modelJ. Neurosci.2013338423844110.1523/JNEUROSCI.4610-12.201323658180PMC6619649
+
+[136] 136.XuZ.P.LiL.BaoJ.WangZ.H.ZengJ.LiuE.J.LiX.G.HuangR.X.GaoD.LiM.Z.Magnesium protects cognitive functions and synaptic plasticity in streptozotocin-induced sporadic Alzheimer’s modelPLoS ONE20149e10864510.1371/journal.pone.010864525268773PMC4182554
+
+[137] 137.SkobeloffE.M.SpiveyW.H.McNamaraR.M.GreensponL.Intravenous magnesium sulfate for the treatment of acute asthma in the emergency departmentJAMA19892621210121310.1001/jama.1989.034300900720362761061
+
+[138] 138.KokotajloS.DegnanL.MeyersR.SiuA.RobinsonC.Use of intravenous magnesium sulfate for the treatment of an acute asthma exacerbation in pediatric patientsJ. Pediatr. Pharmacol. Ther.201419919710.5863/1551-6776-19.2.9125024668PMC4093670
+
+[139] 139.CheukD.K.ChauT.C.LeeS.L.A meta-analysis on intravenous magnesium sulphate for treating acute asthmaArch. Dis. Child.200590747710.1136/adc.2004.05000515613519PMC1720072
+
+[140] 140.BlitzM.BlitzS.BeaseR.DinerB.M.HughesR.KnoppJ.A.RoweB.H.Inhaled magnesium sulfate in the treatment of acute asthmaCochrane Database Syst. Rev.20053CD0038981603491410.1002/14651858.CD003898.pub3
+
+[141] 141.TarletonE.K.LittenbergB.Magnesium intake and depression in adultsJ. Am. Board Fam. Med.20152824925610.3122/jabfm.2015.02.14017625748766
+
+[142] 142.BenassiL.BarlettaF.P.BaronciniL.BertaniD.FilippiniF.BeskiL.NaniA.TesauriP.TridentiG.Effectiveness of magnesium pidolate in the prophylactic treatment of primary dysmenorrheaClin. Exp. Obstet. Gynecol.1992191761791451282
+
+[143] 143.AlraekT.LeeM.S.ChoiT.Y.CaoH.LiuJ.Complementary and alternative medicine for patients with chronic fatigue syndrome: A systematic reviewBMC Complement. Altern. Med.201110.1186/1472-6882-11-8721982120PMC3201900
+
+[144] 144.BagisS.KarabiberM.AsI.TamerL.ErdoganC.AtalayA.Is magnesium citrate treatment effective on pain, clinical parameters and functional status in patients with fibromyalgia?Rheumatol. Int.20133316717210.1007/s00296-011-2334-822271372
+
+[145] 145.ChoiY.H.MillerJ.M.TuckerK.L.HuH.ParkS.K.Antioxidant vitamins and magnesium and the risk of hearing loss in the US general populationAm. J. Clin. Nutr.20149914815510.3945/ajcn.113.06843724196403PMC4441318
+
+[146] 146.RileyJ.M.KimH.AverchT.D.KimH.J.Effect of magnesium on calcium and oxalate ion bindingJ. Endourol.2013271487149210.1089/end.2013.017324127630PMC3883082
+
+[147] 147.EbrahimiE.Khayati MotlaghS.NematiS.TavakoliZ.Effects of magnesium and vitamin B6 on the severity of premenstrual syndrome symptomsJ. Caring Sci.201211831892527669410.5681/jcs.2012.026PMC4161081
+
+[148] 148.CevetteM.J.BarrsD.M.PatelA.ConroyK.P.SydlowskiS.NobleB.N.NelsonG.A.StepanekJ.Phase 2 study examining magnesium-dependent tinnitusInt. Tinnitus J.20111616817322249877
