@@ -120,7 +120,10 @@ export function autoPlan(inp: AutoInput): AutoResult {
   const needOf = (c: Cand, slot: Slot) => { const k = c.r.id + slot; let n = needMemo.get(k); if (!n) { n = garnishNeed(c.r, slot); needMemo.set(k, n); } return n; };
   // Новому блюду гарнир ставим всегда, когда он возможен (к блюду с крахмалом внутри — овощной); стоящему — только если гарнир обязателен или по умолчанию
   const wantGarnish = (s: Spot) => !!s.main && (s.gFree || !s.fixed) && (s.fixed ? ["required", "default"].includes(needOf(s.main, s.slot)) : needOf(s.main, s.slot) !== "none");
-  const randomGarnish = (s: Spot) => { const o = s.main ? optionsFor(s.main) : []; return o.length ? pickRand(o) : null; };
+  // Один гарнир не больше трёх раз за период — жёсткое правило, пока есть из чего выбрать
+  const gCount = (id: string, except?: Spot) => spots.reduce((n, x) => n + (x !== except && x.garnish?.r.id === id ? 1 : 0), 0);
+  const pickGarnish = (s: Spot) => { const o = s.main ? optionsFor(s.main) : []; const free = o.filter((g) => gCount(g.r.id, s) < 3); const l = free.length ? free : o; return l.length ? pickRand(l) : null; };
+  const randomGarnish = pickGarnish;
 
   // Нормы человека по микроэлементам: только те, по которым в рецептах вообще есть данные
   const anyData = new Set<string>();
@@ -222,7 +225,7 @@ export function autoPlan(inp: AutoInput): AutoResult {
         const gl = garnSpots();
         if (!gl.length) continue;
         const s = pickRand(gl), old = s.garnish;
-        setGarnish(s, pickRand(optionsFor(s.main!)));
+        setGarnish(s, pickGarnish(s));
         const k = evaluate();
         if (less(k, cur) || same(k, cur)) cur = k; else setGarnish(s, old ?? null);
       } else if (sideOptional.length && (!movable.length || r < 0.45)) {

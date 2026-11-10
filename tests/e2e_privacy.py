@@ -48,7 +48,7 @@ with sync_playwright() as p:
         pg = ctx.new_page(); errs = []; pg.on("pageerror", lambda e: errs.append(str(e)))
         pg.goto(URL); pg.wait_for_selector("h1"); pg.evaluate(SEED, {**BASE, "tipsSeen": ["intro", "home-gear"], "consent": {k: {"version": V, "at": 1} for k in ("policy", "health", "off")}}); pg.reload()
         pg.wait_for_selector("text=Что нового в «Кухне»")
-        ok(S + "обновление: окно «Что нового» с пунктами", "Насколько меню подходит" in pg.inner_text(".sheet") and "Что нового" in pg.inner_text(".sheet"))
+        ok(S + "обновление: окно «Что нового» с пунктами", "Что нового" in pg.inner_text(".sheet") and pg.query_selector(".sheet li") is not None and "Понятно" in pg.inner_text(".sheet"))
         pg.click('.sheet .btn:has-text("Понятно")'); pg.wait_for_selector(".sheet", state="detached")
         pg.reload(); pg.wait_for_selector("h1"); pg.wait_for_timeout(700)
         ok(S + "второй запуск: окно не повторяется", pg.query_selector(".sheet") is None)
