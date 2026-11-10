@@ -8,7 +8,7 @@ import { MEAL_SLOTS, type Meal, type MealSlot } from "../lib/types";
 import { micros, planFor, type BodyProfile } from "../lib/nutrition";
 import { NUTRIENTS, recipeNutrition, type NutrientKey } from "../lib/recipeNutrition";
 import { lookupOff, nameFor, type OffProduct } from "../lib/off";
-import { DRINKS, SOURCES, caffeineLimit, caffeineOf, interactionHints, type Drink } from "../lib/interactions";
+import { DRINKS, SOURCES, EVIDENCE, hintLevel, sourceLevel, caffeineLimit, caffeineOf, interactionHints, type Drink } from "../lib/interactions";
 import { LEVEL_TEXT, ironDay, ironHints } from "../lib/iron";
 import { CA_TEXT, calciumDay, mineralHints } from "../lib/minerals";
 import { FAT_TEXT, fatSolubleDay, fatSolubleHints } from "../lib/fatsoluble";
@@ -233,7 +233,8 @@ function CombosBlock({ meals, limit, recipes }: { meals: Meal[]; limit: number; 
       {hints.map((h) => (
         <details key={h.id} className="hint" open={h.id.startsWith("caf-limit") || h.id.startsWith("caf-single")}>
           <summary>{h.text}</summary>
-          <ul className="small muted">{h.src.map((id) => <li key={id}>{SOURCES[id].cite}</li>)}</ul>
+          <p className="small muted" style={{ margin: "4px 0" }}>Надёжность: {hintLevel(h.src)} (A — крупные испытания и регуляторные заключения, D — только механизм)</p>
+          <ul className="small muted">{h.src.map((id) => <li key={id}>[{sourceLevel(id)}{EVIDENCE[id]?.n ? `, n = ${EVIDENCE[id].n}` : ""}] {SOURCES[id].cite}</li>)}</ul>
         </details>
       ))}
       {!hints.length && <p className="muted small">Сочетаний, о которых стоит предупредить, пока нет.</p>}

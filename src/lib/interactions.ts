@@ -27,8 +27,48 @@ export const SOURCES: Record<string, Source> = {
   reboul2013: { id: "reboul2013", cite: "Reboul E. Absorption of vitamin A and carotenoids by the enterocyte: focus on transport proteins. Nutrients, 2013 (CC BY 3.0)" },
   bohn2017: { id: "bohn2017", cite: "Bohn T. и др. Host-related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans. Mol Nutr Food Res, 2017 (CC BY 4.0)" },
   moran2017: { id: "moran2017", cite: "Moran N.E. и др. Closer to clarity on the effect of lipid consumption on fat-soluble vitamin and carotenoid absorption. Am J Clin Nutr, 2017 (комментарий к работе White W.S. и др.; только реферат)" },
+  deng2024: { id: "deng2024", cite: "Deng J. и др. Efficacy of vitamin C with Fe supplementation in patients with iron deficiency anemia: a systematic review and meta-analysis. Blood Vessels Thromb Hemost, 2024 (10 РКИ, n = 1782: гемоглобин +0,14 г/дл, клинически малозначимо)" },
+  nyakundi2026: { id: "nyakundi2026", cite: "Nyakundi P.N. и др. Does consuming ascorbate-rich fruits and fruit juices with meals improve iron bioavailability? Am J Clin Nutr, 2026 (15 РКИ, n = 1381: ферритин и гемоглобин растут, на всасывание железа эффекта почти нет)" },
+  loganathan2023: { id: "loganathan2023", cite: "Loganathan V. и др. Treatment efficacy of vitamin C or ascorbate given as co-intervention with iron for anemia: a systematic review and meta-analysis. Clin Nutr ESPEN, 2023 (n = 905: значимой разницы нет, качество доказательств очень низкое)" },
   efsa2015: { id: "efsa2015", cite: "EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific opinion on the safety of caffeine. EFSA Journal, 2015" },
 };
+
+/**
+ * Вес доказательств: чем крупнее и строже исследование, тем больше ему доверяем.
+ * A — регуляторное заключение или мета-анализ/РКИ с n ≥ 1000; B — РКИ/мета-анализ меньшего размера или большое наблюдательное (n ≥ 10 000);
+ * C — небольшие контролируемые исследования (n < 100), обзоры, мнения; D — механизм (клетки, модели), баз данных.
+ */
+export type Design = "regulatory" | "meta-rct" | "rct" | "cohort" | "small-trial" | "review" | "mechanism";
+export type Level = "A" | "B" | "C" | "D";
+export interface Evidence { design: Design; n?: number }
+export function levelOf(e: Evidence): Level {
+  const n = e.n ?? 0;
+  switch (e.design) {
+    case "regulatory": return "A";
+    case "meta-rct": case "rct": return n >= 1000 ? "A" : n >= 100 ? "B" : "C";
+    case "cohort": return n >= 10000 ? "B" : "C";
+    case "small-trial": case "review": return "C";
+    default: return "D";
+  }
+}
+export const EVIDENCE: Record<string, Evidence> = {
+  heffernan2017: { design: "meta-rct", n: 315 }, // изотопные приёмы пищи; долгие испытания n = 118
+  deng2024: { design: "meta-rct", n: 1782 },
+  nyakundi2026: { design: "meta-rct", n: 1381 },
+  loganathan2023: { design: "meta-rct", n: 905 },
+  milman2020: { design: "review" }, chondrou2024: { design: "review" }, piskin2022: { design: "review" },
+  prentice2017: { design: "review" }, weaver2025: { design: "review" }, shkembi2021ca: { design: "review" }, shkembi2021zn: { design: "review" },
+  groeber2015: { design: "review" }, bohn2017: { design: "review" }, moran2017: { design: "review" },
+  white2017: { design: "small-trial", n: 29 }, yao2023: { design: "small-trial" },
+  massey1984: { design: "small-trial" }, bergman1990: { design: "small-trial" }, kynast1994: { design: "small-trial" },
+  decarli2018: { design: "cohort" }, dahdouh2019: { design: "mechanism" }, maares2020: { design: "mechanism" },
+  reboul2017e: { design: "mechanism" }, reboul2019: { design: "mechanism" }, reboul2013: { design: "mechanism" },
+  efsa2015: { design: "regulatory" },
+};
+export const sourceLevel = (id: string): Level => levelOf(EVIDENCE[id] ?? { design: "mechanism" });
+const RANK: Record<Level, number> = { A: 0, B: 1, C: 2, D: 3 };
+/** Самый сильный уровень среди источников подсказки. */
+export const hintLevel = (src: string[]): Level => src.map(sourceLevel).sort((a, b) => RANK[a] - RANK[b])[0] ?? "D";
 
 /** Типичное содержание кофеина в порции напитка (зависит от крепости и способа приготовления; ориентир). */
 export interface Drink { key: string; name: string; ml: number; caffeine: number; kcal: number }
@@ -59,6 +99,6 @@ export function interactionHints(meals: Meal[], opts: { caffeineLimit: number } 
   if (total > opts.caffeineLimit) out.push({ id: "caf-limit", text: `Кофеина ${Math.round(total)} мг — выше суточного предела ${opts.caffeineLimit} мг. Предел: взрослым 400 мг, при беременности и кормлении 200 мг.`, src: ["efsa2015"] });
   const single = Math.max(0, ...meals.map((m) => m.caffeine || 0));
   if (single > CAFFEINE_SINGLE) out.push({ id: "caf-single", text: `В одной записи ${Math.round(single)} мг кофеина — больше 200 мг за раз, чего лучше не превышать.`, src: ["efsa2015"] });
-  if (total >= 300) out.push({ id: "caf-mineral", text: "Кофеин на несколько часов увеличивает выведение магния, кальция и натрия с мочой. Эффект небольшой (в исследованиях — единицы миллиграммов в сутки), но при большом количестве кофе следите за магнием и кальцием в рационе.", src: ["massey1984", "bergman1990", "kynast1994"] });
+  if (total >= 400) out.push({ id: "caf-mineral", text: "Кофеин на несколько часов увеличивает выведение магния, кальция и натрия с мочой. Эффект небольшой (в исследованиях — единицы миллиграммов в сутки), в крупных работах при привычном количестве кофе вреда для костей не видно; внимательнее быть тем, у кого мало кальция в рационе.", src: ["massey1984", "bergman1990", "kynast1994"] });
   return out;
 }

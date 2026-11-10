@@ -25,7 +25,9 @@ ok("обычная еда без особенностей — без подск�
 // Кофеин
 const many = [drink("coffee", 2, "завтрак"), drink("coffee", 2, "обед")];
 const h = interactionHints(many);
-ok("380 мг кофеина — подсказка про магний и кальций, предела нет", ids(h).includes("caf-mineral") && !ids(h).includes("caf-limit"), ids(h));
+ok("380 мг кофеина — ни предела, ни подсказки про минералы (порог 400)", !ids(h).includes("caf-mineral") && !ids(h).includes("caf-limit"), ids(h));
+const h5 = interactionHints([drink("coffee", 2, "завтрак"), drink("coffee", 3, "обед")]);
+ok("475 мг — и предел, и подсказка про минералы", ids(h5).includes("caf-mineral") && ids(h5).includes("caf-limit"), ids(h5));
 ok("500 мг — выше предела 400", ids(interactionHints([drink("coffee", 5)])).includes("caf-limit"));
 ok("250 мг при беременности (предел 200) — выше предела", ids(interactionHints([drink("coffee", 2.5)], { caffeineLimit: 200 })).includes("caf-limit"));
 ok("250 мг у взрослого — предела нет", !ids(interactionHints([drink("coffee", 2.5)], { caffeineLimit: 400 })).includes("caf-limit"));
@@ -39,3 +41,18 @@ ok("у каждой подсказки есть источники из спис
 
 console.log(`interactions: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);
+
+// ── Вес доказательств ──
+import { levelOf, sourceLevel, hintLevel, EVIDENCE, SOURCES as SRC } from "../src/lib/interactions";
+{
+  const ok = (c: boolean, m: string) => { if (!c) { console.error("FAIL", m); process.exit(1); } };
+  ok(levelOf({ design: "meta-rct", n: 1782 }) === "A", "meta n>=1000 → A");
+  ok(levelOf({ design: "rct", n: 300 }) === "B", "rct n>=100 → B");
+  ok(levelOf({ design: "rct", n: 30 }) === "C", "rct малый → C");
+  ok(levelOf({ design: "cohort", n: 12000 }) === "B" && levelOf({ design: "cohort", n: 500 }) === "C", "cohort");
+  ok(levelOf({ design: "mechanism" }) === "D", "механизм → D");
+  ok(sourceLevel("efsa2015") === "A", "EFSA → A");
+  ok(hintLevel(["milman2020", "deng2024"]) === "A", "берём сильнейший");
+  for (const id of Object.keys(SRC)) ok(id in EVIDENCE, `у источника ${id} нет оценки доказательств`);
+  console.log("evidence ok");
+}
