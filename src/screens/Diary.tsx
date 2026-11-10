@@ -179,7 +179,9 @@ function AssessCard({ date, who, plan, body, recipes }: { recipes: import("../li
   const dates = useMemo(() => (period === "day" ? [date] : Array.from({ length: 7 }, (_, i) => addDays(date, -i))), [period, date]);
   const a = useMemo(() => {
     const list = dates.flatMap((d) => mealsOf(meals, d, who));
-    const water = dates.reduce((s, d) => s + waterOf(d, settings, who), 0);
+    // Среднее считается по дням с записями о еде — воду берём за те же дни, иначе она делится не на то число дней
+    const withFood = new Set(list.map((m) => m.date));
+    const water = dates.reduce((s, d) => s + (withFood.has(d) ? waterOf(d, settings, who) : 0), 0);
     return assess(list, plan, body, water, recipes);
   }, [dates, meals, settings, who, plan, body, recipes]);
   const R = ({ r }: { r: Row }) => (

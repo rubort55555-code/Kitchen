@@ -62,10 +62,11 @@ export function stopTimer(id: number) {
 }
 export function clearTimers() { list = []; stopAlarm(); emit(); }
 
-/** Находит в тексте шага время: «15 минут», «1 час», «20–25 минут» (берём большее), «30 секунд». */
+/** Находит в тексте шага время: «15 минут», «1 час», «20–25 минут» (берём большее), «30 секунд», сокращения «10 мин», «1 ч» (но не «1 ч. л.»).
+ *  «\b» у русских букв не работает, поэтому граница слова — «дальше не буква». */
 export function findTimes(step: string): { label: string; seconds: number }[] {
   const out: { label: string; seconds: number }[] = [];
-  const re = /(\d+(?:[.,]\d+)?)(?:\s*[-–]\s*(\d+(?:[.,]\d+)?))?\s*(секунд[а-я]*|сек\b|минут[а-я]*|мин\b|час[а-я]*|ч\b)/gi;
+  const re = /(\d+(?:[.,]\d+)?)(?:\s*[-–]\s*(\d+(?:[.,]\d+)?))?\s*(секунд[а-яё]*|сек(?![а-яё])|минут[а-яё]*|мин(?![а-яё])|час[а-яё]*|ч(?![а-яё]|\.?\s*л))/gi;
   let m: RegExpExecArray | null;
   while ((m = re.exec(step))) {
     const v = Number((m[2] ?? m[1]).replace(",", "."));

@@ -65,7 +65,7 @@ function roleOf(r: Recipe): Role {
   if (kind === "салат" || kind === "закуска" || kind === "соус" || kind === "напиток" || kind === "десерт" || kind === "гарнир" || kind === "выпечка") return BREAKFAST_RE.test(k) && kind === "выпечка" ? "завтрак" : "другое";
   // Рецепты без вида (от Claude, из старого приложения)
   if (BREAKFAST_RE.test(k)) return "завтрак";
-  if (/суп|борщ|щи\b|солянк|уха\b/.test(k)) return "суп";
+  if (/суп|борщ|(^| )щи(?![а-яё])|солянк|(^| )уха(?![а-яё])/.test(k)) return "суп";
   if (/салат|закуск|соус|компот|морс|напиток/.test(k)) return "другое";
   return "основное";
 }
@@ -208,7 +208,7 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
   // Десерт к ужину: через день, до 3 раз в неделю (можно выключить кнопкой «Десерт»)
   if (st.settings.planDessert !== false) {
     const sweets = st.recipes.filter((r) => norm(r.kind || "") === "десерт" && checkRecipe(r, compiled, who).verdict === "ok")
-      .map((r) => { const x = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog); return { r, sc: x.urgent * 30 + x.percent * 0.4 + (r.fav ? 15 : 0) + (cuis && sameCuis(r) ? 40 : 0) + (r.rating ? (r.rating - 3) * 8 : 0) + (/торт|пирож|печень|мусс|желе|мороже|пудинг|шоколад|десерт|суфле|крем|панна|чизкейк|кекс|маффин|трюфел|конфет|зефир|пастил|безе/.test(norm(r.name)) ? 25 : 0) - (/макарон|вермишел|тыкв|рис\b|каш/.test(norm(r.name)) ? 30 : 0) }; })
+      .map((r) => { const x = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog); return { r, sc: x.urgent * 30 + x.percent * 0.4 + (r.fav ? 15 : 0) + (cuis && sameCuis(r) ? 40 : 0) + (r.rating ? (r.rating - 3) * 8 : 0) + (/торт|пирож|печень|мусс|желе|мороже|пудинг|шоколад|десерт|суфле|крем|панна|чизкейк|кекс|маффин|трюфел|конфет|зефир|пастил|безе/.test(norm(r.name)) ? 25 : 0) - (/макарон|вермишел|тыкв|рис(?![а-яё])|каш/.test(norm(r.name)) ? 30 : 0) }; })
       .sort((a, b) => b.sc - a.sc);
     const inWeek = (e: PlanEntry) => e.date >= start && e.date <= addDays(start, 6);
     const usedSweet = new Set(plan.map((e) => e.sweet?.id).filter(Boolean) as string[]);

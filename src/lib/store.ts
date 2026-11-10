@@ -159,7 +159,16 @@ export function updateProduct(id: string, patch: Partial<Product>) {
   if (!old) return;
   const it = { ...old, ...patch };
   const changes: db.Change[] = [{ store: "products", put: [it] }];
-  const log = [...state.log];
+  let log = [...state.log];
+  // Исправили цену — исправляем и запись «Куплено», иначе в статистике «съедено» окажется больше, чем «куплено»
+  if (patch.price !== undefined && patch.price !== old.price) {
+    const fixed = log.filter((e) => e.productId === id && e.reason === "bought").map((e) => ({ ...e, rub: Math.round(it.price * 100) / 100 }));
+    if (fixed.length) {
+      const byId = new Map(fixed.map((e) => [e.id, e]));
+      log = log.map((e) => byId.get(e.id) || e);
+      changes.push({ store: "log", put: fixed });
+    }
+  }
   // Исправили количество вручную — записываем в журнал как «Исправлено» (в статистику потерь не идёт).
   if (patch.qty !== undefined && patch.qty !== old.qty) {
     const e = logEntry(it, "adjust", it.qty - old.qty, 0);
@@ -220,7 +229,8 @@ export function applyCook(takes: { productId: string; take: number }[], dish: st
     const take = Math.min(t.take, it.qty);
     const full = it.initialQty ? (it.price * take) / it.initialQty : 0;
     logs.push(logEntry(it, "cooked", take, full * (1 - leftFrac), dish));
-    before.push(it);
+    // Продукт может идти в две строки рецепта (масло в тесто и на жарку): для отмены помним его только в исходном виде
+    if (!before.some((b) => b.id === it.id)) before.push(it);
     const left = round(it.qty - take);
     if (left <= 0) {
       products = products.filter((x) => x.id !== it.id);

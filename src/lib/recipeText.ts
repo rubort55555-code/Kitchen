@@ -83,14 +83,14 @@ const looksLikeStep = (l: string) => l.length > 45 || /[.!]\s*$/.test(l) && l.sp
 
 function guessKind(name: string, tags = ""): string {
   const s = norm(name + " " + tags);
-  if (/суп|борщ|щи\b|солянк|уха|бульон|харчо|рассольник/.test(s)) return "суп";
+  if (/суп|борщ|(^| )щи(?![а-яё])|солянк|уха|бульон|харчо|рассольник/.test(s)) return "суп";
   if (/салат|винегрет|оливье/.test(s)) return "салат";
   if (/пирог|булочк|блин|оладь|печень|кекс|пицц|пирожк|хлеб|ватрушк|слойк|лепёшк|лепешк/.test(s)) return "выпечка";
   if (/торт|десерт|пудинг|мусс|желе|кисель|мороженое|сырники|запеканк\S* творож/.test(s)) return "десерт";
   if (/каша|омлет|яичниц|завтрак|гренк|сырник|мюсли/.test(s)) return "завтрак";
   if (/соус|подлив|заправк/.test(s)) return "соус";
   if (/компот|морс|лимонад|смузи|коктейл|чай|какао/.test(s)) return "напиток";
-  if (/гарнир|пюре|рис\b|гречк|макарон|картофел/.test(s) && !/с (мясом|курицей|фаршем)/.test(s)) return "гарнир";
+  if (/гарнир|пюре|рис(?![а-яё])|гречк|макарон|картофел/.test(s) && !/с (мясом|курицей|фаршем)/.test(s)) return "гарнир";
   if (/закуск|бутерброд|канапе|рулет|паштет/.test(s)) return "закуска";
   return "основное";
 }
@@ -108,9 +108,9 @@ export function parseRecipeText(text: string, custom: CatalogItem[] = []): Recip
   const first = nonEmpty[0] || "";
   if (first && !H_ING.test(first) && !H_STEP.test(first) && first.length <= 90 && !LEAD.test(first)) name = first.replace(/^[#*\s"«]+|[#*\s"»:.]+$/g, "");
 
-  const tm = text.match(/(?:время|готовить|приготовление|готовка|всего)[^\d\n]{0,25}(\d+(?:[.,]\d+)?)\s*(мин|час|ч\b)/i) || text.match(/\b(\d+(?:[.,]\d+)?)\s*(минут\S*|мин\b|час\S*)/i);
+  const tm = text.match(/(?:время|готовить|приготовление|готовка|всего)[^\d\n]{0,25}(\d+(?:[.,]\d+)?)\s*(мин|час|ч(?![а-яё]))/i) || text.match(/\b(\d+(?:[.,]\d+)?)\s*(минут\S*|мин(?![а-яё])|час\S*)/i);
   if (tm) { const v = Number(tm[1].replace(",", ".")); minutes = Math.round(/^ч/i.test(tm[2]) ? v * 60 : v); if (minutes > 600 || minutes < 1) minutes = undefined; }
-  const sm = text.match(/порци\S*\s*[:\-]\s*(\d+)/i) || text.match(/(\d+)\s*(?:порци\S*|персон\S*|человек\S*|чел\b)/i) || text.match(/(?:порци\S*|на)\s*[:\-]?\s*(\d+)\s*(?:порци|персон|человек|чел)/i);
+  const sm = text.match(/порци\S*\s*[:\-]\s*(\d+)/i) || text.match(/(\d+)\s*(?:порци\S*|персон\S*|человек\S*|чел(?![а-яё]))/i) || text.match(/(?:порци\S*|на)\s*[:\-]?\s*(\d+)\s*(?:порци|персон|человек|чел)/i);
   if (sm) { const v = Number(sm[1]); if (v >= 1 && v <= 24) servings = v; }
 
   let mode: "none" | "ing" | "step" = "none";

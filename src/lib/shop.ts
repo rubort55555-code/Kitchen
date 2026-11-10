@@ -93,7 +93,15 @@ export function estimate(list: ShopItem[] = shopList()): { sum: number; known: n
 export function belowMin(min: MinStock[] = getState().settings.minStock || []): { name: string; amount: string }[] {
   const out: { name: string; amount: string }[] = [];
   for (const m of min) {
-    const have = haveQty(m.name, m.unit);
+    const st = getState();
+    const k = keyOf(m.name, st.settings.customCatalog);
+    // Считаем всё, что закрывает этот продукт: «Яйца» — это и «Яйца куриные»
+    let have = haveQty(m.name, m.unit);
+    for (const p of st.products) {
+      if (norm(p.name) === norm(m.name) || !covers(p.name, k, st.settings.customCatalog)) continue;
+      const c = conv(p.qty, p.unit, m.unit, p.name);
+      if (c !== null) have += c;
+    }
     if (have < m.qty) out.push({ name: m.name, amount: qtyText(m.qty - have, m.unit) });
   }
   return out;

@@ -34,7 +34,7 @@ export function periodStart(p: Period, now = new Date()): number {
   else { d.setMonth(0); d.setDate(1); }
   return d.getTime();
 }
-export const periodDays = (p: Period, now = new Date()) => Math.max(1, Math.round((now.getTime() - periodStart(p, now)) / 86400000) + 1);
+export const periodDays = (p: Period, now = new Date()) => Math.max(1, Math.round((new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime() - periodStart(p, now)) / 86400000) + 1);
 
 /** Сумма количеств по журналу: вес (кг), объём (л) и штуки отдельно, чтобы не смешивать разное. */
 export interface Amount { kg: number; l: number; pcs: number }

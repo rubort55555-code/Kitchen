@@ -58,5 +58,22 @@ ok("план: макросы пересчитаны от новой калори
 ok("план: ниже предела не уйдёт", planFor(prof({ weight: 55, adjust: -300 }), NOW)!.kcal >= 1200);
 ok("план: при беременности поправка не применяется", planFor(prof({ pregnant: true, goal: "keep", adjust: 300 }), NOW)!.kcal === planFor(prof({ pregnant: true, goal: "keep" }), NOW)!.kcal);
 ok("план: при состоянии здоровья поправка не применяется", planFor(prof({ health: { kidney: true }, adjust: 300 }), NOW)!.kcal === planFor(prof({ health: { kidney: true } }), NOW)!.kcal);
+// До нижнего предела осталось меньше 150 ккал — убавляем столько, сколько осталось, но не ниже предела
+{
+  const p = prof({ weight: 55 });
+  const base = planFor(p, NOW)!;
+  const lim = Math.max(1200, base.bmr);
+  const near = { ...base, kcal: lim + 100 };
+  const c = goalCheck(p, near, series(55, 0), NOW);
+  ok("до предела 100 ккал: предлагаем убавить 100, а не 150 и не 0", c.status === "stalled" && c.delta === -100, c);
+  const c2 = goalCheck(p, { ...base, kcal: lim + 30 }, series(55, 0), NOW);
+  ok("до предела 30 ккал: не убавляем", c2.delta === 0 && near.kcal + c.delta >= lim, c2);
+}
+// «Сегодня» — по местному времени: ночью срок до следующей проверки не «прыгает» на день
+{
+  const night = new Date(2026, 10, 22, 0, 30);
+  const c = goalCheck(prof({ checkedAt: "2026-11-22" }), plan0, series(80, 0), night);
+  ok("проверка сегодня ночью: следующая через 14 дней", c.status === "too-soon" && /через 14 дн/.test(c.text), c.text);
+}
 console.log(`goalcheck: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

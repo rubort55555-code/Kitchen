@@ -6,12 +6,14 @@ import { addQty, qtyText } from "../src/lib/units";
 import { parseAnswer, buildPrompt } from "../src/lib/claude";
 import { rub, num, scaleAmount } from "../src/lib/util";
 import { findTimes, fmtTime } from "../src/lib/timers";
-import { report, insights, priceTrends, amountText } from "../src/lib/stats";
+import { report, insights, priceTrends, amountText, periodDays } from "../src/lib/stats";
+import { addProduct, applyCook, undoCook, getState, updateProduct, writeOff } from "../src/lib/store";
+import { planCook } from "../src/lib/cook";
 import { findTotal, parseClaudeReceipt, parseReceipt } from "../src/lib/receipt";
 import { fixWords } from "../src/lib/ocrWords";
 import { parseRecipeText } from "../src/lib/recipeText";
 import { productsCsv, pricesCsv } from "../src/lib/csv";
-import { sumAmounts } from "../src/lib/shop";
+import { sumAmounts, belowMin } from "../src/lib/shop";
 import { substitutes } from "../src/lib/subs";
 import { recipeStatus } from "../src/lib/match";
 import type { Recipe } from "../src/lib/types";
@@ -335,6 +337,41 @@ ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) =
   ok("напитки: эль, мартини-вермут", !!n("Эль") && !!n("вермут"), "");
   ok("плавленый сыр", n("плавленый сыр") === "Сыр плавленый", String(n("плавленый сыр")));
   ok("рыба белая запрещена", v(R("Уха", [["Рыба белая", "500 г"]])) !== "ok", "");
+}
+
+// --- Сокращения времени, границы русских слов, дни периода ---
+{
+  const t = findTimes("Варить 10 мин, затем 30 сек. обжарить и 1 ч тушить; 2 ч. л. соли, 1 ч. ложка сахара, 20–25 мин. 5 чашек воды").map((x) => x.seconds);
+  ok("время в шаге: «мин», «сек», «ч» находятся, «ч. л.» и «чашек» — нет", t.join() === "600,30,3600,1500", t);
+  const d = parseRecipeText("Щи из свежей капусты\nВремя: 1 ч\nНа 4 чел.\nИнгредиенты:\nкапуста 300 г\nПриготовление:\n1. Варить 40 мин.");
+  ok("текст рецепта: «щи» — суп, «1 ч» — 60 минут, «4 чел.» — порции", d.kind === "суп" && d.minutes === 60 && d.servings === 4, [d.kind, d.minutes, d.servings]);
+  ok("текст рецепта: «овощи» — не щи", parseRecipeText("Овощи на гриле\nИнгредиенты:\nкабачок 1 шт\nПриготовление:\n1. Жарить.").kind !== "суп");
+  const days = [1, 13, 23].map((h) => periodDays("week", new Date(2026, 10, 10, h)) + "/" + periodDays("month", new Date(2026, 10, 10, h)));
+  ok("дни периода не зависят от времени суток", days.every((x) => x === "7/10"), days);
+}
+
+// --- Склад: отмена готовки, минимальный запас, исправление цены ---
+{
+  console.error = () => {}; // в Node нет IndexedDB — запись на телефон не проверяем
+  const butter = addProduct({ name: "Масло сливочное", qty: 200, unit: "г", place: "Холодильник", until: null, price: 200 });
+  const r: Recipe = { id: "t-cook", name: "Проверка", servings: 2, source: "manual", createdAt: 0, steps: [], ingredients: [{ name: "Масло сливочное", amount: "50 г" }, { name: "Масло сливочное", amount: "30 г" }] };
+  const takes = planCook(r, 2, getState().products, getState().settings).rows.flatMap((x) => x.takes.map((k) => ({ productId: k.productId, take: k.take })));
+  const u = applyCook(takes, r.name);
+  const left = getState().products.find((x) => x.id === butter.id)?.qty;
+  undoCook(u);
+  ok("готовка: продукт в двух строках рецепта списан и возвращён целиком", takes.length === 2 && left === 120 && u.before.length === 1 && getState().products.find((x) => x.id === butter.id)?.qty === 200, [left, getState().products.find((x) => x.id === butter.id)?.qty]);
+
+  ok("запасы: яиц нет — не хватает 10", belowMin()[0]?.amount.replace(/\s/g, " ") === "10 шт", belowMin());
+  addProduct({ name: "Яйца куриные", qty: 6, unit: "шт", place: "Холодильник", until: null, price: 60 });
+  ok("запасы: «Яйца куриные» считаются яйцами", belowMin()[0]?.amount.replace(/\s/g, " ") === "4 шт", belowMin());
+  addProduct({ name: "Яйца", qty: 4, unit: "шт", place: "Холодильник", until: null, price: 40 });
+  ok("запасы: хватает — не напоминаем", belowMin().length === 0, belowMin());
+
+  const cheese = addProduct({ name: "Сыр", qty: 2, unit: "шт", place: "Холодильник", until: null, price: 0 });
+  updateProduct(cheese.id, { price: 500 });
+  writeOff(cheese.id, 2, "eaten");
+  const rep = report(getState().log.filter((e) => e.productId === cheese.id), [], 0);
+  ok("цена исправлена после покупки: «куплено» и «съедено» сходятся", rep.bought.rub === 500 && rep.eaten.rub === 500, [rep.bought.rub, rep.eaten.rub]);
 }
 
 console.log(`\nЛогика: ${pass} из ${pass + fail}`);

@@ -28,5 +28,6 @@ const body: BodyProfile = { sex: "f", born: 1991, height: 165, weight: 62, goal:
 const plan = planFor(body, new Date("2026-11-10T12:00:00Z"))!;
 const a = assess([m], plan, body, 300, supy)!;
 ok("оценка: вода + жидкость блюда", a.water!.v === Math.round((300 + perServing) * 10) / 10 && a.fluid.dishes === perServing && a.fluid.water === 300, [a.water, a.fluid]);
+ok("жидкость: «Сок» и «Тан» одним словом — жидкости, «Сокол» и «Танец» — нет", isLiquid("Сок") && isLiquid("Тан") && isLiquid("Сок, свежевыжатый") && !isLiquid("Сокол") && !isLiquid("Танец"));
 console.log(`fluid: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

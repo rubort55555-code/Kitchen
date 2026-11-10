@@ -8,7 +8,8 @@ import { seriesOf, trendPerWeek, type Measure } from "./body";
 export const CHECK_DAYS = 14;
 const DAY = 86400000;
 const t = (d: string) => new Date(d + "T12:00:00Z").getTime();
-const ymdOf = (d: Date) => d.toISOString().slice(0, 10);
+// Дата по местному времени телефона — как у замеров и даты проверки (иначе ночью «сегодня» отстаёт на день)
+const ymdOf = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 const r50 = (x: number) => Math.round(x / 50) * 50;
 const f1 = (x: number) => String(Math.round(x * 10) / 10).replace(".", ",");
 
@@ -47,8 +48,11 @@ export function goalCheck(p: BodyProfile, plan: Plan, measures: Measure[], now =
   const room = (d: number) => { // насколько можно изменить калорийность с учётом нижнего предела и накопленной поправки
     const adj = p.adjust || 0;
     let nd = Math.max(-ADJUST_MAX - adj, Math.min(ADJUST_MAX - adj, d));
-    if (plan.kcal + nd < Math.max(floor, plan.bmr)) nd = Math.max(0, Math.max(floor, plan.bmr) - plan.kcal);
-    return r50(nd);
+    // Снижать можно только до нижнего предела: если до него меньше, чем просим, — убавляем столько, сколько осталось
+    const lim = Math.max(floor, plan.bmr);
+    if (plan.kcal + nd < lim) nd = lim - plan.kcal;
+    const r = r50(nd);
+    return (plan.kcal + r < lim && r < 0 ? Math.ceil(nd / 50) * 50 : r) || 0;
   };
   const need = (planned - trend) * 1100; // ккал в день на каждый кг в неделю расхождения (7700 ккал на кг — грубая оценка)
 
