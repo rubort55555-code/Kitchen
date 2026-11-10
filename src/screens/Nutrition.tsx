@@ -121,7 +121,7 @@ function PersonCard({ m, plan, onEdit }: { m: Member; plan: Plan | null; onEdit:
         <span>ИМТ</span><span className={"pill" + bmiCls}>{n1(plan.bmi.bmi)} — {plan.bmi.cat}</span>
         <span>Расход за день</span><span>{kcalText(plan.tee)} ккал</span>
         {plan.weekly !== 0 && <><span>Вес в неделю</span><span>{plan.weekly > 0 ? "+" : "−"}{n1(Math.abs(plan.weekly))} кг</span></>}
-        <span>Вода</span><span>≈ {n1(plan.water)} л питья</span>
+        <span>Вода и напитки</span><span>≈ {n1(plan.water)} л (вместе с жидкостью супов)</span>
       </div>
       {plan.warnings.map((w, i) => <div key={i} className="issue small">⚠️ {w}</div>)}
       <BodyLog m={m} plan={plan} />

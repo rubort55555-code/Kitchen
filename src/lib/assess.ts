@@ -1,6 +1,7 @@
 // Оценка рациона по МР 2.3.1.0253-21: что съедено за день или за неделю против личной нормы (макронутриенты, пределы «не больше», вода, витамины и минералы).
 // Чистая логика. За неделю берём среднее за дни, в которые что-то записано: дни без записей не считаем голоданием.
-import type { Meal } from "./types";
+import type { Meal, Recipe } from "./types";
+import { dishFluidMl } from "./fluid";
 import { micros, type BodyProfile, type Plan } from "./nutrition";
 import { NUTRIENTS, type NutrientKey } from "./recipeNutrition";
 import { hasMicroData, sumMeals } from "./diary";
@@ -14,6 +15,8 @@ export interface Assessment {
   limits: Row[];
   water: Row | null;
   micro: Row[];
+  /** Из чего сложилась жидкость за день в среднем, мл: питьё, напитки из записей, жидкость блюд. */
+  fluid: { water: number; drinks: number; dishes: number };
   /** Сколько записей без данных о витаминах и минералах. */
   noMicro: number;
   records: number;
@@ -42,8 +45,8 @@ const atMost = (v: number, t: number): Status => (v > t ? "over" : "ok");
 
 const MICRO_SKIP = new Set(["na"]);
 
-/** meals — записи за нужные даты (одного человека); waterMl — выпитая вода за эти даты, сумма. */
-export function assess(meals: Meal[], plan: Plan, body: BodyProfile, waterMl: number): Assessment | null {
+/** meals — записи за нужные даты (одного человека); waterMl — выпитая вода за эти даты, сумма; recipes — для жидкости из блюд. */
+export function assess(meals: Meal[], plan: Plan, body: BodyProfile, waterMl: number, recipes: Recipe[] = []): Assessment | null {
   const dates = [...new Set(meals.map((m) => m.date))];
   const days = dates.length;
   if (!days) return null;
@@ -65,7 +68,8 @@ export function assess(meals: Meal[], plan: Plan, body: BodyProfile, waterMl: nu
     mk("chol", "Холестерин", "мг", a("chol"), plan.cholMax, "max", atMost(a("chol"), plan.cholMax)),
     mk("na", "Натрий", "мг", a("na"), plan.naMax, "max", atMost(a("na"), plan.naMax)),
   ].filter((r) => r.v > 0 || r.key === "na");
-  const fluid = (waterMl + drinksMl(meals)) / days;
+  const dishes = dishFluidMl(meals, recipes);
+  const fluid = (waterMl + drinksMl(meals) + dishes) / days;
   const water = plan.water > 0 ? mk("water", "Вода и напитки", "мл", fluid, plan.water * 1000, "min", fluid >= plan.water * 850 ? "ok" : fluid >= plan.water * 600 ? "near" : "low") : null;
 
   const keys = new Set<string>(NUTRIENTS.map((x) => x.key));
@@ -81,7 +85,7 @@ export function assess(meals: Meal[], plan: Plan, body: BodyProfile, waterMl: nu
     if (r.status === "over") return `${r.title}: ${r.pct}% нормы — больше нормы`;
     return `${r.title}: ${r.pct}% нормы`;
   });
-  return { days, macro, limits, water, micro, noMicro, records: meals.length, good: checked.length - bad.length, total: checked.length, issues };
+  return { days, macro, limits, water, fluid: { water: Math.round(waterMl / days), drinks: Math.round(drinksMl(meals) / days), dishes: Math.round(dishes / days) }, micro, noMicro, records: meals.length, good: checked.length - bad.length, total: checked.length, issues };
 }
 
 export const STATUS_TEXT: Record<Status, string> = { ok: "в норме", near: "чуть не дотягивает", low: "мало", over: "много" };

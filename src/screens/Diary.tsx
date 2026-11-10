@@ -11,6 +11,7 @@ import { lookupOff, nameFor, type OffProduct } from "../lib/off";
 import { DRINKS, SOURCES, EVIDENCE, hintLevel, sourceLevel, caffeineLimit, caffeineOf, interactionHints, type Drink } from "../lib/interactions";
 import { LEVEL_TEXT, ironDay, ironHints } from "../lib/iron";
 import { CA_TEXT, calciumDay, mineralHints } from "../lib/minerals";
+import { dishFluidMl } from "../lib/fluid";
 import { STATUS_TEXT, assess, drinksMl, type Row } from "../lib/assess";
 import { vitaminHints } from "../lib/vitamins";
 import { FAT_TEXT, fatSolubleDay, fatSolubleHints } from "../lib/fatsoluble";
@@ -76,7 +77,11 @@ export function Diary({ date: start }: { date?: string }) {
   const e = view.eaten;
   const waterNorm = plan ? Math.round(plan.water * 1000) : 0;
   const drinks = drinksMl(list);
-  const fluid = water + drinks;
+  const dishes = useMemo(() => dishFluidMl(list, recipes), [list, recipes]);
+  const fluid = water + drinks + dishes;
+  const [lastAdd, setLastAdd] = useState(250);
+  const [custom, setCustom] = useState("");
+  const add = (ml: number) => { addWater(date, ml, who); setLastAdd(ml); };
   const bySlot = MEAL_SLOTS.map((s) => ({ s, items: list.filter((m) => m.slot === s) })).filter((x) => x.items.length);
   const cls = view.level === "over" ? "bad" : view.level === "ok" ? "good" : "";
 
@@ -120,17 +125,27 @@ export function Diary({ date: start }: { date?: string }) {
       <CombosBlock meals={list} recipes={recipes} limit={caffeineLimit(!!(member?.body?.pregnant || member?.body?.lactating))} />
       {plan && member?.body && <MicroBlock eaten={e} body={member.body} hasMeals={list.length > 0} noData={list.filter((m) => !hasMicroData(m)).length} total={list.length} />}
 
-      {plan && member?.body && <AssessCard date={date} who={who} plan={plan} body={member.body} />}
+      {plan && member?.body && <AssessCard date={date} who={who} plan={plan} body={member.body} recipes={recipes} />}
 
       <div className="card">
         <div className="wrow">
-          <span>💧 Вода и напитки: <b>{fluid} мл</b>{waterNorm ? ` из ≈ ${waterNorm} мл` : ""}{drinks > 0 ? ` (в том числе напитки из записей: ${drinks} мл)` : ""}</span>
+          <span>💧 Вода и напитки: <b>{fluid} мл</b>{waterNorm ? ` из ≈ ${waterNorm} мл` : ""}</span>
           <span className="wbtn">
-            <button className="chip" aria-label="Минус стакан" onClick={() => addWater(date, -250, who)} disabled={!water}>−</button>
-            <button className="chip" onClick={() => addWater(date, 250, who)}>+ стакан</button>
+            <button className="chip" aria-label={`Убрать ${lastAdd} мл`} onClick={() => addWater(date, -lastAdd, who)} disabled={!water}>− {lastAdd}</button>
           </span>
         </div>
         {waterNorm > 0 && <Bar v={fluid} max={waterNorm} cls="water" />}
+        <p className="muted small" style={{ margin: "4px 0" }}>Питьё {water} мл{drinks > 0 ? ` · напитки из записей ${drinks} мл` : ""}{dishes > 0 ? ` · жидкость блюд (супы, молоко и т. п.) ≈ ${dishes} мл` : ""}.</p>
+        <div className="chips" role="group" aria-label="Сколько выпили">
+          {[["чашка", 150], ["стакан", 250], ["банка", 330], ["бутылка", 500], ["большая", 1000]].map(([n, ml]) => (
+            <button key={ml} className="chip" onClick={() => add(ml as number)}>+ {ml} <small>{n}</small></button>
+          ))}
+        </div>
+        <div className="row2" style={{ marginTop: 6 }}>
+          <input className="inp" inputMode="numeric" aria-label="Своё количество, мл" placeholder="Своё количество, мл" value={custom} onChange={(e: any) => setCustom(e.target.value.replace(/[^\d]/g, "").slice(0, 4))} />
+          <button className="btn sec" disabled={!custom || Number(custom) <= 0} onClick={() => { add(Number(custom)); setCustom(""); }}>Добавить</button>
+        </div>
+        <p className="muted small">Норма — таблица 7 МР: питьевая вода, напитки и жидкость в блюдах (супы). Вода из твёрдой пищи (овощи, фрукты) сюда не входит: по МР это отдельные ≈ 40%. Жидкость блюд считается по жидким ингредиентам рецепта и приблизительна.</p>
       </div>
 
       {bySlot.length === 0 && <p className="empty muted">В этот день ничего не записано.</p>}
@@ -157,7 +172,7 @@ export function Diary({ date: start }: { date?: string }) {
 }
 
 /** Оценка рациона по МР за день или за 7 дней: что в норме, чего мало, что выше предела. */
-function AssessCard({ date, who, plan, body }: { date: string; who: string; plan: import("../lib/nutrition").Plan; body: BodyProfile }) {
+function AssessCard({ date, who, plan, body, recipes }: { recipes: import("../lib/types").Recipe[]; date: string; who: string; plan: import("../lib/nutrition").Plan; body: BodyProfile }) {
   const [period, setPeriod] = useState<"day" | "week">("day");
   const meals = useStore((s) => s.meals);
   const settings = useStore((s) => s.settings);
@@ -165,8 +180,8 @@ function AssessCard({ date, who, plan, body }: { date: string; who: string; plan
   const a = useMemo(() => {
     const list = dates.flatMap((d) => mealsOf(meals, d, who));
     const water = dates.reduce((s, d) => s + waterOf(d, settings, who), 0);
-    return assess(list, plan, body, water);
-  }, [dates, meals, settings, who, plan, body]);
+    return assess(list, plan, body, water, recipes);
+  }, [dates, meals, settings, who, plan, body, recipes]);
   const R = ({ r }: { r: Row }) => (
     <div className="arow"><span>{r.title}</span><span><b>{fmt(r.v)}</b> {r.mode === "max" ? "≤" : "из"} {fmt(r.target)} {r.unit}</span><span className={"pill st-" + r.status}>{r.status === "ok" && r.mode === "max" ? "в пределе" : STATUS_TEXT[r.status]}</span></div>
   );
