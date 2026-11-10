@@ -15,6 +15,7 @@ import { STATUS_TEXT, assess, drinksMl, type Row } from "../lib/assess";
 import { vitaminHints } from "../lib/vitamins";
 import { FAT_TEXT, fatSolubleDay, fatSolubleHints } from "../lib/fatsoluble";
 import { copyMeal, defaultGrams, dayView, hasMicroData, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
+import { askConsent } from "../lib/consent";
 import { addDays, cap, norm, ymd } from "../lib/util";
 
 const kcalText = (x: number) => Math.round(x).toLocaleString("ru-RU");
@@ -479,6 +480,7 @@ function ScanPick({ custom, onPick }: { custom: import("../lib/types").CatalogIt
     // 1. Свои запомненные товары — без интернета
     const mem = known?.[code];
     if (mem?.off?.per100 && typeof mem.off.per100.kcal === "number") return showFound(mem.off, mem.name, true);
+    if (!(await askConsent("off"))) { setMiss({ code }); return setMsg("Поиск по штрихкоду в Open Food Facts отключён. Введите данные с этикетки — приложение запомнит товар."); }
     setBusy(true);
     const r = await lookupOff(code);
     setBusy(false);

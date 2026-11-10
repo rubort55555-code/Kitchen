@@ -2,7 +2,8 @@
 import { Fragment, useMemo, useState } from "react";
 import { Header, Seg, Sheet } from "../components/ui";
 import { BodyLog } from "../components/BodyLog";
-import { setSettings, useStore } from "../lib/store";
+import { giveConsent, setSettings, useStore } from "../lib/store";
+import { CONSENT_TEXT, hasConsent } from "../lib/privacy";
 import { goPage } from "../lib/ui";
 import type { Member } from "../lib/types";
 import {
@@ -16,6 +17,7 @@ const kcalText = (x: number) => x.toLocaleString("ru-RU");
 
 export function Nutrition() {
   const members = useStore((s) => s.settings.members);
+  const consented = useStore((s) => hasConsent(s.settings.consent, "health"));
   const [edit, setEdit] = useState<string | null>(null);
   const plans = members.map((m) => ({ m, plan: m.body ? planFor(m.body) : null }));
   const ready = plans.filter((x) => x.plan);
@@ -34,11 +36,20 @@ export function Nutrition() {
       <Header title="Питание" sub="Пробная функция" screen="nutrition" onBack={() => goPage(null)} backText="Ещё" />
       <p className="muted mt0">Личные нормы на день для каждого: калории, белки, жиры, углеводы, витамины. Ориентир для здоровых взрослых, не назначение врача.</p>
 
-      {plans.map(({ m, plan }) => (
+      {!consented && (
+        <div className="card">
+          <h3>{CONSENT_TEXT.health.title}</h3>
+          <p className="small mt0">{CONSENT_TEXT.health.lead}</p>
+          <ul className="small">{CONSENT_TEXT.health.points.map((x) => <li key={x}>{x}</li>)}</ul>
+          <button className="btn" onClick={() => giveConsent("health")}>{CONSENT_TEXT.health.accept}</button>
+          <button className="link" onClick={() => goPage("privacy")}>Политика конфиденциальности</button>
+        </div>
+      )}
+      {consented && plans.map(({ m, plan }) => (
         <PersonCard key={m.id} m={m} plan={plan} onEdit={() => setEdit(m.id)} />
       ))}
 
-      {ready.length >= 2 && (
+      {consented && ready.length >= 2 && (
         <div className="card">
           <h3>Вся семья в день</h3>
           <div className="nut-macros">

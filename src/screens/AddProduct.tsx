@@ -10,6 +10,7 @@ import { addDays, cap, dateText, daysLeft, norm, rub, toNum, untilText, ymd } fr
 import { quickAmounts } from "../lib/units";
 import { closeSheet, openSheet, toast } from "../lib/ui";
 import { BarcodeScan, type ScanHow } from "../components/BarcodeScan";
+import { askConsent } from "../lib/consent";
 import { lookupOff, nameFor, offPage, per100Text, OFF_CREDIT, type OffProduct } from "../lib/off";
 
 const POPULAR = ["Молоко", "Яйца", "Хлеб", "Куриное филе", "Картофель", "Помидоры", "Огурцы", "Сыр твёрдый", "Бананы", "Творог"];
@@ -82,6 +83,7 @@ export function AddProduct() {
       pick(known.name, known.off || undefined);
       return;
     }
+    if (!(await askConsent("off"))) { logScan({ how, code: c, result: "none", sec }); setCode({ code: c, off: null, status: "none" }); return; }
     setCode({ code: c, status: "loading" });
     const r = await lookupOff(c);
     if (!r.ok) { logScan({ how, code: c, result: r.why, sec }); setCode({ code: c, status: r.why }); return; }

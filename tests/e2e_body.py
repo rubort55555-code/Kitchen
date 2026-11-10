@@ -20,7 +20,7 @@ SEED = """(settings) => new Promise((res, rej) => {
   r.onerror = () => rej(r.error);
 })"""
 SETTINGS = {"members": [{"id": "m1", "name": "Аня", "allergies": [], "dislikes": [], "body": {"sex": "f", "born": 1991, "height": 165, "weight": 62, "goal": "keep"}}],
-            "tipsSeen": ["intro", "home-gear"], "lastBackup": 1999999999999}
+            "tipsSeen": ["intro", "home-gear"], "consent": {k: {"version": "2026-11-10", "at": 1} for k in ("policy", "health", "off")}, "lastBackup": 1999999999999}
 with sync_playwright() as p:
     br = p.chromium.launch(executable_path=os.environ.get("CHROMIUM", "/opt/pw-browsers/chromium"))
     for scheme in ["light", "dark"]:

@@ -12,7 +12,8 @@
     "composition": "node tools/build-composition.mjs",
     "android": "node build.mjs && cap sync android",
     "ios": "node build.mjs && cap sync ios",
-    "coverage:iron": "tsx tools/iron-coverage.ts"
+    "coverage:iron": "tsx tools/iron-coverage.ts",
+    "privacy": "tsx tools/gen-privacy.ts"
   },
   "dependencies": {
     "@capacitor/android": "8.5.3",

@@ -11,6 +11,7 @@ import type { CatalogItem, FishType, Level, Member, Place, Rule, ScanEvent, Unit
 import { PLACES, UNITS } from "../lib/types";
 import { norm, plural, uid, ymd } from "../lib/util";
 import { Stats } from "./Stats";
+import { PrivacyPage } from "./Privacy";
 import { Nutrition } from "./Nutrition";
 import { ageOf, basicsError, bmiOf, needsBasics, planFor, type BodyProfile } from "../lib/nutrition";
 import { closeAll, closeSheet, goPage, goTab, openSheet, toast, useUI } from "../lib/ui";
@@ -34,6 +35,7 @@ export function More() {
     case "beta": return <Beta />;
     case "nutrition": return <Nutrition />;
     case "appearance": return <AppearancePage />;
+    case "privacy": return <PrivacyPage />;
     default: return <Menu />;
   }
 }
@@ -64,6 +66,7 @@ function Menu() {
         <Row icon="📚" title="Справочник продуктов" sub="Сроки хранения, типы рыбы" onClick={() => goPage("catalog")} />
       </div>
       <div className="list">
+        <Row icon="🔒" title="Конфиденциальность" sub="Политика, согласия, удаление данных" onClick={() => goPage("privacy")} />
         <Row icon="🎨" title="Оформление" sub={APPEARANCE_TITLE[s.appearance === "brightness" && !brightnessSupported ? "system" : s.appearance || "system"]} onClick={() => goPage("appearance")} />
       </div>
       <div className="list">

@@ -29,7 +29,7 @@ SETTINGS = {
         {"id": "m1", "name": "Аня", "allergies": [], "dislikes": [], "body": {"sex": "f", "born": 1991, "height": 165, "weight": 62, "goal": "keep"}},
         {"id": "m2", "name": "Миша", "allergies": [], "dislikes": [], "body": {"sex": "m", "born": 1988, "height": 180, "weight": 80, "goal": "keep"}},
     ],
-    "tipsSeen": ["intro", "home-gear"], "lastBackup": 1999999999999,
+    "tipsSeen": ["intro", "home-gear"], "consent": {k: {"version": "2026-11-10", "at": 1} for k in ("policy", "health", "off")}, "lastBackup": 1999999999999,
 }
 
 with sync_playwright() as p:

@@ -1,6 +1,6 @@
 // Справка: коротко по каждому экрану + полные разделы и частые вопросы. Работает без интернета.
 
-export type Screen = "home" | "products" | "add" | "recipes" | "ask" | "recipe" | "menu" | "shop" | "buy" | "more" | "family" | "rules" | "catalog" | "data" | "help" | "stats" | "nutrition" | "appearance" | "diary";
+export type Screen = "home" | "products" | "add" | "recipes" | "ask" | "recipe" | "menu" | "shop" | "buy" | "more" | "family" | "rules" | "catalog" | "data" | "help" | "stats" | "nutrition" | "appearance" | "privacy" | "diary";
 
 /** Коротко «что здесь можно сделать» — показывается по значку «?». */
 export const SCREEN_HELP: Record<Screen, { title: string; lines: string[]; more?: string }> = {
@@ -133,6 +133,15 @@ export const SCREEN_HELP: Record<Screen, { title: string; lines: string[]; more?
       "Когда в меню отмечаете «Приготовили», блюдо попадает в дневник само; снимете отметку — запись уберётся.",
     ],
     more: "diary",
+  },
+  privacy: {
+    title: "Конфиденциальность",
+    lines: [
+      "Все ваши записи хранятся только в памяти телефона. Мы их не получаем.",
+      "Здесь можно прочитать политику, отозвать согласие на данные о здоровье и на поиск по штрихкоду и удалить введённые данные о теле и здоровье.",
+      "Совсем всё стирается в «Ещё → Данные → Удалить всё».",
+    ],
+    more: "privacy",
   },
   appearance: {
     title: "Оформление",

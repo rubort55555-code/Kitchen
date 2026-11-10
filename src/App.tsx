@@ -16,6 +16,8 @@ import { CookMode } from "./screens/CookMode";
 import { Revision } from "./screens/Revision";
 import { Receipt } from "./screens/Receipt";
 import { RecipeEdit, RecipeNew } from "./screens/RecipeEdit";
+import { ConsentSheet } from "./screens/Privacy";
+import { hasConsent } from "./lib/privacy";
 import { Intro } from "./screens/Intro";
 import { Diary, AddMeal } from "./screens/Diary";
 import { Overdue, isExpired } from "./screens/Overdue";
@@ -42,6 +44,7 @@ function SheetView({ s }: { s: Sheet }) {
     case "steps": return <CookMode id={s.id} />;
     case "overdue": return <Overdue />;
     case "intro": return <Intro />;
+    case "consent": return <ConsentSheet which={s.which} />;
     case "diary": return <Diary date={s.date} />;
     case "meal": return <AddMeal date={s.date} slot={s.slot} />;
     case "revision": return <Revision />;
@@ -64,9 +67,14 @@ export function App() {
   const introSeen = useStore((s) => s.settings.tipsSeen.includes("intro"));
   const empty = useStore((s) => s.products.length === 0 && s.log.length === 0);
   // Первый запуск: короткое знакомство (в автотестах браузера не показываем)
+  // Сначала уведомление о данных и согласие с политикой, потом знакомство
+  const policyOk = useStore((s) => hasConsent(s.settings.consent, "policy"));
+  const noSheets = sheets.length === 0;
   useEffect(() => {
-    if (ready && !introSeen && empty && !navigator.webdriver && !sheets.length) openSheet({ kind: "intro" });
-  }, [ready]);
+    if (!ready || navigator.webdriver || !noSheets) return;
+    if (!policyOk) openSheet({ kind: "consent", which: "policy" });
+    else if (!introSeen && empty) openSheet({ kind: "intro" });
+  }, [ready, policyOk, noSheets]);
   useEffect(() => {
     if (ready && hasOverdue && asked !== ymd() && !sheets.length && !askedNow) { askedNow = true; openSheet({ kind: "overdue" }); }
   }, [ready]);

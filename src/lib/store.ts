@@ -1,4 +1,5 @@
 // Состояние приложения и все действия с данными. Каждое действие сразу сохраняется в телефон.
+import { POLICY_VERSION, type ConsentKind } from "./privacy";
 import { removeMeasure, upsertMeasure, type Measure } from "./body";
 import { useSyncExternalStore } from "react";
 import * as db from "./db";
@@ -480,6 +481,23 @@ export function addMeasure(who: string, m: Measure) {
 }
 export function deleteMeasure(who: string, date: string) {
   setSettings({ measures: { ...(state.settings.measures || {}), [who]: removeMeasure(state.settings.measures?.[who] || [], date) } });
+}
+/** Согласие дано. */
+export function giveConsent(k: ConsentKind) {
+  setSettings({ consent: { ...(state.settings.consent || {}), [k]: { version: POLICY_VERSION, at: Date.now() } } });
+}
+/** Согласие отозвано. */
+export function withdrawConsent(k: ConsentKind) {
+  const c = { ...(state.settings.consent || {}) };
+  delete c[k];
+  setSettings({ consent: c });
+}
+/** Удалить введённые данные о теле и здоровье: профили, замеры, воду. Дневник питания (записи еды) остаётся. */
+export function eraseHealthData() {
+  setSettings({
+    members: state.settings.members.map((m) => ({ ...m, body: undefined })),
+    measures: undefined, water: undefined,
+  });
 }
 const NO_MEASURES: Measure[] = []; // один и тот же пустой массив: иначе подписка на хранилище видит «новое значение» при каждой проверке
 export const measuresOf = (who: string, s: Settings = state.settings): Measure[] => s.measures?.[who] || NO_MEASURES;

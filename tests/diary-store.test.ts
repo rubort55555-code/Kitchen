@@ -94,5 +94,23 @@ deleteMeasure("m1", "2026-10-01");
 ok("замер: удаление", measuresOf("m1").length === 1);
 ok("замер: у другого человека пусто и это один и тот же массив", measuresOf("m2") === measuresOf("m3"));
 
+// Согласия
+import { askConsent, resolveConsent } from "../src/lib/consent";
+import { giveConsent, withdrawConsent, eraseHealthData } from "../src/lib/store";
+import { getUI } from "../src/lib/ui";
+{
+  const pr = askConsent("off");
+  ok("согласие: без записи открывается окно", getUI().sheets.some((x) => x.kind === "consent"));
+  resolveConsent("off", false);
+  ok("согласие: отказ → false", (await pr) === false);
+  giveConsent("off");
+  ok("согласие: дано → askConsent сразу true", (await askConsent("off")) === true);
+  withdrawConsent("off");
+  ok("согласие: отозвано", !getState().settings.consent?.off);
+  addMeasure("m1", { date: "2026-11-02", weight: 60 });
+  eraseHealthData();
+  ok("удаление данных о здоровье: профиль и замеры стёрты", !getState().settings.members[0].body && !getState().settings.measures);
+}
+
 console.log(`diary-store: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);
