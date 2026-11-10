@@ -2,6 +2,7 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { garnishClass, garnishFits, garnishNeed, isGarnish, mainKind, orderByHome, suitableGarnishes } from "../src/lib/garnish";
 import { parseRecipeText } from "../tools/recipes.mjs";
+import { recipeNutrition } from "../src/lib/recipeNutrition";
 import type { Recipe } from "../src/lib/types";
 let pass = 0, fail = 0;
 const ok = (name: string, c: boolean, extra?: unknown) => { if (c) pass++; else { fail++; console.log("FAIL", name, extra ?? ""); } };
@@ -48,6 +49,14 @@ const need = mains.filter((r) => garnishNeed(r, "обед") === "required");
 ok("в базе есть блюда, где гарнир обязателен", need.length >= 20, need.length);
 ok("для каждого блюда, где гарнир обязателен, есть не меньше 5 вариантов", need.every((r) => suitableGarnishes(r, garn).length >= 5), need.filter((r) => suitableGarnishes(r, garn).length < 5).map((r) => r.name));
 ok("для блюд с крахмалом внутри есть овощные варианты", mains.filter((r) => garnishNeed(r, "обед") === "optional").every((r) => suitableGarnishes(r, garn).length >= 3));
+// Рыбные блюда базы
+const fishMains = mains.filter((r) => mainKind(r) === "fish");
+ok("в базе не меньше 12 рыбных блюд", fishMains.length >= 12, fishMains.map((r) => r.name));
+ok("к каждому рыбному блюду гарнир обязателен", fishMains.every((r) => garnishNeed(r, "ужин") === "required"));
+ok("к рыбе не предлагаются гречка, пшено, перловка, макароны", fishMains.every((r) => suitableGarnishes(r, garn).every((g) => !["гречка", "пшено", "перловка", "макароны"].includes(garnishClass(g)!))));
+ok("рыбные блюда считаются с белком не меньше 20 г на порцию", fishMains.every((r) => { const n = recipeNutrition(r); return !!n && n.perServing.protein >= 20; }), fishMains.filter((r) => (recipeNutrition(r)?.perServing.protein || 0) < 20).map((r) => r.name));
+ok("рыбой считаются и красная рыба, и горбуша, и креветки", ["Лосось, запечённый с лимоном и укропом", "Горбуша, запечённая с овощами в рукаве", "Креветки на сковороде с чесноком", "Кальмары, тушёные в сметане"].every((n) => !!recipes.find((r) => r.name === n)));
+
 // Порядок в выборе: сверху то, что есть дома
 const st = (g: string, urgent: number, percent: number) => ({ g: find(g), s: { urgent, percent } });
 const ordered = orderByHome([st("Гречка рассыпчатая", 0, 40), st("Рис отварной рассыпчатый", 0, 100), st("Макароны отварные", 0, 100), st("Булгур рассыпчатый", 1, 60), st("Кускус с маслом", 0, 0)]).map((x) => x.g.name);
