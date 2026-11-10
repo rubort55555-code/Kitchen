@@ -20,5 +20,15 @@ ok("печенье — не печень", b12Day([meal("Печенье овся
 ok("B12 набрано — подсказки нет", b12Day([meal("Гречка", "обед", 1.5), veg[1]], ctx) === null);
 const nodata = { ...mealCustom("Моё блюдо", { kcal: 300 }, D, "обед", "m1")!, qty: "200 г" };
 ok("запись без данных о витаминах — не судим", b12Day([nodata, veg[1]], ctx) === null);
+// Натрий и калий
+import { naKDay } from "../src/lib/vitamins";
+const nk = (name: string, slot: Meal["slot"], na: number, k: number): Meal => ({ ...mealCustom(name, { kcal: 300 }, D, slot, "m1")!, qty: "200 г", n: { kcal: 300, vitC: 5, na, k } });
+const saltyDay = [nk("Суп", "обед", 1500, 800), nk("Бутерброды", "ужин", 1000, 600)];
+ok("натрия много, калия мало — подсказка", vitaminHints(saltyDay, ctx).some((h) => h.id === "na-k"));
+ok("источники подсказки есть в SOURCES", vitaminHints(saltyDay, ctx).filter((h) => h.id === "na-k")[0].src.every((id) => id in SOURCES));
+ok("калия достаточно — подсказки нет", naKDay([nk("Суп", "обед", 1500, 2000), nk("Картофель", "ужин", 1000, 2000)]) === null);
+ok("натрия немного — подсказки нет", naKDay([nk("Каша", "обед", 300, 500), nk("Яблоко", "ужин", 10, 200)]) === null);
+ok("до 17 часов день не оценивается", vitaminHints(saltyDay, ctx, 12).length === 0);
+ok("запись без данных о минералах — не судим", naKDay([nodata, nk("Суп", "ужин", 3000, 500)]) === null);
 console.log(`vitamins: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

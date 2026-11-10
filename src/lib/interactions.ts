@@ -43,6 +43,9 @@ export const SOURCES: Record<string, Source> = {
   niklewicz2024: { id: "niklewicz2024", cite: "Niklewicz A. и др. A systematic review and meta-analysis of functional vitamin B12 status among adult vegans. Nutr Bull, 2024 (мета-анализ 17 исследований: у веганов ниже B12 в крови и выше гомоцистеин; добавки улучшают все показатели)" },
   neufingerl2021: { id: "neufingerl2021", cite: "Neufingerl N., Eilander A. Nutrient intake and status in adults consuming plant-based diets compared to meat-eaters: a systematic review. Nutrients, 2022 (141 исследование: потребление и статус B12 ниже при растительном питании, у веганов самые низкие)" },
   pawlak2013: { id: "pawlak2013", cite: "Pawlak R. и др. How prevalent is vitamin B12 deficiency among vegetarians? Nutr Rev, 2013 (обзор 18 работ с точными маркерами: дефицит у вегетарианцев в любых группах, у веганов чаще)" },
+  neal2021: { id: "neal2021", cite: "Neal B. и др. Effect of salt substitution on cardiovascular events and death. N Engl J Med, 2021 (SSaSS: кластерное РКИ, 20 995 человек, 4,7 года: инсульт −14%, смерть −12%)" },
+  wouda2022: { id: "wouda2022", cite: "Wouda R.D. и др. Sex-specific associations between potassium intake, blood pressure, and cardiovascular outcomes: the EPIC-Norfolk study. Eur Heart J, 2022 (когорта, 24 963 человека: больше калия — меньше сердечно-сосудистых событий)" },
+  who2012k: { id: "who2012k", cite: "ВОЗ. Guideline: Potassium intake for adults and children, 2012 (не менее 3510 мг калия в сутки; руководство)" },
   efsa2015: { id: "efsa2015", cite: "EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific opinion on the safety of caffeine. EFSA Journal, 2015" },
 };
 
@@ -82,6 +85,7 @@ export const EVIDENCE: Record<string, Evidence> = {
   abioye2020: { design: "meta-small" }, belserrat2014: { design: "meta-small" },
   grinder2004: { design: "rct", n: 14 }, hennigar2015: { design: "rct", n: 152 }, ali2026: { design: "rct", n: 19000 },
   niklewicz2024: { design: "meta-small" }, neufingerl2021: { design: "meta-small" }, pawlak2013: { design: "review" },
+  neal2021: { design: "rct", n: 20995 }, wouda2022: { design: "cohort", n: 24963 }, who2012k: { design: "regulatory" },
   efsa2015: { design: "regulatory" },
 };
 export const sourceLevel = (id: string): Level => levelOf(EVIDENCE[id] ?? { design: "mechanism" });

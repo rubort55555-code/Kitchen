@@ -196,7 +196,7 @@ function MicroBlock({ eaten, body, hasMeals, noData, total }: { eaten: Record<Nu
 /** Кофеин за день против предела и подсказки по сочетаниям (что усваивается лучше или хуже). */
 function CombosBlock({ meals, limit, recipes }: { meals: Meal[]; limit: number; recipes: import("../lib/types").Recipe[] }) {
   const caf = caffeineOf(meals);
-  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...mineralHints(meals, { recipes }), ...fatSolubleHints(meals, { recipes }), ...vitaminHints(meals, { recipes }), ...interactionHints(meals, { caffeineLimit: limit })], [meals, limit, recipes]);
+  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...mineralHints(meals, { recipes }), ...fatSolubleHints(meals, { recipes }), ...vitaminHints(meals, { recipes }, meals[0]?.date === ymd() ? new Date().getHours() : 24), ...interactionHints(meals, { caffeineLimit: limit })], [meals, limit, recipes]);
   const irons = useMemo(() => ironDay(meals, { recipes }), [meals, recipes]);
   const cas = useMemo(() => calciumDay(meals, { recipes }), [meals, recipes]);
   const fss = useMemo(() => fatSolubleDay(meals, { recipes }), [meals, recipes]);

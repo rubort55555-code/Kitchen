@@ -25,8 +25,24 @@ export function b12Day(meals: Meal[], ctx: IronContext): { total: number } | nul
   return { total };
 }
 
-export function vitaminHints(meals: Meal[], ctx: IronContext): Hint[] {
+/** Ориентир ВОЗ: калия не менее 3510 мг в сутки; натрия не более 2000 мг. */
+export const K_MIN = 3510;
+export const NA_MAX = 2000;
+
+/** Много натрия и мало калия за день. null — данных недостаточно (записи без данных о минералах) или всё в норме. */
+export function naKDay(meals: Meal[], naMax = NA_MAX): { na: number; k: number } | null {
+  if (meals.length < 2) return null;
+  if (meals.some((m) => !hasMicroData(m) && !m.recipeId)) return null;
+  const s = sumMeals(meals);
+  return s.na > naMax && s.k < K_MIN ? { na: s.na, k: s.k } : null;
+}
+
+/** hour — час суток для сегодняшнего дня (раньше 17 ч день не закончен и упрекать рано); для прошлых дней — 24. */
+export function vitaminHints(meals: Meal[], ctx: IronContext, hour = 24): Hint[] {
   const out: Hint[] = [];
+  if (hour < 17) return out;
+  const nk = naKDay(meals);
+  if (nk) out.push({ id: "na-k", text: `Натрия ${Math.round(nk.na)} мг (выше ${NA_MAX} мг), калия ${Math.round(nk.k)} мг (ориентир ВОЗ — от ${K_MIN} мг). Больше калия дают овощи, фрукты, бобовые и картофель; в крупном испытании замена части соли на солезаменитель с калием снижала число инсультов и смертей. Солезаменители с калием нельзя при болезнях почек и некоторых лекарствах — спросите врача.`, src: ["neal2021", "wouda2022", "who2012k"] });
   const b = b12Day(meals, ctx);
   if (b) out.push({ id: "b12-plant", text: `В записях за день нет продуктов животного происхождения, витамина B12 всего ${String(Math.round(b.total * 10) / 10).replace(".", ",")} мкг (норма взрослых 2,4 мкг). B12 есть только в мясе, рыбе, яйцах, молочных и обогащённых продуктах. Если вы ограничиваете животные продукты, нужна добавка B12; по крупным обзорам у веганов без неё чаще низкий B12.`, src: ["niklewicz2024", "neufingerl2021", "pawlak2013"] });
   return out;
