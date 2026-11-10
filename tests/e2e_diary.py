@@ -92,8 +92,12 @@ with sync_playwright() as p:
         # железо: оценка приёма пищи (в омлете есть железо; формулировка про усвоение)
         ok(S + "железо: строка оценки приёма пищи", "🩸" in pg.inner_text(D) and "железа" in pg.inner_text(D) and ("усвоени" in pg.inner_text(D)), pg.inner_text(D)[:700])
         # вода
-        pg.click(D + ' .chip:has-text("+ стакан")'); pg.click(D + ' .chip:has-text("+ стакан")')
-        ok(S + "вода: 500 мл", "500 мл" in pg.inner_text(D + ' .wrow'), pg.inner_text(D + ' .wrow'))
+        pg.click(D + ' .chip:has-text("+ 250")'); pg.click(D + ' .chip:has-text("+ 250")')
+        ok(S + "вода: питьё 500 мл", "Питьё 500 мл" in pg.inner_text(D), pg.inner_text(D + ' .wrow'))
+        pg.fill(D + ' [aria-label="Своё количество, мл"]', "330"); pg.click(D + ' .btn:has-text("Добавить")')
+        ok(S + "вода: своё количество 330 мл → питьё 830 мл", "Питьё 830 мл" in pg.inner_text(D), pg.inner_text(D + ' .wrow'))
+        pg.click(D + ' .chip[aria-label="Убрать 330 мл"]')
+        ok(S + "вода: «−» убирает последнюю порцию", "Питьё 500 мл" in pg.inner_text(D))
         # своё блюдо
         pg.click(D + ' .btn:has-text("Записать приём пищи")'); pg.wait_for_selector("text=Что вы съели")
         pg.click(M + ' .chip:has-text("Своё")')
