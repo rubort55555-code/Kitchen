@@ -46,6 +46,23 @@ ok("борщ: натрий от соли 600–1500 мг", borsch.na > 600 && bo
 ok("борщ: витамин C из капусты и картофеля > 15 мг", borsch.vitC > 15, borsch.vitC);
 ok("порции: вдвое больше порций — вдвое меньше на порцию", near(recipeNutrition(R("Омлет классический"), 4)!.perServing.kcal * 2, om.kcal, 0.5));
 
+// Сверка калорийности с Приложением 3 МР 2.3.1.0253-21: белки 4, жиры 9, усвояемые углеводы 4, клетчатка 2 ккал/г
+const atwater = (v: { protein: number; fat: number; carbs: number; fiber: number }) => 4 * v.protein + 9 * v.fat + 4 * v.carbs + 2 * v.fiber;
+const offMR = all.map((r) => { const v = recipeNutrition(r)!.perServing; return { name: r.name, pct: Math.abs(v.kcal - atwater(v)) / atwater(v) * 100 }; }).filter((x) => x.pct > 10);
+ok("калории рецептов расходятся с Приложением 3 МР не больше чем на 10%", offMR.length === 0, offMR.slice(0, 5));
+const sorted = all.map((r) => recipeNutrition(r)!.perServing.kcal).sort((a, b) => a - b);
+const med = sorted[Math.floor(sorted.length / 2)];
+ok("в среднем расхождение с МР до 2%", near(all.reduce((s2, r) => { const v = recipeNutrition(r)!.perServing; return s2 + (v.kcal - atwater(v)) / atwater(v); }, 0) / all.length, 0, 0.02));
+// Порция блюда в разумных пределах (кости целой птицы не считаются съедобными)
+const heavyKcal = all.map((r) => ({ name: r.name, kcal: recipeNutrition(r)!.perServing.kcal })).filter((x) => x.kcal < 50 || x.kcal > 1300);
+ok("калорийность порции каждого рецепта 50–1300 ккал", heavyKcal.length === 0, heavyKcal);
+const duck = per("Утка, запечённая с яблоками");
+ok("утка запечённая: порция 700–1300 ккал (кости не едят)", duck.kcal > 700 && duck.kcal < 1300, duck.kcal);
+const duck2 = per("Утка тушёная с капустой");
+ok("утка тушёная с капустой: порция 600–1100 ккал", duck2.kcal > 600 && duck2.kcal < 1100, duck2.kcal);
+ok("утка: съедобная доля тушки меньше 1", (compositionOf("Утка") as { y?: number }).y! < 1);
+ok("медиана калорийности порции 250–450 ккал", med > 250 && med < 450, med);
+
 // Без известных продуктов — нет расчёта
 ok("неизвестные продукты → null", recipeNutrition({ id: "x", name: "x", ingredients: [{ name: "Зюзюка", amount: "1 шт" }], steps: [], source: "manual", createdAt: 0 }) === null);
 

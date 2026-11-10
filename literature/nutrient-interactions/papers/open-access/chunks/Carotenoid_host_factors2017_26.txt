@@ -1,0 +1,11 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 26 из 39: (без названия)
+============================================================
+
+The authors have declared no conflict of interest.

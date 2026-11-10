@@ -1,0 +1,11 @@
+Название: Vitamin D-Mediated Regulation of Intestinal Calcium Absorption
+Авторы: James C Fleet
+Журнал: Nutrients, 2022
+DOI: https://doi.org/10.3390/nu14163351   PMID: 36014856   PMC: PMC9416674
+Лицензия: CC BY 4.0 (открытый доступ). © 2022 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 10 из 11: Conflicts of Interest
+============================================================
+
+The authors have no conflict to declare.

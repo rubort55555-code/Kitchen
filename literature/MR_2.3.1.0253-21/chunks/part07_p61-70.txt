@@ -1,0 +1,463 @@
+                                 61
+
+точные метаболиты. На основании анализа 16S рРНК протеобактерии
+подразделяют на 6 классов: Alpha-, Beta-, Gamma-, Delta-, Epsilon- и
+Zeta. В класс Alpha входят виды, способные к спиртовому брожению,
+Beta – нитрификаторы, Gamma – метанотрофы, а также значимые для
+микробиоты семейства Enterobacteriaceae, Vibrionaceae, Pseudomonada-
+ceae. К классу Delta относятся сульфат-редукторы, анаэробные железо-
+бактерии, к Epsilon – использующие серу и водород в качестве источни-
+ка энергии сульфоспириллы, а также возбудители инфекций C. jejuni и
+H. pylori [70].
+     Субдоминантные филумы. Включают в основном некультивируе-
+мые группы бактерий, в том числе: Fusobacteria – представлены семей-
+ствами Fusobacteriaceae и Leptotrichiaceae, 11 родами, физиологическая
+роль которых до конца не выяснена; Verrucomicrobia –18 родов, в том
+числе Akkermansia (A.muciniphila) и Prosthecobacter sp., утилизирующие
+различные сахара и гликопротеиды (муцин); Euryarchaeota – состоит из
+8 классов архей (галобактерии, метанобактеры, археоглобы, метанокок-
+ки, термококки и др. экстремофилы). Присутствие некультивируемых
+архей – продуцентов метана, в том числе рода Methanobrevibacter (M.
+smithii), обеспечивает утилизацию водорода, образующегося при гидро-
+лизе углеводов; Cyanobacteria – бактерии, способные к фиксации атмо-
+сферного азота, присутствуют в кишечнике непостоянно, роль в макро-
+организме пока не изучена.
+           3. Взаимосвязь филумов кишечного микробиома
+     Взаимодействие между филумами кишечного микробиома основа-
+но на обеспечении взаимных трофических путей, поэтому формирова-
+ние стабильной структуры микробного сообщества определяется соста-
+вом и количеством пищевых веществ, потребляемых хозяином и транс-
+формируемых в ЖКТ с участием эукариотических и микробных факто-
+ров. Таксономические вариации на уровне филумов и уровни биоразно-
+образия позволяют оценивать общее состояние микробиома в зависимо-
+сти от особенностей состояния питания лиц в разных возрастных группах.
+     Информативным маркером состояния микробиома в его связи с
+нутриомом является соотношение между численностью филумов
+Bacteroidetes и Firmicutes (индекс «В : F»), которое в норме модифици-
+руется только при физиологически обусловленной возрастной смене
+характера питания [71—72].
+        4. Функциональные свойства кишечной микробиоты
+    Нормальная микрофлора выполняет функции биологического за-
+щитного барьера в кишечнике и стимулятора иммунной системы орга-
+низма, обеспечивая его колонизационную резистентность и адаптацию к
+                                62
+
+окружающей среде. В основе данных процессов лежит физическое взаи-
+модействие микробных тел и структур с эпителиальными клетками и
+лимфоидным аппаратом кишечника, выработка ими соматических, кап-
+сульных, жгутиковых, мембранных антигенов и химических соединений,
+экспрессирующих ответные факторы разного уровня [68, 73—76].
+     Облигатная микрофлора образует на поверхности слизистых ки-
+шечника биопленку, в состав которой наряду с бактериями входят экзо-
+полисахариды и муцин, закрывающие рецепторы для адгезии на эпите-
+лиоцитах. Грамположительные представители нормофлоры формируют
+неблагоприятную для патогенных микробов среду, закисляя кишечное
+содержимое, конкурируя за источники питания, выделяя бактериоцины
+и другие вещества, обладающие антагонистической активностью. Гра-
+мотрицательные виды микрофлоры (в первую очередь E. coli c нор-
+мальной ферментативной активностью) участвуют в выработке и под-
+держании как локального, так и системного гуморального иммунитета, а
+также приемлемого организмом воспалительного статуса [77—80].
+     Нарушение функции защитного барьера в результате дисбиозов
+способствует транслокации из просвета кишечника в кровоток ЛПС,
+молекул белков (включая токсины) и моносахаридов, что может являть-
+ся причиной алиментарно-зависимых заболеваний и неинфекционных
+патологий, сопряжённых с системным воспалением (табл. 4.2).
+         5. Биологически активные микробные метаболиты
+     Функционирование микробиома сопровождается продукцией био-
+логически активных микробных метаболитов: ферментов, лактата, ами-
+нокислот, дериватов желчных кислот, нейрохимических соединений,
+витаминов. Ключевое значение имеет ферментация резистентного крах-
+мала и некрахмальных полисахаридов растительного происхождения,
+что обеспечивает образование эссенциальных КЦЖК: ацетата, пропио-
+ната, бутирата [85, 86]. КЦЖК поступают в кровоток в качестве сиг-
+нальных молекул – регуляторов системных процессов клеточного им-
+мунитета, обмена энергии, метаболизма жира, углеводов, происходящих
+в печени, белой и буровой жировой ткани, костном мозге, лёгких, под-
+желудочной железе. КЦЖК способствуют закислению кишечного со-
+держимого, обладают противовоспалительным и антиканцерогенным
+действием [80, 87—91]. Взаимодействие КЦЖК и нейроактивных моле-
+кул, продуцируемых микрофлорой (гамма-аминомасляной кислоты,
+серотонина, катаболитов триптофана), с кишечной нейрональной сетью
+поддерживает функционирование оси «кишечник – мозг», модулируя
+двигательные, секреторные и поведенческие (стресс, тревожность, на-
+строение) реакции центральной нервной системы [86].
+                                                63
+
+     Продуцентами КЦЖК в кишечнике являются преимущественно
+представители облигатно-анаэробных сахаролитиков, в т. ч. бутирата –
+Faecalibacterium, Ruminococcaceae и Lachnospiraceae sp., пропионата –
+Bacteroides, Propionibacterium, Roseburia, Selenomonas sp., ацетата – Bi-
+fidobacterium, Clostridium, Ruminococcus, Lactobacillus sp. [59, 92].
+                                                                                    Таблица 4.2
+                   Функциональный потенциал представителей
+                       кишечной микробиоты [61, 81—84]
+                                              Популяции и виды
+              С противовоспалительным          С провоспалительным             С патогенным
+                    потенциалом                      потенциалом                потенциалом
+                                              Сапрофитные и условно- Облигатно патоген-
+ Филумы                                        патогенные, проявляю-         ные, обладающие
+             Апатогенные, проявляющие щие протеолитические,                  паразитическими,
+               защитные, регуляторные гемолитические свойст- инвазивными                    свойст-
+              и пробиотические свойства            ва, способность           вами и факторами
+                                               к продукции токсичес-              агрессии
+                                                     ких факторов
+             Faecalibacterium prausnitzii, Staphylococcus, Listeria
+              Lactobacillus, Pediococcus, spp., Streptococcus pyo-           Listeria monocyto-
+               Leuconostoc, Lactococcus,         genes, Streptococcus               genes,
+              Streptococcus thermophilus,             pneumoniae,            Bacillus anthracis,
+Firmicutes        Enterococcus durans,          Enterococcus faecalis,         Bacillus cereus,
+              Roseburia hominis, Rumino-        Enterococcus faecium,          C. perfringens,
+              coccus spp., Lachnoclostrid-       Blautia, Parvimonas        C. difficile, C. tetani,
+             ium spp., Eubacterium rectale        micra, Veillonella,            C. septicum
+               & hallii, Coprococcus spp.          Peptococcus spp.
+               Bacteroides xylanisolvens, B. fragilis, Prevotella sp.,
+               B. vulgatus и B. uniformis,            Alistipes sp.,
+                  B. dorei, B. stercoris,            B. helcogenes,
+Bacteroidetes B. coprocola, B. finegoldii,          B. salanitronis,                    -
+              B. intestinalis, P. distasonis,    Parabacteroides sp.,
+                  B. thetaiotaomicron,                 Barnesiella
+                Candidatus arthromitus              intestinihominis
+                                              Sutterella, Bilophila spp.,
+                                                 Pseudomonadaceae,
+                                              Цитратассимилирующие            Vibrio cholerae,
+                                                 бактерии: Klebsiella,     Yersinia enterocolitica,
+              E. coli (c нормальной фер- Citrobacter,        Enterobacter, Campylobacter coli &
+Proteobac- ментативной                          Serratia, Edwardsiella,
+                             активностью), Cronobacter,                         jejuni & lari,
+   teria                Wolinella                             атипичные Helicobacter pylori.,
+                                               E. coli, Campylobacter,       энтеропатогенные
+                                                   Sulfurospirillum,        E. coli, Salmonella,
+                                                   Pasteurellaceae,             Shigella spp.
+                                                     Burkholderia,
+                                                   Haemophilus spp.
+Actinobac-        Bifidobacterium spp.            Atopobium species                     -
+   teria         Collinsella intestinales       Propionibacterium sp.
+Verrucomi-                   –                Akkermansia muciniphila                  –
+  crobia
+Euryarcha-                   –                    Methanobrevibacter                   –
+    eota                                                 smithii
+Fusobacteria                 –                    Fusobacterium sp.                    –
+                                          64
+
+                        Библиографические ссылки
+      1. WHO. Diet, nutrition and the prevention of chronic diseases: report of a
+joint WHO/FAO expert consultation, Geneva, 28 January – 1 February 2002.
+WHO Technical Report Series 916 Publ., 2003.
+      2. WHO&FAO. Human energy requirements. Report of a Joint
+FAO/WHO/UNU Expert Consultation Rome, 17–24 October 2001. World Health
+Organization, Food and Agriculture Organization of the United Nations, United
+Nations University Publ., 2004.
+      3. Food-Based Dietary Guidelines in Europe. [Электронный ресурс]. –
+Режим       доступа:      https://knowledge4policy.ec.europa.eu/health-promotion-
+knowledge-gateway/topic/food-based-dietary-guidelines-europe_en
+      4. Nordic Nutrition Recommendations. Integrating nutrition and physical
+activity. Published 2012. [Электронный ресурс]. – Режим доступа:
+https://norden.diva-portal.org/smash/get/diva2:704251/FULLTEXT01.pdf
+      5. Updating of the PNNS guidelines: revision of the food-based dietary
+guidelines. ANSES opinion. Collective expert report 12 December 2016. [Элек-
+тронный ресурс]. – Режим доступа: https://www.anses.fr/en/content/ansess-
+opinion-
+and-report-updating-pnns-guidelines-revision-food-based-dietary-guidelines.
+      6. EFSA Dietary reference values for nutrients: Summary report. Published
+2017. [Электронный ресурс]. – Режим доступа: https://efsa.onlinelibrary.
+wiley.com/doi/10.2903/sp.efsa.2017.e15121
+      7. Dietary Guidelines for Americans, 2020-2025. 9th Edition. Published 2021.
+[Электронный ресурс]. – Режим доступа: https://www.dietaryguidelines.gov
+      8. Health Canada. Dietary Reference Intakes Tables. Published 2010.
+[Электронный ресурс]. – Режим доступа: https://www.canada.ca/en/health-
+canada/services/food-nutrition/healthy-eating/dietary-reference-intakes/tables.html
+      9. Dietary Guidelines, UK. [Электронный ресурс]. – Режим доступа:
+https://www.gov.uk/government/publications/the-eatwell-guide
+      10. National Institute of Nutrition. Dietary Guidelines for Indians.
+Published 2020, [Электронный ресурс]. – Режим доступа: https://www.nin.res.
+in/downloads/DietaryGuidelinesforNINwebsite.pdf
+      11. Overview of Dietary Reference Intakes for Japanese. Published 2015.
+[Электронный ресурс]. – Режим доступа: https://www.mhlw.go.jp/file/
+06-Seisakujouhou-10900000-Kenkoukyoku/Overview.pdf
+      12. Eating and Activity Guidelines for New Zealand Adults. [Электронный
+ресурс]. – Режим доступа: https://www.health.govt.nz/publication/eating-and-
+activity-guidelines-new-zealand-adults
+      13. The Australian Dietary Guidelines. [Электронный ресурс]. – Режим
+доступа: https://www.health.gov.au/sites/default/files/australian-dietary-guidelines.pdf
+      14. WHO. Guideline: Sodium intake for adults and children. Published
+2012. [Электронный ресурс]. – Режим доступа: https://www.who.int/
+publications-detail-redirect/9789241504836
+                                        65
+
+      15. WHO. Guideline: potassium intake for adults and children. Published
+2012. [Электронный ресурс]. – Режим доступа: https://www.who.int/
+publications/i/item/9789241504829
+      16. WHO. Draft WHO Guidelines: Saturated fatty acid and trans-fatty in-
+take for adults and children. Published 2018. [Электронный ресурс]. – Режим
+доступа:             https://extranet.who.int/dataform/upload/surveys/666752/files/
+Draft%20WHO%20SFA-
+TFA%20guidelines_04052018%20Public%20Consultation(1).pdf
+      17. WHO. Guideline: Sugars intake for adults and children. Published 2015.
+[Электронный ресурс]. – Режим доступа: https://www.who.int/publications/
+i/item/9789241549028
+      18. EFSA. Opinion of the Scientific Panel on Dietetic Products, Nutrition
+and Allergies on a request from the Commission related to the presence of trans
+fatty acids in foods and the effect on human health of the consumption of trans
+fatty acids (Request N° EFSA-Q-2003-022) adopted on 8 July 2004. [Электрон-
+ный ресурс]. – Режим доступа: https://www.efsa.europa.eu/en/efsajournal/pub/81
+      19. Trans Fatty Acids and Health: A Review of Health Hazards and Exist-
+ing Legislation. The European Parliament's Committee on the Environment, Pub-
+lic Health and Food Safety. Published 2008. [Электронный ресурс]. – Режим
+доступа:         https://www.europarl.europa.eu/RegData/etudes/etudes/join/2008/
+408584/IPOL-JOIN_ET(2008)408584_EN.pdf
+      20. Hyseni L, et al. Systematic review of dietary trans-fat reduction inter-
+ventions Bull World Health Organ, 2017;95:821–830G. doi: 10.2471/
+BLT.16.189795
+      21. Единые санитарно-эпидемиологические и гигиенические требо-
+вания к продукции (товарам), подлежащей санитарно-эпидемиологическому
+надзору (контролю). [Электронный ресурс]. – Режим доступа:
+http://www.eurasiancommission.org/ru/act/texnreg/depsanmer/sanmeri/Documen
+ts/%d1%80%d0%b0%d0%b7%d0%b4%d0%b5%d0%bb%201%20%d0%95%d0
+%a1%d0%a2.pdf
+      22. German Nutrition Society. New reference values for vitamin D. Annals
+of Nutrition and Metabolism. 2012;60:241–246.
+      23. EFSA. Draft Scientific Opinion on Dietary Reference Values for vitamin
+D. [Электронный ресурс]. – Режим доступа: https://www.efsa.europa.eu/sites/
+default/files/consultation/160321.pdf
+      24. EFSA Scientific Opinion on Dietary Reference Values for manganese.
+EFSA Journal. 2013;11(11):3419. doi: 10.2903/j.efsa.2013.3419
+      25. EFSA Scientific Opinion on Dietary Reference Values for molybdenum.
+EFSA Journal. 2013;11(8):3333. doi: 10.2903/j.efsa.2013.3333
+      26. EFSA Scientific Opinion on Dietary Reference Values for fluoride.
+EFSA Journal. 2013;11:3332. doi: 10.2903/j.efsa.2013.3332
+      27. WHO. Guidelines for drinking-water quality: fourth edition incorporat-
+ing the first addendum. Published 2017. [Электронный ресурс]. – Режим дос-
+тупа: https://www.who.int/publications/i/item/9789241549950
+                                        66
+
+      28. EFSA Scientific Opinion on Dietary reference values for water. EFSA
+Journal. 2010;8(3):1459. doi: 10.2903/j.efsa.2010.1459
+      29. WHO. Physical status: the use and interpretation of anthropometry.
+Report of a WHO Expert Committee. Published 1995. [Электронный ресурс]. –
+Режим доступа: https://apps.who.int/iris/handle/10665/37003
+      30. WHO. Body mass index. [Электронный ресурс]. – Режим доступа:
+https://www.euro.who.int/en/health-topics/disease-prevention/nutrition/
+a-healthy-lifestyle/body-mass-index-bmi
+      31. WHO. Waist circumference and waist-hip ratio. Report of a WHO Ex-
+pert Consultation, Geneva, 8-11 December 2008. [Электронный ресурс]. – Ре-
+жим доступа: https://www.who.int/publications/i/item/9789241501491
+      32. Mifflin MD, St Jeor ST, Hill LA, et al. A new predictive equation for
+resting energy expenditure in healthy individuals. The American Journal of Clini-
+cal Nutrition. 1990; 51(2):241–247.
+      33. Koletzko B, et al. Pediatric Nutrition in Practice. 2nd ed. Karger; 2015.
+doi: 10.1159/isbn.978-3-318-02691-7
+      34. Te Morenga L, Mallard S, Mann J. Dietary sugars and body weight: sys-
+tematic review and meta-analyses of randomised controlled trials and cohort stud-
+ies. BMJ. 2013;346:e7492. doi: 10.1136/bmj.e7492
+      35. Bouillon R. Comparative analysis of nutritional guidelines for vitamin
+D. Nat Rev Endocrinol. 2017;(13):466–479. doi: 10.1038/nrendo.2017.31
+      36. Коденцова В.М., Мендель О.И., Хотимченко С.А., Батурин А.К.,
+Никитюк Д.Б., Тутельян В.А. Физиологическая потребность и эффективные
+дозы витамина D для коррекции его дефицита. Современное состояние про-
+блемы // Вопросы питания. 2017. Т. 86. № 2. С. 47–62. doi: 10.24411/0042-
+8833-2017-00033
+      37. Коденцова В.М., Рисник Д.В. Витамин D: медицинские и социаль-
+но-экономические аспекты // Вопросы диетологии. 2017. Т. 7. № 2. С. 33–40.
+doi: 10.20953/2224-5448-2017-2-33-40
+      38. Дедов И.И., Мельниченко Г.А., Пигарова Е.А. и др. Клинические
+рекомендации «Дефицит витамина D у взрослых: диагностика, лечение,
+профилактика». М.: Минздрав России, 2015. 75 с.
+      39. Rosanoff A, Dai Q, Shapses SA. Essential Nutrient Interactions: Does
+low or suboptimal magnesium status interact with vitamin D and/or calcium
+status? Adv Nutr. 2016;7(1):25–43. doi: 10.3945/an.115.008631
+      40. Dai Q, Zhu X, Manson JE, et al. Magnesium status and supplementation
+influence vitamin D status and metabolism: results from a randomized trial. Am J
+Clin Nutr. 2018;108(6):1249–1258. doi: 10.1093/ajcn/nqy27
+      41. WHO. Effect of increased potassium intake on cardiovascular disease,
+coronary heart disease and stroke. Published 2012. [Электронный ресурс]. –
+Режим        доступа:       http://apps.who.int/iris/bitstream/handle/10665/79334/
+9789241504867_eng.pdf?sequence=1
+      42. WHO. Effect of increased potassium intake on blood pressure, renal
+function, blood lipids and other potential adverse effects. Published 2012. [Элек-
+                                       67
+
+тронный ресурс]. – Режим доступа: http://apps.who.int/iris/bitstream/
+handle/10665/79331/9789241504881_eng.pdf?sequence=1
+      43. Davis CK, Laud PJ, Bahor Z, at al. Systematic review and stratified
+meta-analysis of the efficacy of carnosine in animal models of ischemic stroke.
+Journal of cerebral blood flow and metabolism. 2016; 36(10):1686–1694.
+      44. Девятов А.А., Федорова Т.Н., Стволинский С.Л., Рыжков И.Н., Ри-
+гер Н.А., Тутельян В.А. Исследование нейропротекторных механизмов дей-
+ствия карнозина при экспериментальной фокальной ишемии/реперфузии //
+Биомедицинская химия. 2018. Т. 64. № 4. С. 344–348. doi: 10.18097/
+PBMC20186404344
+      45. Berezhnoy DS, Stvolinsky SL, Lopachev AV, at al. Carnosine as an ef-
+fective neuroprotector in brain pathology and potential neuromodulator in normal
+conditions. Amino acids. 2019; 51(1):139–150.
+      46. Wu G. Important roles of dietary taurine, creatine, carnosine, anserine
+and 4-hydroxyproline in human nutrition and health. Amino Acids. 2020;
+52(3):329-360.
+      47. Тутельян В.А., Лашнева Н.В. Биологически активные вещества
+растительного происхождения. Катехины: пищевые источники, биодоступ-
+ность, влияние на ферменты метаболизма ксенобиотиков // Вопросы пита-
+ния. 2009. Т. 78. № 4. С. 4–21.
+      48. Тутельян В.А., Лашнева Н.В. Биологически активные вещества
+растительного происхождения. Флаваноны: пищевые источники, биодос-
+тупность, влияние на ферменты метаболизма ксенобиотиков // Вопросы
+питания. 2011. Т. 80. № 5. С. 4.
+      49. Аксенов И.В., Авреньева Л.И., Гусева Г.В. и др. Влияние кверце-
+тина на защитный потенциал крыс при повышенном содержании фруктозы
+в рационе // Вопросы питания. 2018. Т. 87. № 5. С. 6–12.
+      50. Мжельская К.В., Трусов Н.В., Гусева Г.В., Аксенов И.В., Кравчен-
+ко Л.В., Тутельян В.А. Изучение влияния кверцетина на экспрессию генов
+ферментов углеводного и липидного обмена в печени крыс, получавших
+высокофруктозный рацион // Бюллетень экспериментальной биологии и
+медицины. 2019. Т. 167. № 2. С. 218–222.
+      51. Эллер К.И., Перова И.Б., Рылина Е.В., Аксенов И.В. Биологически
+активные вещества // Нутрициология и клиническая диетология: нацио-
+нальное руководство / под ред. В.А. Тутельяна, Д.Б. Никитюка. М.: ГЭО-
+ТАР-Медиа, 2020. С. 144–161.
+      52. СанПиН 2.1.3684–21 «Санитарно-эпидемиологические требования
+к содержанию территорий городских и сельских поселений, к водным объ-
+ектам, питьевой воде и питьевому водоснабжению, атмосферному воздуху,
+почвам, жилым помещениям, эксплуатации производственных, обществен-
+ных помещений, организации и проведению санитарно-противоэпидемичес-
+ких (профилактических) мероприятий».
+      53. Межгосударственный стандарт ГОСТ 30494–2011 «Здания жилые и
+общественные. Параметры микроклимата в помещениях» (введен в дейст-
+                                        68
+
+вие приказом Федерального агентства по техническому регулированию и
+метрологии от 12 июля 2012 г. N 191-ст.
+      54. Шевелева С.А., Куваева И.Б., Ефимочкина Н.Р., Маркова Ю.М., Про-
+сянников М.Ю. Микробиом кишечника: от эталона нормы к патологии // Во-
+просы питания. 2020. Т. 89. № 4. С. 35–51. doi: 10.24411/0042-8833-2020-10040
+      55. Погожева А.В., Шевелева С.А., Маркова Ю.М. Роль пробиотиков в
+питании здорового и больного человека // Лечащий врач. 2017. №. 5. С. 67.
+[Электронный ресурс]. Режим доступа: https://www.lvrach.ru/2017/05/15436730
+      56. Шендеров Б.А. Медицинская микробная экология и функцио-
+нальное питание: в 3 т. Т. 1. Микрофлора человека и животных и ее функ-
+ции. М.: Грантъ, 1998. 288 с.
+      57. Шендеров Б.А. Медицинская микробная экология и функцио-
+нальное питание: в 3 т. Т. 3. Пробиотики и функциональное питание. М.:
+Грантъ, 1998. 287 с.
+      58. Shortt C, Hasselwander O, Meynier A, et al. Systematic review of the
+effects of the intestinal microbiota on selected nutrients and non-nutrients. Euro-
+pean journal of nutrition. 2018;57(1):25-49. doi: 10.1007/s00394-017-1546-4
+      59. Ситкин С.И., Ткаченко Е.И., Вахитов Т.Я. Метаболический дисби-
+оз кишечника и его биомаркеры // Экспериментальная и клиническая гаст-
+роэнтерология. 2015. № 12 (124). С. 6–29.
+      60. Ситкин С.И., Вахитов Т.Я., Ткаченко Е.И., и др. Микробиота ки-
+шечника при язвенном колите и целиакии // Экспериментальная и клиниче-
+ская гастроэнтерология. 2017. № 1. С. 8–30. [Электронный ресурс]. Режим
+доступа: https://www.nogr.org/jour/article/view/359
+      61. Grigg JB, Sonnenberg GF. Host-microbiota interactions shape local and
+systemic inflammatory diseases. J Immunol. 2017;198(2):564-571. doi:
+10.4049/jimmunol.1601621
+      62. Каштанова Д.А., Ткачева О.Н., Попенко А.С. и др. Состав микро-
+биоты кишечника и его взаимосвязь с факторами риска сердечно-
+сосудистых заболеваний среди относительно здоровых жителей Москвы и
+Московской области // Кардиоваскулярная терапия и профилактика. 2017.
+Т. 16. № 3. С. 56–61. doi: 10.15829/1728-8800-2017-3-56-61
+      63. Ткач С.М., Дорофеева А.А. Соотношение основных филотипов
+кишечной микробиоты у больных сахарным диабетом 2 типа // Клінічна
+ендокринологія та ендокринна хірургія. 2018. № 3 (63). С. 7–14. doi:
+10.24026/1818-1384.3(63).2018.142668
+      64. Zhang W, Li J, Lu S, et al. Gut microbiota community characteristics
+and disease related microorganism pattern in a population of healthy Chinese
+people. Scientific Reports. 2019;9:1594. doi: 10.1038/s41598-018-36318-y
+      65. Huse SM, Ye Y, Zhou Y, et al. Core Human Microbiome as Viewed
+through 16S rRNA Sequence Clusters. PLOS ONE. 2012;7(6):34242. doi:
+10.1371/journal.pone.0034242
+      66. Vemuri R, Shankar EM, Chieppa M, et al. Beyond just bacteria: func-
+tional biomes in the gut ecosystem including virome, mycobiome, archaeome and
+helminthes. Microorganisms. 2020;8(4):483. doi: 10.3390/microorganisms8040483
+                                        69
+
+      67. Wesolowska-Andersen A., et al. Choice of bacterial DNA extraction
+method from fecal material influences community structure as evaluated by me-
+tagenomic analysis. Microbiome. 2014;2(1):19.
+      68. Huttenhower C, Gevers D, Knight R, et al. Human Microbiome Project
+Consortium. Structure, function and diversity of the healthy human microbiome.
+Nature. 2012;486:207–214
+      69. Wexler AG, Goodman AL. An insider's perspective: Bacteroides as a
+window into the microbiome. Nat Microbiol. 2017;2:17026.
+      70. Classification of domains and phyla – Hierarchical classification of pro-
+karyotes (bacteria): Version 2.0. LPSN. Published 2018. [Электронный ресурс].
+– Режим доступа: http://www.bacterio.net/-classifphyla.html#proteobacteria
+      71. Mariat D, Firmesse O, Levenez F, et al. The Firmicutes/Bacteroidetes ratio
+of the human microbiota changes with age. BMC Microbiol. 2009;9(9):123. doi:
+10.1186/1471-2180-9-123
+      72. Ottman N, Smidt H, de Vos WM, Belzer C. The function of our micro-
+biota: who is out there and what do they do? Frontiers in cellular and infection
+microbiology. 2012; 2:104. doi: 10.3389/fcimb.2012.00104
+      73. Venkatesh Mani et al. Dietary oil composition differentially modulates
+intestinal endotoxin transport and postprandial endotoxemia. Nutri-
+tion&Metabolism. 2013;10:6. doi: 10.1186/1743-7075-10-6
+      74. Okada Y, et al. Anti-inflammatory effects of the genus Bifidobacterium
+on macrophages by modification of phospho-I kappaB and SOCS gene expres-
+sion. Int. J. Exp. Pathol. 2009; 90(2):131-140.
+      75. Ahern PP, Maloy KJ. Understanding immune–microbiota interactions in
+the intestine. Immunology. 2019;159(1):4-14. doi: 10.1111/imm.13150
+      76. Helmut Brade. Endotoxin in Health and Disease. (NY): Marcel Dekker
+Basel, 1999.
+      77. Куваева И.Б. Характеристика функционального состояния микро-
+экологической и иммунологической системы у детей в норме и при патоло-
+гии. Теоретические и клинические аспекты науки о питании. М., 1985. Т. 4.
+С. 132–146.
+      78. Орлова Н.Г. Ферменты и иммунные белки желудочно-кишечного
+тракта у детей с различными клиническими проявлениями пищевой аллер-
+гии: дис. … канд. мед. наук. Москва; 1986. 131 с.
+      79. Kuvaeva IB, Orlova NG, Borovik TE, et al. Microecology and local
+immune and nonspecific defensive proteins depending of different nutrition. Die
+Nahrung. 1987;31(5/6):457-463.
+      80. Dominguez-Bello MG, Godoy-Vitorino F, Knight R, et al. Role of the
+microbiome in human development. Gut. 2019;68(6):1108-1114. doi:
+10.1136/gutjnl-2018-317503
+      81. Menizibeya O. The Gut Microbiota-brain Signaling: Behavioral Ab-
+normalities of The Gut Microbiota Underlie Alzheimer’s Disease Development
+and Progression. Dictatorship or Bidirectional Relationship. Journal of Research
+in Medical and Dental Science. 2018;6(5):246-263.
+                                        70
+
+      82. Shafquat A, Joice R, Simmons SL, Huttenhower C. Functional and phy-
+logenetic assembly of microbial communities in the human microbiome. Trends
+microbiol. 2014:22(5):261-266. doi: 10.1016/j.tim.2014.01.011
+      83. Кулагина Е.В. Видовой состав бактерий порядка Bacteroidales в
+микрофлоре кишечника у здоровых людей и характеристика плазмиды, вы-
+деленной из B. uniformis: автореферат дис. ... канд. мед. наук. М., 2014. 24 с.
+      84. Попенко А.С. Биоинформационное исследование таксономичес-
+кого состава микробиоты кишечника человека: дис. … канд. биол. наук.
+Москва; 2014. 140 с.
+      85. Mills S, Stanton C, Lane JA, Smith GJ, Ross RP. Precision nutrition and
+the microbiome. Part I: Current state of the science. Nutrients. 2019;11(4):923.
+doi: 10.3390/nu11040923
+      86. Shenderov BA. Gut indigenous microbiota and epigenetics. Microbial
+ecology in health and disease. 2012;23(1):171-195. doi: 10.3402/mehd.v23i0.17195
+      87. Koh A, De Vadder F, Kovatcheva-Datchary P, et al. From dietary fiber
+to host physiology: short-chain fatty acids as key bacterial metabolites. Cell.
+2016;165(6):1332-1345. doi: 10.1016/j.cell.2016.05.041
+      88. Boets E, Gomand SV, Deroover L, et al. Systemic availability and me-
+tabolism of colonic-derived short-chain fatty acids in healthy subjects: a stable
+isotope study. The Journal of physiology. 2017;595(2):541-555
+      89. Затевалов А.М., Селькова Е.П., Гудова Н.В., Оганесян А.С. Возрас-
+тная динамика продукции короткоцепочечных жирных кислот кишечной
+микробиотой у пациентов, не имеющих гастроэнтерологических заболева-
+ний. Альманах клинической медицины. 2018. Т. 46. № 2. С. 109–117. doi:
+10.18786/2072-0505-2018-46-2-109-117
+      90. Курмангулов А.А., Дороднева Е.Ф., Исакова Д.Н. Функциональная
+активность микробиоты кишечника при метаболическом синдроме // Ожи-
+рение и метаболизм. 2016. Т. 13. № 1. С. 16–19. doi: 10.14341/omet2016116-19
+      91. Cani PD, Van Hul M, Lefort C, et al. Microbial regulation of organis-
+mal energy homeostasis. Nature metabolism. 2019;1(1):34-46. doi:
+10.1038/s42255-018-0017-4
+      92. Verbeke KA, Boobis AR, Chiodini A, et al. Towards microbial fermen-
+tation metabolites as markers for health benefits of prebiotics. Nutrition research
+reviews. 2015; 28(1):42-66. doi: 10.1017/S0954422415000037
+      93. Куваева И.Б., Ладодо К.С. Микроэкологические и иммунные на-
+рушения у детей: диетическая коррекция. М.: Медицина, 1991. 240 с.
+      94. Klimenko NS, Tyakht AV, Popenko AS, et al. Microbiome responses to
+an uncontrolled short-term diet intervention in the frame of the citizen science
+project. Nutrients. 2018;10(5):576. doi: 10.3390/nu10050576
+      95. Tyakht AV, Kostryukova ES, Popenko AS, et al. Human gut microbiota
+community structures in urban and rural populations in Russia. Nat Commun.
+2013;4: 2469. doi: 10.1038/ncomms3469
+      96. Varda-Brkić D, Vesna T, Lidija Ž-S, et al. The human microbiome in
+health and disease. Signa Vitae. Croatian International symposium on intensive
+

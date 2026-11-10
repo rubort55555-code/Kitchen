@@ -1,0 +1,67 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 20 из 29: References (часть 3)
+============================================================
+
+[66] 66.RaffanielloR.D.LeeS.-Y.TeichbercS.WapnirR.A.Distinct mechanisms of zinc uptake at the apical and basolateral membranes of caco-2 cellsJ. Cell. Physiol.199215235636110.1002/jcp.10415202171639868
+
+[67] 67.FinleyJ.W.Briske-AndersonM.ReevesP.G.JohnsonL.K.Zinc uptake and transcellular movement by caco-2 cells: Studies with media containing fetal bovine serumJ. Nutr. Biochem.1995613714410.1016/0955-2863(95)00023-S
+
+[68] 68.RossiA.PoveriniIR.Di LulloG.ModestiA.ModicaA.ScarinosM.L.Heavy metal toxicity following apical and basolateral exposure in the human intestinal cell line caco-2Toxicol. Vitr.199610273610.1016/0887-2333(95)00097-620650179
+
+[69] 69.LönnerdalB.Intestinal absorption of zincZinc in Human BiologyMillsC.F.SpringerLondon, UK19893355
+
+[70] 70.SteelL.CousinsR.J.Kinetics of zinc absorption by luminally and vascularly perfused rat intestineAm. J. Physiol.1985248G46G5310.1152/ajpgi.1985.248.1.G463966560
+
+[71] 71.YasunoT.OkamotoH.NagaiM.KimuraS.YamamotoT.NaganoK.FurubayashiT.YoshikawaY.YasuiH.KatsumiH.In vitro study on the transport of zinc across intestinal epithelial cells using caco-2 monolayers and isolated rat intestinal membranesBiol. Pharm. Bull.20123558859310.1248/bpb.35.58822466565
+
+[72] 72.MenardM.P.CousinsR.J.Zinc transport by brush border membrane vesicles from rat intestineJ. Nutr.19831131434144210.1093/jn/113.7.14346864341
+
+[73] 73.GhishanF.K.SoboG.Intestinal maturation: In vivo zinc transportPediatr. Res.19831714815110.1203/00006450-198302000-000136828332
+
+[74] 74.CraggR.A.ChristieG.R.PhillipsS.R.RussiR.M.KuryS.MathersJ.C.TaylorP.M.FordD.A novel zinc-regulated human zinc transporter, hztl1, is localized to the enterocyte apical membraneJ. Biol. Chem.2002277227892279710.1074/jbc.M20057720011937503
+
+[75] 75.SandströmB.Dietary pattern and zinc supplyZinc in Human BiologyMillsC.F.SpringerLondon, UK1989
+
+[76] 76.ScholmerichJ.FreudemannA.KottgenE.WietholtzH.SteiertB.LohleE.HaussingerD.GerokW.Bioavailability of zinc from zinc-histidine complexes. I. Comparison with zinc sulfate in healthy menAm. J. Clin. Nutr.1987451480148610.1093/ajcn/45.6.14803591728
+
+[77] 77.SandströmB.ArvidssonB.CederbladA.Björn-RasmussenE.Zinc absorption from composite meals. I. The significance of whest extraction rate, zinc, calcium, and protein content in meals based on breadAm. J. Clin. Nutr.198033739745736169110.1093/ajcn/33.4.739
+
+[78] 78.WadaL.TurnlundJ.R.KingJ.C.Zinc utilization in young men fed adequate and low zinc intakesJ. Nutr.19851151345135410.1093/jn/115.10.13454045570
+
+[79] 79.YasunoT.OkamotoH.NagaiM.KimuraS.YamamotoT.NaganoK.FurubayashiT.YoshikawaY.YasuiH.KatsumiH.The disposition and intestinal absorption of zinc in ratsEur. J. Pharm. Sci.20114441041510.1016/j.ejps.2011.08.02421907799
+
+[80] 80.IstfanN.W.JanghorbaniM.YoungV.R.Absorption of stable70 zn in healthy young men in relation to zinc intakeAm. J. Clin. Nutr.19833818719410.1093/ajcn/38.2.1876881077
+
+[81] 81.KuryS.DrenoB.BezieauS.GiraudetS.KharfiM.KamounR.MoisanJ.P.Identification of slc39a4, a gene involved in acrodermatitis enteropathicaNat. Genet.20023123924010.1038/ng91312068297
+
+[82] 82.WangK.ZhouB.KuoY.M.ZemanskyJ.GitschierJ.A novel member of a zinc transporter family is defective in acrodermatitis enteropathicaAm. J. Hum. Genet.200271667310.1086/34112512032886PMC419995
+
+[83] 83.McMahonR.J.CousinsR.J.Regulation of the zinc transporter znt-1 by dietary zincProc. Natl. Acad. Sci. USA1998954841484610.1073/pnas.95.9.48419560190PMC20175
+
+[84] 84.WangF.KimB.E.PetrisM.J.EideD.J.The mammalian zip5 protein is a zinc transporter that localizes to the basolateral surface of polarized cellsJ. Biol. Chem.2004279514335144110.1074/jbc.M40836120015322118
+
+[85] 85.GuthrieG.J.AydemirT.B.TrocheC.MartinA.B.ChangS.M.CousinsR.J.Influence of zip14 (slc39a14) on intestinal zinc processing and barrier functionAm. J. Physiol. Gastrointest. Liver Physiol.2015308G171G17810.1152/ajpgi.00021.201425428902PMC4312952
+
+[86] 86.CraggR.A.PhillipsS.R.PiperJ.M.VarmaJ.S.CampbellF.C.MathersJ.C.FordD.Homeostatic regulation of zinc transporters in the human small intestine by dietary zinc supplementationGut20055446947810.1136/gut.2004.04196215753530PMC1774437
+
+[87] 87.ValentineR.A.JacksonK.A.ChristieG.R.MathersJ.C.TaylorP.M.FordD.Znt5 variant b is a bidirectional zinc transporter and mediates zinc uptake in human intestinal caco-2 cellsJ. Biol. Chem.2007282143891439310.1074/jbc.M70175220017355957
+
+[88] 88.JacksonK.A.HelstonR.M.McKayJ.A.O'NeillE.D.MathersJ.C.FordD.Splice variants of the human zinc transporter znt5 (slc30a5) are differentially localized and regulated by zinc through transcription and mrna stabilityJ. Biol. Chem.2007282104231043110.1074/jbc.M61053520017234632
+
+[89] 89.GunshinH.MackenzieB.BergerU.V.GunshinY.RomeroM.F.BoronW.F.NussbergerS.GollanJ.L.HedigerM.A.Cloning and characterization of a mammalian proton-coupled metal-ion transporterNature199738848248810.1038/413439242408
+
+[90] 90.TandyS.WilliamsM.LeggettA.Lopez-JimenezM.DedesM.RameshB.SraiS.K.SharpP.Nramp2 expression is associated with ph-dependent iron uptake across the apical membrane of human intestinal caco-2 cellsJ. Biol. Chem.20002751023102910.1074/jbc.275.2.102310625641
+
+[91] 91.KordasK.StoltzfusR.J.New evidence of iron and zinc interplay at the enterocyte and neural tissuesJ. Nutr.20041341295129810.1093/jn/134.6.129515173386
+
+[92] 92.FergusonC.J.WareingM.WardD.T.GreenR.SmithC.P.RiccardiD.Cellular localization of divalent metal transporter dmt-1 in rat kidneyAm. J. Physiol. Ren. Physiol.2001280F803F81410.1152/ajprenal.2001.280.5.F80311292622
+
+[93] 93.GarrickM.D.DolanK.G.HorbinskiC.GhioA.J.HigginsD.PorubcinM.MooreE.G.HainsworthL.N.UmbreitJ.N.ConradM.E.Dmt1: A mammalian transporter for multiple metalsBioMetals200316415410.1023/A:102070221309912572663
+
+[94] 94.YamajiS.TennantJ.TandyS.WilliamsM.Singh SraiS.K.SharpP.Zinc regulates the function and expression of the iron transporters dmt1 and ireg1 in human intestinal caco-2 cellsFebs Lett.200150713714110.1016/S0014-5793(01)02953-211684086

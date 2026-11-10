@@ -1,0 +1,21 @@
+Название: Dietary strategies for improving iron status: balancing safety and efficacy
+Авторы: Andrew M Prentice, Yery A Mendoza, Dora Pereira, Carla Cerami, Rita Wegmuller, Anne Constable, Jörg Spieldenner
+Журнал: Nutrition Reviews, 2016
+DOI: https://doi.org/10.1093/nutrit/nuw055   PMID: 27974599   PMC: PMC5155616
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2016. Published by Oxford University Press on behalf of the International Life Sciences Institute.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 12 из 15: POTENTIAL ROLE OF IRON IN OTHER CIRCUMSTANCES
+============================================================
+
+Numerous articles about the role of iron in neurodegenerative diseases have been published, several of which are included in this review.100–102 Although a link between iron accumulation and neurodegenerative disease has been recognized, the complete mechanisms have not been elucidated. There are many factors that could potentially trigger these complex diseases, including the presence of other transition metals such as copper, zinc, and aluminium.103,104 For the purpose of this review, there is no evidence that intake of iron within the recommended dietary allowances could be a direct cause of neuropathies.
+
+A follow-up study of 10-year-old Chilean children who participated as infants in a randomized controlled trial of high-iron vs low-iron formulas is sometimes cited as demonstrating significantly adverse outcomes at 10 years of age for a few of the psychometric measures,105 but this conclusion is based on a post-hoc subanalysis that resulted in a very small sample size and, hence, requires replication.
+
+Similarly, iron has been associated with adverse cardiovascular effects,106 although the simple positive association observed in cross-sectional epidemiological studies does not confirm causality. In cases of transplantation of heart or kidney, both iron deficiency and overload may lead to complications.107 However, as far as can be determined, there is no information that would link food fortification to any of these problems.
+
+The relationship between iron and some cancers has been considered frequently in the last half century. Research for cancer treatments shows that iron could act both as a factor of carcinogenesis108 and as a cytotoxic agent for cancerous cells.109,110 The risk of colorectal cancer could be connected to heme iron consumption,111 but there is no conclusive link with total dietary iron.112 After considering data from numerous studies, the International Agency for Research on Cancer recently examined the contribution of heme iron from meat intake to increased risk of cancer.113
+
+For type 2 diabetes, epidemiological observations and experimental studies show a clear link between iron overload and risk of diabetes.114 Here again, from a nutritional perspective, only high heme iron intake showed a significant association with type 2 diabetes. Total dietary iron, nonheme iron, and even supplementation are not significantly associated with the risk of diabetes.115
+
+Complex interactions between iron deficiency, malaria, and HIV infection have been reported.116,117 Anemia is highly prevalent in pediatric populations in Africa and Southeast Asia, and in many countries there is overlap between patients infected with HIV and malaria, and anemia. Treating iron deficiency can result in improved survival of HIV-infected children,117 but – as noted previously in this review – the additional intake of iron can also favor malaria. Consequently, it is difficult to decide whether a population of children at risk of both HIV and malaria infections would benefit from iron supplementation unless there is simultaneous provision of malaria treatments or precautions (such as insecticide-treated bed nets). Joint infection with HIV and Mycobacterium tuberculosis can promote anemia and iron redistribution, but again, additional iron intake may not be safe.118 During the preparation of this review, no published data was found about iron fortification (low doses) in patients with HIV infection, HIV infection and malaria, or bacterial infections.

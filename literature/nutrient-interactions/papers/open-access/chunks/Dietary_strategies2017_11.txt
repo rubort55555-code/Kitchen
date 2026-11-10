@@ -1,0 +1,27 @@
+Название: Dietary strategies for improving iron status: balancing safety and efficacy
+Авторы: Andrew M Prentice, Yery A Mendoza, Dora Pereira, Carla Cerami, Rita Wegmuller, Anne Constable, Jörg Spieldenner
+Журнал: Nutrition Reviews, 2016
+DOI: https://doi.org/10.1093/nutrit/nuw055   PMID: 27974599   PMC: PMC5155616
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2016. Published by Oxford University Press on behalf of the International Life Sciences Institute.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 11 из 15: IRON AND BLOOD DISORDERS
+============================================================
+
+## 
+
+Any program for universal fortification of foods needs to consider whether there might be subsections of the recipient population who could be harmed by the addition of the nutrient. For instance, the United Kingdom has not adopted folate fortification, partly due to concerns that additional folate might promote tumor growth in cancer patients or conceal pernicious anemia in the elderly. The United States, on the other hand, has adopted folate fortification.
+
+In the case of iron, an important consideration is whether there are circumstances in which recipients could become iron overloaded to an extent that would damage their health with life-threatening consequences (primarily through induction of cirrhosis, diabetes, or cardiomyopathy). There are a number of clinical conditions in which this might be a concern, notably hemochromatosis, beta thalassemia, and repeated blood transfusions.
+
+## Hemochromatosis.
+
+Hemochromatosis is the generic term for iron overload, of which the two leading causes are hereditary hemochromatosis and transfusional iron overload (see below). Hereditary hemochromatosis, which has various genetic causes with differing clinical manifestations, leads to iron overload and subsequent toxicity, especially in the liver. Treatment is possible if the condition is recognized early. Hereditary hemochromatosis is most common in people of Celtic, English, or Scandinavian origin, in whom the prevalence is between 0.5% and 1%.
+
+## Beta thalassemia.
+
+Beta thalassemia is a genetic defect that prevents the production of the beta chain of hemoglobin and leads to microcytic anemia, which causes a reticulocytosis as the body attempts to compensate. This in turn causes the downregulation of hepcidin (mediated by the newly discovered erythroferrone), which leads to iron overload. Patients require regular blood transfusions, which further contribute to the accumulation of iron. If not treated by iron chelation, the resultant iron overload can cause myocardial siderosis and death from heart failure. Beta thalassemia affects about 1 in 100 000 people globally.
+
+## Transfusional iron overload.
+
+A number of conditions that require regular blood transfusion (including beta thalassemia) can lead to secondary iron overload. Though serious for the individuals affected, such conditions are rare, and the danger of iron overload can be ameliorated by chelation therapy.

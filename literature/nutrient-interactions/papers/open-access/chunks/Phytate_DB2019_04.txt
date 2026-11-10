@@ -1,0 +1,59 @@
+Название: Development of the FAO/INFOODS/IZINCG Global Food Composition Database for Phytate
+Авторы: Sergio Dahdouh, Fernanda Grande, Sarah Nájera Espinosa, Anna Vincent, Rosalind Gibson, Karl Bailey, Janet King, Doris Rittenschober, U Ruth Charrondière
+Журнал: Journal of Food Composition and Analysis, 2019
+DOI: https://doi.org/10.1016/j.jfca.2019.01.023   PMID: 31057213   PMC: PMC6472536
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 The Authors
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 10: Material and methods (часть 2)
+============================================================
+
+PHYT- | Phytic acid, unknown or variable method | mg
+
+PHYTCPPI:FE | Phytic acid (by indirect precipitation) : Iron ratio | –
+
+PHYTCPPI:ZN | Phytic acid (by indirect precipitation) : Zinc ratio | –
+
+PHYTCPPD:FE | Phytic acid (by direct precipitation) : Iron ratio | –
+
+PHYTCPPD:ZN | Phytic acid (by direct precipitation) : Zinc ratio | –
+
+PHYTCA:FE | Phytic acid (by K-PHYT kit) : Iron ratio | –
+
+PHYTCA:ZN | Phytic acid (by K-PHYT kit) : Zinc ratio | –
+
+PHYTCPP:FE | Phytic acid (by anion exchange) : Iron ratio | –
+
+PHYTCPP:ZN | Phytic acid (by anion exchange) : Zinc ratio | –
+
+PHYTC-:FE | Phytic acid (by unknown colorimetry) : Iron ratio | –
+
+PHYTC-:ZN | Phytic acid (by unknown colorimetry) : Zinc ratio | –
+
+PHYT-:FE | Phytic acid (by unknown method) : Iron ratio | –
+
+PHYT-:ZN | Phytic acid (by unknown method) : Zinc ratio | –
+
+PHY:FE | Phytic acid (by HPLC/HPAE) : Iron ratio | –
+
+PHY:ZN | Phytic acid (by HPLC/HPAE) : Zinc ratio | –
+
+To estimate the mineral binding effect of phytate on zinc and iron bioavailability the IZiNCG recommends the use of phytate:zinc molar ratios of the diet (Gibson et al., 2010), and Hurrell and Egli (2010) recommend the use of dietary phytate:iron molar ratios, respectively. Therefore, ratios for total phytate and IPs were calculated using the following formulas (Eqs. (1), (2), (3), (4)). Only IP4, IP5 and IP6 were used in the calculation of IPs:iron ratio (Eq. (4)), as these are the ones that can bind to the iron. For the IPs:zinc ratio equation, only IP5 and IP6 were considered (Eq. (3)), as no effect has been described with the lower IPs (Lönnerdal et al., 1989).
+
+Eq. (1). PHYT:ZN formula
+
+Eq. (2). PHYT:FE formula
+
+Eq. (3). PHY:ZN formula
+
+Eq. (4). PHY:FE formula
+
+Where:
+
+- Atw : Atomic weight
+
+- MW : Molar weight
+
+## Compilation
+
+All screened data were subsequently included in the FAO/INFOODS/IZINCG Global Food Composition Database for Phytate. Each of the foods was coded and categorised into one of the 19 food groups and their subgroups, adapted from the ‘Food groups for simple indicators’ classification system developed by FAO for the FAO/WHO Global Individual Food consumption data Tool (GIFT) platform (FAO, 2017a,b,c), which is based on the FoodEx2 food classification and description system (EFSA, 2015). In addition, every food was coded using FoodEx2, which is useful for harmonisation and linkage of food-related data across domains and for providing the possibility of semi-automated food matching.

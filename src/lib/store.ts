@@ -1,7 +1,11 @@
 // Состояние приложения и все действия с данными. Каждое действие сразу сохраняется в телефон.
+import { POLICY_VERSION, type ConsentKind } from "./privacy";
+import { removeMeasure, upsertMeasure, type Measure } from "./body";
 import { useSyncExternalStore } from "react";
 import * as db from "./db";
-import type { CatalogItem, LogEntry, Place, Product, Reason, Recipe, Settings, Unit } from "./types";
+import type { CatalogItem, LogEntry, Meal, PlanEntry, Place, Product, Reason, Recipe, Settings, Unit } from "./types";
+import { copyMeal, mealFromRecipe } from "./diary";
+import { planFor } from "./nutrition";
 import { DEFAULT_RULES } from "./exclusions";
 import { norm, uid, ymd, addDays, daysLeft } from "./util";
 import { findCatalog, setCatalog } from "./catalog";
@@ -14,6 +18,8 @@ export interface State {
   products: Product[];
   log: LogEntry[];
   recipes: Recipe[];
+  /** Дневник питания: записи о съеденном. */
+  meals: Meal[];
   settings: Settings;
   saveError: string | null;
   /** Идёт загрузка встроенной базы рецептов по частям. */
@@ -41,7 +47,7 @@ export function defaultSettings(): Settings {
   };
 }
 
-let state: State = { ready: false, products: [], log: [], recipes: [], settings: defaultSettings(), saveError: null };
+let state: State = { ready: false, products: [], log: [], recipes: [], meals: [], settings: defaultSettings(), saveError: null };
 const subs = new Set<() => void>();
 
 function set(patch: Partial<State>) {
@@ -68,13 +74,13 @@ async function persist(p: Promise<void>) {
 
 export async function load() {
   try {
-    const [products, log, recipes, saved] = await Promise.all([
-      db.getAll<Product>("products"), db.getAll<LogEntry>("log"), db.getAll<Recipe>("recipes"), db.getKv<Partial<Settings>>("settings"),
+    const [products, log, recipes, meals, saved] = await Promise.all([
+      db.getAll<Product>("products"), db.getAll<LogEntry>("log"), db.getAll<Recipe>("recipes"), db.getAll<Meal>("meals"), db.getKv<Partial<Settings>>("settings"),
     ]);
     const settings = { ...defaultSettings(), ...(saved || {}) };
     log.sort((a, b) => a.t - b.t);
     await applySavedCatalog();
-    set({ ready: true, products, log, recipes, settings });
+    set({ ready: true, products, log, recipes, meals, settings });
     checkContent();
   } catch (e) {
     reportError(e);
@@ -421,22 +427,121 @@ export function deleteRecipe(id: string) {
   persist(db.apply([{ store: "recipes", del: [id] }]));
 }
 
+// ---------- дневник питания ----------
+/** Чей дневник открыт: выбранный член семьи, иначе первый, у кого есть расчёт норм. */
+export function diaryWho(s: Settings = state.settings): string {
+  const ok = (id?: string) => !!id && s.members.some((m) => m.id === id);
+  if (ok(s.diaryWho)) return s.diaryWho!;
+  const withPlan = s.members.find((m) => m.body && planFor(m.body));
+  return (withPlan || s.members[0])?.id || "";
+}
+export const setDiaryWho = (id: string) => setSettings({ diaryWho: id });
+
+/** Запоминает товар по штрихкоду (найденный в Open Food Facts или введённый вручную), чтобы в следующий раз узнать его сразу и без интернета. */
+export function rememberBarcode(code: string, name: string, off: import("./off").OffProduct | null) {
+  setSettings({ barcodes: { ...(state.settings.barcodes || {}), [code]: { name, off, t: Date.now() } } });
+}
+
+export function addMeals(list: Meal[]) {
+  if (!list.length) return;
+  set({ meals: [...state.meals, ...list] });
+  persist(db.apply([{ store: "meals", put: list }]));
+}
+export function deleteMeals(ids: string[]) {
+  if (!ids.length) return;
+  const gone = new Set(ids);
+  set({ meals: state.meals.filter((m) => !gone.has(m.id)) });
+  persist(db.apply([{ store: "meals", del: ids }]));
+}
+export function updateMeal(id: string, patch: Partial<Meal>) {
+  const old = state.meals.find((m) => m.id === id);
+  if (!old) return;
+  const m = { ...old, ...patch };
+  set({ meals: state.meals.map((x) => (x.id === id ? m : x)) });
+  persist(db.apply([{ store: "meals", put: [m] }]));
+}
+/** «Повторить вчера»: копирует записи одного человека с одного дня на другой. Возвращает, сколько записей добавлено. */
+export function repeatDay(from: string, to: string, who?: string): Meal[] {
+  const src = state.meals.filter((m) => m.date === from && (!who || !m.who || m.who === who));
+  const copies = src.map((m) => copyMeal(m, to));
+  addMeals(copies);
+  return copies;
+}
+/** Вода за день одного человека, мл (ключ — «id человека|дата»). */
+/** Записать замер члену семьи. Если это самая свежая дата, обновляет и текущие вес, талию, бёдра в профиле — нормы пересчитаются сами. */
+export function addMeasure(who: string, m: Measure) {
+  const list = upsertMeasure(state.settings.measures?.[who] || [], m);
+  const measures = { ...(state.settings.measures || {}), [who]: list };
+  const latest = list[list.length - 1];
+  const members = state.settings.members.map((x) => {
+    if (x.id !== who || !x.body || !latest || latest.date !== m.date) return x;
+    return { ...x, body: { ...x.body, ...(latest.weight !== undefined ? { weight: latest.weight } : {}), ...(latest.waist !== undefined ? { waist: latest.waist } : {}), ...(latest.hips !== undefined ? { hips: latest.hips } : {}) } };
+  });
+  setSettings({ measures, members });
+}
+export function deleteMeasure(who: string, date: string) {
+  setSettings({ measures: { ...(state.settings.measures || {}), [who]: removeMeasure(state.settings.measures?.[who] || [], date) } });
+}
+/** Человек увидел «Что нового». */
+export function markNewsSeen(id: string) {
+  if (state.settings.seenNews !== id) setSettings({ seenNews: id });
+}
+/** Согласие дано. */
+export function giveConsent(k: ConsentKind) {
+  setSettings({ consent: { ...(state.settings.consent || {}), [k]: { version: POLICY_VERSION, at: Date.now() } } });
+}
+/** Согласие отозвано. */
+export function withdrawConsent(k: ConsentKind) {
+  const c = { ...(state.settings.consent || {}) };
+  delete c[k];
+  setSettings({ consent: c });
+}
+/** Удалить введённые данные о теле и здоровье: профили, замеры, воду. Дневник питания (записи еды) остаётся. */
+export function eraseHealthData() {
+  setSettings({
+    members: state.settings.members.map((m) => ({ ...m, body: undefined })),
+    measures: undefined, water: undefined,
+  });
+}
+const NO_MEASURES: Measure[] = []; // один и тот же пустой массив: иначе подписка на хранилище видит «новое значение» при каждой проверке
+export const measuresOf = (who: string, s: Settings = state.settings): Measure[] => s.measures?.[who] || NO_MEASURES;
+
+const waterKey = (who: string, date: string) => `${who}|${date}`;
+export const waterOf = (date: string, s: Settings = state.settings, who: string = diaryWho(s)) => s.water?.[waterKey(who, date)] || 0;
+export function addWater(date: string, ml: number, who: string = diaryWho()) {
+  const next = Math.max(0, waterOf(date, state.settings, who) + ml);
+  const water = { ...(state.settings.water || {}), [waterKey(who, date)]: next };
+  if (!next) delete water[waterKey(who, date)];
+  setSettings({ water });
+}
+/** Отметка «приготовили/съели» в меню записывает блюдо в дневник (порция 1); снятие отметки — убирает запись. */
+export function syncPlanMeal(e: PlanEntry, done: boolean) {
+  const mine = state.meals.filter((m) => m.planEntryId === e.id);
+  if (!done) { deleteMeals(mine.map((m) => m.id)); return; }
+  if (mine.length || !e.recipeId) return;
+  const r = state.recipes.find((x) => x.id === e.recipeId);
+  if (!r) return;
+  const m = mealFromRecipe(r, 1, e.date, e.slot, diaryWho());
+  if (m) addMeals([{ ...m, planEntryId: e.id }]);
+}
+
 // ---------- копия данных ----------
 export const BACKUP_APP = "kitchen-app";
-export interface Backup { app: string; v: number; at: string; products: Product[]; log: LogEntry[]; recipes: Recipe[]; settings: Settings }
+export interface Backup { app: string; v: number; at: string; products: Product[]; log: LogEntry[]; recipes: Recipe[]; meals?: Meal[]; settings: Settings }
 
 export function makeBackup(): Backup {
-  return { app: BACKUP_APP, v: 1, at: new Date().toISOString(), products: state.products, log: state.log, recipes: state.recipes.filter((r) => r.source !== "base" || r.fav || r.note || r.photo || r.rating || r.history?.length), settings: state.settings };
+  return { app: BACKUP_APP, v: 1, at: new Date().toISOString(), products: state.products, log: state.log, meals: state.meals, recipes: state.recipes.filter((r) => r.source !== "base" || r.fav || r.note || r.photo || r.rating || r.history?.length), settings: state.settings };
 }
 
 /** Восстановление: replace — заменить всё; merge — добавить недостающее. */
 export async function restore(b: Backup, mode: "replace" | "merge") {
-  let products = b.products, log = b.log, recipes = b.recipes, settings = { ...defaultSettings(), ...b.settings };
+  let products = b.products, log = b.log, recipes = b.recipes, meals = b.meals || [], settings = { ...defaultSettings(), ...b.settings };
   if (mode === "merge") {
     const mergeBy = <T extends { id: string }>(a: T[], c: T[]) => { const m = new Map(a.map((x) => [x.id, x])); c.forEach((x) => { if (!m.has(x.id)) m.set(x.id, x); }); return Array.from(m.values()); };
     products = mergeBy(state.products, b.products);
     log = mergeBy(state.log, b.log).sort((x, y) => x.t - y.t);
     recipes = mergeBy(state.recipes, b.recipes);
+    meals = mergeBy(state.meals, b.meals || []);
     const byId = <T extends { id: string }>(a: T[] = [], c: T[] = []) => { const m = new Map(a.map((x) => [x.id, x])); c.forEach((x) => { if (!m.has(x.id)) m.set(x.id, x); }); return Array.from(m.values()); };
     settings = {
       ...state.settings,
@@ -446,8 +551,8 @@ export async function restore(b: Backup, mode: "replace" | "merge") {
     };
   }
   seedGen++;
-  await db.replaceAll({ products, log, recipes, kv: { settings } });
-  set({ products, log, recipes, settings });
+  await db.replaceAll({ products, log, recipes, meals, kv: { settings } });
+  set({ products, log, recipes, meals, settings });
   seedBase();
 }
 

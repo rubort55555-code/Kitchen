@@ -1,0 +1,23 @@
+Название: Mechanisms of Carotenoid Intestinal Absorption: Where Do We Stand?
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2019
+DOI: https://doi.org/10.3390/nu11040838   PMID: 31013870   PMC: PMC6520933
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 6 из 11: 4. Regulation of Carotenoid Transporter Expressions in the Enterocyte
+============================================================
+
+Crucial factors modulating the expression and/or the activity of intestinal proteins involved in carotenoid absorption are provitamin A carotenoids, through a feedback regulation. Indeed, studies have pointed out that SR-BI activity is partly controlled by retinoids. Using both mouse models and human cell lines, it was specifically shown that retinoic acid produced from dietary precursors by BCO1 induced the expression of the intestinal transcription factor ISX that repressed the expression of both BCO1 [71] and SR-B1 [72], thus impacting both carotenoid conversion and uptake [73].
+
+Additionally, many dietary factors other than retinoids were shown to regulate transporter expression in the intestine and may, thus, indirectly impact on carotenoid absorption.
+
+Among these dietary factors, fat and fatty acids seem to play major roles. For instance, SR-BI expression in Caco-2 cells is increased by micellar oleic and ecosapentaenoic acids [74]. Conversely, CD36, NPC1L1, or ABCA1 expressions in rodent intestines are downregulated by dietary fat, including oleic acid [75,76] and cholesterol [77]. Such downregulation in NPC1L1 and ABCA1 expressions was also found after exposure of cultured intestinal FHs 74 or Caco-2 cells to phytosterols [78,79] and to long-chain polyunsaturated fatty acids [74,80].
+
+In addition, dietary glucose increases SR-BI expression in both Caco-2 cells and mouse intestines [81] and decreases Caco2 cell ABCA1 expression [82].
+
+Finally, some polyphenols were shown to decrease both SR-BI, NPCL1, and ABCA1 expressions in Caco-2 cells [83,84] and so did the cholesterol-lowering drug ezetimibe [49].
+
+Host factors can also regulate carotenoid transporters. Among them, insulin resistance increases SR-BI intestinal expression in hamsters [85]. SR-BI post-transcriptional regulation also seems be dependent on bile secretion, with bile salts leading to a rise of intestinal SR-BI expression in rodents [86]. Finally, NPC1L1 expression was increased by estrogen [87] and cholecystokinin [88] in mouse intestines, while its expression was decreased by peptide YY in Caco-2 cells [89] (see [90] for review).
+
+As the above results were exclusively obtained in cultured cells and animal studies, further investigations are deeply needed to address their relevance in humans.

@@ -1,0 +1,216 @@
+Название: Influence of Dairy Products on Bioavailability of Zinc from Other Food Products: A Review of Complementarity at a Meal Level
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu13124253   PMID: 34959808   PMC: PMC8705257
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+### Abstract
+
+In this paper, we reviewed the role of dairy products in dietary zinc absorption. Dairy products can have a reasonable contribution for dietary zinc intake in Western diets, where dairy consumption is high. However, the co-ingestion of dairy products can also improve zinc absorption from other food products. Such improvements have been observed when dairy products (e.g., milk or yoghurt) were ingested together with food such as rice, tortillas or bread products, all of which are considered to be high-phytate foods with low inherent zinc absorption. For foods low in phytate, the co-ingestion of dairy products did not improve zinc absorption. Improved zinc absorption of zinc from high-phytate foods following co-ingestion with dairy products may be related to the beneficial effects of the citrate and phosphopeptides present in dairy products. Considering that the main dietary zinc sources in areas in the world where zinc deficiency is most prevalent are typically high in phytate, the inclusion of dairy products in meals may be a viable dietary strategy to improve zinc absorption.
+
+### 1. Introduction
+
+While the nutrient content of food products is typically determined on an individual product basis, the nutritional value is, in many, cases difficult to assess on a product basis. This is because in most cases, food products are consumed as meals rather than as single products. As a result, while the nutrient content of the meal can be considered as the sum of the nutrients in the products making up the meal, this is not true for its nutritional value. The combination of different products into a meal can both improve but also reduce its nutritional value. Examples of (non-)complementary different food products can be observed when considering the proteins in different food products [1]. The nutritional value of proteins is typically expressed based on amino acid composition and the digestibility of the proteins, i.e., proteins that deliver high levels of each of the indispensable amino acids (IAA) in digestible form are scored higher [2]. The lack of one or more IAA in a protein source can result in a lower score for proteins [3]. Such is the case for wheat protein, where the IAA Lys is present only at comparatively low levels [4]. However, some other proteins, including milk proteins, contain Lys in digestible form at levels in excess of those required based on the protein reference patterns [5]. Therefore, the combined consumption of milk protein and wheat protein, e.g., in the form of a breakfast cereal consumed with milk, can create a situation where one protein source, e.g., milk protein, compensates for the deficiencies in another protein sources, e.g., wheat protein [6].
+
+There are, however, instances where the combination of two food sources impairs the digestibility of proteins. This has, for instance, been observed in the case of egg protein, which, when combined with black tea, was shown to have lower digestibility than without black tea [7]. This effect was related to the interaction of polyphenols from the tea with the protein, resulting in impaired digestibility [7,8]. In addition to proteins, the bioavailability of several other nutrients is also affected by co-ingestion with other products, including minerals. In this case, the combination of different products and their mixing in a bolus in the gastro-intestinal tract can lead to the interaction of minerals from one product with constituents from another product. Hurrell et al. [9], for instance, showed that beverages containing polyphenols, such as tea and cocoa could strongly impair the absorption of (non-heme) iron. Likewise, it is also well established that high phytate diets can lead to a reduced absorption of essential minerals such as iron, zinc and calcium, even if they are not present in the same food product [10,11]. Milk and dairy products are found to be an important source of these dietary minerals, supplying more than 50% of dietary calcium in many regions across the world [12,13], but for iron and zinc, milk and dairy products are not the most suitable dietary sources as concentrations of iron and zinc in these products are rather low. However, the consumption of other foods that act as dietary sources of these minerals together with milk and dairy products has been shown to impact absorption. In this paper, we review the impact of dairy products on zinc absorption from other food products. We will consider the physicochemical reasons for the observed in vivo effects, so as to provide a mechanistic understanding of these interactive effects with regard to the meal level. Dietary zinc supplements are not within the scope of this review.
+
+### 2. Zinc in Human Nutrition
+
+Zinc is an essential element because it is required in several cellular processes, such as differentiation, apoptosis and proliferation, which affect growth and development [14]. The adult human body contains ~2–3 g of zinc and most of this zinc is found in the bones and skeletal muscles (>85%), although smaller portions are found in the skin (~4%) and liver (~3%) [15]; the prostate gland contains the highest concentrations of zinc of any soft tissue in the human body [16]. Plasma zinc concentration in healthy individuals range from 12 to 16 μM [17,18,19], but this can be lower during acute infections and inflammation, due the redistribution of zinc from the plasma to the liver [20]. Approximately 60% of plasmatic zinc is associated with albumin, 30% with α-macroglobulin, and the rest with transferrin [21]. Zinc deficiency in humans was first reported in 1961 by Prasad et al. [22], followed by many subsequent reports [23,24], and is currently a worldwide problem that affects ~17% of the global population [25]. South and Southeast Asia, Sub-Saharan Africa and Central America are regions with the highest risk of zinc deficiency [25]. Zinc deficiency can lead to diarrhea, a lack of appetite, hair loss, skin problems, disorders of the gustatory, immunodeficiency and an increased incidence of bacterial, fungal and viral infections [26,27]. Such deficiencies can be related to low intake or the low bioavailability of dietary zinc [28].
+
+Because the human body does not synthesize zinc, the intake of zinc through foods or supplements is required. The population reference intake is 9.4 and 7.5 mg per day for adult (>18 y) males and females, respectively, for those consuming a low phytate diet (300 mg/d), but is notably higher if diets contain more phytate [29]. Among the various food products, red meat, some seafoods, dairy products, nuts, seeds, dried legumes, and whole-grain cereals are considered good dietary sources of zinc [30,31]. For the dietary source of zinc, it is important that these products do not only contain sufficient zinc, but that it is available for absorption. The basic process of zinc absorption is described in Section 3, with the aim of providing the basis for understanding zinc absorption from dairy products and meals containing dairy products, as described in Section 4 and Section 5, respectively.
+
+### 3. Zinc Absorption
+
+The absorption of zinc occurs within the small intestine and the absorbed zinc is released in portal circulation through transporters [32,33,34]. Small intestinal perfusion studies in humans have shown that the sites of maximal absorption of zinc are the duodenum [35] and the jejunum [32]. Zinc is absorbed in its ionized form, so, for the absorption of dietary zinc, it is important that zinc is released from foods and ionized during the digestion process [36]. These liberated zinc ions, however, may form complexes with ligands such as phytates, phosphates, amino acids and other organic acids [34,37,38], which affects their solubility and absorption.
+
+The absorption of zinc in the small intestine occurs by both active (saturable carrier-mediated process) or passive transport (unsaturable diffusion-mediated process) mechanisms, with the former occurring more often at a low luminal zinc concentration and the latter at high concentrations [39]. An active transport of zinc occurs through the following two carriers: ZIP proteins regulate the influx of zinc into enterocytes from the lumen, serum or intracellular compartments, whereas ZnT proteins facilitate the efflux of zinc from the enterocytes into the extracellular environment or into intracellular organelles [39]. Both ZIP and ZnT transporters are present across the entire the gastrointestinal tract, and also in the colon [40]. Zinc exported into the portal vein binds to albumin (60%), with α-macroglobulin (30%), and transferrin [21] for transport to the peripheral tissues. Zinc accumulated in the intestinal epithelial cells can be excreted through their desquamation [41,42].
+
+In general, ~33% of dietary zinc is absorbed in humans [43,44], but this depends on the state of the foods consumed. Zinc absorption from liquid foods is higher (60–70% in fasting subjects) than from solid foods [45]. The amount of zinc in a meal will, in itself, affect zinc absorption: increasing zinc intake from a meal decreases fractional zinc absorption [28,46], which is probably due to the saturation of zinc transporters [47].
+
+### 4. Zinc Absorption from Dairy Products
+
+In countries with a high dairy intake, dairy products contribute significantly to overall zinc intake. For instance, in the Netherlands, >20% of dietary zinc is supplied by dairy products [48]. Dairy consumption provides ~15% of total energy intake, so dairy products proportionally contribute more to zinc intake than to caloric intake [48]. Bovine milk contains ~3–4 mg/L of zinc, of which 95% is associated with the casein micelles and the rest is associated with citrate molecules in the aqueous phase [49].
+
+Human studies concerning the absorption of zinc from dairy products are rather scarce. Sandstrom et al. [50], investigated the absorption of zinc from 450 mL of human milk (casein-whey protein ratio, 40:60), bovine milk with 3% fat (casein-whey protein ratio, 80:20), humanized bovine milk formula (casein-whey protein ratio, 40:60) and soy formula in 54 healthy human adults. Milks and formulas were extrinsically labeled with a radioisotope (65Zn) and their absorption was determined by measuring the whole-body retention of the isotope. Even though the zinc content of the formulas was similar to, or higher, than that of human milk, zinc absorption from the formulas and bovine milk was found to be significantly lower (p < 0.05) than from human milk (Table 1) [50].
+
+The greater bioavailability of zinc from human milk compared to bovine milk was hypothesized to due to the different chemical composition of the two milks, particularly the different casein:whey protein ratio [50]. This hypothesis based on the importance of the casein:whey protein ratio was later substantiated by findings that proved that adjusting the ratio of casein to whey protein from 80:20 to 40:60 (similar to human milk) significantly (p < 0.001) increased zinc absorption from bovine milk, i.e., from 21% to 32% [51]. Moreover, Sandstrom et al. [50] reported a significantly (p < 0.05) higher zinc absorption from bovine milk compared to a soy formula (28 vs. 14%) that was high in phytic acid (200 mg/L), which is agrees with the understanding that phytates are powerful inhibitors of zinc uptake [15]. Talsma et al. [52], using a dual stable isotope technique, found lower zinc absorption from bovine milk compared to water (25.5 vs. 72.3%). This is probably because water does not contain inhibitory factors that reduce zinc absorption [53].
+
+### 5. Zinc Absorption from Meals Containing Dairy Products
+
+As outlined in Section 4, the contribution of dairy to total dietary zinc intake is not the highest of all food groups. However, dairy products can still have a notable contribution. In addition, dairy products can play another role in helping to combat zinc deficiency, which is most common in low- and middle-income countries, where the main dietary zinc sources are plant foods, from which zinc is poorly bioavailable [54]. One pathway to improve the absorption of zinc from foods in which zinc is poorly bioavailable, such as cereals and legumes, is the combined intake of these foods together with dairy products. Table 2 shows results of published studies in humans that investigated the complementarity of dairy products for zinc absorption from other products. In these studies, zinc absorption was determined in vivo by isotope techniques.
+
+Talsma et al. [52] examined the effect of milk on zinc absorption from rice in 18 young and healthy women using a dual stable isotopes technique and found a significant (p < 0.05) increase (by 62%) in zinc absorption from rice when 90 g of high-phytate rice was consumed together with 600 mL of UHT-treated whole milk, compared to when the same amount of rice was consumed with water. Rosado et al. [55] studied zinc absorption in 48 healthy Mexican women, using a stable double isotope technique, and observed that the addition of 250 mL of UHT low-fat milk or 150 g of flavored yogurt to the plant-based test meal, consisting of 120 g of corn tortillas and 200 g of cooked black beans, significantly (p < 0.05) increased zinc absorption by approximately 50% for milk and 68% yoghurt. Sandstrom et al. [56] reported a significant (p < 0.001) increase in the zinc absorption from whole meal bread with a high concentration of phytates when ingested with milk and cheese, thereby counteracting the negative effect of phytates and facilitating the absorption of zinc. Using a radioisotope technique, Hunt et al. [57] showed that increasing the amount of casein (8.9 and 51.7 g) in a cereal-based meal, containing rolls made from wholemeal or white flour, significantly (p < 0.0001) increased the absorption of zinc in adults. From these studies, it thus appears that the consumption of dairy products in conjunction with food products rich in phytate, i.e., rice [52], corn tortillas [55] or bread [56,57] could increase zinc absorption. However, there are also some reported cases wherein the dietary inclusion of dairy products did not improve zinc absorption, as described below.
+
+Pecoud et al. [60] administered 50 mg of zinc (as 220 mg ZnSO4 in gelatin capsules) to 18 subjects orally with breakfast and found that the consumption of 200 mL of milk and 50 g of cheese with breakfast (100 mL coffee, 50 g jam, 10 g butter and 100 g brown bread or 10 g white bread) reduced zinc absorption. It should be noted here, however, that the zinc was provided as a supplement and not via a food product. Sandström and Cederblad [46] reported a significant decrease (p < 0.05) in zinc absorption from a soybean meal (consisting of soybeans, potatoes, tomatoes and white bread) by the addition of milk (125 mL) and hypothesized that the additional calcium provided by milk could hinder zinc absorption. A non-significant (p > 0.05) reduction in zinc absorption was observed by Flanagan et al. [59] when 210 mL of milk (made up to 250 mL with water) was provided with a turkey-based meal, compared when the meal was consumed with water. Wood and Zheng [60] also found no significant effect (p > 0.05) on zinc absorption when 400 mL of reconstituted non-fat dried milk per day (200 mL with breakfast and 200 mL with dinner) was consumed with basal diets consisting of normal foods, selected to provide the U.S. Recommended Dietary Allowances. Contrary to earlier studies where dairy products improved zinc absorption from primarily phytate-rich foods, it appears that for other foods this was not that case. As outlined in Table 2, the fractional absorption of zinc from the base meal without dairy was notably higher (19–29%) than of that in studies with phytate rich foods (7–13%). It thus appears that the ability of dairy products to improve zinc absorption is dependent on a product matrix, which is further described in Section 6.
+
+### 6. Factors Affecting Zinc Absorption from Meals Containing Dairy Products
+
+From Table 2, it is apparent that, cases where the consumption of dairy products in a meal improved zinc absorption from other products, are cases where the dietary zinc was provided by phytate-rich foods (e.g., rice, bread, tortilla). When analyzing the role of dairy mechanistically, it is important to consider that milk and dairy products contain various compounds that also have the ability to bind zinc, e.g., citrate, phosphate and proteins. Two studies have reported that the absorption of zinc is strongly related to the solubility of zinc salts in an aqueous solution [61,62]. Tang and Skibsted [63] compared the solubility of zinc phytate and zinc citrate salts in water at ~37 °C and noted that the former had a solubility that was ~5 orders of magnitude lower (2.9 × 10−6 vs. 0.32 g/100 mL), a finding that was also observed in concentrations of zinc ions in solution (1.6 × 10−7 vs. 0.017 mol/L). Dietary zinc can interact with dietary phytate in the intestinal lumen (luminal pH 6–7.4) [64], forming stable and sparingly soluble complexes which precipitate, and thus become poorly bioaccessible [28]. The precipitated zinc-phytate complexes are therefore excreted with the feces [15]. In other words, dietary phytate interferes with zinc uptake and is therefore considered to be one of the main inhibitors of zinc absorption. According to the World Health Organization [65] a phytate:zinc molar ratio of higher than 15:1 inhibits zinc bioavailability.
+
+The stability and solubility of the zinc/phytate complex depends on various factors such as the pH value, the molar ratio and the presence of other compounds in the solution [66]. Phytate binds zinc with a stoichiometric ratio of 2:1 of the zinc/phytate complex [15] with strong binding affinities, as follows: 1.8 × 106 L/mol (site 1) and 8 × 104 L/mol (site 2) [63]. On the other hand, citrate binds to zinc with a weaker strength (1.2 × 104 L/mol) than phytate. Citrate is the main low molecular weight zinc ligand in human milk and is known as a zinc absorption enhancer [15,28]. Human and bovine milk contains 80 mg/100 mL and 150 mg/100 mL of citrate, respectively [67], which can help to solubilize better zinc from other foods, providing that they are consumed at the same time [68]. As a result, the bioavailability of zinc as a result of combining milk and other dairy products with foods may be considerably higher than that of the foods themselves.
+
+Several hypotheses have been posed for improved zinc absorption from phytate-rich foods when consumed in combination with dairy products. It has been hypothesized that this improvement in zinc absorption from phytate-rich foods by co-ingesting dairy products may be due to a higher proportion of phytate-bound calcium in the gastrointestinal tract, thereby blocking phytate binding sites and allowing more zinc to become available for absorption [51]. However, Hansen et al. [69] observed no significant effect (p > 0.05) on zinc absorption after the addition of a high amount of calcium to high phytate meals. Several studies reported that a phytate x Ca:Zn molar ratio above 200 is needed to hamper zinc absorption [70,71].
+
+One suggested explanation for the improvement of zinc absorption by dairy products is that amino acids (e.g., histidine, methionine) or peptides, that become liberated during the digestion of milk proteins, bind zinc in the intestinal lumen at intestinal pH and form complexes, thereby increasing both their bioavailability and solubility [28,72]. These complexes are probably absorbed in the brush border membrane of enterocytes through amino acid transporters [47].
+
+Other studies suggest that the increase of zinc absorption by dairy products could be due to casein phosphopeptides (CPPs), which are phosphorylated peptides that are released when casein is digested and can bind zinc, thereby preventing it from binding to phytate [28,46,73]. Reynolds [74] reported that one CPP molecule can chelate up to six zinc ions. Hansen et al. [75] found a significantly higher (p < 0.05) zinc absorption in humans after the addition of CPPs to a rice-based cereal (composition: rice flour, skimmed milk powder, maltodextrin, vegetable fat, and dry ground peas, carrots, cauliflower, broccoli, and leek) that was low in phytate (20 mg per serving), but no significant effect (p > 0.05) on zinc absorption occurred when CPPs were added to whole grain cereal (composition: rice, wheat, corn, oats, skimmed milk powder, lactose, vegetable fat, oat bran, maltodextrin) that were high in phytate (198 mg per serving). Hansen et al. [69] found no significant effect (p > 0.05) on zinc absorption after the addition of different amounts of CPP to bread-based meals (consisting of a roll served with 15 g of jam, 8 g of butter and 250 mL of water) (Table 3). Three different bread rolls were formulated: high-phytate/high calcium, high-phytate/low calcium, low-phytate/high calcium; however, the authors indicate that even the “low-phytate/high calcium” rolls contained a rather high amount of phytate (~101 mg) [69]. These results, taken together, suggest that the effect of CPPs on zinc absorption may depend on the phytate content of the meal. In particular, with foods containing relatively low amounts of phytates, CPPs have a positive effect on zinc absorption, while with foods relatively rich in phytates, a positive effect has not been observed. Higher doses of CPPs are likely required for zinc to be released from the phytate complex [69]. Hansen et al. [76] observed an improvement in zinc absorption in rat pups by adding CPPs to a phytate-containing meal (~264 mg phytate/L). In the latter study, the dose of CPPs was higher than in previously reported human studies [69,75]. Furthermore, unlike human studies, CPPs were added to an aqueous solution and were not administered in a solid meal. It is reasonable to hypothesize that the food matrix may also have positively influenced the effect of CPPs on zinc absorption. It is well known that zinc is more easily absorbed from aqueous solutions than from solid foods [28]; moreover, CPPs may be better absorbed by a liquid matrix [73].
+
+### 7. Conclusions
+
+From the results explored above, it is clear that dairy products play a dual role with regard to the absorption of dietary zinc. Both provide a source of dietary zinc, which in general has good bioavailability. However, in addition to this, they also modulate the absorption of zinc from other food sources. Such effects are arguably not unique to only dairy products or zinc, and warrant further investigation and the consideration of the bioavailability of nutrients at a meal level rather than an individual product level. Considering that areas where zinc deficiencies are most prominent are also those where zinc is often ingested via high phytate products, dietary recommendations on the inclusion of dairy products, or products with a comparable ability to modulate zinc absorption in meals, can present significant advantages.
+
+### References
+
+[1] 1. HerremanL. NommensenP. PenningsB. LausM.C. Comprehensive overview of the quality of plant-And animal-sourced proteins based on the digestible indispensable amino acid scoreFood Sci. Nutr.202085379539110.1002/fsn3.180933133540PMC7590266
+
+[2] 2. WolfeR.R. BaumJ.I. StarckC. MoughanP.J. Factors contributing to the selection of dietary protein food sourcesClin. Nutr.20183713013810.1016/j.clnu.2017.11.01729233589
+
+[3] 3. WolfeR.R. RutherfurdS.M. KimI.Y. MoughanP.J. Protein quality as determined by the Digestible Indispensable Amino Acid Score: Evaluation of factors underlying the calculationNutr. Rev.20167458459910.1093/nutrit/nuw02227452871PMC6322793
+
+[4] 4. ReynaudY. BuffièreC. CohadeB. VaurisM. LiebermannK. HafnaouiN. LopezM. SouchonI. DupontD. RémondD. True ileal amino acid digestibility and digestible indispensable amino acid scores (DIAASs) of plant-based protein foodsFood Chem.202133812802010.1016/j.foodchem.2020.12802032932087
+
+[5] 5. MathaiJ.K. LiuY. SteinH.H. Values for digestible indispensable amino acid scores (DIAAS) for some dairy and plant proteins may better describe protein quality than values calculated using the concept for protein digestibility-corrected amino acid scores (PDCAAS)Br. J. Nutr.201711749049910.1017/S000711451700012528382889
+
+[6] 6. FanelliN.S. BaileyH.M. GuardiolaL.V. SteinH.H. Values for Digestible Indispensable Amino Acid Score (DIAAS) Determined in Pigs Are Greater for Milk Than for Breakfast Cereals, but DIAAS Values for Individual Ingredients Are Additive in Combined MealsJ. Nutr.202115154054710.1093/jn/nxaa39833561270
+
+[7] 7. KashyapS. ShivakumarN. VarkeyA. PrestonT. DeviS. KurpadA.V. Co-ingestion of black tea reduces the indispensable amino acid digestibility of hens’ egg in Indian adultsJ. Nutr.20191491363136810.1093/jn/nxz09131127832PMC6682489
+
+[8] 8. Cirkovic VelickovicT.D. Stanic-VucinicD.J. The role of dietary phenolic compounds in protein digestion and processing technologies to improve their antinutritive propertiesCompr. Rev. Food Sci. Food Saf.2018178210310.1111/1541-4337.1232033350063
+
+[9] 9. HurrellR.F. ReddyM. CookJ.D. Inhibition of non-haem iron absorption in man by polyphenolic-containing beveragesBr. J. Nutr.19998128929510.1017/S000711459900053710999016
+
+[10] 10. GibsonR.S. RaboyV. KingJ.C. Implications of phytate in plant-based foods for iron and zinc bioavailability, setting dietary requirements, and formulating programs and policiesNutr. Rev.20187679380410.1093/nutrit/nuy02830010865
+
+[11] 11. Castro-AlbaV. LazarteC.E. BergenståhlB. GranfeldtY. Phytate, iron, zinc, and calcium content of common Bolivian foods and their estimated mineral bioavailabilityFood Sci. Nutr.201972854286510.1002/fsn3.112731572579PMC6766547
+
+[12] 12. WelchA. FransenH. JenabM. Boutron-RuaultM. TuminoR. AgnoliC. EricsonU. JohanssonI. FerrariP. EngesetD. Variation in intakes of calcium, phosphorus, magnesium, iron and potassium in 10 countries in the European Prospective Investigation into Cancer and Nutrition studyEur. J. Clin. Nutr.200963S101S12110.1038/ejcn.2009.7719888269
+
+[13] 13. GuéguenL. PointillartA. The bioavailability of dietary calciumJ. Am. Coll. Nutr.200019119S136S10.1080/07315724.2000.1071808310759138
+
+[14] 14. MaretW. SandsteadH.H. Zinc requirements and the risks and benefits of zinc supplementationJ. Trace Elem. Med. Biol.20062031810.1016/j.jtemb.2006.01.00616632171
+
+[15] 15. MaaresM. HaaseH. A guide to human zinc absorption: General overview and recent advances of in vitro intestinal modelsNutrients20201276210.3390/nu1203076232183116PMC7146416
+
+[16] 16. MawsonC.A. FischerM.I. The occurrence of zinc in the human prostate glandCan. J. Appl. Sci.19523033633910.1139/cjms52-04314954495
+
+[17] 17. DriessenC. HirvK. KirchnerH. RinkL. Zinc regulates cytokine induction by superantigens and lipopolysaccharideImmunology1995842727751004PMC1415110
+
+[18] 18. HessS.Y. PeersonJ.M. KingJ.C. BrownK.H. Use of serum zinc concentration as an indicator of population zinc statusFood Nutr. Bull.200728S403S42910.1177/15648265070283S30317988005
+
+[19] 19. WessellsK.R. JorgensenJ.M. HessS.Y. WoodhouseL.R. PeersonJ.M. BrownK.H. Plasma zinc concentration responds rapidly to the initiation and discontinuation of short-term zinc supplementation in healthy menJ. Nutr.20101402128213310.3945/jn.110.12281220943956
+
+[20] 20. SinghA. SmoakB.L. PattersonK.Y. LeMayL.G. VeillonC. DeusterP. Biochemical indices of selected trace minerals in men: Effect of stressAm. J. Clin. Nutr.19915312613110.1093/ajcn/53.1.1261984337
+
+[21] 21. ScottB.J. BradwellA.R. Identification of the serum binding proteins for iron, zinc, cadmium, nickel, and calciumClin. Chem.19832962963310.1093/clinchem/29.4.6296831689
+
+[22] 22. PrasadA.S. HalstedJ.A. NadimiM. Syndrome of iron deficiency anemia, hepatosplenomegaly, hypogonadism, dwarfism and geophagiaAm. J. Med.19613153254610.1016/0002-9343(61)90137-114488490
+
+[23] 23. PrasadA.S. Discovery of human zinc deficiency: 50 years laterJ. Trace Elem. Med. Biol.201226666910.1016/j.jtemb.2012.04.00422664333
+
+[24] 24. SandsteadH.H. Zinc nutrition from discovery to global health impactAdv. Nutr.2012371871910.3945/an.112.00248522983851PMC3648754
+
+[25] 25. WessellsK.R. BrownK.H. Estimating the global prevalence of zinc deficiency: Results based on zinc availability in national food supplies and the prevalence of stuntingPLoS ONE20127e5056810.1371/journal.pone.005056823209782PMC3510072
+
+[26] 26. LivingstoneC. Zinc: Physiology, deficiency, and parenteral nutritionNutr. Clin. Prac.20153037138210.1177/088453361557037625681484
+
+[27] 27. NourZ.G. LotharR. Zinc in infection and inflammationNutrients2017962410.3390/nu9060624PMC549060328629136
+
+[28] 28. LonnerdalB. Dietary factors influencing zinc absorptionJ. Nutr.20001301378S1383S10.1093/jn/130.5.1378S10801947
+
+[29] 29. European Food Safety Authority Dietary Reference Values for Nutrients: Summary ReportEFSA Supporting PublicationsParma, Italy2017
+
+[30] 30. GibsonR.S. A historical review of progress in the assessment of dietary zinc intake as an indicator of population zinc statusAdv. Nutr.2012377278210.3945/an.112.00228723153731PMC3648701
+
+[31] 31. RoohaniN. HurrellR. WegmuellerR. SchulinR. Zinc and phytic acid in major foods consumed by a rural and a suburban population in central IranJ. Food Comp. Anal.20122881510.1016/j.jfca.2012.07.005
+
+[32] 32. LeeH.H. PrasadA.S. BrewerG.J. OwyangC. Zinc absorption in human small intestineAm. J. Physiol. Gastrointest. Liver Physiol.1989256G87G9110.1152/ajpgi.1989.256.1.G872912154
+
+[33] 33. SandströmB. Dose dependence of zinc and manganese absorption in manProc. Nutr. Soc.19925121121810.1079/PNS199200311438329
+
+[34] 34. KingJ.C. BrownK.H. GibsonR.S. KrebsN.F. LoweN.M. SiekmannJ.H. RaitenD.J. Biomarkers of Nutrition for Development (BOND)-zinc reviewJ. Nutr.2016146858S885S10.3945/jn.115.220079PMC480764026962190
+
+[35] 35. SteinhardtH.J. AdibiS.A. Interaction between transport of zinc and other solutes in human intestineAm. J. Physiol. Gastrointest. Liver Physiol.1984247G176G18210.1152/ajpgi.1984.247.2.G1766465313
+
+[36] 36. RoohaniN. HurrellR. KelishadiR. SchulinR. Zinc and its importance for human health: An integrative reviewJ. Res. Med. Sci.20131814423914218PMC3724376
+
+[37] 37. McLoughlinI. HodgeJ. Zinc in depressive disorderActa Psychiatr. Scand.19908245145310.1111/j.1600-0447.1990.tb03077.x2291414
+
+[38] 38. KrebsN.F. Overview of zinc absorption and excretion in the human gastrointestinal tractJ. Nutr.20001301374S1377S10.1093/jn/130.5.1374S10801946
+
+[39] 39. CousinsR.J. LiuzziJ.P. LichtenL.A. Mammalian zinc transport, trafficking, and signalsJ. Biol. Chem.2006281240852408910.1074/jbc.R60001120016793761
+
+[40] 40. CousinsR.J. Gastrointestinal factors influencing zinc absorption and homeostasisInt. J. Vitam. Nutr. Res.20108024310.1024/0300-9831/a00003021462106PMC3777256
+
+[41] 41. JeejeebhoyK. Zinc: An essential trace element for parenteral nutritionGastroenterology2009137S7S1210.1053/j.gastro.2009.08.01419874952
+
+[42] 42. KambeT. TsujiT. HashimotoA. ItsumuraN. The physiological, biochemical, and molecular roles of zinc transporters in zinc homeostasis and metabolismPhysiol. Rev.20159574978410.1152/physrev.00035.201426084690
+
+[43] 43. TurnlundJ. KingJ. KeyesW. GongB. MichelM. A stable isotope study of zinc absorption in young men: Effects of phytate and a-celluloseAm. J. Clin. Nutr.1984401071107710.1093/ajcn/40.5.10716496386
+
+[44] 44. CousinsR.J. Absorption, transport, and hepatic metabolism of copper and zinc: Special reference to metallothionein and ceruloplasminPhysiol. Rev.19856523830910.1152/physrev.1985.65.2.2383885271
+
+[45] 45. World Health Organization Food and Agriculture Organization Vitamin and Mineral Requirements in Human Nutrition2nd ed.World Health OrganizationGeneva, Switzerland2004
+
+[46] 46. SandströmB. CederbladA. Zinc absorption from composite meals II. Influence of the main protein sourceAm. J. Clin. Nutr.1980331778178310.1093/ajcn/33.8.17786893252
+
+[47] 47. SauerA.K. PfaenderS. HagmeyerS. TaranaL. MattesA.-K. BrielF. KüryS. BoeckersT.M. GrabruckerA.M. Characterization of zinc amino acid complexes for zinc delivery in vitro using Caco-2 cells and enterocytes from hiPSCBiometals20173064366110.1007/s10534-017-0033-y28717982PMC5646115
+
+[48] 48. Van RossumC. Buurma-RethansE. DinnissenC. BeukersM. BrantsH. DekkersA. OckéM. The Diet of the Dutch: Results of the Dutch National Food Consumption Survey 2012–2016RIVM Report 2020-0083RIVMBilthoven, The Netherlands2020
+
+[49] 49. GaucheronF. Milk minerals, trace elements, and macroelementsMilk Dairy Prod. Hum. Nutr. Prod. Compos. Health201317219910.1002/9781118534168.ch9
+
+[50] 50. SandströmB. CederbladÅ. LönnerdalB. Zinc absorption from human milk, cow’s milk, and infant formulasAm. J. Dis. Child.198313772672910.1001/archpedi.1983.021403400100026869328
+
+[51] 51. LonnerdalB. CederbladÅ. DavidssonL. SandströmB. The effect of individual components of soy formula and cows’ milk formula on zinc bioavailabilityAm. J. Clin. Nutr.1984401064107010.1093/ajcn/40.5.10646541868
+
+[52] 52. TalsmaE.F. MorettiD. LyS.C. DekkersR. van den HeuvelE.G. FitriA. BoelsmaE. StomphT.J. ZederC. Melse-BoonstraA. Zinc absorption from milk is affected by dilution but not by thermal processing, and milk enhances absorption of zinc from high-phytate rice in young Dutch womenJ. Nutr.20171471086109310.3945/jn.116.24442628424261
+
+[53] 53. GalettiV. KujingaP. MitchikpeC.E.S. ZederC. TayF. TossouF. HounhouiganJ.D. ZimmermannM.B. MorettiD. Efficacy of highly bioavailable zinc from fortified water: A randomized controlled trial in rural Beninese childrenAm. J. Clin. Nutr.20151021238124810.3945/ajcn.115.11702826468121
+
+[54] 54. HotzC. BrownK.H. Assessment of the risk of zinc deficiency in populations and options for its controlFood. Nutr. Bull.2004259420418046856
+
+[55] 55. RosadoJ.L. DíazM. GonzalezK. GriffinI. AbramsS.A. PreciadoR. The addition of milk or yogurt to a plant-based diet increases zinc bioavailability but does not affect iron bioavailability in womenJ. Nutr.200513546546810.1093/jn/135.3.46515735079
+
+[56] 56. SandströmB. ArvidssonB. CederbladA. Björn-RasmussenE. Zinc absorption from composite meals I. The significance of wheat extraction rate, zinc, calcium, and protein content in meals based on breadAm. J. Clin. Nutr.19803373974510.1093/ajcn/33.4.7397361691
+
+[57] 57. HuntJ.R. LykkenG.I. MullenL.K. Moderate and high amounts of protein from casein enhance human absorption of zinc from whole-wheat or white rollsNutr. Res.19911141341810.1016/S0271-5317(05)80003-X
+
+[58] 58. PecoudA. DonzelP. SchellingJ. Effect of foodstuffs on the absorption of zinc sulfateClin. Pharmacol. Ther.19751746947410.1002/cpt19751744691091398
+
+[59] 59. FlanaganP.R. CluettJ. ChamberlainM.J. ValbergL.S. Dual-isotope method for determination of human zinc absorption: The use of a test meal of turkey meatJ. Nutr.198511511112210.1093/jn/115.1.1113965663
+
+[60] 60. WoodR.J. ZhengJ.J. Milk consumption and zinc retention in postmenopausal womenJ. Nutr.199012039840310.1093/jn/120.4.3982329392
+
+[61] 61. SolomonsN.W. Dietary sources of zinc and factors affecting its bioavailabilityFood Nutr. Bull.20012213815410.1177/156482650102200204
+
+[62] 62. Della LuciaC.M. SantosL.L.M. da Cruz RodriguesK.C. da Cruz RodriguesV.C. MartinoH.S.D. Sant’AnaH.M.P. Bioavailability of zinc in Wistar rats fed with rice fortified with zinc oxideNutrients201462279228910.3390/nu606227924932657PMC4073150
+
+[63] 63. TangN. SkibstedL.H. Zinc bioavailability from phytate-rich foods and zinc supplements. Modeling the effects of food components with oxygen, nitrogen, and sulfur donor ligandsJ. Agric. Food Chem.2017658727874310.1021/acs.jafc.7b0299828905624
+
+[64] 64. FallingborgJ. Intraluminal pH of the human gastrointestinal tractDan. Med. Bull.19994618319610421978
+
+[65] 65. AllenL. De BenoistB. DaryO. HurrellR. Guidelines on Food Fortification with MicronutrientsWHO/FAOGeneva, Switzerland2006
+
+[66] 66. OberleasD. The role of phytate in zinc bioavailability and homeostasisNutritional Bioavailability of Zinc InglettG.E. American Chemical SocietyWashington, DC, USA1983145158
+
+[67] 67. LinzellJ. MephamT. PeakerM. The secretion of citrate into milkJ. Physiol.197626073975010.1113/jphysiol.1976.sp011541978574PMC1309120
+
+[68] 68. PabónM.L. LönnerdalB. Effect of citrate on zinc bioavailability from milk, milk fractions and infant formulasNutr. Res.19931310311110.1016/S0271-5317(05)80661-X
+
+[69] 69. HansenM. SandströmB. JensenM. SørensenS. Effect of casein phosphopeptides on zinc and calcium absorption from bread mealsJ. Trace Elem. Med. Biol.19971114314910.1016/S0946-672X(97)80041-79442459
+
+[70] 70. ForbesR.M. ErdmanJ.W.Jr. ParkerH.M. KondoH. KetelsenS.M. Bioavailability of zinc in coagulated soy protein (tofu) to rats and effect of dietary calcium at a constant phytate: Zinc ratioJ. Nutr.198311320521010.1093/jn/113.1.2056681628
+
+[71] 71. BosscherD. LuZ. JanssensG. Van Caillie-BertrandM. RobberechtH. De RyckeH. De WildeR. DeelstraH. In vitro availability of zinc from infant foods with increasing phytic acid contentsBr. J. Nutr.20018624124710.1079/BJN200138411502238
+
+[72] 72. WapnirR.A. KhaniD.E. BayneM.A. LifshitzF. Absorption of zinc by the rat ileum: Effects of histidine and other low-molecular-weight ligandsJ. Nutr.19831131346135410.1093/jn/113.7.13466864333
+
+[73] 73. MiquelE. FarréR. Effects and future trends of casein phosphopeptides on zinc bioavailabilityTrends Food Sci. Technol.20071813914310.1016/j.tifs.2006.11.004
+
+[74] 74. ReynoldsE.C. Phosphopeptides for the Treatment of Dental CalculusWorld PatentWO 93/037074March1993
+
+[75] 75. HansenM. SandströmB. JensenM. SørensenS.S. Casein phosphopeptides improve zinc and calcium absorption from rice-based but not from whole-grain infant cerealJ. Pediatr. Gastroenterol. Nutr.199724566210.1097/00005176-199701000-000149093988
+
+[76] 76. HansenM. SandströmB. LönnerdalB. The effect of casein phosphopetides on zinc and calcium absorption from high phytate infant diets assessed in rat pups and Caco-2 cellsPediatr. Res.19964054755210.1203/00006450-199610000-000068888281

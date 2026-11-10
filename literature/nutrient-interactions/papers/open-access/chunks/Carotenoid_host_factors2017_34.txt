@@ -1,0 +1,59 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 34 из 39: References (часть 8)
+============================================================
+
+[173] 173 Schmitz, H. H. , Poor, C. L. , Wellman, R. B. , Erdman, J. W., Jr. , Concentrations of selected carotenoids and vitamin A in human liver, kidney and lung tissue. J. Nutr. 1991, 121, 1613–1621.176582610.1093/jn/121.10.1613
+
+[174] 174 Tanumihardjo, S. A. , Furr, H. C. , Amedee‐Manesme, O. , Olson, J. A. , Retinyl ester (vitamin A ester) and carotenoid composition in human liver. Int. J. Vitam. Nutr. Res. 1990, 60, 307–313.2101821
+
+[175] 175 Stahl, W. , Schwarz, W. , Sundquist, A. R. , Sies, H. , cis‐trans isomers of lycopene and beta‐carotene in human serum and tissues. Arch. Biochem. Biophys. 1992, 294, 173–177.155034310.1016/0003-9861(92)90153-n
+
+[176] 176 Shmarakov, I. O. , Yuen, J. J. , Blaner, W. S. , Carotenoid metabolism and enzymology, in: TanumihardjoS. (Ed.), In Carotenoids and Human Health, Humana Press, Madison, WI 2013.
+
+[177] 177 Huebbe, P. , Lange, J. , Lietz, G. , Rimbach, G. , Dietary beta‐carotene and lutein metabolism is modulated by the APOE genotype. Biofactors 2016, 42, 388–396.2704093310.1002/biof.1284
+
+[178] 178 Nagao, A. , Maoka, T. , Ono, H. , Kotake‐Nara, E. et al., A 3‐hydroxy beta‐end group in xanthophylls is preferentially oxidized to a 3‐oxo epsilon‐end group in mammals. J Lipid Res 2015, 56, 449–462.2550284410.1194/jlr.P055459PMC4306698
+
+[179] 179 Khachik, F. , Spangler, C. J. , Smith, J. C., Jr. , Canfield, L. M. et al., Identification, quantification, and relative concentrations of carotenoids and their metabolites in human milk and serum. Anal. Chem. 1997, 69, 1873–1881.916416010.1021/ac961085i
+
+[180] 180 Kistler, A. , Liechti, H. , Pichard, L. , Wolz, E. et al., Metabolism and CYP‐inducer properties of astaxanthin in man and primary human hepatocytes. Arch. Toxicol. 2002, 75, 665–675.1187649910.1007/s00204-001-0287-5
+
+[181] 181 Zanger, U. M. , Schwab, M. , Cytochrome P450 enzymes in drug metabolism: regulation of gene expression, enzyme activities, and impact of genetic variation. Pharmacol. Ther. 2013, 138, 103–141.2333332210.1016/j.pharmthera.2012.12.007
+
+[182] 182 Fransen, K. , Franzen, P. , Magnuson, A. , Elmabsout, A. A. et al., Polymorphism in the retinoic acid metabolizing enzyme CYP26B1 and the development of Crohn's Disease. PLoS One 2013, 8, e72739.2397734810.1371/journal.pone.0072739PMC3747106
+
+[183] 183 Krivospitskaya, O. , Elmabsout, A. A. , Sundman, E. , Soderstrom, L. A. et al., A CYP26B1 polymorphism enhances retinoic acid catabolism and may aggravate atherosclerosis. Mol. Med. 2012, 18, 712–718.2241501210.2119/molmed.2012.00094PMC3388133
+
+[184] 184 Parker, R. S. , Carotenoids in human blood and tissues. J. Nutr. 1989, 119, 101–104.264369010.1093/jn/119.1.101
+
+[185] 185 Gouranton, E. , Yazidi, C. E. , Cardinault, N. , Amiot, M. J. et al., Purified low‐density lipoprotein and bovine serum albumin efficiency to internalise lycopene into adipocytes. Food. Chem. Toxicol. 2008, 46, 3832–3836.1895731510.1016/j.fct.2008.10.006
+
+[186] 186 Tsutsumi, C. , Okuno, M. , Tannous, L. , Piantedosi, R. et al., Retinoids and retinoid‐binding protein expression in rat adipocytes. J. Biol. Chem. 1992, 267, 1805–1810.1370481
+
+[187] 187 Landrier, J. F. , Kasiri, E. , Karkeni, E. , Mihaly, J. et al., Reduced adiponectin expression after high‐fat diet is associated with selective up‐regulation of ALDH1A1 and further retinoic acid receptor signaling in adipose tissue. Faseb J. 2016.10.1096/fj.201600263RRPMC516151527729412
+
+[188] 188 El‐Sohemy, A. , Baylin, A. , Kabagambe, E. , Ascherio, A. et al., Individual carotenoid concentrations in adipose tissue and plasma as biomarkers of dietary intake. Am. J. Clin. Nutr. 2002, 76, 172–179.1208183110.1093/ajcn/76.1.172
+
+[189] 189 Chung, H. Y. , Ferreira, A. L. , Epstein, S. , Paiva, S. A. et al., Site‐specific concentrations of carotenoids in adipose tissue: relations with dietary and serum carotenoid concentrations in healthy adults. Am. J. Clin. Nutr. 2009, 90, 533–539.1958709010.3945/ajcn.2009.27712
+
+[190] 190 Kohlmeier, L. , Kohlmeier, M. , Adipose tissue as a medium for epidemiologic exposure assessment. Environ. Health Perspect. 1995, 103(Suppl 3), 99–106.10.1289/ehp.95103s399PMC15190127635122
+
+[191] 191 D'Ambrosio, D. N. , Clugston, R. D. , Blaner, W. S. , Vitamin A metabolism: an update. Nutrients 2011, 3, 63–103.2135067810.3390/nu3010063PMC3042718
+
+[192] 192 Muenzner, M. , Tuvia, N. , Deutschmann, C. , Witte, N. et al., Retinol‐binding protein 4 and its membrane receptor STRA6 control adipogenesis by regulating cellular retinoid homeostasis and retinoic acid receptor alpha activity. Mol. Cell. Biol. 2013, 33, 4068–4082.2395980210.1128/MCB.00221-13PMC3811689
+
+[193] 193 Virtanen, S. M. , van't, V. P. , Kok, F. , Kardinaal, A. F. et al., Predictors of adipose tissue carotenoid and retinol levels in nine countries. The EURAMIC Study. Am. J. Epidemiol. 1996, 144, 968–979.891650810.1093/oxfordjournals.aje.a008867
+
+[194] 194 Östh, M. , Öst, A. , Kjolhede, P. , Strålfors, P. , The concentration of β‐carotene in human adipocytes, but not the whole‐body adipocyte stores, is reduced in obesity. PLoS One 2014, 9.10.1371/journal.pone.0085610PMC388571624416432
+
+[195] 195 Strychalski, J. , Brym, P. , Czarnik, U. , Gugolek, A. , A novel AAT‐deletion mutation in the coding sequence of the BCO2 gene in yellow‐fat rabbits. J. Appl. Genet. 2015, 56, 535–537.2600269410.1007/s13353-015-0290-9
+
+[196] 196 Vage, D. I. , Boman, I. A. , A nonsense mutation in the beta‐carotene oxygenase 2 (BCO2) gene is tightly associated with accumulation of carotenoids in adipose tissue in sheep (Ovis aries). BMC Genet. 2010, 11, 10.2012225110.1186/1471-2156-11-10PMC2828402
+
+[197] 197 Berry, S. D. , Davis, S. R. , Beattie, E. M. , Thomas, N. L. et al., Mutation in bovine beta‐carotene oxygenase 2 affects milk color. Genetics 2009, 182, 923–926.1939877110.1534/genetics.109.101741PMC2710170

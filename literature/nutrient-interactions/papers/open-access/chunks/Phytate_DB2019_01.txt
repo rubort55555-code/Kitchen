@@ -1,0 +1,21 @@
+Название: Development of the FAO/INFOODS/IZINCG Global Food Composition Database for Phytate
+Авторы: Sergio Dahdouh, Fernanda Grande, Sarah Nájera Espinosa, Anna Vincent, Rosalind Gibson, Karl Bailey, Janet King, Doris Rittenschober, U Ruth Charrondière
+Журнал: Journal of Food Composition and Analysis, 2019
+DOI: https://doi.org/10.1016/j.jfca.2019.01.023   PMID: 31057213   PMC: PMC6472536
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 The Authors
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 10: Abstract
+============================================================
+
+The database aims contributing to the reduction of iron and zinc deficiencies across the world and to a revision of nutrient requirements of zinc and iron.
+
+The database aims raising awareness on food-based approaches for increasing the bioavailability of iron and zinc in foods.
+
+Phytate’s analysis should be centered on separate inositol phosphate forms rather than only total phytate, as it often overestimates the phytate content.
+
+Phytate contents are diminished by processing methods, such as fermentation, cooking or soaking.
+
+Abbreviations: Ca, calcium; CRM, certified reference material; EP, edible portion; EFSA, European Food Safety Authority; FAO, Food and Agriculture Organization; FCT/FCDB, Food Composition Table/Food Composition Database; Fe, iron; GIFT, FAO/WHO Global Individual Food consumption data Tool; HPLC, high-performance liquid chromatography; INFOODS, International Network of Food Data Systems; IPs, inositol phosphates; IP3, inositol triphosphate; IP4, inositol tetraphosphate; IP5, inositol pentaphosphate; IP6, inositol hexaphosphate; IZiNCG, International Zinc Nutrition Consultative Group; PHY:FE, phytic acid forms : iron ratio; PHY:ZN, phytic acid forms : zinc ratio; PhyFoodComp, Global Food Composition Database for Phytate; PHYT-, phytic acid - unknown or variable method; PHYT:FE, phytic acid (global) : iron ratio; PHYT:ZN, phytic acid (global) : zinc ratio; PHYTAC, phytic acid - old tagname; PHYTC-, phytic acid - unknown colorimetry; PHYTCA, phytic acid - by K-PHYT kit; PHYTCPP, phytic acid - by anion exchange; PHYTCPPI, phytic acid - by indirect precipitation; PHYTCPPD, phytic acid - by direct precipitation; PP, phytate phosphorus; PP-, phytate phosphorus - by unknown colorimetry; PPD, phytate phosphorus - by direct precipitation; PPI, phytate phosphorus - by indirect precipitation; RNI/RDI, recommended nutrient intake/recommended dietary intake; XP, conversion factor for phytate phosphorus; Zn, zinc
+
+Keywords: Antinutrient, Food composition database, Inositol phosphates, Iron, Phytate, Phytic acid, Phytic acid:iron ratio, Phytic acid:zinc ratio, Zinc

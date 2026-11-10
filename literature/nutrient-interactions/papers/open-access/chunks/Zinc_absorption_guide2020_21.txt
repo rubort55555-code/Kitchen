@@ -1,0 +1,67 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 21 из 29: References (часть 4)
+============================================================
+
+[95] 95.FukadaT.KambeT.Molecular and genetic features of zinc transporters in physiology and pathogenesisMet. Integr. Biometal Sci.2011366267410.1039/c1mt00011j21566827
+
+[96] 96.SauerA.K.PfaenderS.HagmeyerS.TaranaL.MattesA.K.BrielF.KuryS.BoeckersT.M.GrabruckerA.M.Characterization of zinc amino acid complexes for zinc delivery in vitro using caco-2 cells and enterocytes from hipscBioMetals20173064366110.1007/s10534-017-0033-y28717982PMC5646115
+
+[97] 97.MaretW.Analyzing free zinc(ii) ion concentrations in cell biology with fluorescent chelating moleculesMet. Integr. Biometal Sci.2015720221110.1039/C4MT00230J25362967
+
+[98] 98.BozymR.A.ChimientiF.GiblinL.J.GrossG.W.KorichnevaI.LiY.LibertS.MaretW.ParvizM.FredericksonC.J.Free zinc ions outside a narrow concentration range are toxic to a variety of cells in vitroExp. Biol. Med.201023574175010.1258/ebm.2010.00925820511678PMC2896872
+
+[99] 99.MaretW.Molecular aspects of human cellular zinc homeostasis: Redox control of zinc potentials and zinc signalsBioMetals20092214915710.1007/s10534-008-9186-z19130267
+
+[100] 100.ColvinR.A.HolmesW.R.FontaineC.P.MaretW.Cytosolic zinc buffering and muffling: Their role in intracellular zinc homeostasisMet. Integr. Biometal Sci.2010230631710.1039/b926662c21069178
+
+[101] 101.MaaresM.KeilC.ThomsenS.GunzelD.WiesnerB.HaaseH.Characterization of caco-2 cells stably expressing the protein-based zinc probe ecalwy-5 as a model system for investigating intestinal zinc transportJ. Trace Elem. Med. Biol. Organ Soc. Miner. Trace Elem.20184929630410.1016/j.jtemb.2018.01.00429395783
+
+[102] 102.MaaresM.DumanA.KeilC.SchwerdtleT.HaaseH.The impact of apical and basolateral albumin on intestinal zinc resorption in the caco-2/ht-29-mtx co-culture modelMet. Integr. Biometal Sci.20181097999110.1039/C8MT00064F29931006
+
+[103] 103.MaaresM.KeilC.KozaJ.StraubingS.SchwerdtleT.HaaseH.In vitro studies on zinc binding and buffering by intestinal mucinsInt. J. Mol. Sci.201819266210.3390/ijms19092662PMC616487530205533
+
+[104] 104.WellenreutherG.CianciM.TucoulouR.Meyer-KlauckeW.HaaseH.The ligand environment of zinc stored in vesiclesBiochem. Biophys. Res. Commun.200938019820310.1016/j.bbrc.2009.01.07419171119
+
+[105] 105.MaaresM.Investigations on Zinc Resorption Using In Vitro Intestinal ModelsBerlin Institute of TechnologyBerlin, Germany2019
+
+[106] 106.MaretW.LiY.Coordination dynamics of zinc in proteinsChem. Rev.20091094682470710.1021/cr800556u19728700
+
+[107] 107.KrezelA.HaoQ.MaretW.The zinc/thiolate redox biochemistry of metallothionein and the control of zinc ion fluctuations in cell signalingArch. Biochem. Biophys.200746318820010.1016/j.abb.2007.02.01717391643
+
+[108] 108.KimuraT.KambeT.The functions of metallothionein and zip and znt transporters: An overview and perspectiveInt. J. Mol. Sci.20161733610.3390/ijms1703033626959009PMC4813198
+
+[109] 109.TapieroH.TewK.D.Trace elements in human physiology and pathology: Zinc and metallothioneinsBiomed. Pharmacother.20035739941110.1016/S0753-3322(03)00081-714652165
+
+[110] 110.CousinsR.J.LiuzziJ.P.LichtenL.A.Mammalian zinc transport, trafficking, and signalsJ. Biol. Chem.2006281240852408910.1074/jbc.R60001120016793761
+
+[111] 111.AndrewsG.K.Regulation of metallothionein gene expression by oxidative stress and metal ionsBiochem. Pharmacol.1999599510410.1016/S0006-2952(99)00301-910605938
+
+[112] 112.RichardsM.P.CousinsR.J.Mammalian zinc homeostasis: Requirement for rna and metallothionein synthesisBiochem. Biophys. Res. Commun.1975641215122310.1016/0006-291X(75)90822-01137597
+
+[113] 113.MenardM.P.McCormickC.C.CousinsR.J.Regulation of intestinal metallothionein biosynthesis in rats by dietary zincJ. Nutr.19811111353136110.1093/jn/111.8.13536115000
+
+[114] 114.ReevesP.G.Adaptation responses in rats to long-term feeding of high-zinc diets: Emphasis on intestinal metallothioneinJ. Nutr. Biochem.19956485410.1016/0955-2863(94)00008-A
+
+[115] 115.SmithK.T.CousinsR.J.Quantitative aspects of zinc absorption by isolated, vascularly perfused rat intestineJ. Nutr.198011031632310.1093/jn/110.2.3167354402
+
+[116] 116.HinskensB.PhilcoxJ.C.CoyleP.RofeA.M.Increased zinc absorption but not secretion in the small intestine of metallothionein-null miceBiol. Trace Elem. Res.20007823124010.1385/BTER:78:1-3:23111314981
+
+[117] 117.HoadleyJ.E.LeinartA.S.CousinsR.J.Relationship of 65zn absorption kinetics to intestinal metallothionein in rats: Effects of zinc depletion and fastingJ. Nutr.198811849750210.1093/jn/118.4.4973357065
+
+[118] 118.DavisS.R.McMahonR.J.CousinsR.J.Metallothionein knockout and transgenic mice exhibit altered intestinal processing of zinc with uniform zinc-dependent zinc transporter-1 expressionJ. Nutr.199812882583110.1093/jn/128.5.8259566988
+
+[119] 119.CoppenD.E.DaviesN.T.Studies on the effects of dietary zinc dose on 65zn absorption in vivo and on the effects of zn status on 65zn absorption and body loss in young ratsBr. J. Nutr.198757354410.1079/BJN198700073801383
+
+[120] 120.MoltedoO.VerdeC.CapassoA.ParisiE.RemondelliP.BonattiS.Alvarez-HernandezX.GlassJ.AlvinoC.G.LeoneA.Zinc transport and metallothionein secretion in the intestinal human cell line caco-2J. Biol. Chem.2000275318193182510.1074/jbc.M00290720010896936
+
+[121] 121.KellyE.J.QuaifeC.J.FroelickG.J.PalmiterR.D.Metallothionein i and ii protect against zinc deficiency and zinc toxicity in miceJ. Nutr.199612617821790868333910.1093/jn/126.7.1782
+
+[122] 122.ColvinR.A.BushA.I.VolitakisI.FontaineC.P.ThomasD.KikuchiK.HolmesW.R.Insights into zn2+ homeostasis in neurons from experimental and modeling studiesAm. J. Physiol. Cell Physiol.2008294C726C74210.1152/ajpcell.00541.200718184873
+
+[123] 123.HempeJ.M.CousinsR.J.Cysteine-rich intestinal protein and intestinal metallothionein: An inverse relationship as a conceptual model for zinc absorption in ratsJ. Nutr.1992122899510.1093/jn/122.1.891729476

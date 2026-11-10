@@ -10,7 +10,8 @@ export const OFF_SITE = "https://world.openfoodfacts.org";
 export const OFF_CREDIT = "© участники Open Food Facts, лицензия ODbL";
 
 /** Пищевая ценность на 100 г (или 100 мл), как указано на упаковке. */
-export interface Per100 { kcal?: number; p?: number; f?: number; c?: number; fiber?: number; sugar?: number; salt?: number }
+/** На 100 г: калории, БЖУ, клетчатка, сахара, соль — в граммах; железо, кальций, витамин C — в миллиграммах (если указаны на упаковке). */
+export interface Per100 { kcal?: number; p?: number; f?: number; c?: number; fiber?: number; sugar?: number; salt?: number; fe?: number; ca?: number; vitC?: number }
 
 export interface OffProduct {
   code: string;
@@ -24,6 +25,8 @@ export interface OffProduct {
   per100?: Per100;
   /** Категории Open Food Facts, например «en:dairies». */
   cats?: string[];
+  /** Состав с упаковки (начало списка ингредиентов). */
+  ingredients?: string;
 }
 
 const UNIT_MAP: [RegExp, Unit, number][] = [
@@ -60,6 +63,9 @@ const numOr = (v: unknown): number | undefined => {
   return isFinite(n) && n >= 0 ? Math.round(n * 10) / 10 : undefined;
 };
 
+/** Граммы на 100 г → миллиграммы (железо, кальций, витамин C в OFF указаны в граммах). */
+const mg = (v: unknown): number | undefined => { const x = typeof v === "number" ? v : typeof v === "string" && v.trim() !== "" ? Number(v.replace(",", ".")) : NaN; return isFinite(x) && x >= 0 ? Math.round(x * 1000 * 100) / 100 : undefined; };
+
 /** Разбирает ответ API (v2) в понятный вид. null — товара нет в базе. */
 export function fromOff(code: string, json: any): OffProduct | null {
   const p = json?.product;
@@ -73,6 +79,8 @@ export function fromOff(code: string, json: any): OffProduct | null {
   const per100: Per100 = {
     kcal, p: numOr(n.proteins_100g), f: numOr(n.fat_100g), c: numOr(n.carbohydrates_100g),
     fiber: numOr(n.fiber_100g), sugar: numOr(n.sugars_100g), salt: numOr(n.salt_100g),
+    // железо, кальций и витамин C в OFF хранятся в граммах на 100 г
+    fe: mg(n.iron_100g), ca: mg(n.calcium_100g), vitC: mg(n["vitamin-c_100g"]),
   };
   for (const k of Object.keys(per100) as (keyof Per100)[]) if (per100[k] === undefined) delete per100[k];
   let q = parseQuantity(p.quantity);
@@ -88,10 +96,11 @@ export function fromOff(code: string, json: any): OffProduct | null {
     quantityText: p.quantity ? String(p.quantity) : undefined,
     per100: Object.keys(per100).length ? per100 : undefined,
     cats: Array.isArray(p.categories_tags) ? p.categories_tags.slice(0, 12) : undefined,
+    ingredients: String(p.ingredients_text_ru || p.ingredients_text || "").replace(/\s+/g, " ").trim().slice(0, 600) || undefined,
   };
 }
 
-const FIELDS = "code,product_name,product_name_ru,generic_name,generic_name_ru,brands,quantity,product_quantity,product_quantity_unit,nutriments,categories_tags";
+const FIELDS = "code,product_name,product_name_ru,generic_name,generic_name_ru,brands,quantity,product_quantity,product_quantity_unit,nutriments,categories_tags,ingredients_text_ru,ingredients_text";
 const memo = new Map<string, OffProduct | null>();
 
 export type LookupResult = { ok: true; product: OffProduct | null } | { ok: false; why: "offline" | "busy" | "error" };

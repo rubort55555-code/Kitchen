@@ -1,0 +1,81 @@
+Название: Development of the FAO/INFOODS/IZINCG Global Food Composition Database for Phytate
+Авторы: Sergio Dahdouh, Fernanda Grande, Sarah Nájera Espinosa, Anna Vincent, Rosalind Gibson, Karl Bailey, Janet King, Doris Rittenschober, U Ruth Charrondière
+Журнал: Journal of Food Composition and Analysis, 2019
+DOI: https://doi.org/10.1016/j.jfca.2019.01.023   PMID: 31057213   PMC: PMC6472536
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 The Authors
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 3 из 10: Material and methods
+============================================================
+
+## Literature search and data collection
+
+In 2016, FAO/INFOODS carried out a comprehensive literature search on the phytate content of different foods. Data sources included scientific papers, theses, university reports and FCT/FCDB. The papers were mainly obtained from an exhaustive Scopus search using the following keywords: phytate, phytic, inositol phosphate or ip6 (in title); and barley, bean, yam, vegetable, palm amaranth, seed, banana, baobab, leaf, leaves, beer, nut, flour, tuber, cassava, spice, fruit, cocoyam, kernel, fonio, lentil, pasta, maize, corn, millet, pea, potato, rice, sorghum, soy, taro, wheat, triticale, grain, cereal, bread, biscuit, food, vegetable, beverage, rapeseed, injera, gruel, porridge, bran, cracker, plantain, oats, rye, cake, pastry, cocoa, cacao, lupin, legume, pulse, teff or gram (in content). The information and the abstracts of the 6020 articles found were examined to determine the presence of useful data. Analytical data from five FCT/FCDB were also obtained, namely FAO/INFOODS Analytical Food Composition Database (FAO, 2017a); FAO/INFOODS Food Composition Database for Biodiversity (FAO, 2017b); Food Composition Table for use in The Gambia, 2011; Indian Food Composition Tables (Longvah et al., 2017); National Food Composition Tables and The Planning of Satisfactory Diets in Kenya (Sehmi, 1993).
+
+## Inclusion/exclusion of data and quality of data
+
+All data were evaluated for data quality and presentation according to a set of quality criteria (Table 1). Exclusion criteria varied from imprecise food and analytical methodology descriptions, expression in dry matter basis without provision of water values, missing data and lack of units and denominators. Subsequently 72% of the papers originally selected were rejected.
+
+Table 1. Examples for the exclusion of scientific articles for the Global Food Composition Database for Phytate.
+
+Data description/presentation:
+
+•Missing units and/or denominators
+
+•Unreported or unclear basis (dry or fresh)
+
+•Inconsistency in data presentation (e.g., in the article data refer to fresh weight basis but the corresponding table presents data on dry matter basis)
+
+•Data presentation in graphs/figures, without providing related values
+
+•Misleading table/graph description
+
+Missing data needed to transform data to ‘per 100 g edible portion on a fresh weight basis’:
+
+•Missing water content per 100 g edible portion of fresh weight basis (EP), if data were expressed as percentage or g of dry matter
+
+Selected data quality checks, which are included in the FAO/ INFOODS Guidelines for Checking Food Composition Data prior to the Publication of a User Table/Database – version 1.0 (FAO/INFOODS, 2012) were applied to screen the data for consistency and reliability. These checks were constantly applied, both during the initial data evaluation and during the compilation of the database, in order to detect implausible data.
+
+## Standardisation of data
+
+The standardisation aims to make uniform the expressions of components and their units and denominators, which allows a comparative evaluation and analysis of the data at a later stage. All nutrient values in PhyFoodComp are expressed per 100 g edible portion on a fresh weight basis (EP); therefore data found in other expressions needed to be converted to 100 g EP.
+
+Data were compiled according to international standards for food composition and compilation, as outlined by Greenfield and Southgate (2003) using the FAO/INFOODS Compilation Tool (FAO, 2009), a simple food composition database management system in Microsoft Excel (Charrondière and Burlingame, 2011). The minerals and water were assigned to their respective INFOODS food component identifier, also called tagname (Klensin et al., 1989).
+
+Since different chemical methods used to report phytate use distinct principles and analytical methods, they generate significantly different phytate values (Carlsson et al., 2001; Gao et al., 2007; Kasim and Edwards, 1998; Park et al., 2006; Rounds and Nielsen, 1993). Therefore, new tagnames had to be created prior to data compilation (Table 2). Advances in analytical methods allow the separation and determination of different inositol phosphates (IPs). For these methods, and depending on the degree of phosphorylation of the inositol, the tagnames assigned in the PhyFoodComp ranged from IP3 to IP6 — from three to six phosphate groups — for the individual IPs. Various combinations (sums) of IPs were also designated by different tagnames. The previous tagname ‘Phytic Acid’ (PHYTAC), which was used for all the different available methods for analysing total phytate, is now considered obsolete. Hence, all data that were previously reported under PHYTAC, were reclassified using the new tagnames by reviewing the original source. When a clear assignment to a tagname was not possible due to imprecise description of the analytical method, the tagname indicating ‘unknown’ was selected, i.e. PHYT-.
+
+Table 2. Tagnames, description and units created for the Global Food Composition Database for Phytate.
+
+New tagname | Description | Unit
+
+PHYTCPPI | Phytic acid, determined by indirect precipitation | mg
+
+PHYTCPPD | Phytic acid, determined by direct precipitation | mg
+
+PHYTCA | Phytic acid, determined by colorimetry after an alkaline phosphatase hydrolysis | mg
+
+PHYTCPP | Phytic acid, determined by anion exchange | mg
+
+PHYTC- | Phytic acid, determined by colorimetry (unknown) | mg
+
+PPI | Phytate phosphorus, determined by indirect precipitation | mg
+
+PPD | Phytate phosphorus, determined by direct precipitation | mg
+
+PP- | Phytate phosphorus, determined by colorimetry (unknown) | mg
+
+XP | Conversion factor for phytate phosphorus | –
+
+IP3 | Inositol triphosphate | mg
+
+IP4 | Inositol tetraphosphate | mg
+
+IP5 | Inositol pentaphosphate | mg
+
+IP6 | Inositol hexaphosphate | mg
+
+IP5_A_IP6 | Inositol penta + hexaphosphate | mg
+
+IP4_A_IP5_A_IP6 | Inositol tetra + penta + hexaphosphate | mg
+
+IPSUM | Total inositol phosphates (SUM of all IPs) | mg

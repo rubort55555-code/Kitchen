@@ -1,0 +1,11 @@
+Название: Iron Absorption: Factors, Limitations, and Improvement Methods
+Авторы: Elif Piskin, Danila Cianciosi, Sukru Gulec, Merve Tomas, Esra Capanoglu
+Журнал: ACS Omega, 2022
+DOI: https://doi.org/10.1021/acsomega.2c01833   PMID: 35755397   PMC: PMC9219084
+Лицензия: CC BY 4.0 (открытый доступ). © 2022 The Authors. Published by American Chemical Society
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 16: Abstract
+============================================================
+
+Iron is an essential element for human life since it participates in many functions in the human body, including oxygen transport, immunity, cell division and differentiation, and energy metabolism. Iron homeostasis is mainly controlled by intestinal absorption because iron does not have active excretory mechanisms for humans. Thus, efficient intestinal iron bioavailability is essential to reduce the risk of iron deficiency anemia. There are two forms of iron, heme and nonheme, found in foods. The average daily dietary iron intake is 10 to 15 mg in humans since only 1 to 2 mg is absorbed through the intestinal system. Nutrient–nutrient interactions may play a role in dietary intestinal iron absorption. Dietary inhibitors such as calcium, phytates, polyphenols and enhancers such as ascorbic acid and proteins mainly influence iron bioavailability. Numerous studies have been carried out for years to enhance iron bioavailability and combat iron deficiency. In addition to traditional methods, innovative techniques are being developed day by day to enhance iron bioavailability. This review will provide information about iron bioavailability, factors affecting absorption, iron deficiency, and recent studies on improving iron bioavailability.

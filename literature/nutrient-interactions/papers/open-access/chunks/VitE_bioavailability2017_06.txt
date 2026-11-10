@@ -1,0 +1,11 @@
+Название: Vitamin E Bioavailability: Mechanisms of Intestinal Absorption in the Spotlight
+Авторы: Emmanuelle Reboul
+Журнал: Antioxidants, 2017
+DOI: https://doi.org/10.3390/antiox6040095   PMID: 29165370   PMC: PMC5745505
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 6 из 10: 4. Conclusions
+============================================================
+
+Overall, this review highlights the fact that the molecular mechanisms of both intraluminal fate and intestinal absorption of vitamin E are only partly understood to date. The discovery of vitamin E intestinal transporters with broad substrate specificity has raised many questions with respect to the potential interactions with dietary lipids during the vitamin E absorption process. Besides, it is likely that other proteins involved in vitamin E absorption still remain to be identified. The modulation of the activity of these proteins, including the existence of functional polymorphisms in their encoding genes and the regulation of their expression levels by epigenetic to post-translational factors, may explain much of the observed large interindividual variation in postprandial responses to vitamin E. Further dedicated investigations are needed to address these presumptions in order to offer adequate vitamin E-tailored recommendations to individuals.

@@ -1,0 +1,63 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 8 из 23: 6. Magnesium Deficiency
+============================================================
+
+Severe hypermagnesemia or magnesium intoxication appears very seldom in human disease. Such conditions only occur in severe renal insufficiency or iatrogen [13,42,59]. However, clinical symptoms are observed more frequently in magnesium deficient and insufficient patients in internal medicine. Magnesium deficiency is not uncommon among the general population: its intake has decreased over the years especially in the Western world. Hypomagnesaemia is defined as serum magnesium concentration <0.75 mmol/L. Early signs of magnesium deficiency are non-specific and include loss of appetite, lethargy, nausea, vomiting, fatigue, and weakness. More pronounced magnesium deficiency presents with symptoms of increased neuromuscular excitability such as tremor, carpopedal spasm, muscle cramps, tetany and generalized seizures. Hypomagnesemia can cause cardiac arrhythmias including atrial and ventricular tachycardia, prolonged QT interval and torsades de pointes (see also Table 2) [17,18,36,59,60,61,62].
+
+Hypomagnesaemia is frequently associated with other electrolyte abnormalities such as hypokalemia and hypocalcaemia. Conditions that may lead to hypomagnesemia include alcoholism, poorly-controlled diabetes, malabsorption (e.g., Crohn’s disease, ulcerative colitis, coeliac disease, short bowel syndrome, Whipple’s disease), endocrine causes (e.g., aldosteronism, hyperparathyroidism, hyperthyroidism), renal disease (e.g., chronic renal failure, dialysis, Gitelman’s syndrome) and medication use. A variety of drugs including antibiotics, chemotherapeutic agents, diuretics and proton pump inhibitors can cause magnesium loss and hypomagnesemia (see Table 3). In addition, magnesium deficiency exacerbates potassium mediated arrhythmia, in particular in the presence of digoxin intoxication [63,64,65].
+
+Table 2. Magnesium: Deficiency signs and symptoms [7].
+
+General: Anxiety, lethargy, weakness, agitation, depression, dysmenorrhea, hyperactivity, headache, irritability, dysacusis, low stress tolerance, loss of appetite, nausea, sleep disorders, impaired athletic performance.
+
+Musculature: Muscle spasm, cramps in the soles of the feet, leg cramps, facial muscles, masticatory muscles, and calves, carpopedal spasm, back aches, neck pain, urinary spasms, magnesium deficiency tetany.
+
+Nerves/CNS: Nervousness, increased sensitivity of NMDA receptors to excitatory neurotransmitters, migraine, depression, nystagmus, paraesthesia, poor memory, seizures, tremor, vertigo.
+
+Gastrointestinal tract: Constipation.
+
+Cardiovascular system: Risk of arrhythmias, supraventricular or ventricular arrhythmias, hypertension, coronary spasm, decreased myocardial pump function, digitalis sensitivity, Torsade de pointes, death from heart disease.
+
+Electrolytes: Hypokalaemia, hypocalcaemia, retention of sodium.
+
+Metabolism: Dyslipoproteinemia (increased blood triglycerides and cholesterol), decreased glucose tolerance, insulin resistance, increased risk of metabolic syndrome, disturbances of bone and vitamin D metabolism, resistance to PTH, low circulating levels of PTH, resistance to vitamin D, low circulating levels of 25(OH)D, recurrence of calcium oxalate calculi.
+
+Miscellaneous: Asthma, chronic fatigue syndrome, osteoporosis, hypertension, altered glucose homeostasis.
+
+Pregnancy: Pregnancy complications (e.g., miscarriage, premature labor, eclampsia).
+
+Table 3. Drug-induced magnesium loss and hypomagnesemia [63,64,65].
+
+Drug Group (Drug Substance) | Mechanism/Effect
+
+Aminoglycosides (e.g., gentamicin, tobramycin, amikacin) | increased renal magnesium loss, secondary hyperaldosteronism
+
+Antimicrobial medication (Pentamidine) | increased renal magnesium loss
+
+Antiviral medication (foscarnet) | nephrotoxicity, increased renal magnesium loss
+
+Beta adrenergic agonists (e.g., Fenoterol, salbutamol, theophylline) | increased renal magnesium excretion, metabolic abnormalities (magnesium shift into cells)
+
+Bisphosphonates (pamidronate) | renal impairment, magnesium excretion
+
+Chemotherapeutic agents (e.g., amsacrine, cisplatin) | nephrotoxicity, cisplatin accumulates in renal cortex, increased renal magnesium loss
+
+Immunosuppressants (cyclosporine, sirolimus) | 2- to 3-fold increased urinary magnesium excretion (→ magnesium wasting)
+
+Loop diuretics, esp. long-term use | increased renal magnesium loss, secondary hyperaldosteronism
+
+(e.g., furosemide)
+
+Monoclonal antibody (e.g. cetuximab, panitumumab) | EGFR blockade in the nephron impairs the active transport of magnesium (→ magnesium wasting)
+
+Polyene antifungals (amphotericin B) | nephrotoxicity
+
+Proton pump inhibitors | loss of active magnesium absorption via transient receptor potential melastatin-6 and -7 (TRPM6/7)
+
+Thiazide diuretics, esp. long-term use (e.g., hydrochlorothiazide) | increased renal magnesium loss, secondary hyperaldosteronism

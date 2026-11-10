@@ -1,0 +1,11 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 16 из 23: 9. Adverse Effects and Interactions
+============================================================
+
+Magnesium supplementation is well tolerated, but it can cause gastrointestinal symptoms, including diarrhea, nausea, and vomiting. An overdose of intravenous magnesium may cause thirst, hypotension, drowsiness, muscle weakness, respiratory depression, cardiac arrhythmia, coma, and death. Concomitant use of magnesium and urinary excretion-reducing drugs, such as glucagons, calcitonin, and potassium-sparing diuretics, may increase serum magnesium levels, as may doxercalciferol. Concomitant oral intake of magnesium may influence the absorption of aminoglycosides, bisphosphonates, calcium channel blockers, fluoroquinolones, skeletal muscle relaxants and tetracylines. Therefore, concomitant use with these drugs should be avoided when possible. Attention and caution should be paid in patients with renal insufficiency (creatinine clearance: <30 mL per minute (0.50 mL per second)), because of the increased risk of heart block or hypermagnesemia [7].

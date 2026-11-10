@@ -1,0 +1,41 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 7 из 19: 4. Inhibitors
+============================================================
+
+## 4.1. Gastric Acid Inhibitors
+
+There exist two types of gastric acid inhibitors, histamine H2-receptor antagonists, e.g., cimetidine, and proton pump inhibitors, e.g., lansoprazole. Both types of medication can effectively reduce the production of gastric acid [80, 81]. In a nested case-control study, among subjects without known risk factors for iron deficiency, the use of a gastric acid inhibitor for two years or more was associated with an increased risk of iron deficiency. The risk increased with increasing potency of acid inhibition and decreased after medication discontinuation [82].
+
+In patients with HFE-haemochromatosis, consecutive measurements of serum iron demonstrated a 50% decrease in the area under the curve (AUC) from a test meal after 7 days of proton pump inhibitor therapy, indicating decreased absorption of nonheme iron [83]. Furthermore, treatment of patients with genetic haemochromatosis with proton pump inhibitors caused a significant reduction in the volume of blood that had to be drawn annually, in order to maintain serum ferritin in therapeutic levels [83].
+
+A similar finding was observed in a retrospective analysis of patients with HFE-haemochromatosis, where treatment with proton pump inhibitors for two years or more significantly reduced the number of phlebotomies required to maintain serum ferritin levels below 100 μg/L [84]. These studies show that gastric acid inhibitors decrease iron absorption in both iron-depleted and iron-overloaded individuals.
+
+## 4.2. Antacids
+
+Antacids are used for immediate relief of gastroesophageal reflux of gastric acid giving unpleasant symptoms called pyrosis, cardialgia, or heartburn. Antacids are normally used on a demand basis, seldom for long-term treatment. Many preparations contain calcium carbonate and magnesium oxide, magnesium hydroxide, or magnesium trisilicate. If taken in close association with a meal, this kind of medicine can inhibit iron uptake from the food in three ways: (i) by neutralizing the gastric acid pH [33], (ii) by calcium-induced inhibition of iron absorption (see Section 4.9 and [85]), and (iii) by a possible inhibition of magnesium compounds on iron absorption [86, 87].
+
+## 4.3. Oxalic Acid-Oxalates
+
+Oxalic acid and oxalates are common in plant foods, and the largest amounts are found in rhubarb, spinach, mangold, and purslane [88]. Oxalic acid may be present as insoluble calcium or magnesium oxalate crystals or as soluble sodium or potassium oxalate. In humans, approximately 75% of all urinary tract stones are composed of calcium oxalate, and hyperoxaluria is a primary risk factor for urolithiasis [89].
+
+Oxalate is a well-known inhibitor of calcium absorption in humans due to the poor solubility of calcium oxalate [90]. It is a widespread perception among nutritionists/dieticians that oxalic acid is a strong inhibitor of iron absorption. This is stated (without evidence) in dietary publications and cookbooks (e.g., [91, 92]). It may rely on the fact that ferric oxalate is slightly soluble and ferrous oxalate is poorly soluble in water.
+
+Calcium oxalate appears to depress iron absorption in some circumstances—the addition of 1 g calcium oxalate to a cabbage meal was associated with a 39% depression in iron absorption [42]; this is surprising as calcium oxalate is almost insoluble and therefore should be chemically inert. However, there was no relationship between the oxalate content and iron absorption when vegetables that contained large amounts of oxalate were examined; iron absorption was poor from spinach and beetroot greens but good from beetroot [42]; these findings could be explained by the high polyphenol and calcium content in spinach, the high polyphenol content in beetroot greens, and the low polyphenol and high citric acid and ascorbic acid content in beetroot [42].
+
+The influence of oxalic acid/oxalate on iron absorption may depend on the chemical state of the oxalate in the food. Spinach is rich in oxalic acid/oxalate but also rich in calcium; if the oxalate exists in the form of calcium oxalate, then it should not be able to bind ferric iron in the food and therefore have a minor influence on iron absorption.
+
+In a test meal consisting of wheat bread rolls and kale with a low content of oxalic acid, the addition of soluble potassium oxalate to the meal did not have any negative influence on iron absorption [93]. Absorption from the test meal with bread rolls and spinach was lower than that from the meal with bread rolls and kale (without added potassium oxalate), possibly due to the higher content of polyphenols and calcium in the spinach meal compared to the kale meal [93]. Consequently, oxalic acid in plant foods does not inhibit iron absorption and does not contribute to the reported inhibitory effect of spinach on iron uptake [93].
+
+## 4.4. Phytic Acid-Phytates
+
+Phytic acid, the hexaphosphate of myo-inositol, is a bioactive compound widely distributed in plant foods [94]. Phytic acid has an affinity to form complexes with polyvalent cations including iron, in this way interfering with intestinal absorption. The main sources of phytate in the daily diet are cereals and legumes as well as oilseeds and nuts [94]. These foods are important in the human diet and represent approximately 40% of the caloric intake for humans in developed countries [95].
+
+Phytates are strong inhibitors of iron absorption in a dose-dependent manner [42, 96–100]. Furthermore, the inhibitory effect of phytates on iron absorption can be reversed by ascorbic acid and to a lesser degree by meat factors [97, 98], indicating that ascorbic acid has a higher affinity to ferric iron than phytate.
+
+The clinical impact of the phytate content in bran on iron absorption is evident. In vegetarians/vegans [14–17] and in young women, long-term daily intake of fiber-rich wheat bread with a high fraction of whole grain decreased body iron status (serum ferritin) [100].

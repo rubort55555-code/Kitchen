@@ -1,0 +1,69 @@
+Название: Influence of Dairy Products on Bioavailability of Zinc from Other Food Products: A Review of Complementarity at a Meal Level
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu13124253   PMID: 34959808   PMC: PMC8705257
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 11 из 12: References (часть 2)
+============================================================
+
+[30] 30. GibsonR.S. A historical review of progress in the assessment of dietary zinc intake as an indicator of population zinc statusAdv. Nutr.2012377278210.3945/an.112.00228723153731PMC3648701
+
+[31] 31. RoohaniN. HurrellR. WegmuellerR. SchulinR. Zinc and phytic acid in major foods consumed by a rural and a suburban population in central IranJ. Food Comp. Anal.20122881510.1016/j.jfca.2012.07.005
+
+[32] 32. LeeH.H. PrasadA.S. BrewerG.J. OwyangC. Zinc absorption in human small intestineAm. J. Physiol. Gastrointest. Liver Physiol.1989256G87G9110.1152/ajpgi.1989.256.1.G872912154
+
+[33] 33. SandströmB. Dose dependence of zinc and manganese absorption in manProc. Nutr. Soc.19925121121810.1079/PNS199200311438329
+
+[34] 34. KingJ.C. BrownK.H. GibsonR.S. KrebsN.F. LoweN.M. SiekmannJ.H. RaitenD.J. Biomarkers of Nutrition for Development (BOND)-zinc reviewJ. Nutr.2016146858S885S10.3945/jn.115.220079PMC480764026962190
+
+[35] 35. SteinhardtH.J. AdibiS.A. Interaction between transport of zinc and other solutes in human intestineAm. J. Physiol. Gastrointest. Liver Physiol.1984247G176G18210.1152/ajpgi.1984.247.2.G1766465313
+
+[36] 36. RoohaniN. HurrellR. KelishadiR. SchulinR. Zinc and its importance for human health: An integrative reviewJ. Res. Med. Sci.20131814423914218PMC3724376
+
+[37] 37. McLoughlinI. HodgeJ. Zinc in depressive disorderActa Psychiatr. Scand.19908245145310.1111/j.1600-0447.1990.tb03077.x2291414
+
+[38] 38. KrebsN.F. Overview of zinc absorption and excretion in the human gastrointestinal tractJ. Nutr.20001301374S1377S10.1093/jn/130.5.1374S10801946
+
+[39] 39. CousinsR.J. LiuzziJ.P. LichtenL.A. Mammalian zinc transport, trafficking, and signalsJ. Biol. Chem.2006281240852408910.1074/jbc.R60001120016793761
+
+[40] 40. CousinsR.J. Gastrointestinal factors influencing zinc absorption and homeostasisInt. J. Vitam. Nutr. Res.20108024310.1024/0300-9831/a00003021462106PMC3777256
+
+[41] 41. JeejeebhoyK. Zinc: An essential trace element for parenteral nutritionGastroenterology2009137S7S1210.1053/j.gastro.2009.08.01419874952
+
+[42] 42. KambeT. TsujiT. HashimotoA. ItsumuraN. The physiological, biochemical, and molecular roles of zinc transporters in zinc homeostasis and metabolismPhysiol. Rev.20159574978410.1152/physrev.00035.201426084690
+
+[43] 43. TurnlundJ. KingJ. KeyesW. GongB. MichelM. A stable isotope study of zinc absorption in young men: Effects of phytate and a-celluloseAm. J. Clin. Nutr.1984401071107710.1093/ajcn/40.5.10716496386
+
+[44] 44. CousinsR.J. Absorption, transport, and hepatic metabolism of copper and zinc: Special reference to metallothionein and ceruloplasminPhysiol. Rev.19856523830910.1152/physrev.1985.65.2.2383885271
+
+[45] 45. World Health Organization Food and Agriculture Organization Vitamin and Mineral Requirements in Human Nutrition2nd ed.World Health OrganizationGeneva, Switzerland2004
+
+[46] 46. SandströmB. CederbladA. Zinc absorption from composite meals II. Influence of the main protein sourceAm. J. Clin. Nutr.1980331778178310.1093/ajcn/33.8.17786893252
+
+[47] 47. SauerA.K. PfaenderS. HagmeyerS. TaranaL. MattesA.-K. BrielF. KüryS. BoeckersT.M. GrabruckerA.M. Characterization of zinc amino acid complexes for zinc delivery in vitro using Caco-2 cells and enterocytes from hiPSCBiometals20173064366110.1007/s10534-017-0033-y28717982PMC5646115
+
+[48] 48. Van RossumC. Buurma-RethansE. DinnissenC. BeukersM. BrantsH. DekkersA. OckéM. The Diet of the Dutch: Results of the Dutch National Food Consumption Survey 2012–2016RIVM Report 2020-0083RIVMBilthoven, The Netherlands2020
+
+[49] 49. GaucheronF. Milk minerals, trace elements, and macroelementsMilk Dairy Prod. Hum. Nutr. Prod. Compos. Health201317219910.1002/9781118534168.ch9
+
+[50] 50. SandströmB. CederbladÅ. LönnerdalB. Zinc absorption from human milk, cow’s milk, and infant formulasAm. J. Dis. Child.198313772672910.1001/archpedi.1983.021403400100026869328
+
+[51] 51. LonnerdalB. CederbladÅ. DavidssonL. SandströmB. The effect of individual components of soy formula and cows’ milk formula on zinc bioavailabilityAm. J. Clin. Nutr.1984401064107010.1093/ajcn/40.5.10646541868
+
+[52] 52. TalsmaE.F. MorettiD. LyS.C. DekkersR. van den HeuvelE.G. FitriA. BoelsmaE. StomphT.J. ZederC. Melse-BoonstraA. Zinc absorption from milk is affected by dilution but not by thermal processing, and milk enhances absorption of zinc from high-phytate rice in young Dutch womenJ. Nutr.20171471086109310.3945/jn.116.24442628424261
+
+[53] 53. GalettiV. KujingaP. MitchikpeC.E.S. ZederC. TayF. TossouF. HounhouiganJ.D. ZimmermannM.B. MorettiD. Efficacy of highly bioavailable zinc from fortified water: A randomized controlled trial in rural Beninese childrenAm. J. Clin. Nutr.20151021238124810.3945/ajcn.115.11702826468121
+
+[54] 54. HotzC. BrownK.H. Assessment of the risk of zinc deficiency in populations and options for its controlFood. Nutr. Bull.2004259420418046856
+
+[55] 55. RosadoJ.L. DíazM. GonzalezK. GriffinI. AbramsS.A. PreciadoR. The addition of milk or yogurt to a plant-based diet increases zinc bioavailability but does not affect iron bioavailability in womenJ. Nutr.200513546546810.1093/jn/135.3.46515735079
+
+[56] 56. SandströmB. ArvidssonB. CederbladA. Björn-RasmussenE. Zinc absorption from composite meals I. The significance of wheat extraction rate, zinc, calcium, and protein content in meals based on breadAm. J. Clin. Nutr.19803373974510.1093/ajcn/33.4.7397361691
+
+[57] 57. HuntJ.R. LykkenG.I. MullenL.K. Moderate and high amounts of protein from casein enhance human absorption of zinc from whole-wheat or white rollsNutr. Res.19911141341810.1016/S0271-5317(05)80003-X
+
+[58] 58. PecoudA. DonzelP. SchellingJ. Effect of foodstuffs on the absorption of zinc sulfateClin. Pharmacol. Ther.19751746947410.1002/cpt19751744691091398
+
+[59] 59. FlanaganP.R. CluettJ. ChamberlainM.J. ValbergL.S. Dual-isotope method for determination of human zinc absorption: The use of a test meal of turkey meatJ. Nutr.198511511112210.1093/jn/115.1.1113965663

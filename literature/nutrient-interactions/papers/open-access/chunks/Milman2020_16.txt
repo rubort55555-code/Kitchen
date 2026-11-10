@@ -1,0 +1,61 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 16 из 19: References (часть 3)
+============================================================
+
+[58] 58LopezH. W.KrespineV.GuyC.MessagerA.DemigneC.RemesyC.Prolonged fermentation of whole wheat sourdough reduces phytate level and increases soluble magnesiumJournal of Agricultural and Food Chemistry20014952657266210.1021/jf001255z2-s2.0-003485663711368651
+
+[59] 59BeringS.SuchdevS.SjøltovL.BerggrenA.TetensI.BukhaveK.A lactic acid-fermented oat gruel increases non-haem iron absorption from a phytate-rich meal in healthy women of childbearing ageBritish Journal of Nutrition2006961808510.1079/bjn200616832-s2.0-3374668496016869994
+
+[60] 60DoğanM.TekinerI. H.Extracellular phytase activites of lactic acid bacteria in sourdough mix prepared from traditionally produced boza as starter cultureFood Health20206211712710.3153/FH20013
+
+[61] 61Martinez-TorresC.LayrisseM.CallenderS. T.Nutritional factors in iron deficiency: food iron absorptionClinics in Haematology19732Philadelphia, PA, USASaunders339352
+
+[62] 62CookJ. D.MonsenE. R.Food iron absorption in human subjects. III. Comparison of the effect of animal proteins on nonheme iron absorptionThe American Journal of Clinical Nutrition197629885986710.1093/ajcn/29.8.859941868
+
+[63] 63HurrellR. F.ReddyM. B.JuilleratM.CookJ. D.Meat protein fractions enhance nonheme iron absorption in humansThe Journal of Nutrition2006136112808281210.1093/jn/136.11.280817056805
+
+[64] 64ConradM. E.BenjaminB. I.WilliamsH. L.FoyA. L.Human absorption of hemoglobin-ironGastroenterology196753151010.1016/s0016-5085(19)34256-86067462
+
+[65] 65LayrisseM.Martínez-TorresC.Model for measuring dietary absorption of heme iron: test with a complete mealThe American Journal of Clinical Nutrition197225440141110.1093/ajcn/25.4.4015062276
+
+[66] 66Björn-RasmussenE.HallbergL.IsakssonB.ArvidssonB.Food iron absorption in man applications of the two-pool extrinsic tag method to measure heme and nonheme iron absorption from the whole dietJournal of Clinical Investigation197453124725510.1172/jci1075452-s2.0-00159532904808639PMC301460
+
+[67] 67HallbergL.Björn-RasmussenE.HowardL.RossanderL.Dietary heme iron absorptionScandinavian Journal of Gastroenterology197914776977910.3109/003655279091814032-s2.0-0018612257538407
+
+[68] 68CarpenterC. E.MahoneyA. W.Contributions of heme and nonheme iron to human nutritionCritical Reviews in Food Science and Nutrition199231433336710.1080/104083992095275762-s2.0-00264704291581009
+
+[69] 69CharltonR. W.JacobsP.SeftelH.BothwellT. H.Effect of alcohol on iron absorptionBMJ1964254221427142910.1136/bmj.2.5422.14272-s2.0-000097451714209363PMC1817497
+
+[70] 70MilmanN.KirchhoffM.Relationship between serum ferritin, alcohol intake, and social status in 2235 Danish men and womenAnnals of Hematology199672314515110.1007/s0027700501532-s2.0-00299229658766257
+
+[71] 71MilmanN.BygK.-E.OvesenL.KirchhoffM.JürgensenK. S.-L.Iron status in Danish men 1984-94: a cohort comparison of changes in iron stores and the prevalence of iron deficiency and iron overloadEuropean Journal of Haematology200268633234010.1034/j.1600-0609.2002.01668.x2-s2.0-003662104812225390
+
+[72] 72WhitfieldJ. B.ZhuG.HeathA. C.PowellL. W.MartinN. G.Effects of alcohol consumption on indices of iron stores and of iron stores on alcohol intake markersAlcoholism: Clinical and Experimental Research20012571037104510.1111/j.1530-0277.2001.tb02314.x2-s2.0-003495432511505030
+
+[73] 73ScotetV.MérourM. C.MercierA. YHereditary hemochromatosis: effect of excessive alcohol consumption on disease expression in patients homozygous for the C282Y mutationAmerican Journal of Epidemiology2003158212913410.1093/aje/kwg1232-s2.0-003781878712851225
+
+[74] 74CeladaA.RudolfH.DonathA.Effect of a single ingestion of alcohol on iron absorptionAmerican Journal of Hematology19785322523710.1002/ajh.28300503072-s2.0-0018239869752260
+
+[75] 75OhtakeT.SaitoH.HosokiY.Hepcidin is down-regulated in alcohol loadingAlcoholism: Clinical and Experimental Research20073112810.1111/j.1530-0277.2006.00279.x2-s2.0-3384629365017331161
+
+[76] 76Harrison-FindikD. D.KleinE.CristC.EvansJ.TimchenkoN.GollanJ.Iron-mediated regulation of liver hepcidin expression in rats and mice is abolished by alcoholHepatology20074661979198510.1002/hep.218952-s2.0-3484883899317763462
+
+[77] 77Harrison-FindikD. D.SchaferD.KleinE.Alcohol metabolism-mediated oxidative stress down-regulates hepcidin transcription and leads to increased duodenal iron transporter expressionJournal of Biological Chemistry200628132229742298210.1074/jbc.m6020982002-s2.0-3374735966616737972
+
+[78] 78BridleK. R.CheungT.-K.MurphyT. L.Hepcidin is down-regulated in alcoholic liver injury: implications for the pathogenesis of alcoholic liver diseaseAlcoholism: Clinical and Experimental Research200630110611210.1111/j.1530-0277.2006.00002.x2-s2.0-3364477356916433737
+
+[79] 79Harrison-FindikD. D.Is the iron regulatory hormone hepcidin a risk factor for alcoholic liver disease?World Journal of Gastroenterology200915101186119310.3748/wjg.15.11862-s2.0-6564911238619291818PMC2658862
+
+[80] 80RichardsonC. T.WalshJ. H.HicksM. I.The effect of cimetidine, a new histamine H2-receptor antagonist, on meal-stimulated acid secretion, serum gastrin, and gastric emptying in patients with duodenal ulcerGastroenterology1976711192310.1016/s0016-5085(76)80090-x2-s2.0-00171954596359
+
+[81] 81BlumR. A.HuntR. H.KiddS. L.ShiH.JenningsD. E.Greski-RoseP. A.Dose-response relationship of lansoprazole to gastric acid antisecretory effectsAlimentary Pharmacology and Therapeutics199812432132710.1046/j.1365-2036.1998.00306.x2-s2.0-00319196119690720
+
+[82] 82LamJ. R.SchneiderJ. L.QuesenberryC. P.CorleyD. A.Proton pump inhibitor and histamine-2 receptor antagonist use and iron deficiencyGastroenterology2017152482182910.1053/j.gastro.2016.11.0232-s2.0-8501441243227890768
+
+[83] 83HutchinsonC.GeisslerC. A.PowellJ. J.BomfordA.Proton pump inhibitors suppress absorption of dietary non-haem iron in hereditary haemochromatosisGut20075691291129510.1136/gut.2006.1086132-s2.0-3454812705817344278PMC1954964

@@ -1,0 +1,13 @@
+Название: Development of the FAO/INFOODS/IZINCG Global Food Composition Database for Phytate
+Авторы: Sergio Dahdouh, Fernanda Grande, Sarah Nájera Espinosa, Anna Vincent, Rosalind Gibson, Karl Bailey, Janet King, Doris Rittenschober, U Ruth Charrondière
+Журнал: Journal of Food Composition and Analysis, 2019
+DOI: https://doi.org/10.1016/j.jfca.2019.01.023   PMID: 31057213   PMC: PMC6472536
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 The Authors
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 9 из 10: Conclusion
+============================================================
+
+The FAO/INFOODS/IZiNCG Global Food Composition Database for Phytate represents a comprehensive and expandable data repository of publicly available high-quality data, where the variability of nutrient and antinutrient values due to factors such as processing and biodiversity is well portrayed. The database, including the complete list of references used for compilation, and the User Guide are freely available at the INFOODS-homepage (www.fao.org/infoods/infoods/tables-and-databases/en) and at the IZiNCG webpage (www.izincg.org). It will hopefully be used to stimulate researchers and laboratories to determine IPs instead of total phytate; to revise RDIs of zinc and iron; to establish nutrient retention factors for different processing methods and finally will assist in developing improved recipes to prevent zinc and iron deficiencies worldwide.
+
+It is expected that the database will contribute to the reduction of iron and zinc deficiencies across the world and will raise awareness of food-based approaches for increasing the bioavailability of these essential minerals in foods.

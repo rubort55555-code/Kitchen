@@ -1,0 +1,11 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 2 из 23: 1. Introduction
+============================================================
+
+Magnesium is the eight most common element in the crust of the Earth and is mainly tied up within mineral deposits, for example as magnesite (magnesium carbonate) and dolomite. Dolomite CaMg (SO3)2 is as the name suggests abundant in the Dolomite mountain range of the Alps [1,2,3]. The most plentiful source of biologically available magnesium, however, is the hydrosphere (i.e., oceans and rivers). In the sea, the concentration of magnesium is about 55 mmol/L and in the Dead Sea as an extreme example, the concentration is reported to be 198 mmol/L magnesium and has steadily increased over time [4]. Magnesium is an essential electrolyte for living organisms and is the fourth most abundant mineral in the human body. Humans need to consume magnesium regularly to prevent magnesium deficiency, but as the recommended daily allowance for magnesium varies, it is difficult to define accurately what the exact optimal intake should be. Based on magnesium’s many functions within the human body, it plays an important role in prevention and treatment of many diseases. Low levels of magnesium have been associated with a number of chronic and inflammatory diseases, such as Alzheimer’s disease, asthma, attention deficit hyperactivity disorder (ADHD), insulin resistance, type-2 diabetes mellitus, hypertension, cardiovascular disease (e.g., stroke), migraine headaches, and osteoporosis [5].

@@ -1,0 +1,73 @@
+Название: Calcium Absorption from Food Products: Food Matrix Effects
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu14010180   PMID: 35011055   PMC: PMC8746734
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 19 из 20: References (часть 5)
+============================================================
+
+[127] 127. FlouryJ. JeansonS. AlyS. LortalS. Determination of the diffusion coefficients of small solutes in cheese: A reviewDairy Sci. Technol.20109047750810.1051/dst/2010011
+
+[128] 128. SalaünF. MiettonB. GaucheronF. Buffering capacity of dairy productsInt. Dairy J.2005159510910.1016/j.idairyj.2004.06.007
+
+[129] 129. LiuW. JinY. WildeP.J. HouY. WangY. HanJ. Mechanisms, physiology, and recent research progress of gastric emptyingCrit. Rev. Food Sci. Nutr.2021612742275510.1080/10408398.2020.178484132602780
+
+[130] 130. LuceyJ.A. Formation and physical properties of milk protein gelsJ. Dairy Sci.20028528129410.3168/jds.S0022-0302(02)74078-211913691
+
+[131] 131. BuchheimW. Influences of Different Technological Treatments of Milk on the Digestion in the Stomach. IV. Electron Microscopical Characterization of the Coagulum and of Lipolytic Processes in the Stomach (German) Milchwissenschaft198439271275
+
+[132] 132. PfeilR. Influence of Different Technological Treatments of Milk on the Digestion in the Stomach. III. Proteolysis in the Stomach (German)Milchwissenschaft198439267270
+
+[133] 133. HorstmanA.M.H. GanzevlesR.A. KudlaU. KardinaalA.F.M. van den BorneJ.J.G.C. HuppertzT. Postprandial blood amino acid concentrations in older adults after consumption of dairy products: The role of the dairy matrixInt. Dairy J.202111310489010.1016/j.idairyj.2020.104890
+
+[134] 134. De La FuenteM.A. MontesF. GuerreroG. JuárezM. Total and soluble contents of calcium, magnesium, phosphorus and zinc in yoghurtsFood Chem.20038057357810.1016/S0308-8146(02)00505-8
+
+[135] 135. PopovaA. MihaylovaD. Antinutrients in plant-based foods: A reviewOpen Biotechnol. J.201913687610.2174/1874070701913010068
+
+[136] 136. HeaneyR.P. WeaverC.M. HindersS.M. MartinB. PackardP.T. Absorbability of calcium from brassica vegetables: Broccoli, bok choy, and kaleJ. Food Sci.1993581378138010.1111/j.1365-2621.1993.tb06187.x
+
+[137] 137. HansenM. SandströmB. JensenM. SørensenS.S. Casein phosphopeptides improve zinc and calcium absorption from rice-based but not from whole-grain infant cerealJ. Pediatr. Gastroenterol. Nutr.199724566210.1097/00005176-199701000-000149093988
+
+[138] 138. HambidgeK.M. KrebsN.F. WestcottJ.L. SianL. MillerL.V. PetersonK.L. RaboyV. Absorption of calcium from tortilla meals prepared from low-phytate maizeAm. J. Clin. Nutr.200582848710.1093/ajcn/82.1.8416002804PMC1592687
+
+[139] 139. WeaverC.M. MartinB.R. EbnerJ.S. KruegerC.A. Oxalic acid decreases calcium absorption in ratsJ. Nutr.19871171903190610.1093/jn/117.11.19033681480
+
+[140] 140. HodgmanC. Handbook of Chemistry and PhysicsCRC Press, Inc.Boca Raton, FL, USA2004
+
+[141] 141. HanesD.A. WeaverC.M. HeaneyR.P. WastneyM. Absorption of calcium oxalate does not require dissociation in ratsJ. Nutr.199912917017310.1093/jn/129.1.1709915895
+
+[142] 142. HughesJ. NormanR.W. Diet and calcium stonesCan. Med. Assoc. J.19921461371310430PMC1488383
+
+[143] 143. PrenenJ.A. BoerP. Dorhout MeesE.J. Absorption kinetics of oxalate from oxalate-rich food in manAm. J. Clin. Nutr.1984401007101010.1093/ajcn/40.5.10076496379
+
+[144] 144. LoD. WangH.I. WuW.J. YangR.Y. Anti-nutrient components and their concentrations in edible parts of vegetable familiesCAB Rev.20181313010.1079/PAVSNNR201813015
+
+[145] 145. NoonanS.C. SavageG.P. Oxalate content of foods and its effect on humansAsia Pac. J. Clin. Nutr.19998647424393738
+
+[146] 146. ChaiW. LiebmanM. Effect of different cooking methods on vegetable oxalate contentJ. Agric. Food Chem.2005533027303010.1021/jf048128d15826055
+
+[147] 147. WeaverC.M. PlaweckiK.L. Dietary calcium: Adequacy of a vegetarian dietAm. J. Clin. Nutr.1994591238S1241S10.1093/ajcn/59.5.1238S8172128
+
+[148] 148. MasonA.C. WeaverC.M. KimmelS. BrownR.K. Effect of soybean phytate content on calcium bioavailability in mature and immature ratsJ. Agric. Food Chem.19934124624910.1021/jf00026a020
+
+[149] 149. IqbalT.H. LewisK.O. CooperB.T. Phytase activity in the human and rat small intestineGut1994351233123610.1136/gut.35.9.12337959229PMC1375699
+
+[150] 150. GrynspanF. CheryanM. Calcium phytate: Effect of pH and molar ratio on in vitro solubilityJ. Am. Oil Chem. Soc.1983601761176410.1007/BF02680350
+
+[151] 151. SchlemmerU. FrølichW. PrietoR.M. GrasesF. Phytate in foods and significance for humans: Food sources, intake, processing, bioavailability, protective role and analysisMol. Nutr. Food Res.200953S330S37510.1002/mnfr.20090009919774556
+
+[152] 152. WalkerA.R.P. FoxF.W. IrvingJ.T. Studies in human mineral metabolism: 1. The effect of bread rich in phytate phosphorus on the metabolism of certain mineral salts with special reference to calciumBiochem. J.19484245210.1042/bj042045216748311PMC1258738
+
+[153] 153. BellostasN. KachlickiP. SørensenJ.C. SørensenH. Glucosinolate profiling of seeds and sprouts of B. oleracea varieties used for foodSci. Hortic.200711423424210.1016/j.scienta.2007.06.015
+
+[154] 154. PakC.Y. StewartA. HaynesS.D. Effect of added citrate or malate on calcium absorption from calcium-fortified orange juiceJ. Am. Coll. Nutr.19941357557710.1080/07315724.1994.107184507706589
+
+[155] 155. JonesA.D. HoeyL. BleshJ. MillerL. GreenA. ShapiroL.F. A systematic review of the measurement of sustainable dietsAdv. Nutr.2016764166410.3945/an.115.01101527422501PMC4942861
+
+[156] 156. JohnstonJ.L. FanzoJ.C. CogillB. Understanding sustainable diets: A descriptive analysis of the determinants and processes that influence diets and their impact on health, food security, and environmental sustainabilityAdv. Nutr.2014541842910.3945/an.113.00555325022991PMC4085190
+
+[157] 157. RIVM Database-Milieubelasting-VoedingsmiddelenAvailable online: https://www.rivm.nl/voedsel-en-voeding/duurzaam-voedsel/database-milieubelasting-voedingsmiddelen(accessed on 4 October 2021)
+
+[158] 158. RIVM Dutch Food Composition Database (NEVO)Available online: https://nevo-online.rivm.nl(accessed on 4 October 2021)

@@ -1,0 +1,15 @@
+Название: Mechanisms of Carotenoid Intestinal Absorption: Where Do We Stand?
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2019
+DOI: https://doi.org/10.3390/nu11040838   PMID: 31013870   PMC: PMC6520933
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 7 из 11: 5. Conclusions
+============================================================
+
+To conclude, the understanding of carotenoid intestinal absorption by the intestine is far from being fully understood. Proteins including lipid membrane transporters (i.e., SR-BI, CD36, NPC1L1), the cleavage enzyme BCO1, and the transcription factor ISX have been showed to play important roles in carotenoid intestinal uptake and metabolism, but other proteins likely remain to be identified.
+
+Genome-wide association studies (GWAS) and candidate gene association studies have identified correlations between single nucleotide polymorphisms in SCARB1 (encoding SR-BI), CD36, NPC1L1, BCO1, and ISX and carotenoid blood concentrations. Interestingly, these studies also highlighted the impact of polymorphisms in genes encoding proteins likely indirectly linked to carotenoid metabolism (i.e., ELOVL fatty acid elongase 2). The involvement of such proteins in carotenoid intestinal metabolism still needs to be defined [91].
+
+Carotenoid “low responder” or “high responder” phenotypes presumably correspond to individuals bearing associations of several “disadvantageous” or “advantageous” polymorphisms, respectively. In the future, it would thus be of major interest to take into account the carotenoid “low responder” or “high responder” phenotypes that are due to different transport and/or conversion efficiency, to propose tailored dietary recommendations to individuals and to thus optimize carotenoid health benefits.

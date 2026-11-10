@@ -193,6 +193,36 @@ export interface PlanEntry {
   sweet?: { id: string; name: string };
 }
 
+export type MealSlot = Slot | "перекус";
+export const MEAL_SLOTS: MealSlot[] = ["завтрак", "обед", "ужин", "перекус"];
+
+/** Запись дневника питания: что съели, когда и сколько это дало (на съеденную порцию). */
+export interface Meal {
+  id: string;
+  /** ГГГГ-ММ-ДД */
+  date: string;
+  /** Время записи — для порядка внутри дня. */
+  t: number;
+  slot: MealSlot;
+  name: string;
+  /** Чей приём пищи (id члена семьи). */
+  who?: string;
+  recipeId?: string;
+  /** Запись создана отметкой «приготовили» в меню — при снятии отметки удаляется. */
+  planEntryId?: string;
+  /** Сколько: «1 порция», «150 г». */
+  qty?: string;
+  /** Категории Open Food Facts и состав с упаковки — для оценки усвоения железа по штрихкоду. */
+  cats?: string[];
+  ingredients?: string;
+  /** Съедено порций рецепта (для расчёта состава по ингредиентам). */
+  servings?: number;
+  /** Кофеин, мг (для напитков). */
+  caffeine?: number;
+  /** Пищевая ценность съеденного; ключи — как в recipeNutrition.ts. */
+  n: Partial<Record<import("./recipeNutrition").NutrientKey, number>>;
+}
+
 export type Appearance = "system" | "brightness" | "light" | "dark";
 
 export interface Settings {
@@ -222,6 +252,16 @@ export interface Settings {
   appearance?: Appearance;
   /** При максимальной яркости — контрастная тема «солнце» (по умолчанию да). */
   sunContrast?: boolean;
+  /** Выпитая вода, мл: «id человека|ГГГГ-ММ-ДД» → мл. */
+  water?: Record<string, number>;
+  /** Последний выпуск «Что нового», который человек уже видел. */
+  seenNews?: string;
+  /** Согласия: что и в какой версии текста подтверждено. */
+  consent?: import("./privacy").Consents;
+  /** Журнал замеров: id члена семьи → вес, талия, бёдра по датам. */
+  measures?: Record<string, import("./body").Measure[]>;
+  /** Чей дневник открыт (id члена семьи). */
+  diaryWho?: string;
   /** Пробные функции: включены ли (по умолчанию — да). */
   beta?: { barcode?: boolean; nutrition?: boolean };
   /** Журнал пробы сканера: последние попытки (для отчёта о том, как работает). */

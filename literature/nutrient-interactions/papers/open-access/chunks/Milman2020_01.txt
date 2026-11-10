@@ -1,0 +1,17 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 19: Abstract
+============================================================
+
+To provide an overview of nutrients and compounds, which influence human intestinal iron absorption, thereby making a platform for elaboration of dietary recommendations that can reduce iron uptake in patients with genetic haemochromatosis.
+
+Review. Setting. A literature search in PubMed and Google Scholar of papers dealing with iron absorption.
+
+The most important promoters of iron absorption in foods are ascorbic acid, lactic acid (produced by fermentation), meat factors in animal meat, the presence of heme iron, and alcohol which stimulate iron uptake by inhibition of hepcidin expression. The most important inhibitors of iron uptake are phytic acid/phytates, polyphenols/tannins, proteins from soya beans, milk, eggs, and calcium. Oxalic acid/oxalate does not seem to influence iron uptake. Turmeric/curcumin may stimulate iron uptake through a decrease in hepcidin expression and inhibit uptake by complex formation with iron, but the net effect has not been clarified.
+
+In haemochromatosis, iron absorption is enhanced due to a decreased expression of hepcidin. Dietary modifications that lower iron intake and decrease iron bioavailability may provide additional measures to reduce iron uptake from the foods. This could stimulate the patients' active cooperation in the treatment of their disorder and reduce the number of phlebotomies.

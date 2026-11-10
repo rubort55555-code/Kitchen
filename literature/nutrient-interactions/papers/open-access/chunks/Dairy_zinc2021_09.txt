@@ -1,0 +1,11 @@
+Название: Influence of Dairy Products on Bioavailability of Zinc from Other Food Products: A Review of Complementarity at a Meal Level
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu13124253   PMID: 34959808   PMC: PMC8705257
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 9 из 12: 7. Conclusions
+============================================================
+
+From the results explored above, it is clear that dairy products play a dual role with regard to the absorption of dietary zinc. Both provide a source of dietary zinc, which in general has good bioavailability. However, in addition to this, they also modulate the absorption of zinc from other food sources. Such effects are arguably not unique to only dairy products or zinc, and warrant further investigation and the consideration of the bioavailability of nutrients at a meal level rather than an individual product level. Considering that areas where zinc deficiencies are most prominent are also those where zinc is often ingested via high phytate products, dietary recommendations on the inclusion of dairy products, or products with a comparable ability to modulate zinc absorption in meals, can present significant advantages.

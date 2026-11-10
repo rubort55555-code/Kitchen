@@ -1,0 +1,13 @@
+Название: Development of the FAO/INFOODS/IZINCG Global Food Composition Database for Phytate
+Авторы: Sergio Dahdouh, Fernanda Grande, Sarah Nájera Espinosa, Anna Vincent, Rosalind Gibson, Karl Bailey, Janet King, Doris Rittenschober, U Ruth Charrondière
+Журнал: Journal of Food Composition and Analysis, 2019
+DOI: https://doi.org/10.1016/j.jfca.2019.01.023   PMID: 31057213   PMC: PMC6472536
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 The Authors
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 10 из 10: Acknowledgements
+============================================================
+
+The authors gratefully acknowledge the support given by the colleagues from the FAO’s Nutrition Assessment Team, especially to the developers of the FAO/WHO GIFT platform. Our special thanks go to the European Food Safety Authority (EFSA), especially to Francesco Vernazza, Senior Scientific Officer, who introduced the authors to the FoodEx2 system.
+
+This work would not have been possible without the financial support of the IZiNCG, the Canigó’s scholarship program, the FAO regular budget, and the trust fund of the International Year of Pulses.

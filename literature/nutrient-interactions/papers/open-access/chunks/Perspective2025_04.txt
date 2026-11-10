@@ -1,0 +1,31 @@
+Название: Perspective: Framework for Developing Prediction Equations for Estimating the Absorption and Bioavailability of Nutrients from Foods
+Авторы: Connie Weaver, Seth Armah, Richard S Bruno, Andrew Fletcher, Raymond Glahn, Isabelle Herter-Aeberli, Tasija Karosas, Cornelia U Loechl, Veronica Lopez-Teros, Michael I McBurney, Alida Melse-Boonstra, Rachel Novotny, Manju B Reddy, Jessica Rigutto-Farebrother, Sherry Tanumihardjo, Emorn Udomkesmalee, Ellen Van Den Heuvel, Taylor Wallace, Pattanee Winichagoon
+Журнал: Advances in Nutrition, 2025
+DOI: https://doi.org/10.1016/j.advnut.2025.100481   PMID: 40683371   PMC: PMC12361767
+Лицензия: CC BY 4.0 (открытый доступ). © 2025 The Author(s)
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 20: Rationale and Approach (часть 2)
+============================================================
+
+Sustainability | Evaluate the sustainability of nutrient resources within the global food system, providing valuable insights for long-term planning and resource management. | •Reduce ingredient waste. | Ingredient manufacturing companies; Public Health institutes, UN institutes, NGOs; food/beverage companies
+
+ILSI United States and Canada convened an international working group of experts in February and March of 2024 to consider the development of nutrient absorption and/or bioavailability prediction equations. Over the next year, using working subgroups and consensus-building meetings, this framework was developed. It was recognized that individual nutrients vary in the amount and extent to which dietary factors affect their absorption. Therefore, differences in the types and levels of evidence needed are anticipated when developing absorption and/or bioavailability predictive equations for nutrients and bioactive compounds. We used the prediction equation for estimating calcium absorption of foods developed using the process in Figure 3 as a template and test case nutrient for developing prediction equations for absorption of other nutrients. The goal was to develop predictive equations that considered only factors external to the host to enable the equations to be used for food labels where the consumer is not known. This goal demands the outcome values to be determined as relative bioavailability to a reference material (e.g. food or compound) rather than as absolute values so that sources can be compared with each other for nutrient bioavailability. This will be discussed further in Methodologies for determining absorption section.
+
+FIGURE 3. Factors used in developing the calcium absorption prediction equation, that is, the total calcium ingested from a given food and calcium absorption inhibitors oxalic acid and phytic acid.
+
+The following sections outline the step-by-step process and key decisions involved in developing prediction equations for each nutrient or bioactive compound. Figure 4 provides a visual summary of the necessary steps and considerations. The proposed approach involves convening working groups for each nutrient, composed of subject matter experts, to review the steps below, make informed decisions, and collaboratively develop the prediction equations.
+
+FIGURE 4. A framework illustrating a systematic approach, highlighting key considerations for expert panels or research teams in developing a nutrient absorption or bioavailability prediction equation.
+
+## Step 1: identify the factors that influence bioavailability for the nutrient or bioactive compound
+
+The first step in the process for developing a prediction equation is to identify key factors that influence nutrient or bioactive compound bioavailability as outlined in the concept map (Figure 2). Factors to consider when deciding what information is appropriate for predictive equation development include the nature of the nutrient or compound of interest, the matrix, and the study designs used to collect the data for the desired outcome. Foods are complex mixtures of chemicals arranged in a physical environment that can influence absorption and bioavailability (Figure 5) [22].
+
+FIGURE 5. Step 1 in the framework.
+
+Using calcium as an example, we discuss the influence of the food matrix. Calcium is found in different matrices in nature. In milk, two-thirds of the calcium is in the form of micellar calcium phosphate encapsulated within a protein cluster of casein micelles. Milk is one of the most concentrated and bioavailable sources of calcium. In contrast, when calcium is bound to oxalic acid, as occurs in spinach, it forms the insoluble salt, calcium oxalate, so that the relative bioavailability of calcium from spinach is only one-tenth that of calcium from milk, studied at the same calcium load [23].
+
+Plant foods are comprised of cell walls that may encapsulate minerals even without absorption inhibitors to inhibit bioaccessibility, or substructures that may separate calcium from its inhibitors. This may explain why calcium bioavailability from soy products, which contain enough oxalate and phytic acid to completely bind all the calcium on a molar basis, is relatively high. Processing, preparation, and storage can alter these structures and complexes, changing the nutrient bioavailability. Factors that influence the bioaccessibility of nutrients and bioactive compounds will intrinsically impact the efficiency of bioconversion.
+
+Study designs and choice of method to determine absorption influence results due to different exposures to the nutrient, different sampling schemes, whether in a fed or fasted state, sensitivities of the measurement, etc. Many studies employ tracers to follow the nutrient of interest through digestion and absorption to distinguish what comes from the test food from other sources. Much of what will be discussed below focuses on the use of tracers as the historic reference standard to measure absorption.

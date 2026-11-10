@@ -1,0 +1,73 @@
+Название: Calcium Absorption from Food Products: Food Matrix Effects
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu14010180   PMID: 35011055   PMC: PMC8746734
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 16 из 20: References (часть 2)
+============================================================
+
+[35] 35. MillerD.D. BernerL.A. Is solubility in vitro a reliable predictor of iron bioavailability?Biol. Trace Elem. Res.198919112410.1007/BF029254462484374
+
+[36] 36. SmithR.H. McAllanA.B. Binding of magnesium and calcium in the contents of the small intestine of the calfBr. J. Nutr.19662070371810.1079/BJN196600726006009
+
+[37] 37. PérezA.V. PicottoG. CarpentieriA.R. RivoiraM.A. LópezM.E.P. De TalamoniN.G.T. Minireview on regulation of intestinal calcium absorptionDigestion200877223410.1159/00011662318277073
+
+[38] 38. BronnerF. Calcium absorption—A paradigm for mineral absorptionJ. Nutr.199812891792010.1093/jn/128.5.9179567004
+
+[39] 39. HoenderopJ.G.J. van der KempA.W.C.M. HartogA. van de GraafS.F.J. van OsC.H. WillemsP.H.G.M. BindelsR.J.M. Molecular identification of the apical Ca2+ channel in 1, 25-dihydroxyvitamin D3-responsive epitheliaJ. Biol. Chem.19992748375837810.1074/jbc.274.13.837510085067
+
+[40] 40. PengJ.-B. ChenX.-Z. BergerU.V. VassilevP.M. TsukaguchiH. BrownE.M. HedigerM.A. Molecular cloning and characterization of a channel-like transporter mediating intestinal calcium absorptionJ. Biol. Chem.1999274227392274610.1074/jbc.274.32.2273910428857
+
+[41] 41. KarbachU. FeldmeierH. The cecum is the site with the highest calcium absorption in rat intestineDig. Dis. Sci.1993381815182410.1007/BF012961048404402
+
+[42] 42. NijenhuisT. HoenderopJ.G.J. van der KempA.W.C.M. BindelsR.J.M. Localization and regulation of the epithelial Ca2+ channel TRPV6 in the kidneyJ. Am. Soc. Nephrol.2003142731274010.1097/01.ASN.0000094081.78893.E814569082
+
+[43] 43. KhanalR.C. NemereI. Regulation of intestinal calcium transportAnnu. Rev. Nutr.20082817919610.1146/annurev.nutr.010308.16120218598134
+
+[44] 44. ChristakosS. DhawanP. PortaA. MadyL.J. SethT. Vitamin D and intestinal calcium absorptionMol. Cell Endocrinol.2011347252910.1016/j.mce.2011.05.03821664413PMC3405161
+
+[45] 45. LamerisA.L. NevalainenP.I. ReijnenD. SimonsE. EygensteynJ. MonnensL. BindelsR.J.M. HoenderopJ.G.J. Segmental transport of Ca2+ and Mg2+ along the gastrointestinal tractAm. J. Physiol. Liver Physiol.2015308G206G21610.1152/ajpgi.00093.201425477372
+
+[46] 46. BronnerF. Intestinal calcium absorption: Mechanisms and applicationsJ. Nutr.19871171347135210.1093/jn/117.8.13473305814
+
+[47] 47. BronnerF. Current concepts of calcium absorption: An overviewJ. Nutr.199212264164310.1093/jn/122.suppl_3.6411542025
+
+[48] 48. BellatonC. RocheC. RémyC. PansuD. Absorption du calcium. Données physiologiques récentesGastroentérol. Clin. Biol.1992162392471316300
+
+[49] 49. BeggsM.R. AlexanderR.T. Intestinal absorption and renal reabsorption of calcium throughout postnatal developmentExp. Biol. Med.201724284084910.1177/1535370217699536PMC540754428346014
+
+[50] 50. BronnerF. Recent developments in intestinal calcium absorptionNutr. Rev.20096710911310.1111/j.1753-4887.2008.00147.x19178653
+
+[51] 51. SheikhM.S. SchillerL.R. FordtranJ.S. In vivo intestinal absorption of calcium in humansMiner. Electrolyte Metab.1990161301462250619
+
+[52] 52. AlexanderR.T. RievajJ. DimkeH. Paracellular calcium transport across renal and intestinal epitheliaBiochem. Cell Biol.20149246748010.1139/bcb-2014-006125386841
+
+[53] 53. AndersonJ.M. Molecular structure of tight junctions and their role in epithelial transportPhysiology20011612613010.1152/physiologyonline.2001.16.3.12611443232
+
+[54] 54. MarcusC.S. LengemannF.W. Absorption of Ca 45 and Sr 85 from solid and liquid food at various levels of the alimentary tract of the ratJ. Nutr.19627715516010.1093/jn/77.2.15514469699
+
+[55] 55. WassermanR.H. Vitamin D and the dual processes of intestinal calcium absorptionJ. Nutr.20041343137313910.1093/jn/134.11.313715514288
+
+[56] 56. Barger-LuxM.J. HeaneyR.P. ReckerR.R. Time course of calcium absorption in humans: Evidence for a colonic componentCalcif. Tissue Int.19894430831110.1007/BF025563092496901
+
+[57] 57. BronnerF. PansuD. Nutritional aspects of calcium absorptionJ. Nutr.199912991210.1093/jn/129.1.99915868
+
+[58] 58. WenH. ParkK. Oral Controlled Release Formulation Design and Drug Delivery: Theory to PracticeJohn Wiley & SonsSussex, UK2011
+
+[59] 59. Smeets-PeetersM.J.E. MinekusM. HavenaarR. SchaafsmaG. VerstegenM.W.A. Description of a dynamic in vitro model of the dog gastrointestinal tract and an evaluation of various transit times for protein and calciumAltern. Lab. Anim.19992793594910.1177/02611929990270060825490462
+
+[60] 60. VergneM. ParkerT.F. PakC.Y.C. HullA.R. De LucaH.F. FordtranJ.S. Jejunal and ileal calcium absorption in patients with chronic renal diseaseJ. Clin. Investig.19765786186610.1172/JCI108362947957PMC436729
+
+[61] 61. FallingborgJ. Intraluminal pH of the human gastrointestinal tractDan. Med. Bull.19994618319610421978
+
+[62] 62. DuflosC. BellatonC. PansuD. BronnerF. Calcium solubility, intestinal sojourn time and paracellular permeability codetermine passive calcium absorption in ratsJ. Nutr.19951252348235510.1093/jn/125.9.23487666252
+
+[63] 63. ReidI.R. BristowS.M. BollandM.J. Calcium supplements: Benefits and risksJ. Intern. Med.201527835436810.1111/joim.1239426174589
+
+[64] 64. GenantH.K. CooperC. PoorG. ReidI. EhrlichG. KanisJ. NordinB.E.C. Barrett-ConnorE. BlackD. BonjourJ.P. Interim report and recommendations of the World Health Organization task-force for osteoporosisOsteoporos. Int.19991025910.1007/s00198005022410692972
+
+[65] 65. LiK. KaaksR. LinseisenJ. RohrmannS. Associations of dietary calcium intake and calcium supplementation with myocardial infarction and stroke risk and overall cardiovascular mortality in the Heidelberg cohort of the European Prospective Investigation into Cancer and Nutrition study (EPIC-Heidelberg)Heart2012989209252262690010.1136/heartjnl-2011-301345
+
+[66] 66. OnakpoyaI.J. PerryR. ZhangJ. ErnstE. Efficacy of calcium supplementation for management of overweight and obesity: Systematic review of randomized clinical trialsNutr. Rev.20116933534310.1111/j.1753-4887.2011.00397.x21631515

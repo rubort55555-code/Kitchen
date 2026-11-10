@@ -1,11 +1,13 @@
 // Экран «Питание» (пробная функция): профиль каждого члена семьи и личные нормы на день.
 import { Fragment, useMemo, useState } from "react";
 import { Header, Seg, Sheet } from "../components/ui";
-import { setSettings, useStore } from "../lib/store";
+import { BodyLog } from "../components/BodyLog";
+import { giveConsent, setSettings, useStore } from "../lib/store";
+import { CONSENT_TEXT, hasConsent } from "../lib/privacy";
 import { goPage } from "../lib/ui";
 import type { Member } from "../lib/types";
 import {
-  GOALS, bmr, dayEnergy, fromHours, hm, micros, newProfile, normSegs, parseHm, planFor, templateDay,
+  GOALS, HEALTH_QUESTIONS, STAGES,  bmr, dayEnergy, hasHealthFlag, fromHours, hm, micros, newProfile, normSegs, parseHm, planFor, templateDay,
   type BodyProfile, type DayLog, type Goal, type Plan,
 } from "../lib/nutrition";
 import { ACTIVITIES, ACT_GROUPS, actByKey, actKey, searchActs, type ActGroup, type Activity } from "../lib/activities";
@@ -15,12 +17,16 @@ const kcalText = (x: number) => x.toLocaleString("ru-RU");
 
 export function Nutrition() {
   const members = useStore((s) => s.settings.members);
+  const consented = useStore((s) => hasConsent(s.settings.consent, "health"));
   const [edit, setEdit] = useState<string | null>(null);
   const plans = members.map((m) => ({ m, plan: m.body ? planFor(m.body) : null }));
   const ready = plans.filter((x) => x.plan);
   const editing = members.find((m) => m.id === edit);
 
   function save(id: string, body: BodyProfile | undefined) {
+    const prev = members.find((m) => m.id === id)?.body;
+    // Сменили цель — прежняя поправка по динамике веса больше не относится к делу
+    if (body && prev && prev.goal !== body.goal) body = { ...body, adjust: undefined, checkedAt: undefined };
     setSettings({ members: members.map((m) => (m.id === id ? { ...m, body } : m)) });
     setEdit(null);
   }
@@ -30,11 +36,20 @@ export function Nutrition() {
       <Header title="Питание" sub="Пробная функция" screen="nutrition" onBack={() => goPage(null)} backText="Ещё" />
       <p className="muted mt0">Личные нормы на день для каждого: калории, белки, жиры, углеводы, витамины. Ориентир для здоровых взрослых, не назначение врача.</p>
 
-      {plans.map(({ m, plan }) => (
+      {!consented && (
+        <div className="card">
+          <h3>{CONSENT_TEXT.health.title}</h3>
+          <p className="small mt0">{CONSENT_TEXT.health.lead}</p>
+          <ul className="small">{CONSENT_TEXT.health.points.map((x) => <li key={x}>{x}</li>)}</ul>
+          <button className="btn" onClick={() => giveConsent("health")}>{CONSENT_TEXT.health.accept}</button>
+          <button className="link" onClick={() => goPage("privacy")}>Политика конфиденциальности</button>
+        </div>
+      )}
+      {consented && plans.map(({ m, plan }) => (
         <PersonCard key={m.id} m={m} plan={plan} onEdit={() => setEdit(m.id)} />
       ))}
 
-      {ready.length >= 2 && (
+      {consented && ready.length >= 2 && (
         <div className="card">
           <h3>Вся семья в день</h3>
           <div className="nut-macros">
@@ -52,8 +67,11 @@ export function Nutrition() {
         <ul className="small">
           <li>Основной обмен — формула Миффлина — Сан-Жеора (1990): вес, рост, возраст, пол.</li>
           <li>Расход за день — по дневнику: каждое занятие из таблицы 2024 Adult Compendium of Physical Activities (код и MET). Энергия = MET × основной обмен × минуты, плюс 10% на переваривание пищи.</li>
-          <li>Белки, жиры, углеводы, клетчатка, витамины и минералы — МР 2.3.1.0253-21 Роспотребнадзора (2021).</li>
+          <li>Белки, жиры, углеводы, клетчатка, вода (таблица 7), витамины и минералы, беременность и кормление (таблицы 19–20) — МР 2.3.1.0253-21 Роспотребнадзора (2021).</li>
           <li>ИМТ и окружность талии — пороги ВОЗ.</li>
+          <li>Источник норм: МР 2.3.1.0253-21 «Нормы физиологических потребностей в энергии и пищевых веществах для различных групп населения Российской Федерации», Роспотребнадзор, утверждены 22.07.2021. Основной обмен — по формуле МР (9,99 × масса + 6,25 × рост − 4,92 × возраст).</li>
+          <li>Приложение справочное и не заменяет врача. При болезнях, беременности и кормлении, расстройствах пищевого поведения питание обсуждайте с врачом.</li>
+          <li>Подстройка цели: раз в две недели тренд веса (не меньше трёх замеров) сравнивается с планом; поправка — до ±300 ккал в день, шагом по 50, и только по вашему нажатию. Пороги — эвристика приложения.</li>
           <li>Снижение веса — не больше 20% от расхода и не больше 750 ккал в день, не ниже 1200 ккал (женщины) и 1500 ккал (мужчины).</li>
           <li>Сколько калорий в блюдах и меню — следующий шаг: для этого нужен справочник состава продуктов.</li>
         </ul>
@@ -106,6 +124,8 @@ function PersonCard({ m, plan, onEdit }: { m: Member; plan: Plan | null; onEdit:
         <span>Вода</span><span>≈ {n1(plan.water)} л питья</span>
       </div>
       {plan.warnings.map((w, i) => <div key={i} className="issue small">⚠️ {w}</div>)}
+      <BodyLog m={m} plan={plan} />
+      {hasHealthFlag(b.health) && <div className="issue small">🩺 Вы отметили состояние здоровья: приложение не строит план с дефицитом или набором калорий. Питание лучше обсудить с врачом.</div>}
       {!b.days?.length && <p className="muted small">Активность посчитана по умолчанию (сидячая работа). Нажмите «Изменить» и распишите обычный день — расчёт станет точнее.</p>}
       <button className="link" onClick={() => setMore(!more)} aria-expanded={more}>{more ? "Скрыть подробности" : "Подробнее: обмен, активность, витамины"}</button>
       {more && (
@@ -115,8 +135,14 @@ function PersonCard({ m, plan, onEdit }: { m: Member; plan: Plan | null; onEdit:
             <span>Основной обмен</span><span>{kcalText(plan.bmr)} ккал</span>
             <span>Активность (КФА)</span><span>{n1(plan.pal)}</span>
             <span>Группа по МР</span><span>{plan.group.title}</span>
+            {plan.mr && <><span>Норма МР для вашей группы</span><span>{kcalText(plan.mr.kcal)} ккал · белок {plan.mr.protein} г · жиры {plan.mr.fat} г · углеводы {plan.mr.carbs} г ({plan.mr.label}). Ориентир для населения; ваша цель считается индивидуально.</span></>}
+            <span>Животный белок</span><span>около {plan.animalProtein} г (половина белка)</span>
+            {plan.fats.map((f) => <Fragment key={f.key}><span>{f.title}</span><span>{f.from === f.to ? `≈ ${f.from}` : `${f.from}–${f.to}`} г</span></Fragment>)}
             <span>Насыщенные жиры</span><span>не больше {plan.satFatMax} г</span>
             <span>Добавленный сахар</span><span>не больше {plan.sugarMax} г</span>
+            <span>Холестерин</span><span>менее {plan.cholMax} мг</span>
+            <span>Транс-жиры</span><span>не больше {n1(plan.transMax)} г (1% ккал)</span>
+            <span>Натрий</span><span>не больше {kcalText(plan.naMax)} мг (≈ {plan.saltMax} г соли)</span>
           </div>
           {plan.waist && <div className={"nut-waist" + (plan.waist.level === "high" ? " bad" : plan.waist.level === "up" ? " soon" : "")}>Талия: {plan.waist.text}</div>}
           {plan.diary && (
@@ -239,10 +265,24 @@ function ProfileSheet({ m, onSave, onClose }: { m: Member; onSave: (b: BodyProfi
 
       {b.sex === "f" && (
         <div className="chips" style={{ marginTop: 12 }}>
-          <button type="button" className="chip" aria-pressed={!!b.pregnant} onClick={() => up({ pregnant: !b.pregnant, lactating: false })}>Беременность</button>
-          <button type="button" className="chip" aria-pressed={!!b.lactating} onClick={() => up({ lactating: !b.lactating, pregnant: false })}>Кормлю грудью</button>
-        </div>
+          <button type="button" className="chip" aria-pressed={!!b.pregnant} onClick={() => up({ pregnant: !b.pregnant, lactating: false, stage: undefined })}>Беременность</button>
+          <button type="button" className="chip" aria-pressed={!!b.lactating} onClick={() => up({ lactating: !b.lactating, pregnant: false, stage: undefined })}>Кормлю грудью</button>
+        </div>)}
+      {b.sex === "f" && (b.pregnant || b.lactating) && (
+        <>
+          <div className="chips">
+            {(b.pregnant ? (["t1", "t2", "t3"] as const) : (["l1", "l2"] as const)).map((st) => <button type="button" key={st} className="chip" aria-pressed={b.stage === st} onClick={() => up({ stage: st })}>{STAGES[st]}</button>)}
+          </div>
+          <p className="issue little small">Нормы в этот период показаны как справочные (таблицы 19–20 МР). Питание обсуждайте с врачом.</p>
+        </>
       )}
+
+      <label className="f">Здоровье (для безопасности)</label>
+      <p className="muted small mt0">Если что-то из списка подходит, приложение не будет предлагать худеть или набирать вес — только общие нормы. Ответы остаются на телефоне.</p>
+      <div className="chips">
+        {HEALTH_QUESTIONS.map((q) => <button type="button" key={q.key} className="chip" aria-pressed={!!b.health?.[q.key]} onClick={() => up({ health: { ...b.health, [q.key]: !b.health?.[q.key] } })}>{q.text}</button>)}
+      </div>
+      {hasHealthFlag(b.health) && <p className="issue little small">Питание при таких состояниях подбирает врач. Приложение покажет только справочные нормы.</p>}
 
       <label className="f" htmlFor="nmed">Рекомендации врача по питанию</label>
       <textarea id="nmed" className="inp" rows={2} value={b.medical || ""} placeholder="Например: меньше соли, без сахара" onChange={(e: any) => up({ medical: e.target.value })} />

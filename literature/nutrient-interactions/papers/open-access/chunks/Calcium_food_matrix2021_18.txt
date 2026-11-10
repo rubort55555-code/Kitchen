@@ -1,0 +1,69 @@
+Название: Calcium Absorption from Food Products: Food Matrix Effects
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu14010180   PMID: 35011055   PMC: PMC8746734
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 18 из 20: References (часть 4)
+============================================================
+
+[97] 97. De KruifC.G. HuppertzT. UrbanV.S. PetukhovA.V. Casein micelles and their internal structureAdv. Colloid Interface Sci.2012171–172365210.1016/j.cis.2012.01.00222381008
+
+[98] 98. HuppertzT. GaziI. LuytenH. NieuwenhuijseH. AltingA. SchokkerE. Hydration of casein micelles and caseinates: Implications for casein micelle structureInt. Dairy J.20177411110.1016/j.idairyj.2017.03.006
+
+[99] 99. DalgleishD.G. LawA.J.R. pH-Induced dissociation of bovine casein micelles II. Mineral solubilization and its relation to casein releaseJ. Dairy Res.19895672773510.1017/S0022029900029290
+
+[100] 100. Le GraëtY. GaucheronF. pH-induced solubilization of minerals from casein micelles: Influence of casein concentration and ionic strengthJ. Dairy Res.19996621522410.1017/S0022029999003386
+
+[101] 101. HuppertzT. ChiaL.W. Milk protein coagulation under gastric conditions: A reviewInt. Dairy J.202111310488210.1016/j.idairyj.2020.104882
+
+[102] 102. WalstraP. WoutersJ.T.M. GeurtsT.J. Dairy Science and Technology2nd ed.CRC PressBoca Raton, FL, USA2005
+
+[103] 103. HeaneyR.P. WeaverC.M. Lee FitzsimmonsM. Influence of calcium load on absorption fractionJ. Bone Miner. Res.199051135113810.1002/jbmr.56500511072270776
+
+[104] 104. WeaverC.M. HeaneyR.P. ProulxW.R. HindersS. PackardP.T. Absorbability of calcium from common beansJ. Food Sci.1993581401140310.1111/j.1365-2621.1993.tb06192.x
+
+[105] 105. WeaverC.M. HeaneyR.P. NickelK.P. PackardP.I. Calcium bioavailability from high oxalate vegetables: Chinese vegetables, sweet potatoes and rhubarbJ. Food Sci.19976252452510.1111/j.1365-2621.1997.tb04421.x
+
+[106] 106. HeaneyR.P. WeaverC.M. FitzsimmonsM.L. Soybean phytate content: Effect on calcium absorptionAm. J. Clin. Nutr.19915374574710.1093/ajcn/53.3.7452000830
+
+[107] 107. HeaneyR.P. WeaverC.M. Calcium absorption from kaleAm. J. Clin. Nutr.19905165665710.1093/ajcn/51.4.6562321572
+
+[108] 108. HeaneyR.P. WeaverC.M. ReckerR.R. Calcium absorbability from spinachAm. J. Clin. Nutr.19884770770910.1093/ajcn/47.4.7073354496
+
+[109] 109. HawthorneK.M. MorrisJ. HotzeT. HirschiK.D. AbramsS.A. Biotechnologically-modified carrots: Calcium absorption relative to milkJ. Bioequivalence Bioavailab.200913438
+
+[110] 110. HeaneyR.P. DowellM.S. Absorbability of the calcium in a high-calcium mineral waterOsteoporos. Int.1994432332410.1007/BF016221917696826
+
+[111] 111. CouzyF. KastenmayerP. VigoM. CloughJ. Munoz-BoxR. BarclayD. V Calcium bioavailability from a calcium-and sulfate-rich mineral water, compared with milk, in young adult womenAm. J. Clin. Nutr.1995621239124410.1093/ajcn/62.6.12397491887
+
+[112] 112. MartinB.R. WeaverC.M. HeaneyR.P. PackardP.T. SmithD.L. Calcium absorption from three salts and CaSO4-fortified bread in premenopausal womenJ. Agric. Food Chem.2002503874387610.1021/jf020065g12059174
+
+[113] 113. HansenM. ThilstedS.H. SandströmB. KongsbakK. LarsenT. JensenM. SørensenS.S. Calcium absorption from small soft-boned fishJ. Trace Elem. Med. Biol.19981214815410.1016/S0946-672X(98)80003-59857327
+
+[114] 114. SirichakwalP.P. KamchansuppasinA. AkohC.C. KriengsinyosW. CharoenkiatkulS. O’BrienK.O. Vitamin D status is positively associated with calcium absorption among postmenopausal Thai women with low calcium intakesJ. Nutr.201514599099510.3945/jn.114.20729025809682
+
+[115] 115. Fairweather-TaitS.J. JohnsonA. EaglesJ. GanatraS. KennedyH. GurrM.I. Studies on calcium absorption from milk using a double-label stable isotope techniqueBr. J. Nutr.19896237938810.1079/BJN198900382819021
+
+[116] 116. TangA.L. WalkerK.Z. WilcoxG. StraussB.J. JohnF. Ashton, J.F.; Stojanovska, L. Calcium absorption in Australian osteopenic postmenopausal women: An acute comparative study of fortified soymilk to cows’ milkAsia Pac. J. Clin. Nutr.20101924324920460239
+
+[117] 117. ReckerR.R. BammiA. Barger-LuxM.J. HeaneyR.P. Calcium absorbability from milk products, an imitation milk, and calcium carbonateAm. J. Clin. Nutr.198847939510.1093/ajcn/47.1.933337043
+
+[118] 118. Van DokkumW. De La GueronniereV. SchaafsmaG. BouleyC. LutenJ. LatgeC. Bioavailability of calcium of fresh cheeses, enteral food and mineral water. A study with stable calcium isotopes in young adult womenBr. J. Nutr.19967589390310.1079/BJN199601958774234
+
+[119] 119. van der HeeR.M. MiretS. SlettenaarM. DuchateauG.S.M.J.E. RietveldA.G. WilkinsonJ.E. QuailP.J. BerryM.J. DaintyJ.R. TeucherB. Calcium absorption from fortified ice cream formulations compared with calcium absorption from milkJ. Am. Diet. Assoc.200910983083510.1016/j.jada.2009.02.01719394469PMC2832736
+
+[120] 120. López-HuertasE. TeucherB. BozaJ.J. Martínez-FérezA. Majsak-NewmanG. BaróL. CarreroJ.J. González-SantiagoM. FonolláJ. Fairweather-TaitS. Absorption of calcium from milks enriched with fructooligosaccharides, caseinophosphopeptides, tricalcium phosphate, and milk solidsAm. J. Clin. Nutr.20068331031610.1093/ajcn/83.2.31016469989
+
+[121] 121. GaoK.P. MitsuiT. FujikiK. IshiguroH. KondoT. Effect of lactase preparations in asymptomatic individuals with lactase deficiency-gastric digestion of lactose and breath hydrogen analysisNagoya J. Med. Sci.200265212812083287
+
+[122] 122. HuppertzT. LambersT.T. Influence of micellar calcium phosphate on in vitro gastric coagulation and digestion of milk proteins in infant formula model systemsInt. Dairy J.202010710471710.1016/j.idairyj.2020.104717
+
+[123] 123. Mulet-CaberoA.I. MackieA.R. BrodkorbA. WildeP.J. Dairy structures and physiological responses: A matter of gastric digestionCrit. Rev. Food Sci. Nutr.2020603737375210.1080/10408398.2019.170715932056441
+
+[124] 124. Van VlietT. van DijkH.J.M. ZoonP. WalstraP. Relation between syneresis and rheological properties of particle gelsColloid Polym. Sci.199126962062710.1007/BF00659917
+
+[125] 125. WalstraP. The syneresis of curdCheese: Chemistry, Physics and MicrobiologySpringerBoston, MA, USA1993
+
+[126] 126. HindmarshJ.P. SmithJ.R. CarrA.J. WatkinsonP.J. Expanding solid-state phosphorus nuclear magnetic resonance insights into Mozzarella cheese ageingJ. Food Eng.2019242314610.1016/j.jfoodeng.2018.08.017

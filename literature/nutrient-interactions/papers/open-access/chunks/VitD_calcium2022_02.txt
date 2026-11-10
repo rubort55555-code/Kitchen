@@ -1,0 +1,11 @@
+Название: Vitamin D-Mediated Regulation of Intestinal Calcium Absorption
+Авторы: James C Fleet
+Журнал: Nutrients, 2022
+DOI: https://doi.org/10.3390/nu14163351   PMID: 36014856   PMC: PMC9416674
+Лицензия: CC BY 4.0 (открытый доступ). © 2022 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 2 из 11: 1. Introduction
+============================================================
+
+It has now been 100 years since E.V. McCollum first identified a fat-soluble compound in food that supported bone growth and prevented rickets; he called this compound vitamin D. In the intervening century, many scientists have contributed to our understanding for how vitamin D regulates the physiology of calcium (Ca) metabolism. For example, in 1937 Nicolaysen showed that vitamin D is critical for intestinal Ca absorption [1] while later studies by Pansu et al. [2] and Sheikh et al. [3] showed that vitamin D deficiency significantly reduces intestinal Ca absorption. The critical breakthrough defining the mechanism used by vitamin D to regulate Ca metabolism came in the early 1970′s when research by Holick et al. [4] and Norman et al. [5] isolated the active metabolite of vitamin D, 1,25 dihydroxyvitamin D3 (1,25(OH)2D), from the intestine. Shortly thereafter, Brumbaugh and Haussler [6] discovered the nuclear receptor for 1,25(OH)2D, the vitamin D receptor (VDR), in intestinal mucosa as well. Since then, we’ve learned the detailed mechanism used by 1,25(OH)2D to regulate gene expression [7] while global and conditional VDR knockout mice have allow us to study the function of vitamin D in Ca/bone metabolism and in other physiologic systems. As part of this effort, my research group has shown that the single most important role for vitamin D during growth is the regulation of intestinal Ca absorption [8] but that 1,25(OH)2D signaling through the VDR has a broad array of target genes in the intestine [9]. Because of the central role that vitamin D plays in the regulation of intestinal Ca absorption, this review provides a critical starting point for anyone who wants to understand the physiologic importance of vitamin D.

@@ -1,0 +1,31 @@
+Название: Development of the FAO/INFOODS/IZINCG Global Food Composition Database for Phytate
+Авторы: Sergio Dahdouh, Fernanda Grande, Sarah Nájera Espinosa, Anna Vincent, Rosalind Gibson, Karl Bailey, Janet King, Doris Rittenschober, U Ruth Charrondière
+Журнал: Journal of Food Composition and Analysis, 2019
+DOI: https://doi.org/10.1016/j.jfca.2019.01.023   PMID: 31057213   PMC: PMC6472536
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 The Authors
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 5 из 10: Results
+============================================================
+
+The FAO/INFOODS/IZiNCG Global Food Composition Database for Phytate (PhyFoodComp) is the first global repository containing only analytical data on the phytate content of foods. PhyFoodComp is an archival database according to Greenfield and Southgate (2003), which means that no nutrient or antinutrient values were calculated or estimated to complete the compositional profile of a food entry. The database often holds data of different edible parts of the same food; different processing stages (from raw to ultra-processed); different stages of maturity, growing and field conditions and storage; and also homemade and industrial complex recipes (composite foods). All data in PhyFoodComp are well documented, contain the food descriptions as in the original sources and additional information on processing in comment fields, so that users can utilise them without referring back to the original published sources.
+
+Of the 6020 references found, data from 251 sources were compiled, generating 3377 individual food entries: 39% of the entries were for raw products and 61% for processed foods. A total of 15,412 component values are published in the database, of which the majority are minerals (33%), followed by phytic acid values, phytate phosphorus values and inositol phosphates (28%), ratios (20%), and water (19%).
+
+Phytate data were not available for all the food groups and subgroups; therefore, some groups/subgroups remained empty, e.g., eggs. Zero values for phytate (e.g., some beverages, animal-source foods, etc.) were included in the database to emphasise its absence in these groups. In some cases, the assignment of a food to one specific food group was difficult, e.g., peanuts are botanically legumes but are considered as nuts in terms of their consumption and nutrient profile. This should be taken into consideration when searching for a food, as the assignment to a single food group might not be unequivocal. It is also recognised that the identification of the scientific names of species, subspecies and other lower species levels (especially for wild and underutilised foods), can often be difficult. English and scientific names are therefore presented as found in the original literature. Some sources use different names for the same food (e.g. maize or corn as English name for Zea mays), and they are listed as named in the original source.
+
+From the 19 food groups considered for the PhyFoodComp, the majority of data correspond to cereals and their products (35%), followed by legumes and their products (27%), vegetables and their products (11%), seeds, nuts and their products (6%), roots, tubers, plantains and their products (5%), fruits and their products (4%), spices, herbs and condiments (3%) and the rest to other food groups (9%), such as complex recipes, beverages, food additives, etc. (Fig. 1).
+
+Fig. 1. Main food groups in PhyFoodComp (% of entries).
+
+The analytical methods for PHYTCPPI, PHYTCPPD, PHYTCA, PHYTCPP, PHYTC-, PHYT- are said to represent total IP6. These are usually based on indirectly measuring phosphorus from phytate and on the assumption that all the determined phosphate originated from the IP6, which is not always the case demonstrated by the different contents of IP3–IP6 when determined separately. The methods also assume that the phosphate has not been derived from other phosphorylated compounds that may exist. Hence, these procedures tend to overestimate the IP6 content of foods, especially plant-based foods and diets when food preparation or processing has resulted in varying degrees of phosphorylation and/or when other nucleotides are present (e.g., fermented foods). Consequently, these phytate values, intending to represent only IP6, are misleading in relation to the bioavailability of iron and zinc because their absorption is inhibited primarily by the IP6 and IP5.
+
+Data of raw cereals, legumes and pulses in PhyFoodComp (Fig. 2) indicate that around 15% of the IPs amounts are present as lower IPs, mostly IP5 (≈13%), but also IP4 (≈2%) and IP3 (≈1%).
+
+Fig. 2. Amount of IPs in raw foods from PhyFoodComp.
+
+In processed foods (i.e. fermented, boiled, soaked, etc.), significant amounts of IP6 are degraded to lower IPs, and therefore the relative amounts of IP5, IP4 and IP3 increase. In processed foods, a range between 3 and 84% of IPs (in cereals, legumes and pulses) are from lower IPs values compared to IP6. Often, the values are around 30–40% of lower IPs to IP6 (Fig. 3). Not only the relative percentage of lower IPs is increasing in processed products, but also the absolute amount of IP6 decreases with processing to 10–50% of the amounts in the corresponding raw food. In cereals and pulses, the IP6 amount in general is lower than any total phytate value.
+
+Fig. 3. Amount of IPs in processed foods from PhyFoodComp.
+
+When analysing the percentage of reduction of total phytate values when processing, it has been seen that some practices can largely reduce the total phytate content when compared to the raw commodity. Data show that, in some cases, processes such as fermenting or germinating can lead to a decrease of 40–65% and 50–80% of the total content in some pulses (e.g., cowpeas), respectively. Other processing methods, such as boiling or soaking, have also significant effects on phytate degradation, achieving reductions often between 20 and 40% in some cereals and pulses. Processes such as irradiation, extrusion, autoclaving, etc., can also be very effective when applied under certain conditions (i.e. long exposure, high temperature, etc.).

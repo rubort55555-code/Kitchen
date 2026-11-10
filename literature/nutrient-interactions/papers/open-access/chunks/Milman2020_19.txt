@@ -1,0 +1,31 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 19 из 19: References (часть 6)
+============================================================
+
+[142] 142RamettaR.FracanzaniA. L.FargionS.DongiovanniP.Dysmetabolic hyperferritinemia and dysmetabolic iron overload syndrome (DIOS): two related conditions or different entities?Current Pharmaceutical Design20202610p. 102510.2174/138161282666620013110301832003680
+
+[143] 143VelaD.Low hepcidin in liver fibrosis and cirrhosis; a tale of progressive disorder and a case for a new biochemical markerMolecular Medicine2018241p. 510.1186/s10020-018-0008-72-s2.0-85045512224PMC601689030134796
+
+[144] 144GarrisonC.The Hemochromatosis Cookbook: Recipes and Meals for Reducing the Absorption of Iron in Your Diet2008Cumberland House, Canada
+
+[145] 145LawsonS.The Hemochromatosis Cookbook 80+ Easy Wholesome Recipes to Reduce Iron Absorption and Fight Iron Overload2018Scotts Valley, CA, USACreatespace Independent Publishing Platform
+
+[146] 146PedersenP.MilmanN.Extrinsic factors modifying expressivity of the HFE variant C282Y, H63D, S65C phenotypes in 1,294 Danish menAnnals of Hematology2009881095796510.1007/s00277-009-0714-x2-s2.0-6924922033619271219
+
+[147] 147Haemochromatosis AssociationDanish2020https://www.haemokromatose.dk/
+
+[148] 148MilmanN. T.Hvad blev der af diætisten? (What became of the dietician?)Diætisten202016468
+
+[149] 149MilmanN. T.Stort behov for diætetisk rådgivning til personer med arvelig hæmokromatose (Great need for dietary counceling in persons with hereditary haemochromatosis)Diætisten20191621419
+
+[150] 150GoodnoughL. T.Erythropoietin and iron-restricted erythropoiesisExperimental Hematology200735416717210.1016/j.exphem.2007.01.0262-s2.0-3394719211117379103
+
+[151] 151HurrellR.EgliI.Iron bioavailability and dietary reference valuesThe American Journal of Clinical Nutrition201091S1461S146710.3945/ajcn.2010.28674f2-s2.0-7795196088620200263
+
+[152] 152LynchS.The precision of in vitro methods and algorithms for predicting the bioavailability of dietary ironInternational Journal for Vitamin and Nutrition Research200575643644510.1024/0300-9831.75.6.4362-s2.0-3364624084216711477

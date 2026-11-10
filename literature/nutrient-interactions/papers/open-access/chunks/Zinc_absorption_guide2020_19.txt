@@ -1,0 +1,75 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 19 из 29: References (часть 2)
+============================================================
+
+[33] 33.HuntJ.R.MatthysL.A.JohnsonL.K.Zinc absorption, mineral balance, and blood lipids in women consuming controlled lactoovovegetarian and omnivorous diets for 8 wkAm. J. Clin. Nutr.19986742143010.1093/ajcn/67.3.4219497185
+
+[34] 34.TaylorC.M.BaconJ.R.AggettP.J.BremnerI.Homeostatic regulation of zinc absorption and endogenous losses in zinc-deprived menAm. J. Clin. Nutr.19915375576310.1093/ajcn/53.3.7552000832
+
+[35] 35.JohnsonP.E.HuntC.D.MilneD.B.MullenL.K.Homeostatic control of zinc metabolism in men: Zinc excretion and balance in men fed diets low in zincAm. J. Clin. Nutr.19935755756510.1093/ajcn/57.4.5578460612
+
+[36] 36.LönnerdalB.Dietary factors influencing zinc absorptionJ. Nutr.20001301378S1383S10.1093/jn/130.5.1378S10801947
+
+[37] 37.JacksonM.J.JonesD.A.EdwardsR.H.SwainbankI.G.ColemanM.L.Zinc homeostasis in man: Studies using a new stable isotope-dilution techniqueBr. J. Nutr.19845119920810.1079/BJN198400246367817
+
+[38] 38.HoadleyJ.E.LeinartA.S.CousinsR.J.Kinetic analysis of zinc uptake and serosal transfer by vascularly perfused rat intestineAm. J. Physiol.1987252G825G83110.1152/ajpgi.1987.252.6.G8253591948
+
+[39] 39.ZieglerE.E.SerfassR.E.NelsonS.E.Figueroa-ColonR.EdwardsB.B.HoukR.S.ThompsonJ.J.Effect of low zinc intake on absorption and excretion of zinc by infants studied with 70zn as extrinsic tagJ. Nutr.19891191647165310.1093/jn/119.11.16472600669
+
+[40] 40.BaerM.T.KingJ.C.Tissue zinc levels and zinc excretion during experimental zinc depletion in young menAm. J. Clin. Nutr.19843955657010.1093/ajcn/39.4.5566711466
+
+[41] 41.JacksonM.J.JonesD.A.EdwardsR.H.Tissue zinc levels as an index of body zinc statusClin. Physiol.1982233334310.1111/j.1475-097X.1982.tb00038.x6889946
+
+[42] 42.AlkerW.HaaseH.Zinc and sepsisNutrients20181097610.3390/nu1008097630060473PMC6115943
+
+[43] 43.BroadleyD.B.K.EdwardJ.M.J.AnderE.L.MichaelJ.W.ScottD.Y.SueW.MartinR.Dietary calcium and zinc deficiency risks are decreasing but remain prevalentSci. Rep.20155109742609857710.1038/srep10974PMC4476434
+
+[44] 44.TurnlundJ.R.DurkinN.CostaF.MargenS.Stable isotope studies of zinc absorption and retention in young and elderly menJ. Nutr.19861161239124710.1093/jn/116.7.12393746461
+
+[45] 45.FosterM.SammanS.Vegetarian diets across the lifecycle: Impact on zinc intake and statusAdv. Food Nutr. Res.201574931312562403610.1016/bs.afnr.2014.11.003
+
+[46] 46.McClainC.J.Zinc metabolism in malabsorption syndromesJ. Am. Coll. Nutr.19854496410.1080/07315724.1985.107200663886760
+
+[47] 47.ValbergL.S.FlanaganP.R.KerteszA.BondyD.C.Zinc absorption in inflammatory bowel diseaseDig. Dis. Sci.19863172473110.1007/BF012964502873002
+
+[48] 48.SolomonsN.W.RosenbergI.H.SandsteadH.H.Vo-KhactuK.P.Zinc deficiency in crohn’s diseaseDigestion197716879510.1159/000198059615740
+
+[49] 49.World Health Organization/Food and Agricultural OrganizationVitamin and Mineral Requirements in Human Nutrition2nd ed.World Health OrganizationGeneva, Switzerland2004
+
+[50] 50.KingJ.C.BrownK.H.GibsonR.S.KrebsN.F.LoweN.M.SiekmannJ.H.RaitenD.J.Biomarkers of nutrition for development (bond)-zinc reviewJ. Nutr.2016146858S885S10.3945/jn.115.220079PMC480764026962190
+
+[51] 51.PrasadA.S.MialeA.Jr.FaridZ.SandsteadH.H.SchulertA.R.Zinc metabolism in patients with the syndrome of iron deficiency anemia, hepatosplenomegaly, dwarfism, and hypognadismJ. Lab. Clin. Med.19636153754913985937
+
+[52] 52.WalkerC.L.BlackR.E.Zinc for the treatment of diarrhoea: Effect on diarrhoea morbidity, mortality and incidence of future episodesInt. J. Epidemiol.201039Suppl. 1i63i6910.1093/ije/dyq02320348128PMC2845862
+
+[53] 53.CarterJ.P.GrivettiL.E.DavisJ.T.NasiffS.MansourA.MousaW.A.AttaA.E.PatwardhanV.N.Abdel MoneimM.AbdouI.A.Growth and sexual development of adolescent egyptian village boys. Effects of zinc, iron, and placebo supplementationAm. J. Clin. Nutr.196922597810.1093/ajcn/22.1.594885009
+
+[54] 54.PrasadA.S.BeckF.W.BaoB.FitzgeraldJ.T.SnellD.C.SteinbergJ.D.CardozoL.J.Zinc supplementation decreases incidence of infections in the elderly: Effect of zinc on generation of cytokines and oxidative stressAm. J. Clin. Nutr.20078583784410.1093/ajcn/85.3.83717344507
+
+[55] 55.HaaseH.OverbeckS.RinkL.Zinc supplementation for the treatment or prevention of disease: Current status and future perspectivesExp. Gerontol.20084339440810.1016/j.exger.2007.12.00218221847
+
+[56] 56.LiberatoaS.C.SinghaG.MulhollandaK.Zinc supplementation in young children: A review of the literature focusing on diarrhoea prevention and treatmentClin. Nutr.20153418118810.1016/j.clnu.2014.08.00225176404
+
+[57] 57.SandströmB.Dose dependence of zinc and manganese absorption in manProc. Nutr. Soc.19925121121810.1079/PNS199200311438329
+
+[58] 58.LeeH.H.PrasadA.S.BrewerG.J.OwyangC.Zinc absorption in human small intestineAm. J. Physiol.1989256G87G9110.1152/ajpgi.1989.256.1.G872912154
+
+[59] 59.DaviesN.T.Studies on the absorption of zinc by rat intestineBr. J. Nutr.19804318920310.1079/BJN198000787370210
+
+[60] 60.SealC.J.HeatonF.W.Chemical factors affecting the intestinal absorption of zinc in vitro and in vivoBr. J. Nutr.19835031732410.1079/BJN198300996615763
+
+[61] 61.SealC.J.MathersJ.C.Intestinal zinc transfer by everted gut sacs from rats given diets containing different amounts and types of dietary fibreBr. J. Nutr.19896215116310.1079/BJN198900152551362
+
+[62] 62.AntonsonD.L.BarakA.J.VanderhoofJ.A.Determination of the site of zinc absorption in rat small intestineJ. Nutr.197910914214710.1093/jn/109.1.142430207
+
+[63] 63.WangS.C.ChenY.S.ChenS.M.YoungT.K.Possible site of decreased intestinal zinc absorption in chronic uremic ratsNephron20018920821410.1159/00004606911549904
+
+[64] 64.SteinhardtH.J.AdibiS.A.Interaction between transport of zinc and other solutes in human intestineAm. J. Physiol.1984247G176G18210.1152/ajpgi.1984.247.2.G1766465313
+
+[65] 65.ReyesJ.G.Zinc transport in mammalian cellsAm. J. Physiol.1996270C401C41010.1152/ajpcell.1996.270.2.C4018779901

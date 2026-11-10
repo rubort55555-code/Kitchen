@@ -1,0 +1,63 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 18 из 19: References (часть 5)
+============================================================
+
+[115] 115National Food InstituteFood data. Frida.fooddata.dk, version 42019Kongens Lyngby, DenmarkTechnical University of Denmark
+
+[116] 116CookJ. D.MorckT. A.LynchS. R.The inhibitory effect of soy products on nonheme iron absorption in manThe American Journal of Clinical Nutrition198134122622262910.1093/ajcn/34.12.26227198374
+
+[117] 117LynchS. R.DassenkoS. A.CookJ. D.JuilleratM. A.HurrellR. F.Inhibitory effect of a soybean-protein-related moiety on iron absorption in humansThe American Journal of Clinical Nutrition199460456757210.1093/ajcn/60.4.5672-s2.0-00280970358092092
+
+[118] 118HurrellR. F.LynchS. R.TrinidadT. P.DassenkoS. A.CookJ. D.Iron absorption in humans as influenced by bovine milk proteinsThe American Journal of Clinical Nutrition198949354655210.1093/ajcn/49.3.5462-s2.0-00245116022923087
+
+[119] 119KibangouI. B.BouhallabS.HenryG.Milk proteins and iron absorption: contrasting effects of different caseinophosphopeptidesPediatric Research200558473173410.1203/01.pdr.0000180555.27710.462-s2.0-2544445075016189201
+
+[120] 120TurnlundJ. R.SmithR. G.KretschM. J.KeyesW. R.ShahA. G.Milk’s effect on the bioavailability of iron from cereal-based diets in young women by use of in vitro and in vivo methodsThe American Journal of Clinical Nutrition199052237337810.1093/ajcn/52.2.3732-s2.0-00253751232375304
+
+[121] 121CallenderS. T.MarneyS. R.WarnerG. T.Eggs and iron absorptionBritish Journal of Haematology197019665766610.1111/j.1365-2141.1970.tb07010.x2-s2.0-849904704245492486
+
+[122] 122HurrellR. F.LynchS. R.TrinidadT. P.DassenkoS. A.CookJ. D.Iron absorption in humans: bovine serum albumin compared with beef muscle and egg whiteThe American Journal of Clinical Nutrition198847110210710.1093/ajcn/47.1.1022-s2.0-00238773713337027
+
+[123] 123IshikawaS.-I.TamakiS.AriharaK.ItohM.Egg yolk protein and egg yolk phosvitin inhibit calcium, magnesium, and iron absorptions in ratsJournal of Food Science2007726S412S41910.1111/j.1750-3841.2007.00417.x2-s2.0-3454782976317995699
+
+[124] 124National Institute for Public Health and the Environment in the NetherlandsDutch food composition tables2020https://nevo-online.rivm.nl/ProductDetails.aspx
+
+[125] 125LoweB.Experimental Cookery from the Chemical and Physical Standpoint1937Hoboken, NJ, USAJohn Wiley & Sonshttps://chestofbooks.com/food/science/Experimental-Cookery/index.html
+
+[126] 126National Health ServiceVitamins and Minerals: Calcium2020London, UKNational Health Servicehttps://www.nhs.uk/conditions/vitamins-and-minerals/calcium/
+
+[127] 127MinihaneA. M.Fairweather-TaitS. J.Effect of calcium supplementation on daily nonheme-iron absorption and long-term iron statusThe American Journal of Clinical Nutrition19986819610210.1093/ajcn/68.1.962-s2.0-00317489439665102
+
+[128] 128CookJ. D.DassenkoS. A.WhittakerP.Calcium supplementation: effect on iron absorptionThe American Journal of Clinical Nutrition199153110611110.1093/ajcn/53.1.1062-s2.0-00259703991984334
+
+[129] 129HallbergL.BruneM.ErlandssonM.SandbergA. S.Rossander-HulténL.Calcium: effect of different amounts on nonheme and heme-iron absorption in humansThe American Journal of Clinical Nutrition199153111211910.1093/ajcn/53.1.1122-s2.0-00260878871984335
+
+[130] 130HallbergL.Rossander-HulthènL.BruneM.GleerupA.Inhibition of haem-iron absorption in man by calciumBritish Journal of Nutrition199369253354010.1079/bjn199300532-s2.0-00275226978490006
+
+[131] 131LynchS. R.The effect of calcium on iron absorptionNutrition Research Reviews200013214115810.1079/0954422001087290432-s2.0-003449301619087437
+
+[132] 132van de VijverL. P. L.KardinaalA. F. M.CharzewskaJ.Calcium intake is weakly but consistently negatively associated with iron status in girls and women in six European countriesThe Journal of Nutrition1999129596396810.1093/jn/129.5.96310222387
+
+[133] 133BendichA.Calcium supplementation and iron status of femalesNutrition2001171465110.1016/s0899-9007(00)00482-22-s2.0-003514329411165888
+
+[134] 134LönnerdalB.Calcium and iron absorption -mechanisms and public health relevanceInternational Journal for Vitamin and Nutrition Research2010804529329910.1024/0300-9831/a0000362-s2.0-7995380222521462112
+
+[135] 135Benefits of Turmeric for HemochromatosisThe best natural remedy shown by clinical research to reliably reduce the build-up of iron in the body turmeric can lower ferritin by chelating iron from the body2020https://hemochromatosishelp.com/turmeric-benefit-for-hemochromatosis/
+
+[136] 136MenonV. P.SudheerA. R.Antioxidant and anti-inflammatory properties of curcuminAdvances in Experimental Medicine and Biology20075951051251756920710.1007/978-0-387-46401-5_3
+
+[137] 137Bernabé-PinedaM.Ramírez-SilvaM. T.Romero-RomoM. A.González-VergaraE.Rojas-HernándezA.Spectrophotometric and electrochemical determination of the formation constants of the complexes Curcumin-Fe(III)-water and Curcumin-Fe(II)-waterSpectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy20046051105111310.1016/s1386-1425(03)00344-52-s2.0-184284294415084330
+
+[138] 138JiaoY.WilkinsonJ.DiX.Curcumin, a cancer chemopreventive and chemotherapeutic agent, is a biologically active iron chelatorBlood2009113246246910.1182/blood-2008-05-1559522-s2.0-5884910267418815282PMC2615657
+
+[139] 139FatihN.CamberleinE.IslandM. L.Natural and synthetic STAT3 inhibitors reduce hepcidin expression in differentiated mouse hepatocytes expressing the active phosphorylated STAT3 formJournal of Molecular Medicine201088547748610.1007/s00109-009-0588-32-s2.0-7795456324720169331
+
+[140] 140LainéF.LaviolleB.Bardou-JacquetE.Curcuma decreases serum hepcidin levels in healthy volunteers: a placebo-controlled, randomized, double-blind, cross-over studyFundamental & Clinical Pharmacology201731556757310.1111/fcp.122882-s2.0-8501904310428370178
+
+[141] 141MilmanN.Anemia-still a major health problem in many parts of the worldAnnals of Hematology201190436937710.1007/s00277-010-1144-52-s2.0-7995593833421221586

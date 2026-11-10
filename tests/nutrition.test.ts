@@ -1,6 +1,6 @@
 // Проверка расчёта норм питания: node node_modules/.bin/tsx tests/nutrition.test.ts
 import { ACTIVITIES, ACT_GROUPS, actByKey, actKey, searchActs } from "../src/lib/activities";
-import { dayEnergy, diaryTee, fromHours, hm, normSegs, parseHm, templateDay, SLEEP, activityGroup, bmiOf, bmr, micros, newProfile, pal, planFor, restHours, waistRisk, basicsError, needsBasics, type BodyProfile } from "../src/lib/nutrition";
+import { dayEnergy, diaryTee, fromHours, hm, normSegs, parseHm, templateDay, SLEEP, activityGroup, bmiOf, bmr, micros, newProfile, pal, planFor, mrNorm, waterMR, stageOf, restHours, waistRisk, basicsError, needsBasics, type BodyProfile } from "../src/lib/nutrition";
 
 let pass = 0, fail = 0;
 const ok = (name: string, c: boolean, extra?: unknown) => { if (c) pass++; else { fail++; console.log("FAIL", name, extra ?? ""); } };
@@ -8,10 +8,10 @@ const NOW = new Date(2026, 9, 15);
 // Старый режим «часы по категориям» (дневника нет)
 const P = (o: Partial<BodyProfile>): BodyProfile => { const b: BodyProfile = { ...newProfile("f"), born: 1991, workouts: [], ...o, day: { sleep: 8, desk: 8, light: 2, walk: 1, heavy: 0, ...(o.day || {}) } }; if (!o.days) delete b.days; return b; };
 
-// Миффлин — Сан-Жеор: женщина 35 лет, 165 см, 62 кг → 10·62 + 6,25·165 − 5·35 − 161 = 1315,25
-ok("ОО женщина", Math.abs(bmr(P({}), NOW) - 1315.25) < 0.01, bmr(P({}), NOW));
+// Миффлин — Сан-Жеор по МР 2.3.1.0253-21: 9,99·62 + 6,25·165 − 4,92·35 − 161 = 1317,43
+ok("ОО женщина", Math.abs(bmr(P({}), NOW) - 1317.43) < 0.01, bmr(P({}), NOW));
 // мужчина 30 лет, 180 см, 80 кг → 800 + 1125 − 150 + 5 = 1780
-ok("ОО мужчина", bmr(P({ sex: "m", born: 1996, height: 180, weight: 80 }), NOW) === 1780);
+ok("ОО мужчина", Math.abs(bmr(P({ sex: "m", born: 1996, height: 180, weight: 80 }), NOW) - 1781.6) < 0.01);
 
 // Офисный день: 8 сон, 8 стол, 2 дом, 1 ходьба, 5 отдых → (8 + 12 + 4,6 + 3,2 + 7) / 24 = 1,45
 ok("КФА офис", pal(P({})) === 1.45, pal(P({})));
@@ -40,7 +40,7 @@ ok("талия не указана", waistRisk(P({})) === null);
 
 // План: сохранить вес
 const keep = planFor(P({}), NOW)!;
-ok("расход = ОО × КФА", Math.abs(keep.tee - Math.round(1315.25 * 1.45)) <= 1, keep.tee);
+ok("расход = ОО × КФА", Math.abs(keep.tee - Math.round(1317.43 * 1.45)) <= 1, keep.tee);
 ok("ккал = расход (округл.)", Math.abs(keep.kcal - keep.tee) <= 5, keep);
 ok("белок 14% для группы I", Math.abs(keep.protein - (keep.kcal * 0.14) / 4) <= 1, keep.protein);
 ok("жиры 30%", Math.abs(keep.fat - (keep.kcal * 0.3) / 9) <= 1);
@@ -59,11 +59,17 @@ const tiny = planFor(P({ weight: 50, height: 155, born: 1960, goal: "lose", day:
 ok("снижение: пол 1200 / не ниже ОО", tiny.kcal >= 1200 && tiny.kcal >= tiny.bmr - 10, tiny);
 const preg = planFor(P({ goal: "lose", pregnant: true }), NOW)!;
 ok("беременность: худеть нельзя", preg.goal === "keep" && preg.warnings.length > 0);
-ok("беременность: +15%", Math.abs(preg.tee - Math.round(1315.25 * 1.45 * 1.15)) <= 1, preg.tee);
+ok("беременность (2 триместр по умолчанию): +250 ккал", Math.abs(preg.tee - (Math.round(1317.43 * 1.45) + 250)) <= 1 && preg.stage === "t2", preg.tee);
+const p3 = planFor(P({ pregnant: true, stage: "t3" }), NOW)!;
+ok("3 триместр: +350 ккал", Math.abs(p3.tee - planFor(P({}), NOW)!.tee - 350) <= 1);
+ok("1 триместр: без добавки", Math.abs(planFor(P({ pregnant: true, stage: "t1" }), NOW)!.tee - planFor(P({}), NOW)!.tee) <= 1);
 const thin = planFor(P({ weight: 45, goal: "lose" }), NOW)!;
 ok("ИМТ < 18,5: худеть нельзя", thin.goal === "keep");
 const lact = planFor(P({ lactating: true }), NOW)!;
-ok("кормление: +20%", Math.abs(lact.tee - Math.round(1315.25 * 1.45 * 1.2)) <= 1);
+ok("кормление 1–6 мес.: +500 ккал, 7–12: +450", Math.abs(lact.tee - planFor(P({}), NOW)!.tee - 500) <= 1 && Math.abs(planFor(P({ lactating: true, stage: "l2" }), NOW)!.tee - planFor(P({}), NOW)!.tee - 450) <= 1);
+ok("стадия: беременность без этапа → t2, кормление → l1", stageOf(P({ pregnant: true })) === "t2" && stageOf(P({ lactating: true })) === "l1" && stageOf(P({})) === null);
+ok("таблица 20: железо 33 мг во 2 триместре, йод 290 при кормлении", micros(P({ pregnant: true, stage: "t2" }), NOW).find((m) => m.key === "fe")!.amount === 33 && micros(P({ lactating: true }), NOW).find((m) => m.key === "i")!.amount === 290);
+ok("таблица 20: фолаты 600 при беременности, хром 50", micros(P({ pregnant: true }), NOW).find((m) => m.key === "folate")!.amount === 600 && micros(P({ pregnant: true }), NOW).find((m) => m.key === "cr")!.amount === 50);
 
 // Набрать / белок
 const gain = planFor(P({ goal: "gain" }), NOW)!;
@@ -145,6 +151,33 @@ ok("данные: рост в метрах", /Рост/.test(basicsError({ sex: 
 ok("данные: нет веса", /Вес/.test(basicsError({ sex: "m", born: 1990, height: 180 } as any, 2026)));
 ok("данные: ребёнок 3 года проходит", basicsError({ sex: "f", born: 2023, height: 95, weight: 14 }, 2026) === "");
 ok("профиль без дневника считается по умолчанию", !!planFor({ sex: "f", born: 1990, height: 165, weight: 60, goal: "keep" }, NOW));
+
+// Безопасность: фильтр-вопросы, пределы «не больше»
+const sick = planFor(P({ weight: 90, goal: "lose", health: { diabetes: true } }), NOW)!;
+ok("диабет: без дефицита калорий", sick.goal === "keep" && Math.abs(sick.kcal - sick.tee) <= 5 && sick.warnings.length > 0, sick);
+ok("расстройство питания: цель набора тоже отключена", planFor(P({ goal: "gain", health: { eating: true } }), NOW)!.goal === "keep");
+ok("без отметок цель сохраняется", planFor(P({ weight: 90, goal: "lose", health: {} }), NOW)!.goal === "lose");
+ok("пределы: холестерин 300, натрий 2000, соль 5", keep.cholMax === 300 && keep.naMax === 2000 && keep.saltMax === 5);
+ok("пределы: транс-жиры 1% ккал", Math.abs(keep.transMax - keep.kcal * 0.01 / 9) < 0.06, keep.transMax);
+ok("дефицит не больше 20% для всех", [60, 70, 85, 100].every((w) => { const q = planFor(P({ weight: w, goal: "lose" }), NOW)!; return q.tee - q.kcal <= q.tee * 0.2 + 6; }));
+ok("пол калорий для мужчин 1500", planFor(P({ sex: "m", weight: 55, height: 170, born: 1960, goal: "lose", day: { sleep: 9, desk: 10, light: 1, walk: 0, heavy: 0 } }), NOW)!.kcal >= 1500);
+ok("хром, молибден, хлориды в нормах", ["cr", "mo", "cl"].every((k) => micros(P({}), NOW).some((m) => m.key === k)));
+
+// Нормы МР: табл. 9 и 14, вода — табл. 7
+ok("МР женщина 18–29, группа I: 1900 ккал, белок 67, жир 63, углеводы 266", JSON.stringify(mrNorm("f", 25, 1)) && mrNorm("f", 25, 1)!.kcal === 1900 && mrNorm("f", 25, 1)!.protein === 67 && mrNorm("f", 25, 1)!.fat === 63 && mrNorm("f", 25, 1)!.carbs === 266);
+ok("МР мужчина 30–44, группа III: 3150 ккал, животный белок 49", mrNorm("m", 35, 3)!.kcal === 3150 && mrNorm("m", 35, 3)!.animal === 49);
+ok("МР 45–64, группа IV: м 3400, ж 2700", mrNorm("m", 50, 4)!.kcal === 3400 && mrNorm("f", 50, 4)!.kcal === 2700);
+ok("МР 65–74: м 2400, ж 1900; 75+: м 2300, ж 1800", mrNorm("m", 70, 2)!.kcal === 2400 && mrNorm("f", 70, 2)!.kcal === 1900 && mrNorm("m", 80, 1)!.kcal === 2300 && mrNorm("f", 80, 1)!.kcal === 1800);
+ok("МР до 18 лет — нет", mrNorm("f", 17, 1) === null);
+ok("вода по табл. 7: ж группа I 1,05 л, м группа IV 2,15 л, 65+ м 1,45 / ж 1,15", waterMR("f", 30, 1) === 1.05 && waterMR("m", 30, 4) === 2.15 && waterMR("m", 70, 1) === 1.45 && waterMR("f", 70, 1) === 1.15);
+ok("вода в плане: беременность +0,3 л, кормление +0,7 л", Math.abs(planFor(P({ pregnant: true }), NOW)!.water - planFor(P({}), NOW)!.water - 0.3) < 0.06 && Math.abs(planFor(P({ lactating: true }), NOW)!.water - planFor(P({}), NOW)!.water - 0.7) < 0.06);
+ok("животный белок — половина", Math.abs(keep.animalProtein - keep.protein / 2) <= 1);
+ok("качество жиров: омега-3 1–2% ккал", (() => { const f = keep.fats.find((x) => x.key === "omega3")!; return f.from === Math.round(keep.kcal * 0.01 / 9) && f.to === Math.round(keep.kcal * 0.02 / 9); })());
+ok("план содержит норму МР для группы", keep.mr !== null && keep.mr.kcal === 1800, keep.mr);
+ok("справочные микроэлементы: кобальт, фтор, кремний, ванадий, бета-каротин", ["co", "f", "si", "v", "betaCarotene"].every((k) => micros(P({}), NOW).some((m) => m.key === k)));
+// Талия/бёдра по МР: норма до 0,85; у мужчин выше 1,0 — абдоминальное ожирение
+ok("ОТ/ОБ мужчина 0,88 — выше нормы, не высокий риск", (() => { const r = waistRisk(P({ sex: "m", height: 180, waist: 88, hips: 100 })); return r?.level === "up" && /выше нормы/.test(r.text); })());
+ok("ОТ/ОБ мужчина 1,02 — высокий", waistRisk(P({ sex: "m", height: 180, waist: 92, hips: 90 }))?.level === "high");
 
 console.log(`nutrition: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

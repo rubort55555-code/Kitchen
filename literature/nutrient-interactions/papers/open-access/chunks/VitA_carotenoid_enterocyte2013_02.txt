@@ -1,0 +1,15 @@
+Название: Absorption of Vitamin A and Carotenoids by the Enterocyte: Focus on Transport Proteins
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2013
+DOI: https://doi.org/10.3390/nu5093563   PMID: 24036530   PMC: PMC3798921
+Лицензия: http://creativecommons.org/licenses/by/3.0/ (открытый доступ). © 2013 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 2 из 14: 1. Introduction
+============================================================
+
+Vitamin A is essential for normal cell growth, cell differentiation, immunological functions and vision [1]. However, vitamin A deficiency is still a public health problem in more than half of all countries, especially in Africa and South-East Asia where meat intake is low, and particularly in young children and pregnant women. Therefore, it is a priority in health policy to improve preformed vitamin A and/or provitamin A carotenoid status of these population subgroups. A precise understanding of the molecular mechanisms involved in vitamin A intestinal absorption is a key step in this direction.
+
+Vitamin A is found in animal-based foods as retinyl esters (mainly retinyl palmitate). In fruits and vegetables, it occurs as provitamin A carotenoids (mainly β-carotene, α-carotene and β-cryptoxanthin), which can be cleaved and metabolized into retinol after absorption by the intestinal cells (Table 1). Nonprovitamin A carotenoids, such as lutein and lycopene, share similar digestion/absorption pathways with provitamin A carotenoids: they will thus be included in this review when appropriate (Table 1). The fundamental mechanisms of preformed vitamin A and carotenoid absorption were first studied 40 years ago using rat everted intestinal sacs [2,3,4]. The data obtained suggested that carotenoids were absorbed by passive diffusion, while preformed A was absorbed via (a) carrier-dependent proteins. Recent studies completed over the past ten years have once again addressed these hypotheses, and have shown that the mechanisms of retinol and carotenoid absorption are actually more complex than previously thought. Although a passive diffusion may occur at pharmacological concentrations of these compounds, a protein-mediated transport is clearly involved at dietary doses.
+
+After an overview of the fate of retinol and carotenoid in the human upper gastrointestinal lumen, we will focus on the putative or identified proteins participating in the intestinal membrane and cellular transport of vitamin A and carotenoids across the enterocyte identified until 2013.

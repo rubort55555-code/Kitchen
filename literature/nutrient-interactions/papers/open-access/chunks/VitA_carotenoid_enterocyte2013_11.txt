@@ -1,0 +1,65 @@
+Название: Absorption of Vitamin A and Carotenoids by the Enterocyte: Focus on Transport Proteins
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2013
+DOI: https://doi.org/10.3390/nu5093563   PMID: 24036530   PMC: PMC3798921
+Лицензия: http://creativecommons.org/licenses/by/3.0/ (открытый доступ). © 2013 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 11 из 14: References (часть 2)
+============================================================
+
+[29] 29.BengtssonA.Larsson AlmingerM.SvanbergU.In vitro bioaccessibility of beta-carotene from heat-processed orange-fleshed sweet potatoJ. Agric. Food Chem.2009579693969810.1021/jf901692r19807125
+
+[30] 30.KirilenkoV.N.GregoriadisG.Fat soluble vitamins in liposomes: Studies on incorporation efficiency and bile salt induced vesicle disintegrationJ. Drug Target.1993136136810.3109/106118693089960958069579
+
+[31] 31.NoyN.KelleherD.J.ScottoA.W.Interactions of retinol with lipid bilayers: Studies with vesicles of different radiiJ. Lipid Res.1995363753827751826
+
+[32] 32.PerezM.D.CalvoM.Interaction of b-lactoglobulin with retinol and fatty acids and its role as a possible biological function for this protein: A reviewJ. Dairy Sci.19957897898810.3168/jds.S0022-0302(95)76713-37622732
+
+[33] 33.SaidH.M.OngD.E.ShingletonJ.L.Intestinal uptake of retinol: Enhancement by bovine milk beta-lactoglobulineAm. J. Clin. Nutr.198949690694292948910.1093/ajcn/49.4.690
+
+[34] 34.Godovac-ZimmermannJ.The Structural motif of B-Lactoglobulin and Retinol-Binding Protein: A basic framework for binding and transport of small Hydrophobic moleculesTrends Biochem. Sci.198813646610.1016/0968-0004(88)90031-X3238752
+
+[35] 35.DufourE.HaertleT.Binding of retinoids and beta-carotene to beta-lactoglobulin. Influence of protein modificationsBiochim. Biophys. Acta1991107931632010.1016/0167-4838(91)90075-B1911856
+
+[36] 36.SivakumarB.ReddyV.Absorption of labelled vitamin A in children during infectionBr. J. Nutr.19722729930410.1079/BJN197200945015249
+
+[37] 37.O’neillM.E.ThurnhamD.I.Intestinal absorption of β-carotene, lycopene and lutein in men and women following a standard meal: Response curves in the triacylglycerol-rich lipoprotein fractionBr. J. Nutr.19987914915910.1079/BJN199800269536859
+
+[38] 38.NovotnyJ.A.DuekerS.R.ZechL.A.CliffordA.J.Compartmental analysis of the dynamics of beta-carotene metabolism in an adult volunteerJ. Lipid Res.199536182518387595103
+
+[39] 39.Van VlietT.SchreursW.H.van Den BergH.Intestinal beta-carotene absorption and cleavage in men: Response of beta-carotene and retinyl esters in the triglyceride-rich lipoprotein fraction after a single oral dose of beta-caroteneAm. J. Clin. Nutr.199562110116759805210.1093/ajcn/62.1.110
+
+[40] 40.FaulksR.M.HartD.J.WilsonP.D.ScottK.J.SouthonS.Absorption of all-trans and 9-cis beta-carotene in human ileostomy volunteersClin. Sci.199793585591949779710.1042/cs0930585
+
+[41] 41.Van LieshoutM.WestC.E.van BreemenR.B.Isotopic tracer techniques for studying the bioavailability and bioefficacy of dietary carotenoids, particularly beta-carotene, in humans: A reviewAm. J. Clin. Nutr.20037712281249931810.1093/ajcn/77.1.12
+
+[42] 42.Van Loo-BouwmanC.A.NaberT.H.van BreemenR.B.ZhuD.DickeH.SiebelinkE.HulshofP.J.RusselF.G.SchaafsmaG.WestC.E.Vitamin A equivalency and apparent absorption of beta-carotene in ileostomy subjects using a dual-isotope dilution techniqueBr. J. Nutr.20101031836184310.1017/S000711450999384920132586
+
+[43] 43.DrevonC.A.Absorption, transport and metabolism of vitamin EFree Radic. Res. Commun.19911422924610.3109/107157691090889521874454
+
+[44] 44.TraberM.G.SiesH.Vitamin E in humans: Demand and deliveryAnnu. Rev. Nutr.19961632134710.1146/annurev.nu.16.070196.0015418839930
+
+[45] 45.CohnW.Bioavailability of vitamin EEur. J. Clin. Nutr.199751Suppl. 1S80S859023489
+
+[46] 46.BorelP.LietzG.GoncalvesA.Szabo De EdelenyiF.LecompteS.CurtisP.GoumidiL.CaslakeM.J.MilesE.A.PackardC.CD36 and SR-BI are involved in cellular uptake of provitamin A carotenoids by Caco-2 and HEK cells, and some of their genetic variants are associated with plasma concentrations of these micronutrients in humansJ. Nutr.201314344845610.3945/jn.112.17273423427331
+
+[47] 47.DuringA.HarrisonE.H.Mechanisms of provitamin A (carotenoid) and vitamin A (retinol) transport into and out of intestinal Caco-2 cellsJ. Lipid Res.2007482283229410.1194/jlr.M700263-JLR20017644776
+
+[48] 48.QuickT.C.OngD.E.Vitamin A metabolism in the human intestinal caco-2 cell lineBiochemistry1990291116112310.1021/bi00502a0152271700
+
+[49] 49.KawaguchiR.YuJ.HondaJ.HuJ.WhiteleggeJ.PingP.WiitaP.BokD.SunH.A membrane receptor for retinol binding protein mediates cellular uptake of vitamin AScience200731582082510.1126/science.113624417255476
+
+[50] 50.BouilletP.SapinV.ChazaudC.MessaddeqN.DecimoD.DolleP.ChambonP.Developmental expression pattern of Stra6, a retinoic acid-responsive gene encoding a new type of membrane proteinMech. Dev.19976317318610.1016/S0925-4773(97)00039-79203140
+
+[51] 51.IskenA.GolczakM.OberhauserV.HunzelmannS.DrieverW.ImanishiY.PalczewskiK.von LintigJ.RBP4 disrupts vitamin A uptake homeostasis in a STRA6-deficient animal model for Matthew-Wood syndromeCell Metab.2008725826810.1016/j.cmet.2008.01.00918316031PMC2561276
+
+[52] 52.AlapattP.GuoF.KomanetskyS.M.WangS.CaiJ.SargsyanA.Rodríguez DíazE.BaconB.T.AryalP.GrahamT.E.Liver retinol transporter and receptor for serum retinol-binding protein (RBP4)J. Biol. Chem.20132881250126510.1074/jbc.M112.36913223105095PMC3543007
+
+[53] 53.BorelP.GrolierP.MekkiN.BoirieY.RochetteY.Le RoyB.Alexandre-GouabauM.C.LaironD.Azais-BraescoV.Low and high responders to pharmacological doses of beta-carotene: Proportion in the population, mechanisms involved and consequences on beta-carotene metabolismJ. Lipid Res.199839225022609799811
+
+[54] 54.JeanesY.M.HallW.L.LodgeJ.K.Comparative (2)H-labelled alpha-tocopherol biokinetics in plasma, lipoproteins, erythrocytes, platelets and lymphocytes in normolipidaemic malesBr. J. Nutr.200594929910.1079/BJN2005143416115338
+
+[55] 55.DuringA.HussainM.M.MorelD.W.HarrisonE.H.Carotenoid uptake and secretion by CaCo-2 cells: Beta-carotene isomer selectivity and carotenoid interactionsJ. Lipid Res.2002431086109510.1194/jlr.M200068-JLR20012091493
+
+[56] 56.ReboulE.ThapS.PerrotE.AmiotM.J.LaironD.BorelP.Effect of the main dietary antioxidants (carotenoids, gamma-tocopherol, polyphenols, and vitamin C) on alpha-tocopherol absorptionEur. J. Clin. Nutr.2007611167117310.1038/sj.ejcn.160263517268411

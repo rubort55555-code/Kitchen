@@ -13,6 +13,7 @@ import { needsBasics } from "../lib/nutrition";
 import { daysLeft, freshness, plural, rub, untilText } from "../lib/util";
 import { qtyText } from "../lib/units";
 import { goMenu, goPage, goTab, openSheet } from "../lib/ui";
+import { TodayCard } from "./Diary";
 
 const MONTHS = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
 
@@ -127,6 +128,8 @@ export function Home() {
       {expired > 0 && (
         <button className="btn danger" style={{ marginTop: 12 }} onClick={() => openSheet({ kind: "overdue" })}>Просрочено: {expired} — что с ними?</button>
       )}
+
+      {settings.beta?.nutrition !== false && settings.members.some((m) => m.body) && <TodayCard />}
 
       <div className="sec-h"><b>Сегодня в меню</b><button className="link" onClick={goMenu}>Неделя →</button></div>
       {todayMenu.length ? (

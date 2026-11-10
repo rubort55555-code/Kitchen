@@ -1,0 +1,59 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 27 из 39: References
+============================================================
+
+[1] 1 van Poppel, G. , Epidemiological evidence for beta‐carotene in prevention of cancer and cardiovascular disease. Eur. J. Clin. Nutr. 1996, 50(Suppl 3), S57–61.8841775
+
+[2] 2 Hamer, M. , Chida, Y. , Intake of fruit, vegetables, and antioxidants and risk of type 2 diabetes: systematic review and meta‐analysis. J. Hypertens. 2007, 25, 2361–2369.1798465410.1097/HJH.0b013e3282efc214
+
+[3] 3 Wang, Y. , Chung, S. J. , McCullough, M. L. , Song, W. O. et al., Dietary carotenoids are associated with cardiovascular disease risk biomarkers mediated by serum carotenoid concentrations. J. Nutr. 2014, 144, 1067–1074.2474430610.3945/jn.113.184317
+
+[4] 4 Wood, L. G. , Garg, M. L. , Blake, R. J. , Garcia‐Caraballo, S. et al., Airway and circulating levels of carotenoids in asthma and healthy controls. J. Am. Coll. Nutr. 2005, 24, 448–455.1637394110.1080/07315724.2005.10719490
+
+[5] 5 Buijsse, B. , Feskens, E. J. , Schlettwein‐Gsell, D. , Ferry, M. et al., Plasma carotene and alpha‐tocopherol in relation to 10‐y all‐cause and cause‐specific mortality in European elderly: the Survey in Europe on Nutrition and the Elderly, a Concerted Action (SENECA). Am. J. Clin. Nutr. 2005, 82, 879–886.1621072010.1093/ajcn/82.4.879
+
+[6] 6 FAO, F. a. N. D. , Vitamin A. In Human Vitamin and Mineral Requirements: FAO, 2001.
+
+[7] 7 Harari, A. , Abecassis, R. , Relevi, N. , Levi, Z. et al., Prevention of atherosclerosis progression by 9‐cis‐beta‐carotene rich alga Dunaliella in apoE‐deficient mice. Biomed. Res. Int. 2013, 2013, 169517.2417528310.1155/2013/169517PMC3794645
+
+[8] 8 Zolberg Relevy, N. , Bechor, S. , Harari, A. , Ben‐Amotz, A. et al., The inhibition of macrophage foam cell formation by 9‐cis beta‐carotene is driven by BCMO1 activity. PLoS One 2015, 10, e0115272.2562960110.1371/journal.pone.0115272PMC4309590
+
+[9] 9 Liu, R. , Wang, T. , Zhang, B. , Qin, L. et al., Lutein and zeaxanthin supplementation and association with visual function in age‐related macular degeneration. Invest. Ophthalmol. Vis. Sci 2015, 56, 252–258.10.1167/iovs.14-1555325515572
+
+[10] 10 Ma, L. , Dou, H. L. , Wu, Y. Q. , Huang, Y. M. et al., Lutein and zeaxanthin intake and the risk of age‐related macular degeneration: a systematic review and meta‐analysis. Br. J. Nutr. 2012, 107, 350–359.2189980510.1017/S0007114511004260
+
+[11] 11 Bjelakovic, G. , Nikolova, D. , Gluud, L. L. , Simonetti, R. G. et al., Mortality in randomized trials of antioxidant supplements for primary and secondary prevention: systematic review and meta‐analysis. JAMA 2007, 297, 842–857.1732752610.1001/jama.297.8.842
+
+[12] 12 Omenn, G. S. , Goodman, G. , Thornquist, M. , Barnhart, S. et al., Chemoprevention of lung cancer: the beta‐Carotene and Retinol Efficacy Trial (CARET) in high‐risk smokers and asbestos‐exposed workers. IARC Sci. Publ. 1996, 67–85.8791118
+
+[13] 13 Hickenbottom, S. J. , Lemke, S. L. , Dueker, S. R. , Lin, Y. et al., Dual isotope test for assessing beta‐carotene cleavage to vitamin A in humans. Eur. J. Nutr. 2002, 41, 141–147.1224258110.1007/s00394-002-0368-0
+
+[14] 14 Borel, P. , Desmarchelier, C. , Nowicki, M. , Bott, R. et al., Interindividual variability of lutein bioavailability in healthy men: characterization, genetic variants involved, and relation with fasting plasma lutein concentration. Am. J. Clin. Nutr. 2014, 100, 168–175.2480848710.3945/ajcn.114.085720
+
+[15] 15 Moran, N. E. , Cichon, M. J. , Riedl, K. M. , Grainger, E. M. et al., Compartmental and noncompartmental modeling of (1)(3)C‐lycopene absorption, isomerization, and distribution kinetics in healthy adults. Am. J. Clin. Nutr. 2015, 102, 1436–1449.2656162910.3945/ajcn.114.103143PMC4658456
+
+[16] 16 Tanumihardjo, S. A. , Usefulness of vitamin A isotope methods for status assessment: from deficiency through excess. Int. J. Vitam. Nutr. Res. 2014, 84(Suppl 1), 16–24.2553710210.1024/0300-9831/a000182
+
+[17] 17 Chew, B. P. , Park, J. S. , Weng, B. C. , Wong, T. S. et al., Dietary beta‐carotene is taken up by blood plasma and leukocytes in dogs. J. Nutr. 2000, 130, 1788–1791.1086705110.1093/jn/130.7.1788
+
+[18] 18 Paetau, I. , Rao, D. , Wiley, E. R. , Brown, E. D. et al., Carotenoids in human buccal mucosa cells after 4 wk of supplementation with tomato juice or lycopene supplements. Am. J. Clin. Nutr. 1999, 70, 490–494.1050001710.1093/ajcn/70.4.490
+
+[19] 19 Kurilich, A. C. , Britz, S. J. , Clevidence, B. A. , Novotny, J. A. , Isotopic labeling and LC‐APCI‐MS quantification for investigating absorption of carotenoids and phylloquinone from kale (Brassica oleracea). J. Agric. Food Chem. 2003, 51, 4877–4883.1290393910.1021/jf021245t
+
+[20] 20 Bohn, T. , Bioavailabilty of non‐provitamin A carotenoids. Curr. Nutr. Food. Sci. 2008, 4, 240–258.
+
+[21] 21 Borel, P. , Factors affecting intestinal absorption of highly lipophilic food microconstituents (fat‐soluble vitamins, carotenoids and phytosterols). Clin. Chem. Lab. Med. 2003, 41, 979–994.1296480210.1515/CCLM.2003.151
+
+[22] 22 Annibale, B. , Capurso, G. , Delle Fave, G. , Consequences of Helicobacter pylori infection on the absorption of micronutrients. Dig. Liver Dis. 2002, 34(Suppl 2), S72–77.1240844610.1016/s1590-8658(02)80170-0
+
+[23] 23 Azar, M. , Basu, A. , Jenkins, A. J. , Nankervis, A. J. et al., Serum carotenoids and fat‐soluble vitamins in women with type 1 diabetes and preeclampsia: a longitudinal study. Diabetes Care 2011, 34, 1258–1264.2149878510.2337/dc10-2145PMC3114346
+
+[24] 24 Baeten, J. M. , McClelland, R. S. , Wener, M. H. , Bankson, D. D. et al., Relationship between markers of HIV‐1 disease progression and serum beta‐carotene concentrations in Kenyan women. Int. J. STD AIDS 2007, 18, 202–206.1736255610.1258/095646207780132541
+
+[25] 25 Kitamura, Y. , Tanaka, K. , Kiyohara, C. , Hirohata, T. et al., Relationship of alcohol use, physical activity and dietary habits with serum carotenoids, retinol and alpha‐tocopherol among male Japanese smokers. Int. J. Epidemiol. 1997, 26, 307–314.916916510.1093/ije/26.2.307

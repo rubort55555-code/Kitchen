@@ -1,0 +1,73 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 18 из 29: References
+============================================================
+
+[1] 1.MaretW.Zinc in cellular regulation: The nature and significance of “zinc signals”Int. J. Mol. Sci.201718228510.3390/ijms1811228529088067PMC5713255
+
+[2] 2.RinkL.GabrielP.Zinc and the immune systemProc. Nutr. Soc.20005954110.1017/S002966510000078111115789
+
+[3] 3.KrebsN.F.Overview of zinc absorption and excretion in the human gastrointestinal tractJ. Nutr.20001301374S1377S10.1093/jn/130.5.1374S10801946
+
+[4] 4.FordD.Intestinal and placental zinc transport pathwaysProc. Nutr. Soc.200463212910.1079/PNS200332015070437
+
+[5] 5.KingJ.C.Zinc: An essential but elusive nutrientAm. J. Clin. Nutr.2011946795684510.3945/ajcn.110.005744PMC314273721715515
+
+[6] 6.TrameS.WesselsI.HaaseH.RinkL.A short 18 items food frequency questionnaire biochemically validated to estimate zinc status in humansJ. Trace Elem. Med. Biol.20184928529510.1016/j.jtemb.2018.02.02029496418
+
+[7] 7.HuntJ.R.BeiseigelJ.M.JohnsonL.K.Adaptation in human zinc absorption as influenced by dietary zinc and bioavailabilityAm. J. Clin. Nutr.2008871336134510.1093/ajcn/87.5.133618469257
+
+[8] 8.HambidgeK.M.MillerL.V.WestcottJ.E.ShengX.KrebsN.F.Zinc bioavailability and homeostasisAm. J. Clin. Nutr.2010911478S1483S10.3945/ajcn.2010.28674I20200254PMC2854914
+
+[9] 9.DoshR.H.EssaA.Jordan-MahyN.SammonC.Le MaitreC.L.Use of hydrogel scaffolds to develop an in vitro 3d culture model of human intestinal epitheliumActa Biomater.20176212814310.1016/j.actbio.2017.08.03528859901
+
+[10] 10.LangerholcT.MaragkoudakisP.A.WollgastJ.GradisnikL.CencicA.Novel and established intestinal cell line models—An indispensable tool in food science and nutritionTrends Food Sci. Technol.201122S11S2010.1016/j.tifs.2011.03.010PMC717228732336880
+
+[11] 11.MaretW.The metals in the biological periodic system of the elements: Concepts and conjecturesInt. J. Mol. Sci.2016176610.3390/ijms1701006626742035PMC4730311
+
+[12] 12.LimK.H.RiddellL.J.NowsonC.A.BoothA.O.Szymlek-GayE.A.Iron and zinc nutrition in the economically-developed world: A reviewNutrients201353184321110.3390/nu508318423945676PMC3775249
+
+[13] 13.AndreiniC.BanciL.BertiniI.RosatoA.Counting the zinc-proteins encoded in the human genomeJ. Proteome Res.2005519620110.1021/pr050361j16396512
+
+[14] 14.HaraT.TakedaT.A.TakagishiT.FukueK.KambeT.FukadaT.Physiological roles of zinc transporters: Molecular and genetic importance in zinc homeostasisJ. Physiol. Sci.20176728330110.1007/s12576-017-0521-428130681PMC10717645
+
+[15] 15.MatthewsJ.M.BhatiM.LehtomakiE.MansfieldR.E.CubedduL.MackayJ.P.It takes two to tango: The structure and function of lim, ring, phd and mynd domainsCurr. Pharm. Des.2009153681369610.2174/13816120978927186119925420
+
+[16] 16.MaretW.SandsteadH.H.Zinc requirements and the risks and benefits of zinc supplementationJ. Trace Elem. Med. Biol.20062031810.1016/j.jtemb.2006.01.00616632171
+
+[17] 17.FukadaT.YamasakiS.NishidaK.MurakamiM.HiranoT.Zinc homeostasis and signaling in health and diseases: Zinc signalingJ. Biol. Inorg. Chem.2011161123113410.1007/s00775-011-0797-421660546PMC3176402
+
+[18] 18.FredericksonC.J.KohJ.Y.BushA.I.The neurobiology of zinc in health and diseaseNat. Rev. Neurosci.2005644946210.1038/nrn167115891778
+
+[19] 19.JacksonM.J.Physiology of zinc: General aspectsZinc in Human BiologyMillsC.F.SpringerLondon, UK1989114
+
+[20] 20.DriessenC.HirvK.KirchnerH.RinkL.Zinc regulates cytokine induction by superantigens and lipopolysaccharideImmunology1995842722777751004PMC1415110
+
+[21] 21.WessellsK.R.JorgensenJ.M.HessS.Y.WoodhouseL.R.PeersonJ.M.BrownK.H.Plasma zinc concentration responds rapidly to the initiation and discontinuation of short-term zinc supplementation in healthy menJ. Nutr.20101402128213310.3945/jn.110.12281220943956
+
+[22] 22.HessS.Y.PeersonJ.M.KingJ.C.BrownK.H.Use of serum zinc concentration as an indicator of population zinc statusFood Nutr. Bull.200728S403S42910.1177/15648265070283S30317988005
+
+[23] 23.ScottB.J.BradwellA.R.Identification of the serum binding proteins for iron, zinc, cadmium, nickel, and calciumClin. Chem.19832962963310.1093/clinchem/29.4.6296831689
+
+[24] 24.HoegerJ.SimonT.-P.DoemmingS.ThieleC.MarxG.SchuerholzT.HaaseH.Alterations in zinc binding capacity, free zinc levels and total serum zinc in a porcine model of sepsisBioMetals20152869370010.1007/s10534-015-9858-425940830
+
+[25] 25.BloxamD.L.TanJ.C.ParkinsonC.E.Non-protein bound zinc concentration in human plasma and amniotic fluid measured by ultrafiltrationClin. Chim. Acta1984144819310.1016/0009-8981(84)90041-X6529863
+
+[26] 26.MagnesonG.R.PuvathingalJ.M.RayW.J.Jr.The concentrations of free mg2+ and free zn2+ in equine blood plasmaJ. Biol. Chem.198726211140111482956262
+
+[27] 27.AlkerW.SchwerdtleT.SchomburgL.HaaseH.A zinpyr-1-based fluorimetric microassay for free zinc in human serumInt. J. Mol. Sci.201920400610.3390/ijms20164006PMC672086331426452
+
+[28] 28.BrownK.H.WuehlerS.E.PeersonJ.M.The importance of zinc in human nutrition and estimation of the global prevalence of zinc deficiencyFood Nutr. Bull.20012211312510.1177/156482650102200201
+
+[29] 29.GibsonR.S.KingJ.C.LoweN.A review of dietary zinc recommendationsFood Nutr. Bull.20163744346010.1177/037957211665225227312357
+
+[30] 30.International Zinc Nutrition Consultative GroupBrownK.H.RiveraJ.A.BhuttaZ.GibsonR.S.KingJ.C.LonnerdalB.RuelM.T.SandtromB.WasantwisutE.International zinc nutrition consultative group (izincg) technical document #1. Assessment of the risk of zinc deficiency in populations and options for its controlFood Nutr. Bull.200425S99S20318046856
+
+[31] 31.KingJ.C.ShamesD.M.LoweN.M.WoodhouseL.R.SutherlandB.AbramsS.A.TurnlundJ.R.JacksonM.J.Effect of acute zinc depletion on zinc homeostasis and plasma zinc kinetics in menAm. J. Clin. Nutr.20017411612410.1093/ajcn/74.1.11611451726
+
+[32] 32.LoweN.M.WoodhouseL.R.SutherlandB.ShamesD.M.BurriB.J.AbramsS.A.TurnlundJ.R.JacksonM.J.KingJ.C.Kinetic parameters and plasma zinc concentration correlate well with net loss and gain of zinc from menJ. Nutr.20041342178218110.1093/jn/134.9.217815333701

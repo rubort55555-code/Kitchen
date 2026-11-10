@@ -1,0 +1,11 @@
+Название: Absorption of Vitamin A and Carotenoids by the Enterocyte: Focus on Transport Proteins
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2013
+DOI: https://doi.org/10.3390/nu5093563   PMID: 24036530   PMC: PMC3798921
+Лицензия: http://creativecommons.org/licenses/by/3.0/ (открытый доступ). © 2013 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 14: Abstract
+============================================================
+
+Vitamin A deficiency is a public health problem in most developing countries, especially in children and pregnant women. It is thus a priority in health policy to improve preformed vitamin A and/or provitamin A carotenoid status in these individuals. A more accurate understanding of the molecular mechanisms of intestinal vitamin A absorption is a key step in this direction. It was long thought that β-carotene (the main provitamin A carotenoid in human diet), and thus all carotenoids, were absorbed by a passive diffusion process, and that preformed vitamin A (retinol) absorption occurred via an unidentified energy-dependent transporter. The discovery of proteins able to facilitate carotenoid uptake and secretion by the enterocyte during the past decade has challenged established assumptions, and the elucidation of the mechanisms of retinol intestinal absorption is in progress. After an overview of vitamin A and carotenoid fate during gastro-duodenal digestion, our focus will be directed to the putative or identified proteins participating in the intestinal membrane and cellular transport of vitamin A and carotenoids across the enterocyte (i.e., Scavenger Receptors or Cellular Retinol Binding Proteins, among others). Further progress in the identification of the proteins involved in intestinal transport of vitamin A and carotenoids across the enterocyte is of major importance for optimizing their bioavailability.

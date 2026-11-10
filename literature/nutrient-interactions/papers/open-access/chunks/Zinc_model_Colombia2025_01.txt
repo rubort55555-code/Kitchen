@@ -1,0 +1,11 @@
+Название: Modeling Zinc Absorption in the Adult Population of Colombia: Insights for Nutritional Evaluation and Intervention Strategies
+Авторы: José Alexander Alvarez-Bustamante, Angélica María Muñoz
+Журнал: Biological Trace Element Research, 2024
+DOI: https://doi.org/10.1007/s12011-024-04180-x   PMID: 38739259   PMC: PMC11700909
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2024
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 12: Abstract
+============================================================
+
+Zinc is a vital trace element, yet its deficiency is common in various populations. This study addresses the gap in understanding zinc intake and its relationship with key nutritional parameters in a Colombian population. We analyzed data from 12,987 individuals, focusing on the daily intake of zinc, phytate, protein, and calcium, and used the phytate/zinc molar ratio as an input parameter in the Miller et al. (2013) model. This model was employed to estimate the total absorbed zinc (TAZ) and the fractional absorption of zinc (FAZ). Our findings highlight a general trend towards insufficient intake compared to the standards of the Institute of Medicine (IOM) and Colombia, with a significant percentage of the population falling below the estimated average requirement (EAR) and recommended daily allowance (RDA) for zinc, underscoring the need for targeted nutritional strategies. Our study contributes to a broader understanding of zinc nutrition and public health implications in Colombia, providing a basis for future dietary guidelines and health interventions.

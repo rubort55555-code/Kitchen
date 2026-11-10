@@ -1,0 +1,25 @@
+Название: Vitamin E Bioavailability: Mechanisms of Intestinal Absorption in the Spotlight
+Авторы: Emmanuelle Reboul
+Журнал: Antioxidants, 2017
+DOI: https://doi.org/10.3390/antiox6040095   PMID: 29165370   PMC: PMC5745505
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 3 из 10: 2. Vitamin E Digestion Process
+============================================================
+
+## 2.1. The Fate of Vitamin E in the Gastrointestinal Tract
+
+The first phase of the digestion–absorption process is the dissolution of vitamin E in the lipid phase of the meal. This phase is then emulsified into lipid droplets at both gastric and duodenal levels. No metabolism of vitamin E (i.e., degradation or absorption) appears to exist in the stomach. In addition, the size of the droplets does not seem to have any effect on the efficiency of the subsequent absorption of the vitamin E in healthy humans [12].
+
+In the duodenum, vitamin E is incorporated, along with lipid digestion products, in mixed micelles, structures that are theoretically essential for its absorption by the enterocyte. Indeed, mixed micelles can solubilize hydrophobic components and diffuse into the unstirred water layer (glycocalix) to approach the brush border membrane of the enterocytes.
+
+## 2.2. Factors Affecting Vitamin E Transfer to Mixed Micelles
+
+Numerous factors can affect vitamin E bioaccessibility (i.e., the fraction of vitamin E recovered in the mixed micelles compared to the initial amount of vitamin E provided by the meal) and thus in turn vitamin E bioavailability. The main factor is the food matrix in which vitamin E is embedded. For instance, it was shown that vitamin E bioaccessibility was low in apples but almost total in bananas, bread, or lettuce [13], and that vitamin E from durum wheat pasta was more bioaccessible than from pasta containing 10% eggs [14]. Unfortunately, it was not possible to identify the biochemical parameters of green leafy vegetables (cell-wall content, pectin, tannin, …) governing α-tocopherol bioaccessibility [15]. However, as for other lipid micronutrients, matrix disruption can enhance vitamin E transfer to mixed micelles [16], while thermal or high pressure treatments have either no or negative effects [17].
+
+Another important factor determining vitamin E bioaccessibility is the amount of fat provided in the meal, as fat likely facilitates vitamin E extraction from its food matrix, stimulates biliary secretion, and promotes micelle formation. It was first shown that various fats and oils, as well as long-chain triacylglycerols, did not significantly enhance vitamin E bioaccessibility. This was in contrast to more hydrophobic microconstituents such as β-carotene [18]. However, further data consistently showed that tocopherol acetate bioaccessibility was higher in long-chain rather than medium-chain triglyceride emulsions, probably due to a greater solubilization capacity of mixed micelles formed from long chain fatty acids and an enhanced conversion into tocopherol [19,20,21]. Vitamin E bioaccessibility was also increased by the presence of phospholipids [22].
+
+## 2.3. Vitamin E Ester Hydrolysis
+
+It is acknowledged that only the free forms of vitamin E are absorbed by the intestinal mucosa, suggesting that the esterified forms are hydrolyzed beforehand. This hydrolysis is probably carried out by cholesteryl ester hydrolase, also known as bile salt-dependent lipase [23]. Conversely to what we observed for retinyl esters [24], neither pancreatic lipase nor pancreatic lipase-related protein 2 were able to hydrolyze tocopheryl esters [25]. Surprisingly, it has been recently reported that α-tocopherol acetate absorption was equivalent to that of free α-tocopherol in the absence of both digestive enzymes and bile salts in healthy subjects [26]. This result signifies that enzymes originating from the enterocytes, such as endoplasmic reticulum esterases [27], are able to realize this hydrolysis in a very efficient manner.

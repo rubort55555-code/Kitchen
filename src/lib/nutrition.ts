@@ -8,9 +8,9 @@
 //   (MET, поправленный на свой основной обмен, а не на «стандартные» 3,5 мл O₂/кг/мин),
 //   плюс 10% на переваривание пищи (термический эффект пищи).
 //   Старый упрощённый режим (часы по категориям) — факторный метод ФАО/ВОЗ/УООН 2004.
-// - Нормы белков, жиров, углеводов, клетчатки, витаминов и минералов —
+// - Нормы энергии, белков, жиров, углеводов, клетчатки, воды (табл. 7), витаминов и минералов, беременность и кормление (табл. 19–20) —
 //   МР 2.3.1.0253-21 «Нормы физиологических потребностей…» (Роспотребнадзор, 2021).
-// - ИМТ и окружность талии — пороги ВОЗ.
+// - ИМТ, окружность талии и отношение талии к бёдрам — МР 2.3.1.0253-21 (разд. 4) и пороги ВОЗ.
 // Это ориентиры для здоровых взрослых, а не назначение врача.
 
 import { ACTIVITIES, actByKey, actKey, type Activity } from "./activities";
@@ -30,6 +30,34 @@ export interface DayRoutine {
   /** Тяжёлая физическая работа. */
   heavy: number;
 }
+
+export type Stage = "t1" | "t2" | "t3" | "l1" | "l2";
+export const STAGES: Record<Stage, string> = { t1: "1 триместр", t2: "2 триместр", t3: "3 триместр", l1: "Кормление 1–6 мес.", l2: "Кормление 7–12 мес." };
+/** Этап беременности или кормления; если не указан — 2 триместр и 1–6 месяцев кормления. */
+export function stageOf(p: BodyProfile): Stage | null {
+  if (p.pregnant) return p.stage && p.stage[0] === "t" ? p.stage : "t2";
+  if (p.lactating) return p.stage && p.stage[0] === "l" ? p.stage : "l1";
+  return null;
+}
+/** Добавки к норме по таблице 19 МР: энергия, белок, жир, углеводы. */
+export const STAGE_EXTRA: Record<Stage, { kcal: number; protein: number; fat: number; carbs: number }> = {
+  t1: { kcal: 0, protein: 0, fat: 0, carbs: 0 },
+  t2: { kcal: 250, protein: 10, fat: 10, carbs: 30 },
+  t3: { kcal: 350, protein: 30, fat: 12, carbs: 30 },
+  l1: { kcal: 500, protein: 40, fat: 15, carbs: 50 },
+  l2: { kcal: 450, protein: 30, fat: 15, carbs: 50 },
+};
+
+export interface HealthFlags { diabetes?: boolean; kidney?: boolean; gi?: boolean; eating?: boolean; meds?: boolean }
+export const HEALTH_QUESTIONS: { key: keyof HealthFlags; text: string }[] = [
+  { key: "diabetes", text: "Есть диабет" },
+  { key: "kidney", text: "Есть болезни почек" },
+  { key: "gi", text: "Есть болезни желудка или кишечника" },
+  { key: "eating", text: "Было или есть расстройство пищевого поведения" },
+  { key: "meds", text: "Регулярно принимаю лекарства" },
+];
+/** Есть ли хоть один ответ «да» в фильтр-вопросах. */
+export const hasHealthFlag = (h?: HealthFlags) => !!h && Object.values(h).some(Boolean);
 
 export interface Workout { kind: WorkoutKind; minutes: number; perWeek: number }
 
@@ -52,8 +80,16 @@ export interface BodyProfile {
   day?: DayRoutine;
   workouts?: Workout[];
   goal: Goal;
+  /** Поправка к калорийности, ккал в день (±300): результат подстройки цели по динамике веса. */
+  adjust?: number;
+  /** Дата последней проверки цели (ГГГГ-ММ-ДД): следующая — через 14 дней. */
+  checkedAt?: string;
   pregnant?: boolean;
   lactating?: boolean;
+  /** Этап: триместр беременности (t1–t3) или кормление грудью (l1 — 1–6 мес., l2 — 7–12 мес.); таблицы 19–20 МР. */
+  stage?: Stage;
+  /** Фильтр-вопросы безопасности: при «да» план с дефицитом калорий не строим, только справочные данные и совет врача. */
+  health?: HealthFlags;
   /** Ограничения по здоровью от врача — приложение их не назначает, только напоминает. */
   medical?: string;
   /** Когда обновляли вес. */
@@ -116,7 +152,7 @@ export const needsBasics = (b: BodyProfile | undefined) => !!basicsError(b);
 
 /** Основной обмен, ккал/сутки (Миффлин — Сан-Жеор). */
 export function bmr(p: BodyProfile, now = new Date()): number {
-  return 10 * p.weight + 6.25 * p.height - 5 * ageOf(p, now) + (p.sex === "m" ? 5 : -161);
+  return 9.99 * p.weight + 6.25 * p.height - 4.92 * ageOf(p, now) + (p.sex === "m" ? 5 : -161);
 }
 
 /** Часы «отдыха сидя» — всё, что не распределено по другим занятиям и тренировкам. */
@@ -226,10 +262,46 @@ export function fromHours(d: DayRoutine, workouts: Workout[] = []): DayLog {
 
 /** Группа активности по МР 2.3.1.0253-21 (I — очень низкая … IV — высокая). */
 export function activityGroup(k: number): { n: 1 | 2 | 3 | 4; title: string } {
-  if (k < 1.5) return { n: 1, title: "I — очень низкая (умственный труд)" };
-  if (k < 1.75) return { n: 2, title: "II — низкая (лёгкий труд)" };
-  if (k < 2.05) return { n: 3, title: "III — средняя" };
-  return { n: 4, title: "IV — высокая (тяжёлый труд)" };
+  if (k < 1.5) return { n: 1, title: "I — очень низкая (умственный труд, КФА 1,4)" };
+  if (k < 1.75) return { n: 2, title: "II — низкая (лёгкий труд: водители, продавцы, врачи, КФА 1,6)" };
+  if (k < 2.05) return { n: 3, title: "III — средняя (слесари, станочники, садоводы, КФА 1,9)" };
+  return { n: 4, title: "IV — высокая (тяжёлый труд: строители, грузчики, КФА 2,2)" };
+}
+
+/** Нормы МР 2.3.1.0253-21, табл. 9 и 14: энергия и макронутриенты в сутки по группе активности (1–4) и возрасту.
+ *  Порядок значений: группы 1–4 × возраст 18–29, 30–44, 45–64; затем 65–74 и 75+ (КФА 1,7). */
+const MR_TABLE: Record<Sex, Record<"kcal" | "protein" | "animal" | "fat" | "carbs", number[]>> = {
+  m: {
+    kcal: [2400, 2300, 2150, 2750, 2650, 2450, 3250, 3150, 2900, 3800, 3650, 3400, 2400, 2300],
+    protein: [84, 81, 75, 89, 86, 80, 102, 98, 91, 114, 110, 102, 84, 81],
+    animal: [42, 41, 38, 45, 43, 40, 51, 49, 46, 57, 55, 51, 42, 41],
+    fat: [80, 77, 72, 92, 88, 82, 108, 105, 97, 127, 122, 113, 80, 77],
+    carbs: [336, 322, 301, 392, 378, 349, 467, 453, 417, 551, 529, 493, 336, 322],
+  },
+  f: {
+    kcal: [1900, 1800, 1700, 2200, 2100, 1950, 2600, 2500, 2300, 3000, 2850, 2700, 1900, 1800],
+    protein: [67, 63, 60, 72, 68, 63, 81, 78, 72, 90, 86, 81, 67, 63],
+    animal: [34, 32, 30, 36, 34, 32, 41, 39, 36, 45, 43, 41, 34, 32],
+    fat: [63, 60, 57, 73, 70, 65, 87, 83, 77, 100, 95, 90, 63, 60],
+    carbs: [266, 252, 238, 314, 299, 278, 374, 359, 331, 435, 413, 392, 266, 252],
+  },
+};
+export interface MrNorm { label: string; kcal: number; protein: number; animal: number; fat: number; carbs: number }
+/** Норма МР для группы человека (по полу, возрасту и группе активности) — ориентир для населения. */
+export function mrNorm(sex: Sex, age: number, group: 1 | 2 | 3 | 4): MrNorm | null {
+  if (age < 18) return null;
+  let i: number, label: string;
+  if (age >= 75) { i = 13; label = "75 лет и старше"; }
+  else if (age >= 65) { i = 12; label = "65–74 года"; }
+  else { const band = age < 30 ? 0 : age < 45 ? 1 : 2; i = (group - 1) * 3 + band; label = ["18–29", "30–44", "45–64"][band] + " лет, группа " + ["I", "II", "III", "IV"][group - 1]; }
+  const t = MR_TABLE[sex];
+  return { label, kcal: t.kcal[i], protein: t.protein[i], animal: t.animal[i], fat: t.fat[i], carbs: t.carbs[i] };
+}
+
+/** Вода и напитки, л в сутки, табл. 7 МР (ИМТ 20–25): середина диапазона по КФА-группе; 65+ — отдельная строка. */
+export function waterMR(sex: Sex, age: number, group: 1 | 2 | 3 | 4): number {
+  if (age >= 65) return sex === "m" ? 1.45 : 1.15;
+  return (sex === "m" ? [1.35, 1.55, 1.85, 2.15] : [1.05, 1.25, 1.45, 1.75])[group - 1];
 }
 
 export interface BmiInfo { bmi: number; cat: string; level: "low" | "ok" | "over" | "obese" }
@@ -244,22 +316,42 @@ export function bmiOf(p: BodyProfile): BmiInfo {
   return { bmi: b, cat: "ожирение III степени", level: "obese" };
 }
 
-/** Риск по окружности талии (ВОЗ, 2008): мужчины ≥94 / ≥102 см, женщины ≥80 / ≥88 см. */
+/** Риск по окружности талии (МР 2.3.1.0253-21 и ВОЗ): мужчины ≥94 / >102 см, женщины ≥80 / >88 см. */
 export function waistRisk(p: BodyProfile): { text: string; level: "ok" | "up" | "high" } | null {
   if (!p.waist) return null;
   const [a, b] = p.sex === "m" ? [94, 102] : [80, 88];
   const whr = p.hips ? round(p.waist / p.hips, 2) : null;
-  const whrHigh = whr !== null && whr >= (p.sex === "m" ? 0.9 : 0.85);
+  // МР 2.3.1.0253-21: норма ОТ/ОБ — до 0,85; абдоминальное ожирение: у женщин больше 0,85, у мужчин больше 1,0
+  const whrHigh = whr !== null && whr > 0.85;
+  const whrObese = whr !== null && (p.sex === "m" ? whr > 1.0 : false);
   const whtr = round(p.waist / p.height, 2);
-  const extra = [whr !== null ? `талия/бёдра ${num(whr)}${whrHigh ? " (выше нормы ВОЗ)" : ""}` : "", `талия/рост ${num(whtr)}${whtr >= 0.5 ? " (больше 0,5)" : ""}`].filter(Boolean).join(", ");
-  if (p.waist >= b) return { text: `талия ${p.waist} см — риск для сердца и обмена веществ заметно повышен; ${extra}`, level: "high" };
+  const extra = [whr !== null ? `талия/бёдра ${num(whr)}${whrHigh ? " (выше нормы МР)" : ""}` : "", `талия/рост ${num(whtr)}${whtr >= 0.5 ? " (больше 0,5)" : ""}`].filter(Boolean).join(", ");
+  if (p.waist >= b || whrObese) return { text: `талия ${p.waist} см — риск для сердца и обмена веществ заметно повышен; ${extra}`, level: "high" };
   if (p.waist >= a || whrHigh) return { text: `талия ${p.waist} см — риск немного повышен; ${extra}`, level: "up" };
   return { text: `талия ${p.waist} см — в норме; ${extra}`, level: "ok" };
 }
 
 /** Витамины и минералы в сутки по МР 2.3.1.0253-21. */
 export interface Micro { key: string; title: string; amount: number; unit: string; note?: string }
+const STAGE_MICROS: Record<string, [number, number, number, number, number]> = {
+  // t1, t2, t3, l1, l2 — таблица 20 МР
+  vitC: [110, 110, 110, 130, 130], vitB1: [1.5, 1.7, 1.7, 1.8, 1.8], vitB2: [1.8, 2, 2, 2.1, 2.1], vitB6: [2, 2.3, 2.3, 2.5, 2.5],
+  niacin: [20, 20, 20, 20, 20], vitB12: [3, 3.5, 3.5, 3.5, 3.5], folate: [600, 600, 600, 500, 500], pantothenic: [5, 6, 6, 7, 7],
+  biotin: [50, 50, 50, 50, 50], vitA: [800, 900, 900, 1200, 1200], vitE: [15, 17, 17, 19, 19], vitD: [15, 15, 15, 15, 15], vitK: [120, 120, 120, 120, 120],
+  ca: [1000, 1300, 1300, 1400, 1400], p: [700, 900, 900, 900, 900], mg: [420, 450, 450, 450, 450], k: [2500, 2500, 2500, 2500, 2500],
+  na: [1300, 1300, 1300, 1300, 1300], cl: [2300, 2300, 2300, 2300, 2300], fe: [18, 33, 33, 18, 18], zn: [12, 15, 15, 15, 15],
+  i: [150, 220, 220, 290, 290], cu: [1, 1, 1, 1, 1], mo: [70, 70, 70, 70, 70], mn: [2, 2, 2, 2, 2], se: [55, 55, 55, 55, 55], cr: [50, 50, 50, 50, 50],
+};
+const STAGE_IDX: Record<Stage, number> = { t1: 0, t2: 1, t3: 2, l1: 3, l2: 4 };
+
 export function micros(p: BodyProfile, now = new Date()): Micro[] {
+  const list = microsBase(p, now);
+  const st = stageOf(p);
+  if (!st) return list;
+  return list.map((x) => (STAGE_MICROS[x.key] ? { ...x, amount: STAGE_MICROS[x.key][STAGE_IDX[st]] } : x));
+}
+
+function microsBase(p: BodyProfile, now: Date): Micro[] {
   const old = ageOf(p, now) >= 65;
   const m = p.sex === "m";
   return [
@@ -287,6 +379,15 @@ export function micros(p: BodyProfile, now = new Date()): Micro[] {
     { key: "se", title: "Селен", amount: m ? 70 : 55, unit: "мкг" },
     { key: "cu", title: "Медь", amount: 1, unit: "мг" },
     { key: "mn", title: "Марганец", amount: 2, unit: "мг" },
+    { key: "cr", title: "Хром", amount: 40, unit: "мкг" },
+    { key: "mo", title: "Молибден", amount: 70, unit: "мкг" },
+    { key: "cl", title: "Хлориды", amount: 2300, unit: "мг" },
+    { key: "betaCarotene", title: "Бета-каротин", amount: 5, unit: "мг" },
+    // Адекватные уровни потребления (табл. 13 и 18 МР) — справочно, без учёта по продуктам
+    { key: "co", title: "Кобальт", amount: 10, unit: "мкг", note: "адекватный уровень, справочно" },
+    { key: "f", title: "Фтор", amount: 4, unit: "мг", note: "адекватный уровень, справочно" },
+    { key: "si", title: "Кремний", amount: 30, unit: "мг", note: "адекватный уровень, справочно" },
+    { key: "v", title: "Ванадий", amount: 15, unit: "мкг", note: "адекватный уровень, справочно" },
   ];
 }
 
@@ -306,6 +407,19 @@ export interface Plan {
   satFatMax: number; // г
   carbs: number; // г
   sugarMax: number; // г
+  /** Животный белок, г (около половины белка по МР). */
+  animalProtein: number;
+  /** Качество жиров по МР, г в сутки: от и до (доли ккал: МНЖК 10%, ПНЖК 6–10%, омега-6 5–8%, омега-3 1–2%). */
+  fats: { key: string; title: string; from: number; to: number }[];
+  /** Норма МР для группы человека как ориентир (энергия и макронутриенты). */
+  mr: MrNorm | null;
+  /** Этап беременности или кормления, если есть. */
+  stage: Stage | null;
+  /** Пределы «не больше» по МР 2.3.1.0253-21. */
+  cholMax: number; // мг
+  transMax: number; // г (1% ккал)
+  naMax: number; // мг
+  saltMax: number; // г
   fiber: number; // г
   /** Питьевая вода, л/сутки (ориентир). */
   water: number;
@@ -320,6 +434,9 @@ export interface Plan {
 }
 
 /** Полный расчёт норм для одного человека. null — расчёт для этого возраста пока не поддерживается. */
+/** Наибольшая накопленная поправка к калорийности по динамике веса, ккал в день. */
+export const ADJUST_MAX = 300;
+
 export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   const age = ageOf(p, now);
   if (age < 18 || age > 110 || p.height < 100 || p.weight < 30) return null;
@@ -331,16 +448,23 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   const k = round(tee / b, 2);
   const group = activityGroup(k);
   if (diary && diary.weekDays !== 7) notes.push(`В дневнике расписано ${diary.weekDays} ${diary.weekDays === 1 ? "день" : diary.weekDays < 5 ? "дня" : "дней"} недели — расход посчитан как среднее по ним. Лучше, чтобы вместе получилось 7.`);
-  if (p.pregnant) { tee *= 1.15; notes.push("Беременность: энергия +15% (МР 2.3.1.0253-21)."); }
-  else if (p.lactating) { tee *= 1.2; notes.push("Кормление грудью: энергия +20% (МР 2.3.1.0253-21)."); }
+  const stage = stageOf(p);
+  const extra = stage ? STAGE_EXTRA[stage] : null;
+  const teeBase = tee;
+  if (stage && extra) {
+    tee += extra.kcal;
+    notes.push(`${STAGES[stage]}: добавка к энергии ${extra.kcal > 0 ? "+" + extra.kcal : "нет"} ккал, белка +${extra.protein} г (таблица 19 МР 2.3.1.0253-21). Это справочные данные: питание в этот период обсуждайте с врачом.`);
+    if (!p.stage) notes.push("Этап не выбран — взяты значения 2 триместра беременности или первых 6 месяцев кормления.");
+  }
   const bmi = bmiOf(p);
 
   let goal = p.goal;
   if (goal === "lose" && (p.pregnant || p.lactating)) { goal = "keep"; warnings.push("Во время беременности и кормления худеть не рекомендуется — расчёт сделан на сохранение веса. Обсудите питание с врачом."); }
+  if ((goal === "lose" || goal === "gain") && hasHealthFlag(p.health)) { goal = "keep"; warnings.push("Вы отметили состояние здоровья, при котором план питания лучше составлять с врачом. Показаны только общие нормы — без дефицита и набора калорий."); }
   if (goal === "lose" && bmi.level === "low") { goal = "keep"; warnings.push("ИМТ ниже 18,5 — снижать вес не нужно. Расчёт сделан на сохранение веса."); }
   if (goal === "lose" && bmi.bmi < 20 && bmi.level === "ok") warnings.push("Вес уже у нижней границы нормы — худеть дальше обычно не нужно.");
   if (bmi.level === "low") warnings.push("ИМТ ниже нормы. Если вес снижается без причины — покажитесь врачу.");
-  if (age >= 65) notes.push("После 65 лет нормы витамина D и кальция выше, доля белка — 14% калорий.");
+  if (age >= 65) notes.push("После 65 лет нормы витамина D и кальция выше, доля белка — 14% калорий, КФА для расчёта 1,7 (МР 2.3.1.0253-21).");
 
   let kcal = tee;
   let weekly = 0;
@@ -356,9 +480,22 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
     notes.push("Набирать вес лучше вместе с силовыми тренировками — тогда растут мышцы, а не жир.");
   }
 
+  // Подстройка по динамике веса (только здоровым взрослым без беременности и кормления)
+  if (p.adjust && !stage && !hasHealthFlag(p.health) && bmi.level !== "low") {
+    const adj = Math.max(-ADJUST_MAX, Math.min(ADJUST_MAX, p.adjust));
+    const before = kcal;
+    kcal = Math.max(kcal + adj, floor, b);
+    if (goal === "lose") kcal = Math.min(kcal, tee);
+    if (kcal !== before) {
+      weekly = ((kcal - tee) * 7) / 7700;
+      notes.push(`Цель подстроена по динамике веса: ${kcal > before ? "+" : "−"}${Math.round(Math.abs(kcal - before))} ккал в день.`);
+    }
+  }
+
   // Белок: доля калорий по МР (14 / 13 / 12,5 / 12%, после 65 лет — 14%)
   const share = age >= 65 ? 0.14 : [0, 0.14, 0.13, 0.125, 0.12][group.n];
   let protein = (kcal * share) / 4;
+  if (extra) protein = Math.max(protein, (teeBase * share) / 4 + extra.protein);
   // Вес для расчёта на килограмм: при ИМТ выше 30 — вес при ИМТ 25 (иначе белка выйдет слишком много)
   const kgFor = bmi.bmi > 30 ? 25 * (p.height / 100) ** 2 : p.weight;
   if (goal === "protein") { protein = Math.max(protein, 1.6 * kgFor); notes.push("Белок 1,6 г на кг веса — для тех, кто регулярно тренируется."); }
@@ -375,18 +512,28 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   const sugarMax = (kcal * sugarShare) / 4;
   // Клетчатка — 10 г на 1000 ккал, не меньше 20 г
   const fiber = Math.max(20, kcal / 100);
-  // Вода: EFSA — всего 2,5 л мужчинам и 2,0 л женщинам, из них ~20% даёт еда; +0,5 л на час тренировки
-  const sportH = diary ? diary.days.reduce((s2, x) => s2 + x.e.rows.filter((r) => r.act.m >= 5).reduce((a, r) => a + r.min, 0) * Math.max(0, x.d.perWeek), 0) / Math.max(1, diary.weekDays) / 60 : workoutHours(p);
-  const water = (p.sex === "m" ? 2.0 : 1.6) + sportH * 0.5 + (p.lactating ? 0.6 : p.pregnant ? 0.3 : 0);
+  // Вода и напитки — табл. 7 МР по группе активности и полу (в нормы уже заложена активность группы); +0,3 л при беременности, +0,7 л при кормлении
+  const water = waterMR(p.sex, age, group.n) + (p.lactating ? 0.7 : p.pregnant ? 0.3 : 0);
 
   if (p.medical?.trim()) warnings.push(`Учтите рекомендации врача: ${p.medical.trim()}. Приложение не заменяет консультацию.`);
 
   return {
     age, bmr: Math.round(b), pal: k, group, tee: Math.round(tee), kcal: Math.round(kcal / 10) * 10, goal,
     protein: Math.round(protein), fat: Math.round(fat), satFatMax: Math.round(satFatMax), carbs: Math.round(carbs),
-    sugarMax: Math.round(sugarMax), fiber: Math.round(fiber), water: round(water, 1), weekly: round(weekly, 2),
+    sugarMax: Math.round(sugarMax), animalProtein: Math.round(protein * 0.5), fats: fatQuality(kcal), mr: mrNorm(p.sex, age, group.n), stage, cholMax: 300, transMax: round((kcal * 0.01) / 9, 1), naMax: 2000, saltMax: 5, fiber: Math.round(fiber), water: round(water, 1), weekly: round(weekly, 2),
     bmi, waist: waistRisk(p), notes, warnings, diary: diary ? diary.days : undefined,
   };
+}
+
+/** Качество жиров по МР: доли ккал → граммы в сутки (9 ккал/г). */
+function fatQuality(kcal: number): Plan["fats"] {
+  const g = (pct: number) => Math.round((kcal * pct) / 100 / 9);
+  return [
+    { key: "mufa", title: "Мононенасыщенные жиры", from: g(10), to: g(10) },
+    { key: "pufa", title: "Полиненасыщенные жиры", from: g(6), to: g(10) },
+    { key: "omega6", title: "Омега-6", from: g(5), to: g(8) },
+    { key: "omega3", title: "Омега-3", from: g(1), to: g(2) },
+  ];
 }
 
 /** Короткая строка для запроса Claude: «Аня: ~1900 ккал, белок 75 г, цель — снизить вес». */

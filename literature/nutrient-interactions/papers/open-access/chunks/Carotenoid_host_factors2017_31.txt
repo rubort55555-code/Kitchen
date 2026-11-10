@@ -1,0 +1,59 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 31 из 39: References (часть 5)
+============================================================
+
+[101] 101 Palczewski, G. , Amengual, J. , Hoppel, C. L. , von Lintig, J. , Evidence for compartmentalization of mammalian carotenoid metabolism. FASEB J. 2014, 28, 4457–4469.2500212310.1096/fj.14-252411PMC4202098
+
+[102] 102 Amengual, J. , Gouranton, E. , van Helden, Y. G. , Hessel, S. et al., Beta‐carotene reduces body adiposity of mice via BCMO1. PLoS One 2011, 6, e20644.2167381310.1371/journal.pone.0020644PMC3106009
+
+[103] 103 Borel, P. , Moussa, M. , Reboul, E. , Lyan, B. et al., Human plasma levels of vitamin E and carotenoids are associated with genetic polymorphisms in genes involved in lipid metabolism. J. Nutr. 2007, 137, 2653–2659.1802947910.1093/jn/137.12.2653
+
+[104] 104 Ferrucci, L. , Perry, J. R. , Matteini, A. , Perola, M. et al., Common variation in the beta‐carotene 15,15'‐monooxygenase 1 gene affects circulating levels of carotenoids: a genome‐wide association study. Am. J. Hum. Genet. 2009, 84, 123–133.1918528410.1016/j.ajhg.2008.12.019PMC2668002
+
+[105] 105 Wood, A. R. , Perry, J. R. , Tanaka, T. , Hernandez, D. G. et al., Imputation of variants from the 1000 Genomes Project modestly improves known associations and can identify low‐frequency variant‐phenotype associations undetected by HapMap based imputation. PloS One 2013, 8, e64343.2369688110.1371/journal.pone.0064343PMC3655956
+
+[106] 106 Mashurabad, P. C. , Kondaiah, P. , Palika, R. , Ghosh, S. et al., Eicosapentaenoic acid inhibits intestinal beta‐carotene absorption by downregulation of lipid transporter expression via PPAR‐alpha dependent mechanism. Arch. Biochem. Biophys. 2016, 590, 118–124.2657702110.1016/j.abb.2015.11.002
+
+[107] 107 Lobo, G. P. , Hessel, S. , Eichinger, A. , Noy, N. et al., ISX is a retinoic acid‐sensitive gatekeeper that controls intestinal beta,beta‐carotene absorption and vitamin A production. Faseb J. 2010, 24, 1656–1666.2006153310.1096/fj.09-150995PMC2874479
+
+[108] 108 Lobo, G. P. , Amengual, J. , Baus, D. , Shivdasani, R. A. et al., Genetics and diet regulate vitamin A production via the homeobox transcription factor ISX. J. Biol. Chem. 2013, 288, 9017–9027.2339314110.1074/jbc.M112.444240PMC3610974
+
+[109] 109 Jang, J. T. , Green, J. B. , Beard, J. L. , Green, M. H. , Kinetic analysis shows that iron deficiency decreases liver vitamin A mobilization in rats. J. Nutr. 2000, 130, 1291–1296.1080193210.1093/jn/130.5.1291
+
+[110] 110 During, A. , Fields, M. , Lewis, C. G. , Smith, J. C. , Beta‐carotene 15,15'‐dioxygenase activity is responsive to copper and iron concentrations in rat small intestine. J. Am. Coll. Nutr. 1999, 18, 309–315.1203847310.1080/07315724.1999.10718869
+
+[111] 111 Noh, S. K. , Koo, S. I. , Low zinc intake decreases the lymphatic output of retinol in rats infused intraduodenally with beta‐carotene. J. Nutr. Biochem. 2003, 14, 147–153.1274254210.1016/s0955-2863(02)00277-2
+
+[112] 112 Kana‐Sop, M. M. , Gouado, I. , Achu, M. B. , Van Camp, J. et al., The influence of iron and zinc supplementation on the bioavailability of provitamin A carotenoids from papaya following consumption of a vitamin A‐deficient diet. J. Nutr. Sci. Vitaminol. (Tokyo) 2015, 61, 205–214.2622695610.3177/jnsv.61.205
+
+[113] 113 Lietz, G. , Lange, J. , Rimbach, G. , Molecular and dietary regulation of beta,beta‐carotene 15,15'‐monooxygenase 1 (BCMO1). Arch. Biochem. Biophys. 2010, 502, 8–16.2059966610.1016/j.abb.2010.06.032
+
+[114] 114 Lobo, G. P. , Amengual, J. , Li, H. N. , Golczak, M. et al., Beta,beta‐carotene decreases peroxisome proliferator receptor gamma activity and reduces lipid storage capacity of adipocytes in a beta,beta‐carotene oxygenase 1‐dependent manner. J. Biol. Chem. 2010, 285, 27891–27899.2057396110.1074/jbc.M110.132571PMC2934656
+
+[115] 115 Zaripheh, S. , Nara, T. Y. , Nakamura, M. T. , Erdman, J. W., Jr. Dietary lycopene downregulates carotenoid 15,15'‐monooxygenase and PPAR‐gamma in selected rat tissues. J. Nutr. 2006, 136, 932–938.1654945310.1093/jn/136.4.932
+
+[116] 116 Schupp, M. , Lazar, M. A. , Endogenous ligands for nuclear receptors: digging deeper. J. Biol. Chem. 2010, 285, 40409–40415.2095652610.1074/jbc.R110.182451PMC3003339
+
+[117] 117 Carlberg, C. , Saurat, J. H. , Siegenthaler, G. , 9‐cis‐retinoic acid is a natural antagonist for the retinoic acid receptor response pathway. Biochem. J. 1993, 295(Pt 2), 343–346.824023110.1042/bj2950343PMC1134887
+
+[118] 118 Rühl, R. , Krzyzosiak, A. , Niewiadomska‐Cimicka, A. , Rochel, N. et al., 9‐cis‐13,14‐dihydroretinoic acid is an endogenous retinoid acting as RXR ligand in mice. PLoS Genet. 2015, 11, e1005213.2603062510.1371/journal.pgen.1005213PMC4451509
+
+[119] 119 de Lera, A. R. , Krezel, W. , Rühl, R. , An endogenous mammalian retinoid X receptor ligand, at last! Chem. Med. Chem. 2016, 11, 1027–1037.2715114810.1002/cmdc.201600105
+
+[120] 120 van den Berg, H. , Effect of lutein on beta‐carotene absorption and cleavage. Int. J. Vitam. Nutr. Res. 1998, 68, 360–365.9857262
+
+[121] 121 Goni, I. , Serrano, J. , Saura‐Calixto, F. , Bioaccessibility of beta‐carotene, lutein, and lycopene from fruits and vegetables. J. Agric. Food Chem. 2006, 54, 5382–5387.1684852110.1021/jf0609835
+
+[122] 122 Kaulmann, A. , Andre, C. M. , Schneider, Y. J. , Hoffmann, L. et al., Carotenoid and polyphenol bioaccessibility and cellular uptake from plum and cabbage varieties. Food Chem. 2015, 197 325–332.2661695610.1016/j.foodchem.2015.10.049
+
+[123] 123 Serrano, J. , Goni, I. , Saura‐Calixto, F. , Determination of beta‐carotene and lutein available from green leafy vegetables by an in vitro digestion and colonic fermentation method. J. Agric. Food Chem. 2005, 53, 2936–2940.1582604210.1021/jf0480142
+
+[124] 124 Bohn, T. , Bioactivity of carotenoids – chasms of knowledge. Int. J Vitam. Nutr. Res. 2016, in press.10.1024/0300-9831/a00040028186459
+
+[125] 125 Marin, L. , Miguelez, E. M. , Villar, C. J. , Lombo, F. , Bioavailability of dietary polyphenols and gut microbiota metabolism: antimicrobial properties. Biomed. Res. Int. 2015, 2015, 905215.2580287010.1155/2015/905215PMC4352739

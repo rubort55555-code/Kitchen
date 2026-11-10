@@ -1,0 +1,65 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 28 из 29: References (часть 11)
+============================================================
+
+[294] 294.FinamoreA.MassimiM.Conti DevirgiliisL.MengheriE.Zinc deficiency induces membrane barrier damage and increases neutrophil transmigration in caco-2 cellsJ. Nutr.20081381664167010.1093/jn/138.9.166418716167
+
+[295] 295.JohanssonM.E.SjovallH.HanssonG.C.The gastrointestinal mucus system in health and diseaseNat. Rev. Gastroenterol. Hepatol.20131035236110.1038/nrgastro.2013.3523478383PMC3758667
+
+[296] 296.JinF.WelchR.GlahnR.Moving toward a more physiological model: Application of mucin to refine the in vitro digestion/caco-2 cell culture systemJ. Agric. Food Chem.2006548962896710.1021/jf061684i17090148
+
+[297] 297.SchomigV.J.KasdorfB.T.ScholzC.BidmonK.LielegO.BerensmeierS.An optimized purification process for porcine gastric mucin with preservation of its native functional propertiesRsc Adv.20166449324494310.1039/C6RA07424C
+
+[298] 298.SvenssonO.ArnebrantT.Mucin layers and multilayers—Physicochemical properties and applicationsCurr. Opin. Colloid Interface Sci.20101539540510.1016/j.cocis.2010.05.015
+
+[299] 299.HilgendorfC.Spahn-LangguthH.RegardhC.G.LipkaE.AmidonG.L.LangguthP.Caco-2 versus caco-2/ht29-mtx co-cultured cell lines: Permeabilities via diffusion, inside- and outside-directed carrier-mediated transportJ. Pharm. Sci.200089637510.1002/(SICI)1520-6017(200001)89:1<63::AID-JPS7>3.0.CO;2-610664539
+
+[300] 300.BeduneauA.TempestaC.FimbelS.PellequerY.JanninV.DemarneF.LamprechtA.A tunable caco-2/ht29-mtx co-culture model mimicking variable permeabilities of the human intestine obtained by an original seeding procedureEur. J. Pharm. Biopharm.20148729029810.1016/j.ejpb.2014.03.01724704198
+
+[301] 301.AraujoF.SarmentoB.Towards the characterization of an in vitro triple co-culture intestine cell model for permeability studiesInt. J. Pharm.201345812813410.1016/j.ijpharm.2013.10.00324120728
+
+[302] 302.WalterE.JanichS.RoesslerB.J.HilfigerJ.M.AmidonG.L.Ht29-mtx/caco-2 cocultures as an in vitro model for the intestinal epithelium: In vitro−in vivo correlation with permeability data from rats and humansJ. Pharm. Sci.1996851070107610.1021/js960110x8897273
+
+[303] 303.PontierC.PachotJ.BothamR.LenfantB.ArnaudP.Ht29-mtx and caco-2/tc7 monolayers as predictive models for human intestinal absorption: Role of the mucus layerJ. Pharm. Sci.2001901608161910.1002/jps.111111745719
+
+[304] 304.FerrarettoA.BottaniM.De LucaP.CornaghiL.ArnaboldiF.MaggioniM.FiorilliA.DonettiE.Morphofunctional properties of a differentiated caco2/ht-29 co-culture as an in vitro model of human intestinal epitheliumBiosci. Rep.20183810.1042/BSR20171497PMC592013429540534
+
+[305] 305.CalatayudM.VazquezM.DevesaV.VelezD.In vitro study of intestinal transport of inorganic and methylated arsenic species by caco-2/ht29-mtx coculturesChem. Res. Toxicol.2012252654266210.1021/tx300295n23116229
+
+[306] 306.VazquezM.CalatayudM.VelezD.DevesaV.Intestinal transport of methylmercury and inorganic mercury in various models of caco-2 and ht-29-mtx cellsToxicology201331114715310.1016/j.tox.2013.06.00223793072
+
+[307] 307.LaparraJ.M.GlahnR.P.MillerD.D.Different responses of fe transporters in caco-2/ht29-mtx cocultures than in independent caco-2 cell culturesCell Biol. Int.20093397197710.1016/j.cellbi.2009.06.00119524686
+
+[308] 308.Moreno-OlivasF.TakoE.MahlerG.J.Zno nanoparticles affect nutrient transport in an in vitro model of the small intestineFood Chem. Toxicol.201812411211710.1016/j.fct.2018.11.04830503572PMC6351196
+
+[309] 309.LaparraJ.M.SanzY.Comparison of in vitro models to study bacterial adhesion to the intestinal epitheliumLett. Appl. Microbiol.20094969570110.1111/j.1472-765X.2009.02729.x19843211
+
+[310] 310.Ponce de Leon-RodriguezM.D.C.GuyotJ.P.Laurent-BabotC.Intestinal in vitro cell culture models and their potential to study the effect of food components on intestinal inflammationCrit. Rev. Food Sci. Nutr.2018593648366610.1080/10408398.2018.150673430277794
+
+[311] 311.CalatayudM.Gimeno-AlcanizJ.V.DevesaV.VelezD.Proinflammatory effect of trivalent arsenical species in a co-culture of caco-2 cells and peripheral blood mononuclear cellsArch. Toxicol.20158955556410.1007/s00204-014-1271-124862236
+
+[312] 312.DostalA.GagnonM.ChassardC.ZimmermannM.B.O'MahonyL.LacroixC.Salmonella adhesion, invasion and cellular immune responses are differentially affected by iron concentrations in a combined in vitro gut fermentation-cell modelPLoS ONE20149e9354910.1371/journal.pone.009354924676135PMC3968171
+
+[313] 313.OestreicherP.CousinsR.J.Zinc uptake by basolateral membrane vesicles from rat small intestineJ. Nutr.198911963964610.1093/jn/119.4.6392539449
+
+[314] 314.HelanderH.F.FandriksL.Surface area of the digestive tract—RevisitedScand. J. Gastroenterol.20144968168910.3109/00365521.2014.89832624694282
+
+[315] 315.KrebsN.F.HambidgeK.M.Zinc metabolism and homeostasis: The application of tracer techniquesBioMetals20011439741210.1023/A:101294240927411831468
+
+[316] 316.WastneyM.E.AamodtR.L.RumbleW.F.HenkinR.I.Kinetic analysis of zinc metabolism and its regulation in normal humansAm. J. Physiol.1986251R398R40810.1152/ajpregu.1986.251.2.R3983740321
+
+[317] 317.SandströmB.LönnerdalB.Promoters and antagonists of zinc absorptionZinc in Human BiologyMillsC.F.SpringerLondon, UK19895778
+
+[318] 318.TranC.D.GopalsamyG.L.MortimerE.K.YoungG.P.The potential for zinc stable isotope techniques and modelling to determine optimal zinc supplementationNutrients201574271429510.3390/nu706427126035248PMC4488783
+
+[319] 319.CerchiaroG.ManieriT.M.BertuchiF.R.Analytical methods for copper, zinc and iron quantification in mammalian cellsMet. Integr. Biometal Sci.201351336134510.1039/c3mt00136a23925479
+
+[320] 320.RichardsonC.E.R.NolanE.M.ShouldersM.D.LippardS.J.A sensitive, nonradioactive assay for zn(ii) uptake into metazoan cellsBiochemistry2018576807681510.1021/acs.biochem.8b0104330381945PMC6437758
+
+[321] 321.ChabosseauP.WoodierJ.CheungR.RutterG.A.Sensors for measuring subcellular zinc poolsMet. Integr. Biometal Sci.20181022923910.1039/C7MT00336F29431830

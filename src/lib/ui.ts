@@ -3,7 +3,7 @@ import { useSyncExternalStore } from "react";
 import type { Screen } from "./help";
 
 export type Tab = "home" | "products" | "recipes" | "shop" | "more";
-export type Page = null | "stats" | "family" | "rules" | "catalog" | "data" | "help" | "bug" | "about" | "beta" | "nutrition" | "appearance";
+export type Page = null | "stats" | "family" | "rules" | "catalog" | "data" | "help" | "bug" | "about" | "beta" | "nutrition" | "appearance" | "privacy";
 export type Sheet =
   | { kind: "add" }
   | { kind: "product"; id: string }
@@ -16,6 +16,10 @@ export type Sheet =
   | { kind: "steps"; id: string }
   | { kind: "overdue" }
   | { kind: "intro" }
+  | { kind: "news" }
+  | { kind: "consent"; which: import("./privacy").ConsentKind }
+  | { kind: "diary"; date?: string }
+  | { kind: "meal"; date: string; slot?: import("./types").MealSlot }
   | { kind: "revision" }
   | { kind: "receipt"; mode: "photo" | "text" }
   | { kind: "recipeNew"; mode?: "menu" | "text" | "photo" }
@@ -27,6 +31,7 @@ interface UI { tab: Tab; page: Page; sheets: Sheet[]; toast: Toast | null; updat
 let ui: UI = { tab: "home", page: null, sheets: [], toast: null, update: null, recipesView: "list" };
 const subs = new Set<() => void>();
 function set(p: Partial<UI>) { ui = { ...ui, ...p }; subs.forEach((f) => f()); }
+export const getUI = () => ui;
 export function useUI<T>(sel: (u: UI) => T): T {
   return useSyncExternalStore((cb) => { subs.add(cb); return () => subs.delete(cb); }, () => sel(ui));
 }

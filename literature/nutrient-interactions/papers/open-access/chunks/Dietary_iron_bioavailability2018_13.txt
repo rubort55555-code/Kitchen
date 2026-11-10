@@ -1,0 +1,23 @@
+Название: Dietary Iron Bioavailability: Agreement between Estimation Methods and Association with Serum Ferritin Concentrations in Women of Childbearing Age
+Авторы: Eduardo De Carli, Gisele Cristina Dias, Juliana Massami Morimoto, Dirce Maria Lobo Marchioni, Célia Colli
+Журнал: Nutrients, 2018
+DOI: https://doi.org/10.3390/nu10050650   PMID: 29883384   PMC: PMC5986529
+Лицензия: CC BY 4.0 (открытый доступ). © 2018 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 13 из 13: References (часть 3)
+============================================================
+
+[55] 55.ArmahS.M.CarriquiryA.L.ReddyM.B.Total Iron Bioavailability from the US Diet Is Lower Than the Current EstimateJ. Nutr.20151452617262110.3945/jn.115.21048426377760
+
+[56] 56.PerignonM.BarréT.GazanR.AmiotM.J.DarmonN.The bioavailability of iron, zinc, protein and vitamin A is highly variable in French individual diets: Impact on nutrient inadequacy assessment and relation with the animal-to-plant ratio of dietsFood Chem.2018238738110.1016/j.foodchem.2016.12.07028867104
+
+[57] 57.SubarA.F.FreedmanL.S.ToozeJ.A.KirkpatrickS.I.BousheyC.NeuhouserM.L.ThompsonF.E.PotischmanN.GuentherP.M.TarasukV.Addressing Current Criticism Regarding the Value of Self-Report Dietary DataJ. Nutr.20151452639264510.3945/jn.115.21963426468491PMC4656907
+
+[58] 58.Instituto Brasileiro de Geografia e Estatística (IBGE)Pesquisa de Orçamentos Familiares 2008–2009: Análise do Consumo Alimentar Pessoal No BrasilIBGERio de Janeiro, Brazil2011Available online: https://biblioteca.ibge.gov.br/visualizacao/livros/liv50063.pdf(accessed on 31 March 2018)
+
+[59] 59.Dos SantosQ.NilsonE.A.VerlyE.J.SichieriR.An evaluation of the effectiveness of the flour iron fortification programme in BrazilPublic Health Nutr.2015181670167410.1017/S136898001400205525222260PMC10271251
+
+[60] 60.De CarvalhoA.M.CésarC.L.FisbergR.M.MarchioniD.M.Meat Consumption in Sao Paulo—Brazil: Trend in the Last DecadePLoS ONE20149e9666710.1371/journal.pone.009666724792240PMC4008596
+
+[61] 61.RibeiroM.A.CominettiC.KakazuM.H.SarkisJ.E.DaintyJ.FoxT.E.CozzolinoS.M.Zinc absorption in Brazilian subjects fed a healthy mealJ. Hum. Nutr. Diet.20142731332010.1111/jhn.1211923634993

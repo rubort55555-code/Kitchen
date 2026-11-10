@@ -1,0 +1,11 @@
+Название: Calcium Absorption from Food Products: Food Matrix Effects
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu14010180   PMID: 35011055   PMC: PMC8746734
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 12 из 20: 6. Calcium Absorption from Foods (часть 5)
+============================================================
+
+Weaver et al. [80] studied the absorption of calcium from tofu fortified with calcium chloride and calcium sulfate in Caucasian and Asian populations. The results show that, in both studies, the calcium absorption from fortified tofu was similar to that of milk. In a study carried out by Martin et al. [112], bread fortified with calcium sulfate was tested for calcium absorption in comparison with bovine milk. Calcium absorption was determined in 18 healthy women who ingested a serving of bread containing 300 mg of calcium in a randomized crossover design using a cup of milk as control. It was found that calcium sulfate fortified bread was slightly better absorbed than milk (43.02 vs. 36.27%). Pak et al. [154] studied calcium absorption in orange juice fortified with either calcium citrate or calcium malate in 16 healthy individuals and found that calcium absorption was similar in both orange juices (40.1 vs. 40.6%). Furthermore, the absorption of calcium from calcium sulphate-fortified mineral water was investigated and found to be similar to that from bovine milk [111]. On the other hand, Hawthorne et al. [109] used an innovative strategy to increase calcium absorption in carrots, given their low calcium content. Biotechnology-modified carrots containing high levels of calcium have been developed. The results showed that the absorption of calcium from biotechnologically modified carrots was slightly lower than in milk, even though the portions of modified carrots were too large to be considered as a substitute source for milk.

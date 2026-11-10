@@ -1,0 +1,21 @@
+Название: Mechanisms of Carotenoid Intestinal Absorption: Where Do We Stand?
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2019
+DOI: https://doi.org/10.3390/nu11040838   PMID: 31013870   PMC: PMC6520933
+Лицензия: CC BY 4.0 (открытый доступ). © 2019 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 5 из 11: 3. Carotenoid Absorption through the Enterocyte (часть 2)
+============================================================
+
+No carotenoid carrier protein has clearly been identified in the human gut so far. However, the lutein-binding protein HR-LBP (Human Retinal Lutein-Binding Protein) present in the human retina cross-reacts with antibodies raised against a carotenoid-binding protein present in the Bombyx mori midgut [53], suggesting that it could be an intestinal intracellular transporter of xanthophylls [54]. As carotenoid membrane transporters SR-BI, CD36, and NPC1L1 can traffic in the enterocyte, especially after a fat load, we previously suggested that they may act as cytosolic carotenoid transporters [20]. However, this hypothesis still remains to be verified. Similarly, the association found between a genetic variant in the Intestinal Fatty-Acid Binding Protein (IFABP) and the fasting plasma lycopene concentrations in humans [55] still need to be challenged to assess whether IFABP is actually a carotenoid-carrier.
+
+Up to 40% of absorbed carotenoids remain unmetabolized [56]. β-carotene can be cleaved into retinal by a cytosolic enzyme, BCO1 (β-carotene oxygenase 1), via a one-step process in the enterocyte [57]. β-Carotene “low-converter” phenotypes, which have been reported in several clinical studies [58], are likely due to genetic variation in BCO1 gene. Other provitamin A carotenoids, such as β-crypthoxanthin, can be cleaved into retinal though a multi-step process involving both mitochondrial BCO2 (β-carotene oxygenase 2) and cytosolic BCO1 [59]. The produced retinal is subsequently converted into retinol and esterified into retinyl esters by the lecithin:retinol acyltransferase (LRAT) and probably by the diacylglycerol acyltransferase 1 (DGAT1) that displays an acyl-CoA:retinol acyltransferase activity [60,61]. Both provitamin A and nonprovitamin A carotenoids can also be cleaved asymmetrically in apocarotenoids by BCO2 [62]. However, a recent study showed that only traces of asymmetric [13C]-β-apo-carotenals were found in plasma after [13C]-β-carotene ingestion, suggesting a lack of significant postprandial intestinal BCO2 activity in healthy humans [63].
+
+No cis-trans isomerization of β-carotene was measured in intestinal cultured cells [26]. As cis-isomerization does not occur in the gastrointestinal lumen (see above), the site of the 9-cis isomerization of β-carotene reported in vivo [64] remain undetermined. Conversely, lycopene isomerization in cis-isomers was identified to occur at the enterocyte level [65].
+
+A summary of carotenoid transport pathways across the enterocyte is depicted in Figure 1.
+
+## 3.3. Secretion Through the Basolateral Membrane of the Enterocyte
+
+During the postprandial period, the major fraction of free carotenoids and retinyl esters originating from provitamin A carotenoid cleavage are packaged into chylomicrons (apoB-dependent pathway) that are secreted into the lymph to further join the bloodstream [20]. A non-apoB-dependent pathway (via high-density lipoproteins, HDL), mediated by the ABCA1 transporter, has been involved in vitamin E absorption [66] and possibly allows a part of free retinol absorption [20]. This HDL pathway may also exist for xanthophylls, such as lutein and zeaxanthin [67], but has not been proven to occur for other carotenoids. However, recent studies showed that several genetic variants in ABCA1 gene were associated with lycopene [68], β-carotene [69], and lutein [70] postprandial responses in healthy subjects. Thus, further research is needed to fully understand the contribution of the intestinal HDL pathway to carotenoid absorption in humans.

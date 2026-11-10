@@ -1,0 +1,17 @@
+Название: Dietary strategies for improving iron status: balancing safety and efficacy
+Авторы: Andrew M Prentice, Yery A Mendoza, Dora Pereira, Carla Cerami, Rita Wegmuller, Anne Constable, Jörg Spieldenner
+Журнал: Nutrition Reviews, 2016
+DOI: https://doi.org/10.1093/nutrit/nuw055   PMID: 27974599   PMC: PMC5155616
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2016. Published by Oxford University Press on behalf of the International Life Sciences Institute.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 15 из 15: Acknowledgments
+============================================================
+
+Y.A.M., A.C., and J.S. are employed by the Nestlé Research Centre, Lausanne, Switzerland.
+
+Funding. A.M.P., R.W., and C.C. are supported by grant MCA760-5QX00 from the Medical Research Council (MRC) International Nutrition Group by the UK Medical Research Council (MRC) and the UK Department for International Development (DFID) under the MRC/DFID Concordat agreement.
+
+D.P. is supported by a grant from the Bill & Melinda Gates Foundation’s Grand Challenges: New Interventions for Global Health program.
+
+Declaration of interest. A.M.P. has received honoraria and travel support from the Nestlé Nutrition Institute for teaching and conferences. He receives an honorarium as a member of the scientific advisory board of United for Healthier Kids (U4HK). D.P. is coholder of a patent for a novel iron compound.

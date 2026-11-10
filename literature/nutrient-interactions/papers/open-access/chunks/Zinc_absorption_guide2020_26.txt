@@ -1,0 +1,61 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 26 из 29: References (часть 9)
+============================================================
+
+[243] 243.JouM.Y.DuX.HotzC.LonnerdalB.Biofortification of rice with zinc: Assessment of the relative bioavailability of zinc in a caco-2 cell model and suckling rat pupsJ. Agric. Food Chem.2012603650365710.1021/jf202338t22428952
+
+[244] 244.ShahP.JoganiV.BagchiT.MisraA.Role of caco-2 cell monolayers in prediction of intestinal drug absorptionBiotechnol. Prog.20062218619810.1021/bp050208u16454510
+
+[245] 245.LaparraJ.M.BarberaR.AlegriaA.GlahnR.P.MillerD.D.Purified glycosaminoglycans from cooked haddock may enhance fe uptake via endocytosis in a caco-2 cell culture modelJ. Food Sci.200974H168H17310.1111/j.1750-3841.2009.01216.x19723201
+
+[246] 246.ReevesP.G.Briske-AndersonM.JohnsonL.Physiologic concentrations of zinc affect the kinetics of copper uptake and transport in the human intestinal cell model, caco-2J. Nutr.19981794180110.1093/jn/128.10.17949772151
+
+[247] 247.JovaniM.BarberaR.FarreR.AguileraE.M.D.Calcium, iron, and zinc uptake from digests of infant formulas by caco-2 cellsJ. Agric. Food Chem.2001493480348510.1021/jf010106t11453795
+
+[248] 248.CortiG.MaestrelliF.CirriM.ZerroukN.MuraP.Development and evaluation of an in vitro method for prediction of human drug absorption ii. Demonstration of the method suitabilityEur. J. Pharm. Sci.20062735436210.1016/j.ejps.2005.11.00516364612
+
+[249] 249.DelieF.WernerR.A human colonic cell line sharing similarities with enterocytes as a model to examine oral absorption: Advantages and limitations of the caco-2 modelCrit. Rev. Ther. Drug Carr. Syst.19971422128610.1615/CritRevTherDrugCarrierSyst.v14.i3.209282267
+
+[250] 250.PintoM.RobineleonS.AppayM.D.KedingerM.TriadouN.DussaulxE.LacroixB.SimonassmannP.HaffenK.FoghJ.Enterocyte-like differentiation and polarization of the human colon carcinoma cell-line caco-2 in cultureBiol. Cell198347323330
+
+[251] 251.SambuyY.de AngelisM.RanaldiG.ScarinoM.L.StammatiA.ZuccoF.The caco-2 cell line as a model for the intestinal barrier: Influence of cell and culture-related factors on caco-2 cell functional characteristicsCell Biol. Toxicol.20052112610.1007/s10565-005-0085-615868485
+
+[252] 252.HayeshiR.HilgendorfC.ArturssonP.AugustijnsP.BrodinB.DehertoghP.FisherK.FossatiL.HovenkampE.KorjamoT.Comparison of drug transporter gene expression and functionality in caco-2 cells from 10 different laboratoriesEur. J. Pharm. Sci.20083538339610.1016/j.ejps.2008.08.00418782614
+
+[253] 253.LichtensteinD.EbmeyerJ.KnappeP.JulingS.BohmertL.SelveS.NiemannB.BraeuningA.ThunemannA.F.LampenA.Impact of food components during in vitro digestion of silver nanoparticles on cellular uptake and cytotoxicity in intestinal cellsBiol. Chem.20153961255126410.1515/hsz-2015-014526040006
+
+[254] 254.MahlerG.J.ShulerM.L.GlahnR.P.Characterization of caco-2 and ht29-mtx cocultures in an in vitro digestion/cell culture model used to predict iron bioavailabilityJ. Nutr. Biochem.20092049450210.1016/j.jnutbio.2008.05.00618715773
+
+[255] 255.WelcomeM.O.Gastrointestinal Physiology—Development, Principles and Mechanisms of RegulationSpringer International PublishingCham, Switzerland2018
+
+[256] 256.Lozoya-AgulloI.AraújoF.González-ÁlvarezI.Merino-SanjuánM.González-ÁlvarezM.BermejoM.SarmentoB.Usefulness of caco-2/ht29-mtx and caco-2/ht29-mtx/raji b coculture models to predict intestinal and colonic permeability compared to caco-2 monocultureMol. Pharm.2017141264127010.1021/acs.molpharmaceut.6b0116528263609
+
+[257] 257.Van der FlierL.G.CleversH.Stem cells, self-renewal, and differentiation in the intestinal epitheliumAnnu. Rev. Physiol.20097124126010.1146/annurev.physiol.010908.16314518808327
+
+[258] 258.ChenQ.GuoL.DuF.ChenT.HouH.LiB.The chelating peptide (gpagphgppg) derived from alaska pollock skin enhances calcium, zinc and iron transport in caco-2 cellsInt. J. Food Sci. Technol.2017521283129010.1111/ijfs.13396
+
+[259] 259.SreenivasuluK.RaghuP.NairK.M.Polyphenol-rich beverages enhance zinc uptake and metallothionein expression in caco-2 cellsJ. Food Sci.201075H123H12810.1111/j.1750-3841.2010.01582.x20546406
+
+[260] 260.SreenivasuluK.RaghuP.RavinderP.NairK.M.Effect of dietary ligands and food matrices on zinc uptake in caco-2 cells: Implications in assessing zinc bioavailabilityJ. Agric. Food Chem.200856109671097210.1021/jf802060q18947232
+
+[261] 261.ChengZ.TakoE.YeungA.WelchR.M.GlahnR.P.Evaluation of metallothionein formation as a proxy for zinc absorption in an in vitro digestion/caco-2 cell culture modelFood Funct.2012373273610.1039/c2fo10232c22538397
+
+[262] 262.García-NebotM.J.AlegríaA.BarberáR.ClementeG.RomeroF.Does the addition of caseinophosphopeptides or milk improve zinc in vitro bioavailability in fruit beverages?Food Res. Int.2009421475148210.1016/j.foodres.2009.08.005
+
+[263] 263.CámaraF.BarberáR.AmaroM.A.FarréR.Calcium, iron, zinc and copper transport and uptake by caco-2 cells in school meals: Influence of protein and mineral interactionsFood Chem.20071001085109210.1016/j.foodchem.2005.11.010
+
+[264] 264.IyengarV.PullakhandamR.NairK.M.Dietary ligands as determinants of iron-zinc interactions at the absorptive enterocyteJ. Food Sci.201075H260H26410.1111/j.1750-3841.2010.01796.x21535504
+
+[265] 265.TupeR.S.AgteV.V.Effect of water soluble vitamins on zn transport of caco-2 cells and their implications under oxidative stress conditionsEur. J. Nutr.200949536110.1007/s00394-009-0048-419680705
+
+[266] 266.KimE.-Y.PaiT.-K.HanO.Effect of bioactive dietary polyphenols on zinc transport across the intestinal caco-2 cell monolayersJ. Agric. Food Chem.2011593606361210.1021/jf104260j21410257PMC3087602
+
+[267] 267.ViadelB.BarberáR.FarréR.Uptake and retention of calcium, iron, and zinc from raw legumes and the effect of cooking on lentils in caco-2 cellsNutr. Res.20062659159610.1016/j.nutres.2006.09.016
+
+[268] 268.SalunkeR.RawatN.TiwariV.K.NeelamK.RandhawaG.S.DhaliwalH.S.RoyP.Determination of bioavailable-zinc from biofortified wheat using a coupled in vitro digestion/caco-2 reporter-gene based assayJ. Food Compos. Anal.20122514915910.1016/j.jfca.2011.09.006

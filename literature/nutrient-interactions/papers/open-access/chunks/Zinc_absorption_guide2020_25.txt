@@ -1,0 +1,69 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 25 из 29: References (часть 8)
+============================================================
+
+[213] 213.GloverC.N.HogstrandC.In vivo characterisation of intestinal zinc uptake in freshwater rainbow troutJ. Exp. Biol.20022051411501181842010.1242/jeb.205.1.141
+
+[214] 214.LealJ.SmythH.D.C.GhoshD.Physicochemical properties of mucus and their impact on transmucosal drug deliveryInt. J. Pharm.201753255557210.1016/j.ijpharm.2017.09.01828917986PMC5744044
+
+[215] 215.McGuckinM.A.LindenS.K.SuttonP.FlorinT.H.Mucin dynamics and enteric pathogensNat. Rev. Microbiol.2011926527810.1038/nrmicro253821407243
+
+[216] 216.RudzkiZ.BakerR.J.DellerD.J.The iron-binding glycoprotein of human gastric juice. Ii. Nature of the interaction of the glycoprotein with ironDigestion19738536710.1159/0001973004776489
+
+[217] 217.CrowtherR.S.MarriottC.Counter-ion binding to mucus glycoproteinsJ. Pharm. Pharmacol.198436212610.1111/j.2042-7158.1984.tb02980.x6141258
+
+[218] 218.ConradM.E.UmbreitJ.N.MooreE.G.A role for mucin in the absorption of inorganic iron and other metal cations. A study in ratsGastroenterology199110012913610.1016/0016-5085(91)90592-91983814
+
+[219] 219.De DomenicoI.WardD.M.KaplanJ.Hepcidin regulation: Ironing out the detailsJ. Clin. Investig.20071171755175810.1172/JCI3270117607352PMC1904333
+
+[220] 220.HaaseH.HebelS.EngelhardtG.RinkL.The biochemical effects of extracellular zn(2+) and other metal ions are severely affected by their speciation in cell culture mediaMet. Integr. Biometal Sci.2015710211110.1039/C4MT00206G25360687
+
+[221] 221.BalW.SokołowskaM.KurowskaaE.FallerP.Binding of transition metal ions to albumin: Sites, affinities and ratesBiochim. Biophys. Acta201318305444545510.1016/j.bbagen.2013.06.01823811338
+
+[222] 222.MelounB.MorávekL.KostkaV.Complete amino acid sequence of human serum albuminFEBS Lett.19755813413710.1016/0014-5793(75)80242-01225573
+
+[223] 223.SmithK.T.FaillaM.L.CousinsR.J.Identification of albumin as the plasma carrier for zinc absorption by perfused rat intestineBiochem. J.197918462763310.1042/bj1840627540055PMC1161847
+
+[224] 224.WangX.ZhouB.Dietary zinc absorption: A play of zips and znts in the gutIubmb Life20106217618210.1002/iub.29120120011
+
+[225] 225.MooradianA.D.SongM.K.The intestinal zinc transport in aged ratsMech. Ageing Dev.19874118919710.1016/0047-6374(87)90039-X3123812
+
+[226] 226.SongM.K.MooradianA.D.Intestinal zinc transport: Influence of streptozotocin-induced diabetes, insulin and arachidonic acidLife Sci.19884268769410.1016/0024-3205(88)90460-23123834
+
+[227] 227.SongM.K.LeeD.B.AdhamN.F.Influence of prostaglandins on unidirectional zinc fluxes across the small intestine of the ratBr. J. Nutr.19885941742810.1079/BJN198800503165032
+
+[228] 228.SongM.K.KimY.Y.HengM.C.AdhamN.F.AmentM.E.Prostaglandin interacts with steroid sex hormones in the regulation of intestinal zinc transportComp. Biochem. Physiol. Comp. Physiol.199210147748110.1016/0300-9629(92)90497-E1348677
+
+[229] 229.BzikV.A.MedaniM.BairdA.W.WinterD.C.BraydenD.J.Mechanisms of action of zinc on rat intestinal epithelial electrogenic ion secretion: Insights into its antidiarrhoeal actionsJ. Pharm. Pharmacol.20126464465310.1111/j.2042-7158.2011.01441.x22471360
+
+[230] 230.CarlsonD.SehestedJ.PoulsenH.D.Zinc reduces the electrophysiological responses in vitro to basolateral receptor mediated secretagogues in piglet small intestinal epitheliumComp. Biochem. Physiol. A Mol. Integr. Physiol.200614451451910.1016/j.cbpa.2006.04.01916757198
+
+[231] 231.CarlsonD.PoulsenH.D.SehestedJ.Influence of weaning and effect of post weaning dietary zinc and copper on electrophysiological response to glucose, theophylline and 5-ht in piglet small intestinal mucosaComp. Biochem. Physiol. A Mol. Integr. Physiol.200413775776510.1016/j.cbpb.2004.02.01115123184
+
+[232] 232.TacnetF.WatkinsD.W.RipocheP.Studies of zinc transport into brush-border membrane-vesicles isolated from pig small-intestineBiochim. Biophys. Acta1990102432333010.1016/0005-2736(90)90361-Q2112950
+
+[233] 233.TacnetF.WatkinsD.W.RipocheP.Zinc binding in intestinal brush-border membrane isolated from pigBiochim. Biophys. Acta19911063515910.1016/0005-2736(91)90352-91901728
+
+[234] 234.SmithK.T.cousinsR.J.SilbonB.L.FaillaM.L.Zinc absorption and metabolism by isolated, vascularly perfused rat intestineJ. Nutr.19781081849185710.1093/jn/108.11.1849712429
+
+[235] 235.RusselM.W.S.BurchR.L.The Principles of Humane Experimental TechniqueMethuenLondon, UK1959
+
+[236] 236.FlecknellP.Replacement, reduction and refinementAltex200219737812098013
+
+[237] 237.WesterhoutJ.WortelboerH.VerhoeckxK.Ussing chamberThe Impact of Food Bioactives on Health: In Vitro and Ex Vivo ModelsVerhoeckxK.CotterP.López-ExpósitoI.KleivelandC.LeaT.MackieA.RequenaT.SwiateckaD.WichersH.Springer International PublishingCham, Switzerland201526327329787039
+
+[238] 238.FleetJ.C.TurnbullA.J.BourcierM.WoodR.J.Vitamine d-sensitive and quinacrine-sensitive zinc transport in human intestinal cell line caco-2Am. J. Physiol.1993264G1037G1045833353010.1152/ajpgi.1993.264.6.G1037
+
+[239] 239.ReevesP.G.Briske-AndersonM.JohnsonL.Pre-treatment of caco-2 cells with zinc during the differentiation phase alters the kinetics of zinc uptake and transportJ. Nutr. Biochem.20011267468410.1016/S0955-2863(01)00185-112031250
+
+[240] 240.HuangC.CuiX.SunX.YangJ.LiM.Zinc transporters are differentially expressed in human non-small cell lung cancerOncotarget20167669356694310.18632/oncotarget.1188427611948PMC5341848
+
+[241] 241.HuangD.ZhuoZ.FangS.YueM.FengJ.Different zinc sources have diverse impacts on gene expression of zinc absorption related transporters in intestinal porcine epithelial cellsBiol. Trace Elem. Res.201617332533210.1007/s12011-016-0655-x26994770
+
+[242] 242.GefellerE.M.BondzioA.AschenbachJ.R.MartensH.EinspanierR.ScharfenF.ZentekJ.PieperR.LodemannU.Regulation of intracellular zn homeostasis in two intestinal epithelial cell models at various maturation time pointsJ. Physiol. Sci.20156531732810.1007/s12576-015-0369-425757458PMC10717430

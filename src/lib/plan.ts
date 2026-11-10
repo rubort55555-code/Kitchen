@@ -1,7 +1,7 @@
 // Меню на день или неделю: дни, приёмы пищи, автозаполнение из своих рецептов, запрос к Claude.
 import type { PlanEntry, Recipe, Slot } from "./types";
 import { SLOTS } from "./types";
-import { getState, saveRecipes, setSettings } from "./store";
+import { getState, saveRecipes, setSettings, syncPlanMeal } from "./store";
 import { compileRules, checkRecipe } from "./exclusions";
 import { recipeStatus } from "./match";
 import { addDays, norm, parseYmd, uid, ymd } from "./util";
@@ -38,7 +38,11 @@ export function addEntry(date: string, slot: Slot, name: string, recipeId?: stri
   save([...planList().filter((e) => !(e.date === date && e.slot === slot)), { id: uid(), date, slot, name: name.trim(), recipeId }]);
 }
 export const removeEntry = (id: string) => save(planList().filter((e) => e.id !== id));
-export const toggleDone = (id: string) => save(planList().map((e) => (e.id === id ? { ...e, done: !e.done } : e)));
+export const toggleDone = (id: string) => {
+  const e = planList().find((x) => x.id === id);
+  save(planList().map((x) => (x.id === id ? { ...x, done: !x.done } : x)));
+  if (e) syncPlanMeal(e, !e.done); // отметка в меню ↔ запись в дневнике питания
+};
 export const restorePlan = (p: PlanEntry[]) => save(p);
 /** Убрать старые записи (старше 4 недель), чтобы список не рос бесконечно. */
 export function pruneOld() {

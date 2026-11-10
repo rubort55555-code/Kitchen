@@ -1,0 +1,39 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 3 из 19: 2. Methods
+============================================================
+
+This paper is based on literature searches in the PubMed and Google Scholar databases as well as literature references cited in published articles, review papers, and books on iron metabolism. Search terms included “iron absorption” and “iron absorption [AND] … name of the specific nutrient or compound”. Primarily, human studies on iron absorption have been included, but where necessary, some in vitro and animal studies have been included for the purpose of clarification.
+
+## 2.1. Dietary Iron Intake
+
+The composition of the diet concerning the content of iron and the content of inhibitors/promoters of iron absorption may have a significant influence on the development of clinically overt haemochromatosis.
+
+The recommended intake of dietary iron in healthy men in the Western World varies from 8 to 11 mg/day, depending on country-specific recommendations [18–20]. Danish men have a median dietary iron intake of 12.7 mg/day (10–90 percentile 8.3–18.0) [21], indicating that the majority have an intake which is above the recommended intake. In the USA, the “estimated” mean iron intake is even higher, 16.1 mg/day [22].
+
+In addition, men have a distinctly higher intake of meat [21, 23] and alcohol [21] than women, both factors, which increase iron uptake (see below) and the rate of body iron accumulation in men with genetic haemochromatosis.
+
+In healthy women of reproductive age, the recommended iron intake varies from 15 to18 mg/day [18–20]. A review of dietary iron intake in women in Europe has recently been published [24]. Danish women in the reproductive age have a median iron intake of 9.7 mg/day (5–95 percentile 5.6–14.5) [21, 24], indicating that all women have an intake below the recommended intake. In the USA, the “estimated” mean iron intake is higher, 12.3 mg/day [22].
+
+The majority of healthy women of reproductive age have an iron intake which is markedly below the recommended intake [24]. In addition, women of reproductive age have physiological iron losses by menstruations [25] and pregnancies [26], exerting an inhibitory effect on body iron accumulation in women with haemochromatosis, thereby delaying or preventing the onset of clinical disease.
+
+Although the HFE-mutations occur with the same frequencies in men and women, preclinical and clinical haemochromatosis is much more prevalent in men than in women and presents at a younger age in men compared to women [4]. This gender difference is partly explained by a higher dietary iron intake in men, combined with a higher intake of absorption promoters, e.g., meat and alcohol, compared to women.
+
+## 2.2. Different Forms of Dietary Iron
+
+An overview of the intestinal absorption of nonheme and heme iron is shown in Figure 1.
+
+Iron in the foods exists in two forms: (i) inorganic iron = nonheme iron consisting of mostly ferric iron (Fe3+) and some ferrous iron (Fe2+) and (ii) organic iron consisting of heme iron from animals and ferritin iron from animals and plants. Most iron in the foods consists of inorganic ferric iron, which is chemically relatively inactive. Ferric iron must be reduced to ferrous iron either by gastric acid pH, reducing components in the meal, or by the ferric reductase enzyme duodenal cytochrome b, which catalyzes the reduction of Fe³⁺ to Fe2⁺, before the ferrous iron can be taken up in the enterocytes by the protein dimetal transporter-1 (DMT-1) pathway [28]. Ferric iron may be taken up by the mucin-beta3-integrin-mobilferrin pathway (IMP) [29], but the relative physiological and nutritional importance of the IMP compared with the DMT-1 pathway in the absorption of iron in humans is not known.
+
+Heme iron, which is ferrous iron present in haemoglobin in the red blood cells and myoglobin in the myocytes, is absorbed within the intact protoporphyrin molecule threefold to fourfold more efficiently than inorganic ferric iron. Heme iron absorption is relatively independent of the effects of various promoters/inhibitors of iron absorption in the food matrix (except for calcium, see below) [30].
+
+The ferric iron contained in the ferritin molecule, i.e., “ferritin iron” from animal and plant foods, is released from the ferritin shell by the gastric acid pH as well as by cooking. It enters the common nonheme iron pool in the meal and is absorbed as other nonheme iron compounds [31, 32].
+
+## 2.3. Promoters and Inhibitors of Iron Absorption
+
+Table 1 gives an overview of the principal known promoters and inhibitors of food iron absorption. When giving dietary recommendations to patients with haemochromatosis, it is essential to emphasize that promoters and inhibitors of iron uptake must be ingested in the same meal as the food iron, in order to exert their effects.

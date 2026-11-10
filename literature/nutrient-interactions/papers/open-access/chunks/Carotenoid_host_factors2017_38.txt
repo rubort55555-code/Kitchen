@@ -1,0 +1,53 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 38 из 39: References (часть 12)
+============================================================
+
+[273] 273 Haller, J. , The vitamin status and its adequacy in the elderly: an international overview. Int. J. Vitam. Nutr. Res. 1999, 69, 160–168.1038902210.1024/0300-9831.69.3.160
+
+[274] 274 Suzuki, K. , Inoue, T. , Hioki, R. , Ochiai, J. et al., Association of abdominal obesity with decreased serum levels of carotenoids in a healthy Japanese population. Clin. Nutr. 2006, 25, 780–789.1669814610.1016/j.clnu.2006.01.025
+
+[275] 275 Sanderson, M. J. , White, K. L. , Drake, I. M. , Schorah, C. J. , Vitamin E and carotenoids in gastric biopsies: the relation to plasma concentrations in patients with and without Helicobacter pylori gastritis. Am. J. Clin. Nutr. 1997, 65, 101–106.898892010.1093/ajcn/65.1.101
+
+[276] 276 Friis, H. , Gomo, E. , Koestel, P. , Ndhlovu, P. et al., HIV and other predictors of serum beta‐carotene and retinol in pregnancy: a cross‐sectional study in Zimbabwe. Am. J. Clin. Nutr. 2001, 73, 1058–1065.1138266010.1093/ajcn/73.6.1058
+
+[277] 277 Ford, E. S. , Will, J. C. , Bowman, B. A. , Narayan, K. M. , Diabetes mellitus and serum carotenoids: findings from the Third National Health and Nutrition Examination Survey. Am. J. Epidemiol. 1999, 149, 168–176.992196210.1093/oxfordjournals.aje.a009783
+
+[278] 278 Sundl, I. , Pail, E. , Mellitzer, K. , Toplak, H. et al., Effects of orlistat therapy on plasma concentrations of oxygenated and hydrocarbon carotenoids. Lipids 2006, 41, 113–118.1770797610.1007/s11745-006-5078-6
+
+[279] 279 Finer, N. , James, W. P. , Kopelman, P. G. , Lean, M. E. et al., One‐year treatment of obesity: a randomized, double‐blind, placebo‐controlled, multicentre study of orlistat, a gastrointestinal lipase inhibitor. Int. J. Obes. Relat. Metab. Disord. 2000, 24, 306–313.1075762310.1038/sj.ijo.0801128
+
+[280] 280 Das, B. S. , Thurnham, D. I. , Das, D. B. , Plasma alpha‐tocopherol, retinol, and carotenoids in children with falciparum malaria. Am. J. Clin. Nutr. 1996, 64, 94–100.866942110.1093/ajcn/64.1.94
+
+[281] 281 Ford, E. S. , Gillespie, C. , Ballew, C. , Sowell, A. et al., Serum carotenoid concentrations in US children and adolescents. Am. J. Clin. Nutr. 2002, 76, 818–827.1232429610.1093/ajcn/76.4.818
+
+[282] 282 Neuhouser, M. L. , Rock, C. L. , Eldridge, A. L. , Kristal, A. R. et al., Serum concentrations of retinol, alpha‐tocopherol and the carotenoids are influenced by diet, race and obesity in a sample of healthy adolescents. J. Nutr. 2001, 131, 2184–2191.1148141510.1093/jn/131.8.2184
+
+[283] 283 Walmsley, C. M. , Bates, C. J. , Prentice, A. , Cole, T. J. , Relationship between cigarette smoking and nutrient intakes and blood status indices of older people living in the UK: further analysis of data from the National Diet and Nutrition Survey of people aged 65 years and over, 1994/95. Public Health Nutr. 1999, 2, 199–208.1044724810.1017/s1368980099000257
+
+[284] 284 Forman, M. R. , Borkowf, C. B. , Cantwell, M. M. , Steck, S. et al., Components of variation in serum carotenoid concentrations: the Polyp Prevention Trial. Eur. J. Clin. Nutr. 2009, 63, 763–770.1841450410.1038/ejcn.2008.26PMC6959512
+
+[285] 285 Cohn, W. , Thurmann, P. , Tenter, U. , Aebischer, C. et al., Comparative multiple dose plasma kinetics of lycopene administered in tomato juice, tomato soup or lycopene tablets. Eur. J. Nutr. 2004, 43, 304–312.1530945110.1007/s00394-004-0476-0
+
+[286] 286 Cardinault, N. , Gorrand, J. M. , Tyssandier, V. , Grolier, P. et al., Short‐term supplementation with lutein affects biomarkers of lutein status similarly in young and elderly subjects. Exp. Gerontol. 2003, 38, 573–582.1274253510.1016/s0531-5565(03)00039-1
+
+[287] 287 Borel, P. , Grolier, P. , Mekki, N. , Boirie, Y. et al., Low and high responders to pharmacological doses of beta‐carotene: proportion in the population, mechanisms involved and consequences on beta‐carotene metabolism. J. Lipid. Res. 1998, 39, 2250–2260.9799811
+
+[288] 288 Bohn, T. , Blackwood, M. , Francis, D. , Tian, Q. et al., Bioavailability of phytochemical constituents from a novel soy fortified lycopene rich tomato juice developed for targeted cancer prevention trials. Nutr. Cancer 2013, 65, 919–929.2209822410.1080/01635581.2011.630156PMC3850031
+
+[289] 289 Richelle, M. , Lambelet, P. , Rytz, A. , Tavazzi, I. et al., The proportion of lycopene isomers in human plasma is modulated by lycopene isomer profile in the meal but not by lycopene preparation. Br. J. Nutr. 2012, 107, 1482–1488.2190285910.1017/S0007114511004569
+
+[290] 290 Unlu, N. Z. , Bohn, T. , Clinton, S. K. , Schwartz, S. J. , Carotenoid absorption from salad and salsa by humans is enhanced by the addition of avocado or avocado oil. J. Nutr. 2005, 135, 431–436.1573507410.1093/jn/135.3.431
+
+[291] 291 Pappalardo, G. , Maiani, G. , Mobarhan, S. , Guadalaxara, A. et al., Plasma (carotenoids, retinol, alpha‐tocopherol) and tissue (carotenoids) levels after supplementation with beta‐carotene in subjects with precancerous and cancerous lesions of sigmoid colon. Eur. J. Clin. Nutr. 1997, 51, 661–666.934728510.1038/sj.ejcn.1600457
+
+[292] 292 Boon, C. S. , McClements, D. J. , Weiss, J. , Decker, E. A. , Factors influencing the chemical stability of carotenoids in foods. Crit. Rev. Food Sci. Nutr. 2010, 50, 515–532.2054444210.1080/10408390802565889
+
+[293] 293 Couet, C. , Ulmer M Fau ‐ Hamdaoui, M. , Hamdaoui M Fau ‐ Bau, H. M. , Bau Hm Fau ‐ Debry, G. et al., Metabolic effects of acarbose in young healthy men. Eur. J. Clin. Nutr. 1989, 43, 187–196.2659314
+
+[294] 294 McKay, G. J. , Loane, E. , Nolan, J. M. , Patterson, C. C. et al., Investigation of genetic variation in scavenger receptor class B, member 1 (SCARB1) and association with serum carotenoids. Ophthalmology 2013, 120, 1632–1640.2356230210.1016/j.ophtha.2013.01.030PMC3946979

@@ -1,0 +1,11 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 4 из 29: 2. Zinc Homeostasis and Its Role in Human Health (часть 2)
+============================================================
+
+According to the World Health Organization (WHO), one-third of the world’s population are at risk for zinc deficiency [49]. The lack of a suitable biomarker for physiological zinc status, and, thus, a low possibility to recognize insufficient zinc absorption, particularly in the early stages of a mild zinc deficiency, is a major obstacle in this situation [16,50]. An imbalanced zinc status or deficiency of this micronutrient is associated with severe health consequences (Figure 1), which causes high morbidity. Zinc excess, on the other hand, is mainly associated with disturbed copper homeostasis (reviewed in detail in Reference [16]). Symptoms of zinc deficiency are reversible [16,51,52,53]. In most cases, zinc supplementation in addition to dietary zinc provides a convenient option to compensate for inadequate zinc intake, malabsorption, or increased zinc loss due to intestinal diseases [54,55,56].

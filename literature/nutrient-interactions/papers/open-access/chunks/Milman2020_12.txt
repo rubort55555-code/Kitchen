@@ -1,0 +1,21 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 12 из 19: 5. Discussion (часть 2)
+============================================================
+
+These dietary premises are best fulfilled by a predominantly plant-based, vegetarian diet, which also contains milk products, eggs, and fish meat—a “vegetarian-lacto-ovo-pescetarian” diet [149]. The dietary advices should be implemented as soon as the diagnosis of haemochromatosis has been confirmed. It is difficult to evaluate the dietary effect in the induction phase, and most dietary studies have therefore evaluated the effect in the maintenance phase [3]. However, in the induction phase, the frequent phlebotomies, rapidly diminishing iron overload, probably has a strong stimulating effect on iron absorption, which is an argument for early dietary intervention. In healthy persons, the maximal erythropoietic response to phlebotomy-induced anemia is a 200% increase over basal erythropoietic rate [150]. In haemochromatosis patients, the erythropoiesis works in a normal way and most patients regain their habitual haemoglobin level in a few weeks.
+
+By each phlebotomy of 400–500 ml whole blood, approximately 130–140 g of protein is lost from the body. This is equivalent to two-day needs for protein [19]. The protein loss is highest in the induction phase of the treatment with weekly phlebotomies. It is therefore important to consume adequate protein—preferably from milk, whey, eggs, and protein-rich plants, e.g., soya beans, as the proteins from these nutrients by themselves inhibit iron uptake. The consumption of animal protein should be restricted and preferably be from fish and young poultry with a relatively low content of heme iron [149].
+
+In healthy subjects, the composition of the diet and body iron status are the two main factors determining iron bioavailability and absorption. The bioavailability factor is usually estimated in relation to “reference subjects” with low or no body iron reserves [151]. In haemochromatosis, due to the dysregulation of iron absorption, which is permanently upregulated, being by and large independent of body iron stores, the patients are therefore in a state mimicking a continuous marked “iron deficiency” or “iron craving,” which will tend to obtain maximum iron availability from almost any diet.
+
+The prediction of iron bioavailability using algorithms in healthy individuals can only predict high, medium, and low bioavailability [151, 152]. The bioavailability of iron from Western-type diets is, on average, 15% with a range of 14–17%. Iron in diets with little meat (50–100 g/day), occasionally with fruit or vegetables consumed with the main meals, and more whole-grain cereals, is 10–12% bioavailable. Vegetarian diets have the lowest bioavailability ranging from 5 to 12% [17]. Although dietary habits in Western countries have changed somewhat since the 1990s, the overall dietary iron intake in women and men in Europe has been quite constant from the 1990s until now [24].
+
+Another aspect of dietary modulation could be to supplement the main meals with some of the known natural inhibitors of iron absorption in balanced amounts, e.g., specific phytates, specific polyphenols, or specific calcium compounds or alternatively artificial nonabsorbable food iron chelators. These dietary approaches have not been investigated.
+
+Finally, it must be emphasized that dietary intervention should be implemented on a voluntary basis, after targeted dietary counselling and education of the patient.

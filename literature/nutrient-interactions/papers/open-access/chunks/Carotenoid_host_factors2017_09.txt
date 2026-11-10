@@ -1,0 +1,95 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 9 из 39: Host factors influencing digestion aspects – from matrix release to bioaccessibility (часть 4)
+============================================================
+
+ | APOA4 | Ser‐347 | Lycopened | Chylomicron protein | 103
+
+ | APOE | ɛ4 | AMD | Chylomicron protein | 295
+
+ | APOB | rs1042031 | β‐carotenec, lycopenec | Protein of LDL, VLDL, chylomicrons | 32, 73
+
+ |  | rs4643493 | β‐carotenec |  | 32
+
+ |  | rs35364714 | β‐carotenec |  | 32
+
+ |  | rs2854725 | Luteinc |  | 14
+
+ |  | 516 | β‐carotened |  | 103
+
+ |  | 516 | Lycopened |  | 103
+
+ | LDLR | rs6511720 | Tocopherol | Lipoprotein receptor | 104
+
+ | LIPC | rs1869138 | β‐carotenec | Hepatic lipase | 32
+
+ |  | rs11857380 | β‐carotenec |  | 32
+
+ |  | rs12185072 | β‐carotenec |  | 32
+
+ |  | rs12591216 | Luteinc |  | 14
+
+ |  | rs12593880 | Luteinc |  | 14
+
+ |  | rs8035357 | Lycopenec |  | 73
+
+ |  | rs12914035 | Lycopenec |  | 73
+
+ |  | rs493258 | Zeaxanthind |  | 299
+
+ |  | rs493258 | Luteind |  | 299
+
+ |  | HL C‐480T | α‐,β‐carotene |  | 103
+
+ | CYP26B1 | rs2241057 | Retinol | Degradation of retinol | 182
+
+ | CETP | rs708272 | Lutein/zeaxanthind | Cholesteryl and perhaps carotenoids ester transfer | 295
+
+Tissue | GSTP1 | Pi (isoform) | Lutein/zeaxanthin | Uptake into retina | 300
+
+incorporation | STARD3 | rs9892427 | Lutein/zeaxanthind | Lipid transfer, binding to retina | 295
+
+ | RPE65 | rs12139131 | β‐carotenec |  | 32
+
+ |  | rs4926340 | β‐carotenec |  | 32
+
+ |  | rs1924546 | Luteinc |  | 14
+
+ |  | rs12744671 | Lutein/zeaxanthind |  | 295
+
+Other functions | SOD2 | rs2501175 | β‐carotenec | Antioxidant enzyme | 32
+
+ |  | rs9365046 | Lycopenec |  | 73
+
+ | COBLL1 | rs3769877 | Luteinc | Insulin metabolism | 14
+
+ | CXCL8 | rs1247620 | β ‐carotenec | IL‐8 precursor | 32
+
+ |  | rs1358594 | β ‐carotenec |  | 32
+
+ |  | rs6834586 | β‐carotenec |  | 32
+
+ | TCF7L2 | rs946199 | β‐carotenec | Transcription factor related to diabetes | 32
+
+ | PKD1L2 | rs8043708 | β‐carotenec | Related to pore channels? | 32
+
+ |  | rs12596941 | Luteinc | Ion channel? | 14
+
+ |  | rs935933 | Lycopenec |  | 73
+
+ | MC4R | rs11873337 | Luteinc | Obesity | 14
+
+ | IRS1 | rs2178704 | Luteinc | Signal transduction | 14
+
+ |  | rs1316328 | Luteinc |  | 14
+
+ | SETD7 | rs7680948 | Lycopened | Insulin metabolism, inflammation | 296
+
+Carboxyl‐ester lipase (CEL), also termed cholesterol‐esterase, typically cleaves cholesterol esters in the gut, and its ability to cleave carotenoid esters, such as of lutein, present in many leafy vegetables, has been controversially discussed 75. At least five types of CEL are known, though human carboxylesterases CES1 and CES2 may play the most important role during digestion 76. These are situated on the gut mucosa (brush border enzymes), and have shown to cleave carotenoid esters 77. Its origin (pancreatic vs. enterocyte) remains somewhat unclear. However, this cleavage is expected to influence bioavailability, as the more apolar esters are characterized by lower micellization efficiency and absorption than the cleaved carotenoids 78. In fact, in plasma and circulating chylomicrons, free xanthophylls are almost exclusively found, suggesting that cleavage is in fact quite complete 79, though reduced absorption of the esters could play a role. A number of SNPs have been described in humans for CES1 and CES2 80, though not in relation to carotenoid or lipophilic phytochemical/micronutrient metabolism.
+
+Certain diseases such as pancreatitis may also result in lower secretion of digestion enzymes 81. Also during older age reduction of lipid absorption has been reported, perhaps also due to reduced epithelial surface 82, which may thus be expected to correlate with lower carotenoid absorption, as suggested by some, though not all studies (Table 1).

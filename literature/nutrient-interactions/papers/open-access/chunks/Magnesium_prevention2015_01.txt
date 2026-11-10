@@ -1,0 +1,11 @@
+Название: Magnesium in Prevention and Therapy
+Авторы: Uwe Gröber, Joachim Schmidt, Klaus Kisters
+Журнал: Nutrients, 2015
+DOI: https://doi.org/10.3390/nu7095388   PMID: 26404370   PMC: PMC4586582
+Лицензия: CC BY 4.0 (открытый доступ). © 2015 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 23: Abstract
+============================================================
+
+Magnesium is the fourth most abundant mineral in the body. It has been recognized as a cofactor for more than 300 enzymatic reactions, where it is crucial for adenosine triphosphate (ATP) metabolism. Magnesium is required for DNA and RNA synthesis, reproduction, and protein synthesis. Moreover, magnesium is essential for the regulation of muscular contraction, blood pressure, insulin metabolism, cardiac excitability, vasomotor tone, nerve transmission and neuromuscular conduction. Imbalances in magnesium status—primarily hypomagnesemia as it is seen more common than hypermagnesemia—might result in unwanted neuromuscular, cardiac or nervous disorders. Based on magnesium’s many functions within the human body, it plays an important role in prevention and treatment of many diseases. Low levels of magnesium have been associated with a number of chronic diseases, such as Alzheimer’s disease, insulin resistance and type-2 diabetes mellitus, hypertension, cardiovascular disease (e.g., stroke), migraine headaches, and attention deficit hyperactivity disorder (ADHD).

@@ -1,0 +1,37 @@
+Название: Iron Absorption: Factors, Limitations, and Improvement Methods
+Авторы: Elif Piskin, Danila Cianciosi, Sukru Gulec, Merve Tomas, Esra Capanoglu
+Журнал: ACS Omega, 2022
+DOI: https://doi.org/10.1021/acsomega.2c01833   PMID: 35755397   PMC: PMC9219084
+Лицензия: CC BY 4.0 (открытый доступ). © 2022 The Authors. Published by American Chemical Society
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 7 из 16: Dietary Factors Affecting Iron Bioavailability (часть 2)
+============================================================
+
+in vivo | calcium/100 and 200 mg | 788 children aged 6–11 years | As the ascorbic acid and calcium did not exist, iron absorption from the casein/whey-based drink was 20% lower in iron-repleted children than the ones with IDA. | (97)
+
+Calcium addition decreased the mean iron absorption by 18–27%.
+
+in vivo | calcium/500 mg | 13 premenopausal women with pre-existing marginal Fe status aged 28–35 years | Iron absorption from a single meal was reduced from 10.2% to 4.8%. | (95)
+
+The extent of the calcium impact differed significantly across subjects having similar iron stores.
+
+in vitro | proteins/30 g | simulated gastrointestinal digestion | Iron absorption decreased by the substitution of casein or whey protein for egg white. Mean absorption values fell from 6.67 to 3.65% and 2.53 to 0.98%, respectively. | (122)
+
+in vivo | proteins/30 g | 15 men and 19 women ranging in age from 18 to 45 years | Iron absorption of completely dephytinized glycinin was found to be 124% compared to egg white; however, relative absorption of completely dephytinized conglycinin was only 44%. Conglycinin fraction of soybean proteins was reported to be an inhibitor of iron absorption. | (105)
+
+in vivo | prebiotic/4% of the diet | 40 female albino rats (ten-week-old) | Yogurt containing long-chain inulin was more effective for iron absorption than yogurt containing short-chain inulin. | (111)
+
+Fe2(SO4)3 and long-chain inulin fortified yogurt increased the iron bioavailability. In addition, liver function and the antioxidant capacity were improved.
+
+in vivo | prebiotic/- | 24 healthy women aged 35–45 years | No significant differences were observed in heme and nonheme iron bioavailability in the control group. | (109)
+
+Bioavailability of heme iron from the prebiotic group increased significantly by 56% after prebiotic intake.
+
+No significant differences were observed in nonheme iron bioavailability.
+
+in vivo | prebiotic/∼20 g | 36 nonpregnant, nonlactating women with low iron status, aged between 18 and 40 years and with a body weight <65 kg | Inulin enhanced the iron absorption by 14% which was statistically insignificant. | (110)
+
+The presence of ascorbic acid in the diet increases the absorption of nonheme iron.47 Ascorbic acid aids iron absorption by creating a chelate with ferric iron Fe3+ at a stomach acid pH that stays soluble at the alkaline pH of the duodenum, the first section of the small intestine.48 In addition, ascorbate, ascorbic acid salt, donates an electron, acting as a free radical scavenger and reducing iron oxidation states to Fe2+, which is the only bioavailable form for enterocyte cells.49 Fe2+ is the only iron that can be absorbed through iron transporters of intestinal enterocyte cells.11 To date, numerous in vivo and in vitro cell culture studies on the effect of ascorbic acid on iron absorption have been reported. Recently, Khoja et al. reported that when ascorbic acid was added into the digesta of plant products (fenugreek sprouts, fenugreek seeds, baobab fruit pulp, and moringa leaves) ascorbic acid enhanced iron absorption in the Caco-2 cell culture model.50 He et al. used an in vitro digestion/Caco-2 cell model to investigate the effects of phytic acid, sodium oxalate, and sodium silicate on nonheme iron bioavailability in the presence and absence of ascorbic acid. The findings revealed that phytic acid, sodium oxalate, and sodium silicate restrict ferrous iron absorption, but ascorbic acid can counteract this inhibitory impact and enhance ferrous iron uptake.51 Similar results were obtained by Villano et al.52 who showed that ascorbic acid can resist to the inhibitory effect of polyphenols.
+
+The effect of vitamin C has been proven to be dose dependent53,54 and can increase the absorption of iron only when both nutrients are consumed together.55 It has been reported that iron absorption gradually increases from 0.8% to 7.1% when increasing amounts of ascorbic acid, ranging from 25 to 1000 mg, are added to a liquid formula meal containing 4.1 mg of nonheme iron. Moreover, it also has been reported that although 500 mg of ascorbic acid taken with food increases the absorption of iron six times ascorbic acid taken 4–8 h before is less effective.56 In this sense, incorporation of ascorbic acid into the diet may seem effective for higher intake of iron; however, besides the technical difficulties during the preparation and storage due to the instability of ascorbic acid,47 studies have proven that the addition of ascorbic acid to the whole diet has a more negligible effect on increasing iron absorption.57−60 In this sense, the impact of meal composition and the whole food matrix in the diet may influence ascorbic acid and may explain the dramatic improvements in iron absorption.

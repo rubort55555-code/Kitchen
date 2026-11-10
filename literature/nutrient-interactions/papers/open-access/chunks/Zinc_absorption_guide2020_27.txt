@@ -1,0 +1,59 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 27 из 29: References (часть 10)
+============================================================
+
+[269] 269.KrugerJ.TaylorJ.R.N.DuX.De MouraF.F.LönnerdalB.OelofseA.Effect of phytate reduction of sorghum, through genetic modification, on iron and zinc availability as assessed by an in vitro dialysability bioaccessibility assay, caco-2 cell uptake assay, and suckling rat pup absorption modelFood Chem.20131411019102510.1016/j.foodchem.2013.01.10523790881
+
+[270] 270.HanO.FaillaM.L.HillA.D.MorrisE.R.SmithJ.C.Jr.Inositol phosphates inhibit uptake and transport of iron and zinc by a human intestinal cell lineJ. Nutr.199412458058710.1093/jn/124.4.5808145081
+
+[271] 271.FrontelaC.Effect of dephytinization on bioavailability of iron, calcium and zinc from infant cereals assessed in the caco-2 cell modelWorld J. Gastroenterol.200915197710.3748/wjg.15.197719399930PMC2675088
+
+[272] 272.FrontelaC.RosG.MartínezC.Phytic acid content and “in vitro” iron, calcium and zinc bioavailability in bakery products: The effect of processingJ. Cereal Sci.20115417317910.1016/j.jcs.2011.02.015
+
+[273] 273.ZemannN.ZemannA.KleinP.ElmadfaI.HuettingerM.Differentiation- and polarization-dependent zinc tolerance in caco-2 cellsEur. J. Nutr.20115037938610.1007/s00394-010-0146-321103883
+
+[274] 274.JacksonK.A.ValentineR.A.McKayJ.A.SwanD.C.MathersJ.C.FordD.Analysis of differential gene-regulatory responses to zinc in human intestinal and placental cell linesBr. J. Nutr.20091011474148310.1017/S000711450809463418947441
+
+[275] 275.LodemannU.GefellerE.M.AschenbachJ.R.MartensH.EinspanierR.BondzioA.Dose effects of apical versus basolateral zinc supplementation on epithelial resistance, viability, and metallothionein expression in two intestinal epithelial cell linesJ. Biochem. Mol. Toxicol.20152941041710.1002/jbt.2171025895165
+
+[276] 276.ShenH.QinH.GuoJ.Cooperation of metallothionein and zinc transporters for regulating zinc homeostasis in human intestinal caco-2 cellsNutr. Res.20082840641310.1016/j.nutres.2008.02.01119083439
+
+[277] 277.WangX.ValenzanoM.C.MercadoJ.M.ZurbachE.P.MullinJ.M.Zinc supplementation modifies tight junctions and alters barrier function of caco-2 human intestinal epithelial layersDig. Dis. Sci.201258778710.1007/s10620-012-2328-822903217
+
+[278] 278.PieriM.ChristianH.C.WilkinsR.J.BoydC.A.MeredithD.The apical (hpept1) and basolateral peptide transport systems of caco-2 cells are regulated by amp-activated protein kinaseAm. J. Physiol. Gastrointest. Liver Physiol.2010299G136G14310.1152/ajpgi.00014.201020430871PMC2904111
+
+[279] 279.HardymanJ.E.TysonJ.JacksonK.A.AldridgeC.CockellS.J.WakelingL.A.ValentineR.A.FordD.Zinc sensing by metal-responsive transcription factor 1 (mtf1) controls metallothionein and znt1 expression to buffer the sensitivity of the transcriptome response to zincMet. Integr. Biometal Sci.2016833734310.1039/C5MT00305A26824222
+
+[280] 280.MichalczykA.A.AcklandM.L.Hzip1 (hslc39a1) regulates zinc homoeostasis in gut epithelial cellsGenes Nutr.2013847548610.1007/s12263-013-0332-z23378263PMC3755131
+
+[281] 281.HuangD.HuQ.FangS.FengJ.Dosage effect of zinc glycine chelate on zinc metabolism and gene expression of zinc transporter in intestinal segments on ratBiol. Trace Elem. Res.201617136337010.1007/s12011-015-0535-926507438
+
+[282] 282.LodemannU.EinspanierR.ScharfenF.MartensH.BondzioA.Effects of zinc on epithelial barrier properties and viability in a human and a porcine intestinal cell culture modelToxicol. Vitr. Int. J. Publ. Assoc. Bibra20132783484310.1016/j.tiv.2012.12.01923274768
+
+[283] 283.MartinL.LodemannU.BondzioA.GefellerE.M.VahjenW.AschenbachJ.R.ZentekJ.PieperR.A high amount of dietary zinc changes the expression of zinc transporters and metallothionein in jejunal epithelial cells in vitro and in vivo but does not prevent zinc accumulation in jejunal tissue of pigletsJ. Nutr.20131431205121010.3945/jn.113.17788123761649
+
+[284] 284.ZakrzewskiS.S.RichterJ.F.KrugS.M.JebautzkeB.LeeI.-F.M.RiegerJ.SachtlebenM.BondzioA.SchulzkeJ.D.FrommM.Improved cell line ipec-j2, characterized as a model for porcine jejunal epitheliumPLoS ONE20138e7964310.1371/journal.pone.007964324260272PMC3829867
+
+[285] 285.NossolC.Barta-BoszormenyiA.KahlertS.ZuschratterW.Faber-ZuschratterH.ReinhardtN.PonsuksiliS.WimmersK.DiesingA.K.RothkotterH.J.Comparing two intestinal porcine epithelial cell lines (ipecs): Morphological differentiation, function and metabolismPLoS ONE201510e013232310.1371/journal.pone.013232326147118PMC4493080
+
+[286] 286.VergauwenH.The ipec-j2 cell lineThe Impact of Food Bioactives on Health: In Vitro and Ex Vivo ModelsVerhoeckxK.CotterP.López-ExpósitoI.KleivelandC.LeaT.MackieA.RequenaT.SwiateckaD.WichersH.Springer International PublishingCham, Switzerland201512513429787039
+
+[287] 287.OlligJ.KloubertV.WeßelsI.HaaseH.RinkL.Parameters influencing zinc in experimental systems in vivo and in vitroMetals201667110.3390/met6030071
+
+[288] 288.KennethV.H.JohnA.S.WalterC.Fetal bovine serum: A multivariate standardProc. Soc. Exp. Biol. Med.1975149344347115340810.3181/00379727-149-38804
+
+[289] 289.ZhengX.BakerH.HancockW.S.FawazF.McCamanM.PungorE.Proteomic analysis for the assessment of different lots of fetal bovine serum as a raw material for cell culture. Part iv. Application of proteomics to the manufacture of biological drugsBiotechnol. Prog.2006221294130010.1021/bp060121o17022666
+
+[290] 290.GstraunthalerG.Alternatives to the use of fetal bovine serum: Serum-free cell cultureAltex20032027528114671707
+
+[291] 291.PattisonS.E.CousinsR.J.Kinetics of zinc uptake and exchange by primary cultures of rat hepatocytesAm. J. Physiol. Endocrinol. Metab.1986250E677E68510.1152/ajpendo.1986.250.6.E6773087217
+
+[292] 292.GalvezM.MorenoJ.A.EloseguiL.M.EscaneroJ.F.Zinc uptake by human erythrocytes with and without serum albumins in the mediumBiol. Trace Elem. Res.200184455610.1385/BTER:84:1-3:04511817695
+
+[293] 293.MesserH.H.MurrayE.J.GoebelN.K.Removal of trace metals from culture media and sera for in vitro deficiency studiesJ. Nutr.198211265265710.1093/jn/112.4.6527069507

@@ -1,0 +1,63 @@
+Название: Vitamin E Bioavailability: Mechanisms of Intestinal Absorption in the Spotlight
+Авторы: Emmanuelle Reboul
+Журнал: Antioxidants, 2017
+DOI: https://doi.org/10.3390/antiox6040095   PMID: 29165370   PMC: PMC5745505
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 7 из 10: References
+============================================================
+
+[1] 1.DellaPennaD.A decade of progress in understanding vitamin E synthesis in plantsJ. Plant Physiol.200516272973710.1016/j.jplph.2005.04.00416008096
+
+[2] 2.MartinA.Apports Nutritionnels Conseillés Pour la Population Française3rd ed.Tec & Doc. LavoisierParis, France2001605
+
+[3] 3.AzziA.MeydaniS.N.MeydaniM.ZinggJ.M.The rise, the fall and the renaissance of vitamin EArch. Biochem. Biophys.201659510010810.1016/j.abb.2015.11.01027095224
+
+[4] 4.JiangQ.ChristenS.ShigenagaM.K.AmesB.N.gamma-Tocopherol, the major form of vitamin E in the US diet, deserves more attentionAm. J. Clin. Nutr.2001747147221172295110.1093/ajcn/74.6.714
+
+[5] 5.Table de Composition Nutritionnelle des Aliments Ciqual2016Available online: https://www.anses.fr/fr/content/ciqual-la-table-de-composition-nutritionnelle-des-aliments(accessed on 31 October 2017)
+
+[6] 6.EFSA Panel on Dietetic Products, Nutrition, and Allergies (NDA)Dietary Reference Values for vitamin E as α-tocopherolEFSA J.20151310.2903/j.efsa.2015.4149
+
+[7] 7.MedicineI.O.Dietary Reference Intakes for Vitamin C, Vitamin E, Selenium, and CarotenoidsThe National Academies PressWashington, DC, USA200052925077263
+
+[8] 8.De CarvalhoM.J.GuillandJ.C.MoreauD.BoggioV.FuchsF.Vitamin status of healthy subjects in Burgundy (France)Ann. Nutr. Metab.199640245110.1159/0001778958722303
+
+[9] 9.TroeschB.HoeftB.McBurneyM.EggersdorferM.WeberP.Dietary surveys indicate vitamin intakes below recommendations are common in representative western countriesBr. J. Nutr.201210869269810.1017/S000711451200180822691229
+
+[10] 10.TraberM.G.Vitamin E inadequacy in humans: Causes and consequencesAdv. Nutr.2014550351410.3945/an.114.00625425469382PMC4188222
+
+[11] 11.PignitterM.StolzeK.GartnerS.DumhartB.StollC.SteigerG.KraemerK.SomozaV.Cold fluorescent light as major inducer of lipid oxidation in soybean oil stored at household conditions for eight weeksJ. Agric. Food Chem.2014622297230510.1021/jf405736j24548005
+
+[12] 12.BorelP.PasquierB.ArmandM.TyssandierV.GrolierP.Alexandre-GouabauM.C.AndreM.SenftM.PeyrotJ.JaussanV.Processing of vitamin A and E in the human gastrointestinal tractAm. J. Physiol. Gastrointest. Liver Physiol.2001280G95G1031112320210.1152/ajpgi.2001.280.1.G95
+
+[13] 13.ReboulE.RichelleM.PerrotE.Desmoulins-MalezetC.PirisiV.BorelP.Bioaccessibility of carotenoids and vitamin E from their main dietary sourcesJ. Agric. Food Chem.2006548749875510.1021/jf061818s17090117
+
+[14] 14.WernerS.BohmV.Bioaccessibility of carotenoids and vitamin e from pasta: Evaluation of an in vitro digestion modelJ. Agric. Food Chem.2011591163117010.1021/jf103892y21275433
+
+[15] 15.SriwichaiW.BergerJ.PicqC.AvalloneS.Determining Factors of Lipophilic Micronutrient Bioaccessibility in Several Leafy VegetablesJ. Agric. Food Chem.2016641695170110.1021/acs.jafc.5b0536426844382
+
+[16] 16.MandalariG.FaulksR.M.RichG.T.Lo TurcoV.PicoutD.R.Lo CurtoR.B.BisignanoG.DugoP.DugoG.WaldronK.W.Release of protein, lipid, and vitamin E from almond seeds during digestionJ. Agric. Food Chem.2008563409341610.1021/jf073393v18416553
+
+[17] 17.CillaA.AlegriaA.de AncosB.Sanchez-MorenoC.CanoM.P.PlazaL.ClementeG.LagardaM.J.BarberaR.Bioaccessibility of tocopherols, carotenoids, and ascorbic acid from milk- and soy-based fruit beverages: Influence of food matrix and processingJ. Agric. Food Chem.2012607282729010.1021/jf301165r22738607
+
+[18] 18.NagaoA.Kotake-NaraE.HaseM.Effects of fats and oils on the bioaccessibility of carotenoids and vitamin E in vegetablesBiosci. Biotechnol. Biochem.2013771055106010.1271/bbb.13002523649270
+
+[19] 19.YangY.McClementsD.J.Vitamin E bioaccessibility: Influence of carrier oil type on digestion and release of emulsified alpha-tocopherol acetateFood Chem.201314147348110.1016/j.foodchem.2013.03.03323768382
+
+[20] 20.YangY.DeckerE.A.XiaoH.McClementsD.J.Enhancing vitamin E bioaccessibility: Factors impacting solubilization and hydrolysis of alpha-tocopherol acetate encapsulated in emulsion-based delivery systemsFood Funct.20156849710.1039/C4FO00725E25312787
+
+[21] 21.YangY.XiaoH.McClementsD.J.Impact of Lipid Phase on the Bioavailability of Vitamin E in Emulsion-Based Delivery Systems: Relative Importance of Bioaccessibility, Absorption, and TransformationJ. Agric. Food Chem.2017653946395510.1021/acs.jafc.7b0095528447464
+
+[22] 22.YangY.McClementsD.J.Vitamin E and vitamin E acetate solubilization in mixed micelles: Physicochemical basis of bioaccessibilityJ. Colloid Interface Sci.201340531232110.1016/j.jcis.2013.05.01823768725
+
+[23] 23.LombardoD.GuyO.Studies on the substrate specificity of a carboxyl ester hydrolase from human pancreatic juice. II. Action on cholesterol esters and lipid-soluble vitamin estersBiochim. Biophys. Acta198061114715510.1016/0005-2744(80)90050-97350913
+
+[24] 24.ReboulE.BertonA.MoussaM.KreuzerC.CrenonI.BorelP.Pancreatic lipase and pancreatic lipase-related protein 2, but not pancreatic lipase-related protein 1, hydrolyze retinyl palmitate in physiological conditionsBiochim. Biophys. Acta2006176141010.1016/j.bbalip.2005.12.01316497549
+
+[25] 25.DesmarchelierC.TourniaireF.PreveraudD.P.Samson-KremserC.CrenonI.RosilioV.BorelP.The distribution and relative hydrolysis of tocopheryl acetate in the different matrices coexisting in the lumen of the small intestine during digestion could explain its low bioavailabilityMol. Nutr. Food Res.2013571237124510.1002/mnfr.20120072023520193
+
+[26] 26.NagyK.RamosL.Courtet-ComponduM.C.Braga-LagacheS.RedeuilK.LoboB.AzpirozF.MalageladaJ.R.BeaumontM.MoulinJ.Double-balloon jejunal perfusion to compare absorption of vitamin E and vitamin E acetate in healthy volunteers under maldigestion conditionsEur. J. Clin. Nutr.20136720220610.1038/ejcn.2012.18323212132
+
+[27] 27.MathiasP.M.HarriesJ.T.PetersT.J.MullerD.P.Studies on the in vivo absorption of micellar solutions of tocopherol and tocopheryl acetate in the rat: Demonstration and partial characterization of a mucosal esterase localized to the endoplasmic reticulum of the enterocyteJ. Lipid Res.1981228298377288289

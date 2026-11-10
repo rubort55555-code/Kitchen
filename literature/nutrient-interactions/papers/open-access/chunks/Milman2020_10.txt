@@ -1,0 +1,11 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 10 из 19: 4. Inhibitors (часть 4)
+============================================================
+
+Regular ingestion of curcumin is recommended by many nutritionists being in favor of anti-inflammatory diets. However, from an iron absorption point of view, curcumin may in the long term have an indirect enhancing effect on iron uptake because curcumin inhibits the synthesis of hepcidin through inhibition of the signal transducer and activator of transcription 3 (STAT3) transduction pathway. This effect has been demonstrated both in mice [139] and in humans [140]. Although curcumin may be of benefit for patients with iron overload due to its antioxidant and anti-inflammatory properties, more studies are needed to clarify the final role of curcumin in human iron metabolism.

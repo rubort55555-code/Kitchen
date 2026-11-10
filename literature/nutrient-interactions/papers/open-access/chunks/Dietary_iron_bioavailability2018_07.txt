@@ -1,0 +1,35 @@
+Название: Dietary Iron Bioavailability: Agreement between Estimation Methods and Association with Serum Ferritin Concentrations in Women of Childbearing Age
+Авторы: Eduardo De Carli, Gisele Cristina Dias, Juliana Massami Morimoto, Dirce Maria Lobo Marchioni, Célia Colli
+Журнал: Nutrients, 2018
+DOI: https://doi.org/10.3390/nu10050650   PMID: 29883384   PMC: PMC5986529
+Лицензия: CC BY 4.0 (открытый доступ). © 2018 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 7 из 13: 3. Results
+============================================================
+
+## 3.1. Participants’ Characteristics
+
+The study flow diagram is shown in Figure 1. One hundred and twenty-seven students were included in the final analysis. Mean age was 27 years, and mean body mass index was 22 kg/m2. Participants who were considered obese were not recruited; however, 26% of women had high WC and 11% was overweight. According to the national criteria, >80% of the students belonged to upper-middle or upper socioeconomic classes (A–B). About three-quarters of the sample were self-declared as white (74.8%) and two-thirds were classified as physically active or very active (61.4%) (Table 2). Non-omnivores included 10 lacto-ovo-vegetarians (7.9%), 6 pesco-vegetarians (4.7%), and 2 vegans (1.6%).
+
+None of women reported the use of intrauterine devices. In contrast, 60% of women reported the use of hormonal contraceptives, which was more frequent among women <30 years old (p < 0.05) and those belonging to the upper-middle socioeconomic class (p < 0.05). These women showed significantly lower levels of menstrual flow intensity score (p < 0.01) and, curiously, a higher prevalence of subclinical inflammation (CRP > 5 mg/L) (Table 2).
+
+Mean total iron intake was estimated to be 10.9 mg/day, which is approximately 6% of heme iron and 29% of iron from fortified corn and wheat flours (Table 2). Lunch and dinner showed comparable total daily iron amounts (3.71 mg/day and 3.12 mg/day), although differed in almost 50% on their contributions to total daily heme iron intake (62.8% and 33.0%). In turn, breakfast and snacks provided the highest daily amounts of calcium (32.6% and 25.3%) and polyphenols (32.9% and 47.9%) (Table S1).
+
+Geometric mean of SF concentrations was 36.6 μg/L. While no iron overload case was found, iron deficiency was diagnosed in 12.6% of women, one-quarter of whom were also anemic. Even though hormonal contraceptive users had a slightly higher mean total iron intake than non-users (10.3 mg/day vs. 11.2 mg/day, p < 0.05), iron deficiency was three times more prevalent among the latter (6.7% vs. 21.2%, p < 0.05), in accordance with their evident differences in menstrual iron losses (Table 2).
+
+## 3.2. Dietary Iron Bioavailability Estimates
+
+As illustrated in Figure 2, based on physiologic iron requirement distributions, usual total iron intakes, and prevalence of iron deficiency among hormonal contraceptive users and non-users, their expected dietary FeBio values were of 16% and 19%, respectively (Figure 2). A weighted average of these two estimates, assumed as a mean for the overall sample, was calculated as 17.2%. No substantial changes in this value were observed after excluding vegetarians or meat restrictors from the analysis.
+
+Table 3 shows the estimates from the five tested algorithms. Although 1.7% and 4.1% of meals analyzed using Hallberg and Hulthén (2000) and Reddy et al.’s (2000) models required manual confinement of unrealistic high non-heme iron absorption values (>45%), their dietary FeBio estimates (12.02% and 12.80%, respectively) did not differ from those of Monsen et al.’s (1978) model (11.57%), which was also based on meals. By contrast, significantly lower bioavailability values were obtained using the diet-based algorithms of Armah et al. (2013) and Collings et al. (2013) (8.91% and 8.51%, respectively).
+
+Upon searching for dietary variables related to each of the tested algorithm estimates, we found all of them were strong negatively associated with heme iron and animal tissue intakes. Only estimates from Hallberg and Hulthén (2000) and Reddy et al.’s (2000) algorithms were unrelated to non-heme iron, while were negatively correlated with dietary phytate intakes. A negative association was also found between calcium and the former algorithm estimates. In turn, only Reddy et al. (2000) and Collings et al.’s (2013) models provided estimates that independently varied from dietary vitamin C intakes (Table S2).
+
+## 3.3. Correlation between Dietary Iron Bioavailability Estimates
+
+Notably, all FeBio algorithms underestimated 25%–50% of the probabilistic model; all algorithm estimates, whether based on meals or complete diets, were strongly correlated. However, Collings et al.’s (2013) model showed a weaker association with meal-based measurements when compared to Armah et al.’s (2013) model. The highest correlations were found between Hallberg and Hulthén (2000) and Reddy et al. (2000) models (r = 0.851, p < 0.001) and between Monsen et al. (1978) and Armah et al.’s (2013) models (r = 0.851, p < 0.001). No slope coefficients from regression equations between algorithm estimates was close to 1 (0.8 ≥ β ≥ 1.2), suggesting a lack of identity between them (Table 4).
+
+## 3.4. Association between Dietary Iron Bioavailability Estimates and Serum Ferritin Concentrations
+
+SF concentrations according to FeBio estimates are presented in Figure 3. No significant association was found between the iron biomarker and FeBio measured with Monsen et al. (1978), Reddy et al. (2000), or Armah et al. (2013) algorithms. In contrast, significant differences of 30.5% and 37.4% were estimated in multiple-adjusted geometric means of SF between women stratified by extremes tertiles of FeBio using Hallberg and Hulthén (2000) (p < 0.05) and Collings et al.’s (2013) algorithm (p < 0.01), respectively. Moreover, differences in SF concentration values of approximately 30% was found among women classified based on the median values of these two algorithm measurements (p < 0.05 and p < 0.01, respectively) (Figure S1).

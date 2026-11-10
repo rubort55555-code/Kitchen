@@ -1,0 +1,59 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 36 из 39: References (часть 10)
+============================================================
+
+[222] 222 Li, B. , Vachali, P. P. , Gorusupudi, A. , Shen, Z. et al., Inactivity of human beta,beta‐carotene‐9',10'‐dioxygenase (BCO2) underlies retinal accumulation of the human macular carotenoid pigment. Proc. Natl. Acad. Sci. U S A 2014, 111, 10173–10178.2498213110.1073/pnas.1402526111PMC4104844
+
+[223] 223 Blankenhorn, D. H. , Carotenoids in man. J. Biol. Chem. 1957, 229, 809–816.13502343
+
+[224] 224 Dagadu, J. M. , Distribution of carotene and vitamin A in liver, pancreas and body fat of Ghanaians. Br. J. Nutr. 1967, 21, 453–456.495227410.1079/bjn19670046
+
+[225] 225 Klipstein‐Grobusch, K. , Launer, L. J. , Geleijnse, J. M. , Boeing, H. et al., Serum carotenoids and atherosclerosis. The Rotterdam Study. Atherosclerosis 2000, 148, 49–56.1058017010.1016/s0021-9150(99)00221-x
+
+[226] 226 Martin, K. R. , Wu, D. , Meydani, M. , The effect of carotenoids on the expression of cell surface adhesion molecules and binding of monocytes to human aortic endothelial cells. Atherosclerosis 2000, 150, 265–274.1085651810.1016/s0021-9150(99)00375-5
+
+[227] 227 Brun, P. J. , Wongsiriroj, N. , Blaner, W. S. , Retinoids in the pancreas. Hepatobil. Surg. Nutr. 2016, 5, 1–14.10.3978/j.issn.2304-3881.2015.09.03PMC473994126904552
+
+[228] 228 Eroglu, A. , Harrison, E. H. , Carotenoid metabolism in mammals, including man: formation, occurrence, and function of apocarotenoids. J. Lipid Res. 2013, 54, 1719–1730.2366717810.1194/jlr.R039537PMC3679377
+
+[229] 229 Rühl, R. , Bub, A. , Watzl, B. , Modulation of plasma all‐trans retinoic acid concentrations by the consumption of carotenoid‐rich vegetables. Nutrition 2008, 24, 1224–1226.1865331510.1016/j.nut.2008.05.022
+
+[230] 230 Paur, I. , Lilleby, W. , Bohn, S. K. , Hulander, E. et al., Tomato‐based randomized controlled trial in prostate cancer patients: Effect on PSA. Clin. Nutr. 2016, S0261‐5614, 30147–30149.10.1016/j.clnu.2016.06.01427406859
+
+[231] 231 Mariani, S. , Lionetto, L. , Cavallari, M. , Tubaro, A. et al., Low prostate concentration of lycopene is associated with development of prostate cancer in patients with high‐grade prostatic intraepithelial neoplasia. Int. J. Mol. Sci. 2014, 15, 1433–1440.2445113010.3390/ijms15011433PMC3907878
+
+[232] 232 Craft, N. E. , Haitema, T. B. , Garnett, K. M. , Fitch, K. A. et al., Carotenoid, tocopherol, and retinol concentrations in elderly human brain. J. Nutr. Health Aging 2004, 8, 156–162.15129301
+
+[233] 233 Vishwanathan, R. , Neuringer, M. , Snodderly, D. M. , Schalch, W. et al., Macular lutein and zeaxanthin are related to brain lutein and zeaxanthin in primates. Nutr. Neurosci. 2013, 16, 21–29.2278094710.1179/1476830512Y.0000000024PMC3824968
+
+[234] 234 Tanprasertsuk, J. , Li, B. , Bernstein, P. S. , Vishwanathan, R. et al., Relationship between concentrations of lutein and StARD3 among pediatric and geriatric human brain tissue. PLoS One 2016, 11, e0155488.2720589110.1371/journal.pone.0155488PMC4874591
+
+[235] 235 Schweigert, F. J. , Bathe, K. , Chen, F. , Buscher, U. et al., Effect of the stage of lactation in humans on carotenoid levels in milk, blood plasma and plasma lipoprotein fractions. Eur. J. Nutr. 2004, 43, 39–44.1499126810.1007/s00394-004-0439-5
+
+[236] 236 Lipkie, T. E. , Morrow, A. L. , Jouni, Z. E. , McMahon, R. J. et al., Longitudinal survey of carotenoids in human milk from urban cohorts in China, Mexico, and the USA. PLoS One 2015, 10, e0127729.2606188510.1371/journal.pone.0127729PMC4465022
+
+[237] 237 Yeum, K. J. , Ahn, S. H. , Rupp de Paiva, S. A. , Lee‐Kim, Y. C. et al., Correlation between carotenoid concentrations in serum and normal breast adipose tissue of women with benign breast tumor or breast cancer. J. Nutr. 1998, 128, 1920–1926.980864310.1093/jn/128.11.1920
+
+[238] 238 Mathews‐Roth, M. M. , Welankiwar, S. , Sehgal, P. K. , Lausen, N. C. et al., Distribution of [14C]canthaxanthin and [14C]lycopene in rats and monkeys. J. Nutr. 1990, 120, 1205–1213.212039810.1093/jn/120.10.1205
+
+[239] 239 White, W. S. , Stacewicz‐Sapuntzakis, M. , Erdman, J. W., Jr. , Bowen, P. E. , Pharmacokinetics of beta‐carotene and canthaxanthin after ingestion of individual and combined doses by human subjects. J. Am. Coll. Nutr. 1994, 13, 665–671.770660210.1080/07315724.1994.10718463
+
+[240] 240 High, E. G. , Day, H. G. , Effects of different amounts of lutein, squalene, phytol and related substances on the utilization of carotene and vitamin A for storage and growth in the rat. J. Nutr. 1951, 43, 245–260.1485104210.1093/jn/43.2.245
+
+[241] 241 Burri, B. J. , Neidlinger, T. R. , Clifford, A. J. , Serum carotenoid depletion follows first‐order kinetics in healthy adult women fed naturally low carotenoid diets. J. Nutr. 2001, 131, 2096–2100.1148140010.1093/jn/131.8.2096
+
+[242] 242 Schwedhelm, E. , Maas, R. , Troost, R. , Boger, R. H. , Clinical pharmacokinetics of antioxidants and their impact on systemic oxidative stress. Clin. Pharmacokinet. 2003, 42, 437–459.1273998310.2165/00003088-200342050-00003
+
+[243] 243 Shvetsov, Y. B. , Hernandez, B. Y. , Wong, S. H. , Wilkens, L. R. et al., Intraindividual variability in serum micronutrients: effects on reliability of estimated parameters. Epidemiology 2009, 20, 36–43.1881302410.1097/EDE.0b013e318187865ePMC2663917
+
+[244] 244 Cooney, R. V. , Franke, A. A. , Hankin, J. H. , Custer, L. J. et al., Seasonal variations in plasma micronutrients and antioxidants. Cancer Epidemiol. Biomarkers Prev. 1995, 4, 207–215.7606195
+
+[245] 245 Dueker, S. R. , Lin, Y. , Buchholz, B. A. , Schneider, P. D. et al., Long‐term kinetic study of beta‐carotene, using accelerator mass spectrometry in an adult volunteer. J. Lipid Res. 2000, 41, 1790–1800.11060348
+
+[246] 246 Taimi, M. , Helvig, C. , Wisniewski, J. , Ramshaw, H. et al., A novel human cytochrome P450, CYP26C1, involved in metabolism of 9‐cis and all‐trans isomers of retinoic acid. J. Biol. Chem. 2004, 279, 77–85.1453229710.1074/jbc.M308337200

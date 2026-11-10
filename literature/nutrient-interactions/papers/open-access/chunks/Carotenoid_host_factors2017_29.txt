@@ -1,0 +1,59 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 29 из 39: References (часть 3)
+============================================================
+
+[51] 51 Soukoulis, C. , Bohn, T. , A comprehensive overview on the micro‐ and nano‐technological encapsulation advances for enhancing the chemical stability and bioavailability of carotenoids. Crit. Rev. Food Sci. Nutr. 2015, in press.10.1080/10408398.2014.97135326065668
+
+[52] 52 Perry, G. H. , Dominy, N. J. , Claw, K. G. , Lee, A. S. et al., Diet and the evolution of human amylase gene copy number variation. Nat. Genet. 2007, 39, 1256–1260.1782826310.1038/ng2123PMC2377015
+
+[53] 53 Minekus, M. , Alminger, M. , Alvito, P. , Ballance, S. et al., A standardised static in vitro digestion method suitable for food ‐ an international consensus. Food. Funct. 2014, 5, 1113–1124.2480311110.1039/c3fo60702j
+
+[54] 54 Slomiany, B. L. , Slomiany, A. , Secretion of gastric mucus phospholipids in response to beta‐adrenergic G protein‐coupled receptor activation is mediated by SRC kinase‐dependent epidermal growth factor receptor transactivation. J. Physiol. Pharmacol. 2004, 55, 627–638.15381832
+
+[55] 55 Biehler, E. , Hoffmann, L. , Krause, E. , Bohn, T. , Divalent minerals decrease micellarization and uptake of carotenoids and digestion products into Caco‐2 cells. J. Nutr. 2011, 141, 1769–1776.2186555810.3945/jn.111.143388
+
+[56] 56 Pals, G. , Meijerink Ph Fau ‐ Defize, J. , Defize J Fau ‐ Bebelman, J. P. , Bebelman Jp Fau ‐ Strunk, M. et al., Transcription regulation of human and porcine pepsinogen A. Adv. Exp. Med. Biol. 1995, 362, 67–75.854038210.1007/978-1-4615-1871-6_7
+
+[57] 57 Biehler, E. , Kaulmann, A. , Hoffmann, L. , Krause, E. et al., Dietary and host‐related factors influencing carotenoid bioaccessibility from spinach (Spinacia oleracea). Food Chem. 2011, 125, 1328–1334.
+
+[58] 58 Garrett, D. A. , Failla, M. L. , Sarama, R. J. , Development of an in vitro digestion method to assess carotenoid bioavailability from meals. J. Agric. Food Chem. 1999, 47, 4301–4309.1055280610.1021/jf9903298
+
+[59] 59 Periago, M. J. , Bravo, S. , Garcia‐Alonso, F. J. , Rincon, F. , Detection of key factors affecting lycopene in vitro accessibility. J. Agric. Food Chem. 2013, 61, 3859–3867.2354794210.1021/jf3052994
+
+[60] 60 Culen, M. , Rezacova, A. , Jampilek, J. , Dohnal, J. , Designing a dynamic dissolution method: a review of instrumental options and corresponding physiology of stomach and small intestine. J. Pharm. Sci. 2013, 102, 2995–3017.2349481510.1002/jps.23494
+
+[61] 61 Kullenberg, D. , Taylor, L. A. , Schneider, M. , Massing, U. , Health effects of dietary phospholipids. Lipids Health Dis. 2012, 11, 3.2222148910.1186/1476-511X-11-3PMC3316137
+
+[62] 62 Holmes, R. S. , Cox, L. A. , VandeBerg, J. L. , Comparative studies of mammalian acid lipases: Evidence for a new gene family in mouse and rat (Lipo). Comp. Biochem. Physiol. Part D Genomics Proteomics 2010, 5, 217–226.2059866310.1016/j.cbd.2010.05.004PMC2917524
+
+[63] 63 Sams, L. , Paume, J. , Giallo, J. , Carriere, F. , Relevant pH and lipase for in vitro models of gastric digestion. Food Funct. 2016, 7, 30–45.2652736810.1039/c5fo00930h
+
+[64] 64 Corte‐Real, J. , Richling, E. , Hoffmann, L. , Bohn, T. , Selective factors governing in vitro beta‐carotene bioaccessibility: negative influence of low filtration cutoffs and alterations by emulsifiers and food matrices. Nutr. Res. 2014, 34, 1101–1110.2547619310.1016/j.nutres.2014.04.010
+
+[65] 65 Bohn, T. , Provitamin A Carotenoids ‐ Occurrence, intake, and bioavailability in: PreedyV. (Ed.), In Vitamin A and Carotenoids: Chemistry, Analysis, Function and Effects (Food and Nutritional Components in Focus), RSC Publishing, London 2012.
+
+[66] 66 Tyssandier, V. , Reboul, E. , Dumas, J. F. , Bouteloup‐Demange, C. et al., Processing of vegetable‐borne carotenoids in the human stomach and duodenum. Am. J. Physiol Gastrointest. Liver Physiol. 2003, 284, G913–G923.1273614610.1152/ajpgi.00410.2002
+
+[67] 67 Inamine, T. , Higa, S. , Noguchi, F. , Kondo, S. et al., Association of genes involved in bile acid synthesis with the progression of primary biliary cirrhosis in Japanese patients. J. Gastroenterol. 2013, 48, 1160–1170.2335462010.1007/s00535-012-0730-9
+
+[68] 68 Lowe, M. E. , Properties and function of pancreatic lipase related protein 2. Biochimie 2000, 82, 997–1004.1109979610.1016/s0300-9084(00)01184-6
+
+[69] 69 Hancock, A. M. , Witonsky, D. B. , Ehler, E. , Alkorta‐Aranburu, G. et al., Colloquium paper: human adaptations to diet, subsistence, and ecoregion are due to subtle shifts in allele frequency. Proc. Natl. Acad Sci. U S A 2010, 107(Suppl 2), 8924–8930.2044509510.1073/pnas.0914625107PMC3024024
+
+[70] 70 Iqbal, J. , Hussain, M. M. , Intestinal lipid absorption. Am. J. Physiol. Endocrinol. Metab. 2009, 296, E1183–1194.1915832110.1152/ajpendo.90899.2008PMC2692399
+
+[71] 71 D'Agostino, D. , Cordle, R. A. , Kullman, J. , Erlanson‐Albertsson, C. et al., Decreased postnatal survival and altered body weight regulation in procolipase‐deficient mice. J. Biol. Chem. 2002, 277, 7170–7177.1175190010.1074/jbc.M108328200PMC2528063
+
+[72] 72 D'Silva, S. , Xiao, X. , Lowe, M. E. , A polymorphism in the gene encoding procolipase produces a colipase, Arg92Cys, with decreased function against long‐chain triglycerides. J. Lipid Res. 2007, 48, 2478–2484.1771542310.1194/jlr.M700371-JLR200PMC3684974
+
+[73] 73 Borel, P. , Desmarchelier, C. , Nowicki, M. , Bott, R. , Lycopene bioavailability is associated with a combination of genetic variants. Free. Radic. Biol. Med. 2015, 83, 238–244.2577200810.1016/j.freeradbiomed.2015.02.033
+
+[74] 74 Hegele, R. A. , Ramdath, D. D. , Ban, M. R. , Carruthers, M. N. et al., Polymorphisms in PNLIP, encoding pancreatic lipase, and associations with metabolic traits. J. Hum. Genet. 2001, 46, 320–324.1139353410.1007/s100380170066
+
+[75] 75 Breithaupt, D. E. , Bamedi, A. , Wirt, U. , Carotenol fatty acid esters: easy substrates for digestive enzymes? Comp. Biochem. Physiol. B. Biochem. Mol. Biol. 2002, 132, 721–728.1212805810.1016/s1096-4959(02)00096-9

@@ -1,0 +1,23 @@
+Название: Perspective: Framework for Developing Prediction Equations for Estimating the Absorption and Bioavailability of Nutrients from Foods
+Авторы: Connie Weaver, Seth Armah, Richard S Bruno, Andrew Fletcher, Raymond Glahn, Isabelle Herter-Aeberli, Tasija Karosas, Cornelia U Loechl, Veronica Lopez-Teros, Michael I McBurney, Alida Melse-Boonstra, Rachel Novotny, Manju B Reddy, Jessica Rigutto-Farebrother, Sherry Tanumihardjo, Emorn Udomkesmalee, Ellen Van Den Heuvel, Taylor Wallace, Pattanee Winichagoon
+Журнал: Advances in Nutrition, 2025
+DOI: https://doi.org/10.1016/j.advnut.2025.100481   PMID: 40683371   PMC: PMC12361767
+Лицензия: CC BY 4.0 (открытый доступ). © 2025 The Author(s)
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 9 из 20: Methodologies for Determining Absorption
+============================================================
+
+There are many study designs for evaluating the absorption of a nutrient or compound, which may have a great influence on the results. Studies that reflect absorption of the nutrient or compound of interest, as would occur for a consumer of the food, are desired. Inherent nutrient absorption can vary for any food due to many conditions. Variation in outcomes due to choice of study design decisions is an additional source of variation.
+
+## Using isotopic tracers for determining absorption
+
+Isotopic tracers are useful tools for measuring absorption because of the sensitivity with which they can be measured. Following the fate of the label from a food can be distinguished from other sources of the compound entering the body, during digestion, metabolism, and excretion. Following the tracer as an indicator of the nutrient or compound assumes that the tracer does not disassociate with the compound and behave differently, giving a false measure of absorption, retention, or metabolism. Dissociation of a tracer from the unlabeled portion of the nutrient does not happen with minerals where the tracer is an isotope of the mineral, but can happen with organic compounds if the tracer is an isotope of hydrogen, carbon, or nitrogen, which can be cleaved from the compound of interest. Labeling organic compounds as with deuterium or carbon isotopes to determine bioavailability has been successfully applied to vitamins A [53], K [54,55], folate [[56], [57], [58], [59]], and E [60], and polyphenols [61,62] among others.
+
+Mathematical modeling and compartmental analysis were the data analysis approach used to calculate absorption for developing the predictive equation for calcium bioavailability [14]. Mathematical modeling is the expression of metabolism in terms of equations that describe physiological processes based on the movement of isotopic tracers. Mathematical modeling and compartmental analysis have been described for micronutrients such as calcium [63], iron [[64], [65], [66]], zinc [67], magnesium [68,69], and others. Modeling fractional absorption, rather than the amount of the nutrient or bioactive compound absorbed, allows adjustment to the amount of food being considered, for example, serving size, 100 g, etc. The amount absorbed is then the product of fractional absorption and load for that food mass.
+
+Publicly available modeling software exists, such as WinSAAM software (www.winsaam.org). The model chosen will be based on assumptions such as the host being in steady state and the tracer load not perturbing the system. For absorption in the duodenum and determining absorption of a tracer into the blood, giving a standardized breakfast after an overnight fast is sufficient. If a tracer is being followed into the stools, controlling the diet for the duration of the gut transit time is important.
+
+## Intrinsic compared with extrinsic labeling
+
+Incorporating the tracer into the compound of interest is most reliable when introduced into the food as the endogenous compound being labeled. This can be done during the growth of a plant or animal food, or during the incorporation of a fortificant during the manufacture of the product. There are still many decisions for endogenously incorporating the tracer that can affect how well the tracer reflects the endogenous compound. These factors have been reviewed for intrinsic labeling of plants, which include the form of the tracer to be added, the dose, the timing and frequency of dosing, and environmental conditions such as presence of competing ions/compounds, growing plants on soil or hydroponically, temperature, pH, oxygenation, and moisture content of soil [70,71]. Digestibility of animal protein foods or plant protein foods can be measured with intrinsic labeling of uniformly 2H-labeled amino acids [72,73].

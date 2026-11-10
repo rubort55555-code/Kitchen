@@ -1,0 +1,13 @@
+Название: Vitamin D-Mediated Regulation of Intestinal Calcium Absorption
+Авторы: James C Fleet
+Журнал: Nutrients, 2022
+DOI: https://doi.org/10.3390/nu14163351   PMID: 36014856   PMC: PMC9416674
+Лицензия: CC BY 4.0 (открытый доступ). © 2022 by the author.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 11: Abstract
+============================================================
+
+Vitamin D is a critical regulator of calcium and bone homeostasis. While vitamin D has multiple effects on bone and calcium metabolism, the regulation of intestinal calcium (Ca) absorption efficiency is a critical function for vitamin D. This is necessary for optimal bone mineralization during growth, the protection of bone in adults, and the prevention of osteoporosis. Intestinal Ca absorption is regulated by 1,25 dihydroxyvitamin D (1,25(OH)2 D), a hormone that activates gene transcription following binding to the intestinal vitamin D receptor (VDR). When dietary Ca intake is low, Ca absorption follows a vitamin-D-regulated, saturable pathway, but when dietary Ca intake is high, Ca absorption is predominately through a paracellular diffusion pathway. Deletion of genes that mediate vitamin D action (i.e., VDR) or production (CYP27B1) eliminates basal Ca absorption and prevents the adaptation of mice to low-Ca diets. Various physiologic or disease states modify vitamin-D-regulated intestinal absorption of Ca (enhanced during late pregnancy, reduced due to menopause and aging).
+
+Keywords: diet, transcellular, absorption, diffusion, intestine, homeostasis, parathyroid hormone

@@ -1,0 +1,11 @@
+Название: Iron Absorption: Factors, Limitations, and Improvement Methods
+Авторы: Elif Piskin, Danila Cianciosi, Sukru Gulec, Merve Tomas, Esra Capanoglu
+Журнал: ACS Omega, 2022
+DOI: https://doi.org/10.1021/acsomega.2c01833   PMID: 35755397   PMC: PMC9219084
+Лицензия: CC BY 4.0 (открытый доступ). © 2022 The Authors. Published by American Chemical Society
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 15 из 16: Conclusion
+============================================================
+
+Iron is an essential element for human life, and due to its electron exchange features, it takes part in oxygen transport, energy production, DNA, RNA, and protein synthesis. It is involved in the structure of many enzymes and/or is necessary for their function. Sufficient iron intake, especially from meat, poultry, and seafood, is necessary to prevent iron deficiency and anemia since these foods are rich in the bioavailable form of heme iron. In underdeveloped and developing countries, mainly meat and fish products fall into the category of expensive products, and people may have limited access to these products. On the other hand, there are people who avoid the consumption of these products in line with their own sensitivities and preferences. These people may be at higher risk for iron deficiency and anemia. In this context, the importance of studies to increase iron bioavailability is indisputable. Encapsulation, emulsification, chelation, and fortification play an important role in increasing the bioavailability and absorption rate of iron. Commercial iron supplements are available for humans suffering from IDA or wishing to get iron as a supplement. However, because of the free iron-dependent radical generation, some of the commercial iron supplements may produce adverse effects in the gut lumen and mucosal area of the intestine. Therefore, preventing iron deficiency through the widespread consumption of iron supplements requires continuous innovation in products and processes and also requires a high level of public awareness.

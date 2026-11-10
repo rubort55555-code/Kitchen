@@ -1,0 +1,57 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 5 из 39: Introduction (часть 4)
+============================================================
+
+ | Lycopene | Plasma conc. | Interindividual: 42%Intraindividual: 72% of interind. variation | 
+
+Double stable isotope to 11 healthy men (37μmol β‐carotene) | β‐carotene | Plasma AUC | Interindividual: 137%%RSD300 fold differences in AUC dose response observed | 13
+
+Intervention: 8 adult subjects (4 males, 4 females), 0.5 μmol/kg bw. | β‐carotene | Plasma AUC | Intraindividual: 68% RSD | 159
+
+Intervention: 8 adult subjects, 0.5 μmol/kg bw. | Lutein | Plasma AUC | Intraindividual: 43% RSD | 
+
+Administration of isotopically labelled lycopene (10.2 mg) to 8 subjects (4 males, 4 females) | Lycopene | Absorption % based on plasma AUC | Interindividual: 504% RSD for all trans‐lycopene | 15
+
+Administration of lycopene (10‐120 mg) in a tomato beverage (5 male adults) | Lycopene | Absorption (%) | Interindividual: 77% RSD for highest dose, 53% RSD for lowest dose | 160
+
+Administration of soup, juice or tablets to 6 adult males (ca. 20 mg lycopene) | Lycopene | Plasma AUC | Interindividual: <28% RSD | 285
+
+Feeding trial (5 weeks, 9 mg lutein/d) to young males | Lutein | Plasma conc. | Interindividual: ca. 70% RSD | 286
+
+Administration of tomato puree, spinach (12 mg β‐carotene, 8 mg lutein), and pills containing β‐carotene and lutein (20 young females) | Lycopeneβ‐caroteneLutein | PlasmaPlasmaTRL AUC | Interindividual: 40 % RSDInterindividual: 40% RSDInterindividual: ca. 45% RSD from spinach | 147
+
+Administration of tomato puree to 33 adult men (0.4 mg β‐carotene) | β‐carotene | TRL AUC | Interindividual: 105% RSD | 32
+
+β‐arotene in oil within a meal (120 mg), 80 males | β‐carotene | TRL AUC | Interindividual: 61% RSD | 287
+
+Administration of tomato sauce (17 mg β‐carotene) to 12 adults (male, female) | β‐carotene | TRL AUC | Interindividual: 64% RSD | 149
+
+Administration of tomato puree, 33 adult men, 10 mg lycopene | Lycopene | TRL AUC | Interindividual: 70% RSD | 73
+
+Administration of tomato juice to n = 18 adults (male, female). Ca. 22 mg lycopene | Lycopene | TRL AUC | Interindividual: <67% RSD | 288
+
+Administration of tomato sauce to 12 adults (male, female). Ca. 47 mg lycopene | Lycopene | TRL AUC | Interindividual fractional absorption: 2.4% (RSD: 83%) | 148
+
+Administration of tomato preparations to 30 adult men, 25 mg lycopene | Lycopene | TRL AUC | Interindividual: 96% RSD for tomato paste | 289
+
+Administration of supplement (s) or tomato puree (tp) to 39 healthy men, ca. 5 mg lutein | Lutein | TRL AUC | Interindividual: RSD of 75% and 137% for s and tp, respectively | 14
+
+Administration of salad and avocado oil to n = 11 healthy subjects (male, female). 12 mg β‐carotene, 6 mg lutein, 7 mg α ‐carotene | Luteinβ‐caroteneα‐carotene | TRL AUCTRL AUCTRL AUC | Interindividual RSD: 54%69%82% | 290
+
+Administration of tomato puree, carrots, spinach, intragastrically to 10 adult males. 10 mg of each carotenoid | LycopeneLuteinβ‐carotene | Duodenum, micellar phase | Interindividual RSD: 32%23%20% | 66
+
+Observational, 20 ceased subjects (male, female), 0.4 months‐86 years of age | Lycopeneβ‐caroteneα‐caroteneLuteinβ‐cryptoxanthin | Liver | Interindividual RSD: 123%124%149%123%243% | 173
+
+Observational, 15 ceased adults (male, female), 0.4 months‐86 years of age | Lycopeneβ‐caroteneα‐caroteneLuteinβ‐cryptoxanthin | Kidney | Interindividual RSD: 100%132%132%234%234% | 173
+
+Observational, 13 ceased adults (male, female), 0.4 months‐86 years of age | Lycopeneβ‐caroteneα‐caroteneLuteinβ‐cryptoxanthin | Lung | Interindividual: 196% RSD125%117%136%180% | 173
+
+Intervention: 30 mg β‐carotene/d for 43 days in patients with adenomatous polyps (n = 7, male, female) | Lutein/zeaxanthinβ‐cryptoxanthinLycopeneα‐caroteneβ‐carotene | Colon | Interindividual RSD: 71%126%68%76%66% | 291
+
+Thus, as individual responses can depend on many varying factors, it is paramount to understand these and their influence on the biological variability of carotenoid ADME. In this review, it is aimed to highlight known host‐related factors that predispose for variations in carotenoid metabolism, such as genetic factors (e.g. single nucleotide polymorphisms (SNPs)), though additional ones (disease state, body weight, smoking, physical activity etc.) are also briefly reviewed. The manuscript structure is oriented around the metabolic path of carotenoids, from digestion (chapter 2) to intestinal absorption (chapter 3) and further transport to the liver (chapter 4) and distribution to target tissues (chapter 5) to storage and excretion related pathways (chapter 6). Searched databased included Pubmed and Scopus, for all years, in English language, employing the following search terms (abstract and title) to start with: “Human* AND (lutein OR lycopene OR xanthophyll OR carotene*) AND (bioavailab* OR pharmacokinetic* OR kinetic* OR absorption OR postprandial OR metabol* OR microb* OR microflora OR biliary OR enterhohepatic* OR chylomicron OR plasma OR tissue OR metabolism OR enterocyte OR lipoproteins OR transporters OR Single nucleotide polymorphism* OR genetic varia* OR SNP OR cleavage OR enzym* OR intestine) AND (intra* OR inter*) NOT (drug‐interaction OR in‐vitro)”, though additional literature following the primary search results were surveyed.

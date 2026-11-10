@@ -1,0 +1,11 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 13 из 19: 6. Conclusions
+============================================================
+
+In patients with genetic haemochromatosis, intestinal iron absorption is enhanced due to a decreased expression of hepcidin. Overall, we have detailed knowledge of the mechanisms of iron absorption to design dietary interventions that may decrease iron intake and iron uptake. Dietary modifications that lower iron intake and iron bioavailability may provide additional measures to limit iron uptake from the diet. This could stimulate the patients' active cooperation in the treatment of their disorder. However, there is a need to perform controlled studies of the effect of targeted long-term dietary intervention and to evaluate the effect of dietary supplements containing specific inhibitors of iron absorption.

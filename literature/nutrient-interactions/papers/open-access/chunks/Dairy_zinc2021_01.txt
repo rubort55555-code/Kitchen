@@ -1,0 +1,11 @@
+Название: Influence of Dairy Products on Bioavailability of Zinc from Other Food Products: A Review of Complementarity at a Meal Level
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu13124253   PMID: 34959808   PMC: PMC8705257
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 12: Abstract
+============================================================
+
+In this paper, we reviewed the role of dairy products in dietary zinc absorption. Dairy products can have a reasonable contribution for dietary zinc intake in Western diets, where dairy consumption is high. However, the co-ingestion of dairy products can also improve zinc absorption from other food products. Such improvements have been observed when dairy products (e.g., milk or yoghurt) were ingested together with food such as rice, tortillas or bread products, all of which are considered to be high-phytate foods with low inherent zinc absorption. For foods low in phytate, the co-ingestion of dairy products did not improve zinc absorption. Improved zinc absorption of zinc from high-phytate foods following co-ingestion with dairy products may be related to the beneficial effects of the citrate and phosphopeptides present in dairy products. Considering that the main dietary zinc sources in areas in the world where zinc deficiency is most prevalent are typically high in phytate, the inclusion of dairy products in meals may be a viable dietary strategy to improve zinc absorption.

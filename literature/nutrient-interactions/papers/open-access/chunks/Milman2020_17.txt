@@ -1,0 +1,71 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 17 из 19: References (часть 4)
+============================================================
+
+[84] 84van AertsR. M. M.van DeursenC. T. B. M.KoekG. H.Proton pump inhibitors reduce the frequency of phlebotomy in patients with hereditary hemochromatosisClinical Gastroenterology and Hepatology201614114715210.1016/j.cgh.2015.06.0432-s2.0-8495894585926240005
+
+[85] 85O’Neil-CuttingM. A.CrosbyW. H.The effect of antacids on the absorption of simultaneously ingested ironJAMA: The Journal of the American Medical Association1986255111468147010.1001/jama.1986.033701100900272-s2.0-00225718853005669
+
+[86] 86HallG. J. L.DavisA. E.Inhibition of iron absorption by magnesium trisilicateMedical Journal of Australia196922959610.5694/j.1326-5377.1969.tb105628.x5803866
+
+[87] 87WallaceK. L.CurryS. C.LoVecchioF.RaschkeR. A.Effect of magnesium hydroxide on iron absorption following simulated mild iron overdose in human subjectsAcademic Emergency Medicine199851096196510.1111/j.1553-2712.1998.tb02771.x2-s2.0-00316922979862585
+
+[88] 88ChaiW.LiebmanM.Effect of different cooking methods on vegetable oxalate contentJournal of Agricultural and Food Chemistry20055383027303010.1021/jf048128d2-s2.0-1714440111115826055
+
+[89] 89MitchellT.KumarP.ReddyT.Dietary oxalate and kidney stone formationAmerican Journal of Physiology-Renal Physiology2013163F409F41310.1152/ajprenal.00373.20182-s2.0-8506160796630566003PMC6459305
+
+[90] 90HeaneyR. P.WeaverC. M.ReckerR. R.Calcium absorbability from spinachThe American Journal of Clinical Nutrition198847470770910.1093/ajcn/47.4.7072-s2.0-00239163163354496
+
+[91] 91Iron Disorders InstituteAchieving iron balance with diet2020http://www.irondisorders.org/diet
+
+[92] 92NutriticsWhy most iron in spinach is useless is spinach really the superfood our grandmothers touted?September 2020https://www.nutritics.com/p/news_Why-Most-Iron-In-Spinach-Is-Useless
+
+[93] 93genannt BonsmannS. S.WalczykT.RenggliS.HurrellR. F.Oxalic acid does not influence nonhaem iron absorption in humans: a comparison of kale and spinach mealsEuropean Journal of Clinical Nutrition200862333634110.1038/sj.ejcn.16027212-s2.0-4054914042517440529
+
+[94] 94SchlemmerU.FrølichW.PrietoR. M.GrasesF.Phytate in foods and significance for humans: food sources, intake, processing, bioavailability, protective role and analysisMolecular Nutrition & Food Research200953S2S330S37510.1002/mnfr.2009000992-s2.0-7034998710119774556
+
+[95] 95FrølichW.MejbornH.TetensI.Phytate–a natural component in plant foodDTU National Food Institute. E-artikel fra DTU Fødevareinstituttet20111
+
+[96] 96HallbergL.RossanderL.SkånbergA. B.Phytates and the inhibitory effect of bran on iron absorption in manThe American Journal of Clinical Nutrition198745598899610.1093/ajcn/45.5.9882-s2.0-00232609493034044
+
+[97] 97HallbergL.BruneM.RossanderL.Iron absorption in man: ascorbic acid and dose-dependent inhibition by phytateThe American Journal of Clinical Nutrition198949114014410.1093/ajcn/49.1.1402-s2.0-00245203262911999
+
+[98] 98SiegenbergD.BaynesR. D.BothwellT. H.Ascorbic acid prevents the dose-dependent inhibitory effects of polyphenols and phytates on nonheme-iron absorptionThe American Journal of Clinical Nutrition199153253754110.1093/ajcn/53.2.5372-s2.0-00259116861989423
+
+[99] 99HurrellR. F.JuilleratM. A.ReddyM. B.LynchS. R.DassenkoS. A.CookJ. D.Soy protein, phytate, and iron absorption in humansThe American Journal of Clinical Nutrition199256357357810.1093/ajcn/56.3.5732-s2.0-00268006291503071
+
+[100] 100LayrisseM.García-CasalM. N.SolanoL.Iron bioavailability in humans from breakfasts enriched with iron bis-glycine chelate, phytates and polyphenolsThe Journal of Nutrition200013092195219910.1093/jn/130.9.219510958812
+
+[101] 101KristensenM. B.TetensI.JørgensenA. B. AA decrease in iron status in young healthy women after long-term daily consumption of the recommended daily intake of fibre-rich wheat breadEuropean Journal of Nutrition2005443343401534973810.1007/s00394-004-0529-4
+
+[102] 102YangJ.DwyerJ. T.PetersonJ. J.Polyphenols in foodsNutrition Today201651629030010.1097/NT.00000000000001832-s2.0-85002776314
+
+[103] 103WilliamsonG.The role of polyphenols in modern nutritionNutrition Bulletin201742322623510.1111/nbu.122782-s2.0-8502755726228983192PMC5601283
+
+[104] 104BruneM.HallbergL.SkånbergA. B.Determination of iron-binding phenolic groups in foodsJournal of Food Science199156112813110.1111/j.1365-2621.1991.tb07992.x2-s2.0-84985264934
+
+[105] 105AndjelkovicM.VancampJ.DemeulenaerB.Iron-chelation properties of phenolic acids bearing catechol and galloyl groupsFood Chemistry2006981233110.1016/j.foodchem.2005.05.0442-s2.0-33644904982
+
+[106] 106DislerP. B.LynchS. R.CharltonR. W.The effect of tea on iron absorptionGut197516319320010.1136/gut.16.3.1932-s2.0-00166522541168162PMC1410962
+
+[107] 107MorckT. A.LynchS. R.CookJ. D.Inhibition of food iron absorption by coffeeThe American Journal of Clinical Nutrition198337341642010.1093/ajcn/37.3.4162-s2.0-00209579396402915
+
+[108] 108BruneM.RossanderL.HallbergL.Iron absorption and phenolic compounds: importance of different phenolic structuresEuropean Journal of Clinical Nutrition19894385475572598894
+
+[109] 109HurrellR. F.ReddyM.CookJ. D.Inhibition of non-haem iron absorption in man by polyphenolic-containing beveragesBritish Journal of Nutrition199981428929510.1017/s000711459900053710999016
+
+[110] 110KaltwasserJ. P.WernerE.SchalkK.HansenC.GottschalkR.SeidlC.Clinical trial on the effect of regular tea drinking on iron accumulation in genetic haemochromatosisGut199843569970410.1136/gut.43.5.6992-s2.0-00317430579824354PMC1727318
+
+[111] 111TuntipopipatS.JudprasongK.ZederC.Chili, but not turmeric, inhibits iron absorption in young women from an iron-fortified composite mealThe Journal of Nutrition2006136122970297410.1093/jn/136.12.297017116705
+
+[112] 112INGFive things about soya beansSeptember 2020https://www.ing.com/Newsroom/News/Five-things-about-soya-beans.htm
+
+[113] 113FoodData Central, U.S.A Department of Agriculture https://fdc.nal.usda.gov/fdc-app.html#/food-details/174270/nutrients
+
+[114] 114RoseA.Daily Iron: daily iron on your dinner plate2020https://www.dailyiron.net/soybeans/

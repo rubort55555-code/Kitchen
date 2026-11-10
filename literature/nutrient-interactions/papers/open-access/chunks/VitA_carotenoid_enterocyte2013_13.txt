@@ -1,0 +1,61 @@
+Название: Absorption of Vitamin A and Carotenoids by the Enterocyte: Focus on Transport Proteins
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2013
+DOI: https://doi.org/10.3390/nu5093563   PMID: 24036530   PMC: PMC3798921
+Лицензия: http://creativecommons.org/licenses/by/3.0/ (открытый доступ). © 2013 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 13 из 14: References (часть 4)
+============================================================
+
+[81] 81.DuringA.DawsonH.D.HarrisonE.H.Carotenoid transport is decreased and expression of the lipid transporters SR-BI, NPC1L1, and ABCA1 is downregulated in Caco-2 cells treated with ezetimibeJ. Nutr.2005135230523121617718710.1093/jn/135.10.2305
+
+[82] 82.SatoY.SuzukiR.KobayashiM.ItagakiS.HiranoT.NodaT.MizunoS.SugawaraM.IsekiK.Involvement of cholesterol membrane transporter Niemann-Pick C1-like 1 in the intestinal absorption of luteinJ. Pharm. Pharm. Sci.2012152562642257900510.18433/j38k56
+
+[83] 83.CaiL.EckhardtE.R.ShiW.ZhaoZ.NasserM.de VilliersW.J.van der WesthuyzenD.R.Scavenger receptor class B type I reduces cholesterol absorption in cultured enterocyte CaCo-2 cellsJ. Lipid Res.2004452532621461773910.1194/jlr.M300303-JLR200
+
+[84] 84.ReboulE.GoncalvesA.ComeraC.BottR.NowickiM.LandrierJ.F.Jourdheuil-RahmaniD.DufourC.ColletX.BorelP.Vitamin D intestinal absorption is not a simple passive diffusion: Evidences for involvement of cholesterol transportersMol. Nutr. Food Res.20115569170210.1002/mnfr.20100055321280209
+
+[85] 85.ReboulE.KleinA.BietrixF.GleizeB.Malezet-DesmoulinsC.SchneiderM.MargotatA.LagrostL.ColletX.BorelP.Scavenger receptor class B type I (SR-BI) is involved in vitamin E transport across the enterocyteJ. Biol. Chem.2006281473947451638038510.1074/jbc.M509042200PMC2045115
+
+[86] 86.HerronK.L.McgraneM.M.WatersD.LofgrenI.E.ClarkR.M.OrdovasJ.M.FernandezM.L.The ABCG5 polymorphism contributes to individual responses to dietary cholesterol and carotenoids in eggsJ. Nutr.2006136116111651661439810.1093/jn/136.5.1161
+
+[87] 87.HarrisonE.H.Mechanisms of digestion and absorption of dietary vitamin AAnnu. Rev. Nutr.2005258710310.1146/annurev.nutr.25.050304.09261416011460
+
+[88] 88.BattenM.L.ImanishiY.MaedaT.TuD.C.MoiseA.R.BronsonD.PossinD.Van GelderR.N.BaehrW.PalczewskiK.Lecithin-retinol acyltransferase is essential for accumulation of all-trans-retinyl esters in the eye and in the liverJ. Biol. Chem.200427910422104321468473810.1074/jbc.M312410200PMC1351249
+
+[89] 89.ReboulE.TrompierD.MoussaM.KleinA.LandrierJ.F.ChiminiG.BorelP.ATP-binding cassette transporter A1 is significantly involved in the intestinal absorption of alpha- and gamma-tocopherol but not in that of retinyl palmitate in miceAm. J. Clin. Nutr.2009891771841905655710.3945/ajcn.2008.26559
+
+[90] 90.SauvantP.MekkiN.CharbonnierM.PortugalH.LaironD.BorelP.Amounts and types of fatty acids in meals affect the pattern of retinoids secreted in human chylomicrons after a high-dose preformed vitamin A intakeMetabolism20035251451910.1053/meta.2003.5008212701068
+
+[91] 91.AmengualJ.GolczakM.PalczewskiK.von LintigJ.Lecithin: Retinol acyltransferase is critical for cellular uptake of vitamin A from serum retinol-binding proteinJ. Biol. Chem.2012287242162422710.1074/jbc.M112.35397922637576PMC3397848
+
+[92] 92.KawaguchiR.ZhongM.KassaiM.Ter-StepanianM.SunH.STRA6-catalyzed vitamin A influx, efflux, and exchangeJ. Membr. Biol.201224573174510.1007/s00232-012-9463-122815070PMC3770467
+
+[93] 93.CastenmillerJ.J.M.WestC.E.Bioavailability and bioconversion of carotenoidsAnnu. Rev. Nutr.199818193810.1146/annurev.nutr.18.1.199706217
+
+[94] 94.LoboG.P.AmengualJ.PalczewskiG.BabinoD.von LintigJ.Carotenoid-oxygenases: Key players for carotenoid function and homeostasis in mammalian biologyBiochim. Biophys. Acta2011182178812156986210.1016/j.bbalip.2011.04.010PMC3162997
+
+[95] 95.BauernfeindJ.C.Carotenoid vitamin A precursors and analogs in foods and feedsJ. Agric. Food Chem.19722045647310.1021/jf60181a0034562921
+
+[96] 96.Van VlietT.VanschaikF.SchreursW.H.P.van Den BergH.In vitro measurement of beta-carotene cleavage activity: Methodological considerations and the effect of other carotenoids on beta-carotene cleavageInt. J. Vitam. Nutr. Res.19966677858698551
+
+[97] 97.YouC.S.ParkerR.S.GoodmanK.J.SwansonJ.E.CorsoT.N.Evidence of cis-trans isomerization of 9-cis-beta-carotene during absorption in humansAm. J. Clin. Nutr.199664177183869401710.1093/ajcn/64.2.177
+
+[98] 98.NoyN.Retinoid-binding proteins: Mediators of retinoid actionBiochem. J.200034848149510.1042/0264-6021:348048110839978PMC1221089
+
+[99] 99.NapoliJ.L.Retinoic acid: Its biosynthesis and metabolismProg. Nucleic Acid Res. Mol. Biol.19996313918810.1016/S0079-6603(08)60722-910506831
+
+[100] 100.CrowJ.A.OngD.E.Cell-specific immunohistochemical localization of a cellular retinol-binding protein (type two) in the small intestine of ratProc. Natl. Acad. Sci. USA1985824707471110.1073/pnas.82.14.47073860818PMC390973
+
+[101] 101.SurugaK.SuzukiR.GodaT.TakaseS.Unsaturated fatty acids regulate gene expression of cellular retinol-binding protein, type II in rat jejunumJ. Nutr.199512520392044764323710.1093/jn/125.8.2039
+
+[102] 102.EX.ZhangL.LuJ.TsoP.BlanerW.S.LevinM.S.LiE.Increased neonatal mortality in mice lacking cellular retinol-binding protein IIJ. Biol. Chem.200227736617366231213811310.1074/jbc.M205519200
+
+[103] 103.WongsirirojN.PiantedosiR.PalczewskiK.GoldbergI.J.JohnstonT.P.LiE.BlanerW.S.The molecular basis of retinoid absorption: A genetic dissectionJ. Biol. Chem.2008283135101351910.1074/jbc.M80077720018348983PMC2376245
+
+[104] 104.UchioK.TuchweberB.ManabeN.GabbianiG.RosenbaumJ.DesmouliereA.Cellular retinol-binding protein-1 expression and modulation during in vivo and in vitro myofibroblastic differentiation of rat hepatic stellate cells and portal fibroblastsLab. Investig.20028261962810.1038/labinvest.378045612004002
+
+[105] 105.TabunokiH.SugiyamaH.TanakaY.FujiiH.BannoY.JouniZ.E.KobayashiM.SatoR.MaekawaH.TsuchidaK.Isolation, characterization, and cDNA sequence of a carotenoid binding protein from the silk gland of Bombyx mori larvaeJ. Biol. Chem.2002277321333214010.1074/jbc.M20450720012052833
+
+[106] 106.YuL.BharadwajS.BrownJ.M.MaY.DuW.DavisM.A.MichaelyP.LiuP.WillinghamM.C.RudelL.L.Cholesterol-regulated translocation of NPC1L1 to the cell surface facilitates free cholesterol uptakeJ. Biol. Chem.20062816616662410.1074/jbc.M51112320016407187

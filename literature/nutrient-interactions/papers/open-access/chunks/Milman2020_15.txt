@@ -1,0 +1,65 @@
+Название: A Review of Nutrients and Compounds, Which Promote or Inhibit Intestinal Iron Absorption: Making a Platform for Dietary Measures That Can Reduce Iron Uptake in Patients with Genetic Haemochromatosis
+Авторы: Nils Thorm Milman
+Журнал: Journal of Nutrition and Metabolism, 2020
+DOI: https://doi.org/10.1155/2020/7373498   PMID: 33005455   PMC: PMC7509542
+Лицензия: https://creativecommons.org/licenses/by/4.0/ (открытый доступ). Copyright © 2020 Nils Thorm Milman.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 15 из 19: References (часть 2)
+============================================================
+
+[30] 30WestA. R.OatesP. S.Mechanisms of heme iron absorption: current questions and controversiesWorld Journal of Gastroenterology200814264101411010.3748/wjg.14.41012-s2.0-5404909331918636652PMC2725368
+
+[31] 31LönnerdalB.BryantA.LiuX.TheilE. C.Iron absorption from soybean ferritin in nonanemic womenThe American Journal of Clinical Nutrition200683110310710.1093/ajcn/83.1.10316400057
+
+[32] 32HopplerM.SchönbächlerA.MeileL.HurrellR. F.WalczykT.Ferritin-iron is released during boiling and in vitro gastric digestionThe Journal of Nutrition2008138587888410.1093/jn/138.5.87818424595
+
+[33] 33JacobsP.BothwellT.CharltonR. W.Role of hydrochloric acid in iron absorptionJournal of Applied Physiology196419218718810.1152/jappl.1964.19.2.18714155278
+
+[34] 34SkikneB. S.LynchS. R.CookJ. D.Role of gastric acid in food iron absorptionGastroenterology19818161068107110.1016/s0016-5085(81)80013-32-s2.0-00194095067286584
+
+[35] 35BeteshA. L.Santa AnaC. A.ColeJ. A.FordtranJ. S.Is achlorhydria a cause of iron deficiency anemia?The American Journal of Clinical Nutrition2015102191910.3945/ajcn.114.0973942-s2.0-8493741860325994564
+
+[36] 36https://www.healthline.com/nutrition/vitamin-c-foods
+
+[37] 37CookJ. D.MonsenE. R.Vitamin C, the common cold, and iron absorptionThe American Journal of Clinical Nutrition197730223524110.1093/ajcn/30.2.235835510
+
+[38] 38HallbergL.RossanderL.Improvement of iron nutrition in developing countries: comparison of adding meat, soy protein, ascorbic acid, citric acid, and ferrous sulphate on iron absorption from a simple Latin American-type of mealThe American Journal of Clinical Nutrition198439457758310.1093/ajcn/39.4.5772-s2.0-00212397256538742
+
+[39] 39BallotD.BaynesR. D.BothwellT. H.The effects of fruit juices and fruits on the absorption of iron from a rice mealBritish Journal of Nutrition198757333134310.1079/bjn198700412-s2.0-00231876253593665
+
+[40] 40HallbergL.BruneM.RossanderL.The role of vitamin C in iron absorptionInternational Journal for Vitamin and Nutrition Research1989301031082507689
+
+[41] 41ThumserA. E.RashedA. A.SharpP. A.LodgeJ. K.Ascorbate enhances iron uptake into intestinal cells through formation of a FeCl3-ascorbate complexFood Chemistry2010123228128510.1016/j.foodchem.2010.04.0312-s2.0-77953286667
+
+[42] 42GilloolyM.BothwellT. H.TorranceJ. D.The effects of organic acids, phytates and polyphenols on the absorption of iron from vegetablesBritish Journal of Nutrition198349333134210.1079/bjn198300422-s2.0-00209634106860621
+
+[43] 43DavidssonL.WalczykT.ZavaletaN.HurrellR. F.Improving iron absorption from a Peruvian school breakfast meal by adding ascorbic acid or Na2EDTAThe American Journal of Clinical Nutrition200173228328710.1093/ajcn/73.2.28311157325
+
+[44] 44FidlerM. C.DavidssonL.ZederC.HurrellR. F.Erythorbic acid is a potent enhancer of nonheme-iron absorptionThe American Journal of Clinical Nutrition20047919910210.1093/ajcn/79.1.9914684404
+
+[45] 45CookJ. D.ReddyM. B.Effect of ascorbic acid intake on nonheme-iron absorption from a complete dietThe American Journal of Clinical Nutrition2001731939810.1093/ajcn/73.1.9311124756
+
+[46] 46HuntJ. R.GallagherS. K.JohnsonL. K.Effect of ascorbic acid on apparent iron absorption by women with low iron storesThe American Journal of Clinical Nutrition19945961381138510.1093/ajcn/59.6.13812-s2.0-00283604538198064
+
+[47] 47EFSA Panel on Dietetic Products Nutrition and Allergies (NDA)Scientific opinion on the substantiation of health claims related to vitamin C and protection of DNA, proteins and lipids from oxidative damage (ID 129, 138, 143, 148), antioxidant function of lutein (ID 146), maintenance of vision (ID 141, 142), collagenEFSA Journal2009710p. 122610.2903/j.efsa.2009.1226
+
+[48] 48European Food Safety Authority (EFSA)Scientific Opinion on the Substantiation of a Health Claim Related to Vitamin C and Increasing Non-haem Iron Absorption Pursuant to Article 14 of Regulation (EC) No 1924/20061 EFSA Panel on Dietetic Products, Nutrition and Allergies (NDA)2014Parma, Italy10.2903/j.efsa.2014.3514PMC1315984342125126
+
+[49] 49ScheersN.Rossander-HulthenL.TorsdottirI.SandbergA. S.Increased iron bioavailability from lactic-fermented vegetables is likely an effect of promoting the formation of ferric iron (Fe3+)European Journal of Nutrition201655137338210.1007/s00394-015-0857-62-s2.0-8495744229325672527PMC4737790
+
+[50] 50Gómez-GallegoC.GueimondeM.SalminenS.The role of yogurt in food-based dietary guidelinesNutrition Reviews201876293910.1093/nutrit/nuy0592-s2.0-8505673268630452698
+
+[51] 51GalanP.CherouvrierF.PreziosiP.HercbergS.Effects of the increasing consumption of dairy products upon iron absorptionEuropean Journal of Clinical Nutrition199145115535591782927
+
+[52] 52RosadoJ. L.DíazM.GonzálezK.GriffinI.AbramsS. A.PreciadoR.The addition of milk or yogurt to a plant-based diet increases zinc bioavailability but does not affect iron bioavailability in womenThe Journal of Nutrition200135346546810.1093/jn/135.3.46515735079
+
+[53] 53DermanD. P.BothwellT. H.TorranceJ. D.Iron absorption from maize (Zea mays) and sorghum (Sorghum vulgare) beerBritish Journal of Nutrition198043227127910.1079/bjn198000902-s2.0-00188652977378337
+
+[54] 54ProulxA. K.ReddyM. B.Fermentation and lactic acid addition enhance iron bioavailability of maizeJournal of Agricultural and Food Chemistry20075572749275410.1021/jf06300152-s2.0-3424720194817355139
+
+[55] 55EeckhoutW.De PaepeM.Total phosphorus, phytate-phosphorus and phytase activity in plant feedstuffsAnimal Feed Science and Technology199447, no.1-2192910.1016/0377-8401(94)90156-22-s2.0-0002498444
+
+[56] 56KodaiiZ.ZadehM. N.KamaliJ.MehrabaniM.NatanziM. M.Enhanced iron absorption from lactic acid fermented bread (an in vivo/ex vivo study)Gene Reports20191510038910.1016/j.genrep.2019.1003892-s2.0-85063325708
+
+[57] 57RealeA.KonietznyU.CoppolaR.SorrentinoE.GreinerR.The importance of lactic acid bacteria for phytate degradation during cereal dough fermentationJournal of Agricultural and Food Chemistry20075582993299710.1021/jf063507n2-s2.0-3424757230517373819

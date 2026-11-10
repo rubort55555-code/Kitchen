@@ -1,0 +1,43 @@
+Название: Influence of Dairy Products on Bioavailability of Zinc from Other Food Products: A Review of Complementarity at a Meal Level
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu13124253   PMID: 34959808   PMC: PMC8705257
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 12 из 12: References (часть 3)
+============================================================
+
+[60] 60. WoodR.J. ZhengJ.J. Milk consumption and zinc retention in postmenopausal womenJ. Nutr.199012039840310.1093/jn/120.4.3982329392
+
+[61] 61. SolomonsN.W. Dietary sources of zinc and factors affecting its bioavailabilityFood Nutr. Bull.20012213815410.1177/156482650102200204
+
+[62] 62. Della LuciaC.M. SantosL.L.M. da Cruz RodriguesK.C. da Cruz RodriguesV.C. MartinoH.S.D. Sant’AnaH.M.P. Bioavailability of zinc in Wistar rats fed with rice fortified with zinc oxideNutrients201462279228910.3390/nu606227924932657PMC4073150
+
+[63] 63. TangN. SkibstedL.H. Zinc bioavailability from phytate-rich foods and zinc supplements. Modeling the effects of food components with oxygen, nitrogen, and sulfur donor ligandsJ. Agric. Food Chem.2017658727874310.1021/acs.jafc.7b0299828905624
+
+[64] 64. FallingborgJ. Intraluminal pH of the human gastrointestinal tractDan. Med. Bull.19994618319610421978
+
+[65] 65. AllenL. De BenoistB. DaryO. HurrellR. Guidelines on Food Fortification with MicronutrientsWHO/FAOGeneva, Switzerland2006
+
+[66] 66. OberleasD. The role of phytate in zinc bioavailability and homeostasisNutritional Bioavailability of Zinc InglettG.E. American Chemical SocietyWashington, DC, USA1983145158
+
+[67] 67. LinzellJ. MephamT. PeakerM. The secretion of citrate into milkJ. Physiol.197626073975010.1113/jphysiol.1976.sp011541978574PMC1309120
+
+[68] 68. PabónM.L. LönnerdalB. Effect of citrate on zinc bioavailability from milk, milk fractions and infant formulasNutr. Res.19931310311110.1016/S0271-5317(05)80661-X
+
+[69] 69. HansenM. SandströmB. JensenM. SørensenS. Effect of casein phosphopeptides on zinc and calcium absorption from bread mealsJ. Trace Elem. Med. Biol.19971114314910.1016/S0946-672X(97)80041-79442459
+
+[70] 70. ForbesR.M. ErdmanJ.W.Jr. ParkerH.M. KondoH. KetelsenS.M. Bioavailability of zinc in coagulated soy protein (tofu) to rats and effect of dietary calcium at a constant phytate: Zinc ratioJ. Nutr.198311320521010.1093/jn/113.1.2056681628
+
+[71] 71. BosscherD. LuZ. JanssensG. Van Caillie-BertrandM. RobberechtH. De RyckeH. De WildeR. DeelstraH. In vitro availability of zinc from infant foods with increasing phytic acid contentsBr. J. Nutr.20018624124710.1079/BJN200138411502238
+
+[72] 72. WapnirR.A. KhaniD.E. BayneM.A. LifshitzF. Absorption of zinc by the rat ileum: Effects of histidine and other low-molecular-weight ligandsJ. Nutr.19831131346135410.1093/jn/113.7.13466864333
+
+[73] 73. MiquelE. FarréR. Effects and future trends of casein phosphopeptides on zinc bioavailabilityTrends Food Sci. Technol.20071813914310.1016/j.tifs.2006.11.004
+
+[74] 74. ReynoldsE.C. Phosphopeptides for the Treatment of Dental CalculusWorld PatentWO 93/037074March1993
+
+[75] 75. HansenM. SandströmB. JensenM. SørensenS.S. Casein phosphopeptides improve zinc and calcium absorption from rice-based but not from whole-grain infant cerealJ. Pediatr. Gastroenterol. Nutr.199724566210.1097/00005176-199701000-000149093988
+
+[76] 76. HansenM. SandströmB. LönnerdalB. The effect of casein phosphopetides on zinc and calcium absorption from high phytate infant diets assessed in rat pups and Caco-2 cellsPediatr. Res.19964054755210.1203/00006450-199610000-000068888281

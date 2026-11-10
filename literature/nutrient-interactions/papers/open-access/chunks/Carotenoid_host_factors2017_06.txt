@@ -1,0 +1,61 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 6 из 39: Host factors influencing digestion aspects – from matrix release to bioaccessibility
+============================================================
+
+## General aspects and oral phase of digestion
+
+Bioavailability of carotenoids depends on their bioaccessibility, i.e. the release from the food matrix and subsequent availability for absorption. As carotenoids are apolar, with octanol/water partition coefficients of 8–12 47, their incorporation into mixed micelles is necessary prior to their cellular uptake, which is assumed to take place predominantly in the small intestine.
+
+Mastication during oral digestion results in enhanced surface area and the breakdown into smaller particles. In addition, saliva appears to contain some lipase activity 48, though not necessarily lingual lipase (a triacylglycerol‐lipase, EC 3.1.1.3) 49, 50 (Table 3). As exposure in the oral cavity is rather short (usually less than 1 min), the enzymatic effect on carotenoid bioavailability is presumably small, though smaller particle size has been related to improved carotenoid bioavailability 51. To our knowledge, no mutagenesis on or polymorphisms with effects on oral lipases and lipid digestion has been reported to date.
+
+Table 3. Host factors influencing carotenoid release from food matrix and bioaccessibility
+
+Phase of digestion | Factor | Study description | Carotenoids investigated | Possible role in bioavailability | Reference
+
+Oral | Lingual lipase, other lipase | No data available | n/n | Low | n/n
+
+ | α‐amylase | No data available | n/n | Low | n/n
+
+Gastric | Non‐dietary phospholipids/ mucin | No data available | n/n | Low compared to dietary phospholipids | n/n
+
+ | Gastric lipase (GL) | GL from fungi (Rhizopus oryzae), pH optimum 5–9, in‐vitro | β‐carotene | No effect of gastric lipase detected | 64
+
+ | Pepsin | No effect in in vitro trials | Lutein, β‐carotene, lycopene | Presumable low effect in most carotenoid rich foods | 57, 58
+
+ | Pepsin | Tomato puree in vitro | Lycopene | Enhancing effect on lycopene micellization | 59
+
+ | pH | Digestion of spinach, in vitro | β‐carotene, lutein | Presumably negligibleb, though extreme pH may facilitate degradation | 55, 292
+
+Duodenum | Pancreatic lipase | Digestion of spinach, in vitro | β‐carotene, lutein, zeaxanthin | Low micellization (<5% original conc.) without pancreatina | 57
+
+ |  | Digestion of carrots+spinach+ tomato, in vitro | Total carotenoids | Micellization drop to 50% without pancreatin | 58
+
+ | Pancreatic amylase | Intake of amylase inhibitor ascarbose reduced vit. A levels in blood | Only vit. A | Low | 293
+
+ | Pancreatic proteases, PLRP2 | No data available | n/n | Low | n/n
+
+ | Pancreatic colipase | Tomato puree, in vitro digestion | Lycopene | Reduced intestinal recovery without colipase, no effect on micellization | 59
+
+ | Carboxyl‐esterase | Digestion of wolfberry, pepper, squash in vitro | Zeaxanthin‐esters | Enhanced xanthophyll bioavailability | 77
+
+ | Bile salts | Digestion of spinach, in vitro | β‐carotene, lutein, zeaxanthin | Micellization drop to 30% original conc. without bile salts | 57
+
+ | Bile salts | Digestion of carrots+spinach+ tomato, in vitro | Total carotenoids | Low micellization (<2% original conc.) without bile extract | 58
+
+Colon | Microbiota | Lower circulating carotenoids in subjects with higher Collinsella and atherosclerosis | β‐carotene | Unclear | 133
+
+ | Microbiota | Higher liver storage of α ‐and β‐carotene in germ‐free rats | α‐, β‐carotene | Prevention of breakdown products? Transit time? Bile‐salts? | 45
+
+As salivary alpha‐amylase (EC 3.2.1.1) participates in the break‐down of starch, food matrices rich in both starch and carotenoids, such as sweet potato, may be influenced by alterations in alpha‐amylase levels. It has been reported that in populations traditionally exposed to high levels of starch, more copies of the salivary amylase gene (AMY1) and higher enzyme levels were found 52, though its influence on the digestion of carotenoids has never been investigated.
+
+## Gastric phase of digestion
+
+In the stomach, the primary digestion enzymes include pepsin (3.4.23.1) and gastric lipase (3.1.1.3), though orally secreted lipases may still be active. In addition, a small amount of phospholipids 53 is released from the mucus layer 54, aiding in the emulsification of lipophilic constituents. The pH may have an influence, as low pH can result in the degradation of epoxy‐carotenoids (e.g. violaxanthin, neoxanthin), resulting in epoxide‐furanoid transitions 55. Human gastric pH is influenced mostly by meal, with a complex meal increasing the pH from initially 2 to 3–5, though interindividual differences in fasting pH exist 35.
+
+A few native foods are rich in both proteins and carotenoids, including egg yolk, salmon, and some types of cheese, and protein digestion could contribute to the release of carotenoids. In addition, (partly) digested proteins may aid in emulsifying carotenoids 51. Expression of pepsin has been reported to depend on the pepsinogen genes PGA3, PGA4, PGA5, and progastricsin (PGC) 56. However, varying the amount of pepsin in in vitro trials did not appear to have measurable effects on carotenoid bioaccessibility from leafy vegetables 57, and at least for such and similar sources, variations in pepsin are not expected to contribute to plasma level variability. Similarly, using a test meal composed of meat, carrots, spinach and tomato paste, gastric digestion (in vitro) had no significant influence on carotenoid bioaccessibility 58, suggesting rather small effects on carotenoid bioavailability at this step, though in these trials, gastric lipase was not involved. By contrast, Periago et al. 59 reported a positive effect of pepsin on lycopene micellization from a puree in vitro. It is possible that for this very apolar carotenoid, protein degradation products added to the emulsifying effect, or aided in matrix breakdown.

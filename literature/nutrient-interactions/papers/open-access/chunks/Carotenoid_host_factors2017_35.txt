@@ -1,0 +1,57 @@
+Название: Host‐related factors explaining interindividual variability of carotenoid bioavailability and tissue concentrations in humans
+Авторы: Torsten Bohn, Charles Desmarchelier, Lars O. Dragsted, Charlotte S. Nielsen, Wilhelm Stahl, Ralph Rühl, Jaap Keijer, Patrick Borel
+Журнал: Molecular Nutrition & Food Research, 2017
+DOI: https://doi.org/10.1002/mnfr.201600685   PMID: 28101967   PMC: PMC5516247
+Лицензия: CC BY 4.0 (открытый доступ). © 2017 The Authors. Molecular Nutrition & Food Research published by WILEY‐VCH Verlag GmbH & Co. KGaA, Weinheim
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 35 из 39: References (часть 9)
+============================================================
+
+[198] 198 Tian, R. , Pitchford, W. S. , Morris, C. A. , Cullen, N. G. et al., Genetic variation in the beta, beta‐carotene‐9', 10'‐dioxygenase gene and association with fat colour in bovine adipose tissue and milk. Anim. Genet. 2010, 41, 253–259.1996864910.1111/j.1365-2052.2009.01990.x
+
+[199] 199 Niu, Y. , Jin, M. , Li, Y. , Li, P. et al., Biallelic beta‐carotene oxygenase 2 knockout results in yellow fat in sheep via CRISPR/Cas9. Anim. Genet. 2016. In press.10.1111/age.1251527862083
+
+[200] 200 van Helden, Y. G. , Godschalk, R. W. , von Lintig, J. , Lietz, G. et al., Gene expression response of mouse lung, liver and white adipose tissue to beta‐carotene supplementation, knockout of Bcmo1 and sex. Mol. Nutr. Food Res. 2011, 55, 1466–1474.2177005010.1002/mnfr.201100194
+
+[201] 201 van Helden, Y. G. , Godschalk, R. W. , van Schooten, F. J. , Keijer, J. , Organ specificity of beta‐carotene induced lung gene‐expression changes in Bcmo1−/− mice. Mol. Nutr. Food Res. 2013, 57, 307–319.2320372510.1002/mnfr.201200277
+
+[202] 202 van Helden, Y. G. , Godschalk, R. W. , Swarts, H. J. , Hollman, P. C. et al., Beta‐carotene affects gene expression in lungs of male and female Bcmo1 (−/−) mice in opposite directions. Cell. Mol. Life Sci. 2011, 68, 489–504.2082085310.1007/s00018-010-0461-0PMC3021199
+
+[203] 203 van Beek, E. A. , Bakker, A. H. , Kruyt, P. M. , Hofker, M. H. et al., Intra‐ and interindividual variation in gene expression in human adipose tissue. Pflugers Arch. 2007, 453, 851–861.1706112010.1007/s00424-006-0164-4
+
+[204] 204 Yasmeen, R. , Reichert, B. , Deiuliis, J. , Yang, F. et al., Autocrine function of aldehyde dehydrogenase 1 as a determinant of diet‐ and sex‐specific differences in visceral adiposity. Diabetes 2013, 62, 124–136.2293311310.2337/db11-1779PMC3526050
+
+[205] 205 Petrosino, J. M. , Disilvestro, D. , Ziouzenkova, O. , Aldehyde dehydrogenase 1A1: friend or foe to female metabolism? Nutrients 2014, 6, 950–973.2459450410.3390/nu6030950PMC3967171
+
+[206] 206 Bonet, M. L. , Canas, J. A. , Ribot, J. , Palou, A. , Carotenoids in Adipose Tissue Biology and Obesity. Subcell. Biochem. 2016, 79, 377–414.2748523110.1007/978-3-319-39126-7_15
+
+[207] 207 Scarmo, S. , Cartmel, B. , Lin, H. , Leffell, D. J. et al., Significant correlations of dermal total carotenoids and dermal lycopene with their respective plasma levels in healthy adults. Arch. Biochem. Biophys. 2010, 504, 34–39.2063717810.1016/j.abb.2010.07.004PMC2957565
+
+[208] 208 Rudling, M. J. , Reihner, E. , Einarsson, K. , Ewerth, S. et al., Low density lipoprotein receptor‐binding activity in human tissues: quantitative importance of hepatic receptors and evidence for regulation of their expression in vivo. Proc. Natl. Acad. Sci. U S A 1990, 87, 3469–3473.211036310.1073/pnas.87.9.3469PMC53922
+
+[209] 209 Richelle, M. , Sabatier, M. , Steiling, H. , Williamson, G. , Skin bioavailability of dietary vitamin E, carotenoids, polyphenols, vitamin C, zinc and selenium. Br. J. Nutr. 2006, 96, 227–238.1692321510.1079/bjn20061817
+
+[210] 210 Darvin, M. E. , Patzelt, A. , Knorr, F. , Blume‐Peytavi, U. et al., One‐year study on the variation of carotenoid antioxidant substances in living human skin: influence of dietary supplementation and stress factors. J. Biomed. Opt. 2008, 13, 044028.1902135510.1117/1.2952076
+
+[211] 211 Ribaya‐Mercado, J. D. , Garmyn, M. , Gilchrest, B. A. , Russell, R. M. , Skin lycopene is destroyed preferentially over beta‐carotene during ultraviolet irradiation in humans. J. Nutr. 1995, 125, 1854–1859.761630110.1093/jn/125.7.1854
+
+[212] 212 Nagai, N. , Izumi‐Nagai, K. , Suzuki, M. , Shinoda, H. et al., Association of macular pigment optical density with serum concentration of oxidized low‐density lipoprotein in healthy adults. Retina 2015, 35, 820–826.2547378610.1097/IAE.0000000000000382
+
+[213] 213 Landrum, J. T. , Bone, R. A. , Moore, L. L. , Gomez, C. M. , Analysis of zeaxanthin distribution within individual human retinas. Methods Enzymol. 1999, 299, 457–467.991621910.1016/s0076-6879(99)99043-2
+
+[214] 214 Bhosale, P. , Zhao, D. Y. , Bernstein, P. S. , HPLC measurement of ocular carotenoid levels in human donor eyes in the lutein supplementation era. Invest. Ophthalmol. Vis. Sci. 2007, 48, 543–549.1725144810.1167/iovs.06-0558
+
+[215] 215 Borel, P. , de Edelenyi, F. S. , Vincent‐Baudry, S. , Malezet‐Desmoulin, C. et al., Genetic variants in BCMO1 and CD36 are associated with plasma lutein concentrations and macular pigment optical density in humans. Ann. Med. 2011, 43, 47–59.2109122810.3109/07853890.2010.531757
+
+[216] 216 Zhang, Z. , Yan, J. , Shi, H. , Hyperglycemia as a Risk Factor of Ischemic Stroke. J. Drug Metab. Toxicol. 2013, 4.10.4172/2157-7609.1000153PMC419793225328819
+
+[217] 217 During, A. , Doraiswamy, S. , Harrison, E. H. , Xanthophylls are preferentially taken up compared with beta‐carotene by retinal cells via a SRBI‐dependent mechanism. J. Lipid Res. 2008, 49, 1715–1724.1842485910.1194/jlr.M700580-JLR200PMC2444002
+
+[218] 218 Abdel‐Aal, E. S. M. , Akhtar, H. , Zaheer, K. , Ali, R. , Dietary sources of lutein and zeaxanthin carotenoids and their role in eye health. Nutrients 2013, 5, 1169–1185.2357164910.3390/nu5041169PMC3705341
+
+[219] 219 Parker, R. O. , Crouch, R. K. , The interphotoreceptor retinoid binding (IRBP) is essential for normal retinoid processing in cone photoreceptors. Adv. Exp. Med. Biol. 2010, 664, 141–149.2023801210.1007/978-1-4419-1399-9_17
+
+[220] 220 Vachali, P. , Li, B. , Nelson, K. , Bernstein, P. S. , Surface plasmon resonance (SPR) studies on the interactions of carotenoids and their binding proteins. Arch. Biochem. Biophys. 2012, 519, 32–37.2228602910.1016/j.abb.2012.01.006PMC3289994
+
+[221] 221 Li, B. , Vachali, P. , Frederick, J. M. , Bernstein, P. S. , Identification of StARD3 as a lutein‐binding protein in the macula of the primate retina. Biochemistry 2011, 50, 2541–2549.2132254410.1021/bi101906yPMC3070171

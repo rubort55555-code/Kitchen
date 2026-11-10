@@ -1,0 +1,11 @@
+Название: Calcium Absorption from Food Products: Food Matrix Effects
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu14010180   PMID: 35011055   PMC: PMC8746734
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 1 из 20: Abstract
+============================================================
+
+This article reviews physicochemical aspects of calcium absorption from foods. Notable differences are observed between different food products in relation to calcium absorption, which range from <10% to >50% of calcium in the foods. These differences can be related to the interactions of calcium with other food components in the food matrix, which are affected by various factors, including fermentation, and how these are affected by the conditions encountered in the gastrointestinal tract. Calcium absorption in the intestine requires calcium to be in an ionized form. The low pH in the stomach is critical for solubilization and ionization of calcium salts present in foods, although calcium oxalate complexes remain insoluble and thus poorly absorbable. In addition, the rate of gastric transit can strongly affect fractional absorption of calcium and a phased release of calcium into the intestine, resulting in higher absorption levels. Dairy products are the main natural sources of dietary calcium in many diets worldwide, which is attributable to their ability to provide high levels of absorbable calcium in a single serving. For calcium from other food products, lower levels of absorbable calcium can limit contributions to bodily calcium requirements.

@@ -1,0 +1,65 @@
+Название: Absorption of Vitamin A and Carotenoids by the Enterocyte: Focus on Transport Proteins
+Авторы: Emmanuelle Reboul
+Журнал: Nutrients, 2013
+DOI: https://doi.org/10.3390/nu5093563   PMID: 24036530   PMC: PMC3798921
+Лицензия: http://creativecommons.org/licenses/by/3.0/ (открытый доступ). © 2013 by the authors; licensee MDPI, Basel, Switzerland.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 10 из 14: References
+============================================================
+
+[1] 1.GersterH.Vitamin A—Functions, dietary requirements and safety in humansInt. J. Vitam. Nutr. Res.19976771909129249
+
+[2] 2.HollanderD.MuralidharaK.S.Vitamin A1 intestinal absorption in vivo: Influence of luminal factors on transportAm. J. Physiol. Gastrointest. Liver Physiol.1977232E471E47710.1152/ajpendo.1977.232.5.E47116498
+
+[3] 3.HollanderD.RubleP.E.Beta-carotene intestinal absorption: Bile, fatty acid, pH, and flow rate effects on transportAm. J. Physiol.1978235E686E6913277310.1152/ajpendo.1978.235.6.E686
+
+[4] 4.HollanderD.Intestinal absorption of vitamin A, E, D, and KJ. Lab. Clin. Med.1981974494627205056
+
+[5] 5.BorelP.Factors affecting intestinal absorption of highly lipophilic food microconstituents (fat-soluble vitamins, carotenoids and phytosterols)Clin. Chem. Lab. Med.20034197999410.1515/CCLM.2003.15112964802
+
+[6] 6.MartinA.Apports Nutritionnels Conseillés Pour La Population Française3rd ed.Tec & Doc LavoisierParis, France2001605
+
+[7] 7.ReboulE.RichelleM.PerrotE.Desmoulins-MalezetC.PirisiV.BorelP.Bioaccessibility of carotenoids and vitamin E from their main dietary sourcesJ. Agric. Food Chem.2006548749875510.1021/jf061818s17090117
+
+[8] 8.Dhuique-MayerC.BorelP.ReboulE.CaporiccioB.BesanconP.AmiotM.J.Beta-cryptoxanthin from citrus juices: Assessment of bioaccessibility using an in vitro digestion/Caco-2 cell culture modelBr. J. Nutr.20079788389010.1017/S000711450767082217381979
+
+[9] 9.HedrenE.DiazV.SvanbergU.Estimation of carotenoid accessibility from carrots determined by an in vitro digestion methodEur. J. Clin. Nutr.20025642543010.1038/sj.ejcn.160132912001013
+
+[10] 10.BorelP.GrolierP.ArmandM.PartierA.LafontH.LaironD.Azais-BraescoV.Carotenoids in biological emulsions: Solubility, surface-to-core distribution, and release from lipid dropletsJ. Lipid Res.1996372502619026524
+
+[11] 11.TyssandierV.ReboulE.DumasJ.F.Bouteloup-DemangeC.ArmandM.MarcandJ.SallasM.BorelP.Processing of vegetable-borne carotenoids in the human stomach and duodenumAm. J. Physiol. Gastrointest. Liver Physiol.2003284G913G9231273614610.1152/ajpgi.00410.2002
+
+[12] 12.BorelP.PasquierB.ArmandM.TyssandierV.GrolierP.Alexandre-GouabauM.C.AndreM.SenftM.PeyrotJ.JaussanV.Processing of vitamin A and E in the human gastrointestinal tractAm. J. Physiol. Gastrointest. Liver Physiol.2001280G95G1031112320210.1152/ajpgi.2001.280.1.G95
+
+[13] 13.CarrièreF.BarrowmanJ.A.VergerR.LaugierR.Secretion and contribution to lipolysis of gastric and pancreatic lipases during a test meal in humansGastroenterology1993105876888835965510.1016/0016-5085(93)90908-u
+
+[14] 14.LombardoD.GuyO.Studies on the substrate specificity of a carboxyl ester hydrolase from human pancreatic juice. II. Action on cholesterol esters and lipid-soluble vitamin estersBiochim. Biophys. Acta198061114715510.1016/0005-2744(80)90050-97350913
+
+[15] 15.ZahalkaH.A.SheeChengC.BurtonG.W.IngoldK.U.Hydrolysis of stereoisomeric alpha-tocopheryl acetates catalyzed by bovine cholesterol esteraseBiochim. Biophys. Acta198792148148510.1016/0005-2760(87)90075-03663692
+
+[16] 16.LauridsenC.HedemannM.S.JensenS.K.Hydrolysis of tocopheryl and retinyl esters by porcine carboxyl ester hydrolase is affected by their carboxylate moiety and bile acidsJ. Nutr. Biochem.20011221922410.1016/S0955-2863(00)00156-X11287217
+
+[17] 17.BreithauptD.E.BamediA.WirtU.Carotenol fatty acid esters: Easy substrates for digestive enzymes?Comp. Biochem. Physiol. B Biochem. Mol. Biol.200213272172810.1016/S1096-4959(02)00096-912128058
+
+[18] 18.Van BennekumA.M.LiL.PiantedosiR.ShamirR.VogelS.FisherE.A.BlanerW.S.HarrisonE.H.Carboxyl ester lipase overexpression in rat hepatoma cells and CEL deficiency in mice have no impact on hepatic uptake or metabolism of chylomicron-retinyl esterBiochemistry1999384150415610.1021/bi981680+10194331
+
+[19] 19.WengW.LiL.Van BennekumA.M.PotterS.H.HarrisonE.H.BlanerW.S.BreslowJ.L.FisherE.A.Intestinal absorption of dietary cholesteryl ester is decreased but retinyl ester absorption is normal in carboxyl ester lipase knockout miceBiochemistry1999384143414910.1021/bi981679a10194330
+
+[20] 20.ErlansonC.BorgstromB.The identity of vitamin A esterase activity of rat pancreatic juiceBiochim. Biophys. Acta196816762963110.1016/0005-2744(68)90059-45722287
+
+[21] 21.LindstromM.B.SternbyB.BorgstromB.Concerted action of human carboxyl ester lipase and pancreatic lipase during lipid digestion in vitro: Importance of the physicochemical state of the substrateBiochim. Biophys. Acta198895917818410.1016/0005-2760(88)90029-X3349096
+
+[22] 22.ReboulE.BertonA.MoussaM.KreuzerC.CrenonI.BorelP.Pancreatic lipase and pancreatic lipase-related protein 2, but not pancreatic lipase-related protein 1, hydrolyze retinyl palmitate in physiological conditionsBiochim. Biophys. Acta2006176141010.1016/j.bbalip.2005.12.01316497549
+
+[23] 23.RigtrupK.M.KakkadB.OngD.E.Purification and partial characterization of a retinyl ester hydrolase from the brush border of rat small intestine mucosa: Probable identity with brush border phospholipase BBiochemistry1994332661266610.1021/bi00175a0398117729
+
+[24] 24.RigtrupK.M.McewenL.R.SaidH.M.OngD.E.Retinyl ester hydrolytic activity associated with human intestinal brush border membranesAm. J. Clin. Nutr.199460111116801732310.1093/ajcn/60.1.111
+
+[25] 25.RigtrupK.M.OngD.E.A retinyl ester hydrolase activity intrinsic to the brush border membrane of rat small intestineBiochemistry1992312920292610.1021/bi00126a0111550818
+
+[26] 26.LevinG.MokadyS.Incorporation of all-trans- or 9-cis-beta-carotene into mixed micelles in vitroLipids19953017717910.1007/BF025382737769976
+
+[27] 27.TyssandierV.LyanB.BorelP.Main factors governing the transfer of carotenoids from emulsion lipid droplets to micellesBiochim. Biophys. Acta2001153328529210.1016/S1388-1981(01)00163-911731338
+
+[28] 28.BorelP.ArmandM.PasquierB.SenftM.DutotG.MelinC.LafontH.LaironD.Digestion and absorption of tube-feeding emulsions with different droplet sizes and compositions in the ratJ. Parenter. Enter. Nutr.19941853454310.1177/01486071940180065347602730

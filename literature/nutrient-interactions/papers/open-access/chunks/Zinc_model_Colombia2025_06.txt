@@ -1,0 +1,21 @@
+Название: Modeling Zinc Absorption in the Adult Population of Colombia: Insights for Nutritional Evaluation and Intervention Strategies
+Авторы: José Alexander Alvarez-Bustamante, Angélica María Muñoz
+Журнал: Biological Trace Element Research, 2024
+DOI: https://doi.org/10.1007/s12011-024-04180-x   PMID: 38739259   PMC: PMC11700909
+Лицензия: CC BY 4.0 (открытый доступ). © The Author(s) 2024
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 6 из 12: Results (часть 2)
+============================================================
+
+Regarding the FAZ, detailed in Table 3, we observed that the median percentage of zinc absorption was below the absorption rates recommended by the IOM, 41% for men and 48% for women (p < 0.001, Wilcoxon one-sample test). The distribution of FAZ values across the population shows a notable breadth, ranging from a minimum of 8.9% to a maximum of 84.8%. Although the mean FAZ was close to the median, suggesting aggregation towards central values, the Shapiro-Wilk test (p < 0.001) confirmed the data’s non-normal distribution, indicative of significant variability within the population.
+
+## Zinc Intake Recommendation Analysis
+
+The zinc intake recommendations derived from the model of Miller et al. [31] provide nuanced insights compared to the IOM and Colombian standards (Table 4). Notably, the median EAR_M and RDA_M values calculated from the Miller et al. model differ significantly from both IOM and Colombian recommended intakes for most age and sex groups, underscoring the potential for refined dietary guidelines based on these model outputs.
+
+Table 4Zinc intake recommendations of the IOM, Colombia, and from study data using model of Miller et al.Age group (by years)IOM, mg/dayColombia, mg/dayModel of Miller et al., median (Q1, Q3), mg/dayEAR IOMRDA IOMEAR Col.RDA Col.EAR_MRDA_MMen 19–309.411121412.4 (10.1, 15.3)14.9 (12.1, 18.4) 31–509.411121412.2 (9.8, 15.0)14.6 (11.7, 18.0) 51–709.411121411.7 (9.6, 14.8)a14.0 (11.6, 17.8)bTotal men9.411121412.2 (9.9, 15.1)14.7 (11.9, 18.2)Women 19–306.886.589.5 (7.9, 11.5)11.4 (9.5, 13.7) 31–506.886.589.1 (7.6, 11.1)10.9 (9.1, 13.3) 51–706.886.588.9 (7.5, 10.8)10.7 (9.1, 13.0)Total women6.886.589.3 (7.7, 11.2)11.1 (9.3, 13.4)Q1 and Q3 represent the 25th percentile (25%ile) and the 75th percentile (75%ile) values, respectively. The Wilcoxon one-sample test indicated statistical significance with p < 0.001 compared with IOM and Colombian recommendations, with exceptions notedaFor men aged 51–70 years, no significant difference was found in the comparison with EAR Col (p = 0.1581, Wilcoxon one-sample test)bAlthough the median RDA_M for men aged 51–70 was 14.0, the same as the RDA Col, the Wilcoxon one-sample test revealed significant differences in the distribution of the data compared to the RDA Col (p < 0.001)
+
+For men, EAR_M values exceeded the Colombian EAR across all age groups, showing statistical significance (p < 0.001, Wilcoxon one-sample test) except for men aged 51–70 years, where the difference was not statistically significant (p = 0.1581). This indicates a closer alignment between EAR_M and Colombian EAR for this age group, suggesting that the current EAR may be appropriate for these individuals. However, despite the median RDA_M being the same as the Colombian RDA for the 51–70 age group, significant statistical variation was detected (p < 0.001, Wilcoxon one-sample test).
+
+In women, the scenario was more pronounced, with EAR_M and RDA_M significantly exceeding both IOM and Colombian recommendations across all age groups (p < 0.001, Wilcoxon one-sample test), pointing to a greater discrepancy between current standards and the model’s suggestions for female zinc intake.

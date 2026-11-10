@@ -1,0 +1,71 @@
+Название: A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models
+Авторы: Maria Maares, Hajo Haase
+Журнал: Nutrients, 2020
+DOI: https://doi.org/10.3390/nu12030762   PMID: 32183116   PMC: PMC7146416
+Лицензия: CC BY 4.0 (открытый доступ). © 2020 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 23 из 29: References (часть 6)
+============================================================
+
+[150] 150.HennigarS.R.McClungJ.P.Zinc transport in the mammalian intestineCompr. Physiol.2018959743054902510.1002/cphy.c180001
+
+[151] 151.HolstB.WilliamsonG.Nutrients and phytochemicals: From bioavailability to bioefficacy beyond antioxidantsCurr. Opin. Biotechnol.200819738210.1016/j.copbio.2008.03.00318406129
+
+[152] 152.Carbonell-CapellaJ.M.BuniowskaM.BarbaF.J.EsteveM.J.FrígolaA.Analytical methods for determining bioavailability and bioaccessibility of bioactive compounds from fruits and vegetables: A reviewCompr. Rev. Food Sci. Food Saf.20141315517110.1111/1541-4337.1204933412647
+
+[153] 153.LönnerdalB.Phytic acid–trace element (zn, cu, mn) interactionsInt. J. Food Sci. Technol.20023774975810.1046/j.1365-2621.2002.00640.x
+
+[154] 154.WapnirR.A.Zinc deficiency, malnutrition and the gastrointestinal tractJ. Nutr.2000130138851392510.1093/jn/130.5.1388S10801949
+
+[155] 155.RaffanielloR.D.WapnirR.A.Zinc uptake by isolated rat enterocytes: Effect of low molecular weight ligandsProc. Soc. Exp. Biol. Med.198919221922410.3181/00379727-192-429882513579
+
+[156] 156.HennigarS.R.McClungJ.P.Hepcidin attenuates zinc efflux in caco-2 cellsJ. Nutr.20161462167217310.3945/jn.116.23708127655758
+
+[157] 157.SandströmB.SandbergA.S.Inhibitory effects of isolated inositol phosphates on zinc absorption in humansJ. Trace Elem. Electrolytes Health Dis.19926991031422186
+
+[158] 158.LönnerdalB.SandbergA.-S.SandströmB.KunzC.Inhibitory effects of phytic acid and other inositol phosphates on zinc and calcium absorption in suckling ratsJ. Nutr.198911921121410.1093/jn/119.2.2112918393
+
+[159] 159.SandbergA.AndlidT.Phytogenic and microbial phytases in human nutritionInt. J. Food Sci. Technol.20023782383310.1046/j.1365-2621.2002.00641.x
+
+[160] 160.NävertB.SandströmB.CederbladA.Reduction of the phytate content of bran by leavening in bread and its effect on zinc absorption in manBr. J. Nutr.1985534753299844010.1079/bjn19850009
+
+[161] 161.KemmeP.A.SchlemmerU.MrozZ.JongbloedA.W.Monitoring the stepwise phytate degradation in the upper gastrointestinal tract of pigsJ. Sci. Food Agric.20068661262210.1002/jsfa.2380
+
+[162] 162.IqbalT.H.LewisK.O.CooperB.T.Phytase activity in the human and rat small intestineGut1994351233123610.1136/gut.35.9.12337959229PMC1375699
+
+[163] 163.TurkM.SandbergA.S.Phytate degradation during breadmaking: Effect of phytase additionJ. Cereal Sci.19921528129410.1016/S0733-5210(09)80126-4
+
+[164] 164.VascaE.MaterazziS.CarusoT.MilanoO.FontanellaC.ManfrediC.Complex formation between phytic acid and divalent metal ions: A solution equilibria and solid state investigationAnal. Bioanal. Chem.200237417317810.1007/s00216-002-1469-612207261
+
+[165] 165.TangN.SkibstedL.H.Zinc bioavailability from phytate-rich foods and zinc supplements. Modeling the effects of food components with oxygen, nitrogen, and sulfur donor ligandsJ. Agric. Food Chem.2017658727874310.1021/acs.jafc.7b0299828905624
+
+[166] 166.LönnerdalB.CederbladA.DavidsonL.SandströmB.The effect of individual components of soy formula and cows’ milk formula on zinc bioavailabilityAm. J. Clin. Nutr.1984401064107010.1093/ajcn/40.5.10646541868
+
+[167] 167.FallingborgJ.Intraluminal ph of the human gastrointestinal tractDan. Med. Bull.19994618319610421978
+
+[168] 168.KhouzamR.B.PohlP.LobinskiR.Bioaccessibility of essential elements from white cheese, bread, fruit and vegetablesTalanta20118642542810.1016/j.talanta.2011.08.04922063561
+
+[169] 169.SimpsonC.J.WiseA.Binding of zinc and calcium to inositol phosphates (phytate) in vitroBr. J. Nutr.19906422523210.1079/BJN199000242400762
+
+[170] 170.TurnlundJ.R.KingJ.C.KeyesW.R.GongB.MichelM.C.A stable isotope study of zinc absorption in young men: Effects of phytate and alpha-celluloseAm. J. Clin. Nutr.1984401071107710.1093/ajcn/40.5.10716496386
+
+[171] 171.OberleasD.HarlandB.F.Phytate content of foods: Effect on dietary zinc bioavailabilityJ. Am. Diet. Assoc.1981794334367288050
+
+[172] 172.DaviesN.T.OlpinS.E.Studies on the phytate: Zinc molar contents in diets as a determinant of zn availability to young ratsBr. J. Nutr.19794159060310.1079/BJN19790074572702
+
+[173] 173.KristensenM.B.HelsO.MorbergC.M.MarvingJ.BugelS.TetensI.Total zinc absorption in young women, but not fractional zinc absorption, differs between vegetarian and meat-based diets with equal phytic acid contentBr. J. Nutr.20069596396710.1079/BJN2005148616611387
+
+[174] 174.FredlundK.IsakssonM.Rossander-HulthénL.AlmgrenA.SandbergA.-S.Absorption of zinc and retention of calcium: Dose-dependent inhibition by phytateJ. Trace Elem. Med. Biol.200620495710.1016/j.jtemb.2006.01.00316632176
+
+[175] 175.HuntJ.R.BeiseigelJ.M.Dietary calcium does not exacerbate phytate inhibition of zinc absorption by women from conventional dietsAm. J. Clin. Nutr.20098983984310.3945/ajcn.2008.2717519176739
+
+[176] 176.AbebeY.BogaleA.HambidgeK.M.StoeckerB.J.BaileyK.GibsonR.S.Phytate, zinc, iron and calcium content of selected raw and prepared foods consumed in rural sidama, southern ethiopia, and implications for bioavailabilityJ. Food Compos. Anal.20072016116810.1016/j.jfca.2006.09.003
+
+[177] 177.LazarteC.E.CarlssonN.-G.AlmgrenA.SandbergA.-S.GranfeldtY.Phytate, zinc, iron and calcium content of common bolivian food, and implications for mineral bioavailabilityJ. Food Compos. Anal.20153911111910.1016/j.jfca.2014.11.015
+
+[178] 178.Magallanes-LópezA.M.Hernandez-EspinosaN.VeluG.Posadas-RomanoG.Ordoñez-VillegasV.M.G.CrossaJ.AmmarK.GuzmánC.Variability in iron, zinc and phytic acid content in a worldwide collection of commercial durum wheat cultivars and the effect of reduced irrigation on these traitsFood Chem.201723749950510.1016/j.foodchem.2017.05.11028764025PMC5544597
+
+[179] 179.UmetaM.WestC.E.FufaH.Content of zinc, iron, calcium and their absorption inhibitors in foods commonly consumed in ethiopiaJ. Food Compos. Anal.20051880381710.1016/j.jfca.2004.09.008
+
+[180] 180.MaG.JinY.PiaoJ.KokF.GuusjeB.JacobsenE.Phytate, calcium, iron, and zinc contents and their molar ratios in foods commonly consumed in chinaJ. Agric. Food Chem.200553102851029010.1021/jf052051r16366728

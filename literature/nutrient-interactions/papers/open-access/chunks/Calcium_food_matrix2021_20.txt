@@ -1,0 +1,11 @@
+Название: Calcium Absorption from Food Products: Food Matrix Effects
+Авторы: Blerina Shkembi, Thom Huppertz
+Журнал: Nutrients, 2021
+DOI: https://doi.org/10.3390/nu14010180   PMID: 35011055   PMC: PMC8746734
+Лицензия: CC BY 4.0 (открытый доступ). © 2021 by the authors.
+Файл — текстовая версия JATS XML из Europe PMC: изменён только формат (таблицы и рисунки упрощены до текста). Оригинал — в ../xml/.
+
+Чанк 20 из 20: References (часть 6)
+============================================================
+
+[159] 159. van RossumC.T.M. Buurma-RethansE.J.M. DinnissenC.S. BeukersM.H. BrantsH.A.M. DekkersA.L.M. OckéM.C. The Diet of the Dutch: Results of the Dutch National Food Consumption Survey 2012–2016National Institute for Public Health and the Environment RIVMBilthoven, The Netherlands2020
