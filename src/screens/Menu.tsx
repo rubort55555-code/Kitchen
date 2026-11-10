@@ -2,12 +2,14 @@
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { Sheet } from "../components/ui";
 import { NO_FILTERS, RecipeFilters, filterRecipes, kindOf, type Filters } from "../components/RecipeFilters";
-import { setSettings, useStore } from "../lib/store";
-import { addEntry, autoFill, dayShort, dayTitle, entriesFor, pruneOld, recipesInPlan, removeEntry, restorePlan, toggleDone, weekDays } from "../lib/plan";
+import { getState, setSettings, useStore } from "../lib/store";
+import { addEntry, autoFill, setGarnish, dayShort, dayTitle, entriesFor, pruneOld, recipesInPlan, removeEntry, restorePlan, toggleDone, weekDays } from "../lib/plan";
 import { addMany, missingFor, restoreShop, shopList } from "../lib/shop";
 import { compileRules, checkRecipe, neverFor } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
 import { autoMenu } from "../lib/automenu";
+import { garnishNeed, isGarnish, orderByHome, suitableGarnishes } from "../lib/garnish";
+import { recipeNutrition } from "../lib/recipeNutrition";
 import { CUISINES, cuisineOf } from "../lib/cuisine";
 import type { Slot } from "../lib/types";
 import { SLOTS } from "../lib/types";
@@ -142,6 +144,23 @@ export function Menu() {
                   <button className="dish empty" onClick={() => openSheet({ kind: "pick", date: d, slot })}>+ Добавить</button>
                 )}
               </div>
+              {e && (() => {
+                const mr = e.recipeId ? st.recipes.find((r) => r.id === e.recipeId) : undefined;
+                const need = mr ? garnishNeed(mr, e.slot) : "none";
+                if (need === "none") return null;
+                return e.garnish ? (
+                  <div className="meal side">
+                    <span className="slot">+ гарнир</span>
+                    <button className="dish" onClick={() => openSheet({ kind: "garnish", entryId: e.id })}>{e.garnish.name}</button>
+                    <button className="ib" aria-label={`Убрать гарнир: ${e.garnish.name}`} onClick={() => setGarnish(e.id, undefined)}>✕</button>
+                  </div>
+                ) : (
+                  <div className="meal side">
+                    <span className="slot">+ гарнир</span>
+                    <button className={"dish empty" + (need === "required" ? " need" : "")} onClick={() => openSheet({ kind: "garnish", entryId: e.id })}>{need === "required" ? "Выбрать гарнир (нужен к этому блюду)" : "Выбрать гарнир"}</button>
+                  </div>
+                );
+              })()}
               {e && ([["side", "+ салат"], ["sweet", "+ десерт"]] as const).map(([k, label]) => e[k] && (
                 <div key={k} className="meal side">
                   <span className="slot">{label}</span>
@@ -178,7 +197,16 @@ export function PickSheet({ date, slot }: { date: string; slot: Slot }) {
   // На завтрак сразу показываем завтраки, если они есть; фильтр можно сбросить
   const [flt, setFlt] = useState<Filters>(() => (slot === "завтрак" && st.recipes.some((r) => kindOf(r) === "завтрак") ? { ...NO_FILTERS, kind: "завтрак" } : NO_FILTERS));
   const rows = filterRecipes(ok, flt);
-  const pick = (name: string, id?: string) => { addEntry(date, slot, name, id); closeSheet(); toast(`${cap(slot)}, ${dayTitle(date).toLowerCase()}: ${name}`); };
+  const pick = (name: string, id?: string) => {
+    addEntry(date, slot, name, id);
+    closeSheet();
+    toast(`${cap(slot)}, ${dayTitle(date).toLowerCase()}: ${name}`);
+    // К основному блюду сразу предлагаем выбрать гарнир
+    const r = id ? st.recipes.find((x) => x.id === id) : undefined;
+    const e = (st.settings.plan || []).find((x) => x.date === date && x.slot === slot);
+    const entry = (getState().settings.plan || []).find((x) => x.date === date && x.slot === slot) || e;
+    if (r && entry && ["required", "default"].includes(garnishNeed(r, slot))) openSheet({ kind: "garnish", entryId: entry.id });
+  };
   return (
     <Sheet title={`${cap(slot)} · ${dayTitle(date)}`}>
       <label className="f" htmlFor="free">Вписать своё блюдо</label>
@@ -210,6 +238,45 @@ export function PickSheet({ date, slot }: { date: string; slot: Slot }) {
           {rows.length > limit && <button className="btn sec" onClick={() => setLimit(limit + 50)}>Показать ещё ({rows.length - limit})</button>}
         </div>
       )}
+    </Sheet>
+  );
+}
+
+/** Выбор гарнира к блюду меню: только подходящие; вверху те, продукты для которых есть дома. */
+export function GarnishPick({ entryId }: { entryId: string }) {
+  const st = useStore((s) => s);
+  const e = (st.settings.plan || []).find((x) => x.id === entryId);
+  const main = e?.recipeId ? st.recipes.find((r) => r.id === e.recipeId) : undefined;
+  const rows = useMemo(() => {
+    if (!main) return [];
+    const compiled = compileRules(st.settings.rules, st.settings.customCatalog, st.settings.members);
+    const who = st.settings.members.map((m) => m.id);
+    return orderByHome(suitableGarnishes(main, st.recipes.filter(isGarnish))
+      .filter((g) => checkRecipe(g, compiled, who).verdict !== "hidden")
+      .map((g) => ({ g, s: recipeStatus(g, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings)), n: recipeNutrition(g) })));
+  }, [st, main]);
+  if (!e || !main) return <Sheet title="Гарнир"><p className="empty muted">Блюдо не найдено.</p></Sheet>;
+  const need = garnishNeed(main, e.slot);
+  const choose = (g?: { id: string; name: string }) => { setGarnish(e.id, g); closeSheet(); if (g) toast(`Гарнир: ${g.name}`); };
+  return (
+    <Sheet title="Гарнир">
+      <p className="small mt0">К блюду «{main.name}». Показаны только гарниры, которые к нему подходят; сверху те, для которых продукты есть дома.</p>
+      {need === "required" && <div className="issue little small">К этому блюду гарнир обязателен: без него порция получится слишком лёгкой и несбалансированной.</div>}
+      {rows.length === 0 ? (
+        <p className="empty muted">Подходящих гарниров в рецептах нет или все они под запретом по вашим ограничениям.</p>
+      ) : (
+        <div className="list" style={{ background: "var(--card2)" }}>
+          {rows.map(({ g, s, n }) => (
+            <button key={g.id} className="li" style={{ background: "var(--card2)" }} onClick={() => choose({ id: g.id, name: g.name })} aria-pressed={e.garnish?.id === g.id}>
+              <span className="ico">{e.garnish?.id === g.id ? "✅" : "🍚"}</span>
+              <div className="main"><div className="name">{g.name}</div><div className="meta">{n ? `${Math.round(n.perServing.kcal)} ккал на порцию · ` : ""}{s.missing.length ? `нет: ${s.missing.slice(0, 2).join(", ")}${s.missing.length > 2 ? "…" : ""}` : "всё есть дома"}{s.urgent ? " · спасает продукты" : ""}</div></div>
+              <span className={"pct" + (s.percent === 100 ? " full" : "")}>{s.percent}%</span>
+            </button>
+          ))}
+        </div>
+      )}
+      {e.garnish && <button className="btn ghost" onClick={() => choose(undefined)}>Без гарнира</button>}
+      {!e.garnish && need !== "required" && <button className="btn ghost" onClick={() => closeSheet()}>Без гарнира</button>}
     </Sheet>
   );
 }

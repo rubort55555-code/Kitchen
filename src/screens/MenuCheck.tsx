@@ -59,7 +59,7 @@ export function MenuCheck({ days }: { days: string[] }) {
                 const p = portionOf(e, cur.m.id);
                 return (
                   <div key={e.id} className="arow">
-                    <span>{e.name}</span>
+                    <span>{e.name}{e.garnish ? <small className="muted"> + {e.garnish.name}</small> : ""}</span>
                     <span className="wbtn">
                       <button className="chip" aria-label={`Меньше: ${e.name}`} disabled={p <= PORTION_MIN} onClick={() => setPortion(e.id, cur.m.id, p - PORTION_STEP)}>−</button>
                       <b style={{ margin: "0 6px" }}>{f(p)}</b>

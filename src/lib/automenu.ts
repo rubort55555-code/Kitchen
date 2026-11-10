@@ -40,8 +40,8 @@ export function autoMenu(start: string, slots: Slot[], only?: string): AutoMenuR
   if (!st.recipes.some(allowed)) return { added: 0, empty: 0, people: people.length, noPeople: false, noRecipes: true };
   const res = autoPlan({ recipes: st.recipes, allowed, bonus, days, slots, fixed, people });
   const next: PlanEntry[] = plan.map((e) => {
-    const p = res.portions[e.id];
-    return p ? { ...e, portions: { ...(e.portions || {}), ...p } } : e;
+    const p = res.portions[e.id], g = res.garnishes[e.id];
+    return p || g ? { ...e, ...(p ? { portions: { ...(e.portions || {}), ...p } } : {}), ...(g ? { garnish: g } : {}) } : e;
   });
   for (const e of res.added) next.push({ ...e, portions: res.portions[e.id] });
   setSettings({ plan: next });

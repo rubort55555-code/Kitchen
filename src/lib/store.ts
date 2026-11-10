@@ -335,7 +335,7 @@ export async function seedBase() {
     // Рецепты, которых больше нет в базе, убираем (личное и то, что в меню, остаётся)
     if (!Array.isArray(index) && Array.isArray(index.ids) && index.ids.length && index.ids.length === index.total) {
       const sigs0 = (await db.getKv<Record<string, string>>("baseSigs")) || {};
-      const keep = new Set(state.settings.plan.flatMap((e) => [e.recipeId, e.side?.id, e.sweet?.id]).filter((x): x is string => !!x));
+      const keep = new Set(state.settings.plan.flatMap((e) => [e.recipeId, e.garnish?.id, e.side?.id, e.sweet?.id]).filter((x): x is string => !!x));
       const gone = staleBase(state.recipes, new Set<string>(index.ids), sigs0, keep);
       if (gone.length && !stale()) {
         await db.apply([{ store: "recipes", del: gone }]);
@@ -532,8 +532,12 @@ export function syncPlanMeal(e: PlanEntry, done: boolean) {
   const r = state.recipes.find((x) => x.id === e.recipeId);
   if (!r) return;
   const who = diaryWho();
-  const m = mealFromRecipe(r, e.portions?.[who] ?? 1, e.date, e.slot, who);
-  if (m) addMeals([{ ...m, planEntryId: e.id }]);
+  const servings = e.portions?.[who] ?? 1;
+  const m = mealFromRecipe(r, servings, e.date, e.slot, who);
+  // Гарнир идёт вместе с блюдом: порция та же
+  const gr = e.garnish ? state.recipes.find((x) => x.id === e.garnish!.id) : undefined;
+  const g = gr ? mealFromRecipe(gr, servings, e.date, e.slot, who) : null;
+  addMeals([...(m ? [{ ...m, planEntryId: e.id }] : []), ...(g ? [{ ...g, planEntryId: e.id }] : [])]);
 }
 
 // ---------- копия данных ----------

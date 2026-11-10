@@ -9,6 +9,7 @@ import { assess, type Row } from "./assess";
 import type { BodyProfile, Plan } from "./nutrition";
 import { checkRecipe, compileRules } from "./exclusions";
 import { proteinOf } from "./plan";
+import { garnishNeed } from "./garnish";
 
 export const PORTION_MIN = 0.5;
 export const PORTION_MAX = 2;
@@ -34,6 +35,8 @@ export function menuMeals(entries: PlanEntry[], recipes: Recipe[], who: string):
   };
   for (const e of entries) {
     add(e.recipeId, e.name, portionOf(e, who), e);
+    // Гарнир идёт вместе с блюдом: порция та же
+    if (e.garnish) add(e.garnish.id, e.garnish.name, portionOf(e, who), e);
     if (e.side) add(e.side.id, e.side.name, 1, e);
     if (e.sweet) add(e.sweet.id, e.sweet.name, 1, e);
   }
@@ -45,9 +48,17 @@ const sum = (ms: Meal[], k: "kcal" | "protein" | "fat" | "carbs") => ms.reduce((
 export interface Fit { portions: Record<string, number>; kcal: number; diff: number }
 /** Подбор порций основных блюд одного дня под цель по калориям (шаг 0,25, от 0,5 до 2). Салат и десерт остаются одной порцией. */
 export function fitDay(entries: PlanEntry[], recipes: Recipe[], who: string, plan: Plan): Fit | null {
-  const mains = entries.filter((e) => e.recipeId && mealFromRecipe(recipes.find((r) => r.id === e.recipeId) as Recipe, 1, e.date, e.slot, who));
+  const mealAt = (id: string | undefined, e: PlanEntry) => { const r = id ? recipes.find((x) => x.id === id) : undefined; return r ? mealFromRecipe(r, 1, e.date, e.slot, who) : null; };
+  // Блюдо вместе с гарниром на одну порцию
+  const unit = (e: PlanEntry) => {
+    const m = mealAt(e.recipeId, e);
+    if (!m) return null;
+    const g = e.garnish ? mealAt(e.garnish.id, e) : null;
+    return { kcal: (m.n.kcal || 0) + (g?.n.kcal || 0), protein: (m.n.protein || 0) + (g?.n.protein || 0) };
+  };
+  const mains = entries.filter((e) => e.recipeId && unit(e));
   if (!mains.length) return null;
-  const perOne = new Map(mains.map((e) => [e.id, mealFromRecipe(recipes.find((r) => r.id === e.recipeId)!, 1, e.date, e.slot, who)!.n]));
+  const perOne = new Map(mains.map((e) => [e.id, unit(e)!]));
   const extras = entries.flatMap((e) => [e.side, e.sweet].filter(Boolean).map((x) => mealFromRecipe(recipes.find((r) => r.id === x!.id) as Recipe, 1, e.date, e.slot, who)).filter(Boolean) as Meal[]);
   const fixed = sum(extras, "kcal");
   const T = plan.kcal;
@@ -114,7 +125,7 @@ export function evaluateMenu(entries: PlanEntry[], dates: string[], recipes: Rec
   // 1. Запреты
   const bad: string[] = [];
   const seen = new Set<string>();
-  for (const e of mine) for (const [id, name] of [[e.recipeId, e.name], [e.side?.id, e.side?.name], [e.sweet?.id, e.sweet?.name]] as [string | undefined, string | undefined][]) {
+  for (const e of mine) for (const [id, name] of [[e.recipeId, e.name], [e.garnish?.id, e.garnish?.name], [e.side?.id, e.side?.name], [e.sweet?.id, e.sweet?.name]] as [string | undefined, string | undefined][]) {
     const r = id ? recipes.find((x) => x.id === id) : undefined;
     if (!r || !name) continue;
     const res = checkRecipe(r, compiled, [member.id]);
@@ -150,12 +161,17 @@ export function evaluateMenu(entries: PlanEntry[], dates: string[], recipes: Rec
   const mainEntries = mine.filter((e) => e.recipeId && (e.slot === "обед" || e.slot === "ужин"));
   if (mainEntries.length >= 6 && mainEntries.filter((e) => proteinOf(recipes.find((r) => r.id === e.recipeId) as Recipe) === "рыба").length < 2) variety.push("Рыбы меньше двух раз за неделю");
 
+  for (const e of mine) {
+    const r = e.recipeId ? recipes.find((x) => x.id === e.recipeId) : undefined;
+    if (r && !e.garnish && garnishNeed(r, e.slot) === "required") variety.push(`К «${e.name}» нужен гарнир`);
+  }
+
   const levels: Level[] = [
     { n: 1, title: "Запреты", ok: !bad.length, items: bad },
     { n: 2, title: "Калории и БЖУ каждый день", ok: dayRes.length > 0 && dayRes.every((d) => d.ok), items: dayRes.filter((d) => !d.ok).map((d) => `${d.date}: ${d.pct}% калорий${d.proteinOk ? "" : ", белка мало"}${d.fatOk ? "" : ", жиры вне нормы"}${d.carbsOk ? "" : ", углеводы вне нормы"}`) },
     { n: 3, title: "Пределы «не больше»", ok: limits.every((r) => r.status === "ok"), items: limits.filter((r) => r.status !== "ok").map((r) => `${r.title}: в среднем ${r.v} ${r.unit} при пределе ${r.target}`) },
     { n: 4, title: "Витамины, минералы, клетчатка", ok: lacking.length === 0, items: lacking.map((r) => `${r.title}: ${r.pct}% нормы`) },
-    { n: 5, title: "Разнообразие", ok: variety.length === 0, items: variety },
+    { n: 5, title: "Разнообразие и гарниры", ok: variety.length === 0, items: variety },
   ];
   return { days: dayRes.length, unknown, dayRes, limits, micro, lacking, noData, levels, ok: levels.slice(0, 4).every((l) => l.ok) };
 }

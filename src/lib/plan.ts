@@ -7,6 +7,7 @@ import { recipeStatus } from "./match";
 import { addDays, norm, parseYmd, uid, ymd } from "./util";
 import { parseAnswer } from "./claude";
 import { cuisineOf } from "./cuisine";
+import { garnishClass, garnishNeed, isGarnish, suitableGarnishes } from "./garnish";
 
 const DAY_SHORT = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
 const DAY_LONG = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
@@ -43,6 +44,10 @@ export const toggleDone = (id: string) => {
   save(planList().map((x) => (x.id === id ? { ...x, done: !x.done } : x)));
   if (e) syncPlanMeal(e, !e.done); // отметка в меню ↔ запись в дневнике питания
 };
+/** Поставить гарнир к блюду меню или убрать (g = undefined). */
+export function setGarnish(id: string, g: { id: string; name: string } | undefined) {
+  save(planList().map((x) => (x.id === id ? { ...x, garnish: g } : x)));
+}
 const snap = (x: number) => Math.min(2, Math.max(0.5, Math.round(x * 4) / 4));
 /** Порция основного блюда меню для человека (0,5–2, шаг 0,25). */
 export function setPortion(id: string, who: string, portion: number) {
@@ -195,6 +200,26 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
       added++;
     }
   }
+  // Гарнир ко всем основным блюдам, которым он нужен (кроме супов и блюд с крахмалом внутри): из подходящих — тот, продукты для которого есть дома,
+  // и не один и тот же вид подряд
+  const garnishes = st.recipes.filter((r) => isGarnish(r) && checkRecipe(r, compiled, who).verdict === "ok");
+  if (garnishes.length) {
+    const gScore = new Map(garnishes.map((g) => { const x = recipeStatus(g, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings)); return [g.id, x.urgent * 30 + x.percent * 0.4] as const; }));
+    const used = new Map<string, number>();
+    const order = plan.map((x, i) => ({ x, i })).filter(({ x }) => days.includes(x.date)).sort((a, b) => a.x.date.localeCompare(b.x.date));
+    for (const { x: e, i } of order) {
+      if (e.garnish || !e.recipeId) continue;
+      const main = st.recipes.find((r) => r.id === e.recipeId);
+      if (!main || !["required", "default"].includes(garnishNeed(main, e.slot))) continue;
+      const opts = suitableGarnishes(main, garnishes);
+      if (!opts.length) continue;
+      const prev = plan.filter((x) => x.garnish && x.date === addDays(e.date, -1)).map((x) => garnishClass(garnishes.find((g) => g.id === x.garnish!.id) || ({} as Recipe)));
+      const best = opts.map((g) => ({ g, sc: (gScore.get(g.id) || 0) - (used.get(g.id) || 0) * 25 - (prev.includes(garnishClass(g)) ? 30 : 0) })).sort((a, b) => b.sc - a.sc)[0].g;
+      plan[i] = { ...e, garnish: { id: best.id, name: best.name } }; // новая запись: отмена «Заполнить» вернёт прежнюю
+      used.set(best.id, (used.get(best.id) || 0) + 1);
+      added++;
+    }
+  }
   // Салат к основному приёму пищи: хотя бы раз в день (к обеду, если его нет — к ужину)
   const salads = st.recipes.filter((r) => norm(r.kind || "") === "салат" && !/фрукт|банан|апельсин|груш/.test(norm(r.name)) && checkRecipe(r, compiled, who).verdict === "ok")
     .map((r) => ({ r, score: recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings)) }))
@@ -244,7 +269,7 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
 /** Рецепты, которые стоят в меню на эти дни (для списка покупок). */
 export function recipesInPlan(days: string[]): Recipe[] {
   const st = getState();
-  const ids = new Set(planList().filter((e) => days.includes(e.date) && !e.done).flatMap((e) => [e.recipeId, e.side?.id, e.sweet?.id]).filter(Boolean));
+  const ids = new Set(planList().filter((e) => days.includes(e.date) && !e.done).flatMap((e) => [e.recipeId, e.garnish?.id, e.side?.id, e.sweet?.id]).filter(Boolean));
   return st.recipes.filter((r) => ids.has(r.id));
 }
 

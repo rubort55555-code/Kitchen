@@ -10,7 +10,7 @@ import { AddProduct } from "./screens/AddProduct";
 import { ProductSheet } from "./screens/ProductSheet";
 import { AskClaude } from "./screens/AskClaude";
 import { Shop, BuySheet } from "./screens/Shop";
-import { PickSheet } from "./screens/Menu";
+import { GarnishPick, PickSheet } from "./screens/Menu";
 import { CookSheet } from "./screens/Cook";
 import { CookMode } from "./screens/CookMode";
 import { Revision } from "./screens/Revision";
@@ -48,6 +48,7 @@ function SheetView({ s }: { s: Sheet }) {
     case "overdue": return <Overdue />;
     case "intro": return <Intro />;
     case "news": return <NewsSheet />;
+    case "garnish": return <GarnishPick entryId={s.entryId} />;
     case "menucheck": return <MenuCheck days={s.days} />;
     case "consent": return <ConsentSheet which={s.which} />;
     case "diary": return <Diary date={s.date} />;

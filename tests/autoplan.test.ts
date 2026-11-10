@@ -6,6 +6,7 @@ import { planFor, type BodyProfile } from "../src/lib/nutrition";
 import { parseRecipeText } from "../tools/recipes.mjs";
 import type { PlanEntry, Recipe, Rule } from "../src/lib/types";
 import { checkRecipe, compileRules } from "../src/lib/exclusions";
+import { garnishClass, garnishFits, garnishNeed, isGarnish } from "../src/lib/garnish";
 let pass = 0, fail = 0;
 const ok = (name: string, c: boolean, extra?: unknown) => { if (c) pass++; else { fail++; console.log("FAIL", name, extra ?? ""); } };
 
@@ -34,6 +35,17 @@ ok("калории каждого дня в пределах ±5%", ev1.dayRes.e
 ok("белок каждого дня не ниже нормы", ev1.dayRes.every((d) => d.proteinOk));
 ok("жиры и углеводы в норме не менее чем в 5 днях из 7", okDays >= 5, okDays);
 ok("запретов нет", ev1.levels[0].ok);
+
+// Гарниры: к блюдам, где он обязателен или по умолчанию, — всегда; только подходящие; к остальным не ставим
+const byId = (id: string) => recipes.find((r) => r.id === id)!;
+const needy = r1.added.filter((e) => garnishNeed(byId(e.recipeId!), e.slot) !== "none");
+ok("в меню есть блюда, к которым возможен гарнир (обед и ужин не супы)", needy.length >= 5, needy.length);
+ok("к каждому такому блюду подобран гарнир", needy.every((e) => !!e.garnish), needy.filter((e) => !e.garnish).map((e) => e.name));
+ok("гарниры только из подходящих к блюду", r1.added.filter((e) => e.garnish).every((e) => isGarnish(byId(e.garnish!.id)) && garnishFits(byId(e.recipeId!), byId(e.garnish!.id))));
+ok("к супам и завтракам гарнир не ставится", r1.added.filter((e) => garnishNeed(byId(e.recipeId!), e.slot) === "none").every((e) => !e.garnish));
+ok("к блюдам с крахмалом внутри — только овощной гарнир", r1.added.filter((e) => e.garnish && garnishNeed(byId(e.recipeId!), e.slot) === "optional").every((e) => garnishClass(byId(e.garnish!.id)) === "овощи"));
+ok("один гарнир не больше трёх раз за неделю", (() => { const c = new Map<string, number>(); r1.added.forEach((e) => e.garnish && c.set(e.garnish.id, (c.get(e.garnish.id) || 0) + 1)); return !c.size || Math.max(...c.values()) <= 3; })());
+ok("гарнир не ставится отдельным блюдом меню", r1.added.every((e) => !isGarnish(byId(e.recipeId!))));
 
 // Результат лучше случайного меню (те же рецепты, без оптимизации)
 const rand = autoPlan({ recipes, allowed: () => true, days, slots: [...slots], fixed: [], people: [f], iterations: 0, seed: 3 });
@@ -67,6 +79,14 @@ ok("семья: порции у обоих", rf.added.every((e) => rf.portions[e
 ok("семья: у мужчины порции в среднем больше", (() => { const avg = (id: string) => rf.added.reduce((s, e) => s + rf.portions[e.id][id], 0) / rf.added.length; return avg("m2") !== avg("m1"); })());
 const evF = (id: string, b: BodyProfile, p: ReturnType<typeof person>) => evaluateMenu(rf.added.map((e) => ({ ...e, portions: rf.portions[e.id] })), days, recipes, { id, body: b }, p.plan, rulesFor([member("m1", "Аня", bodyF), member("m2", "Миша", bodyM)]));
 ok("семья: у каждого калории в пределах ±5% не менее чем в 5 днях из 7", evF("m1", bodyF, f).dayRes.filter((d) => d.kcalOk).length >= 5 && evF("m2", bodyM, m).dayRes.filter((d) => d.kcalOk).length >= 5, [evF("m1", bodyF, f).dayRes.map((d) => d.pct), evF("m2", bodyM, m).dayRes.map((d) => d.pct)]);
+
+// Стоящее блюдо без гарнира получает гарнир; гарнир, выбранный пользователем, не меняется
+const cut = recipes.find((r) => garnishNeed(r, "ужин") === "required")!;
+const mine = recipes.find((r) => isGarnish(r) && garnishFits(cut, r))!;
+const fx: PlanEntry[] = [{ id: "u1", date: days[1], slot: "ужин", name: cut.name, recipeId: cut.id }, { id: "u2", date: days[2], slot: "ужин", name: cut.name, recipeId: cut.id, garnish: { id: mine.id, name: mine.name } }];
+const r4 = autoPlan({ recipes, allowed: () => true, days, slots: [...slots], fixed: fx, people: [f], iterations: 3000 });
+ok("стоящему блюду без гарнира подобран гарнир", !!r4.garnishes["u1"] && garnishFits(cut, byId(r4.garnishes["u1"].id)), r4.garnishes);
+ok("выбранный пользователем гарнир не трогаем", !r4.garnishes["u2"]);
 
 // Нет подходящих блюд
 const none = autoPlan({ recipes, allowed: () => false, days, slots: [...slots], fixed: [], people: [f], iterations: 100 });

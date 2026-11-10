@@ -37,7 +37,7 @@ with sync_playwright() as p:
         pg.click('button:has-text("Насколько меню подходит")'); pg.wait_for_selector('.sheet[aria-label="Насколько меню подходит"]')
         sh = '.sheet[aria-label="Насколько меню подходит"]'
         t = pg.inner_text(sh)
-        ok(S + "экран: уровни 1–5 и норма человека", "1. Запреты" in t and "2. Калории и БЖУ каждый день" in t and "5. Разнообразие" in t and "ккал" in t, t[:300])
+        ok(S + "экран: уровни 1–5 и норма человека", "1. Запреты" in t and "2. Калории и БЖУ каждый день" in t and "5. Разнообразие и гарниры" in t and "ккал" in t, t[:300])
         ok(S + "экран: по дням есть блюда с порциями", pg.query_selector(sh + ' [aria-label^="Больше:"]') is not None)
         before = pg.inner_text(sh + " .card:nth-of-type(2)")
         pg.click(sh + ' [aria-label^="Больше:"]')
@@ -52,6 +52,21 @@ with sync_playwright() as p:
         pg.wait_for_selector(".toast:has-text('Подобрано блюд')", timeout=20000)
         ok(S + "автоподбор: сообщение с числом блюд и порциями", "Порции подогнаны под нормы" in pg.inner_text(".toast"), pg.inner_text(".toast"))
         ok(S + "автоподбор: в меню появились блюда", len(pg.query_selector_all(".dish:not(.empty)")) >= 14, len(pg.query_selector_all(".dish:not(.empty)")))
+        gl = pg.query_selector_all(".meal.side:has(.slot:has-text('гарнир')) .dish:not(.empty)")
+        ok(S + "автоподбор: гарниры стоят в меню (не меньше 5)", len(gl) >= 5, len(gl))
+        first = gl[0].inner_text()
+        gl[0].click(); pg.wait_for_selector('.sheet[aria-label="Гарнир"]')
+        gs = '.sheet[aria-label="Гарнир"]'
+        rows = pg.query_selector_all(gs + " .li")
+        ok(S + "выбор гарнира: список подходящих (не меньше 3)", len(rows) >= 3, len(rows))
+        ok(S + "выбор гарнира: текущий отмечен галочкой", pg.query_selector(gs + ' .li[aria-pressed="true"]') is not None)
+        names = [r.inner_text().split("\n")[1] if "\n" in r.inner_text() else r.inner_text() for r in rows]
+        other = [r for r in rows if r.get_attribute("aria-pressed") != "true"][0]
+        other_name = other.query_selector(".name").inner_text()
+        other.click(); pg.wait_for_selector(".toast:has-text('Гарнир:')")
+        ok(S + "выбор гарнира: выбранный стал гарниром блюда", other_name in pg.inner_text(".screen"), other_name)
+        pg.click('button[aria-label^="Убрать гарнир"]')
+        ok(S + "гарнир можно убрать, и тогда видна кнопка «Выбрать гарнир»", pg.query_selector("text=Выбрать гарнир") is not None)
         pg.click('button:has-text("Насколько меню подходит")'); pg.wait_for_selector(sh)
         ok(S + "после автоподбора запреты и калории в порядке", "✅ 1. Запреты" in pg.inner_text(sh) and "2. Калории и БЖУ каждый день" in pg.inner_text(sh), pg.inner_text(sh)[:300])
         days_ok = pg.eval_on_selector_all(sh + " h4.nut-h", "els => els.filter(e => e.textContent.includes('✅')).length")
