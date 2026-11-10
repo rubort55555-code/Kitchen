@@ -1,6 +1,8 @@
 // Журнал веса и талии: форма замера, график, изменение за неделю и месяц.
 import { useMemo, useState } from "react";
-import { addMeasure, deleteMeasure, measuresOf, useStore } from "../lib/store";
+import { addMeasure, deleteMeasure, measuresOf, setSettings, useStore } from "../lib/store";
+import { applyCheck, goalCheck } from "../lib/goalcheck";
+import type { Plan } from "../lib/nutrition";
 import { LIMITS, MEASURE_TITLE, changeOver, chartOf, seriesOf, trendPerWeek, type MeasureKey } from "../lib/body";
 import type { Member } from "../lib/types";
 import { ymd } from "../lib/util";
@@ -11,7 +13,7 @@ const sign = (x: number) => (x > 0 ? "+" : x < 0 ? "−" : "") + fmt(Math.abs(x)
 const dshort = (d: string) => new Date(d + "T12:00:00").toLocaleDateString("ru-RU", { day: "numeric", month: "short" });
 const num = (s: string) => { const n = Number(s.replace(",", ".")); return s.trim() && isFinite(n) ? n : undefined; };
 
-export function BodyLog({ m }: { m: Member }) {
+export function BodyLog({ m, plan }: { m: Member; plan: Plan }) {
   const list = useStore((s) => measuresOf(m.id, s.settings));
   const [k, setK] = useState<MeasureKey>("weight");
   const [open, setOpen] = useState(false);
@@ -22,6 +24,15 @@ export function BodyLog({ m }: { m: Member }) {
   const pts = useMemo(() => seriesOf(list, k), [list, k]);
   const chart = useMemo(() => chartOf(pts, 320, 120), [pts]);
   const week = changeOver(pts, 7), month = changeOver(pts, 30), trend = trendPerWeek(pts);
+
+  const settingsMembers = useStore((s) => s.settings.members);
+  const check = !quiet && m.body ? goalCheck(m.body, plan, list) : null;
+  function resolve(delta: number) {
+    if (!m.body) return;
+    const body = applyCheck(m.body, delta, ymd());
+    setSettings({ members: settingsMembers.map((x) => (x.id === m.id ? { ...x, body } : x)) });
+    toast(delta ? "Цель подстроена" : "Оставили как есть");
+  }
 
   function save() {
     const v = { weight: num(f.weight), waist: num(f.waist), hips: num(f.hips) };
@@ -61,6 +72,19 @@ export function BodyLog({ m }: { m: Member }) {
         </div>
       )}
       {!quiet && k === "weight" && pts.length >= 2 && trend === null && <p className="muted small">Тренд появится, когда будет не меньше трёх замеров за неделю и более: вес колеблется на 1–2 кг в течение дня.</p>}
+      {check && check.status !== "skip" && (
+        <div className={"goalcheck " + check.status}>
+          <b>Проверка цели раз в две недели</b>
+          <p className="small">{check.text}</p>
+          {(check.status === "stalled" || check.status === "too-fast" || check.status === "drift") && (
+            <div className="row">
+              {check.delta !== 0 && <button className="btn" onClick={() => resolve(check.delta)}>{check.delta > 0 ? "+" : "−"}{Math.abs(check.delta)} ккал в день</button>}
+              <button className="btn sec" onClick={() => resolve(0)}>Оставить как есть</button>
+            </div>
+          )}
+          <p className="muted small">Это эвристика приложения, не назначение врача. Вес колеблется на 1–2 кг в течение дня, поэтому ждём не меньше двух недель.</p>
+        </div>
+      )}
       <button className="link" onClick={() => setOpen(!open)} aria-expanded={open}>{open ? "Скрыть" : "Записать замер"}</button>
       {open && (
         <div className="bodyform">

@@ -1,5 +1,5 @@
 # Проверка журнала веса и талии в браузере: python3 tests/e2e_body.py
-import os, sys, threading
+import os, sys, threading, datetime
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from functools import partial
 from playwright.sync_api import sync_playwright
@@ -48,5 +48,19 @@ with sync_playwright() as p:
         pg.click(".bodyform .btn:has-text('Сохранить')"); pg.wait_for_selector(".toast")
         ok(S + "вес 5 кг не принимается", "от 20 до 400" in pg.inner_text(".toast"), pg.inner_text(".toast"))
         pg.reload(); pg.wait_for_selector(".bodylog") if False else None
+        # Подстройка цели: вес стоит три замера за 14 дней при цели «снижение»
+        today = datetime.date.today()
+        ds = [(today - datetime.timedelta(days=d)).isoformat() for d in (14, 7, 0)]
+        S2 = {**SETTINGS, "members": [{**SETTINGS["members"][0], "body": {"sex": "f", "born": 1991, "height": 165, "weight": 80, "goal": "lose"}}],
+              "measures": {"m1": [{"date": d, "weight": 80} for d in ds]}}
+        pg.evaluate(SEED, S2); pg.reload(); pg.wait_for_selector("h1")
+        pg.click('[aria-label^="Ещё: семья"]'); pg.click("text=Питание · проба"); pg.wait_for_selector(".goalcheck")
+        gc = pg.inner_text(".goalcheck")
+        ok(S + "проверка цели: вес стоит, предложено убавить", "почти не меняется" in gc and "ккал в день" in gc, gc)
+        kc0 = pg.inner_text(".nut-card .hero b")
+        pg.click(".goalcheck .btn:not(.sec)"); pg.wait_for_selector(".toast")
+        ok(S + "поправка применена", "Цель подстроена" in pg.inner_text(".toast"))
+        ok(S + "после применения — следующая проверка через 14 дней", "Следующая проверка" in pg.inner_text(".goalcheck"), pg.inner_text(".goalcheck"))
+        ok(S + "калорийность в карточке уменьшилась", pg.inner_text(".nut-card .hero b") != kc0, [kc0, pg.inner_text(".nut-card .hero b")])
         ok(S + "без ошибок в консоли", not errs, errs)
 n = sum(res); print(f"\nжурнал веса (браузер): {n} из {len(res)}"); sys.exit(0 if n == len(res) else 1)

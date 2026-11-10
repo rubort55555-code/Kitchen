@@ -80,6 +80,10 @@ export interface BodyProfile {
   day?: DayRoutine;
   workouts?: Workout[];
   goal: Goal;
+  /** Поправка к калорийности, ккал в день (±300): результат подстройки цели по динамике веса. */
+  adjust?: number;
+  /** Дата последней проверки цели (ГГГГ-ММ-ДД): следующая — через 14 дней. */
+  checkedAt?: string;
   pregnant?: boolean;
   lactating?: boolean;
   /** Этап: триместр беременности (t1–t3) или кормление грудью (l1 — 1–6 мес., l2 — 7–12 мес.); таблицы 19–20 МР. */
@@ -430,6 +434,9 @@ export interface Plan {
 }
 
 /** Полный расчёт норм для одного человека. null — расчёт для этого возраста пока не поддерживается. */
+/** Наибольшая накопленная поправка к калорийности по динамике веса, ккал в день. */
+export const ADJUST_MAX = 300;
+
 export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   const age = ageOf(p, now);
   if (age < 18 || age > 110 || p.height < 100 || p.weight < 30) return null;
@@ -471,6 +478,18 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
     kcal = tee + Math.min(tee * 0.1, 400);
     weekly = ((kcal - tee) * 7) / 7700;
     notes.push("Набирать вес лучше вместе с силовыми тренировками — тогда растут мышцы, а не жир.");
+  }
+
+  // Подстройка по динамике веса (только здоровым взрослым без беременности и кормления)
+  if (p.adjust && !stage && !hasHealthFlag(p.health) && bmi.level !== "low") {
+    const adj = Math.max(-ADJUST_MAX, Math.min(ADJUST_MAX, p.adjust));
+    const before = kcal;
+    kcal = Math.max(kcal + adj, floor, b);
+    if (goal === "lose") kcal = Math.min(kcal, tee);
+    if (kcal !== before) {
+      weekly = ((kcal - tee) * 7) / 7700;
+      notes.push(`Цель подстроена по динамике веса: ${kcal > before ? "+" : "−"}${Math.round(Math.abs(kcal - before))} ккал в день.`);
+    }
   }
 
   // Белок: доля калорий по МР (14 / 13 / 12,5 / 12%, после 65 лет — 14%)
