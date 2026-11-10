@@ -11,6 +11,7 @@ import { lookupOff, nameFor, type OffProduct } from "../lib/off";
 import { DRINKS, SOURCES, EVIDENCE, hintLevel, sourceLevel, caffeineLimit, caffeineOf, interactionHints, type Drink } from "../lib/interactions";
 import { LEVEL_TEXT, ironDay, ironHints } from "../lib/iron";
 import { CA_TEXT, calciumDay, mineralHints } from "../lib/minerals";
+import { STATUS_TEXT, assess, drinksMl, type Row } from "../lib/assess";
 import { vitaminHints } from "../lib/vitamins";
 import { FAT_TEXT, fatSolubleDay, fatSolubleHints } from "../lib/fatsoluble";
 import { copyMeal, defaultGrams, dayView, hasMicroData, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
@@ -73,6 +74,8 @@ export function Diary({ date: start }: { date?: string }) {
   const recipes = useStore((s) => s.recipes);
   const e = view.eaten;
   const waterNorm = plan ? Math.round(plan.water * 1000) : 0;
+  const drinks = drinksMl(list);
+  const fluid = water + drinks;
   const bySlot = MEAL_SLOTS.map((s) => ({ s, items: list.filter((m) => m.slot === s) })).filter((x) => x.items.length);
   const cls = view.level === "over" ? "bad" : view.level === "ok" ? "good" : "";
 
@@ -116,15 +119,17 @@ export function Diary({ date: start }: { date?: string }) {
       <CombosBlock meals={list} recipes={recipes} limit={caffeineLimit(!!(member?.body?.pregnant || member?.body?.lactating))} />
       {plan && member?.body && <MicroBlock eaten={e} body={member.body} hasMeals={list.length > 0} noData={list.filter((m) => !hasMicroData(m)).length} total={list.length} />}
 
+      {plan && member?.body && <AssessCard date={date} who={who} plan={plan} body={member.body} />}
+
       <div className="card">
         <div className="wrow">
-          <span>💧 Вода: <b>{water} мл</b>{waterNorm ? ` из ≈ ${waterNorm} мл` : ""}</span>
+          <span>💧 Вода и напитки: <b>{fluid} мл</b>{waterNorm ? ` из ≈ ${waterNorm} мл` : ""}{drinks > 0 ? ` (в том числе напитки из записей: ${drinks} мл)` : ""}</span>
           <span className="wbtn">
             <button className="chip" aria-label="Минус стакан" onClick={() => addWater(date, -250, who)} disabled={!water}>−</button>
             <button className="chip" onClick={() => addWater(date, 250, who)}>+ стакан</button>
           </span>
         </div>
-        {waterNorm > 0 && <Bar v={water} max={waterNorm} cls="water" />}
+        {waterNorm > 0 && <Bar v={fluid} max={waterNorm} cls="water" />}
       </div>
 
       {bySlot.length === 0 && <p className="empty muted">В этот день ничего не записано.</p>}
@@ -147,6 +152,50 @@ export function Diary({ date: start }: { date?: string }) {
       <button className="btn ghost" onClick={repeat}>Повторить вчера</button>
       <p className="muted small">Калории блюд из рецептов — ориентировочные, по составу сырых продуктов. Блюдо из меню попадает сюда само, когда вы отмечаете «Приготовили».</p>
     </Sheet>
+  );
+}
+
+/** Оценка рациона по МР за день или за 7 дней: что в норме, чего мало, что выше предела. */
+function AssessCard({ date, who, plan, body }: { date: string; who: string; plan: import("../lib/nutrition").Plan; body: BodyProfile }) {
+  const [period, setPeriod] = useState<"day" | "week">("day");
+  const meals = useStore((s) => s.meals);
+  const settings = useStore((s) => s.settings);
+  const dates = useMemo(() => (period === "day" ? [date] : Array.from({ length: 7 }, (_, i) => addDays(date, -i))), [period, date]);
+  const a = useMemo(() => {
+    const list = dates.flatMap((d) => mealsOf(meals, d, who));
+    const water = dates.reduce((s, d) => s + waterOf(d, settings, who), 0);
+    return assess(list, plan, body, water);
+  }, [dates, meals, settings, who, plan, body]);
+  const R = ({ r }: { r: Row }) => (
+    <div className="arow"><span>{r.title}</span><span><b>{fmt(r.v)}</b> {r.mode === "max" ? "≤" : "из"} {fmt(r.target)} {r.unit}</span><span className={"pill st-" + r.status}>{r.status === "ok" && r.mode === "max" ? "в пределе" : STATUS_TEXT[r.status]}</span></div>
+  );
+  return (
+    <div className="card">
+      <h3>Оценка рациона по МР</h3>
+      <div className="seg" role="group" aria-label="Период">
+        <button aria-pressed={period === "day"} onClick={() => setPeriod("day")}>День</button>
+        <button aria-pressed={period === "week"} onClick={() => setPeriod("week")}>7 дней</button>
+      </div>
+      {!a ? <p className="muted small">Нет записей за выбранный период.</p> : (
+        <>
+          <p className="small" style={{ margin: "4px 0" }}>{a.good} из {a.total} показателей в норме{a.days > 1 || period === "week" ? ` · среднее за ${a.days} ${a.days === 1 ? "день" : a.days < 5 ? "дня" : "дней"} с записями` : ""}.</p>
+          {period === "week" && a.days < 3 && <div className="issue little small">⚠️ Записей мало: за {a.days} {a.days === 1 ? "день" : "дня"} вывод о неделе делать рано.</div>}
+          {a.macro.map((r) => <R key={r.key} r={r} />)}
+          {a.limits.map((r) => <R key={r.key} r={r} />)}
+          {a.water && <R r={a.water} />}
+          {a.noMicro > 0 && a.noMicro * 2 > a.records
+            ? <p className="muted small">Витамины и минералы не оцениваем: у {a.noMicro} из {a.records} записей нет данных о составе.</p>
+            : (
+              <details>
+                <summary>Витамины и минералы: {a.micro.filter((r) => r.status === "ok").length} из {a.micro.length} в норме</summary>
+                {a.noMicro > 0 && <p className="muted small">У {a.noMicro} из {a.records} записей нет данных — реальные значения выше.</p>}
+                {a.micro.map((r) => <R key={r.key} r={r} />)}
+              </details>
+            )}
+          <p className="muted small">Нормы — МР 2.3.1.0253-21. Показатели в границах: белки 85–130%, жиры 80–120%, углеводы 75–125% нормы. Сахара считаются все, с природными, поэтому порог в 2,5 раза выше нормы добавленного. Это ориентир, а не диагноз.</p>
+        </>
+      )}
+    </div>
   );
 }
 

@@ -538,3 +538,7 @@ select.inp { padding-right: 8px; }
 .goalcheck.stalled { border-left: 4px solid #6b7280; }
 .goalcheck.on-track { border-left: 4px solid var(--accent); }
 .goalcheck .row { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0; }
+.arow { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.pill.st-ok { background: rgba(31, 92, 63, 0.14); }
+.pill.st-near { background: rgba(185, 119, 14, 0.16); }
+.pill.st-low, .pill.st-over { background: rgba(176, 42, 42, 0.14); }

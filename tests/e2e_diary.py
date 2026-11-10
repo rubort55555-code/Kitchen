@@ -73,6 +73,11 @@ with sync_playwright() as p:
         sh = pg.inner_text(D)
         ok(S + "дневник: запись в списке с калориями", "Омлет классический" in sh and "1,5 порции" in sh and any(x in sh for x in ["Завтрак", "Обед", "Ужин", "Перекус"]), sh[:400])
         ok(S + "дневник: два человека", pg.query_selector(D + ' .chip:has-text("Аня")') is not None and pg.query_selector(D + ' .chip:has-text("Миша")') is not None)
+        ok(S + "оценка рациона: карточка и итог «из N показателей»", "Оценка рациона по МР" in pg.inner_text(D) and "показателей в норме" in pg.inner_text(D))
+        pg.click(D + ' .seg button:has-text("7 дней")')
+        ok(S + "оценка рациона: за 7 дней, мало записей — предупреждение", "вывод о неделе делать рано" in pg.inner_text(D), pg.inner_text(D)[:300])
+        pg.click(D + ' .seg button:has-text("День")')
+        ok(S + "оценка рациона: витамины и минералы раскрываются", pg.query_selector(D + " details summary:has-text('Витамины и минералы:')") is not None)
         ok(S + "дневник: заголовок «Сегодня»", "Сегодня" in sh)
         # витамины и минералы
         ok(S + "витамины: блок есть, показано, чего меньше всего", "Витамины и минералы" in pg.inner_text(D) and "Меньше всего пока:" in pg.inner_text(D), pg.inner_text(D)[:600])
