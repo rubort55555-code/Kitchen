@@ -11,6 +11,7 @@ import { lookupOff, nameFor, type OffProduct } from "../lib/off";
 import { DRINKS, SOURCES, EVIDENCE, hintLevel, sourceLevel, caffeineLimit, caffeineOf, interactionHints, type Drink } from "../lib/interactions";
 import { LEVEL_TEXT, ironDay, ironHints } from "../lib/iron";
 import { CA_TEXT, calciumDay, mineralHints } from "../lib/minerals";
+import { vitaminHints } from "../lib/vitamins";
 import { FAT_TEXT, fatSolubleDay, fatSolubleHints } from "../lib/fatsoluble";
 import { copyMeal, defaultGrams, dayView, hasMicroData, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
 import { addDays, cap, norm, ymd } from "../lib/util";
@@ -195,7 +196,7 @@ function MicroBlock({ eaten, body, hasMeals, noData, total }: { eaten: Record<Nu
 /** Кофеин за день против предела и подсказки по сочетаниям (что усваивается лучше или хуже). */
 function CombosBlock({ meals, limit, recipes }: { meals: Meal[]; limit: number; recipes: import("../lib/types").Recipe[] }) {
   const caf = caffeineOf(meals);
-  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...mineralHints(meals, { recipes }), ...fatSolubleHints(meals, { recipes }), ...interactionHints(meals, { caffeineLimit: limit })], [meals, limit, recipes]);
+  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...mineralHints(meals, { recipes }), ...fatSolubleHints(meals, { recipes }), ...vitaminHints(meals, { recipes }), ...interactionHints(meals, { caffeineLimit: limit })], [meals, limit, recipes]);
   const irons = useMemo(() => ironDay(meals, { recipes }), [meals, recipes]);
   const cas = useMemo(() => calciumDay(meals, { recipes }), [meals, recipes]);
   const fss = useMemo(() => fatSolubleDay(meals, { recipes }), [meals, recipes]);

@@ -40,6 +40,9 @@ export const SOURCES: Record<string, Source> = {
   hennigar2015: { id: "hennigar2015", cite: "Hennigar S.R. и др. Consumption of a calcium and vitamin D-fortified food product does not affect iron status during initial military training. Br J Nutr, 2015 (РКИ, 152 человека, 2000 мг кальция в день, 9 недель)" },
   ali2026: { id: "ali2026", cite: "Ali N.B. и др. Effect of calcium supplementation in pregnancy on maternal anemia and iron status: secondary analyses of two randomized trials in India and Tanzania. Am J Clin Nutr, 2026 (два РКИ, ≈11 000 в каждом; 500 против 1500 мг кальция — разницы по гемоглобину и анемии нет, кальций принимали отдельно от железа)" },
   belserrat2014: { id: "belserrat2014", cite: "Bel-Serrat S. и др. Factors that affect zinc bioavailability and losses in adult and elderly populations. Nutr Rev, 2014 (систематический обзор 87 работ; при молярном отношении фитат:цинк > 15 усвоение цинка снижается до 45% от контроля)" },
+  niklewicz2024: { id: "niklewicz2024", cite: "Niklewicz A. и др. A systematic review and meta-analysis of functional vitamin B12 status among adult vegans. Nutr Bull, 2024 (мета-анализ 17 исследований: у веганов ниже B12 в крови и выше гомоцистеин; добавки улучшают все показатели)" },
+  neufingerl2021: { id: "neufingerl2021", cite: "Neufingerl N., Eilander A. Nutrient intake and status in adults consuming plant-based diets compared to meat-eaters: a systematic review. Nutrients, 2022 (141 исследование: потребление и статус B12 ниже при растительном питании, у веганов самые низкие)" },
+  pawlak2013: { id: "pawlak2013", cite: "Pawlak R. и др. How prevalent is vitamin B12 deficiency among vegetarians? Nutr Rev, 2013 (обзор 18 работ с точными маркерами: дефицит у вегетарианцев в любых группах, у веганов чаще)" },
   efsa2015: { id: "efsa2015", cite: "EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific opinion on the safety of caffeine. EFSA Journal, 2015" },
 };
 
@@ -78,6 +81,7 @@ export const EVIDENCE: Record<string, Evidence> = {
   hansen2000: { design: "cohort", n: 34703 }, dai2015: { design: "cohort", n: 63257 },
   abioye2020: { design: "meta-small" }, belserrat2014: { design: "meta-small" },
   grinder2004: { design: "rct", n: 14 }, hennigar2015: { design: "rct", n: 152 }, ali2026: { design: "rct", n: 19000 },
+  niklewicz2024: { design: "meta-small" }, neufingerl2021: { design: "meta-small" }, pawlak2013: { design: "review" },
   efsa2015: { design: "regulatory" },
 };
 export const sourceLevel = (id: string): Level => levelOf(EVIDENCE[id] ?? { design: "mechanism" });
