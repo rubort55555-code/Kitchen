@@ -1,6 +1,7 @@
 // Экран «Питание» (пробная функция): профиль каждого члена семьи и личные нормы на день.
 import { Fragment, useMemo, useState } from "react";
 import { Header, Seg, Sheet } from "../components/ui";
+import { BodyLog } from "../components/BodyLog";
 import { setSettings, useStore } from "../lib/store";
 import { goPage } from "../lib/ui";
 import type { Member } from "../lib/types";
@@ -108,6 +109,7 @@ function PersonCard({ m, plan, onEdit }: { m: Member; plan: Plan | null; onEdit:
         <span>Вода</span><span>≈ {n1(plan.water)} л питья</span>
       </div>
       {plan.warnings.map((w, i) => <div key={i} className="issue small">⚠️ {w}</div>)}
+      <BodyLog m={m} />
       {hasHealthFlag(b.health) && <div className="issue small">🩺 Вы отметили состояние здоровья: приложение не строит план с дефицитом или набором калорий. Питание лучше обсудить с врачом.</div>}
       {!b.days?.length && <p className="muted small">Активность посчитана по умолчанию (сидячая работа). Нажмите «Изменить» и распишите обычный день — расчёт станет точнее.</p>}
       <button className="link" onClick={() => setMore(!more)} aria-expanded={more}>{more ? "Скрыть подробности" : "Подробнее: обмен, активность, витамины"}</button>

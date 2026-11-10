@@ -82,5 +82,17 @@ ok("блюдо без рецепта в дневник не пишется", get
 const bk = makeBackup();
 ok("копия данных включает дневник", Array.isArray(bk.meals) && bk.meals.length === getState().meals.length);
 
+// Журнал замеров
+import { addMeasure, deleteMeasure, measuresOf } from "../src/lib/store";
+setSettings({ members: [{ id: "m1", name: "Аня", allergies: [], dislikes: [], body: { sex: "f", born: 1991, height: 165, weight: 62, goal: "keep" } }] });
+addMeasure("m1", { date: "2026-11-01", weight: 61, waist: 74 });
+ok("замер: записан", measuresOf("m1").length === 1);
+ok("замер: свежий обновляет вес и талию в профиле", getState().settings.members[0].body!.weight === 61 && getState().settings.members[0].body!.waist === 74);
+addMeasure("m1", { date: "2026-10-01", weight: 65 });
+ok("замер: старый по дате профиль не трогает", getState().settings.members[0].body!.weight === 61 && measuresOf("m1")[0].date === "2026-10-01");
+deleteMeasure("m1", "2026-10-01");
+ok("замер: удаление", measuresOf("m1").length === 1);
+ok("замер: у другого человека пусто и это один и тот же массив", measuresOf("m2") === measuresOf("m3"));
+
 console.log(`diary-store: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

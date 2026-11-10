@@ -1,4 +1,5 @@
 // Состояние приложения и все действия с данными. Каждое действие сразу сохраняется в телефон.
+import { removeMeasure, upsertMeasure, type Measure } from "./body";
 import { useSyncExternalStore } from "react";
 import * as db from "./db";
 import type { CatalogItem, LogEntry, Meal, PlanEntry, Place, Product, Reason, Recipe, Settings, Unit } from "./types";
@@ -466,6 +467,23 @@ export function repeatDay(from: string, to: string, who?: string): Meal[] {
   return copies;
 }
 /** Вода за день одного человека, мл (ключ — «id человека|дата»). */
+/** Записать замер члену семьи. Если это самая свежая дата, обновляет и текущие вес, талию, бёдра в профиле — нормы пересчитаются сами. */
+export function addMeasure(who: string, m: Measure) {
+  const list = upsertMeasure(state.settings.measures?.[who] || [], m);
+  const measures = { ...(state.settings.measures || {}), [who]: list };
+  const latest = list[list.length - 1];
+  const members = state.settings.members.map((x) => {
+    if (x.id !== who || !x.body || !latest || latest.date !== m.date) return x;
+    return { ...x, body: { ...x.body, ...(latest.weight !== undefined ? { weight: latest.weight } : {}), ...(latest.waist !== undefined ? { waist: latest.waist } : {}), ...(latest.hips !== undefined ? { hips: latest.hips } : {}) } };
+  });
+  setSettings({ measures, members });
+}
+export function deleteMeasure(who: string, date: string) {
+  setSettings({ measures: { ...(state.settings.measures || {}), [who]: removeMeasure(state.settings.measures?.[who] || [], date) } });
+}
+const NO_MEASURES: Measure[] = []; // один и тот же пустой массив: иначе подписка на хранилище видит «новое значение» при каждой проверке
+export const measuresOf = (who: string, s: Settings = state.settings): Measure[] => s.measures?.[who] || NO_MEASURES;
+
 const waterKey = (who: string, date: string) => `${who}|${date}`;
 export const waterOf = (date: string, s: Settings = state.settings, who: string = diaryWho(s)) => s.water?.[waterKey(who, date)] || 0;
 export function addWater(date: string, ml: number, who: string = diaryWho()) {

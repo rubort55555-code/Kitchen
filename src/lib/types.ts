@@ -254,6 +254,8 @@ export interface Settings {
   sunContrast?: boolean;
   /** Выпитая вода, мл: «id человека|ГГГГ-ММ-ДД» → мл. */
   water?: Record<string, number>;
+  /** Журнал замеров: id члена семьи → вес, талия, бёдра по датам. */
+  measures?: Record<string, import("./body").Measure[]>;
   /** Чей дневник открыт (id члена семьи). */
   diaryWho?: string;
   /** Пробные функции: включены ли (по умолчанию — да). */
