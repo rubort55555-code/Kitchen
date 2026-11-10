@@ -7,6 +7,7 @@ import { addEntry, autoFill, dayShort, dayTitle, entriesFor, pruneOld, recipesIn
 import { addMany, missingFor, restoreShop, shopList } from "../lib/shop";
 import { compileRules, checkRecipe, neverFor } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
+import { autoMenu } from "../lib/automenu";
 import { CUISINES, cuisineOf } from "../lib/cuisine";
 import type { Slot } from "../lib/types";
 import { SLOTS } from "../lib/types";
@@ -56,6 +57,22 @@ export function Menu() {
       toast(`Поставлено ${r.added} ${plural(r.added, "блюдо", "блюда", "блюд")}` + (n ? `; докупить: ${n} в списке покупок` : ""), () => { restorePlan(before); restoreShop(shopBefore); });
     }
   }
+  const [busy, setBusy] = useState(false);
+  const hasNorms = st.settings.members.some((m) => m.body);
+  // Подбор под нормы: пустые места меню заполняются блюдами, под каждого человека подбираются порции
+  function fitToNorms() {
+    setBusy(true);
+    setTimeout(() => {
+      const before = plan;
+      const r = autoMenu(start, slots, mode === "day" ? day : undefined);
+      setBusy(false);
+      if (r.noPeople) return void toast("Сначала заполните рост, вес и цель в «Ещё → Питание».");
+      if (r.noRecipes) return void toast("Нет подходящих рецептов: проверьте ограничения и кухню.");
+      const shopBefore = shopList();
+      const n = addMany(missingFor(recipesInPlan(future)), "Меню");
+      toast(`Подобрано блюд: ${r.added}${r.empty ? `, не нашлось для ${r.empty} мест` : ""}. Порции подогнаны под нормы${n ? `; докупить: ${n}` : ""}`, () => { restorePlan(before); restoreShop(shopBefore); });
+    }, 30);
+  }
   function clearWeek() {
     const before = plan;
     restorePlan(plan.filter((e) => !days.includes(e.date)));
@@ -92,6 +109,7 @@ export function Menu() {
           {CUISINES.filter((c) => cuisCounts.get(c) || c === cuis).map((c) => <option key={c} value={c}>{c} ({cuisCounts.get(c) || 0})</option>)}
         </select>
       </label>
+      {hasNorms && <button className="btn" style={{ marginTop: 6 }} disabled={busy} onClick={fitToNorms}>{busy ? "Подбираю…" : "🎯 Подобрать под мои нормы"}</button>}
       <div className="row2" style={{ marginTop: 6 }}>
         <button className="btn sec" onClick={fill}>Заполнить из моих рецептов</button>
         <button className="btn sec" onClick={() => openSheet(mode === "day" ? { kind: "ask", week: day, day } : { kind: "ask", week: start })}>✨ Составить с Claude</button>

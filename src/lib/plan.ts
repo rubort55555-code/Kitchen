@@ -102,7 +102,7 @@ function breakfastType(r: Recipe): string {
 }
 
 /** Подходит ли рецепт к приёму пищи: завтрак — завтраки; обед — суп или основное; ужин — основное блюдо. */
-function fitsSlot(r: Recipe, slot: Slot): boolean {
+export function fitsSlot(r: Recipe, slot: Slot): boolean {
   const role = roleOf(r);
   if (slot === "завтрак") return role === "завтрак";
   if (slot === "обед") return role === "суп" || role === "основное";
