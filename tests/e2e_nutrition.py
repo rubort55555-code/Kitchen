@@ -35,6 +35,8 @@ with sync_playwright() as p:
         more(pg)
         ok(S + "в «Ещё» есть «Питание · проба»", pg.query_selector("text=Питание · проба") is not None)
         pg.click("text=Питание · проба"); pg.wait_for_selector("text=Пробная функция")
+        # Данные о здоровье вносятся только с согласия: подтверждаем его, как это сделал бы человек
+        if pg.query_selector("button:has-text('Согласен(на) вносить данные')"): pg.click("button:has-text('Согласен(на) вносить данные')")
         ok(S + "два члена семьи — кнопки «Заполнить»", len(pg.query_selector_all("button:has-text('Заполнить')")) == 2)
 
         # Первый: женщина, 1991, 165/62, офис, снизить вес

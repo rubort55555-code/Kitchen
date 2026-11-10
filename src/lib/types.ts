@@ -188,7 +188,11 @@ export interface PlanEntry {
   slot: Slot;
   name: string;
   recipeId?: string;
+  /** Порции основного блюда по людям (id члена семьи → 0,5…2, шаг 0,25); нет записи — одна порция. */
+  portions?: Record<string, number>;
   done?: boolean;
+  /** Гарнир к основному блюду (рис, гречка, картофель, овощи…); порция гарнира идёт вместе с порцией блюда. */
+  garnish?: { id: string; name: string };
   /** Салат или лёгкая добавка к основному блюду. */
   side?: { id: string; name: string };
   /** Десерт к ужину (2–3 раза в неделю, по желанию). */

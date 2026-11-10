@@ -542,3 +542,4 @@ select.inp { padding-right: 8px; }
 .pill.st-ok { background: rgba(31, 92, 63, 0.14); }
 .pill.st-near { background: rgba(185, 119, 14, 0.16); }
 .pill.st-low, .pill.st-over { background: rgba(176, 42, 42, 0.14); }
+.meal .dish.empty.need { color: var(--bad); font-weight: 700; }

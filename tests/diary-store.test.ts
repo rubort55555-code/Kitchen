@@ -94,6 +94,21 @@ deleteMeasure("m1", "2026-10-01");
 ok("замер: удаление", measuresOf("m1").length === 1);
 ok("замер: у другого человека пусто и это один и тот же массив", measuresOf("m2") === measuresOf("m3"));
 
+// Гарнир идёт в дневник вместе с блюдом
+{
+  const gr = parseRecipeText(readFileSync("recipes/06-garniry.txt", "utf8"), "06-garniry.txt").recipes as Recipe[];
+  saveRecipes(gr);
+  const rice = gr.find((r) => r.name === "Рис отварной рассыпчатый")!;
+  const e = { id: "pe-g1", date: today, slot: "ужин" as const, name: omelet.name, recipeId: omelet.id, garnish: { id: rice.id, name: rice.name }, portions: { m1: 1.5 } };
+  setSettings({ plan: [e] });
+  syncPlanMeal(e, true);
+  const mine = getState().meals.filter((m) => m.planEntryId === "pe-g1");
+  ok("гарнир: в дневник попали блюдо и гарнир", mine.length === 2 && mine.some((m) => m.name === rice.name), mine.map((m) => m.name));
+  ok("гарнир: порция та же, что у блюда (1,5)", mine.every((m) => m.servings === 1.5));
+  syncPlanMeal(e, false);
+  ok("гарнир: отмена убирает обе записи", getState().meals.filter((m) => m.planEntryId === "pe-g1").length === 0);
+}
+
 // Согласия
 import { askConsent, resolveConsent } from "../src/lib/consent";
 import { giveConsent, withdrawConsent, eraseHealthData } from "../src/lib/store";
