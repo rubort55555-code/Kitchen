@@ -11,7 +11,7 @@ import { lookupOff, nameFor, type OffProduct } from "../lib/off";
 import { DRINKS, SOURCES, caffeineLimit, caffeineOf, interactionHints, type Drink } from "../lib/interactions";
 import { LEVEL_TEXT, ironDay, ironHints } from "../lib/iron";
 import { CA_TEXT, calciumDay, mineralHints } from "../lib/minerals";
-import { copyMeal, defaultGrams, dayView, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
+import { copyMeal, defaultGrams, dayView, hasMicroData, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
 import { addDays, cap, norm, ymd } from "../lib/util";
 
 const kcalText = (x: number) => Math.round(x).toLocaleString("ru-RU");
@@ -112,7 +112,7 @@ export function Diary({ date: start }: { date?: string }) {
       </div>
 
       <CombosBlock meals={list} recipes={recipes} limit={caffeineLimit(!!(member?.body?.pregnant || member?.body?.lactating))} />
-      {plan && member?.body && <MicroBlock eaten={e} body={member.body} hasMeals={list.length > 0} />}
+      {plan && member?.body && <MicroBlock eaten={e} body={member.body} hasMeals={list.length > 0} noData={list.filter((m) => !hasMicroData(m)).length} total={list.length} />}
 
       <div className="card">
         <div className="wrow">
@@ -132,7 +132,7 @@ export function Diary({ date: start }: { date?: string }) {
           <div className="list">
             {items.map((m) => (
               <div className="li" key={m.id}>
-                <div className="main"><div className="name">{m.name}</div><div className="meta">{m.qty ? m.qty + " · " : ""}Б {Math.round(m.n.protein || 0)} · Ж {Math.round(m.n.fat || 0)} · У {Math.round(m.n.carbs || 0)}{m.estimated ? " · микроэлементы оценены" : ""}</div></div>
+                <div className="main"><div className="name">{m.name}</div><div className="meta">{m.qty ? m.qty + " · " : ""}Б {Math.round(m.n.protein || 0)} · Ж {Math.round(m.n.fat || 0)} · У {Math.round(m.n.carbs || 0)}{!hasMicroData(m) ? " · витаминов и минералов нет" : ""}</div></div>
                 <span className="end">{kcalText(m.n.kcal || 0)}</span>
                 <button className="ib" aria-label={"Удалить " + m.name} onClick={() => remove(m)}>✕</button>
               </div>
@@ -153,7 +153,7 @@ const VITAMINS = new Set(["vitC", "vitB1", "vitB2", "vitB6", "niacin", "vitB12",
 const fmt = (x: number) => (x >= 100 ? Math.round(x) : x >= 10 ? Math.round(x * 10) / 10 : Math.round(x * 100) / 100).toLocaleString("ru-RU");
 
 /** Витамины и минералы за день против нормы (МР 2.3.1.0253-21) и то, чего не хватает. Считаются только блюда из рецептов и продукты из справочника. */
-function MicroBlock({ eaten, body, hasMeals }: { eaten: Record<NutrientKey, number>; body: BodyProfile; hasMeals: boolean }) {
+function MicroBlock({ eaten, body, hasMeals, noData, total }: { eaten: Record<NutrientKey, number>; body: BodyProfile; hasMeals: boolean; noData: number; total: number }) {
   const [open, setOpen] = useState(true);
   const all = micros(body);
   const rows = all.filter((x) => TRACKED.has(x.key) && x.key !== "na").map((x) => ({ ...x, v: eaten[x.key as NutrientKey] || 0, pct: Math.round(((eaten[x.key as NutrientKey] || 0) / x.amount) * 100) }));
@@ -171,8 +171,9 @@ function MicroBlock({ eaten, body, hasMeals }: { eaten: Record<NutrientKey, numb
   return (
     <div className="card">
       <h3>Витамины и минералы</h3>
+      {noData > 0 && <div className="issue little small">⚠️ У {noData} из {total} записей нет данных о витаминах и минералах (своё блюдо или товар, у которого они не указаны на упаковке). Эти записи в расчёт не входят, поэтому проценты ниже могут быть занижены, а «меньше всего пока» — неточным.</div>}
       {hasMeals ? (
-        <p className="small" style={{ margin: "2px 0 6px" }}>Меньше всего пока: {lowest.map((x) => `${x.title.toLowerCase()} ${x.pct}%`).join(", ")}.</p>
+        <p className="small" style={{ margin: "2px 0 6px" }}>{noData > 0 ? "Меньше всего (с учётом записей без данных):" : "Меньше всего пока:"} {lowest.map((x) => `${x.title.toLowerCase()} ${x.pct}%`).join(", ")}.</p>
       ) : <p className="muted small mt0">Появятся, когда запишете еду из рецептов или справочника.</p>}
       <button className="link" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? "Свернуть список" : "Показать все витамины и минералы"}</button>
       {open && (
@@ -445,7 +446,7 @@ function ScanPick({ custom, onPick }: { custom: import("../lib/types").CatalogIt
     return (
       <>
         <div className="card"><h3>{found.name}</h3><p className="muted small mt0">на 100 г: {Math.round(found.p.per100!.kcal!)} ккал{found.own ? ". Из вашей памяти (введено вами или найдено раньше)." : ". © участники Open Food Facts, ODbL"}</p>
-          {m?.estimated && <p className="small" style={{ margin: "4px 0" }}>ℹ️ Железо, кальций и витамины на упаковке не указаны — оценены по справочнику для такого продукта.</p>}</div>
+          {m && !hasMicroData(m) && <p className="small" style={{ margin: "4px 0" }}>ℹ️ Железо, кальций и витамины на упаковке не указаны — они не считаются, чтобы не вводить в заблуждение.</p>}</div>
         <label className="f" htmlFor="sg">Сколько съели, г</label>
         <input id="sg" className="inp big" inputMode="decimal" value={g} onChange={(e: any) => setG(e.target.value)} />
         <button className="btn" style={{ marginTop: 12 }} disabled={!m} onClick={() => onPick(found.p, found.name, grams)}>Записать{m ? ` · ${kcalText(m.n.kcal || 0)} ккал` : ""}</button>
