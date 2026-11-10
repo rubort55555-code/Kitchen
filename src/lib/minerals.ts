@@ -73,8 +73,8 @@ export function mineralHints(meals: Meal[], ctx: MineralCtx): Hint[] {
     if (ca?.oxalate) out.push({ id: `ca-oxalate:${slot}`, text: `Приём «${slot}»: есть шпинат или ревень (оксалаты). Кальций из них усваивается на 5–9%, из молока — 26–45%. Не считайте их основным источником кальция.`, src: ["shkembi2021ca"] });
     if (ca?.tooMuch) out.push({ id: `ca-split:${slot}`, text: `Приём «${slot}»: кальция ${fmt(ca.mg)} мг сразу. До ≈ 200 мг за приём усвоение растёт пропорционально, выше — отдача падает. Лучше распределить молочное на несколько приёмов в день.`, src: ["shkembi2021ca"] });
     const zn = analyzeZinc(slot, list, ctx);
-    if (zn?.inhibitors.some((x) => x.startsWith("кальций"))) out.push({ id: `zn-ca-phytate:${slot}`, text: `Приём «${slot}»: цинка ${fmt(zn.mg)} мг, но много фитатов и кальция одновременно — это может снижать усвоение цинка. Помогают замачивание, проращивание и закваска (фитаты распадаются).`, src: ["shkembi2021zn", "chondrou2024"] });
-    else if (zn?.inhibitors.length && v.fe < 1.5) out.push({ id: `zn-phytate:${slot}`, text: `Приём «${slot}»: цинка ${fmt(zn.mg)} мг, но бобовые, орехи или цельные крупы содержат фитаты — они связывают цинк. Помогают замачивание, проращивание и закваска.`, src: ["chondrou2024", "shkembi2021zn"] });
+    if (zn?.inhibitors.some((x) => x.startsWith("кальций"))) out.push({ id: `zn-ca-phytate:${slot}`, text: `Приём «${slot}»: цинка ${fmt(zn.mg)} мг, но много фитатов и кальция одновременно — это может снижать усвоение цинка. Помогают замачивание, проращивание и закваска (фитаты распадаются).`, src: ["belserrat2014", "shkembi2021zn", "chondrou2024"] });
+    else if (zn?.inhibitors.length && v.fe < 1.5) out.push({ id: `zn-phytate:${slot}`, text: `Приём «${slot}»: цинка ${fmt(zn.mg)} мг, но бобовые, орехи или цельные крупы содержат фитаты — они связывают цинк. Помогают замачивание, проращивание и закваска.`, src: ["belserrat2014", "chondrou2024", "shkembi2021zn"] });
   }
   return out;
 }
