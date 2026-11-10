@@ -188,6 +188,8 @@ export interface PlanEntry {
   slot: Slot;
   name: string;
   recipeId?: string;
+  /** Порции основного блюда по людям (id члена семьи → 0,5…2, шаг 0,25); нет записи — одна порция. */
+  portions?: Record<string, number>;
   done?: boolean;
   /** Салат или лёгкая добавка к основному блюду. */
   side?: { id: string; name: string };

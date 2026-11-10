@@ -43,6 +43,15 @@ export const toggleDone = (id: string) => {
   save(planList().map((x) => (x.id === id ? { ...x, done: !x.done } : x)));
   if (e) syncPlanMeal(e, !e.done); // отметка в меню ↔ запись в дневнике питания
 };
+const snap = (x: number) => Math.min(2, Math.max(0.5, Math.round(x * 4) / 4));
+/** Порция основного блюда меню для человека (0,5–2, шаг 0,25). */
+export function setPortion(id: string, who: string, portion: number) {
+  save(planList().map((x) => (x.id === id ? { ...x, portions: { ...(x.portions || {}), [who]: snap(portion) } } : x)));
+}
+/** Записать подобранные порции нескольких блюд сразу (id блюда меню → порции). */
+export function setPortions(map: Record<string, number>, who: string) {
+  save(planList().map((x) => (map[x.id] !== undefined ? { ...x, portions: { ...(x.portions || {}), [who]: snap(map[x.id]) } } : x)));
+}
 export const restorePlan = (p: PlanEntry[]) => save(p);
 /** Убрать старые записи (старше 4 недель), чтобы список не рос бесконечно. */
 export function pruneOld() {
@@ -71,7 +80,7 @@ function roleOf(r: Recipe): Role {
 }
 
 /** Главный источник белка/основы — чтобы дни не повторялись («опять курица», «опять яичница»). */
-function proteinOf(r: Recipe): string {
+export function proteinOf(r: Recipe): string {
   const all = norm(r.name + " " + r.ingredients.map((i) => i.name).join(" "));
   if (/кур|индейк|утк|цыпл/.test(all)) return "птица";
   if (/говяд|свинин|баран|фарш|мяс|печен|колбас|сосиск|кролик|язык|бекон|ветчин/.test(all)) return "мясо";

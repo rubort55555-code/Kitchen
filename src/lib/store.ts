@@ -524,14 +524,15 @@ export function addWater(date: string, ml: number, who: string = diaryWho()) {
   if (!next) delete water[waterKey(who, date)];
   setSettings({ water });
 }
-/** Отметка «приготовили/съели» в меню записывает блюдо в дневник (порция 1); снятие отметки — убирает запись. */
+/** Отметка «приготовили/съели» в меню записывает блюдо в дневник (порция человека из меню, по умолчанию 1); снятие отметки — убирает запись. */
 export function syncPlanMeal(e: PlanEntry, done: boolean) {
   const mine = state.meals.filter((m) => m.planEntryId === e.id);
   if (!done) { deleteMeals(mine.map((m) => m.id)); return; }
   if (mine.length || !e.recipeId) return;
   const r = state.recipes.find((x) => x.id === e.recipeId);
   if (!r) return;
-  const m = mealFromRecipe(r, 1, e.date, e.slot, diaryWho());
+  const who = diaryWho();
+  const m = mealFromRecipe(r, e.portions?.[who] ?? 1, e.date, e.slot, who);
   if (m) addMeals([{ ...m, planEntryId: e.id }]);
 }
 

@@ -96,6 +96,9 @@ export function Menu() {
         <button className="btn sec" onClick={fill}>Заполнить из моих рецептов</button>
         <button className="btn sec" onClick={() => openSheet(mode === "day" ? { kind: "ask", week: day, day } : { kind: "ask", week: start })}>✨ Составить с Claude</button>
       </div>
+      {inWeek.some((e) => e.recipeId) && st.settings.members.some((m) => m.body) && (
+        <button className="btn ghost" onClick={() => openSheet({ kind: "menucheck", days })}>📊 Насколько меню подходит</button>
+      )}
       {missing.length > 0 && (
         <div className="banner">
           <span className="txt">Для меню не хватает {missing.length} {plural(missing.length, "продукта", "продуктов", "продуктов")}: {missing.slice(0, 3).map((x) => x.name.toLowerCase()).join(", ")}{missing.length > 3 ? "…" : ""}</span>

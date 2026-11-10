@@ -8,6 +8,7 @@ ok("в выпуске есть пункты, и они не пустые", LATES
 ok("существующему пользователю — показываем, пока не видел", shouldShowNews(undefined, false) && shouldShowNews("2020-01-01", false));
 ok("увидел — не показываем", !shouldShowNews(LATEST.id, false));
 ok("новичку не показываем", !shouldShowNews(undefined, true));
-ok("в заметке сказано, что данные не удалены", /Данные не удалены/.test(LATEST.note || ""));
+ok("в выпуске про согласия сказано, что данные не удалены", /Данные не удалены/.test(RELEASES.find((r) => r.id === "2026-11-10")?.note || ""));
+ok("у каждого выпуска есть заметка или пункты", RELEASES.every((r) => r.items.length >= 1));
 console.log(`whatsnew: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);
