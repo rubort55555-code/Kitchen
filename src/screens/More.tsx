@@ -688,6 +688,7 @@ function About() {
       </div>
       <p className="muted small">{info}</p>
       <p className="muted small">Бесплатно, без регистрации и рекламы. Работает без интернета.</p>
+      <button className="btn sec" onClick={() => openSheet({ kind: "news" })}>Что нового</button>
       <button className="btn sec" onClick={() => { closeSheet(); location.reload(); }}>Перезапустить приложение</button>
     </div>
   );

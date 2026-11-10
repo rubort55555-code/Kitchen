@@ -482,6 +482,10 @@ export function addMeasure(who: string, m: Measure) {
 export function deleteMeasure(who: string, date: string) {
   setSettings({ measures: { ...(state.settings.measures || {}), [who]: removeMeasure(state.settings.measures?.[who] || [], date) } });
 }
+/** Человек увидел «Что нового». */
+export function markNewsSeen(id: string) {
+  if (state.settings.seenNews !== id) setSettings({ seenNews: id });
+}
 /** Согласие дано. */
 export function giveConsent(k: ConsentKind) {
   setSettings({ consent: { ...(state.settings.consent || {}), [k]: { version: POLICY_VERSION, at: Date.now() } } });

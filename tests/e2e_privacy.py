@@ -42,6 +42,21 @@ with sync_playwright() as p:
         ok(S + "после согласия показывается знакомство", True)
         ctx.close()
 
+        # 1б. Существующий пользователь после обновления видит «Что нового» один раз; новичок — нет
+        ctx = br.new_context(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True, color_scheme=scheme)
+        ctx.add_init_script("Object.defineProperty(navigator,'webdriver',{get:()=>false})")
+        pg = ctx.new_page(); errs = []; pg.on("pageerror", lambda e: errs.append(str(e)))
+        pg.goto(URL); pg.wait_for_selector("h1"); pg.evaluate(SEED, {**BASE, "tipsSeen": ["intro", "home-gear"], "consent": {k: {"version": V, "at": 1} for k in ("policy", "health", "off")}}); pg.reload()
+        pg.wait_for_selector("text=Что нового в «Кухне»")
+        ok(S + "обновление: окно «Что нового» с пунктами и заметкой про данные", "Дневник питания" in pg.inner_text(".sheet") and "Данные не удалены" in pg.inner_text(".sheet"))
+        pg.click('.sheet .btn:has-text("Понятно")'); pg.wait_for_selector(".sheet", state="detached")
+        pg.reload(); pg.wait_for_selector("h1"); pg.wait_for_timeout(700)
+        ok(S + "второй запуск: окно не повторяется", pg.query_selector(".sheet") is None)
+        open_page(pg, "О приложении"); pg.click('.btn:has-text("Что нового")'); pg.wait_for_selector("text=Что нового в «Кухне»")
+        ok(S + "вручную из «О приложении» открывается", True)
+        ok(S + "(что нового) без ошибок в консоли", not errs, errs)
+        ctx.close()
+
         # 2. Раздел «Питание» без согласия на данные о здоровье
         ctx = br.new_context(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True, color_scheme=scheme)
         pg = ctx.new_page(); errs = []; pg.on("pageerror", lambda e: errs.append(str(e)))

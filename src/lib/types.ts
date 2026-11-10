@@ -254,6 +254,8 @@ export interface Settings {
   sunContrast?: boolean;
   /** Выпитая вода, мл: «id человека|ГГГГ-ММ-ДД» → мл. */
   water?: Record<string, number>;
+  /** Последний выпуск «Что нового», который человек уже видел. */
+  seenNews?: string;
   /** Согласия: что и в какой версии текста подтверждено. */
   consent?: import("./privacy").Consents;
   /** Журнал замеров: id члена семьи → вес, талия, бёдра по датам. */

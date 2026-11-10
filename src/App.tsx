@@ -1,6 +1,6 @@
 // Корень приложения: вкладки внизу (плавающая «таблетка», подпись — у открытой вкладки), кнопка «+», окна поверх.
 import { Icon, ToastView } from "./components/ui";
-import { useStore } from "./lib/store";
+import { markNewsSeen, useStore } from "./lib/store";
 import { goTab, openSheet, useUI, type Sheet, type Tab } from "./lib/ui";
 import { Home } from "./screens/Home";
 import { Products } from "./screens/Products";
@@ -17,6 +17,8 @@ import { Revision } from "./screens/Revision";
 import { Receipt } from "./screens/Receipt";
 import { RecipeEdit, RecipeNew } from "./screens/RecipeEdit";
 import { ConsentSheet } from "./screens/Privacy";
+import { NewsSheet } from "./screens/News";
+import { LATEST, shouldShowNews } from "./lib/whatsnew";
 import { hasConsent } from "./lib/privacy";
 import { Intro } from "./screens/Intro";
 import { Diary, AddMeal } from "./screens/Diary";
@@ -44,6 +46,7 @@ function SheetView({ s }: { s: Sheet }) {
     case "steps": return <CookMode id={s.id} />;
     case "overdue": return <Overdue />;
     case "intro": return <Intro />;
+    case "news": return <NewsSheet />;
     case "consent": return <ConsentSheet which={s.which} />;
     case "diary": return <Diary date={s.date} />;
     case "meal": return <AddMeal date={s.date} slot={s.slot} />;
@@ -70,10 +73,12 @@ export function App() {
   // Сначала уведомление о данных и согласие с политикой, потом знакомство
   const policyOk = useStore((s) => hasConsent(s.settings.consent, "policy"));
   const noSheets = sheets.length === 0;
+  const seenNews = useStore((s) => s.settings.seenNews);
   useEffect(() => {
     if (!ready || navigator.webdriver || !noSheets) return;
     if (!policyOk) openSheet({ kind: "consent", which: "policy" });
-    else if (!introSeen && empty) openSheet({ kind: "intro" });
+    else if (!introSeen && empty) { openSheet({ kind: "intro" }); markNewsSeen(LATEST.id); } // новичку «Что нового» ни к чему
+    else if (shouldShowNews(seenNews, false)) openSheet({ kind: "news" });
   }, [ready, policyOk, noSheets]);
   useEffect(() => {
     if (ready && hasOverdue && asked !== ymd() && !sheets.length && !askedNow) { askedNow = true; openSheet({ kind: "overdue" }); }
