@@ -42,7 +42,9 @@ export interface IngStatus {
 let stockMemo: { products: Product[]; custom: CatalogItem[]; stock: Map<string, Product> } | null = null;
 let basicMemo: { basics: string[]; custom: CatalogItem[]; keys: Set<string> } | null = null;
 const ingKeys = new WeakMap<Recipe, { custom: CatalogItem[]; keys: string[] }>();
-const statusMemo = new WeakMap<Recipe, { stock: Map<string, Product>; basics: Set<string>; res: ReturnType<typeof calc> }>();
+const statusMemo = new WeakMap<Recipe, { stock: Map<string, Product>; basics: Set<string>; ban?: Ban; res: ReturnType<typeof calc> }>();
+/** Запрещён ли продукт (см. neverFor в exclusions.ts): запрещённое не предлагаем как замену. */
+export type Ban = (name: string) => boolean;
 
 function stockOf(products: Product[], custom: CatalogItem[]) {
   if (stockMemo && stockMemo.products === products && stockMemo.custom === custom) return stockMemo.stock;
@@ -72,17 +74,17 @@ function keysOf(r: Recipe, custom: CatalogItem[]) {
   return keys;
 }
 
-export function recipeStatus(r: Recipe, products: Product[], basics: string[], custom: CatalogItem[]) {
+export function recipeStatus(r: Recipe, products: Product[], basics: string[], custom: CatalogItem[], ban?: Ban) {
   const stock = stockOf(products, custom);
   const basicKeys = basicsOf(basics, custom);
   const m = statusMemo.get(r);
-  if (m && m.stock === stock && m.basics === basicKeys) return m.res;
-  const res = calc(r, stock, basicKeys, custom);
-  statusMemo.set(r, { stock, basics: basicKeys, res });
+  if (m && m.stock === stock && m.basics === basicKeys && m.ban === ban) return m.res;
+  const res = calc(r, stock, basicKeys, custom, ban);
+  statusMemo.set(r, { stock, basics: basicKeys, ban, res });
   return res;
 }
 
-function calc(r: Recipe, stock: Map<string, Product>, basicKeys: Set<string>, custom: CatalogItem[]) {
+function calc(r: Recipe, stock: Map<string, Product>, basicKeys: Set<string>, custom: CatalogItem[], ban?: Ban) {
   const keys = keysOf(r, custom);
   const list: IngStatus[] = r.ingredients.map((i, n) => {
     const k = keys[n];
@@ -91,8 +93,8 @@ function calc(r: Recipe, stock: Map<string, Product>, basicKeys: Set<string>, cu
     let via: Product | undefined;
     let alts: string[] | undefined;
     if (!product && !basic) {
-      const subs = substitutes(i.name, custom);
-      for (const s of subs) { const f = stock.get(keyOf(s, custom)); if (f) { via = f; break; } }
+      const subs = substitutes(i.name, custom).filter((s) => !ban?.(s));
+      for (const s of subs) { const f = stock.get(keyOf(s, custom)); if (f && !ban?.(f.name)) { via = f; break; } }
       if (!via && subs.length) alts = subs;
     }
     const shown = product || via;

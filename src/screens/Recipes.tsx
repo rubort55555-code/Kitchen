@@ -6,7 +6,7 @@ import { addMany } from "../lib/shop";
 import { addEntry, dayShort, weekDays } from "../lib/plan";
 import { SLOTS, type Slot } from "../lib/types";
 import { deleteRecipe, saveRecipes, useStore } from "../lib/store";
-import { applyReplace, compileRules, checkRecipe } from "../lib/exclusions";
+import { applyReplace, compileRules, checkRecipe, neverFor } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
 import { cuisineOf } from "../lib/cuisine";
 import { NO_FILTERS, RecipeFilters, filterRecipes, type Filters } from "../components/RecipeFilters";
@@ -24,7 +24,7 @@ export function Recipes() {
   const rows = useMemo(() => {
     const compiled = compileRules(settings.rules, settings.customCatalog, settings.members);
     const who = settings.members.map((m) => m.id);
-    return recipes.map((r) => ({ r, c: checkRecipe(r, compiled, who), st: recipeStatus(r, products, settings.basics, settings.customCatalog) }))
+    return recipes.map((r) => ({ r, c: checkRecipe(r, compiled, who), st: recipeStatus(r, products, settings.basics, settings.customCatalog, neverFor(settings)) }))
       .sort((a, b) => b.st.percent - a.st.percent || b.st.urgent - a.st.urgent || b.r.createdAt - a.r.createdAt);
   }, [recipes, products, settings]);
   const nq = norm(q);
@@ -111,7 +111,7 @@ export function RecipeView({ id }: { id: string }) {
   if (!r) return <Sheet title="Рецепт"><p className="empty">Рецепт удалён.</p></Sheet>;
   const compiled = compileRules(settings.rules, settings.customCatalog, settings.members);
   const c = checkRecipe(r, compiled, settings.members.map((m) => m.id));
-  const st = recipeStatus(r, products, settings.basics, settings.customCatalog);
+  const st = recipeStatus(r, products, settings.basics, settings.customCatalog, neverFor(settings));
   return (
     <Sheet title="Рецепт" left={<button className="x l" aria-label={r.fav ? "Убрать из избранного" : "В избранное"} onClick={() => saveRecipes([{ ...r, fav: !r.fav }])}>{r.fav ? "★" : "☆"}</button>}>
       {r.photo && <img className="dphoto" src={r.photo} alt={r.name} />}

@@ -5,7 +5,7 @@ import { NO_FILTERS, RecipeFilters, filterRecipes, kindOf, type Filters } from "
 import { setSettings, useStore } from "../lib/store";
 import { addEntry, autoFill, dayShort, dayTitle, entriesFor, pruneOld, recipesInPlan, removeEntry, restorePlan, toggleDone, weekDays } from "../lib/plan";
 import { addMany, missingFor, restoreShop, shopList } from "../lib/shop";
-import { compileRules, checkRecipe } from "../lib/exclusions";
+import { compileRules, checkRecipe, neverFor } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
 import { CUISINES, cuisineOf } from "../lib/cuisine";
 import type { Slot } from "../lib/types";
@@ -151,7 +151,7 @@ export function PickSheet({ date, slot }: { date: string; slot: Slot }) {
     return st.recipes
       .filter((r) => checkRecipe(r, compiled, who).verdict !== "hidden")
       .filter((r) => !nq || norm(r.name).includes(nq) || r.ingredients.some((i) => norm(i.name).includes(nq)))
-      .map((r) => ({ r, st: recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog) }))
+      .map((r) => ({ r, st: recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings)) }))
       .sort((a, b) => b.st.urgent - a.st.urgent || b.st.percent - a.st.percent);
   }, [st, q]);
   // На завтрак сразу показываем завтраки, если они есть; фильтр можно сбросить

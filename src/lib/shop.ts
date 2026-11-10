@@ -2,7 +2,7 @@
 import type { MinStock, Recipe, ShopItem, Unit } from "./types";
 import { UNITS } from "./types";
 import { addProduct, getState, haveQty, setSettings, valueOf } from "./store";
-import { compileRules, checkProduct, type Hit } from "./exclusions";
+import { compileRules, checkProduct, type Hit, neverFor } from "./exclusions";
 import { findCatalog } from "./catalog";
 import { keyOf, covers, recipeStatus } from "./match";
 import { norm, toNum, uid } from "./util";
@@ -114,7 +114,7 @@ export function missingFor(recipes: Recipe[]): { name: string; amount: string; f
   const who = st.settings.members.map((m) => m.id);
   const acc = new Map<string, { name: string; amounts: string[]; for: string[] }>();
   for (const r of recipes) {
-    const s = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog);
+    const s = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings));
     for (const m of s.missing) {
       if (checkProduct(m.name, compiled, who)?.rule.level === "never") continue;
       const k = keyOf(m.name, st.settings.customCatalog);

@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import { compileRules, checkRecipe, findHits, toTbsp, applyReplace, DEFAULT_RULES } from "../src/lib/exclusions";
+import { compileRules, checkRecipe, findHits, toTbsp, applyReplace, DEFAULT_RULES, neverFor } from "../src/lib/exclusions";
 import { findCatalog } from "../src/lib/catalog";
 import { covers } from "../src/lib/match";
 import { addQty, qtyText } from "../src/lib/units";
@@ -372,6 +372,38 @@ ok("таймер: формат", fmtTime(65000) === "1:05" && fmtTime(3600000) =
   writeOff(cheese.id, 2, "eaten");
   const rep = report(getState().log.filter((e) => e.productId === cheese.id), [], 0);
   ok("цена исправлена после покупки: «куплено» и «съедено» сходятся", rep.bought.rub === 500 && rep.eaten.rub === 500, [rep.bought.rub, rep.eaten.rub]);
+}
+
+// --- Аллергии: группы аллергенов и короткие слова ---
+{
+  const verdict = (kind: "allergies" | "dislikes", word: string, name: string, ings: string[] = [], steps: string[] = []) => {
+    const members = [{ id: "a1", name: "Аня", allergies: kind === "allergies" ? [word] : [], dislikes: kind === "dislikes" ? [word] : [] }];
+    const rc: Recipe = { id: "t" + Math.random(), name, source: "manual", createdAt: 0, steps, ingredients: ings.map((n) => ({ name: n, amount: "100 г" })) };
+    return checkRecipe(rc, compileRules([], [], members), ["a1"]).verdict;
+  };
+  const hid = (...a: Parameters<typeof verdict>) => verdict(...a) === "hidden";
+  ok("аллергия «молоко»: сыр, сметана, сливочное масло, творог скрыты", hid("allergies", "молоко", "Паста", ["Сыр твёрдый"]) && hid("allergies", "молоко", "Борщ", ["Сметана"]) && hid("allergies", "молоко", "Каша", ["Масло сливочное"]) && hid("allergies", "Молочные продукты", "Сырники", ["Творог"]));
+  ok("аллергия «молоко»: кокосовое молоко и сырые овощи — можно", !hid("allergies", "молоко", "Карри", ["Кокосовое молоко"]) && !hid("allergies", "молоко", "Салат", ["Морковь"], ["Нарежьте сырую морковь."]));
+  ok("аллергия «орехи»: миндаль, арахис, фундук скрыты; мускатный орех — нет", hid("allergies", "орехи", "Пирог", ["Миндаль"]) && hid("allergies", "орехи", "Соус", ["Арахисовая паста"]) && hid("allergies", "орехи", "Торт", ["Фундук"]) && !hid("allergies", "орехи", "Пюре", ["Мускатный орех"]));
+  ok("аллергия «рыба»: минтай, сельдь, тунец скрыты; молоко, сельдерей и «трескается» — нет", hid("allergies", "рыба", "Котлеты", ["Минтай"]) && hid("allergies", "рыба", "Салат", ["Сельдь"]) && hid("allergies", "рыба", "Салат", ["Тунец консервированный"]) && !hid("allergies", "рыба", "Каша", ["Молоко"]) && !hid("allergies", "рыба", "Салат", ["Сельдерей"]) && !hid("allergies", "рыба", "Хлеб", ["Вода"], ["Корочка не трескается."]) && !hid("allergies", "рыба", "Суп", ["Кетчуп"]));
+  ok("аллергия «соя»: соевый соус и тофу скрыты, миска — нет", hid("allergies", "соя", "Курица", ["Соевый соус"]) && hid("allergies", "соя", "Салат", ["Тофу"]) && !hid("allergies", "соя", "Салат", ["Огурцы"], ["Смешайте в миске."]));
+  ok("аллергия «яйца»: майонез и яичница скрыты", hid("allergies", "яйца", "Салат", ["Майонез"]) && hid("allergies", "яйцо", "Яичница с помидорами", ["Помидоры"]) && !hid("allergies", "яйца", "Суп", ["Вода"], ["Варите без крышки."]));
+  ok("аллергия «глютен»: мука, макароны, хлеб скрыты; рисовая мука и печень — нет", hid("allergies", "глютен", "Блины", ["Мука"]) && hid("allergies", "глютен", "Паста", ["Макароны"]) && hid("allergies", "глютен", "Тосты", ["Хлеб"]) && !hid("allergies", "глютен", "Блины", ["Рисовая мука"]) && !hid("allergies", "глютен", "Печень по-строгановски", ["Печень говяжья"]));
+  ok("аллергия «мёд»: мёд и медовый соус скрыты, «на медленном огне» — нет", hid("allergies", "мёд", "Курица", ["Мёд"]) && hid("allergies", "мёд", "Крылья в медовом соусе", ["Курица"]) && !hid("allergies", "мёд", "Суп", ["Вода"], ["Варите на медленном огне.", "Отбейте медальоны."]));
+  ok("не любит «мак»: булочка с маком скрыта, макароны и «макать» — нет", hid("dislikes", "мак", "Булочки с маком", ["Мак"]) && !hid("dislikes", "мак", "Макароны по-флотски", ["Макароны"], ["Удобно макать в желток."]));
+  ok("не любит «чай»: чай скрыт, чайная ложка и чайник — нет", hid("dislikes", "чай", "Напиток", ["Чай чёрный"]) && !hid("dislikes", "чай", "Суп", ["Вода"], ["Добавьте чайную ложку соли.", "Залейте кипятком из чайника."]));
+  ok("не любит «сыр»: сыр скрыт, сырники и сырое яйцо — нет; брынза — другое слово", hid("dislikes", "сыр", "Бутерброд с сыром", ["Хлеб"]) && !hid("dislikes", "сыр", "Сырники", ["Творог"], ["Вбейте сырое яйцо."]) && !hid("dislikes", "сыр", "Салат", ["Брынза"]));
+  ok("не любит «лук»: лук и луковый суп скрыты", hid("dislikes", "лук", "Суп", ["Лук репчатый"]) && hid("dislikes", "лук", "Луковый суп", ["Вода"]));
+
+  // Замены: запрещённое взамен не предлагаем и не списываем
+  const P2 = (id: string, name: string): any => ({ id, name, qty: 500, initialQty: 500, unit: "г", place: "Холодильник", bought: "2026-01-01", until: null, price: 100, createdAt: 0 });
+  const rc: Recipe = { id: "t-sub", name: "Соус", servings: 1, source: "manual", createdAt: 0, steps: [], ingredients: [{ name: "Сахар", amount: "50 г" }] };
+  const base = { ...getState().settings, basics: [], rules: [] };
+  const free = { ...base, members: [{ id: "a1", name: "Аня", allergies: [], dislikes: [] }] };
+  const banned = { ...base, members: [{ id: "a1", name: "Аня", allergies: ["мёд"], dislikes: [] }] };
+  const honey = [P2("h", "Мёд")];
+  ok("замена: без запретов сахар → мёд", recipeStatus(rc, honey, [], [], neverFor(free)).list[0].via?.name === "Мёд" && planCook(rc, 1, honey, free).rows[0].takes[0]?.name === "Мёд");
+  ok("замена: при аллергии на мёд мёд не предлагается и не списывается", !recipeStatus(rc, honey, [], [], neverFor(banned)).list[0].via && !(recipeStatus(rc, honey, [], [], neverFor(banned)).list[0].alts || []).includes("Мёд") && planCook(rc, 1, honey, banned).rows[0].takes.length === 0);
 }
 
 console.log(`\nЛогика: ${pass} из ${pass + fail}`);

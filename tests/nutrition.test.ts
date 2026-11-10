@@ -179,5 +179,22 @@ ok("справочные микроэлементы: кобальт, фтор, �
 ok("ОТ/ОБ мужчина 0,88 — выше нормы, не высокий риск", (() => { const r = waistRisk(P({ sex: "m", height: 180, waist: 88, hips: 100 })); return r?.level === "up" && /выше нормы/.test(r.text); })());
 ok("ОТ/ОБ мужчина 1,02 — высокий", waistRisk(P({ sex: "m", height: 180, waist: 92, hips: 90 }))?.level === "high");
 
+// Талия по МР (разд. 4.1): «не должен превышать 94 см у мужчин и 80 см у женщин», ожирение — «более 102 и 88 см»
+{
+  const w = (sex: "m" | "f", waist: number) => planFor(P({ sex, waist }), NOW)!.waist!.level;
+  ok("талия: ровно 94 / 80 см — ещё норма", w("m", 94) === "ok" && w("f", 80) === "ok", [w("m", 94), w("f", 80)]);
+  ok("талия: 95 / 81 см — риск повышен; 102 / 88 — ещё не «высокий»", w("m", 95) === "up" && w("f", 81) === "up" && w("m", 102) === "up" && w("f", 88) === "up");
+  ok("талия: 103 / 89 см — высокий риск", w("m", 103) === "high" && w("f", 89) === "high");
+}
+// Цель «снизить вес», а расход ниже нижнего предела калорийности: дефицита нет, но и выше расхода не поднимаем
+{
+  const small = P({ born: 1950, height: 150, weight: 46, goal: "lose", days: undefined, day: { sleep: 10, desk: 6, light: 1, walk: 0, heavy: 0 } });
+  const pl = planFor(small, NOW)!;
+  ok("малый расход: проверяем именно случай «расход ниже 1200»", pl.tee < 1200 && pl.goal === "lose", [pl.tee, pl.goal, pl.bmi]);
+  ok("малый расход: калорийность не выше расхода, набора нет", pl.kcal <= Math.round(pl.tee / 10) * 10 && pl.weekly === 0, [pl.kcal, pl.tee, pl.weekly]);
+  ok("малый расход: есть предупреждение", pl.warnings.some((x) => /дефицит не закладываем/.test(x)), pl.warnings);
+  const adj = planFor({ ...small, goal: "keep", adjust: -100 }, NOW)!;
+  ok("малый расход: поправка вниз не поднимает калорийность", adj.kcal <= Math.round(adj.tee / 10) * 10, [adj.kcal, adj.tee]);
+}
 console.log(`nutrition: ${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

@@ -316,7 +316,7 @@ export function bmiOf(p: BodyProfile): BmiInfo {
   return { bmi: b, cat: "ожирение III степени", level: "obese" };
 }
 
-/** Риск по окружности талии (МР 2.3.1.0253-21 и ВОЗ): мужчины ≥94 / >102 см, женщины ≥80 / >88 см. */
+/** Риск по окружности талии (МР 2.3.1.0253-21, разд. 4.1): в норме не больше 94 см у мужчин и 80 см у женщин; абдоминальное ожирение — больше 102 и 88 см. */
 export function waistRisk(p: BodyProfile): { text: string; level: "ok" | "up" | "high" } | null {
   if (!p.waist) return null;
   const [a, b] = p.sex === "m" ? [94, 102] : [80, 88];
@@ -326,8 +326,8 @@ export function waistRisk(p: BodyProfile): { text: string; level: "ok" | "up" | 
   const whrObese = whr !== null && (p.sex === "m" ? whr > 1.0 : false);
   const whtr = round(p.waist / p.height, 2);
   const extra = [whr !== null ? `талия/бёдра ${num(whr)}${whrHigh ? " (выше нормы МР)" : ""}` : "", `талия/рост ${num(whtr)}${whtr >= 0.5 ? " (больше 0,5)" : ""}`].filter(Boolean).join(", ");
-  if (p.waist >= b || whrObese) return { text: `талия ${p.waist} см — риск для сердца и обмена веществ заметно повышен; ${extra}`, level: "high" };
-  if (p.waist >= a || whrHigh) return { text: `талия ${p.waist} см — риск немного повышен; ${extra}`, level: "up" };
+  if (p.waist > b || whrObese) return { text: `талия ${p.waist} см — риск для сердца и обмена веществ заметно повышен; ${extra}`, level: "high" };
+  if (p.waist > a || whrHigh) return { text: `талия ${p.waist} см — риск немного повышен; ${extra}`, level: "up" };
   return { text: `талия ${p.waist} см — в норме; ${extra}`, level: "ok" };
 }
 
@@ -471,9 +471,11 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   const floor = p.sex === "m" ? 1500 : 1200;
   if (goal === "lose") {
     const deficit = Math.min(tee * 0.2, 750);
-    kcal = Math.max(tee - deficit, floor, b);
+    // Нижний предел не должен поднимать калорийность выше расхода: тогда дефицита просто нет
+    kcal = Math.min(tee, Math.max(tee - deficit, floor, b));
     weekly = -((tee - kcal) * 7) / 7700;
-    if (kcal <= floor + 1) notes.push(`Калорийность не опускаем ниже ${floor} ккал — меньше трудно получить нужные витамины и минералы.`);
+    if (kcal >= tee) warnings.push(`Расход за день (${Math.round(tee)} ккал) не выше нижнего предела калорийности (${floor} ккал) — дефицит не закладываем. Снижать вес в этом случае лучше за счёт движения и вместе с врачом.`);
+    else if (kcal <= floor + 1) notes.push(`Калорийность не опускаем ниже ${floor} ккал — меньше трудно получить нужные витамины и минералы.`);
   } else if (goal === "gain") {
     kcal = tee + Math.min(tee * 0.1, 400);
     weekly = ((kcal - tee) * 7) / 7700;
@@ -484,7 +486,8 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   if (p.adjust && !stage && !hasHealthFlag(p.health) && bmi.level !== "low") {
     const adj = Math.max(-ADJUST_MAX, Math.min(ADJUST_MAX, p.adjust));
     const before = kcal;
-    kcal = Math.max(kcal + adj, floor, b);
+    // Поправка вниз — не ниже предела, но и сам предел не поднимает калорийность выше той, что была
+    kcal = adj < 0 ? Math.max(kcal + adj, Math.min(before, Math.max(floor, b))) : kcal + adj;
     if (goal === "lose") kcal = Math.min(kcal, tee);
     if (kcal !== before) {
       weekly = ((kcal - tee) * 7) / 7700;

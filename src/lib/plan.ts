@@ -2,7 +2,7 @@
 import type { PlanEntry, Recipe, Slot } from "./types";
 import { SLOTS } from "./types";
 import { getState, saveRecipes, setSettings, syncPlanMeal } from "./store";
-import { compileRules, checkRecipe } from "./exclusions";
+import { compileRules, checkRecipe, neverFor } from "./exclusions";
 import { recipeStatus } from "./match";
 import { addDays, norm, parseYmd, uid, ymd } from "./util";
 import { parseAnswer } from "./claude";
@@ -116,7 +116,7 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
   const all = st.recipes
     .filter((r) => checkRecipe(r, compiled, who).verdict === "ok")
     .map((r) => {
-      const s = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog);
+      const s = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings));
       return { r, score: s.urgent * 30 + s.percent * 0.4 + (r.fav ? 15 : 0) + (r.rating ? (r.rating - 3) * 8 : 0), prot: proteinOf(r), bt: breakfastType(r) };
     })
     .sort((a, b) => b.score - a.score);
@@ -188,7 +188,7 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
   }
   // Салат к основному приёму пищи: хотя бы раз в день (к обеду, если его нет — к ужину)
   const salads = st.recipes.filter((r) => norm(r.kind || "") === "салат" && !/фрукт|банан|апельсин|груш/.test(norm(r.name)) && checkRecipe(r, compiled, who).verdict === "ok")
-    .map((r) => ({ r, score: recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog) }))
+    .map((r) => ({ r, score: recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings)) }))
     // Свежие овощные салаты — чаще, тяжёлые на майонезе — реже
     .map((x) => ({ r: x.r, sc: x.score.urgent * 30 + x.score.percent * 0.4 + (x.r.fav ? 15 : 0) + (cuis && sameCuis(x.r) ? 40 : 0) - (x.r.ingredients.some((i) => /майонез/i.test(i.name)) ? 25 : 0) + (x.r.ingredients.some((i) => /огур|помидор|капуст|морков|свёкл|свекл|перец|редис|зелень|укроп|салат/i.test(i.name)) ? 10 : 0) }))
     .sort((a, b) => b.sc - a.sc);
@@ -208,7 +208,7 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
   // Десерт к ужину: через день, до 3 раз в неделю (можно выключить кнопкой «Десерт»)
   if (st.settings.planDessert !== false) {
     const sweets = st.recipes.filter((r) => norm(r.kind || "") === "десерт" && checkRecipe(r, compiled, who).verdict === "ok")
-      .map((r) => { const x = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog); return { r, sc: x.urgent * 30 + x.percent * 0.4 + (r.fav ? 15 : 0) + (cuis && sameCuis(r) ? 40 : 0) + (r.rating ? (r.rating - 3) * 8 : 0) + (/торт|пирож|печень|мусс|желе|мороже|пудинг|шоколад|десерт|суфле|крем|панна|чизкейк|кекс|маффин|трюфел|конфет|зефир|пастил|безе/.test(norm(r.name)) ? 25 : 0) - (/макарон|вермишел|тыкв|рис(?![а-яё])|каш/.test(norm(r.name)) ? 30 : 0) }; })
+      .map((r) => { const x = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings)); return { r, sc: x.urgent * 30 + x.percent * 0.4 + (r.fav ? 15 : 0) + (cuis && sameCuis(r) ? 40 : 0) + (r.rating ? (r.rating - 3) * 8 : 0) + (/торт|пирож|печень|мусс|желе|мороже|пудинг|шоколад|десерт|суфле|крем|панна|чизкейк|кекс|маффин|трюфел|конфет|зефир|пастил|безе/.test(norm(r.name)) ? 25 : 0) - (/макарон|вермишел|тыкв|рис(?![а-яё])|каш/.test(norm(r.name)) ? 30 : 0) }; })
       .sort((a, b) => b.sc - a.sc);
     const inWeek = (e: PlanEntry) => e.date >= start && e.date <= addDays(start, 6);
     const usedSweet = new Set(plan.map((e) => e.sweet?.id).filter(Boolean) as string[]);

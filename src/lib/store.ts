@@ -561,7 +561,25 @@ export async function restore(b: Backup, mode: "replace" | "merge") {
     };
   }
   seedGen++;
-  await db.replaceAll({ products, log, recipes, meals, kv: { settings } });
+  // Служебные записи о базе рецептов: без них рецепты базы, которые человек удалил, вернулись бы после восстановления
+  const kv: Record<string, unknown> = { settings };
+  try {
+    const seen = (await db.getKv<string[]>("baseSeen")) || [];
+    if (mode === "merge") {
+      // Рецепты остаются на месте — оставляем всё как было
+      for (const k of ["baseSeen", "baseSigs", "baseParts", "catalog"]) { const v = await db.getKv<unknown>(k); if (v !== undefined && v !== null) kv[k] = v; }
+    } else {
+      // Рецепты заменяются копией (в ней только личное), остальная база загрузится заново — кроме удалённых человеком
+      const had = new Set(state.recipes.map((r) => r.id));
+      const deleted = seen.filter((id) => !had.has(id));
+      if (deleted.length) kv.baseSeen = deleted;
+      const cat = await db.getKv<unknown>("catalog");
+      if (cat !== undefined && cat !== null) kv.catalog = cat;
+    }
+  } catch (e) {
+    console.warn("Служебные записи о базе не прочитались", e);
+  }
+  await db.replaceAll({ products, log, recipes, meals, kv });
   set({ products, log, recipes, meals, settings });
   seedBase();
 }

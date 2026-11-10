@@ -6,6 +6,7 @@ import { findCatalog } from "./catalog";
 import { keyOf, keysFor, covers } from "./match";
 import { convert } from "./units";
 import { daysLeft, norm, toNum } from "./util";
+import { neverFor } from "./exclusions";
 
 export interface Need { qty: number; unit: Unit }
 
@@ -116,6 +117,7 @@ export function planCook(r: Recipe, servings: number, products: Product[], setti
   const factor = servings > 0 && r.servings ? servings / r.servings : 1;
   const basicKeys = new Set(settings.basics.map((b) => keyOf(b, settings.customCatalog)));
   const used = new Map<string, number>();
+  const ban = neverFor(settings);
   const rows: CookRow[] = [];
   const skipped: string[] = [];
 
@@ -130,8 +132,9 @@ export function planCook(r: Recipe, servings: number, products: Product[], setti
     // Нужного нет дома — берём замену, если она есть (сметана → йогурт)
     if (!stock.length) {
       for (const s of substitutes(ing.name, settings.customCatalog)) {
+        if (ban(s)) continue; // запрещённое (аллергия, «никогда») взамен не списываем
         const sk = keyOf(s, settings.customCatalog);
-        const f = products.filter((p) => covers(p.name, sk, settings.customCatalog)).sort(byUntil);
+        const f = products.filter((p) => covers(p.name, sk, settings.customCatalog) && !ban(p.name)).sort(byUntil);
         if (f.length) { stock = f; break; }
       }
     }

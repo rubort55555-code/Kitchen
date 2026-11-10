@@ -6,7 +6,7 @@ import { SLOTS } from "../lib/types";
 import { cap, ymd } from "../lib/util";
 import { useStore, valueOf } from "../lib/store";
 import { findCatalog } from "../lib/catalog";
-import { compileRules, checkRecipe } from "../lib/exclusions";
+import { compileRules, checkRecipe, neverFor } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
 import { monthStart, summary } from "../lib/stats";
 import { needsBasics } from "../lib/nutrition";
@@ -28,7 +28,7 @@ export function Home() {
     const who = settings.members.map((x) => x.id);
     return recipes
       .filter((r) => checkRecipe(r, compiled, who).verdict !== "hidden")
-      .map((r) => ({ r, st: recipeStatus(r, products, settings.basics, settings.customCatalog) }))
+      .map((r) => ({ r, st: recipeStatus(r, products, settings.basics, settings.customCatalog, neverFor(settings)) }))
       .filter((x) => x.st.percent >= 60)
       .sort((a, b) => b.st.urgent - a.st.urgent || b.st.percent - a.st.percent)
       .slice(0, 3);
