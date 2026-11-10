@@ -30,6 +30,11 @@ export const SOURCES: Record<string, Source> = {
   deng2024: { id: "deng2024", cite: "Deng J. и др. Efficacy of vitamin C with Fe supplementation in patients with iron deficiency anemia: a systematic review and meta-analysis. Blood Vessels Thromb Hemost, 2024 (10 РКИ, n = 1782: гемоглобин +0,14 г/дл, клинически малозначимо)" },
   nyakundi2026: { id: "nyakundi2026", cite: "Nyakundi P.N. и др. Does consuming ascorbate-rich fruits and fruit juices with meals improve iron bioavailability? Am J Clin Nutr, 2026 (15 РКИ, n = 1381: ферритин и гемоглобин растут, на всасывание железа эффекта почти нет)" },
   loganathan2023: { id: "loganathan2023", cite: "Loganathan V. и др. Treatment efficacy of vitamin C or ascorbate given as co-intervention with iron for anemia: a systematic review and meta-analysis. Clin Nutr ESPEN, 2023 (n = 905: значимой разницы нет, качество доказательств очень низкое)" },
+  hallstrom2013: { id: "hallstrom2013", cite: "Hallström H. и др. Long-term coffee consumption in relation to fracture risk and bone mineral density in women. Am J Epidemiol, 2013 (когорта, 61 433 женщины, 22 года: переломы не чаще; при ≥4 чашках плотность кости на 2–4% ниже)" },
+  hallstrom2014: { id: "hallstrom2014", cite: "Hallström H. и др. Coffee consumption and risk of fracture in the Cohort of Swedish Men (COSM). PLoS ONE, 2014 (42 978 мужчин: связи с переломами нет)" },
+  yuan2019: { id: "yuan2019", cite: "Yuan S., Larsson S.C. Associations of smoking and alcohol and coffee intake with fracture and bone mineral density: a Mendelian randomization study. Calcif Tissue Int, 2019 (UK Biobank, 53 184 случая переломов, 426 824 человека: связи кофе с переломами и плотностью нет)" },
+  hansen2000: { id: "hansen2000", cite: "Hansen S.A. и др. Association of fractures with caffeine and alcohol in postmenopausal women: the Iowa Women's Health Study. Public Health Nutr, 2000 (34 703 женщины: слабое повышение риска при самом высоком потреблении кофеина, зависит от кости)" },
+  dai2015: { id: "dai2015", cite: "Dai Z. и др. Caffeine, coffee and tea in relation to risk of hip fracture in the Singapore Chinese Health Study. FASEB J, 2015 (63 257 человек: ≥3 чашек в день — риск перелома бедра выше; 2 чашки у женщин — ниже; тезисы конференции)" },
   efsa2015: { id: "efsa2015", cite: "EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific opinion on the safety of caffeine. EFSA Journal, 2015" },
 };
 
@@ -63,6 +68,8 @@ export const EVIDENCE: Record<string, Evidence> = {
   massey1984: { design: "small-trial" }, bergman1990: { design: "small-trial" }, kynast1994: { design: "small-trial" },
   decarli2018: { design: "cohort" }, dahdouh2019: { design: "mechanism" }, maares2020: { design: "mechanism" },
   reboul2017e: { design: "mechanism" }, reboul2019: { design: "mechanism" }, reboul2013: { design: "mechanism" },
+  hallstrom2013: { design: "cohort", n: 61433 }, hallstrom2014: { design: "cohort", n: 42978 }, yuan2019: { design: "cohort", n: 426824 },
+  hansen2000: { design: "cohort", n: 34703 }, dai2015: { design: "cohort", n: 63257 },
   efsa2015: { design: "regulatory" },
 };
 export const sourceLevel = (id: string): Level => levelOf(EVIDENCE[id] ?? { design: "mechanism" });
@@ -99,6 +106,6 @@ export function interactionHints(meals: Meal[], opts: { caffeineLimit: number } 
   if (total > opts.caffeineLimit) out.push({ id: "caf-limit", text: `Кофеина ${Math.round(total)} мг — выше суточного предела ${opts.caffeineLimit} мг. Предел: взрослым 400 мг, при беременности и кормлении 200 мг.`, src: ["efsa2015"] });
   const single = Math.max(0, ...meals.map((m) => m.caffeine || 0));
   if (single > CAFFEINE_SINGLE) out.push({ id: "caf-single", text: `В одной записи ${Math.round(single)} мг кофеина — больше 200 мг за раз, чего лучше не превышать.`, src: ["efsa2015"] });
-  if (total >= 400) out.push({ id: "caf-mineral", text: "Кофеин на несколько часов увеличивает выведение магния, кальция и натрия с мочой. Эффект небольшой (в исследованиях — единицы миллиграммов в сутки), в крупных работах при привычном количестве кофе вреда для костей не видно; внимательнее быть тем, у кого мало кальция в рационе.", src: ["massey1984", "bergman1990", "kynast1994"] });
+  if (total >= 400) out.push({ id: "caf-mineral", text: "Кофеин на несколько часов увеличивает выведение магния, кальция и натрия с мочой. Эффект небольшой (единицы миллиграммов в сутки). В крупных когортах (десятки тысяч человек) кофе не повышал риск переломов; при ≥4 чашках плотность кости была на 2–4% ниже. Внимательнее быть при малом кальции в рационе.", src: ["hallstrom2013", "hallstrom2014", "yuan2019", "massey1984", "bergman1990", "kynast1994"] });
   return out;
 }
