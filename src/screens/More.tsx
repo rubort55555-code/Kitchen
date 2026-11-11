@@ -1,4 +1,4 @@
-// Экран «Ещё»: семья, ограничения, справочник, данные, справка, «Что-то не работает».
+// Экран «Ещё»: семья, ограничения, справочник, данные, справка, «Что-то не работает» (сообщение об ошибке).
 import { useEffect, useMemo, useState } from "react";
 import { Chevron, Header, Seg, Sheet } from "../components/ui";
 import { defaultSettings, getState, makeBackup, markBackup, restore, setSettings, useStore, type Backup } from "../lib/store";
@@ -32,7 +32,6 @@ export function More() {
     case "catalog": return <Catalog />;
     case "data": return <Data />;
     case "help": return <HelpPage />;
-    case "bug": return <Bug />;
     case "feedback": return <Feedback />;
     case "about": return <About />;
     case "beta": return <Beta />;
@@ -78,8 +77,7 @@ function Menu() {
       <div className="list">
         <Row icon="❓" title="Помощь" sub="Справка и частые вопросы" onClick={() => goPage("help")} />
         <Row icon="🧪" title="Пробные функции" sub="Сканер штрихкодов, питание" onClick={() => goPage("beta")} />
-        {feedbackReady() && <Row icon="📣" title="Сообщить об ошибке" sub="Голосом, текстом или со скриншотом" onClick={() => goPage("feedback")} />}
-        <Row icon="🛠" title="Что-то не работает" onClick={() => goPage("bug")} />
+        {feedbackReady() && <Row icon="🛠" title="Что-то не работает" sub="Сообщить об ошибке: голосом, текстом или со скриншотом" onClick={() => goPage("feedback")} />}
         <Row icon="ℹ️" title="О приложении" sub={"Версия " + VERSION} onClick={() => goPage("about")} />
       </div>
     </div>
@@ -412,7 +410,7 @@ function Data() {
     } catch (e) {
       if ((e as Error)?.name === "AbortError") { setMsg("Копия не сохранена — вы закрыли окно."); return; }
       try { await navigator.clipboard.writeText(text); markBackup(); setMsg("Не получилось сохранить файл, поэтому копия скопирована как текст. Вставьте её в Заметки."); }
-      catch { setMsg("Не получилось сохранить копию. Напишите в «Что-то не работает»."); }
+      catch { setMsg("Не получилось сохранить копию. Сообщите об этом в «Что-то не работает»."); }
     }
   }
 
@@ -566,43 +564,11 @@ export function HelpSheet({ screen }: { screen: Screen }) {
   );
 }
 
-// ---------- Что-то не работает ----------
+// ---------- Версия системы (для пробных функций) ----------
 function iosVersion(): string {
   const m = navigator.userAgent.match(/OS (\d+)_(\d+)(?:_(\d+))? like Mac OS X/);
   return m ? `iOS ${m[1]}.${m[2]}${m[3] ? "." + m[3] : ""}` : "не iOS";
 }
-function Bug() {
-  const st = useStore((s) => s);
-  const [what, setWhat] = useState("");
-  const [done, setDone] = useState("");
-  const report = () => {
-    let last = "нет";
-    try { const e = JSON.parse(localStorage.getItem("kitchen-last-error") || "null"); if (e) last = `${e.msg} (${e.t})`; } catch { /* пусто */ }
-    const standalone = (navigator as Navigator & { standalone?: boolean }).standalone || matchMedia("(display-mode: standalone)").matches;
-    return [
-      "Кухня — сообщение о проблеме",
-      `Что делал(а): ${what.trim() || "(не описано)"}`,
-      `Версия приложения: ${VERSION}`,
-      `Система: ${iosVersion()}`,
-      `Браузер: ${navigator.userAgent}`,
-      `Открыто с экрана «Домой»: ${standalone ? "да" : "нет"}`,
-      `Данные: ${st.products.length} продуктов, ${st.log.length} записей, ${st.recipes.length} рецептов`,
-      `Последняя ошибка: ${last}`,
-      `Сканер штрихкодов: ${st.settings.beta?.barcode === false ? "выключен" : "включён"}, ${scanSummary(st.settings.scanLog || [])}`,
-    ].join("\n");
-  };
-  return (
-    <div className="screen">
-      <Header title="Что-то не работает" screen="more" onBack={back} backText="Ещё" />
-      <p className="muted mt0">Опишите, что делали и что пошло не так. Нажмите «Скопировать» и вставьте текст в чат с Claude — так проблему найдут быстрее.</p>
-      <textarea className="inp" value={what} onChange={(e: any) => setWhat(e.target.value)} placeholder="Например: нажал «Добавить», а продукт не появился" aria-label="Что случилось" />
-      <button className="btn" style={{ marginTop: 12 }} onClick={async () => { try { await navigator.clipboard.writeText(report()); setDone("Скопировано. Вставьте в чат с Claude."); } catch { setDone("Не удалось скопировать — выделите текст ниже вручную."); } }}>Скопировать</button>
-      {done && <p className="small" role="status">{done}</p>}
-      <details className="prompt"><summary>Что будет отправлено</summary><pre>{report()}</pre></details>
-    </div>
-  );
-}
-
 // ---------- Пробные функции ----------
 const HOW: Record<ScanEvent["how"], string> = { camera: "камера", photo: "фото", manual: "цифры", "fail-photo": "фото — код не найден", "bad-digits": "цифры с ошибкой" };
 const RESULT: Record<NonNullable<ScanEvent["result"]>, string> = { known: "уже покупали", found: "найден в базе", none: "нет в базе", offline: "нет интернета", busy: "база занята", error: "ошибка связи" };
