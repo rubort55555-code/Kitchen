@@ -1,0 +1,487 @@
+Database Content
+
+The database consists of several sets of data: food descriptions, nutrients, weights and
+measures, footnotes, and sources of data. The sections below provide details about the
+information in each.
+
+Food Descriptions
+
+This file includes descriptive information about the food items. For more details on the
+format of the Food Description file, see “Food Description File Formats” (p. 29). A full
+description (containing the name of the food with relevant characteristics, e.g., raw or
+cooked, enriched, color) and a short description (containing abbreviations) are provided.
+Abbreviations used in creating short descriptions are given in Appendix A. In creating
+the short description, the first word in the long description is not abbreviated. In addition,
+if the long description is 25 characters or less, the short description contains no
+abbreviations. Abbreviations used elsewhere are given in Appendix B. Brand names
+used in food descriptions are in upper case. Scientific names, common names,
+manufacturers’ names, amounts of refuse, and refuse descriptions are provided where
+appropriate. The common name field includes alternative names for a product, e.g.,
+soda or pop, for a carbonated beverage. In addition this field also includes Uniform
+Retail Meat Identity Standard (URMIS) identification numbers and USDA commodity
+codes as appropriate. The food group to which the food item belongs is also indicated.
+A code is also provided indicating if the item is used in the Food and Nutrient Database
+for Dietary Studies (FNDDS; USDA, ARS, 2012). The factors used to calculate protein
+from nitrogen are included, as well as those used to calculate kilocalories. There are no
+factors for items prepared using the recipe program of the NDBS or for items where the
+manufacturer calculates protein and kilocalories.
+
+The refuse and refuse description fields contain amounts and descriptions of inedible
+material (for example, seeds, bone, and skin) for applicable foods. These amounts are
+expressed as a percentage of the total weight of the item as purchased, and they are
+used to compute the weight of the edible portion. Refuse data were obtained from
+NFNAP and other USDA-sponsored contracts and US Department of Agriculture
+Handbooks 102 (Matthews and Garrison, 1975) and 456 (Adams, 1975). To calculate
+the “amount of nutrient in edible portion of 1 pound (453.6 grams) as purchased,” use
+the following formula:
+
+       Y = V*4.536*[(100-R)/100]
+
+   where:
+     Y = nutrient value per 1 pound as purchased,
+     V = nutrient value per 100 g (Nutr_Val in the Nutrient Data file), and
+     R = percent refuse (Refuse in the Food Description file).
+
+
+
+                                                 5
+For meat cuts containing bone and connective tissue, the amount of connective tissue is
+included in the value given for bone. Separable fat is not shown as refuse if the meat is
+described as separable lean and fat. Separable fat generally refers to seam fat and
+external trim fat. Separable lean refers to muscle tissue that can be readily separated
+from fat, bone, and connective tissue in the intact cut; it includes any fat striations
+(marbling) within the muscle. For boneless cuts, the refuse value applies to connective
+tissue or connective tissue plus separable fat. The percentage yield of cooked, edible
+meat from 1 pound of raw meat with refuse can be determined by using the following
+formula:
+
+      Y = (Wc/453.6)*100
+
+  where:
+     Y = percentage yield of cooked edible meat per 1 pound as purchased, and
+     Wc = weight of cooked, edible meat in grams.
+
+Food Group. To facilitate data retrieval the food items in SR are organized into food
+groups. Currently there are 25 food groups, which are listed in the Food Group
+Description file. For more details on the format of this file, see “Food Group Data File
+Formats” (p. 31). Starting with SR25, the food group, “Ethnic Foods” has been renamed
+“American Indian/Alaska Native Foods” to better reflect its contents. Data on other
+ethnic foods are contained in their respective food groups, for example data on
+plantains, a Latino ethnic food are in food group 9 (Fruit and Fruit Juices), while the
+Asian foods, miso and natto, are entered in food group 16 (Legumes and Legume
+Products). Food group 36 (Restaurant Foods) contains foods obtained from casual
+dining, full service restaurants, Latino restaurants, and Chinese restaurants (not Fast
+Foods, which are in food group 21). Home prepared items or prepared frozen entrees
+are included in Food Group 22, Meals, Entrees, and Side dishes. Some food items,
+such as beverages and rice, though obtained at restaurants are included in their
+respective food groups.
+
+LanguaL. To address the needs of diverse users of the USDA food composition
+databases, starting with SR23, NDL is providing an expanded standardized food
+description for selected food groups (spices and herbs, fruits and fruit juices, pork
+products, vegetables and vegetable products, and beef products) based on the
+LanguaL Thesaurus (Moeller and Ireland, 2009). The use of this multi-hierarchical food
+classification system will permit the harmonization of food description terms and
+definitions across many cultures and languages to support food research, food safety,
+nutrition monitoring, and food marketing.
+
+LanguaL stands for "Langua aLimentaria" or "language of food". Work on LanguaL
+was started in the late 1970's by the Center for Food Safety and Applied Nutrition
+(CFSAN) of the United States Food and Drug Administration as a co-operative effort of
+specialists in food technology, information science, and nutrition.
+
+
+                                              6
+Since then, LanguaL has developed in collaboration with the NCI, and, more recently,
+its European partners, notably France, Denmark, Switzerland, and Hungary. Since
+1996, the European LanguaL Technical Committee has administered the thesaurus.
+
+The thesaurus provides a standardized language for describing foods, specifically for
+classifying food products for information retrieval. LanguaL is based on the concept that:
+
+ Any food (or food product) can be systematically described by a combination of
+    characteristics or facets;
+ These characteristics can be categorized into viewpoints and coded for computer
+    processing; and
+ The resulting viewpoint/characteristic codes can be used to retrieve data about the
+    food from external databases.
+
+The current facets for foods in SR27 include: product type; food source; part of plant or
+animal; physical state, shape or form; extent of heat treatment; cooking method;
+treatment applied; preservation method; packing medium; container or wrapping; food
+contact surface; consumer group/dietary use/label claim; geographic places and
+regions; and adjunct characteristics of food.
+
+The specific tables added to SR are the LanguaL Factor File (p. 31) and the LanguaL
+Factors Description File (p. 31). For more information on LanguaL, see the web site:
+http://www.langual.org.
+
+Nutrients
+
+The Nutrient Data file contains mean nutrient values per 100 g of the edible portion of
+food, along with fields to further describe the mean value. The following statistical
+attributes are provided to better describe the data:
+
+   Nutrient value—the mean of the data values for a specific parameter. Nutrient values
+    have been rounded to the number of decimal places for each nutrient as specified in
+    the Nutrient Definition file (p. 34).
+   Number of data points—the number of data points used to estimate the mean.
+   Standard error—the standard error of the mean: a measure of variability of the mean
+    value as a function of the number of data points.
+   Number of studies—the number of analytical studies used to generate the mean. A
+    study is a discrete research project conducted or reported for a specific food. A
+    study can be the analysis of one nutrient in one food, one nutrient in many foods, or
+    many nutrients in many foods.
+   Minimum value—the smallest observed value in the range of values.
+   Maximum value—the largest observed value in the range of values.
+   Degrees of freedom—the number of data values that are free to vary after certain
+    restrictions are placed on the estimates; used in probability calculations.
+
+                                               7
+   Lower- and upper-error bounds—represents a range of values within which the
+    population mean is expected to fall, given a pre-specified confidence level. For SR27
+    and related releases, the confidence level is 95 percent.
+   Statistical comments—provide additional details about certain assumptions made
+    during statistical calculations. The definition of each comment is given after the
+    description of the Nutrient Data file under “File Formats” (p. 31).
+
+Other fields provide information on how the values were generated, as follows:
+
+   Source code—contains codes indicating the type of data (e.g., analytical, calculated,
+    assumed zero) in the Nutrient Data file.
+   Derivation code—gives more information about how a value was calculated or
+    imputed. Procedures used to impute a nutrient value are described by Schakel et al.
+    (1997).
+   Reference NDB number—indicates the NDB number of the food item that was used
+    to impute a nutrient value for another food. This field is only populated for items
+    which have been added or updated since SR14 for which an imputed value is
+    provided.
+   Added nutrient marker—a “Y” indicates that a mineral or vitamin was added for
+    enrichment or fortification. This field is populated for ready-to-eat breakfast cereals
+    and many brand-name hot cereals in food group 08. In future releases, this field will
+    be populated for other food groups, where applicable.
+   AddMod_Date—indicates when a value was either added to the database or last
+    modified. This field was first added with SR24 (2011). Data, which have not been
+    updated since SR14 (2001) carry the date when that section of AH-8 was published.
+    When the nutrient values are reviewed, but not modified, there is no change in the
+    AddMod_Date. Hence, the field may not accurately reflect the currency of the data.
+    Dates associated with calculated values (carbohydrate by difference, energy, vitamin
+    A (IU and RAE), and folate DFE) may carry newer dates reflecting their recalculation
+    when other values in the profile of a particular food item were updated, though the
+    values from which the specific value was calculated may not have changed. Only
+    values added or modified since SR14 will have newer dates. To determine if the
+    date has changed the values between the current and preceding releases are
+    compared to the number of decimal places specified in the Nutr_Def table. The date
+    associated with the source documents used to determine the mean can be found in
+    the Sources of Data file. The description of this file can be found on p. 37.
+   Confidence code—indicates the relative quality of the data. This code is derived
+    using the data quality criteria first described by Mangels et al. (1993). These criteria
+    have been expanded and enhanced for the NDBS (Holden et al., 2002). This field is
+    included as a placeholder for future releases.
+
+For more details on the Nutrient Data file, see “Nutrient Data File Formats” (p. 32).
+Nutrient values indicate the total amount of the nutrient present in the edible portion of
+the food, including any nutrients added in processing. Table 1 gives an idea of the
+
+                                                8
+comprehensiveness of the database by listing for each nutrient the number of food
+items that contain data.
+
+Table 1.—Number of Foods in the Database (n = 8618) Containing a Value for the
+Specified Nutrient
+Nutr.                                  Nutr.
+                   Nutrient      Count                  Nutrient          Count
+ No                                      No
+255 Water *†                      8612 406 Niacin *†                        7937
+               †                                                  †
+208 Energy *                      8618 410 Pantothenic acid                 6460
+                                                           †
+268 Energy                        8584 415 Vitamin B-6 *                    7677
+               †                                            †
+203 Protein *                     8618 417 Folate, total *                  7373
+                          †                             †
+204 Total lipid (fat) *           8618 431 Folic acid *                     6631
+            †                                               †
+207 Ash *                         8286 432 Folate, food *                   6863
+                                                            †
+205 Carbohydrate, by              8618 435 Folate, DFE *                    6612
+      difference *†                    421 Choline, total *   †
+                                                                            4534
+                               †
+291 Fiber, total dietary *        7962 454 Betaine                          2075
+                       †
+269 Sugars, total *               6679 418 Vitamin B-12 *     †
+                                                                            7427
+210 Sucrose                       1544 578 Vitamin B-12, added *            4668
+211 Glucose (dextrose)            1551 320 Vitamin A, RAE *†                7089
+212 Fructose                      1550 319 Retinol *†                       6806
+213 Lactose                       1530 321 Carotene, beta *     †
+                                                                            5356
+214 Maltose                       1518 322 Carotene, alpha *      †
+                                                                            5263
+287 Galactose                     1396 334 Cryptoxanthin, beta *†           5252
+209 Starch                        1041 318 Vitamin A, IU *†                 7932
+301 Calcium, Ca *†                8264 337 Lycopene †                       5228
+                †
+303 Iron, Fe *                    8471 338 Lutein + zeaxanthin *    †
+                                                                            5206
+                             †
+304 Magnesium, Mg *               7936 323 Vitamin E (alpha-                5613
+                           †
+305 Phosphorus, P *               8046        tocopherol) *†
+306 Potassium, K *†               8208 573 Vitamin E, added *               4501
+                     †
+307 Sodium, Na *                  8535 341 Tocopherol, beta                 1763
+                 †
+309 Zinc, Zn *                    7917 342 Tocopherol, gamma                1760
+                     †
+312 Copper, Cu *                  7363 343 Tocopherol, delta                1744
+                            †
+315 Manganese, Mn                 6478 344 Tocotrienol, alpha               1353
+                        †
+317 Selenium, Se *                6868 345 Tocotrienol, beta                1367
+313 Fluoride, F                    532 346 Tocotrienol, gamma               1357
+401 Vitamin C, total ascorbic     7826 347 Tocotrienol, delta               1354
+       acid *†                         328 Vitamin D (D2 + D3) *     †
+                                                                            5319
+404 Thiamin *†                    7939 325 Vitamin D2 (ergocalciferol)        76
+405 Riboflavin *†                 7961 326 Vitamin D3 (cholecalciferol)     1890
+                                             9
+Nutr.                                        Nutr.
+               Nutrient              Count                   Nutrient         Count
+ No                                           No
+324 Vitamin D †                       5320   646 Fatty acids, total            7954
+430 Vitamin K (phylloquinone) *  †
+                                      4969         polyunsaturated *†
+429 Dihydrophylloquinone              1348   618 18:2 undifferentiated *       7070
+428 Menaquinone-4                      523   675 18:2 n-6 c,c                  1629
+606 Fatty acids, total saturated * †
+                                      8274   670 18:2 CLAs                     1296
+607 4:0 *                             5589   669 18:2 t,t                       353
+608 6:0 *                             5621   666 18:2 i                          60
+609 8:0 *                             5836   665 18:2 t not further defined    1003
+610 10:0 *                            6207   619 18:3 undifferentiated *       6972
+611 12:0 *                            6460   851 18:3 n-3 c,c,c (ALA)          1772
+696 13:0                               263   685 18:3 n-6 c,c,c                1482
+612 14:0 *                            6828   856 18:3i                          378
+652 15:0                              2166   627 18:4                          5603
+613 16:0 *                            7037   672 20:2 n-6 c,c                  2283
+653 17:0                              2552   689 20:3 undifferentiated         2084
+614 18:0 *                            7027   852 20:3 n-3                       872
+615 20:0                              2628   853 20:3 n-6                      1073
+624 22:0                              2101   620 20:4 undifferentiated *       6222
+654 24:0                              2016   855 20:4 n-6                       162
+645 Fatty acids, total                7947   629 20:5 n-3 (EPA) *              5693
+                         †
+      monounsaturated *                      857 21:5                           117
+625 14:1                              2520   858 22:4                           890
+697 15:1                              1871   631 22:5 n-3 (DPA) *              5649
+626 16:1 undifferentiated *           6799   621 22:6 n-3 (DHA) *              5651
+673 16:1 c                            1201   605 Fatty acids, total trans      3243
+662 16:1 t                            1073   693 Fatty acids, total trans-     1696
+687 17:1                              2247         monoenoic
+617 18:1 undifferentiated *           7053   695 Fatty acids, total trans-     1400
+                                                   polyenoic
+674 18:1 c                            1668
+                                             601 Cholesterol *†                8250
+663 18:1 t                            1717
+                                             636 Phytosterols                   499
+859 18:1-11 t (18:1t n-7)              152
+                                             638 Stigmasterol                   132
+628 20:1                              6213
+                                             639 Campesterol                    131
+630 22:1 undifferentiated *           5676
+                                             641 Beta-sitosterol                132
+676 22:1 c                             984
+                                             501 Tryptophan                    5129
+664 22:1 t                             717
+                                             502 Threonine                     5175
+671 24:1 c                            1206
+                                             10
+Nutr.                                            Nutr.
+                  Nutrient            Count                  Nutrient           Count
+  No                                              No
+503 Isoleucine                          5179 515 Glutamic acid                   5124
+504 Leucine                             5178 516 Glycine                         5121
+505 Lysine                              5192 517 Proline                         5112
+506 Methionine                          5191 518 Serine                          5121
+507 Cystine                             5026 521 Hydroxyproline                  1393
+508 Phenylalanine                       5175 221 Alcohol, ethyl *                5345
+509 Tyrosine                            5145 262 Caffeine *                      5143
+510 Valine                              5179 263 Theobromine*                    5103
+511 Arginine                            5165
+512 Histidine                           5172
+513 Alanine                             5121
+514 Aspartic acid                       4966
+*Indicates the 65 nutrients included in the USDA Food and Nutrient Database for
+Dietary Studies (FNDDS).
+†
+  Nutrients included in the Abbreviated file (p. 38).
+
+In general, levels of fortified nutrients are the values calculated by the manufacturer or
+by NDL, based on the Nutrition Labeling and Education Act (NLEA) label declaration of
+% Daily Value (DV) (CFR, Title 21, Pt. 101) (US Food and Drug Administration–
+Department of Health and Human Services, 2012). Such values represent the minimum
+nutrient level expected in the product. If analytical values were used to estimate levels
+of added nutrients, a number is present in the sample count field for these nutrients.
+
+Nutrient Retention and Food Yield. When nutrient data for prepared or cooked
+products are unavailable or incomplete, nutrient values are calculated from comparable
+raw items or by recipe. When values are calculated in a recipe or from the raw item,
+appropriate nutrient retention (USDA, 2007) and food yield factors (Matthews and
+Garrison, 1975) are applied to reflect the effects of food preparation on food weights
+and nutrient content. To obtain the content of nutrient per 100 g of cooked food, the
+nutrient content per 100 g of raw food is multiplied by the nutrient retention factor and,
+where appropriate, adjustments are made for fat and moisture gains and losses.
+
+Nutrient retention factors are based on data from USDA research contracts, research
+reported in the literature, and USDA publications. Most retention factors were calculated
+by the True Retention Method (%TR) (Murphy et al., 1975). This method, as shown
+below, accounts for the loss or gain of moisture and the loss of nutrients due to heat or
+other food preparation methods:
+
+       %TR = (Nc*Gc) / (Nr*Gr) * 100
+
+
+                                               11
+   where:
+     TR = true retention
+     Nc = nutrient content per g of cooked food,
+     Gc = g of cooked food,
+     Nr = nutrient content per g of raw food, and
+     Gr = g of food before cooking.
+
+Proximates. The term proximate component refers to those macronutrients that include
+water (moisture), protein, total lipid (fat), total carbohydrate, and ash. Except in the case
+of a few foods, nutrient profiles have values for the proximate components and at least
+one other nutrient.
+
+Protein. The values for protein were calculated from the amount of total nitrogen (N) in
+the food, using the specific conversion factors recommended by Jones (1941) for most
+food items. The analytical methods used to determine the nitrogen content of foods are
+AOAC 968.06 (4.2.04), 992.15 (39.1.16) and 990.03 (combustion) and 991.20 (Kjeldahl)
+(AOAC, 2010). The specific factor applied to each food item is provided in the N_Factor
+field in the Food Description file. The general factor of 6.25 is used to calculate protein
+in items that do not have a specific factor. When the protein content of a multi-ingredient
+food (e.g., beef stew) is calculated using the recipe program of the NDBS the specific
+nitrogen to protein conversion factors are applied at the ingredient level. Therefore, the
+N-factor field will remain empty. When the manufacturer calculates protein the N-factor
+field will also be empty.
+
+Protein values for chocolate, cocoa, coffee, mushrooms, and yeast were adjusted for
+non-protein nitrogenous material (Merrill and Watt, 1973). The adjusted protein
+conversion factors used to calculate protein for these items are as follows:
+
+   chocolate and cocoa      4.74
+   coffee                   5.3
+   mushrooms                4.38
+   yeast                    5.7
+
+When these items are used as ingredients, such as chocolate in chocolate milk or yeast
+in bread, only their protein nitrogen content was used to determine their contribution to
+the calculated protein and amino acid content of the food. Protein calculated from total
+nitrogen, which may contain non-protein nitrogen, was used in determining
+carbohydrate by difference. This unadjusted protein value is not given in the Nutrient
+Data file for SR27; rather, it was previously included as a footnote in printed sections of
+“Agriculture Handbook 8.”
+
+For soybeans, nitrogen values were multiplied by a factor of 5.71 (Jones, 1941) to
+calculate protein. The soybean industry, however, uses 6.25 to calculate protein. To
+convert these values divide the proteins value by 5.71, and then multiply the resulting
+value by 6.25. It will also be necessary to adjust the value for carbohydrate by
+difference (Nutr. No. 205).
+                                                12
+Total Lipid. The total lipid (fat) content of most foods obtained through NFNAP is
+determined by gravimetric methods, including acid hydrolysis (AOAC 922.06, 925.12,
+989.05, or 954.02) and extraction methods using a mixed solvent system of chloroform
+and methanol (AOAC 983.25 or Folch et al. 1957). Older values may have been
+obtained by ether extraction (AOAC 920.39, 933.05, or 960.39). Total lipid determined
+by extraction is reported as Nutrient No. 204. It is sometimes referred to as “crude fat”
+and includes the weight of all lipid components, including glycerol, soluble in the solvent
+system. Nutrient No. 204 may not be identical to the fat level declared on food labels
+under the NLEA, where fat is expressed as the amount of triglyceride that would
+produce the analytically determined amount of lipid fatty acids and does not include
+other lipid components not soluble in the solvent system. The term “NLEA fat” is
+commonly referred to as “total fatty acids expressed as triglycerides.”
+
+Ash. The ash content of foods is determined by gravimeteric methods (AOAC 923.03,
+942.05, or 945.46).
+
+Moisture. The moisture (or water) content of foods is determined by vacuum oven
+(AOAC 934.01, 934.06, 964.22) or forced air (AOAC 950.46).
+
+Carbohydrate. Carbohydrate, when present, is determined as the difference between
+100 and the sum of the percentages of water, protein, total lipid (fat), ash, and, when
+present, alcohol. Total carbohydrate values include total dietary fiber. Available
+carbohydrate, which is used in some countries, can be calculated if desired by the user,
+by subtracting the sum of the percentages of water, protein, total lipid (fat), ash, total
+dietary fiber, and alcohol (when present) from 100. Carbohydrate in beer and wine is
+determined by methods 979.06 (27.1.21) and 985.10 (28.1.18) of AOAC International
+(AOAC, 2010), respectively. Total dietary fiber content is determined by enzymatic-
+gravimetric methods 985.29 or 991.43 of the AOAC (2010). Total sugars is the term
+used for the sum of the individual monosaccharides (galactose, glucose, and fructose)
+and disaccharides (sucrose, lactose, and maltose). Analytical data for individual sugars
+obtained through NFNAP were determined by liquid chromatography (AOAC 982.14).
+Earlier values were also determined using AOAC methods (2010), with either high-
+performance liquid chromatography (HPLC) or gas-liquid chromatography (GLC). When
+analytical data for total sugars are unavailable for items in the FNDDS, values are
+imputed or obtained from manufacturers and trade associations. Starch is analyzed
+using the AOAC method 966.11 (2010) or by a polarometric method (The Feedings
+Stuffs Regulations 1982). Because the analyses of total dietary fiber, total sugars, and
+starch are performed separately and reflect the analytical variability inherent to the
+measurement process, the sum of these carbohydrate fractions may not equal the
+carbohydrate-by-difference value.
+
+Food Energy. Food energy is expressed in kilocalories (kcal) and kilojoules (kJ). One
+kcal equals 4.184 kJ. The data represent physiologically available energy, which is the
+energy value remaining after digestive and urinary losses are deducted from gross
+energy. Energy values, with the exception of multi-ingredient processed foods, are
+                                               13
+based on the Atwater system for determining energy values. Derivation of the Atwater
+calorie factors is discussed in “Agriculture Handbook 74” (Merrill and Watt, 1973). For
+multi-ingredient processed foods (source codes 8 or 9; for more information on source
+codes, see p. 34) kilocalorie values generally reflect industry practices (as permitted by
+NLEA) of calculating kilocalories as 4, 4, or 9 kilocalories per gram of protein,
+carbohydrate, and fat, respectively, or as 4, 4, or 9 kilocalories per gram of protein,
+carbohydrate minus insoluble fiber, and fat. The latter method is often used for high-
+fiber foods.
+
+Calorie factors for protein, fat, and carbohydrates are included in the Food Description
+file. For foods containing alcohol, a factor of 6.93 is used to calculate kilocalories per
+gram of alcohol (Merrill and Watt, 1973). No calorie factors are given for items prepared
+using the recipe program of the NDBS. Instead, total kilocalories for these items equal
+the sums of the kilocalories contributed by each ingredient after adjustment for changes
+in yield, as appropriate. For multi-ingredient processed foods, if the kilocalories
+calculated by the manufacturer are reported, no calorie factors are given.
+
+Calorie factors for fructose and sorbitol, not available in the Atwater system, are derived
+from the work of Livesay and Marinos (1988). Calorie factors for coffee and tea are
+estimated from those for seeds and vegetables, respectively.
+
+Minerals. Minerals included in the database are calcium, iron, magnesium, phosphorus,
+potassium, sodium, zinc, copper, manganese, selenium, and fluoride. Levels of
+minerals for most foods are determined by methods of the AOAC (2010). Calcium, iron,
+magnesium, phosphorus, sodium, potassium, zinc, copper, and manganese are usually
+determined by inductively coupled plasma emission spectrophotometry (AOAC 984.27)
+or, except for phosphorus, by atomic absorption (AOAC 985.35), with phosphorus
+determined colorimetrically by AOAC 2.019, 2.095 and 7.098.
+
+Analytical data for selenium were published earlier by USDA (1992) and were
+determined by the modified selenium hydride and fluorometric methods. Selenium
+values for foods analyzed between 1998 and 2008 for NFNAP are determined by either
+the modified selenium hydride (AOAC 986.15) or stable isotope dilution gas
+chromatography-mass spectrometry (Reamer and Veillon, 1981) methods. The
+selenium content of plants, in particular cereal grains, is strongly influenced by the
+quantity of biologically available selenium in the soil in which the plants grow, that is, by
+their geographical origin (Kubota and Allaway, 1972). The values given are national
+averages and should be used with caution when levels of selenium in locally grown
+foods are of interest or concern.
+
+Beginning with SR19 (2006), values for fluoride, previously released in the USDA
+National Fluoride Database of Selected Beverages and Foods, Release 2 (USDA,
+2005), are included in SR. Other analyzed values in the Fluoride Database, including
+regional values, are not included in SR. Samples are analyzed using a fluoride ion-
+specific electrode, direct read method (VanWinkle, 1995) for clear liquids and a micro-
+diffusion method (VanWinkle, 1995) for other food samples. As with selenium, the
+                                                14
+

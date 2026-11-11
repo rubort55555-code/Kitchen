@@ -1,0 +1,412 @@
+Table 10.—Source Code File Format
+    Field name    Type    Blank    Description
+    Src_Cd        A 2*       N     2-digit code.
+    SrcCd_Desc    A 60       N  Description of source code that identifies the type of
+                                nutrient data.
+* Primary key for the Source Code file.
+
+
+Data Derivation Code Description File (file name = DERIV_CD). This file (Table 11)
+provides information on how the nutrient values were determined. The file contains the
+derivation codes and their descriptions.
+
+    Links to the Nutrient Data file by Deriv_Cd
+
+Table 11.—Data Derivation Code File Format
+    Field name   Type     Blank   Description
+    Deriv_Cd     A 4*       N     Derivation Code.
+    Deriv_Desc   A 120      N    Description of derivation code giving specific
+                                 information on how the value was determined.
+* Primary key for the Data Derivation Code file.
+
+For example, the data derivation code that indicates how α-tocopherol (Nutrient No.
+323) in Emu, fan fillet, raw (NDB. No. 05623) was calculated is BFSN. The breakdown
+of the code is as follows:
+
+        B = based on another form of the food or a similar food;
+        F = concentration adjustment used;
+        S = solids, the specific concentration adjustment used; and
+        N = retention factors not used.
+
+The Ref_NDB_No is 05621 Emu, ground, raw. This means that the analytical
+α-tocopherol value in the total solids of emu, ground, raw is used to calculate the α-
+tocopherol in the total solids of emu, fan fillet, raw.
+
+        Nt = (Ns*Ss)/St
+
+      where:
+        Nt = the nutrient content of the target item,
+        Ns = the nutrient content of the source item,
+               For NDB No. 05621, α-tocopherol = 0.24 mg/100 g
+        Ss = the total solids content of the source item, and
+               For NDB No. 05621, solids = 27.13 g/100 g
+                                                   35
+          St = the total solids content of the target item.
+                 For NDB No. 05623, solids = 2538 g/100 g
+
+So, using this formula for the above example:
+
+          Nt = (0.24 × 25.38)/27.13 = 0.22 mg/100 g α-tocopherol in Emu, fan fillet, raw
+
+Only items that were imputed starting with SR14 (2001) will have both derivation codes
+and reference NDB numbers. Other items that have been imputed outside the NDBS
+will have data derivation codes, but the Ref_NDB_No field will be blank.
+
+
+Weight File (file name = WEIGHT). This file (Table 12) contains the weight in grams of
+a number of common measures for each food item.
+
+    Links to Food Description file by NDB_No
+    Links to Nutrient Data file by NDB_No
+
+Table 12.— Weight File Format
+ Field name     Type Blank             Description
+    NDB_No            A 5*       N     5-digit Nutrient Databank number.
+    Seq               A 2*       N     Sequence number.
+    Amount            N 5.3      N     Unit modifier (for example, 1 in “1 cup”).
+    Msre_Desc         A 84       N     Description (for example, cup, diced, and 1-inch
+                                       pieces).
+    Gm_Wgt            N 7.1      N     Gram weight.
+    Num_Data_Pts      N3         Y     Number of data points.
+ Std_Dev            N 7.3      Y       Standard deviation.
+* Primary key for the Weight file.
+
+
+Footnote File (file name = FOOTNOTE). This file (Table 13) contains additional
+information about the food item, household weight, and nutrient value.
+
+    Links to the Food Description file by NDB_No
+    Links to the Nutrient Data file by NDB_No and when applicable, Nutr_No
+    Links to the Nutrient Definition file by Nutr_No, when applicable
+
+
+
+
+                                                 36
+Table 13.—Footnote File Format
+ Field name    Type Blank Description
+    NDB_No           A5          N    5-digit Nutrient Databank number.
+    Footnt_No        A4          N    Sequence number. If a given footnote applies to
+                                      more than one nutrient number, the same footnote
+                                      number is used. As a result, this file cannot be
+                                      indexed.
+    Footnt_Typ       A1          N    Type of footnote:
+                                      D = footnote adding information to the food
+                                      description;
+                                      M = footnote adding information to measure
+                                      description;
+                                      N = footnote providing additional information on a
+                                      nutrient value. If the Footnt_typ = N, the Nutr_No will
+                                      also be filled in.
+    Nutr_No          A3          Y    Unique 3-digit identifier code for a nutrient to which
+                                      footnote applies.
+    Footnt_Txt       A 200       N    Footnote text.
+
+
+Sources of Data Link File (file name = DATSRCLN). This file (Table 14) is used to link
+the Nutrient Data file with the Sources of Data table. It is needed to resolve the many-to-
+many relationship between the two tables.
+
+     Links to the Nutrient Data file by NDB No. and Nutr_No
+     Links to the Nutrient Definition file by Nutr_No
+     Links to the Sources of Data file by DataSrc_ID
+
+Table 14.—Sources of Data Link File Format
+    Field name      Type     Blank    Description
+    NDB_No          A 5*     N        5-digit Nutrient Databank number.
+    Nutr_No         A 3*     N        Unique 3-digit identifier code for a nutrient.
+ DataSrc_ID       A 6*    N        Unique ID identifying the reference/source.
+* Primary key for the Sources of Data Link file.
+
+
+Sources of Data File (file name = DATA_SRC). This file (Table 15) provides a citation
+to the DataSrc_ID in the Sources of Data Link file.
+
+     Links to Nutrient Data file by NDB No. through the Sources of Data Link file
+                                                 37
+Table 15.—Sources of Data File Format
+ Field name     Type     Blank Description
+ DataSrc_ID     A 6*       N     Unique number identifying the reference/source.
+ Authors        A 255      Y     List of authors for a journal article or name of
+                                 sponsoring organization for other documents.
+ Title          A 255      N     Title of article or name of document, such as a report
+                                 from a company or trade association.
+ Year           A4         Y     Year article or document was published.
+ Journal        A 135      Y     Name of the journal in which the article was
+                                 published.
+ Vol_City       A 16       Y     Volume number for journal articles, books, or reports;
+                                 city where sponsoring organization is located.
+ Issue_State    A5         Y     Issue number for journal article; State where the
+                                 sponsoring organization is located.
+ Start_Page     A5         Y     Starting page number of article/document.
+ End_Page        A5        Y     Ending page number of article/document.
+* Primary key for the Sources of Data file.
+
+
+Abbreviated File
+
+The Abbreviated file (file name = ABBREV) is available in ASCII format and as a
+Microsoft Excel spreadsheet. It contains all the food items found in the relational
+database, but with fewer nutrients and other related information. The abbreviated file
+does not include values for starch, fluoride, betaine, vitamin D2 and D3, added vitamin E,
+added vitamin B12, alcohol, caffeine, theobromine, phytosterols, individual amino acids,
+individual fatty acids, or sugars. Table 16 lists all the nutrients included in the
+abbreviated file. Starting with SR22 (2009), Vitamin D in μg and IU was added to the
+Abbreviated file. The ASCII file (Table 16) is in delimited format. Fields are separated by
+a caret (^) and text fields are surrounded by tildes (~). Data refer to 100 g of the edible
+portion of the food item. Decimal points are included in the fields. Missing values are
+denoted by the null value of two consecutive carets (^^) or two carets and two tildes
+(~~). The file is sorted in ascending order by the NDB number. Two common measures
+are provided, which are the first two common measures in the Weight file for each NDB
+number. To obtain values per one of the common measures, multiply the value in the
+desired nutrient field by the value in the desired common measure field and divide by
+100. For example, to calculate the amount of fat in 1 tablespoon of butter (NDB No.
+01001):
+                                               38
+        VH=(N*CM)/100
+
+   where:
+     VH = the nutrient content per the desired common measure,
+     N = the nutrient content per 100 g,
+            For NDB No. 01001, fat = 81.11 g/100 g
+     CM = grams of the common measure.
+            For NDB No. 01001, 1 tablespoon = 14.2 g
+
+So using this formula for the above example:
+
+        VH = (81.11*14.2)/100 = 11.52 g fat in 1 tablespoon of butter
+
+This file is a flat file and is provided for those users who do not need a relational
+database. It contains the information in one record per food item and is suitable for
+importing into a spreadsheet. The data file has been imported into a Microsoft Excel
+2007 spreadsheet for users of that application. Users of other software applications can
+import either the Microsoft Excel 2007 spreadsheet or the ASCII files. If additional
+information is needed, this file can be linked to the other SR files by the NDB number.
+
+Table 16.—Abbreviated File Format
+ Field name    Type    Description
+ NDB_No.           A 5*      5-digit Nutrient Databank number.
+ Shrt_Desc         A 60      60-character abbreviated description of food item.†
+ Water             N 10.2    Water (g/100 g)
+ Energ_Kcal        N 10      Food energy (kcal/100 g)
+ Protein           N 10.2    Protein (g/100 g)
+ Lipid_Tot         N 10.2    Total lipid (fat)(g/100 g)
+ Ash               N 10.2    Ash (g/100 g)
+ Carbohydrt        N 10.2    Carbohydrate, by difference (g/100 g)
+ Fiber_TD          N 10.1    Total dietary fiber (g/100 g)
+ Sugar_Tot         N 10.2    Total sugars (g/100 g)
+ Calcium           N 10      Calcium (mg/100 g)
+ Iron              N 10.2    Iron (mg/100 g)
+ Magnesium         N 10      Magnesium (mg/100 g)
+ Phosphorus        N 10      Phosphorus (mg/100 g)
+ Potassium         N 10      Potassium (mg/100 g)
+ Sodium            N 10      Sodium (mg/100 g)
+                                                 39
+Field name    Type     Description
+Zinc          N 10.2   Zinc (mg/100 g)
+Copper        N 10.3   Copper (mg/100 g)
+Manganese     N 10.3   Manganese (mg/100 g)
+Selenium      N 10.1   Selenium (μg/100 g)
+Vit_C         N 10.1   Vitamin C (mg/100 g)
+Thiamin       N 10.3   Thiamin (mg/100 g)
+Riboflavin    N 10.3   Riboflavin (mg/100 g)
+Niacin        N 10.3   Niacin (mg/100 g)
+Panto_acid    N 10.3   Pantothenic acid (mg/100 g)
+Vit_B6        N 10.3   Vitamin B6 (mg/100 g)
+Folate_Tot    N 10     Folate, total (μg/100 g)
+Folic_acid    N 10     Folic acid (μg/100 g)
+Food_Folate   N 10     Food folate (μg/100 g)
+Folate_DFE    N 10     Folate (μg dietary folate equivalents/100 g)
+Choline_Tot   N 10     Choline, total (mg/100 g)
+Vit_B12       N 10.2   Vitamin B12 (μg/100 g)
+Vit_A_IU      N 10     Vitamin A (IU/100 g)
+Vit_A_RAE     N 10     Vitamin A (μg retinol activity equivalents/100g)
+Retinol       N 10     Retinol (μg/100 g)
+Alpha_Carot   N 10     Alpha-carotene (μg/100 g)
+Beta_Carot    N 10     Beta-carotene (μg/100 g)
+Beta_Crypt    N 10     Beta-cryptoxanthin (μg/100 g)
+Lycopene      N 10     Lycopene (μg/100 g)
+Lut+Zea       N 10     Lutein+zeazanthin (μg/100 g)
+Vit_E         N 10.2   Vitamin E (alpha-tocopherol) (mg/100 g)
+Vit_D_mcg     N 10.1   Vitamin D (μg/100 g)
+Vit_D_IU      N 10     Vitamin D (IU/100 g)
+Vit_K         N 10.1   Vitamin K (phylloquinone) (μg/100 g)
+FA_Sat        N 10.3   Saturated fatty acid (g/100 g)
+FA_Mono       N 10.3   Monounsaturated fatty acids (g/100 g)
+FA_Poly       N 10.3   Polyunsaturated fatty acids (g/100 g)
+
+                                            40
+ Field name        Type     Description
+ Cholestrl         N 10.3   Cholesterol (mg/100 g)
+ GmWt_1            N 9.2    First household weight for this item from the
+                            Weight file.‡
+ GmWt_Desc1        A 120    Description of household weight number 1.
+ GmWt_2            N 9.2    Second household weight for this item from the
+                            Weight file.‡
+ GmWt_Desc2        A 120    Description of household weight number 2.
+ Refuse_Pct         N2      Percent refuse.§
+* Primary key for the Abbreviated file.
+† For a 200-character description and other descriptive information, link to the Food
+  Description file.
+‡ For the complete list and description of the measure, link to the Weight file.
+§ For a description of refuse, link to the Food Description file.
+
+
+Update Files
+
+The update files contain changes made between the last release, SR26 (2013), and the
+current release, SR27 (2014). Update files in ASCII are provided for those users who
+reformatted previous releases for their systems and wish to do their own updates. If a
+release earlier than SR26 is used, it is necessary to first obtain the update files for that
+release through SR26, update the database to SR26, and then use the update files
+provided with SR27. Update files from previous releases are available on NDL’s web
+site: http://www.ars.usda.gov/nutrientdata.
+
+New data added to SR27 are given in the following files:
+ ADD_FOOD for descriptions of the new items (307 records);
+ ADD_NUTR for added nutrient data (30,317 records);
+ ADD_WGT for added weight and measure data (398 records); and
+ ADD_FTNT for added footnotes (14 records).
+
+These files are in the same formats as the Food Description file, the Nutrient Data file,
+the Weight file, and the Footnote file.
+
+Five files contain changes made since SR26 (2013):
+ CHG_FOOD contains records with changes in the descriptive information for a food
+   item (310 records);
+ CHG_NUTR contains changes to the following fields: nutrient values, standard
+   errors, number of data points, source code, and data derivation code (20,278
+   records);
+
+                                               41
+    CHG_WGT contains records with changes to the gram weights or measure
+     information (300 records); and
+    CHG_FTNT contains records with changes to footnotes (10 records).
+    CHG_NDEF contains records with changes to the nutrient definitions (1 record)
+
+If the values in any fields have changed, the entire record is included for that file. These
+files are in the same format as the Food Description, Nutrient Data, Weight, Footnote,
+and Nutrient Definition files.
+
+Four files contain records that were deleted since SR26 (2013):
+ DEL_FOOD file (Table 17) lists those food items that were deleted from the
+   database (152 records);
+ DEL_NUTR file (Table 18) lists those nutrient values that were removed from the
+   database (8,639 records);
+ DEL_WGT contains any gram weights that were removed (307 records). These
+   records are in the same format as the Weight file (Table 12); and
+ DEL_FTNT contains any footnotes that were removed from the database (Table 19).
+   Starting with SR19, if a given footnote applied to more than one nutrient number, the
+   same footnote number can be used. When these footnote numbers are updated, the
+   extra footnotes are deleted (27 records).
+
+Table 17.—Foods Deleted Format
+    Field name   Type    Blank    Description
+    NDB_No       A 5*      N      Unique 5-digit number identifying deleted item.
+ Shrt_Desc      A 60     N      60-character abbreviated description of food item.
+* Primary key for Foods Deleted file.
+
+Table 18. —Nutrients Deleted Format
+ Field name Type Blank Description
+    NDB_No       A 5*      N      Unique 5-digit number identifying the item that
+                                  contains the deleted nutrient record.
+ Nutr_No        A3         N     Nutrient number of deleted record.
+* Primary key for Nutrients Deleted file.
+
+
+
+
+                                                42
+Table 19.—Footnotes Deleted Format
+ Field name    Type    Blank Description
+ NDB_No        A 5*       N     Unique 5-digit number identifying the item that
+                                contains the deleted nutrient record.
+ Footnt_No     A4         N      Sequence number.
+
+ Footnt_Typ A 1           N     Type of footnote of deleted record.
+* Primary key for Footnotes Deleted file.
+
+Update files in ASCII are also provided for the Abbreviated file:
+ CHG_ABBR file contains records for food items where a food description, household
+  weight, refuse value, or nutrient value have been added, changed, or deleted since
+  SR26. This file is in the same format as the Abbreviated file (Table 16);
+ DEL_ABBR contains food items that have been removed from the database; it is in
+  the same format as DEL_FOOD; and
+ ADD_ABBR contains food items added since SR26; it is also in the same format as
+  the Abbreviated file.
+
+Summary
+
+A number of food items have been added to the database using new data from NFNAP,
+the food industry, and other sources. Other foods have had nutrient values updates. In
+particular, the sodium content of those foods which are major contributors of sodium to
+the diet—primarily commercially processed and restaurant foods— has been targeted
+for nutrient analysis. A number of food items, no longer on the market, such as certain
+processed foods, have been removed. These are described in “Specific Changes for
+SR27” (p. 2). The next release, SR28, available in 2015, will contain additional items
+and updates.
+
+
+References Cited in the Documentation
+
+Adams CF. Nutritive value of American foods in common units. US Department of
+Agriculture, Agricultural Handbook 456, 1975.
+
+Ahuja JKC, Perloff BP. Quality control procedures for the USDA food and nutrient
+database for dietary studies nutrient values. J Food Comp Anal 2008;21:119-124.
+
+AOAC International. Official Methods of Analysis. 18th ed., Gaithersburg, MD: AOAC
+International, 2010. Version current 2010. Internet: http://www.aoac.org (accessed 30
+June 2014)
+
+
+
+                                             43
+Booth SL, Davidson KW, Sadowski JA. Evaluation of an HPLC method for the
+determination of phylloquinone (vitamin K1) in various food matrices. J Agric Food Chem
+1994;42:295-300.
+
+Byrdwell WC, Devries J, Exler J, Harnly JM, Holden JM, Holick MF, Hollis BW, Horst
+RL, Lada M, Lemar LE, et al. Analyzing vitamin D in foods and supplements:
+methodologic challenges. Am J Clin Nutr 2008;88(2):554S-557S.
+
+Chun J, Martin JA, Chen L, Lee J, Ye L, Eitenmiller R. A differential assay of folic acid
+and total folate in foods containing enriched cereal-grain products to calculate μg dietary
+folate equivalents (μg DFE). J Food Comp Anal 2004;19(2-3):182-187.
+
+Craft N. Chromatographic techniques for carotenoid separation. In: Wrolstad RE, Acree
+TE, Decker EA, Penner MH, Reid DS, Schwartz SJ, Shoemaker CF, Sporns P, eds.
+Current protocols food analytical chemistry. New York, NY: Wiley, 2001: 2.3.1−F2.3.15.
+
+Dietary Guidelines Advisory Committee (DGAC). The Report of the Dietary Guidelines
+Advisory Committee on Dietary Guidelines for Americans, 2005. Version current 2004.
+Internet: http://www.health.gov/dietaryguidelines/dga2005/report/default.htm (accessed
+06 May 2013).
+
+Dinh TTN, Blanton Jr JR, Brooks JC, Miller MF, Thompson LD. A simplified method for
+cholesterol determination in meat and meat products. J Food Comp Anal 2008;21:306-
+314.
+
+FAO/INFOODS. Tagnames for Food Components. Version current 2014. Internet:
+http://www.fao.org/infoods/infoods/standards-guidelines/food-component-identifiers-
+tagnames/en/ (accessed 30 June 2014).
+
+FAO/INFOODS. FAO/INFOODS Guidelines for Checking Food Composition Data Prior
+to the Publication of a User Table/Database, version 1.0. Version current 2012. Internet:
+http://www.fao.org/docrep/017/ap810e/ap810e.pdf (accessed 30 June 2014).
+
+Fulton L, Matthews E, Davis C. Average weight of a measured cup of various foods. US
+Department of Agriculture, Home Economics Research Report 41, 1977.
+
+Gebhardt SE, Thomas RG. Nutritive value of foods. US Department of Agriculture,
+Home and Garden Bulletin 72, 2002*
+
+Haytowitz DB, Pehrsson PR, Holden JM. The national food and nutrient analysis
+program: a decade of progress. J Food Comp Anal 2008;21(Suppl 1):S94-S102.*
+
+Holden JM, Bhagwat SA, Patterson KY. Development of a multi-nutrient data quality
+evaluation system. J Food Comp Anal 2002;15(4):339–348.*
+
+
+                                               44
+

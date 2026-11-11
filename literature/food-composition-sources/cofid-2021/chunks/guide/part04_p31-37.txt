@@ -1,0 +1,247 @@
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Acronym           Description                                              Units
+FOD14:0xb         ex Br Tetradecanoic acid per 100g food                   g
+FOD14:1           Tetradecenoic acid per 100g food                         g
+FOD14:1c          cis-Tetradecenoic acid per 100g food                     g
+FOD15:0           Pentadecanoic acid per 100g food                         g
+FOD15:0xb         ex Br Pentadecanoic acid per 100g food                   g
+FOD15:1           Pentadecenoic acid per 100g food                         g
+FOD15:1c          cis-Pentadecenoic acid per 100g food                     g
+FOD16 poly        unknown C16 polyunsaturated fatty acids per 100g food    g
+FOD16:0           Hexadecanoic acid per 100g food                          g
+FOD16:0xb         ex Br Hexadecanoic acid per 100g food                    g
+FOD16:1           Hexadecenoic acid per 100g food                          g
+FOD16:1c          cis-Hexadecenoic acid per 100g food                      g
+FOD16:2           Hexadecadienoic acid per 100g food                       g
+FOD16:2c          cis-Hexadecadienoic acid per 100g food                   g
+FOD16:3           Hexadecatrienoic acid per 100g food                      g
+FOD16:4           Hexadecatetraenoic acid per 100g food                    g
+FOD16:4c          cis-Hexadecatetraenoic acid per 100g food                g
+FOD16:UNID        16:unidentified fatty acid per 100g food                 g
+FOD17:0           Heptadecanoic acid per 100g food                         g
+FOD17:0xb         ex Br Heptadecanoic acid per 100g food                   g
+FOD17:1           Heptadecenoic acid per 100g food                         g
+FOD17:1c          cis Heptadecenoic acid per 100g food                     g
+FOD18 poly        unknown C18 polyunsaturated fatty acid per 100g food     g
+FOD18:0           Octadecanoic acid per 100g food                          g
+FOD18:0xb         ex Br Octadecanoic acid per 100g food                    g
+FOD18:1           Octadecenoic acid per 100g food                          g
+FOD18:1c          cis-Octadecenoic acid per 100g food                      g
+FOD18:1n7         n-7 Octadecenoic acid per 100g food                      g
+FOD18:1n9         n-9 Octadecenoic acid per 100g food                      g
+FOD18:2           Octadecadienoic acid per 100g food                       g
+FOD18:2cn6        cis n-6 Octadecadienoic acid per 100g food               g
+FOD18:3           Octadecatrienoic acid per 100g food                      g
+FOD18:3cn3        cis n-3 Octadecatrienoic acid per 100g food              g
+
+                                                  31
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Acronym           Description                                              Units
+FOD18:3cn6        cis n-6 Octadecatrienoic acid per 100g food              g
+FOD18:4           Octadecatetraenoic acid per 100g food                    g
+FOD18:4cn3        cis n-3 Octadecatetraenoic acid per 100g food            g
+FOD19:0           Nonadecanoic acid per 100g food                          g
+FOD20 poly        unknown C20 polyunsaturated fatty acid per 100g food     g
+FOD20:0           Eicosanoic acid per 100g food                            g
+FOD20:0xb         ex Br Eicosanoic acid per 100g food                      g
+FOD20:1           Eicosenoic acid per 100g food                            g
+FOD20:1c          cis-Eicosenoic acid per 100g food                        g
+FOD20:2           Eicosadienoic acid per 100g food                         g
+FOD20:2cn6        cis n-6 Eicosadienoic acid per 100g food                 g
+FOD20:3           Eicosatrienoic acid per 100g food                        g
+FOD20:3cn6        cis n-6 Eicosatrienoic acid per 100g food                g
+FOD20:4           Eicosatetraenoic acid per 100g food                      g
+FOD20:4cn6        cis n-6 Eicosatetraenoic acid per 100g food              g
+FOD20:5           Eicosapentaenoic acid per 100g food                      g
+FOD20:5cn3        cis n-3 Eicosapentaenoic acid per 100g food              g
+FOD21:5           Heneicosapentaenoic acid per 100g food                   g
+FOD21:5cn3        cis n-3 Heneicosapentaenoic acid per 100g food           g
+FOD22 poly        unknown polyunsaturated fatty acid per 100g food         g
+FOD22:0           Docosanoic acid per 100g food                            g
+FOD22:0xb         ex Br Docosanoic acid per 100g food                      g
+FOD22:1           Docosenoic acid per 100g food                            g
+FOD22:1c          cis-Docosenoic acid per 100g food                        g
+FOD22:1n11        n-11 Docosenoic acid per 100g food                       g
+FOD22:1n9         n-9 Docosenoic acid per 100g food                        g
+FOD22:2           Docosadienoic acid per 100g food                         g
+FOD22:2cn6        cis n-6 Docosadienoic acid per 100g food                 g
+FOD22:3cn6        cis n-6 Docosatrienoic acid per 100g food                g
+FOD22:4           Docosatetraenoic acid per 100g food                      g
+FOD22:4cn6        cis n-6 Docosatetraenoic acid per 100g food              g
+FOD22:5           Docosapentaenoic acid per 100g food                      g
+FOD22:5cn3        cis n-3 Docosapentaenoic acid per 100g food              g
+
+                                                  32
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Acronym           Description                                              Units
+FOD22:6           Docosahexaenoic acid (DHA) per 100g food                 g
+FOD22:6cn3        cis n-3 Docosahexaenoic acid (DHA) per 100g food         g
+FOD24:0           Tetracosanoic acid per 100g food                         g
+FOD24:0xb         ex Br Tetracosanoic acid per 100g food                   g
+FOD24:1           Tetracosenoic acid per 100g food                         g
+FOD24:1c          cis-Tetracosenoic acid per 100g food                     g
+FOD25:0xb         ex Br Pentacosanoic acid per 100g food                   g
+FOD4:0            Butanoic acid per 100g food                              g
+FOD6:0            Hexanoic acid per 100g food                              g
+FOD8:0            Octanoic acid per 100g food                              g
+FODTRANS          Trans fatty acids per 100g food                          g
+FOLT              Folate                                                   µγ
+FRUCT             Fructose                                                 g
+GALACT            Galactose                                                g
+GLUC              Glucose                                                  g
+GROUP             Food sub-group code
+GTOPH             Gamma-tocopherol                                         mg
+GTOTR|            Gamma-tocotrienol                                        mg
+I                 Iodine                                                   µγ
+K                 Potassium                                                mg
+KCALS             kcal
+KJ                kJ
+LACT              Lactose                                                  g
+LUT               Lutein                                                   µg
+LYCO|             Lycopene                                                 µg
+MALA              Malic acid                                               g
+MALT              Maltose                                                  g
+MG                Magnesium                                                mg
+MN                Manganese                                                mg
+MONOFAC           Monounsaturated fatty acids per 100g fatty acids         g
+MONOFACc          cis-Monounsaturated fatty acids /100g FA                 g
+MONOFACtr         trans monounsaturated fatty acids per 100 FA             g
+MONOFOD           Monounsaturated fatty acids per 100g food                g
+
+                                                  33
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Acronym           Description                                                   Units
+MONOFODc          cis-Monounsaturated fatty acids /100g Food                    g
+MONOFODtr         trans monounsaturated fatty acids per 100g food               g
+NA                Sodium                                                        mg
+NAME              Full food name (including any preparation details)
+NCF               Nitrogen conversion factor
+NIAC              Niacin                                                        mg
+NIACEQU           Niacin equivalent                                             mg
+NUMB              Food number
+OLIGO             Oligosaccharide                                               g
+Other CHOL
+                  Other Cholesterol and Phytosterols                            mg
+and PHYTO
+P                 Phosphorus                                                    mg
+PANTO             Pantothenate                                                  mg
+PHYTO             Phytosterol                                                   mg
+POLYFAC           Polyunsaturated fatty acids per 100g fatty acids              g
+POLYFACc          cis-Polyunsaturated fatty acids /100g FA                      g
+POLYFACtr         trans polyunsatsaturated fatty acid per 100g fatty acid       g
+POLYFOD           Polyunsaturated fatty acids per 100g food                     g
+POLYFODc          cis-Polyunsaturated fatty acids /100g Food                    g
+POLYFODtr         trans polyunsaturated fatty acid per 100g food                g
+PREV              Previous food number
+PROT              Protein                                                       g
+RET               Retinol                                                       µγ
+RETALD            Retinaldehyde                                                 µg
+RETEQU            Total retinol equivalent                                      µγ
+RIBO              Riboflavin                                                    mg
+SATFAC            Saturated fatty acids per 100g fatty acids                    g
+SATFACx6          Saturated fatty acids excluding branch per 100 g fatty acid   g
+SATFOD            Saturated fatty acids per 100g food                           g
+SATFODx6          Saturated fatty acids excluding branch per 100 g food         g
+SE                Selenium                                                      µγ
+SOLD              Total solids                                                  g
+SPECGRAV          Specific gravity
+
+                                                  34
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Acronym           Description                                                 Units
+STAR              Starch                                                      g
+STIGPHYTO         Stigmasterol                                                mg
+SUCR              Sucrose                                                     g
+THIA              Thiamin                                                     mg
+Total PHYTO       Total Phytosterols                                          mg
+TOTBRFAC          Total branched chain per 100g fatty acid                    g
+TOTBRFOD          Total branched chain per 100g food                          g
+TOTn3PFAC         Total n-3 polyunsaturated fatty acids per 100g fatty acid   g
+TOTn3PFOD         Total n-3 polyunsaturated fatty acids per 100g food         g
+TOTn6PFAC         Total n-6 polyunsaturated fatty acids per 100g fatty acid   g
+TOTn6PFOD         Total n-6 polyunsaturated fatty acids per 100g food         g
+TOTNIT            Total nitrogen                                              g
+TOTSUG            Total sugars                                                g
+TRYP60            Tryptophan divided by 60                                    mg
+VITB12            Vitamin B12                                                 µγ
+VITB6             Vitamin B6                                                  mg
+VITC              Vitamin C                                                   mg
+VITD              Vitamin D                                                   µγ
+VITD3             Cholecalciferol                                             µg
+VITE              Vitamin E                                                   mg
+VITK1             Phylloquinone                                               µγ
+WATER             Water                                                       g
+ZN                Zinc                                                        mg
+
+
+
+
+                                                  35
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+
+References
+1. Finglas PM, Roe MA, Pinchen HM, Berry R, Church SM, Dodhia SK et al. McCance and
+Widdowson’s The Composition of Foods, Seventh summary edition. Cambridge: Royal Society
+of Chemistry. 2015
+
+2. Englyst HN, Quigley ME, Hudson GJ. Determination of dietary fibre as non-starch
+polysaccharides with gas–liquid chromatographic, high performance liquid chromatographic or
+spectrophotometric measurement of constituent sugars. Analyst. 1994; 119, 1497–1509
+
+3. Horwitz W, Latimer G. Official methods of analysis of AOAC international. 4. Rev.
+Gaithersburg: AOAC International. 2011
+
+4. Sivell LM, Bull NL, Buss DH, Wiggins RA, Scuffam D, Jackson PA. Vitamin A activity in foods
+of animal origin. J Sci Food Agric. 1984; 35 (8), 931-939
+
+5. Department of Health. Dietary reference values for food energy and nutrients for the United
+Kingdom. Report on Health and Social Subjects No. 41, London: HMSO. 1991
+
+6. McLaughlin PJ, Weihrauch JL. Vitamin E content of foods. J Am Diet Assoc. 1979; 75 (6),
+647-665
+
+
+
+
+                                                  36
+Website: www.gov.uk/phe
+Twitter: @PHE_uk
+Facebook: www.facebook.com/PublicHealthEngland
+
+© Crown copyright 2021
+
+
+
+Prepared by: Hannah Pinchen, Natasha Powell, Susan Church and Paul Finglas
+
+For queries relating to this document, please contact: PHE.Enquiries@PHE.gov.uk
+
+
+
+
+Published: March 2021
+PHE gateway number: GW-2010
+
+
+
+
+                                            37
+

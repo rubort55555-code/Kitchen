@@ -1,0 +1,401 @@
+calcium or magnesium from the same food or from another source. Those foods that
+contain high amounts of oxalic acid usually contain sufficient calcium or magnesium to
+bind with all the oxalic acid in that food. Therefore, oxalic acid in these foods would not
+interfere with the calcium and magnesium availability of other foods in the diet. A table
+listing the oxalic acid content of some vegetables is available on NDL’s Web site
+(USDA-ARS, 1984).
+
+Sodium.—Sodium values for cooked vegetables in the database are presented
+separately for unsalted vegetables and for cooked vegetables with salt added. Since the
+sodium content of tap water varies according to location (0-39 mg/100 g), the sodium
+value of the cooked vegetable may be underestimated if the water supply naturally
+contains high amounts of sodium. It is difficult to estimate the amount of salt absorbed
+by vegetables during cooking. Sodium content of the cooked vegetable will depend on
+the amount of salt used in the cooking water and can be as high as vegetables with salt
+added during canning. Sodium values for cooked vegetables with added salt were
+calculated by adding the content from approximately 1/8 of a teaspoon of salt per 100
+grams of vegetables or 236 mg of sodium to the sodium naturally occurring in the
+cooked vegetable with no salt added. Sodium values for canned vegetables are
+presented, both for product with salt added and salt not added.
+
+Certain processing methods can cause increases in the sodium content of the
+vegetable or vegetable product. Some processed vegetables, such as canned, frozen,
+or dehydrated carrots, potatoes, sweet potatoes, and tomatoes are often lye peeled.
+The vegetable is dipped into a hot sodium hydroxide solution, followed by a water rinse.
+While the rinse will remove some of the sodium absorbed during the lye peeling
+operation, some will remain in the finished product.
+
+Sodium compounds such as monosodium glutamate, disodium guanylate, and disodium
+inosinate may be added to some processed vegetable products as flavor enhancers.
+Sodium compounds may be added to potatoes to prevent browning during commercial
+processing. Lima beans and peas are brine sorted before blanching and freezing, which
+can result in the vegetables picking up sodium from the brine.
+
+Nomenclature.— To aid in identifying individual vegetables listed in the tables, the
+scientific name of the vegetables is included in the food description file, usually on the
+raw form of the vegetable. The USDA Germplasm Resources Information Network
+(GRIN), (USDA, 2011) was used as the basic reference for the scientific and preferred
+common names. Identifying vegetables by their common names is often confusing
+because these names are not always applied to the same food in different geographic
+locations. Some names of vegetables in common use or unique to one region of the
+country have been indicated in the common name field of the food description file. In
+some cases, the usual nomenclature is particularly confusing. These are further
+explained in the following paragraphs.
+
+Cassava (Manihot esculenta) is one of the major sources of carbohydrates for human
+food in many parts of the world and is also known as manioc or yuca. It is extensively
+                                               125
+cultivated in tropical areas for its starchy, tuberous root. Cassava is sometimes called
+yucca, though this is a different plant. The yucca (Yucca spp.) is more frequently grown
+as an ornamental plant, though the fruits, flowers and flowering stem can be eaten.
+However, the root contains high levels of saponins, which are toxic.
+
+Garden cress (Lepidium sativum) is a cultivated plant brought originally to this country
+from Europe. This plant often grows wild, and is called field cress in some areas.
+
+Endive and chicory are often confused with each other. Cultivars of endive grown in the
+United States have the species name Cichorium endivia, and are quite different in
+structural appearance from Witloof chicory (Cichonium intybus), which is also known as
+French or Belgian endive. Endive (Cichonium endivia) is always marketed in the
+headed form, the larger heads weighing more than a pound. The heads are low—
+spreading and loose— leaved. The leaves vary from deeply cut and deeply curled in
+some cultivars to the broad, slightly cut and curled leaves of escarole. The outer leaves
+are green, and the center leaves or heart and the midribs are pale green to creamy
+white. Chicory is sometimes marketed as blanched heads, greens, or roots. Witloof
+chicory is commonly forced and can be identified by its very small, elongated, compact,
+well—blanched head, which resembles a small shoot and weighs about 2 ounces.
+Witloof chicory is also grown for greens.
+
+The term yam is frequently used when referring to sweet potatoes in common usage
+and marketing. Sweet potatoes (Ipomea batatas) are elongated tubers with a white or
+orange—yellow colored flesh. The orange-yellow cultivars are commonly marketed in
+the United States. For the market, sweet potatoes are sometimes identified as yams.
+Raw, canned, and frozen sweet potatoes are sometimes identified on the label as yams.
+The true yam (Dioscorea spp.) is a tropical tuber. Yam cultivars may have white or
+pale—yellow flesh. In most areas of the United States, true yams are generally available
+only in certain specialty stores.
+
+Raw vegetables.—Although nutrient data were available for several cultivars of some
+vegetables, the data base for any one cultivar was too small to justify giving separate
+entries by cultivar. Production data by cultivar were unavailable for most vegetables.
+
+The values for raw potatoes listed in the tables were calculated from data for several
+cultivars and weighted as follows: Russet, 70 percent; White, 18 percent; and red, 12
+percent.
+
+Prepared vegetables.—Nutrient data on cooked vegetables were often unavailable or
+incomplete. In these cases, the appropriate nutrient values for the cooked form were
+calculated from the unprepared form of the same food. For example, nutrient data for
+cooked asparagus were calculated from data for raw asparagus. Appropriate true
+nutrient retention factors (NDL, 2007) were used to calculate the nutrient content of the
+cooked foods, after adjusting for changes in the moisture content of the uncooked
+foods. The same procedures were followed for the cooked, frozen vegetables.
+
+                                              126
+Retention values are generally based on cooking methods that minimize the loss of
+nutrients, particularly the water soluble vitamins. Nutrient values of cooked vegetables
+obtained by these procedures tend to be higher than those values for the same
+vegetables cooked by less than optimum methods. Some conditions that affect the
+retention of nutrients in vegetables that are cooked include: Cooking method, size and
+shape of the vegetable or amount of surface area, maturity, condition of the vegetable,
+amount of cooking water, and length of cooking.
+
+Nutrient values for vegetables prepared by microwave cooking would be similar to those
+obtained by conventional cooking methods, except where cooking times are lengthened
+because of the shape of the vegetable or the total amount of the vegetable that is
+cooked at one time. For example, one potato in a microwave oven will bake in approxi-
+mately 5 minutes, while four potatoes will take four times longer. The ingredients and
+proportions used to calculate nutrient values for vegetable mixtures such as coleslaw,
+corn pudding, potato salad, spinach soufflé, and candied sweet potatoes are given in a
+footnote for each item. Values for each nutrient provided by the ingredients used in the
+recipe were totaled. Nutrient values were adjusted to account for any changes due to
+evaporation and heat destruction.
+
+References for Notes on Foods – Vegetables and Vegetable Products
+
+US Food and Drug Administration, US Department of Health and Human Services.
+Food Labeling [Code of Federal Regulations, 21 CFR 101]. Version current 2012.
+Internet: http://www.gpo.gov/fdsys/pkg/CFR-2012-title21-vol2/pdf/CFR-2012-title21-
+vol2-part101.pdf (accessed 30 June 2014).
+
+US Food and Drug Administration, US Department of Health and Human Services.
+Nutrition Information for Raw Fruits, Vegetables, and Fish. Version current 2009.
+Internet:
+http://www.fda.gov/Food/IngredientsPackagingLabeling/LabelingNutrition/ucm063367.ht
+m (accessed 30 June 2014).
+
+US Department of Agriculture, Agricultural Research Service, National Genetic
+Resources Program. Germplasm Resources Information Network - (GRIN) [online
+database]. Version current 2011. Internet:
+http://www.ars-grin.gov/cgi-bin/npgs/html/tax_search.pl (accessed 30 June 2014).
+
+US Department of Agriculture, Agricultural Research Service, Nutrient Data Laboratory.
+USDA Table of Nutrient Retention Factors, Release 6. Version current 2007. Internet:
+http://www.ars.usda.gov/Main/docs.htm?docid=9448 (accessed 30 June 2014)*
+
+US Department of Agriculture, Agricultural Research Service, Nutrient Data Laboratory.
+Oxalic Acid Content of Selected Vegetables. Version current 1984. Internet:
+http://www.ars.usda.gov/Services/docs.htm?docid=9444 (accessed 30 June 2014).
+
+
+                                             127
+Watt BK, Merrill AL. Composition of foods raw, processed, prepared. US Department of
+Agriculture, Agriculture Handbook 8, 1963.
+
+
+
+
+                                           128
+Appendix A. Abbreviations Used in Short Descriptions
+
+
+All purpose           ALLPURP
+Aluminum              AL
+And                   &
+Apple                 APPL
+Apples                APPLS
+Applesauce            APPLSAUC
+Approximate           APPROX
+Approximately         APPROX
+Arm and blade         ARM&BLD
+Artificial            ART
+Ascorbic acid         VIT C
+Aspartame             ASPRT
+Aspartame-sweetened   ASPRT-SWTND
+Baby food             BABYFD
+Baked                 BKD
+Barbequed             BBQ
+Based                 BSD
+Beans                 BNS
+Beef                  BF
+Beverage              BEV
+Boiled                BLD
+Boneless              BNLESS
+Bottled               BTLD
+Bottom                BTTM
+Braised               BRSD
+Breakfast             BRKFST
+Broiled               BRLD
+Buttermilk            BTTRMLK
+Calcium               CA
+Calorie, calories     CAL
+Canned                CND
+Carbonated            CARB
+Center                CNTR
+Cereal                CRL
+Cheese                CHS
+Chicken               CHICK
+Chocolate             CHOC
+Choice                CHOIC
+Cholesterol           CHOL
+Cholesterol-free      CHOL-FREE
+Chopped               CHOPD
+Cinnamon              CINN
+                                    A-1
+Coated                COATD
+Coconut               COCNT
+Commercial            COMM
+Commercially          COMMLY
+Commodity             CMDTY
+Composite             COMP
+Concentrate           CONC
+Concentrated          CONCD
+Condensed             COND
+Condiment, condiments CONDMNT
+Cooked                CKD
+Cottonseed            CTTNSD
+Cream                 CRM
+Creamed               CRMD
+Dark                  DK
+Decorticated          DECORT
+Dehydrated            DEHYD
+Dessert, desserts     DSSRT
+Diluted               DIL
+Domestic              DOM
+Drained               DRND
+Dressing              DRSNG
+Drink                 DRK
+Drumstick             DRUMSTK
+English               ENG
+Enriched              ENR
+Equal                 EQ
+Evaporated            EVAP
+Except                XCPT
+Extra                 EX
+Flank steak           FLANKSTK
+Flavored              FLAV
+Flour                 FLR
+Food                  FD
+Fortified             FORT
+French fried          FRENCH FR
+French fries          FRENCH FR
+Fresh                 FRSH
+Frosted               FRSTD
+Frosting              FRSTNG
+Frozen                FRZ
+Grades                GRDS
+Gram                  GM
+Green                 GRN
+Greens                GRNS
+Heated                HTD
+
+                                  A-2
+Heavy                    HVY
+Hi-meat                  HI-MT
+High                     HI
+Hour                     HR
+Hydrogenated             HYDR
+Imitation                IMITN
+Immature                 IMMAT
+Imported                 IMP
+Include, includes        INCL
+Including                INCL
+Infant formula           INF FORMULA
+Ingredient               ING
+Instant                  INST
+Juice                    JUC
+Junior                   JR
+Kernels                  KRNLS
+Large                    LRG
+Lean                     LN
+Lean only                LN
+Leavened                 LVND
+Light                    LT
+Liquid                   LIQ
+Low                      LO
+Low fat                  LOFAT
+Marshmallow              MARSHMLLW
+Mashed                   MSHD
+Mayonnaise               MAYO
+Medium                   MED
+Mesquite                 MESQ
+Minutes                  MIN
+Mixed                    MXD
+Moisture                 MOIST
+Natural                  NAT
+New Zealand              NZ
+Noncarbonated            NONCARB
+Nonfat dry milk          NFDM
+Nonfat dry milk solids   NFDMS
+Nonfat milk solids       NFMS
+Not Further Specified    NFS
+Nutrients                NUTR
+Nutrition                NUTR
+Ounce                    OZ
+Pack                     PK
+Par fried                PAR FR
+Parboiled                PARBLD
+Partial                  PART
+
+                                       A-3
+Partially             PART
+Partially fried       PAR FR
+Pasteurized           PAST
+Peanut                PNUT
+Peanuts               PNUTS
+Phosphate             PO4
+Phosphorus            P
+Pineapple             PNAPPL
+Plain                 PLN
+Porterhouse           PRTRHS
+Potassium             K
+Powder                PDR
+Powdered              PDR
+Precooked             PRECKD
+Preheated             PREHTD
+Prepared              PREP
+Processed             PROC
+Product code          PROD CD
+Propionate            PROP
+Protein               PROT
+Pudding, puddings     PUDD
+Ready-to-bake         RTB
+Ready-to-cook         RTC
+Ready-to-drink        RTD
+Ready-to-eat          RTE
+Ready-to-feed         RTF
+Ready-to-heat         RTH
+Ready-to-serve        RTS
+Ready-to-use          RTU
+Reconstituted         RECON
+Reduced               RED
+Reduced-calorie       RED-CAL
+Refrigerated          REFR
+Regular               REG
+Reheated              REHTD
+Replacement           REPLCMNT
+Restaurant-prepared   REST-PREP
+Retail                RTL
+Roast                 RST
+Roasted               RSTD
+Round                 RND
+Sandwich              SNDWCH
+Sauce                 SAU
+Scalloped             SCALLPD
+Scrambled             SCRMBLD
+Seed                  SD
+
+                                  A-4
+Select                  SEL
+Separable1
+Shank and sirloin       SHK&SIRL
+Short                   SHRT
+Shoulder                SHLDR
+Simmered                SIMMRD
+Skin                    SKN
+Small                   SML
+Sodium                  NA
+Solids                  SOL
+Solution                SOLN
+Soybean                 SOYBN
+Special                 SPL
+Species                 SP
+Spread                  SPRD
+Standard                STD
+Steamed                 STMD
+Stewed                  STWD
+Stick                   STK
+Sticks                  STKS
+Strained                STR
+Substitute              SUB
+Summer                  SMMR
+Supplement              SUPP
+Sweet                   SWT
+Sweetened               SWTND
+Sweetener               SWTNR
+Teaspoon                TSP
+Thousand                1000
+Toasted                 TSTD
+Toddler                 TODD
+Trimmed1
+Trimmed to1
+Uncooked                UNCKD
+Uncreamed               UNCRMD
+Undiluted               UNDIL
+Unenriched              UNENR
+Unheated                UNHTD
+Unprepared              UNPREP
+Unspecified             UNSPEC
+Unsweetened             UNSWTND
+Variety, varieties      VAR
+Vegetable, vegetables   VEG
+Vitamin A               VIT A
+Vitamin C               VIT C
+Water                   H20
+
+                                   A-5
+Whitener               WHTNR
+Whole                  WHL
+Winter                 WNTR
+With                   W/
+Without                WO/
+Yellow                 YEL
+___________________________
+1
+  Removed in short description
+
+
+
+
+                                 A-6
+

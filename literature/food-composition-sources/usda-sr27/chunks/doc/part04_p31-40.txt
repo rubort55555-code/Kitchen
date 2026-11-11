@@ -1,0 +1,429 @@
+fatty acids per 100 g of total lipid are converted to g fatty acids per 100 g of food, values
+of less than 0.0005 are rounded to 0.
+
+Cholesterol. Cholesterol values are generated primarily by gas liquid chromatographic
+procedures (AOAC 994.10). Recent meat data has been determined by a GC method
+without derivitization (Dinh et al., 2008). It is assumed that cholesterol is present only in
+foods of animal origin and foods containing at least one ingredient of animal origin (for
+example, cake that contains eggs). For mixtures containing ingredients derived from
+animal products, the cholesterol value may be calculated from the value for those
+ingredients. For foods that contain only plant products, the value for cholesterol is
+assumed to be zero.
+
+Plant sterols. Data on plant sterols (campesterol, stigmasterol, and β-sitosterol) are
+obtained by gas-chromatographic procedures (AOAC 967.18) and summed to calculate
+total phytosterols (Nutr. No. 636). Plant sterols for a number of nuts, seeds,
+mushrooms, and other food items were determined by a gas-chromatographic method
+developed by Phillips et al. (2005) which includes an acid hydrolysis step. These data
+include additional sterols such as ergosterol or delta-5-avenasterol and various stanols
+plus some minor sterols that are not disseminated in SR. When available, data on
+these phytosterols are provided in a footnote for the specific food item. In these cases,
+Nutrient No. 636, total phytosterols, is not disseminated for these food items.
+
+Amino Acids. Amino acid data for a class or species of food are aggregated to yield a
+set of values that serve as the pattern for calculating the amino acid profile of other
+similar foods. The amino acid values for the pattern are expressed on a per-gram-of-
+nitrogen basis. Amino acids are extracted in three groups—tryptophan, sulfur-containing
+amino acids (methionine and cystine), and all others. Tryptophan is determined by
+alkaline hydrolysis/HPLC (AOAC 988.15), methionine and cystine by performic
+oxidation/HPLC (AOAC 994.12) and all others by acid hydrolysis/HPLC (AOAC
+982.30). Hydroxyproline in meats has been determined using a colorimetric method
+(AOAC 990.26). The amino acid patterns and the total nitrogen content are used to
+calculate the levels of individual amino acids per 100 g of food, using the following
+formula:
+
+       AAf = (AAn*Vp )/Nf
+
+   where:
+     AAf = amino acid content per 100 g of food,
+     AAn = amino acid content per g of nitrogen,
+     Vp = protein content of food, and
+     Nf = nitrogen factor.
+
+For foods processed in the NDBS since SR14 (2001), the number of observations used
+in developing an amino acid pattern is released only with the pattern. The amino acid
+profiles calculated from these patterns will show the number of data points to be zero. In
+the past, the number of data points appeared only for the food item for which the amino
+                                                25
+acid pattern was developed, not on other foods that used the same pattern. It referred to
+the number of observations used in developing the amino acid pattern for that food.
+
+If amino acid values are presented for an item with more than one protein-containing
+ingredient, the values may be calculated on a per-gram-of-nitrogen basis from the
+amino acid patterns of the various protein-containing ingredients. Then the amino acid
+contents for an item on the 100-g basis are calculated as the sum of the amino acids in
+each protein-containing ingredient multiplied by total nitrogen in the item. The number of
+data points for these values is given as zero.
+
+Weights and Measures
+
+Information is provided on household measures for food items (for example, 1 cup, 1
+tablespoon, 1 fruit, 1 leg). Weights are given for edible material without refuse, that is,
+the weight of an apple without the core or stem, or a chicken leg without the bone, and
+so forth. The Weight file contains the gram weights and measure descriptions for each
+food item. This file can be used to calculate nutrient values for food portions from the
+values provided per 100 g of food. The following formula is used to calculate the nutrient
+content per household measure:
+
+       N = (V*W)/100
+
+   where:
+     N = nutrient value per household measure,
+     V = nutrient value per 100 g (Nutr_Val in the Nutrient Data file), and
+     W = g weight of portion (Gm_Wgt in the Weight file).
+
+The Weight file can be used to produce reports showing the household measure and
+nutrient values calculated for that portion. The weights are derived from published
+sources, industry files, studies conducted by USDA (Adams, 1975; Fulton et al., 1977),
+and the weights and measures used in the FNDDS (2012). However, weight
+information is not available for all food items in the database. Though special efforts
+have been made to provide representative values, weights and measures obtained from
+different sources vary considerably for some foods. The format of this file is described
+on p. 36.
+
+Footnotes
+
+Footnotes are provided for a few items where information about food description,
+weights and measures, or nutrient values could not be accommodated in existing fields.
+For example, if citric acid is added to a juice drink, this is indicated in the footnote. The
+format of this file is described on p. 36.
+
+
+
+
+                                                26
+Sources of Data
+
+The Sources of Data file (previously called References) was first added with SR14
+(2001). The name of the file and fields reflect the fact that not all sources are journals or
+published literature, but also include the results of unpublished data from USDA-
+sponsored research and from research sponsored by others either separately or in
+collaboration with USDA. It contains data sources for the nutrient values and links to an
+identification number on each nutrient record. Nutrient-specific source documentation is
+not electronically available for data added prior to SR14 (2001). Data source
+information for these food items will be added when new data are generated and
+published in future releases. The format of this file is described on p. 37.
+
+The Sources of Data Link file is provided to allow users to establish a relationship
+between the Sources of Data file and the Nutrient Data file. This lets the user identify
+specific sources of data for each nutrient value. For example, the user can use these
+files to determine the dates associated with source documents for a particular data
+value. These files can also be used to determine values obtained from a particular data
+source, for example where NFNAP data is used in the database. The format of this file
+is described on p.37.
+
+Explanation of File Formats
+
+The data appear in two different organizational formats. One is a relational format of
+four principal and six support files making up the database. The relational format is
+complete and contains all food, nutrient, and related data. The other is a flat abbreviated
+file with all the food items, but fewer nutrients, and not all of the other related
+information. The abbreviated file does not include values for starch, individual sugars,
+fluoride, betaine, vitamin D2 or D3, added vitamin E, added vitamin B12, alcohol,
+caffeine, theobromine, phytosterols, individual amino acids, or individual fatty acids. See
+p. 38 for more information on this file.
+
+Relational Files
+
+The four principal database files are the Food Description file, Nutrient Data file, Gram
+Weight file, and Footnote file. The eight support files are the Food Group Description
+file, LanguaL Factor file, LanguaL Factor Description file, Nutrient Definition file, Source
+Code file, Data Derivation Code Description file, Sources of Data file, and Sources of
+Data Link file. Table 3 shows the number of records in each file. In a relational
+database, these files can be linked together in a variety of combinations to produce
+queries and generate reports. Figure 1 provides a diagram of the relationships between
+files and their key fields.
+
+The relational files are provided in both ASCII (ISO/IEC 8859-1) format and a Microsoft
+Access 2007 database. Tables 4 through 13 describe the formats of these files.
+Information on the relationships that can be made among these files is also given.
+                                                27
+Fields that always contain data and fields that can be left blank or null are identified in
+the “blank” column; N indicates a field that is always filled; and Y indicates a field that
+may be left blank (null) (Tables 4-13). An asterisk (*) indicates primary key(s) for the file.
+Though keys are not identified for the ASCII files, the file descriptions show where keys
+are used to sort and manage records within the NDBS. When importing these files into
+a database management system, if keys are to be identified for the files, it is important
+to use the keys listed here, particularly with the Nutrient Data file, which uses two.
+
+Table 3. – Number of Records in Principal and Support Files
+                                                     Table              Number
+ File name                                           name              of records
+ Principal files
+     Food Description (p. 29)                 FOOD_DES                      8,618
+     Nutrient Data (p. 32)                    NUT_DATA                    654,572
+     Weight (p. 36)                           WEIGHT                       15,228
+     Footnote (p. 36)                         FOOTNOTE                        531
+ Support files
+     Food Group Description (p. 31)           FD_GROUP                         25
+     LanguaL Factor (p. 31)                   LANGUAL                      38,725
+     LanguaL Factors Description (p. 31)      LANGDESC                        774
+     Nutrient Definition (p. 34)              NUTR_DEF                        150
+     Source Code (p. 34)                      SRC_CD                           10
+     Data Derivation Code Description         DERIV_CD                         55
+     (p. 35)
+     Sources of Data (p. 37)                  DATA_SRC                        655
+     Sources of Data Link (p. 37)             DATSRCLN                    230,663
+
+ASCII files are delimited. All fields are separated by carets (^) and text fields are
+surrounded by tildes (~). A double caret (^^) or two carets and two tildes (~~) appear
+when a field is null or blank. Format descriptions include the name of each field, its type
+[N = numeric with width and number of decimals (w.d) or A = alphanumeric], and
+maximum record length. The actual length in the data files may be less and most likely
+will change in later releases. Values will be padded with trailing zeroes when imported
+into various software packages, depending on the formats used.
+
+
+
+
+                                                28
+     Figure 1. Relationships among files in the USDA National Nutrient Database
+     for Standard Reference *
+       Food Description File
+         NDB No.                                  Food Group Description File
+        Food Group Code                            Food Group Code
+
+
+
+                        Footnote File                  Nutrient Definition File
+                          NDB No.                       Nutrient No.
+
+                                                       Source Code File
+                                                        Source Code
+                        Nutrient Data File
+                         NDB No.
+                         Nutrient No.                  Data Derivation File
+                         Source Code                    Data Derivation Code
+                         Derivation Code
+
+                                                       Sources of Data Link File
+                        Gram Weight File                 NDB No,
+                         NDB No.                         DataSrc ID
+
+
+                                                          Sources of Data File
+                                                           DataSrc ID
+
+
+                        LanguaL Factor File        LanguaL Factors Description File
+                         NDB No                     Factor Code
+                         Factor Code
+     * Underlined items denote key fields.
+
+Food Description File (file name = FOOD_DES). This file (Table 4) contains long and
+short descriptions and food group designators for all food items, along with common
+names, manufacturer name, scientific name, percentage and description of refuse, and
+factors used for calculating protein and kilocalories, if applicable. Items used in the
+FNDDS are also identified by value of “Y” in the Survey field.
+
+   Links to the Food Group Description file by the FdGrp_Cd field
+   Links to the Nutrient Data file by the NDB_No field
+   Links to the Weight file by the NDB_No field
+   Links to the Footnote file by the NDB_No field
+   Links to the LanguaL Factor file by the NDB_No field
+
+                                              29
+Table 4.—Food Description File Format
+ Field name        Type     Blank   Description
+ NDB_No            A 5*       N     5-digit Nutrient Databank number that uniquely
+                                    identifies a food item. If this field is defined as
+                                    numeric, the leading zero will be lost.
+ FdGrp_Cd          A4         N     4-digit code indicating food group to which a food
+                                    item belongs.
+ Long_Desc         A 200      N     200-character description of food item.
+ Shrt_Desc         A 60       N     60-character abbreviated description of food item.
+                                    Generated from the 200-character description using
+                                    abbreviations in Appendix A. If short description is
+                                    longer than 60 characters, additional abbreviations
+                                    are made.
+ ComName           A 100      Y     Other names commonly used to describe a food,
+                                    including local or regional names for various foods,
+                                    for example, “soda” or “pop” for “carbonated
+                                    beverages.”
+ ManufacName       A 65       Y     Indicates the company that manufactured the
+                                    product, when appropriate.
+ Survey            A1         Y     Indicates if the food item is used in the USDA Food
+                                    and Nutrient Database for Dietary Studies (FNDDS)
+                                    and thus has a complete nutrient profile for the 65
+                                    FNDDS nutrients.
+ Ref_desc          A 135      Y     Description of inedible parts of a food item (refuse),
+                                    such as seeds or bone.
+ Refuse            N2         Y     Percentage of refuse.
+ SciName           A 65       Y     Scientific name of the food item. Given for the least
+                                    processed form of the food (usually raw), if
+                                    applicable.
+ N_Factor          N 4.2      Y     Factor for converting nitrogen to protein (see p. 12).
+ Pro_Factor        N 4.2      Y     Factor for calculating calories from protein (see p.
+                                    13).
+ Fat_Factor        N 4.2      Y     Factor for calculating calories from fat (see p. 13).
+ CHO_Factor        N 4.2      Y      Factor for calculating calories from carbohydrate
+                                     (see p. 13).
+* Primary key for the Food Description file.
+                                              30
+Food Group Description File (file name = FD_GROUP). This file (Table 5) is a
+support file to the Food Description file and contains a list of food groups used in SR27
+and their descriptions.
+
+    Links to the Food Description file by FdGrp_Cd
+
+Table 5.—Food Group Description File Format
+Field name       Type      Blank   Description
+FdGrp_Cd         A 4*     N        4-digit code identifying a food group. Only the first 2
+                                   digits are currently assigned. In the future, the last 2
+                                   digits may be used. Codes may not be consecutive.
+FdGrp_Desc A 60          N       Name of food group.
+* Primary key for the Food Group Description file.
+
+
+LanguaL Factor File (File name = LANGUAL). This file (Table 6) is a support file to the
+Food Description file and contains the factors from the LanguaL Thesaurus used to
+code a particular food.
+
+    Links to the Food Description file by the NDB_No field
+    Links to LanguaL Factors Description file by the Factor_Code field
+
+Table 6.—LanguaL Factor File Format
+    Field name     Type     Blank Description
+    NDB_No         A 5*     N      5-digit Nutrient Databank number that uniquely
+                                   identifies a food item. If this field is defined as
+                                   numeric, the leading zero will be lost.
+ Factor_Code       A 5*   N      The LanguaL factor from the Thesaurus
+* Primary key for the LanguaL Factor file.
+
+
+LanguaL Factors Description File (File name = LANGDESC). This file (Table 7) is a
+support file to the LanguaL Factor file and contains the descriptions for only those
+factors used in coding the selected food items codes in this release of SR.
+
+    Links to the LanguaL Factor File by the Factor_Code field
+
+
+
+
+                                               31
+Table 7.—LanguaL Factors Description File Format
+ Field name       Type    Blank Description
+ Factor_Code A 5*         N       The LanguaL factor from the Thesaurus. Only those
+                                  codes used to factor the foods contained in the
+                                  LanguaL Factor file are included in this file
+ Description      A 140   N       The description of the LanguaL Factor Code from the
+                                  thesaurus
+* Primary key for the LanguaL Factor Description file.
+
+
+Nutrient Data File (file name = NUT_DATA). This file (Table 8) contains the nutrient
+values and information about the values, including expanded statistical information.
+
+     Links to the Food Description file by NDB_No
+     Links to the Food Description file by Ref_NDB_No
+     Links to the Weight file by NDB_No
+     Links to the Footnote file by NDB_No and when applicable, Nutr_No
+     Links to the Nutrient Definition file by Nutr_No
+     Links to the Source Code file by Src_Cd
+     Links to the Derivation Code file by Deriv_Cd
+
+Table 8.—Nutrient Data File Format
+    Field name      Type     Blank Description
+    NDB_No          A 5*      N    5-digit Nutrient Databank number.
+    Nutr_No         A 3*      N    Unique 3-digit identifier code for a nutrient.
+    Nutr_Val        N 10.3    N    Amount in 100 grams, edible portion †.
+    Num_Data_Pts N 5.0        N    Number of data points (previously called Sample_Ct)
+                                   is the number of analyses used to calculate the
+                                   nutrient value. If the number of data points is 0, the
+                                   value was calculated or imputed.
+    Std_Error       N 8.3     Y    Standard error of the mean. Null if cannot be
+                                   calculated. The standard error is also not given if the
+                                   number of data points is less than three.
+    Src_Cd          A2        N    Code indicating type of data.
+    Deriv_Cd        A4        Y    Data Derivation Code giving specific information on
+                                   how the value is determined. This field is populated
+                                   only for items added or updated starting with SR14.
+
+
+
+
+                                              32
+ Field name       Type     Blank Description
+ Ref_NDB_No       A5         Y     NDB number of the item used to calculate a missing
+                                   value. Populated only for items added or updated
+                                   starting with SR14.
+ Add_Nutr_Mark A 1           Y     Indicates a vitamin or mineral added for fortification
+                                   or enrichment. This field is populated for ready-to-
+                                   eat breakfast cereals and many brand-name hot
+                                   cereals in food group 8.
+ Num_Studies      N2         Y     Number of studies.
+ Min              N 10.3     Y     Minimum value.
+ Max              N 10.3     Y     Maximum value.
+ DF               N4         Y     Degrees of freedom.
+
+ Low_EB           N 10.3     Y     Lower 95% error bound.
+ Up_EB            N 10.3     Y     Upper 95% error bound.
+ Stat_cmt         A 10       Y     Statistical comments. See definitions below.
+ AddMod_Date      A10        Y     Indicates when a value was either added to the
+                                   database or last modified.
+
+ CC               A1         Y     Confidence Code indicating data quality, based on
+                                   evaluation of sample plan, sample handling,
+                                   analytical method, analytical quality control, and
+                                   number of samples analyzed. Not included in this
+                                   release, but is planned for future releases.
+* Primary keys for the Nutrient Data file.
+† Nutrient values have been rounded to a specified number of decimal places for each
+nutrient. Number of decimal places is listed in the Nutrient Definition file.
+
+Definitions of each statistical comment included in the Nutrient Data table follow:
+1. The displayed summary statistics were computed from data containing a verbally
+   described value, e.g., less than, trace or not-detected. This must be done in order to
+   carry out any mathematical computations. In every case, the definition of the verbal
+   value is used to derive a numeric value. By definition the actual verbal definition
+   must be a value that falls between two or more numeric values, using a simple linear
+   interpolation between these values. This will derive the most likely numeric location
+   for the verbally described value by following simplest and least computationally
+   intense imputation procedures. If there is a need to account for the added variance
+   due to the imputation of the summary value, see Little and Rubin (2002). Further
+   information is provided in Appendices D and E.
+
+                                              33
+2. The displayed degrees of freedom were computed using Satterthwaite’s
+   approximation (Kotz and Johnson, 1988).
+3. The procedure used to estimate the reliability of the generic mean requires that the
+   data associated with each study be a simple random sample from all the products
+   associated with the given data source (for example, manufacturer, variety, cultivar,
+   and species). For this nutrient, one or more data sources had only one observation.
+   Therefore, the standard errors, degrees of freedom, and error bounds were
+   computed from the between-group standard deviation of the weighted groups having
+   only one observation.
+
+
+Nutrient Definition File (file name = NUTR_DEF). This file (Table 9) is a support file to
+the Nutrient Data file. It provides the 3-digit nutrient code, unit of measure, INFOODS
+tagname, and description.
+
+     Links to the Nutrient Data file by Nutr_No
+
+Table 9.—Nutrient Definition File Format
+    Field name    Type     Blank    Description
+    Nutr_No       A 3*        N     Unique 3-digit identifier code for a nutrient.
+    Units         A7          N     Units of measure (mg, g, μg, and so on).
+    Tagname       A 20        Y     International Network of Food Data Systems
+                                    (INFOODS) Tagnames.† A unique abbreviation for a
+                                    nutrient/food component developed by INFOODS to
+                                    aid in the interchange of data.
+    NutrDesc      A 60        N     Name of nutrient/food component.
+    Num_Dec       A1          N     Number of decimal places to which a nutrient value is
+                                    rounded.
+    SR_Order      N6          N   Used to sort nutrient records in the same order as
+                                  various reports produced from SR.
+* Primary key for the Nutrient Definition file.
+† INFOODS, 2014.
+
+
+Source Code File (file name = SRC_CD). This file (Table 10) contains codes indicating
+the type of data (analytical, calculated, assumed zero, and so on) in the Nutrient Data
+file. To improve the usability of the database and to provide values for the FNDDS, NDL
+staff imputed nutrient values for a number of proximate components, total dietary fiber,
+total sugar, and vitamin and mineral values.
+
+     Links to the Nutrient Data file by Src_Cd
+                                                   34
+

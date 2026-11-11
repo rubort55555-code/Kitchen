@@ -1,0 +1,374 @@
+Appendix B. Other Abbreviations
+
+ap         as purchased
+ARS        Agricultural Research Service
+DFE        Dietary Folate Equivalent
+dia        diameter
+DRI        Dietary Reference Intakes
+fl oz      fluid ounce
+FNDDS      USDA Food and Nutrient Database for Dietary Studies
+g          gram
+INFOODS    International Network of Food Data Systems
+IU         International Unit
+kcal       kilocalorie
+kJ         kilojoule
+lb         pound
+mg         milligram
+μg, mcg    microgram
+ml         milliliter
+NDB        Nutrient Databank
+NDBS       Nutrient Databank System
+NDL        Nutrient Data Laboratory
+NFNAP      National Food and Nutrient Analysis Program
+NLEA       Nutrition Labeling and Education Act
+oz         ounce
+RAE        Retinol Activity Equivalent
+RE         Retinol Equivalents
+RDA        Recommended Dietary Allowances, a Dietary Reference Intake
+SR         USDA National Nutrient Database for Standard Reference
+UL         Tolerable Upper Intake Level, a Dietary Reference Intake
+
+
+
+
+                                     B-1
+Appendix C. Cooking Glossary for Meat and Poultry Items
+
+   Baked or Roasted: Food cooked uncovered in an oven with no liquid added,
+    thereby surrounding it with dry heat
+   Braised: Food cooked on top of the range or in the oven, tightly covered in a small
+    amount of liquid at low heat for a lengthy period of time.
+   Broiled or Grilled: Food cooked directly under or above the heat source. Food can
+    be broiled in an oven under a gas or electric heat source, or grilled directly over
+    charcoal or other heat source. The term “barbecued” is sometimes used
+    synonymously with grilled.
+   Dry heat: A cooking technique in which heat is transferred to the food without the
+    use of a liquid. Examples of dry heat techniques are baking, roasting, and grilling.
+   Fast Fried: Food cooked in uncovered skillet at moderate to high heat, 3-4 minutes
+    per side depending on thickness of the cut.
+   Fast Roasted: Food roasted or fan-baked in an oven, such as a convection oven,
+    for a short time at high temperature (approximately 15 minutes/500g piece of meat).
+   Fried in deep fat or oil: Food which is cooked by immersing in hot fat or oil deep
+    enough to completely cover the food being cooked. Average fat temperature for
+    deep frying is 375°F/190°C, but a recipe may specify a different temperature,
+    according to the characteristics of the food.
+   Microwaved: Food heated or cooked using a specific type of oven that produces
+    high frequency electromagnetic radiation as the heat source.
+   Moist heat: A cooking technique in which heat is transferred to the food by using
+    liquid or steam. Examples of moist heat techniques are braising, simmering, and
+    steaming.
+   Pan-fried (fried in pan), Sautéed, or Stir fried: Food cooked in fat which does not
+    cover the food. Sautéing is often used to describe a method which is faster and uses
+    less fat than pan-frying. Stir-frying is to quickly cook small pieces of food in a pan
+    with a large surface area, using a minimum amount of fat and very high heat, while
+    constantly stirring the food.
+   Pan-broiled: Food cooked in uncovered skillet or frying pan over direct heat, using
+    little or no fat. Drippings are poured off as they form.
+   Pan-browned: Food cooked in uncovered skillet or frying pan over direct heat to
+    obtain a brown surface on the food.
+   Poached, Simmered, or Stewed: Food cooked in liquid at a temperature low
+    enough that tiny bubbles just begin to break the surface (~185°F/85°C). A food being
+    stewed involves simmering for a long period of time in a tightly covered pot.
+   Raw: Food item in its natural state: not processed, refined, or cooked.
+   Slow Roasted: Food roasted or fan-baked in an oven, such as a convection oven,
+    for approximately 25-30 minutes/500g piece of meat.
+   Thawed: Frozen food that has been exposed to a temperature higher than freezing
+    so that it has defrosted and reached a softened state.
+
+
+                                              C-1
+Appendix D. Imputing Less Than Measurements
+
+Prepared by: Charles R. Perry, Jr. and Daniel G. Beckler, For: the Nutrient Data
+Laboratory, Agricultural Research Service, United States Department of Agriculture
+
+Nutrient analysis techniques sometimes result in a less than value being reported to
+NDL or in the scientific literature. Such values are usually identified as either less than
+the limit of quantification, or less than the limit of detection. This paper presents a
+coherent set of rules for imputing these less than measurement.
+
+NDL also considered the possibility of applying different imputation methods for
+nutrients that have positive dietary effects and those that have negative dietary effects.
+However, it is not always clear how to differentiate which nutrients are positive and
+those that are negative. This is complicated by the fact that certain nutrients have
+positive dietary effects only when they are present in very limited quantities. The
+working paper Imputing Values for Trace and Not Detected Measurements by Perry and
+Beckler contain separate imputation methods for positive and negative nutrients. NDL
+may readdress the merit of using different imputation strategies at a later date when
+more nutrient information is known.
+
+There are three basic assumptions at work:
+
+Let:   C be the lower limit of the amount that can be present, D be the limit of
+       detection (LOD), and Q be the limit of quantification (LOQ).
+
+
+
+
+                                               D-1
+Assumption 1: When we detect less than the limit of quantification amounts, we
+assume that our ability to detect the chemical is proportional to the amount present.
+This implies that the actual amount present T has a triangular distribution from limit of
+detection to the limit of quantification. Thus, we are lead to impute less than the limit of
+quantification amounts as:
+
+
+              D2 + Q2
+     a.          2    , the median of the triangular distribution over D to Q when Q and
+              D are known;
+
+
+             C2 + Q2
+     b.          2 , the median of the triangular distribution over C to Q when Q and
+          C are known and D is unknown, and
+
+             02 + Q2
+     c.         2 , the median of the triangular distribution over 0 to Q when Q is
+          known and C and D are unknown.
+
+
+Assumption 2. When the analysis process indicates the amount of the nutrient present
+is less than the limit of detection, we assume that the actual amount present, T, is
+equally likely to be located at any point in the range of values where the actual values
+are known to lie. This implies that the actual amount present, T, has a uniform
+distribution from the lower limit of the amount present to the limit of detection. Thus, we
+are lead to impute less than the limit of detection amounts as:
+
+
+          C+D
+    a.      2 , the median of the uniform distribution over C to D when C and D are
+          known;
+
+          0+D
+    b.     2 the median of the uniform distribution over O to D when C is unknown and
+          D is known;
+
+          C+C
+    c.     2 = C when C is known and D is unknown;
+
+          0+0
+    d.     2 = 0 when C and D are both unknown.
+                                                D-2
+Assumption 3: When the limit of quantification is not known for a set of measurements,
+we first impute it from the current data measurements (or from a similar set of
+measurements) by assuming its actual value is uniformly distributed between its
+maximum likelihood estimate from the current measurements, min(current quantifiable
+values), and the next lower value that is known. That is:
+
+             1
+    a.   Q = 2 (min (current measurements) + D), when D is known;
+
+             1
+    b.   Q = 2 (min (current measurements) + C), when D is unknown and C is known;
+
+             1
+    c.   Q = 2 min (current measurements), when both C and D are unknown.
+
+This approach to imputing missing Q is likely to be somewhat conservative and result in
+a lower values for Q than the actual limit of quantification.
+
+We can summarize the decision rules for imputation that result from the above
+assumptions as follows:
+
+
+          Case 1: C, D and Q are               Impute              Impute Not
+          known                               Trace As:           Detected As:
+
+          When More is Better:                    D2 + Q2              C+D
+                                                     2                  2
+
+
+
+          Case 2: D & Q known, C               Impute              Impute Not
+          unknown                             Trace As:           Detected As:
+
+          When More is Better:                    D2 + Q2              0+D
+                                                     2                  2
+
+
+
+
+                                            D-3
+Case 3: C & Q known, D     Impute         Impute Not
+unknown                   Trace As:      Detected As:
+
+When More is Better:           C2 + Q2        C
+                                  2
+
+
+
+
+Case 4: Q known, C & D     Impute         Impute Not
+unknown                   Trace As:      Detected As:
+
+When More is Better:           02 + Q2        0
+                                  2
+
+
+
+
+Case 5: C & D known, Q     Impute         Impute Not
+unknown                   Trace As:      Detected As:
+
+When More is Better:           D2 + Q2      C+D
+                                  2          2
+
+
+
+Case 6: D known, Q &C     Impute          Impute Not
+unknown                  Trace As:       Detected As:
+
+When More is Better:           D2 + Q2      0+D
+                                  2          2
+
+
+
+Case 7: C known, D & Q    Impute          Impute Not
+unknown                  Trace As:       Detected As:
+
+When More is Better:       C2 + Q2            C
+                              2
+
+
+
+
+                         D-4
+         Case 8: D, Q & C unknown             Impute               Impute Not
+                                             Trace As:            Detected As:
+
+         When More is Better:                  02 + Q2                   0
+                                                  2
+
+
+
+References for Appendix D
+
+Gelman A, Carlin JB, Stern HS, Rubin DB. Bayesian data analysis. London: Chap &
+Hall. 1995.
+
+Little RA, Rubin DB. Statistical analysis with missing data. Hoboken, NJ: John Wiley
+and Sons. 2002.
+
+Rubin DB. Multiple imputation for nonresponse surveys. Hoboken, NJ: John Wiley and
+Sons. 1987.
+
+
+
+
+                                            D-5
+Appendix E. Imputing Values for Trace and Not Detected Measurements.
+
+Prepared by: Charles R. Perry, Jr. and Daniel G. Beckler for Nutrient Data Laboratory,
+Agricultural Research Service, United States Department Of Agriculture
+
+Nutrient analysis techniques sometimes result in a trace or undetectable amounts being
+reported to NDL or in the scientific literature. This paper presents a coherent set of rules
+for imputing when the measurement is either a trace or not detected.
+
+There are three basic assumptions at work:
+
+     Let:   C, be the lower limit of the amount that can be present; D, be the limit of
+            detection and Q be the limit of quantification.
+
+
+
+
+Assumption 1: When we detect a trace, we assume that our ability to detect the
+chemical is proportional to the amount present. This implies that the actual amount
+present T has a triangular distribution from limit of detection to the limit of quantification.
+Also, since the dietary effect of a nutrient can be either positive or negative, we are lead
+to act conservatively and impute trace measurements conditionally on the nutrient’s
+dietary effect.
+
+                                                 E-1
+When the dietary effect of more of the nutrient is positive, trace measurements should
+be imputed as:
+
+            D2 + Q2
+   a.           2   , the median of the triangular distribution over D to Q when Q and D
+         are known;
+
+
+            C2 + Q2
+   b.           2 , the median of the triangular distribution over C to Q when Q and C
+         are known and D is unknown, and
+
+            02 + Q2
+   c.          2 , the median of the triangular distribution over 0 to Q when Q is
+         known and C and D are unknown.
+
+When the dietary effect of less of the nutrient is positive, trace measurements should be
+imputed as:
+
+             D2 + Q2
+    a.          2    , when Q and D are known;
+
+
+
+    b. Q, when Q and C are known and D is unknown, and
+
+    c. Q, when Q is known and C and D are unknown.
+
+
+Assumption 2. When we do not detect the chemical, we assume that the actual
+amount present, T, is equally likely to be located at any point in the range of values
+where the actual values are known to lie. This implies that the actual amount present,
+T, has a uniform distribution from the lower limit of the amount present to the limit of
+detection.
+
+When the dietary effect of more of the nutrient is positive, trace measurements should
+be imputed as:
+
+       C+D
+    a.  2 , the median of the uniform distribution over C to D when C and D are
+    known;
+
+
+
+                                               E-2
+        0+D
+    b.    2 the median of the uniform distribution over O to D when C is unknown and
+    D is known;
+
+         C+C
+    c.    2 = C when C is known and D is unknown;
+
+         0+0
+    d.    2 = 0 when C and D are both unknown.
+
+When the dietary effect of less of the nutrient is positive, trace measurements should be
+imputed as:
+
+         C+D
+    a.    2 , when C and D are known;
+
+    b. D, when C is unknown and D is known;
+
+         C+Q
+    c.    2 , when C is known and D is unknown;
+
+    d. Q, when C and D are both unknown.
+
+
+Assumption 3: When the limit of quantitation is not known for a set of measurements,
+we first impute it from the current data measurements (or from a similar set of
+measurements) by assuming its actual value is uniformly distributed between its
+maximum likelihood estimate from the current measurements, min(current quantitation
+values), and the next lower value that is known.
+
+When the dietary effect of more of the nutrient is positive, trace measurements should
+be imputed as:
+
+           1
+    a. Q = 2 (min (current measurements) + D), when D is known;
+
+           1
+    b. Q = 2 (min (current measurements) + C), when D is unknown and C is known;
+
+           1
+    c. Q = 2 min (current measurements), when both C and D are unknown.
+
+When the dietary effect of less of the nutrient is positive, trace measurements should be
+imputed as: Q = min (current measurements), regardless of knowledge C and D.
+                                             E-3
+

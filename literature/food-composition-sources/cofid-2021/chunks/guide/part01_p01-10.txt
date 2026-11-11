@@ -1,0 +1,400 @@
+McCance and Widdowson’s The
+Composition of Foods Integrated
+Dataset 2021
+User guide
+
+
+
+
+1
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+
+Contents
+Authors’ acknowledgements ................................................................................................ 3
+Introduction .......................................................................................................................... 4
+   Sources of data and methods of evaluation ..................................................................... 4
+   Data formats ..................................................................................................................... 6
+Details of nutrient data ......................................................................................................... 9
+   Factors worksheet ............................................................................................................ 9
+   Proximates worksheet .................................................................................................... 10
+   Inorganics worksheet...................................................................................................... 12
+   Vitamins worksheet ........................................................................................................ 12
+   Vitamin fractions worksheet ............................................................................................ 14
+Food labelling..................................................................................................................... 15
+   ‘Front of pack’ nutrition labelling ..................................................................................... 16
+   Tolerances for nutrient values declared on a label ......................................................... 17
+Appendices ........................................................................................................................ 18
+   Appendix A: Main data references.................................................................................. 18
+   Appendix B: Food sub-group codes ............................................................................... 23
+   Appendix C: Acronyms, descriptions and units .............................................................. 27
+References......................................................................................................................... 36
+
+
+
+
+                                                                       2
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+
+Authors’ acknowledgements
+We would like to thank colleagues who worked on previous versions of CoFID, which this
+version builds on, and/or provided advice on the 2021 dataset.
+
+Colleagues at Quadram Institute Bioscience
+Mark Roe and Rachel Berry.
+
+Colleagues at Public Health England
+Sakhi Dodhia, Melanie Farron-Wilson, Joanne McArdle, Danielle Weiner, Gillian Swan and
+Mark Bush.
+
+Colleagues at Department of Health and Social Care
+Hannah Koffman and Debby Webb.
+
+
+
+
+                                                   3
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+
+Introduction
+Public Health England (PHE) is responsible for maintaining data on the nutrient content of
+the UK food supply to support the National Diet and Nutrition Survey, and funds nutrient
+analysis of foods commonly consumed in the UK. Data from this work, and complementary
+data from other sources are published as McCance and Widdowson’s ‘The Composition of
+Foods’ – the UK food composition tables. Previous data have been published in book form
+as a series of supplements, each containing extensive data on a specific food group, and
+also as the summary editions.
+
+The Composition of Foods Integrated Dataset (CoFID) was first published in 2008 and
+brought together for the first time all the available data in electronic format as a single,
+consolidated dataset. The 2015 version was an update of the original published in 2008
+and included all the new and recently reviewed data available at that point. Foods
+calculated by recipe or calculated based on another food (for example, foods weighed with
+waste) were recalculated to include the most recent data for ingredients. A subset of the
+2015 data were also published in book form as McCance and Widdowson’s The
+Composition of Foods seventh summary edition. A further update of CoFID in 2019
+included data from a 2015 fruit and vegetable nutrient analysis project and new and
+revised data on whole and toasted almonds. This updated version (2021) of CoFID
+incorporates data from a 2020 report on nutrient analysis of key cuts of pork including
+updates for associated foods and recipes within the pork section. Data on the following
+foods have been corrected: vitamin C in watercress; iodine in soya yogurt; and vitamin E,
+sugars and biotin in boiled and steamed sweet potato. All other values remain unchanged
+from CoFID (2019).
+
+
+Sources of data and methods of evaluation
+It is essential that food composition data are regularly updated for a number of reasons.
+New fresh, ambient, frozen, and processed foods are introduced and the nutrient content
+of existing foods change. This can happen when there are new varieties or new sources of
+supply for the raw materials. New farming practices can affect the nutritional value of both
+plant and animal products. New manufacturing practices, including changes in the type
+and amounts of ingredients, and changes in fortification practice can affect the content of
+processed foods. Many foods have been reformulated in line with government public
+health initiatives, including reductions in the amount of fat, trans fatty acids, saturated fat,
+sugar and salt added. Methods of preparation and cooking in the home also change.
+
+The analytical survey reports from 2011 onwards are available to download in electronic
+form.
+
+
+
+
+                                                   4
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Earlier reports can be requested from Food Databanks National Cability (FDNC). These
+reports comprise raw laboratory data and have not been evaluated to the same extent as
+data incorporated into CoFID.
+
+The Composition of Foods series of publications in book form are listed below:
+
+Cereals and Cereal Products, supplement (1988)
+Milk Products and Eggs, supplement (1989)
+Vegetables, Herbs and Spices, supplement (1991)
+Fifth Summary Edition (1991)
+Fruit and Nuts, supplement (1992)
+Vegetable Dishes, supplement (1992)
+Fish and Fish Products, supplement (1993)
+Miscellaneous Foods, supplement (1994)
+Meat, Poultry and Game, supplement (1995)
+Meat Products and Dishes, supplement (1996)
+Fatty Acids, supplement (1998)
+Sixth Summary Edition (2002)
+Seventh Summary Edition (2015)
+
+Many of the values included in CoFID have been taken from the seventh summary edition
+and detailed supplements, themselves mainly derived from the analytical surveys
+programme. All the data in the supplements were included in the original version of CoFID
+published in 2008. The data were extensively revised and updated for the 2015 revision of
+CoFID some further revisions were made for the 2019 version, mainly to fruit and
+vegetables. Additional revisions were made to incorporate data on pork in the latest 2021
+dataset The main data source for each food is provided, where known, in the ‘main data
+reference’ column and refers to the references provided in Appendix A, which lists the
+reports and scientific literature from which data were taken.
+
+Some foods that were included in the 2008 CoFID have not been reviewed or validated in
+the 2015, 2019 or 2021 update and those foods are published separately in a file
+containing data for ‘old’ foods. This data can be used in addition to the 2021 dataset, but
+users should be aware that the values for some nutrients may not represent those foods
+as currently consumed.
+
+Where the values in the tables were derived by direct analysis of the foods, care was
+taken when designing sampling protocols to ensure that the foods analysed were
+representative of those consumed by the UK population. For most foods a number of
+samples were purchased at different shops, supermarkets or other retail outlets, and,
+where appropriate, foodservice outlets or catering suppliers. Samples analysed were
+composite samples, consisting of equal quantities of each sub-sample purchased.
+
+                                                   5
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+When the composite sample was made up from a number of different brands of food, the
+proportion of the individual brands purchased was related to their relative shares of the
+retail market. Full details of samples are available in the reports in the ‘main data
+references’ column (Appendix A). If the food required preparation prior to analysis,
+techniques such as washing, soaking, cooking and so on, were as similar as possible to
+normal domestic practices. Cooking methods were based on manufacturer’s
+recommendations for pre-packaged foods and methods for non pre-packed foods were
+based on review of ‘usual’ consumer preparation. Details of preparation procedures are
+available in the reports in the main data reference column (Appendix A).
+
+Where data from literature sources were included, preference was given where the food
+was similar to that in the UK, where full details of the sample, method of preparation and
+analysis were given, and where the results were presented in a detailed and acceptable
+form. EuroFIR (European Food Information Resource) datasets and tools were used to
+help evaluate data values, and to calculate values for foods where suitable analytical or
+literature data were not available.
+
+Where processed foods with brand names are included, they are restricted to leading
+brands with an established composition. No inference should be drawn from the inclusion
+of data for a particular brand.
+
+The final selection of values published is dependent on the judgement of the compilers
+and their interpretation of the available data. Due to the large natural variability of foods, it
+is unlikely that a particular item will have precisely the same composition as given in these
+tables. This is particularly true for unprocessed foods such as cereals, dairy products,
+eggs, meat, fish, fruit and vegetables. The values published should be regarded as typical
+rather than definitive for the foods described.
+
+Users are advised to consult other sources of data (for example, product labels,
+manufacturers’ data, published analytical reports) where appropriate, depending on their
+particular needs or interests, for the food item under consideration. It should be noted that
+manufacturers can and do change or reformulate their products and this will influence
+nutrient content. This is particularly relevant for foods where nutrients are added for
+fortification purposes, or for technological purposes, such as antioxidants or colouring
+agents. Information on processed foods, including fortification levels and reformulations, is
+often available from manufacturers’ websites and from retailers.
+
+
+Data formats
+CoFID data are provided as Excel workbooks containing data in worksheets related to
+nutrient groups.
+
+
+
+
+                                                   6
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Format of Excel files
+The Excel workbook consists of the following worksheets:
+
+List of worksheets in CoFID 2021
+Factors
+Proximates
+Inorganics
+Vitamins
+Vitamin Fractions
+Saturated fatty acids per 100g fatty acids
+Saturated fatty acids per 100g food
+Monounsaturated fatty acids per 100g fatty acids
+Monounsaturated fatty acids per 100g food
+Polyunsaturated fatty acids per 100g fatty acids
+Polyunsaturated fatty acids per 100g food
+Phytosterols
+Organic acids
+
+Each sheet contains column headings in rows 1 to 3 of the spreadsheet, then data values
+for each individual foodstuff such that data values for a specific food code will occur in the
+same row in each of the worksheets.
+
+The following notes apply to the data values:
+
+Nutrient values are expressed per 100g of the food except in the case of alcoholic
+beverages which are presented per 100ml.
+
+A trace value for a nutrient is represented by Tr.
+
+Where a nutrient is present in significant quantities, but there is no reliable information on
+the amount, the value is represented by N.
+
+In the Excel files, it is not possible to append nutrient-specific footnotes. However, these
+are being updated in the Composition of Foods Integrated Dataset searchable website.
+Food-specific footnotes do appear in the Excel version.
+
+Food identification
+Food code
+Food code is a number, up to 6 digits, representing the unique CoFID code representing
+each food. The 2-digit prefix generally refers to the food codes used within the book
+supplements relating to specific food groups, for example, 11- for cereals and cereal
+
+                                                   7
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+products, 12- for milk products and eggs, 16- for fish and fish products. For foods where
+new data have been incorporated into an existing food, a new food code has been given
+using the prefix for the appropriate supplement. The food codes should not be considered
+to have any particular significance as the electronic datasets do not relate exactly to book
+publications, and each food has a unique food code.
+
+Food Name (NAME)
+The food name has been chosen as that most recognisable and descriptive of the food
+referenced.
+
+Description (DESC) Information
+Description (DESC) Information given under the description describes the nature of the
+samples taken for analysis. Sources of values derived, either from the literature or by
+calculation, are also indicated under this heading.
+
+Group (GROUP)
+In these files (but not in the printed publications) a one, 2 or 3 letter code is assigned to
+every food. The code letter(s) provide identification of the food group and food type to
+which the food belongs. A full list of the codes and their description is given in Appendix B.
+
+Previous (PREV)
+Assigned to each food which has an earlier food code with different nutrient values
+associated with it. It is a number, up to 6 digits, indicating previous food codes (4th, 5th or
+6th edition or a supplement). Some foods may have more than one previous code
+associated with them.
+
+Main data references (COMMENTS)
+The main data reference indicates the principal report(s) or publication(s) from which the
+majority of the data for the food code are taken. Values for individual nutrients within each
+code may be taken from different sources, calculated or estimated from other codes. For
+foods that do not have an analytical report or literature source that can be referred to as
+the main data reference, the food description should indicate how the data have been
+estimated (for example, from manufacturer’s data, calculated from related codes or
+calculated as a recipe). In some cases, there is a main data reference referring to
+analytical data and the description indicates that industry data have also been used to
+update some nutrients, usually sodium, sugars, fats or added minerals and vitamins.
+
+
+
+
+                                                   8
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+
+Details of nutrient data
+For a more detailed definition and expression of the nutrients refer to the introductory
+pages of the seventh summary edition of McCance and Widdowson's The Composition of
+Foods (1) and of the supplement publications.
+
+The more significant points for certain nutrients are provided in the notes below for
+convenience. For some nutrients, data which is 'old' and were analysed significantly earlier
+and on a different sample to the bulk of the nutrients are available. These data have not
+been updated but are the only data available and may be of interest to some users and are
+available as a separate file. This applies to fibre fractions, fibre analysed by the Southgate
+method, and sulphur.
+
+
+Factors worksheet
+Edible conversion factor (EDPOR)
+Many foods are purchased or served with material that is clearly inedible or material that
+might be discarded as inedible by some consumers. For the purposes of this dataset
+‘waste’ encompasses both types of material, which might include, for example:
+
+•   outer leaves or stalks of vegetables
+•   stones, pips or peel of fruit
+•   nut shells
+•   fish skin and bone
+•   meat fat and bones
+•   liquid content of canned foods
+
+The edible conversion factor allows calculation of the nutrient content of foods when the
+inedible material is included in the weight and refers to the proportion of edible material
+remaining after the waste has been removed. The factor will vary between different
+samples of the same food and these values should be treated as a guide to the typical
+proportion of inedible waste. In the dataset foods containing inedible portions always have
+‘weighed with’ in their name.
+
+Specific gravity (SPECGRAV)
+Specific gravity is the ratio of the density (mass of a unit volume) of a food to the density
+(mass of the same unit volume) of water.
+
+Nitrogen conversion factor (NCF)
+Nitrogen conversion factor is the factor used to calculate protein from total nitrogen. See
+Protein.
+
+Glycerol conversion factor (GCF)
+
+                                                   9
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Glycerol conversion factor is used to allow the calculation of the total fatty acids in a given
+weight of food. See Fatty acids.
+
+
+Proximates worksheet
+Water (WATER)
+For most foods, water has been analysed using gravimetric methods. In some cases
+where protein, fat or carbohydrate have been updated based on industry data, the water
+value has been estimated by calculation (100 – (protein + fat + available carbohydrate +
+dietary fibre + ash)).
+
+Protein (PROT)
+For most foods, protein is calculated by multiplying total nitrogen values (TOTNIT) by the
+factors provided in the ‘Nitrogen conversion factor’ column of the ‘Factors’ worksheet, as
+described in the introduction of McCance and Widdowson's The Composition of Foods
+seventh summary edition. Unless stated otherwise, a factor of 6.25 is used based on the
+assumption that proteins contain 16% nitrogen. The proportion of non-protein nitrogen is
+high in many foods, notably fish, fruits and vegetables. In most of these, however, this is
+amino acid in nature and therefore little error is involved in the use of a factor applied to
+the total nitrogen, although protein in the strictest sense is overestimated. For those foods
+which contain a measurable amount of non-protein nitrogen in the form of urea, purines
+and pyrimidines (for example, mushrooms) the non-protein nitrogen has been subtracted
+before multiplication by the appropriate factor.
+
+Fat (FAT)
+The fat in most foods is a mixture of triglycerides, phospholipids, sterols and related
+compounds. The values in the tables refer to total fat and not just to triglycerides.
+
+Carbohydrate (CHO)
+Total carbohydrate and its components, starch, total and individual sugars (glucose,
+galactose, fructose, sucrose, maltose, lactose) and oligosaccharides, but not fibre, are
+wherever possible expressed as their monosaccharide equivalent. The values for total
+carbohydrate in the dataset have generally been obtained from the sum of analysed
+values for these components of ‘available carbohydrate’, contrasting with figures for
+carbohydrate ‘by difference’, which are sometimes used in other food tables or on the
+labels of processed foods. Such figures are obtained by subtracting the measured weights
+of the other proximates from the total weight and many include the contribution from any
+dietary fibre present, as well as errors from the other analyses.
+
+Energy value (KCALS)
+Calculated using the conversion factors: protein 4 kcal/g, fat 9 kcal/g, carbohydrate
+(available, expressed as monosaccharides) 3.75 kcal/g and alcohol 7 kcal/g.
+
+Energy value (KJ)
+
+                                                  10
+

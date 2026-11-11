@@ -1,0 +1,400 @@
+                    Composition of Foods
+                   Raw, Processed, Prepared
+
+          USDA National Nutrient Database for
+            Standard Reference, Release 27
+
+               Documentation and User Guide
+
+
+
+
+                                  August 2014
+                                Revised, May 2015
+
+
+
+
+US Department of Agriculture
+Agricultural Research Service
+Beltsville Human Nutrition Research Center
+Nutrient Data Laboratory
+10300 Baltimore Avenue
+Building 005, Room 107, BARC-West
+Beltsville, Maryland 20705
+Suggested Citation:
+
+US Department of Agriculture, Agricultural Research Service, Nutrient Data Laboratory.
+USDA National Nutrient Database for Standard Reference, Release 27 (slightly
+revised). Version Current: May 2015. Internet: http://www.ars.usda.gov/ba/bhnrc/ndl
+
+Disclaimers:
+
+Mention of trade names, commercial products, or companies in this publication is solely
+for the purpose of providing specific information and does not imply recommendation or
+endorsement by the US Department of Agriculture over others not mentioned.
+
+The US Department of Agriculture (USDA) prohibits discrimination in all its programs
+and activities on the basis of race, color, national origin, age, disability, and where
+applicable, sex, marital status, familial status, parental status, religion, sexual
+orientation, genetic information, political beliefs, reprisal, or because all or part of an
+individual's income is derived from any public assistance program. (Not all prohibited
+bases apply to all programs.) Persons with disabilities who require alternative means for
+communication of program information (Braille, large print, audiotape, etc.) should
+contact USDA's TARGET Center at (202) 720-2600 (voice and TDD). To file a
+complaint of discrimination, write to USDA, Director, Office of Civil Rights, 1400
+Independence Avenue, S.W., Washington, D.C. 20250-9410, or call (800) 795-3272
+(voice) or (202) 720-6382 (TDD). USDA is an equal opportunity provider and employer.
+
+Issued August 2014, revised May 2015
+
+
+
+
+                                                i
+The USDA National Nutrient Database for Standard Reference, Release 27 was
+prepared by the following staff members of the Nutrient Data Laboratory, Beltsville
+Human Nutrition Research Center, Agricultural Research Service, US Department of
+Agriculture:
+
+Co-Coordinators           David B. Haytowitz and Jaspreet K.C. Ahuja
+Senior Scientists         Jaspreet K.C. Ahuja
+                          David B. Haytowitz
+                          Pamela R. Pehrsson
+                          Janet M. Roseland
+Scientists                Jacob Exler (Ret.)
+                          Mona Khan
+                          Melissa Nickle
+                          Quynh Anh Nguyen
+                          Kris Patterson (Ret.)
+                          Bethany Showell
+                          Meena Somanchi
+                          Robin Thomas
+                          Denise Trainer
+                          Shirley Wasswa-Kintu
+                          Juhi Williams
+Research Leader           Pamela R. Pehrsson
+IT Support                Kim Klingenstein
+                          Cevon McLean
+Administrative Support    Jenny Jung
+                          Amanda Moran
+
+
+Acknowledgements: The authors gratefully acknowledge the constructive
+contributions of the peer reviewers: Carrie Martin, Food Surveys Research Group,
+ARS-USDA; Judith Spungen, Food and Drug Administration, DHHS; and Angela
+Scheett, Grand Forks Human Nutrition Research Center, ARS-USDA.
+
+
+
+
+                                             ii
+Contents
+Introduction ..................................................................................................................... 1
+Specific Changes for SR27 ............................................................................................. 2
+Database Reports ........................................................................................................... 4
+Database Content ........................................................................................................... 5
+   Food Descriptions ....................................................................................................... 5
+     Food Group .............................................................................................................. 6
+     LanguaL ................................................................................................................... 6
+   Nutrients ...................................................................................................................... 7
+     Nutrient Retention and Food Yield.......................................................................... 11
+     Proximates.............................................................................................................. 12
+     Minerals .................................................................................................................. 14
+     Vitamins .................................................................................................................. 15
+     Lipid Components................................................................................................... 21
+     Amino Acids............................................................................................................ 25
+   Weights and Measures.............................................................................................. 26
+   Sources of Data ........................................................................................................ 27
+Explanation of File Formats........................................................................................... 27
+   Relational Files .......................................................................................................... 27
+     Food Description File .............................................................................................. 29
+     Food Group Description File ................................................................................... 31
+     LanguaL Factor ...................................................................................................... 31
+     LanguaL Factors Description File ........................................................................... 31
+     Nutrient Data File.................................................................................................... 32
+     Nutrient Definition File ............................................................................................ 34
+     Source Code File .................................................................................................... 34
+     Data Derivation Code Description File .................................................................... 35
+     Weight File.............................................................................................................. 36
+     Footnote File........................................................................................................... 36
+     Sources of Data Link File ....................................................................................... 37
+     Sources of Data File ............................................................................................... 37
+   Abbreviated File ........................................................................................................ 38
+   Update Files .............................................................................................................. 41
+Summary ....................................................................................................................... 43
+References Cited in the Documentation ........................................................................ 43
+
+
+
+
+                                                                     iii
+Notes on Foods ............................................................................................................. 51
+  Introduction ............................................................................................................... 51
+  National Food and Nutrient Analysis Program .......................................................... 53
+    Identify Key Foods and critical nutrients for sampling and analysis ........................ 53
+    Evaluate existing data for scientific quality ............................................................. 54
+    Devise and implement a probability-based sampling survey of US foods .............. 54
+    Analyze sampled foods under USDA-supervised laboratory contracts................... 56
+    Compile newly generated data to update the National Nutrient Databank ............. 59
+  Beef Products (Food Group 13) ................................................................................ 64
+  Breakfast Cereals (Food Group 08) .......................................................................... 76
+  Cereal Grains and Pasta (Food Group 20)................................................................ 80
+  Eggs (Food Group 01)............................................................................................... 85
+  Lamb, Veal, and Game Products (Food Group 17) ................................................... 87
+  Legumes and Legume Products (Food Group 16) .................................................... 89
+  Pork Products (Food Group 10) .............................................................................. 106
+  Poultry Products (Food Group 05) .......................................................................... 115
+  Vegetable and Vegetable Products (Food Group 11) ............................................. 125
+Appendix A. Abbreviations Used in Short Descriptions ................................................A-1
+Appendix B. Other Abbreviations .................................................................................B-1
+Appendix C. Cooking Glossary for Meat and Poultry Items......................................... C-1
+Appendix D. Imputing Less Than Measurements ........................................................ D-1
+Appendix E. Imputing Values for Trace and Not Detected Measurements...................E-1
+
+
+
+
+May 2015 Revision
+The food items in this revision have been updated in the online web search program as
+well as in the Microsoft Access database. An update file is available to users who wish
+to use the ASCII files to import the database into their own applications. The
+information on the number of records in each file in the SR27 Documentation and Users
+Guide have not been updated to reflect these revisions. The changes included in this
+revision will be included in the update files disseminated with SR28.
+
+
+06164 Sauce, salsa, ready-to-serve
+   Updated nutrient profile with new data
+06931 Sauce, pasta, spaghetti/marinara, ready-to-serve
+   Updated nutrient profile with new data
+11172 Corn, sweet, yellow, canned, whole kernel, drained solids
+   Updated nutrient profile with new data
+14649 Hibiscus tea, brewed from calyces
+   Updated complete nutrient profile and modified the food description
+16051 Beans, white, mature seeds, canned
+   Updated sodium, vitamin A and several fatty acids
+16338 Beans, navy, mature seeds, cooked, boiled, with salt
+                                                                   iv
+   Updated total dietary fiber, and folate
+19042 Snacks, potato chips, barbecue-flavor
+   Updated nutrient profile with new data
+32020 Chicken, thighs, frozen, breaded, reheated
+   Added values for total dietary fiber
+
+The statistical information associated with the nutrient values for the following food
+items were recalculated to give better estimates of the variability.
+
+ 06019   Soup, chicken noodle, canned, condensed
+ 06150   Sauce, barbecue
+ 06159   Soup, tomato, canned, condensed
+ 07028   Ham, sliced, packaged (96% fat free, water added)
+ 11056   Beans, snap, green, canned, regular pack, drained solids
+ 11398   Potato puffs, frozen, unprepared
+ 11531   Tomatoes, red, ripe, canned, packed in tomato juice
+ 11578   Vegetable juice cocktail, canned
+ 16424   Soy sauce made from soy and wheat (shoyu), low sodium
+ 21021   Fast foods, english muffin, with egg, cheese, and canadian bacon
+ 21061   Fast foods, burrito, with beans and cheese
+ 21082   Fast foods, taco with beef, cheese and lettuce, hard shell
+ 21106   Fast foods, fish sandwich, with tartar sauce and cheese
+ 21108   Fast foods, hamburger, single, regular patty, with condiments
+ 21139   Fast foods, potato, mashed
+ 21230   Fast Foods, crispy chicken filet sandwich, with lettuce and mayonnaise
+ 21300   Fast Food, Pizza Chain, 14" pizza, cheese topping, thick crust
+ 21301   Fast Food, Pizza Chain, 14" pizza, cheese topping, thin crust
+ 21302   Fast Food, Pizza Chain, 14" pizza, pepperoni topping, regular crust
+ 21303   Fast Food, Pizza Chain, 14" pizza, pepperoni topping, thick crust
+ 21395   Fast foods, cheeseburger, double, regular patty, with condiments
+ 21486   Fast foods, taco with beef, cheese and lettuce, soft
+ 21487   Fast foods, taco with chicken, lettuce and cheese, soft
+
+
+
+
+                                                v
+Introduction
+
+The USDA National Nutrient Database for Standard Reference (SR) is the major source
+of food composition data in the United States. It provides the foundation for most food
+composition databases in the public and private sectors. As information is updated, new
+versions of the database are released. This version, Release 27 (SR27), contains data
+on 8,618 food items and up to 150 food components. It replaces SR26 issued in August
+2013.
+
+Updated data have been published electronically on the USDA Nutrient Data Laboratory
+(NDL) web site since 1992. SR27 includes composition data for all the food groups and
+nutrients published in the 21 volumes of “Agriculture Handbook 8” (US Department of
+Agriculture 1976-92), and its four supplements (US Department of Agriculture 1990-93),
+which superseded the 1963 edition (Watt and Merrill, 1963). SR27 supersedes all
+previous releases, including the printed versions, in the event of any differences.
+
+In July 2001, when NDL converted to a new version of its Nutrient Databank System
+(NDBS), formats were changed and fields added to improve the descriptive information
+for food items and the statistical information about the nutrient values. While data in
+previous releases have been moved to the new NDBS, they may not have been
+updated through the complete system. Therefore, many of these new fields contain data
+only for those items that have been processed through the new NDBS and it will take a
+number of years before they are populated for all food items in the database.
+
+As part of this upgrade and in various modifications to the NDBS performed since then,
+various checks have been built into the system to ensure data integrity and quality
+control. Additional checks are performed after the SR files have been disseminated
+from the NDBS. These checks include making sure that, to the extent possible, all
+fields are complete. Another check is to make sure that various calculations are
+completed and correct, such as calculating carbohydrate by difference; calculating
+energy by multiplying protein, fat and carbohydrate by the appropriate factors; and
+calculating vitamin A from individual carotenoids. Other checks include making sure
+that values for related nutrients are complete. For example, if there are individual fatty
+acids, there should also be values for total saturated fatty acids, total monounsaturated
+fatty acids, and total polyunsaturated fatty acids. With some adaptation, the procedures
+described in FAO/INFOODS Guidelines for Checking Food Composition Data prior to
+the Publication of a User Table / Database (FAO/INFOODS, 2012) and Ahuja and
+Perloff (2008) have been used. Nutrient values are also compared from release to
+release to make sure any changes in the values can be explained. Reasons for these
+changes include new data generated by the National Food and Nutrient Analysis
+Program (NFNAP) analyses or provided by manufacturers, reformulations by the
+manufacturer, better food sampling, and changes in weighting based on market share
+data. Quality control procedures associated with the analytical data are described in the
+discussion of NFNAP under Notes on Foods (p. 54).
+
+                                               1
+Data have been compiled from published and unpublished sources. Published data
+sources include the scientific literature. Unpublished data include those obtained from
+the food industry, other government agencies, and research conducted under contracts
+initiated by USDA’s Agricultural Research Service (ARS). These contract analyses are
+currently conducted under NFNAP, in cooperation with the National Cancer Institute
+(NCI) and other offices and institutes of the National Institutes of Health (Haytowitz et
+al., 2008), the Centers for Disease Control and Prevention, and the Food and Drug
+Administration. Data from the food industry represents the nutrient content of a specific
+food or food product at the time the data is sent to NDL. The values may change due to
+reformulations or other processing changes by individual companies between the time
+that SR is released and the next update of SR. Values in the database may be based
+on the results of laboratory analyses or calculated by using appropriate algorithms,
+factors, or recipes, as indicated by the source code in the Nutrient Data file. Every food
+item does not contain all of the nutrients/components released in SR.
+
+Notes on Foods has been included in the documentation, starting with SR23 (2010),
+and has been placed after the references. When the earlier paper copies of Agriculture
+Handbook No. 8, Composition of Foods: Raw, Processed, Prepared were released in
+separate sections by food group, each contained a section called Notes on Foods. The
+Notes gave additional information about the foods, such as the definitions of lean and
+fat for meats or enrichment for grain products. For some food groups, a brief
+description of research projects conducted to generate nutrient data were described.
+For those food groups, where Notes on Foods are not included herein, the original
+versions are available in the printed “Agriculture Handbook 8” sections (US Department
+of Agriculture, 1976-92).
+
+Specific Changes for SR27
+
+A number of studies either conducted through NFNAP or by collaboration with various
+groups resulted in various changes to the database. The major changes to the
+database since the last release are listed below.
+
+    Nutrient profiles were added for new foods and existing nutrient profiles were
+     updated for SR27 using data generated by USDA through the NFNAP, submitted
+     by the food industry, or using other publically available data. A complete list of the
+     added food items can be found in the ADD_FOOD file and the updated nutrients in
+     the CHG_NUTR file. The formats of these files can be found on p. 41.
+
+     A major focus of this effort is to monitor those foods which are major contributors of
+     sodium to the diet. The Food Surveys Research Group (FSRG), in collaboration
+     with NDL, identified a group of select foods, termed ‘Sentinel Foods’, to be
+     monitored as primary indicators for assessing change in the sodium content of
+     foods in US food supply. In many cases, to reduce the sodium content of a food,
+     the product must be reformulated using new ingredients or a different balance of
+     ingredients, potentially affecting concentrations of nutrients other than sodium.
+     Examples are fat, sugars, fiber, potassium, and fatty acids. Concentrations of
+                                               2
+    these nutrients are also being monitored. The results of these analyses have been
+    used to update nutrient profiles for foods in SR. An additional 1,300 foods, mainly
+    commercially packaged and restaurant foods with added sodium used in the
+    national dietary survey What We Eat in America (WWEIA), National Health and
+    Nutrition Examination Survey (NHANES) are being monitored through information
+    obtained directly from manufacturers or restaurant chains and their websites or
+    changes in the Nutrition Facts Panel values. If there was an appreciable change in
+    the sodium value, or any of the other aforementioned nutrients, SR was updated
+    as needed.
+
+   Foods added or updated include: Breakfast cereals, fried chicken pieces (breast,
+    thigh, and wing) and skin and breading; fast food biscuit; chicken strips; hash
+    browns; chicken noodle condensed soup; fried shrimp (from restaurant); several
+    pulses (chickpeas, green and red lentils, and green peas); a number of vegetarian
+    items; deli-style roast beef; enhanced and non-enhanced pork loin chops;
+    rotisserie chicken breast; Italian-style meatballs; turkey bacon; popular juice
+    smoothies and fortified juice products; greek yogurt; sorghum grain and flour;
+    green tea; energy drinks and other beverages.
+
+   A number of pizzas, served at school lunches, have been added.
+
+   Foods from Mexican and Italian casual dining and full service restaurants were
+    added. Added Mexican restaurant items include: cheese enchilada, cheese
+    quesadilla, cheese tamales, soft beef tacos, refried beans and spanish rice. Added
+    Italian restaurant items include: cheese ravioli, chicken parmesan, lasagna,
+    spaghetti with meat sauce, and spaghetti with pomodoro sauce.
+
+   A study was conducted to update nutrient data on ground beef, reflecting current
+    market trends. For more details see Notes on Foods for Beef Products (p. 66).
+
+   A study was conducted in collaboration with Colorado State University (CSU) to
+    obtain nutrient information for 7 representative retail veal cuts. For more
+    information, see Notes on Foods for Lamb, Veal, and Game Products (p. 85).
+
+   In collaboration with the New Zealand Meat Industry Association, a study was
+    undertaken to determine nutrient composition of imported New Zealand beef and
+    lamb cuts and offal items which are available in retail grocery stores in the US. For
+    more details, see Notes on Foods for Beef Products (p. 72), and for Lamb, Veal,
+    and Game (p. 85).
+
+   A study was undertaken in collaboration with Cornell University to determine the
+    nutrient content of ruffed grouse and Canada goose. For more information see
+    Notes on Foods for Poultry Products (p. 122).
+
+
+                                              3
+    A Glossary of Cooking Methods for Meat and Poultry Items was created, to provide
+     definitions for methods used in USDA studies when cooking meats and poultry
+     prior to nutrient analysis. The Glossary is available in Appendix C.
+
+    Products such as mixed dishes, soups and breakfast cereals which are no longer
+     on the market or without current data have been removed. A complete list of
+     deleted food items can be found in the DEL_FOOD file. The format of the file is
+     given on p. 42.
+
+  Notes on Foods for Beef Products (Food Group 13, p. 62), Pork Products (Food
+     Group 10, p. 104) and Poultry Products (Food Group 05, p. 113) have been
+     updated to include new information. With SR27, Notes on Foods for Lamb, Veal
+     and Game Products (p.85) Have been added.
+
+Data Files
+The data files for SR27 are available in ASCII (ISO/IEC 8859-1) format and as a
+Microsoft Access 2007 database. A description of each field in these files and the
+relationships between each begins on p. 27. The Access database contains all the
+SR27 files and relationships, with a few sample queries and reports. An abbreviated file
+(p. 38) with fewer nutrients (46) but all the food items is also included. A Microsoft Excel
+2007 spreadsheet of this file is also provided. These database and spreadsheet files are
+generally compatible with later releases of the same software package or with other
+software packages released at the same time.
+
+Database Reports
+
+The data in SR27 are available as page images containing all the data for each food.
+These data are separated into files by food groups. Adobe Reader is needed to see
+these files. There is a link from the NDL web site to Adobe’s web site where it can be
+downloaded at no charge. Previously, reports containing selected foods and nutrients
+sorted either alphabetically or by nutrient content per household measure were
+available as PDF files. Starting with SR26, these reports are no longer available as the
+online search (http://ndb.nal.usda.gov) has been upgraded to include the ability to allow
+users to generate their own custom reports by selecting “Nutrient List” from the list of
+options. Users can select up to three nutrients from the database and generate reports
+for either all foods in SR27 or an abridged list (a shorter list of about 1,000 foods
+adapted from those in our publication: “US Department of Agriculture Home and Garden
+Bulletin 72, Nutritive Value of Foods” (Gebhardt and Thomas, 2002)). The user can
+also limit the report to a single food group or several food groups of their choosing. The
+reports can also be presented per 100 grams or per common household measure. The
+reports can be saved as either a PDF report or as a comma-delimited text file (csv),
+which can be opened in Excel or used with other programs.
+
+
+                                                4
+

@@ -1,0 +1,1402 @@
+{
+ "Edible proportion": {
+  "name": "Edible proportion",
+  "unit": "",
+  "sheet": "1.2 Factors"
+ },
+ "Specific gravity": {
+  "name": "Specific gravity",
+  "unit": "",
+  "sheet": "1.2 Factors"
+ },
+ "Total solids": {
+  "name": "Total solids",
+  "unit": "",
+  "sheet": "1.2 Factors"
+ },
+ "Nitrogen conversion factor": {
+  "name": "Nitrogen conversion factor",
+  "unit": "",
+  "sheet": "1.2 Factors"
+ },
+ "Glycerol conversion factor": {
+  "name": "Glycerol conversion factor",
+  "unit": "",
+  "sheet": "1.2 Factors"
+ },
+ "WATER": {
+  "name": "Water (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "TOTNIT": {
+  "name": "Total nitrogen (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "PROT": {
+  "name": "Protein (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "FAT": {
+  "name": "Fat (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "CHO": {
+  "name": "Carbohydrate (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "KCALS": {
+  "name": "Energy (kcal) (kcal)",
+  "unit": "kcal",
+  "sheet": "1.3 Proximates"
+ },
+ "KJ": {
+  "name": "Energy (kJ) (kJ)",
+  "unit": "kJ",
+  "sheet": "1.3 Proximates"
+ },
+ "STAR": {
+  "name": "Starch (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "OLIGO": {
+  "name": "Oligosaccharide (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "TOTSUG": {
+  "name": "Total sugars (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "GLUC": {
+  "name": "Glucose (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "GALACT": {
+  "name": "Galactose (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "FRUCT": {
+  "name": "Fructose (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "SUCR": {
+  "name": "Sucrose (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "MALT": {
+  "name": "Maltose (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "LACT": {
+  "name": "Lactose (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "ALCO": {
+  "name": "Alcohol (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "ENGFIB": {
+  "name": "NSP (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "AOACFIB": {
+  "name": "AOAC fibre (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "SATFAC": {
+  "name": "Satd FA /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "SATFOD": {
+  "name": "Satd FA /100g fd (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "TOTn6PFAC": {
+  "name": "n-6 poly /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "TOTn6PFOD": {
+  "name": "n-6 poly /100g food (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "TOTn3PFAC": {
+  "name": "n-3 poly /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "TOTn3PFOD": {
+  "name": "n-3 poly /100g food (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "MONOFACc": {
+  "name": "cis-Mono FA /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "MONOFODc": {
+  "name": "cis-Mono FA /100g Food (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "MONOFAC": {
+  "name": "Mono FA/ 100g FA (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "MONOFOD": {
+  "name": "Mono FA /100g food (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "POLYFACc": {
+  "name": "cis-Polyu FA /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "POLYFODc": {
+  "name": "cis-Poly FA /100g Food (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "POLYFAC": {
+  "name": "Poly FA /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "POLYFOD": {
+  "name": "Poly FA /100g food (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "SATFACx6": {
+  "name": "Sat FA excl Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "SATFODx6": {
+  "name": "Sat FA excl Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "TOTBRFAC": {
+  "name": "Branched chain FA /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "TOTBRFOD": {
+  "name": "Branched chain FA /100g food (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "FACTRANS": {
+  "name": "Trans FAs /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "FODTRANS": {
+  "name": "Trans FAs /100g food (g)",
+  "unit": "g",
+  "sheet": "1.3 Proximates"
+ },
+ "CHOL": {
+  "name": "Cholesterol (mg)",
+  "unit": "mg",
+  "sheet": "1.3 Proximates"
+ },
+ "NA": {
+  "name": "Sodium (mg)",
+  "unit": "mg",
+  "sheet": "1.4 Inorganics"
+ },
+ "K": {
+  "name": "Potassium (mg)",
+  "unit": "mg",
+  "sheet": "1.4 Inorganics"
+ },
+ "CA": {
+  "name": "Calcium (mg)",
+  "unit": "mg",
+  "sheet": "1.4 Inorganics"
+ },
+ "MG": {
+  "name": "Magnesium (mg)",
+  "unit": "mg",
+  "sheet": "1.4 Inorganics"
+ },
+ "P": {
+  "name": "Phosphorus (mg)",
+  "unit": "mg",
+  "sheet": "1.4 Inorganics"
+ },
+ "FE": {
+  "name": "Iron (mg)",
+  "unit": "mg",
+  "sheet": "1.4 Inorganics"
+ },
+ "CU": {
+  "name": "Copper (mg)",
+  "unit": "mg",
+  "sheet": "1.4 Inorganics"
+ },
+ "ZN": {
+  "name": "Zinc (mg)",
+  "unit": "mg",
+  "sheet": "1.4 Inorganics"
+ },
+ "CL": {
+  "name": "Chloride (mg)",
+  "unit": "mg",
+  "sheet": "1.4 Inorganics"
+ },
+ "MN": {
+  "name": "Manganese (mg)",
+  "unit": "mg",
+  "sheet": "1.4 Inorganics"
+ },
+ "SE": {
+  "name": "Selenium (µg)",
+  "unit": "µg",
+  "sheet": "1.4 Inorganics"
+ },
+ "I": {
+  "name": "Iodine (µg)",
+  "unit": "µg",
+  "sheet": "1.4 Inorganics"
+ },
+ "RET": {
+  "name": "Retinol (µg)",
+  "unit": "µg",
+  "sheet": "1.5 Vitamins"
+ },
+ "CAREQU": {
+  "name": "Carotene (µg)",
+  "unit": "µg",
+  "sheet": "1.5 Vitamins"
+ },
+ "RETEQU": {
+  "name": "Retinol Equivalent (µg)",
+  "unit": "µg",
+  "sheet": "1.5 Vitamins"
+ },
+ "VITD": {
+  "name": "Vitamin D (µg)",
+  "unit": "µg",
+  "sheet": "1.5 Vitamins"
+ },
+ "VITE": {
+  "name": "Vitamin E (mg)",
+  "unit": "mg",
+  "sheet": "1.5 Vitamins"
+ },
+ "VITK1": {
+  "name": "Vitamin K1 (µg)",
+  "unit": "µg",
+  "sheet": "1.5 Vitamins"
+ },
+ "THIA": {
+  "name": "Thiamin (mg)",
+  "unit": "mg",
+  "sheet": "1.5 Vitamins"
+ },
+ "RIBO": {
+  "name": "Riboflavin (mg)",
+  "unit": "mg",
+  "sheet": "1.5 Vitamins"
+ },
+ "NIAC": {
+  "name": "Niacin (mg)",
+  "unit": "mg",
+  "sheet": "1.5 Vitamins"
+ },
+ "TRYP60": {
+  "name": "Tryptophan/60 (mg)",
+  "unit": "mg",
+  "sheet": "1.5 Vitamins"
+ },
+ "NIACEQU": {
+  "name": "Niacin equivalent (mg)",
+  "unit": "mg",
+  "sheet": "1.5 Vitamins"
+ },
+ "VITB6": {
+  "name": "Vitamin B6 (mg)",
+  "unit": "mg",
+  "sheet": "1.5 Vitamins"
+ },
+ "VITB12": {
+  "name": "Vitamin B12 (µg)",
+  "unit": "µg",
+  "sheet": "1.5 Vitamins"
+ },
+ "FOLT": {
+  "name": "Folate (µg)",
+  "unit": "µg",
+  "sheet": "1.5 Vitamins"
+ },
+ "PANTO": {
+  "name": "Pantothenate (mg)",
+  "unit": "mg",
+  "sheet": "1.5 Vitamins"
+ },
+ "BIOT": {
+  "name": "Biotin (µg)",
+  "unit": "µg",
+  "sheet": "1.5 Vitamins"
+ },
+ "VITC": {
+  "name": "Vitamin C (mg)",
+  "unit": "mg",
+  "sheet": "1.5 Vitamins"
+ },
+ "ALTRET": {
+  "name": "All-trans-retinol (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "13CISRET": {
+  "name": "13-cis-retinol (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "DEHYRET": {
+  "name": "Dehydroretinol (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "RETALD": {
+  "name": "Retinaldehyde (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "ACAR": {
+  "name": "Alpha-carotene (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "BCAR": {
+  "name": "Beta-carotene (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "CRYPT": {
+  "name": "Cryptoxanthins (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "LUT": {
+  "name": "Lutein (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "LYCO": {
+  "name": "Lycopene (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "25OHD3": {
+  "name": "25-hydroxy vitamin D3 (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "VITD3": {
+  "name": "Cholecalciferol (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "5METHF": {
+  "name": "5-mehtyl folate (µg)",
+  "unit": "µg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "ATOPH": {
+  "name": "Alpha-tocopherol (mg)",
+  "unit": "mg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "BTOPH": {
+  "name": "Beta-tocopherol (mg)",
+  "unit": "mg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "DTOPH": {
+  "name": "Delta-tocopherol (mg)",
+  "unit": "mg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "GTOPH": {
+  "name": "Gamma-tocopherol (mg)",
+  "unit": "mg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "ATOTR": {
+  "name": "Alpha-tocotrienol (mg)",
+  "unit": "mg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "GTOTR": {
+  "name": "Gamma-tocotrienol (mg)",
+  "unit": "mg",
+  "sheet": "1.6 Vitamin Fractions"
+ },
+ "FAC4:0": {
+  "name": "C4:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC6:0": {
+  "name": "C6:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC8:0": {
+  "name": "C8:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC10:0": {
+  "name": "C10:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC11:0xb": {
+  "name": "C11:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC12:0": {
+  "name": "C12:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC12:0xb": {
+  "name": "C12:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC13:0": {
+  "name": "C13:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC13:0xb": {
+  "name": "C13:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC14:0": {
+  "name": "C14:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC14:0xb": {
+  "name": "C14:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC15:0": {
+  "name": "C15:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC15:0xb": {
+  "name": "C15:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC16:0": {
+  "name": "C16:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC16:0xb": {
+  "name": "C16:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC17:0": {
+  "name": "C17:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC17:0xb": {
+  "name": "C17:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC18:0": {
+  "name": "C18:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC18:0xb": {
+  "name": "C18:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC19:0": {
+  "name": "C19:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC20:0": {
+  "name": "C20:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC20:0xb": {
+  "name": "C20:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC22:0": {
+  "name": "C22:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC22:0xb": {
+  "name": "C22:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC24:0": {
+  "name": "C24:0 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC24:0xb": {
+  "name": "C24:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FAC25:0xb": {
+  "name": "C25:0 ex Br /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.7 (SFA per 100gFA)"
+ },
+ "FOD4:0": {
+  "name": "C4:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD6:0": {
+  "name": "C6:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD8:0": {
+  "name": "C8:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD10:0": {
+  "name": "C10:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD11:0xb": {
+  "name": "C11:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD12:0": {
+  "name": "C12:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD12:0xb": {
+  "name": "C12:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD13:0": {
+  "name": "C13:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD13:0xb": {
+  "name": "C13:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD14:0": {
+  "name": "C14:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD14:0xb": {
+  "name": "C14:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD15:0": {
+  "name": "C15:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD15:0xb": {
+  "name": "C15:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD16:0": {
+  "name": "C16:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD16:0xb": {
+  "name": "C16:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD17:0": {
+  "name": "C17:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD17:0xb": {
+  "name": "C17:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD18:0": {
+  "name": "C18:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD18:0xb": {
+  "name": "C18:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD19:0": {
+  "name": "C19:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD20:0": {
+  "name": "C20:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD20:0xb": {
+  "name": "C20:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD22:0": {
+  "name": "C22:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD22:0xb": {
+  "name": "C22:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD24:0": {
+  "name": "C24:0 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD24:0xb": {
+  "name": "C24:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FOD25:0xb": {
+  "name": "C25:0 ex Br /100g food (g)",
+  "unit": "g",
+  "sheet": "1.8 (SFA per 100gFood)"
+ },
+ "FAC10:1": {
+  "name": "C10:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC10:1c": {
+  "name": "cis C10:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC12:1": {
+  "name": "C12:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC12:1c": {
+  "name": "cis C12:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC14:1": {
+  "name": "C14:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC14:1c": {
+  "name": "cis C14:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC15:1": {
+  "name": "C15:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC15:1c": {
+  "name": "cis C15:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC16:1": {
+  "name": "C16:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC16:1c": {
+  "name": "cis C16:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC17:1": {
+  "name": "C17:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC17:1c": {
+  "name": "cis C17:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC18:1": {
+  "name": "C18:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC18:1c": {
+  "name": "cis C18:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC18:1n9": {
+  "name": "cis/trans C18:1n-9 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC18:1n7": {
+  "name": "cis/trans C18:1n-7 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC20:1": {
+  "name": "C20:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC20:1c": {
+  "name": "cis C20:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC22:1": {
+  "name": "C22:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC22:1c": {
+  "name": "cis C22:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC22:1n11": {
+  "name": "cis/trans C22:1n-11 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC22:1n9": {
+  "name": "cis/trans C22:1n-9 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC24:1": {
+  "name": "C24:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FAC24:1c": {
+  "name": "cis C24:1 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "MONOFACtr": {
+  "name": "trans monounsaturated /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.9 (MUFA per 100FA)"
+ },
+ "FOD10:1": {
+  "name": "C10:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD10:1c": {
+  "name": "cis C10:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD12:1": {
+  "name": "C12:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD12:1c": {
+  "name": "cis C12:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD14:1": {
+  "name": "C14:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD14:1c": {
+  "name": "cis C14:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD15:1": {
+  "name": "C15:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD15:1c": {
+  "name": "cis C15:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD16:1": {
+  "name": "C16:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD16:1c": {
+  "name": "cis C16:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD17:1": {
+  "name": "C17:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD17:1c": {
+  "name": "cis C17:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD18:1": {
+  "name": "C18:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD18:1c": {
+  "name": "cis C18:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD18:1n9": {
+  "name": "cis/trans C18:1n-9 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD18:1n7": {
+  "name": "cis/trans C18:1n-7 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD20:1": {
+  "name": "C20:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD20:1c": {
+  "name": "cis C20:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD22:1": {
+  "name": "C22:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD22:1c": {
+  "name": "cis C22:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD22:1n11": {
+  "name": "cis/trans C22:1n-11 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD22:1n9": {
+  "name": "cis/trans C22:1n-9 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD24:1": {
+  "name": "C24:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FOD24:1c": {
+  "name": "cis C24:1 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "MONOFODtr": {
+  "name": "trans monounsaturated /100g food (g)",
+  "unit": "g",
+  "sheet": "1.10 (MUFA per 100gFood)"
+ },
+ "FAC16:2": {
+  "name": "C16:2 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC16:2c": {
+  "name": "cis C16:2 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC16:3c": {
+  "name": "cis C16:3 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC16:4": {
+  "name": "C16:4 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC16:4c": {
+  "name": "cis C16:4 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC16 poly": {
+  "name": "unknown C16 poly /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC18:2": {
+  "name": "C18:2 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC18:2cn6": {
+  "name": "cis n-6 C18:2 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC18:3": {
+  "name": "C18:3 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC18:3cn3": {
+  "name": "cis n-3 C18:3 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC18:3cn6": {
+  "name": "cis n-6 C18:3 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC18:4": {
+  "name": "C18:4 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC18:4cn3": {
+  "name": "cis n-3 C18:4 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC18 poly": {
+  "name": "unknown C18 poly /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC20:2": {
+  "name": "C20:2 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC20:2cn6": {
+  "name": "cis n-6 C20:2 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC20:3": {
+  "name": "C20:3 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC20:3cn6": {
+  "name": "cis n-6 C20:3 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC20:4": {
+  "name": "C20:4 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC20:4cn6": {
+  "name": "cis n-6 C20:4 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC20:5": {
+  "name": "C20:5 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC20:5cn3": {
+  "name": "cis n-3 C20:5 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC20 poly": {
+  "name": "unknown C20 poly /100 FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC21:5": {
+  "name": "C21:5 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC21:5cn3": {
+  "name": "cis n-3 C21:5 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC22:2": {
+  "name": "C22:2 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC22:2cn6": {
+  "name": "cis n-6 C22:2 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC22:3cn6": {
+  "name": "cis n-6 C22:3 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC22:4": {
+  "name": "C22:4 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC22:4cn6": {
+  "name": "cis n-6 C22:4 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC22:5": {
+  "name": "C22:5 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC22:5cn3": {
+  "name": "cis n-3 C22:5 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC22:6": {
+  "name": "C22:6 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC22:6cn3": {
+  "name": "cis n-3 C22:6 /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FAC22 poly": {
+  "name": "unknown C22 poly /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "POLYFACtr": {
+  "name": "trans poly /100g FA (g)",
+  "unit": "g",
+  "sheet": "1.11 (PUFA per 100gFA)"
+ },
+ "FOD16:2": {
+  "name": "C16:2 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD16:2c": {
+  "name": "cis C16:2 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD16:3": {
+  "name": "C16:3 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD16:4": {
+  "name": "C16:4 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD16:4c": {
+  "name": "cis C16:4 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD16 poly": {
+  "name": "unknown C16 poly /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD18:2": {
+  "name": "C18:2 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD18:2cn6": {
+  "name": "cis n-6 C18:2 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD18:3": {
+  "name": "C18:3 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD18:3cn3": {
+  "name": "cis n-3 C18:3 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD18:3cn6": {
+  "name": "cis n-6 C18:3 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD18:4": {
+  "name": "C18:4 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD18:4cn3": {
+  "name": "cis n-3 C18:4 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD18 poly": {
+  "name": "unknown C18 poly /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD20:2": {
+  "name": "C20:2 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD20:2cn6": {
+  "name": "cis n-6 C20:2 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD20:3": {
+  "name": "C20:3 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD20:3cn6": {
+  "name": "cis n-6 C20:3 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD20:4": {
+  "name": "C20:4 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD20:4cn6": {
+  "name": "cis n-6 C20:4 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD20:5": {
+  "name": "C20:5 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD20:5cn3": {
+  "name": "cis n-3 C20:5 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD20 poly": {
+  "name": "unknown C20 poly /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD21:5": {
+  "name": "C21:5 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD21:5cn3": {
+  "name": "cis n-3 C21:5 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD22:2": {
+  "name": "C22:2 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD22:2cn6": {
+  "name": "cis n-6 C22:2 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD22:3cn6": {
+  "name": "cis n-6 C22:3 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD22:4": {
+  "name": "C22:4 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD22:4cn6": {
+  "name": "cis n-6 C22:4 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD22:5": {
+  "name": "C22:5 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD22:5cn3": {
+  "name": "cis n-3 C22:5 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD22:6": {
+  "name": "C22:6 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD22:6cn3": {
+  "name": "cis n-3 C22:6 /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "FOD22 poly": {
+  "name": "unknown C22 poly /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "POLYFODtr": {
+  "name": "trans poly /100g food (g)",
+  "unit": "g",
+  "sheet": "1.12 (PUFA per 100gFood)"
+ },
+ "Total PHYTO": {
+  "name": "Total Phytosterols (mg)",
+  "unit": "mg",
+  "sheet": "1.13 Phytosterols"
+ },
+ "Other CHOL and PHYTO": {
+  "name": "Other Cholesterol and Phytosterols (mg)",
+  "unit": "mg",
+  "sheet": "1.13 Phytosterols"
+ },
+ "PHYTO": {
+  "name": "Phytosterol (mg)",
+  "unit": "mg",
+  "sheet": "1.13 Phytosterols"
+ },
+ "BSITPHYTO": {
+  "name": "Beta-sitosterol (mg)",
+  "unit": "mg",
+  "sheet": "1.13 Phytosterols"
+ },
+ "BRASPHYTO": {
+  "name": "Brassicasterol (mg)",
+  "unit": "mg",
+  "sheet": "1.13 Phytosterols"
+ },
+ "CAMPHYTO": {
+  "name": "Campesterol (mg)",
+  "unit": "mg",
+  "sheet": "1.13 Phytosterols"
+ },
+ "D5AVEN": {
+  "name": "Delta-5-avenasterol (mg)",
+  "unit": "mg",
+  "sheet": "1.13 Phytosterols"
+ },
+ "D7AVEN": {
+  "name": "Delta-7-avenasterol (mg)",
+  "unit": "mg",
+  "sheet": "1.13 Phytosterols"
+ },
+ "D7STIG": {
+  "name": "Delta-7-stigmastenol (mg)",
+  "unit": "mg",
+  "sheet": "1.13 Phytosterols"
+ },
+ "STIGPHYTO": {
+  "name": "Stigmasterol (mg)",
+  "unit": "mg",
+  "sheet": "1.13 Phytosterols"
+ },
+ "CITA": {
+  "name": "Citric acid (g)",
+  "unit": "g",
+  "sheet": "1.14 Organic Acids"
+ },
+ "MALA": {
+  "name": "Malic acid (g)",
+  "unit": "g",
+  "sheet": "1.14 Organic Acids"
+ }
+}

@@ -1,0 +1,453 @@
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Calculated using the conversion factors: protein 17 kJ/g, fat 37 kJ/g, carbohydrate
+(available, expressed as monosaccharides) 16 kJ/g and alcohol 29 kJ/g.
+
+Starch (STAR)
+Includes dextrins but excludes resistant starch. Expressed as monosaccharide
+equivalents.
+
+Oligosaccharides (OLIGO)
+Expressed as monosaccharide equivalents. Any known or measured contribution from
+oligosaccharides and/or maltodextrins has been included in the total carbohydrate value
+but not in the columns for starch or total sugars. In most foods oligosaccharides are
+present in relatively low quantities. In vegetables and some processed foods where
+glucose syrups and maltodextrins are added, oligosaccharides will make a significant
+contribution to carbohydrate content. Where oligosaccharides are present in foods, they
+are not always measured separately and may be included in the starch, sugar or fibre
+fractions, depending on the nature of the oligosaccharide and on the analytical methods
+used.
+
+Total sugars (TOTSUG)
+Sugars are expressed as monosaccharide equivalents and include free monosaccharides
+(glucose, fructose and galactose) and disaccharides (sucrose, maltose and lactose). The
+value does not include any contribution from oligosaccharides present in the food.
+
+Alcohol (ALCO)
+Values are given as g/100 ml. Pure ethyl alcohol has a specific gravity of 0.79, dividing
+values by 0.79 converts them to alcohol by volume (ml/100 ml).
+
+NSP (ENGFIB)
+Non-starch polysaccharides (2) includes insoluble fibre (cellulose, insoluble non-cellulosic
+polysaccharides) and soluble fibre (soluble cellulosic polysaccharides).
+
+AOAC fibre (AOACFIB)
+AOAC determinations (3) include resistant starch and lignin in the estimation of total fibre,
+rather than only the non-starch polysaccharides.
+
+Fatty acids
+Values for total saturated (SATFOD), monounsaturated (MONOFOD), polyunsaturated
+(POLYFOD) and trans fatty acids (FODTRANS) are given as well as values for branched
+chain saturated fatty acids (TOTBRFOD), cis-monounsaturated (MONOFODc) and cis-
+polyunsaturated fatty acids (POLYFODc). Trans fatty acids are also included in total
+monounsaturated and total polyunsaturated fatty acids. For food labelling purposes trans
+fats are not included in the values for monounsaturated and polyunsaturated fats. Values
+for total fatty acids are expressed as both g/100g food and also g/100g fatty acid methyl
+esters. The fat in most foods contains non-fatty acid material such as phospholipids and
+
+
+                                                  11
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+sterols and to allow the calculation of the total fatty acids in a given weight of food, the
+glycerol conversion factors given in the ‘Factors’ worksheet were applied.
+
+Cholesterol (CHOL)
+Values are expressed as mg/100g food. To convert to mmol cholesterol, divide the values
+by 386.6.
+
+
+Inorganics worksheet
+Values for are given for:
+
+Sodium (NA)
+Potassium (K)
+Calcium (CA)
+Magnesium (MG)
+Phosphorus (P)
+Iron (FE)
+Copper (CU)
+Zinc (ZN)
+Chloride (CL)
+Selenium (SE)
+Iodine (I)
+
+
+Vitamins worksheet
+Fat-soluble vitamins
+The 2 components of vitamin A are given separately as Retinol (RET) and Carotene
+(CAREQU).
+
+Retinol (RET)
+Retinol (RET) is expressed as the weight of all-trans-retinol equivalent, that is, the sum of
+all-trans-retinol plus contributions from the other forms after correction to account for their
+relative activities (4). Where the retinol profile was incomplete, because values for 13-cis
+retinol and/or retinaldehyde were not available, it has been assumed that only all-trans
+retinol is present, leading to a possible underestimate in some cases.
+
+Carotene (CAREQU)
+Represents the β-carotene activity and is the sum of the β-carotene and half of any α-
+carotene or cryptoxanthins present. Where the carotenoid profile was incomplete, because
+only values for β-carotene were available, it has been assumed that only β-carotene is
+present. This may result in an underestimate of β-carotene equivalents, but as α-carotene
+and cryptoxanthin are usually present in low levels in foods without complete carotenoid
+profiles, it is likely that any error is small.
+
+                                                  12
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+
+Total retinol equivalent (RETEQU)
+The generally accepted relationship is that 6 µg β-carotene or 12 µg of other active
+carotenoids are equivalent to 1 µg of retinol (5), that is:
+
+       Vitamin A potency as = µg retinol + µg β-carotene equivalent
+       retinol equivalent                            6
+
+Vitamin D (VITD)
+Few foods contain vitamin D from intrinsic sources. All those which contain vitamin D
+naturally are products of animal origin and contain D3 (cholecalciferol) derived, as in
+humans, from the action of sunlight on the animal’s skin or from its own food. Vitamin D2
+(ergocalciferol) made commercially has the same potency as D3 in man. Vitamin D2 and
+vitamin D3 are both used to fortify a number of foods.
+
+Meat can contain vitamin D3 (cholecalciferol) derived from the action of sunlight or, for pigs
+and poultry, from the feed. Vitamin D3 in meat may also be present in the form of the more
+active 25-hydroxy vitamin D3. For meat, meat products, and poultry, therefore, the total
+vitamin D activity has been taken as the sum of vitamin D3 (cholecalciferol) and 5 times
+25-hydroxy vitamin D3 (25-hydroxy cholecalciferol), where data are available.
+
+Vitamin E (α-tocopherol equivalent) (VITE)
+Values take into account vitamin E activity using conversion factors (6) and are expressed
+as α-tocopherol equivalents.
+
+Vitamin K1 (VITK1)
+Phylloquinone, the predominant, naturally-occurring, vitamin K in foods.
+
+Water-soluble vitamins
+Thiamin (THIA)
+Values are expressed as thiamine chloride hydrochloride.
+
+Niacin (NIAC)
+Values are the sum of nicotinic acid and nicotinamide.
+
+Tryptophan/60 (TRYP60)
+Potential nicotinic acid from the amino acid tryptophan, calculated as tryptophan divided by
+60.
+
+Vitamin B6 (VITB6)
+Values are expressed as pyridoxine hydrochloride by microbiological assay, or the sum of
+the individual forms by HPLC, and expressed as the sum of the total pyridoxine
+hydrochloride, pyridoxal hydrochloride and pyridoxamine dihydrochloride.
+
+
+
+                                                  13
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Folate (FOLT)
+Values are expressed as total folates measured after deconjugation of the polyglutamyl
+forms.
+
+Pantothenate (PANTO)
+Values are expressed as calcium D-pantothenate.
+
+Vitamin C (VITC)
+Values include ascorbic acid and dehydroascorbic acids.
+
+
+Vitamin fractions worksheet
+Values are given for some foods for vitamers that contribute to retinol equivalents (all-trans
+retinol, 13-cis-retinol, dehydroretinol and retinaldehyde), carotene equivalents (alpha-
+carotene, beta-carotene and beta-cryptoxanthins), vitamin D (cholecalciferol and 25-
+hydroxy-vitamin D3) and vitamin E equivalents (alpha, beta, gamma and delta tocopherol
+and alpha, beta, gamma and delta tocotrienols). In addition, there are some values for
+lutein, lycopene and 5-methyl folate.
+
+FATTY ACID worksheets
+Worksheets are given containing values for individual fatty acid isomers where these are
+available. There are worksheets for saturated fatty acids, monounsaturated fatty acids and
+polyunsaturated fatty acids. Values for total fatty acids are expressed as both g/100g food
+and also g/100g fatty acid methyl esters. The fat in most foods contains non-fatty acid
+material such as phospholipids and sterols and to allow the calculation of the total fatty
+acids in a given weight of food, the glycerol conversion factors given in the ‘Factors’
+worksheet were applied.
+
+PHYTOSTEROL worksheet
+Values are given for some foods for a range of phytosterols including beta-sitosterol,
+brassicasterol, campesterol, delta-5-avenasterol, delta-7-avenasterol, delta-7-stigmastenol
+and stigmasterol.
+
+ORGANIC ACIDS worksheet
+Values are given for a few foods for citric acid and malic acid.
+
+
+
+
+                                                  14
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+
+Food labelling
+Nutrition information is increasingly being provided on food labels and the nutrition
+declaration (‘back of pack’ labelling) has been mandatory on the majority of pre-packed
+foods since 2016. Values from CoFID may be used to calculate label data.
+
+Food information regulations retained Regulation (EU) No. 1169/2011 brought rules on
+general and nutrition labelling together into a single regulation (replacing the previous food
+labelling regulations). Under the regulations (available at:
+retained Regulation (EU) No 1169/2011, ‘back of pack’ nutrition labelling became
+mandatory for the majority of pre-packed foods from 13 December 2016.
+
+The mandatory declaration comprises:
+
+energy (kJ, kcal)
+fat
+saturates
+carbohydrate
+sugars
+protein
+salt
+
+Salt is calculated as total sodium content multiplied by 2.5. Supplementary information on
+other nutrients listed in the Regulation can be provided on a voluntary basis. The
+additional listed nutrients are: monounsaturates; polyunsaturates; polyols; starch; fibre;
+and specified minerals and vitamins, present in significant amounts (as defined in the
+Regulation). If a claim is made for any of these nutrients, or if minerals and/or vitamins are
+added to a food, then the amount of the respective nutrient(s) must be declared in addition
+to the mandatory declaration outlined above.
+
+Declared values for nutrients should be average values derived using one or more of the
+following methods:
+
+• manufacturer’s analysis of food
+• a calculation from the known or actual average values of the ingredients used in the
+  preparation of the food
+• a calculation from generally established and accepted data.
+
+Generally established and accepted data for the UK include values published in CoFID, if
+the product or its ingredients are similar to those described. Nevertheless, it is important to
+note the following differences:
+
+
+
+
+                                                  15
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+• protein should be given as total nitrogen x 6.25 for every food, whereas more specific
+  factors have been used in CoFID
+• carbohydrate is to be declared as the weight of the carbohydrates themselves and not
+  their monosaccharide equivalents.
+
+The following factors may be used to convert monosaccharide equivalents from this edition
+to actual weights:
+
+  Total carbohydrate                  Divide by 1.05 (unless it is known to be mainly
+                                      starch or mainly oligosaccharide)
+  Starch                              Divide by 1.10
+  Sucrose and lactose                 Divide by 1.05
+  Glucose, etc.                       As given
+
+
+Different factors are to be used to calculate energy values and are shown below:
+
+                                                          kcal/g            kJ/g
+
+Carbohydrate (except polyols), expressed as               4                 17
+weight
+Polyols                                                   2.4               10
+Protein                                                   4                 17
+Fat                                                       9                 37
+Salatrims                                                 6                 25
+Alcohol (ethanol)                                         7                 29
+Organic acid                                              3                 13
+Fibre                                                     2                 8
+Erythritol                                                0                 0
+
+
+‘Front of pack’ nutrition labelling
+Retained Regulation (EU) No. 1169/2011 allows elements of the mandatory nutrition
+declaration which are of importance to public health to be repeated on the ‘front of pack’ in
+one of the following formats:
+
+• energy value alone
+• energy value plus amounts of fat, saturates, sugars and salt.
+
+
+
+                                                  16
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+You can read guidance on providing ‘front of pack’ labelling in line with UK government
+2013 recommendation.
+
+
+Tolerances for nutrient values declared on a label
+It is widely recognised that it is not possible for foods to always contain the exact quantity
+of nutrients declared on the label, owing to natural variation, and variations during food
+production and storage. However, in order to avoid consumers being misled, it is important
+that the deviation from declared values should be minimal. The Department of Heath and
+Social Care have produced a Technical guidance on nutrition labelling which contains
+information on tolerances, that is, the acceptable differences between the nutrient values
+declared on a label and those established in the course of official controls by enforcement
+authorities.This content is based on a guidance document produced by the European
+Commission which contains additional information.
+
+
+
+
+                                                  17
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+
+Appendices
+Appendix A: Main data references
+Publications in 'The Composition of Foods' series
+McCance, R.A. and Widdowson, E.M. (1960) The Composition of Foods, 3rd edition. Her
+Majesty's Stationery Office, London
+Paul, A.A. and Southgate, D.A.T. (1978) McCance and Widdowson's The Composition of
+Foods, 4th edition. Her Majesty's Stationery Office, London
+Holland, B., Unwin, I.D. and Buss, D.H. (1988) Cereals and Cereal Products. Third
+supplement to 4th edition of McCance and Widdowson’s The Composition of Foods. The
+Royal Society of Chemistry, Nottingham
+Holland, B., Unwin, I.D. and Buss, D.H. (1989) Milk Products and Eggs. Fourth
+supplement to 4th edition of McCance and Widdowson’s The Composition of Foods. The
+Royal Society of Chemistry, Cambridge
+Holland, B., Unwin, I.D. and Buss, D.H. (1991) Vegetables, Herbs and Spices. Fifth
+supplement to 4th edition of McCance and Widdowson’s The Composition of Foods. The
+Royal Society of Chemistry, Cambridge
+Holland, B., Welch, A.A., Unwin, I.D., Buss, D.H., Paul, A.A. and Southgate, D.A.T. (1991)
+McCance and Widdowson’s The Composition of Foods, 5th edition. The Royal Society of
+Chemistry, Cambridge
+Holland, B., Unwin, I.D. and Buss, D.H. (1992) Fruit and Nuts. First supplement to 5th
+edition of McCance and Widdowson’s The Composition of Foods. The Royal Society of
+Chemistry, Cambridge
+Holland, B., Welch, A.A. and Buss, D.H. (1992) Vegetable Dishes. Second supplement to
+5th edition of McCance and Widdowson’s The Composition of Foods. The Royal Society of
+Chemistry, Cambridge
+Holland, B., Brown, J. and Buss, D.H. (1993) Fish and Fish Products. Third supplement to
+5th edition of McCance and Widdowson’s The Composition of Foods. The Royal Society of
+Chemistry, Cambridge
+Chan, W., Brown, J. and Buss, D.H. (1994) Miscellaneous Foods. Fourth supplement to
+5th edition of McCance and Widdowson’s The Composition of Foods. The Royal Society of
+Chemistry, Cambridge
+Chan, W., Brown, J., Lee, S.M. and Buss, D.H. (1995) Meat, Poultry and Game. Fifth
+supplement to 5th edition of McCance and Widdowson’s The Composition of Foods. The
+Royal Society of Chemistry, Cambridge
+Chan, W., Brown, J., Church, S.M. and Buss, D.H. (1996) Meat Products and Dishes.
+Sixth supplement to 5th edition of McCance and Widdowson’s The Composition of Foods.
+The Royal Society of Chemistry, Cambridge
+
+
+
+                                                  18
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Ministry of Agriculture, Fisheries and Food. (1998) Fatty Acids. Seventh supplement to 5th
+edition of McCance and Widdowson’s The Composition of Foods. The Royal Society of
+Chemistry, Cambridge.
+Food Standards Agency (2002) McCance and Widdowson's The Composition of Foods,
+6th summary edition. The Royal Society of Chemistry, Cambridge
+Finglas P.M, Roe M.A., Pinchen H.M, Berry R., Church S.M., Dodhia S.K., Farron-Wilson
+M. and Swan G. (2015) McCance and Widdowson's The Composition of Foods, Seventh
+summary edition. The Royal Society of Chemistry, Cambridge
+Composition of Foods Integrated Dataset (2008)
+http://tna.europarchive.org/20110116113217/http://www.food.gov.uk/science/dietarysurvey
+s/dietsurveys/
+Composition of Foods Integrated Dataset (2015)
+Composition of Foods Integrated Dataset (2019)
+Composition of foods integrated dataset (CoFID)
+
+Analytical reports
+Laboratory of the Government Chemist (1982-1983) Carcase meat and offal survey
+Laboratory of the Government Chemist (1983-1984) Alcoholic beverages, soft drinks and
+tea and coffee survey
+Laboratory of the Government Chemist (1983-1984) Poultry and game surveys
+Laboratory of the Government Chemist (1984) The nutritional composition of fruit juice
+Institute of Food Research (1984-1987) The nutritional composition of retail vegetables in
+the UK
+Laboratory of the Government Chemist (1985) Canned and other processed vegetable
+products survey
+Laboratory of the Government Chemist (1985) Frozen vegetable survey
+Laboratory of the Government Chemist (1985-1986) Nutritional composition of fruit
+products
+Laboratory of the Government Chemist (1985-1986) Nutritional composition of fresh fruit
+Laboratory of the Government Chemist (1986-1987) Fish and fish products
+Laboratory of the Government Chemist (1989) Dairy products and eggs
+Laboratory of the Government Chemist (1989-1990) Fruit and vegetables
+Laboratory of the Government Chemist (1990-1991) Analytical survey of meat products
+Laboratory of the Government Chemist (1992) Analytical survey of confectionery items
+Laboratory of the Government Chemist (1992) Nutritional analysis of foods for pre-school
+children
+Leatherhead Food R.A. (1992) Nutrient analysis of miscellaneous foods
+Laboratory of the Government Chemist (1992-1993) Nutrient analysis of carcase beef
+Laboratory of the Government Chemist (1992-1993) Nutrient analysis of retail cuts of pork
+Leatherhead Food R.A. (1993) Nutritional analysis of soft drinks
+
+                                                  19
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Laboratory of the Government Chemist (1993) Survey of the Nutritional Composition of
+savoury snacks and nuts
+RHM Research and Engineering Ltd (1993) Fatty acids in foods
+Laboratory of the Government Chemist (1993-1994) Nutrient analysis of retail cuts of
+bacon
+Laboratory of the Government Chemist (1993-1994) Nutrient analysis of retail cuts of lamb
+Laboratory of the Government Chemist (1994) Analysis of assorted foods
+Laboratory of the Government Chemist (1994) Nutrient analysis of foods important in
+elderly people
+Laboratory of the Government Chemist (1994-1995) Nutrient analysis of chicken and
+turkey
+Laboratory of the Government Chemist (1994-1995) Nutritional analysis of meat and
+poultry products
+Laboratory of the Government Chemist (1995) Added folic acid in supplements and
+fortified foods
+Laboratory of the Government Chemist (1995) Nutrient analysis of foods commonly
+consumed by schoolchildren
+RHM Technology (1995) Nutrient analysis of pizzas
+RHM Technology (1995) Nutrient analysis of selected foods
+ADAS Laboratory Services (1995-1996) Nutrient analysis of pasteurised liquid milk
+Laboratory of the Government Chemist (1996) Individual folates in foodstuffs
+Aspland and James Ltd (1997) Nutrient analysis of ethnic takeaway foods
+Laboratory of the Government Chemist (1997) Determination of 25-OH vitamin D in
+selected foodstuffs
+Laboratory of the Government Chemist (1997) Determination of cis carotenoids in
+foodstuffs
+Laboratory of the Government Chemist (1997) The determination of different forms of iron
+in foodstuffs
+RHM Technology (1997) Nutrient analysis of manufactured foods for vegetarians
+Laboratory of Government Chemist (1998) Nutrient analysis of ‘other’ milk and cream
+Campden and Chorleywood Food Research Association (1998) Nutrient analysis of
+yoghurts, fromage frais and chilled desserts
+Laboratory of the Government Chemist (1999) Nutrient analysis of bread and morning
+goods
+Laboratory of the Government Chemist (1999) Nutrient analysis of cheese
+ADAS Laboratories (1999) Nutrient analysis of ice creams and desserts
+Campden and Chorleywood Food Research Association (2003) Programme of mini-
+surveys: survey of sausages
+Direct Laboratories (2003) Nutrient analysis catch up project
+Laboratory of the Government Chemist (2004) Nutrient analysis of pasta and pasta sauces
+
+                                                  20
+

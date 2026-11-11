@@ -1,0 +1,439 @@
+Food energy is expressed in terms of both kilocalories and kilojoules and represents the
+physiological energy value remaining after losses in digestion and metabolism have
+been deducted. (One kilocalorie equals 4.184 kilojoules). A broader discussion on
+energy and calorie factors used in SR can be found under “Food Description” file in the
+documentation.
+
+The specific calorie factors used for calculating energy values in pork products are:
+
+                              Kcal/g
+Protein .................... 4.27
+Fat .......................... 9.02
+Carbohydrate ......... 3.87
+
+The carbohydrate factor of 3.87 is used for estimating energy values for some organ
+meats and some cured products. The factors are based on the Atwater system for
+determining energy values. Details of the derivation of these factors are outlined in
+Agriculture Handbook No. 74 (1973). Because the level of carbohydrate in separable
+lean and separable fat is insignificant, no carbohydrate factor is needed for these
+products.
+
+Description of Projects
+
+A series of projects have been conducted to update the pork cuts in the USDA National
+Nutrient Database for Standard Reference (SR). The studies documented in these
+notes on pork represent only data collected since 2005. These projects are described in
+detail below:
+
+Natural Fresh Pork Cuts
+
+Nutrient composition data for fresh pork products in the SR had not been updated since
+1991. Since that time, changes in animal husbandry practices and industry procedures
+led to the availability of leaner cuts. In order to provide up-to-date nutrient information
+on fresh pork products in SR, the NDL, in collaboration with scientists at the University
+of Wisconsin and the National Pork Board, conducted a study to determine the nutrient
+composition of nine (9) fresh pork cuts. This study was funded in part by the National
+Pork Board. The cuts chosen for evaluation were bone-in shoulder blade steak,
+boneless tenderloin roast, boneless top loin chop, boneless top loin roast, bone-in
+sirloin roast, bone-in center loin chop, bone-in center rib chop, bone-in country-style
+ribs, and bone-in spare ribs. Data from this project were disseminated in a separate
+report on the NDL web site titled “The Revised USDA Nutrient Data for Fresh Pork” in
+2006 and were later incorporated in SR20 (2007). New data obtained to update existing
+data for pork top loin chops, raw and cooked (broiled), are disseminated in SR
+27(2014).
+
+Sampling: Nine fresh pork cuts were pre-ordered and purchased from 12 retail outlets
+using the nationwide sampling plan developed for NFNAP (Perry et al., 2003) and
+                                              105
+shipped frozen to the University of Wisconsin for trimming and preparation. Products
+from each location were assigned randomly to either raw or cooked preparation. For
+roasts and spare ribs, each roast or rack of ribs was randomly assigned to either raw or
+cooked preparation.
+
+Preparation - Cooking procedures:
+
+Broiling (Center Loin Chops, Center Rib Chops, Top Loin Chops). Chops were grilled
+on a pre-heated George Foreman™ Indoor/Outdoor Electric Barbeque Grill for 10
+minutes, setting “4”. External fat thickness and chop thickness were measured prior to
+cooking; weights of raw cuts were obtained. Two (2) thermocouples were placed into
+one (1) or two (2) chops, as needed. Chops were turned over when the internal
+temperature reached 100o-105oF (38-41C). Chops were removed from the grill to
+attain a final internal temperature of 160oF/71C (chops were taken off the grill at
+approximately 155oF/68C internal temperature). Chops were cooled on a wire rack for
+5 minutes and the highest internal temperature attained during the standing period was
+recorded. After standing for 5 minutes, chops were re-weighed.
+
+Roasting (Top Loin, Tenderloin, and Sirloin Roasts). Oven was pre-heated to
+325oF/163C (425oF/218C for tenderloin roast). Top loin, tenderloin, and sirloin roasts
+were weighed raw, and placed on a rack in a pan for cooking. Top loin roasts (boneless)
+were roasted as “single” loin roasts (one loin muscle only). If the purchased product
+was “double top loin roast (boneless)”, i.e. two single top loin roasts backed and tied
+together, the strings were removed, and each half of the double top loin roast was
+processed as a single top loin roast. Roasts were cooked uncovered. An oven-durable
+meat thermometer was placed into the geometric center of the roast. Roasts were
+removed when they achieved an internal temperature of ~150oF/65C; the target final
+internal temperature was approximately 160oF/71C. Roasts were allowed to stand 15
+minutes; the final internal temperature was determined during this period. The cooked
+weight of the roast was obtained and the cooking yield calculated.
+
+Roasting (Spareribs). The oven was pre-heated to 325oF/163C. No external fat
+measurements were collected, but any gross physical fat (loosely attached) from the
+raw ribs were removed before cooking. The raw weight of the spareribs was obtained.
+The number of ribs in the product being cooked was recorded. Spareribs were placed
+on a rack in a pan, but were not covered during cooking. Ribs were roasted for 1 hour
+and 45 minutes. Ribs were then removed from the oven; the temperature in the
+intercostal muscles was immediately taken. Ribs were cooled for 10 minutes, and then
+re-weighed. When cool enough to process, edible lean was separated from
+bone/cartilage. Trimmable fat and connective tissue are not an issue in cooked ribs,
+since it is assumed that, with this product, all soft tissues are consumed.
+
+Braising (Shoulder Blade Steaks and Country-Style Ribs). Oven was pre-heated to
+325oF/163C. The raw blade steaks and/or country-style ribs were weighed. The
+thickness of the external fat around the outer surface of the cuts was measured. Blade
+                                             106
+steaks or country-style ribs were placed on a rack in a roasting pan. Distilled water (100
+ml) was added to the roasting pan, which was covered tightly and placed in the center
+of the oven. Cooking time was determined from initial trials. Initial cooking time
+estimates were: 45 minutes for blade steaks; 1 hour and 15 minutes for country-style
+ribs. The internal temperature was determined with an electronic digital thermometer.
+Steaks and/or ribs were allowed to cool for 5 minutes and then re-weighed and the
+weight was recorded.
+
+Sample preparation - raw and cooked products:
+
+Measurement of external trim (separable) fat. For all chops, blade steaks, and
+country-style ribs, external fat at the 1/4”, 1/2” and 3/4” points along the external fat
+surface of the product were measured in millimeters. External fat thickness was
+measured at each of these points. For top loin and sirloin roasts, fat thickness
+measurements were taken over the center of the exposed fat at the 1/4”, 1/2” and 3/4”
+points along the length of the roast. External fat measurements were not determined on
+tenderloin roast or spareribs.
+
+Separation of lean meat, separable fat, connective tissue, and bone. Dissection of
+pork cuts was performed from the perspective of a “careful consumer”, who
+conscientiously separates these tissues. The most difficult separation is between the
+trimmable (separable) fat and connective tissue, which lies in the “seams” between
+muscles. The separation was accomplished by “scraping” the co-mingled tissues with a
+knife blade, such that the soft fat was separated from the tougher, stringy connective
+tissue. Separable lean tissue should be relatively free of trimmable fat, while the
+trimmable fat should be reasonably free of connective tissue.
+
+Separable lean meat, separable fat, and connective tissue were removed from bones as
+cleanly as possible. Separable fat (i.e., external trim fat and seam fat), bone, and
+connective tissue were removed from raw and cooked products and weighed to
+determine the relative amounts of separable fat and separable lean meat. Component
+weights (i.e., weights of separable lean, separable fat, bone, and connective tissue)
+were reported in SR; weights of connective tissue and bone were combined and
+reported as “refuse”. For food items listed “lean only”, the separable fat associated with
+that cut is considered “refuse”; for food items listed “lean and fat”, the separable fat is
+considered edible and contributes to the nutrient profile.
+
+Sample composites and nutrient analyses:
+Shoulder blade steak, tenderloin roast, and top loin chops. Shoulder blade steak,
+tenderloin roast, and top loin chops represent different areas of the pig and are most
+commonly cooked by grilling, roasting, and braising, respectively. For purposes of this
+study, these were referred to as the primary cuts since complete nutrient profiles were
+obtained for both the raw and cooked preparations of these cuts. For each cut, the lean
+tissue cuts purchased from an individual location were combined into individual
+composites for homogenization and nutrient analysis; for some nutrients (proximates,
+                                              107
+minerals, cholesterol, thiamin, niacin, and riboflavin), the number of observations (n) =
+12. For pantothenic acid, vitamin B6, and vitamin B12, samples from the three locations
+were combined to form regional composites (n = 4). One of these composites was
+randomly chosen and analyzed for retinol (Vitamin A); n = 1. Separable fat from all cuts
+were combined to form raw and cooked composites. Complete nutrient profiles were
+determined for each of these composites (raw and cooked).
+
+Top loin roasts, sirloin roasts, center loin chops, center rib chops, country-style
+ribs, and spare ribs. Proximate nutrients and minerals were analyzed from individual
+composites for both the raw and cooked preparations of top loin roasts, sirloin roasts,
+center loin chops, center rib chops, country-style ribs, and spare ribs. For these cuts,
+cholesterol, thiamin, niacin, and riboflavin were determined from the regional
+composites of the cooked samples. For some nutrients, values were imputed using
+established NDL procedures described above. Nutrient values for pantothenic acid,
+vitamin B6, and vitamin B12 for these cooked cuts were imputed from the primary cuts
+prepared (cooked) in the same manner. Nutrient values (cholesterol, thiamin, niacin,
+and riboflavin, pantothenic acid, vitamin B6 and vitamin B12) for the raw preparations
+were imputed from their cooked counterparts. A commercial laboratory, whose
+analytical procedures were evaluated through the NFNAP process and found to be
+acceptable, performed tissue homogenization and nutrient analyses.
+
+Enhanced Pork Cuts
+
+Enhanced pork is the process of adding non-meat ingredients to fresh pork to improve
+the eating quality of the final product where eating quality is defined as the juiciness,
+tenderness, and flavor of pork (National Pork Board, 1998). As meat producers
+increasingly raise leaner animals that contain significantly less fat, alternative processes
+are being developed to replace the flavor loss due to fat reduction and reduce moisture
+loss resulting from cooking. Enhancing the meat is one such process. Since SR did not
+provide data for the nutrient content of enhanced meat, a collaborative study was
+conducted by scientists at USDA, the University of Wisconsin, and the National Pork
+Board to determine the nutrient profile of the following enhanced products: shoulder
+blade steak, tenderloin, and top loin chops. This project was funded in part by the
+National Pork Board. Data for enhanced pork cuts were disseminated in SR20 (2007).
+New data obtained to update existing data for enhanced pork top loin chops, raw and
+cooked (broiled) are disseminated in SR 27 (2014).
+
+Sampling. Three fresh, enhanced pork cuts were pre-ordered and purchased from 12
+retail outlets using the nationwide sampling plan developed for NFNAP (Perry et al.,
+2003) and shipped frozen to the University of Wisconsin for trimming and preparation.
+
+Preparation and analysis. Preparation, compositing, and nutrient analyses for
+enhanced versions of the shoulder blade steak, tenderloin, and top loin chops were
+similar to those described for natural fresh pork cuts (see above).
+
+
+                                               108
+Pork Value Cuts
+
+USDA, in collaboration with the National Pork Board and University of Wisconsin,
+conducted a study to determine the nutrient profile of four new pork value cuts. This
+project was funded in part by the National Pork Board. These cuts were introduced to
+the retail market in 2008-2009. Pork value cuts are individual muscles chosen from the
+shoulder and the leg. These cuts were selected for their strong marketability,
+consistency in flavor and tenderness, availability, and economic feasibility for food
+chains and consumers. The common names of the four new cuts selected, the scientific
+name for the muscle, and the part of the carcass from which they originate are as
+follows:
+ Pork Shoulder Breast Boneless (Pectoralis profundi) – shoulder
+ Pork Shoulder Petite Tender Boneless (Teres major) - shoulder
+ Pork Leg Cap Steak Boneless (Gracilis) – leg
+ Pork Leg Sirloin Tip Roast Boneless (Vastus lateralis and Rectus femoris) – knuckle
+    and leg.
+The nutrient profiles of these four new cuts were released in SR21 (2008).
+
+Sampling. A total of 14 paired cuts for each pork value cut were obtained from pork
+production plants in North Carolina and Iowa. At each plant, both shoulder and hams
+from 7 randomly selected pork carcasses were obtained. Carcasses were of average
+weight or slightly heavier to ensure an adequate amount of sample. Proper cut
+identification of each ham and shoulder from each plant was maintained throughout the
+fabrication process. Each muscle was denuded, trimmed free of all external fat and
+connective tissue, and frozen prior to shipment to the University of Wisconsin.
+
+Sample Preparation. Among the 7 paired products from each of the two locations, 6
+pairs were randomly selected for use in the study. One member of each pair was
+prepared as raw and the other was cooked either by broiling or braising to a desired
+internal temperature or time end-point. After a designated cooling period, the cooked
+product was cubed, hand mixed, and divided into individual carcass samples, and
+composites of two or three carcasses.
+The designated cooking method for each pork value cut were:
+ Pectoralis profundi – broiled
+ Teres major – broiled
+ Gracilis – broiled
+ Rectus femoris – braised
+
+Cooking methods, broiling. Cuts were grilled on a pre-heated George Foreman™
+Indoor/Outdoor Electric Barbeque Grill for 10 minutes on setting “4”. Raw cuts were
+weighed prior to cooking. Internal cooking temperatures were determined by insertion
+of thermocouples. Cuts were turned-over when the internal temperature reached 100o-
+105oF (71-41C). Cuts were removed from the grill to attain a final internal temperature
+of 160oF/71C (cuts were taken off the grill at approximately 155oF/68C internal
+
+                                             109
+temperature). After standing 5 minutes, cuts were re-weighed and the highest internal
+temperature was attained during the standing period and recorded.
+
+Cooking methods, braising. Oven was pre-heated to 325oF/163C. Temperature was
+monitored with an oven thermometer. The cuts were weighed prior to cooking and then
+placed on a rack in a roasting pan. Distilled water (100 ml) was added to the roasting
+pan, which was covered tightly and placed in the center of the oven. Cuts were braised
+until reasonably tender. Cooking time was determined from initial trials. Initial cooking
+time estimates were: 45 minutes for blade steaks; 1 hour and 15 minutes for country-
+style ribs. Immediately after removal from the oven, the product was placed on a wire
+rack. The internal temperature was determined with an electronic digital thermometer.
+Cuts were allowed to cool for 5 minutes and then weighed.
+
+Sample analyses. Proximate nutrients (moisture, total fat, ash, and protein) and
+cholesterol were determined on individual muscle samples from the shoulder, leg and
+knuckle, both raw and cooked. For each cut, three samples were pooled into
+composites and analyzed for fatty acids. Vitamins and minerals were analyzed on
+samples from the two-carcass composites. Choline and folate analyses were done on
+the three-carcass composites, raw and cooked. Amino acids were also analyzed on the
+three-sample composites - raw samples only.
+
+Cured Hams
+
+A new study on cured ham products was conducted by the NDL in collaboration with the
+University of Wisconsin to update the nutrient profile of various cured ham products in
+the SR. The word Ham refers to pork meat from the hind leg of a hog. Ham products
+were available in bone-in or boneless forms.
+
+Cured hams are classified into four categories (USDA-FSIS, 2007):
+ Ham - at least 20.5% protein in the lean area with no water added;
+ Ham with Natural Juices (HNJ) - at least 18.5% protein with a small addition of water
+   when cured;
+ Ham - Water added (HWA) - at least 17% protein with no more than 10% added
+   solution;
+ Ham and Water Product (HWP) - less than 17% protein and contains any amount of
+   water but labeling must indicate percentage of “added ingredients”.
+
+“Added ingredients” may vary for each ham product. These solutions, flavorings or
+“added ingredients” may include water, sugar, salt, sodium erythrobate, sodium nitrite,
+potassium, and magnesium leading to flavor enhancement. Binders such as soy or milk
+proteins may also be added to help hold water in the ham. These additions of water and
+flavor enhancers in ham affect its taste and texture.
+
+Sampling. The sampling plan used for the study was developed for NFNAP (Pehrsson
+et al., 2000). The country was divided into four regions, with three consolidated
+
+                                             110
+metropolitan statistical areas (CMSA) within each region; two retail stores were selected
+within each CMSA. Eight different types of ham products were picked up from 12 retail
+outlets nationwide: 1) ham, bone-in whole; 2) ham, bone-in, shank half; 3) ham with
+natural juices, bone-in rump; 4) ham with natural juices, bone-in butt half; 5) ham with
+natural juices, bone-in spiral sliced; 6) ham, water added, bone-in, slice; 7) boneless
+hams (many shapes and sizes); and 8) ham and water product, boneless slices, any
+type, and/or glazed with sugar, honey, and other ingredients. The sampling procedure
+for each category of bone-in hams was to select two half-hams. One of those was a
+shank-half portion and the other a rump-half portion. It was preferable that the two
+halves should come from the same manufacturer and from the same category. Pairs of
+selected, branded, bone-in hams (Maple, Haen, and Brandon) were picked-up for
+retention studies. All products were vacuum packaged, individually labeled, and sent
+frozen to University of Wisconsin for further cooking and dissection.
+
+Sample preparation. All hams (bone-in and boneless; heated and unheated) were
+weighed, measured for thickness, and dissected to separate external fat and seam fat.
+Bone-in hams were further dissected for removal of bone and connective tissue prior to
+nutrient analyses. Branded hams or paired bone-in whole hams were cut into shank,
+butt, and slices. One portion from each pair (rumps and shanks) was analyzed “as
+purchased” and the other roasted to an internal temperature >160°F (71C). Slices were
+weighed and measured for thickness prior to being pan-fried to an internal temperature
+of 64-82°F (18-28C). All other types of bone-in and boneless hams were either
+roasted in a 325°F (163C) convection oven or pan-broiled to the internal temperature
+specified on the label. No fat was added during any cooking preparation.
+
+Sample analyses. Proximate nutrients (moisture, total fat, ash, and protein)
+cholesterol, vitamins, and minerals were determined on all categories of bone-in and
+boneless hams, both heated and unheated. Total sugars and fatty acids were analyzed
+on all bone-in and boneless forms of “Ham”, “Ham with natural juices” and “Ham and
+water product”. Two pairs of “Ham” types, heated and unheated, were analyzed for
+vitamin K, retinol, choline, and amino acids (unheated only).
+
+
+References for Notes on Foods – Pork Products
+
+Jones DB. Factors for converting percentages of nitrogen in foods and feeds into
+percentages of protein. US Department of Agriculture, Circular 83, slight revision, 1941.
+
+Merrill AL, Watt BK. Energy value of foods: basis and derivation, revised. US
+Department of Agriculture, Agriculture Handbook 74, 1973.
+
+National Pork Board. Functionality of non-meat ingredients used in enhanced pork.
+Version current 1998. Internet:
+http://www.pork.org/filelibrary/Factsheets/PorkScience/functionalitynonmeat04527.pdf
+(accessed 30 June 2014).
+
+                                             111
+Perry CR, Pehrsson PR, Holden J. A revised sampling plan for obtaining food products
+for nutrient analysis for the USDA national nutrient database 2003. Proceedings of the
+American Statistical Association, Section on Survey Research Methods [CD-ROM].
+2003. Alexandria, VA: American Statistical Association, San Francisco.
+
+Pehrsson PR, Haytowitz DB, Holden JM, Perry CR, Beckler DG. USDA’s national food
+and nutrient analysis program: food sampling. J Food Comp Anal 2000;13:379-389.
+
+US Department of Agriculture, Food Safety and Inspection Service. Ham glossary –
+Ham and food safety fact sheet. Version current 2013. Internet:
+http://www.fsis.usda.gov/wps/portal/fsis/topics/food-safety-education/get-answers/food-
+safety-fact-sheets/meat-preparation/ham-and-food-safety/ct_index (accessed 30 June
+2014).
+
+
+
+
+                                             112
+Poultry Products (Food Group 05)
+
+Introduction
+
+Data for poultry products including chicken, turkey, and other fowl are presented in the
+USDA National Nutrient Database for Standard Reference (SR). For most listings of
+fresh chicken or turkey, nutrient values are given either for specific market types such
+as broiler or fryer chicken, young tom turkey, young hen turkey, or as “all classes” to
+indicate that the values represent one or more unidentified market types for the species.
+
+The data in SR represent the amount of each constituent in 100 grams of edible portion.
+Edible portion for poultry may be represented as “meat and skin” or as “meat only”. In
+both cases, bone, cartilage, and separable fat are removed from the meat and reported
+as refuse. Weights are determined for the whole bird as purchased and as parts (breast,
+thigh, wing, drumstick, back), skin, and refuse (bone and cartilage). Refuse is reported
+as percentages in the SR Full Report format.
+
+Nutrient analyses are conducted for meat and for skin in both raw and cooked forms.
+Nutrient values for meat only and for skin only are weighted proportionally, according to
+their respective contributions to each intact bird part (as purchased), or part of the whole
+bird, and then reported as “meat and skin.” Cooked poultry has been cooked with the
+skin intact, unless otherwise indicated.
+
+The analytical nutrient data include the mean nutrient value, the standard error given to
+three decimal places, and the number of observations on which the values are based.
+For many food items, mean values are given without an accompanying standard error
+and number of samples. These values are either calculated by pooling data by or by
+weighting means, by applying cooking yields and/or nutrient retention factors, or by
+imputation from a different, closely related food. For poultry, nutrient estimates are
+based on the nutrient value for lipids (e.g., fatty acids), total solids (e.g., cholesterol),
+moisture-free, fat-free solids (e.g., minerals), or protein (e.g., water-soluble vitamins)
+fraction of a similar food.
+
+Nutrients
+
+Nutrient information for SR can be found under “File Content” in the documentation. In
+addition, nutrient information which is specific to poultry products is provided in this
+report. Nutrient data are obtained for moisture, protein, ash and total fat. The values for
+protein are calculated from the content of total nitrogen (N) in the food using the
+conversion factor recommended by Jones (Jones, 1941). The specific factor for protein
+applied to poultry items is 6.25. The carbohydrate content of uncured products
+consisting entirely of poultry (except some organ meats) is negligible. For such foods,
+the carbohydrate content is assumed to be zero.
+
+
+
+                                                113
+For heart, liver, giblets, and cured poultry products (foods which are expected to contain
+carbohydrate), the carbohydrate value is calculated as the difference between 100 and
+the sum of the percentages of water, protein, total lipid, and ash. If the total of these
+constituents for an item is more than 100 due to analytical variation, the carbohydrate
+content is assigned a zero value.
+
+Food energy is expressed in terms of both kilocalories and kilojoules; one kilocalorie
+equals 4.184 kilojoules. The data are the physiologic energy values which remain after
+losses due to digestion and metabolism have been deducted. Further discussions on
+energy and caloric factors used in SR can be found in the “Food Description File” of the
+general documentation.
+
+The specific calorie factors used for calculating energy values in poultry products are:
+
+                              Kcal/g
+Protein .................... 4.27
+Fat .......................... 9.02
+Carbohydrate ......... 3.87
+
+The carbohydrate factor of 3.87 is used for some organ meats and some cured
+products. Because the level of carbohydrate in poultry meat and skin is insignificant, no
+carbohydrate factor is needed for most poultry products. The factors are based on the
+Atwater system for determining energy values. Details of the derivation of these factors
+are outlined in Agriculture Handbook No. 74 (Merrill, 1973).
+
+Description of Projects
+
+The studies documented in these poultry notes represent data collected since 2008.
+
+Rotisserie chicken
+
+In collaboration with Texas Tech University, the USDA conducted studies to determine
+the nutrient composition of commercially prepared rotisserie chicken. The studies were
+conducted because rotisserie chicken has become a popular ready-to-serve poultry
+item in the retail market. A study was conducted to obtain data for rotisserie chicken
+original flavor, released in SR21 (2008) and rotisserie BBQ flavor chicken released in
+SR25 (2012). New data on rotisserie chicken original flavor were obtained to update the
+existing values and were released in SR27 (2014).
+
+Sampling: Rotisserie chicken samples were procured nationwide from 12 retail
+locations using the National Food and Nutrient Analysis Program (NFNAP) nationwide
+sampling plan developed for the USDA (Perry et al, 2003).
+
+Sample preparation: Samples were purchased whole and dissected into separate
+parts: breast, thigh, wing, drumstick, and back. Each bird was weighed whole. After
+dissection, parts were weighed separately, with and without skin. Refuse including
+                                              114
+

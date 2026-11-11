@@ -1,0 +1,150 @@
+These approaches to imputing missing Q are likely to be somewhat conservative and
+result in lower values for Q than the actual limit of quantification when the nutrient’s
+effect is positive and larger values of Q than the actual limit when the nutrient’s effect is
+negative.
+
+We can summarize the decision rules for imputation that result from the above
+assumptions as follows:
+
+
+          Case 1: C, D and Q are                 Impute                 Impute Not
+          known                                 Trace As:              Detected As:
+
+          When More is Better:                        D2 + Q2               C+D
+                                                         2                   2
+
+
+          When Less is Better:                        D2 + Q2               C+D
+                                                         2                   2
+
+
+
+          Case 2: D & Q known, C                 Impute                 Impute Not
+          unknown                               Trace As:              Detected As:
+
+          When More is Better:                        D2 + Q2               0+D
+                                                         2                   2
+
+
+          When Less is Better:                        D2 + Q2                 D
+                                                         2
+
+
+
+
+                                                E-4
+Case 3: C & Q known, D       Impute          Impute Not
+unknown                     Trace As:       Detected As:
+
+When More is Better:              C2 + Q2        C
+                                     2
+
+
+
+When Less is Better:              Q            C+Q
+                                                2
+
+
+
+
+   Case 4: Q known, C & D    Impute          Impute Not
+   unknown                  Trace As:       Detected As:
+
+   When More is Better:           02 + Q2        0
+                                     2
+
+
+
+   When Less is Better:            Q             Q
+
+
+
+   Case 5: C & D known, Q    Impute          Impute Not
+   unknown                  Trace As:       Detected As:
+
+   When More is Better:           D2 + Q2      C+D
+                                     2          2
+
+
+
+   When Less is Better:           D2 + Q2      C+D
+                                     2          2
+
+
+
+
+                            E-5
+          Case 6: D known, Q &C                 Impute                Impute Not
+          unknown                              Trace As:             Detected As:
+
+          When More is Better:                      D2 + Q2               0+D
+                                                       2                   2
+
+
+
+          When Less is Better:                      D2 + Q2                 D
+                                                       2
+
+
+
+
+          Case 7: C known, D & Q                Impute                Impute Not
+          unknown                              Trace As:             Detected As:
+
+          When More is Better:                      C2 + Q2                 C
+                                                       2
+
+
+
+          When Less is Better:                      Q                     C+Q
+                                                                           2
+
+
+
+          Case 8: D, Q & C unknown              Impute                Impute Not
+                                               Trace As:             Detected As:
+
+          When More is Better:                      02 + Q2                 0
+                                                       2
+
+
+
+          When Less is Better:                       Q                      Q
+
+
+
+However, there are some nutrients that have positive dietary effects when they are
+present in a certain range of quantities and have negative dietary effects when they are
+present in levels outside that range. For such nutrients the following procedure is
+recommended:
+
+    1.   If other available data for the nutrient are towards the minimum of the beneficial
+                                              E-6
+         range, follow the procedures for imputing for “More is Better” nutrients.
+
+    2.   If other available data for the nutrient are towards the maximum of the
+         beneficial range, follow the procedures for imputing for “Less is Better”
+         nutrients.
+
+    3.   If other available data for the nutrient are distributed throughout the beneficial
+         range impute twice, once with the “More is Better” method, and another time
+         with the “Less is Better” method. Use the average of the two values for
+         imputation.
+
+
+References for Appendix E
+
+Gelman A, Carlin JB, Stern HS, Rubin DB. Bayesian data analysis. London: Chap &
+Hall. 1995.
+
+Little RA, Rubin DB. Statistical analysis with missing data. Hoboken, NJ: John Wiley
+and Sons. 2002.
+
+Rubin DB. Multiple imputation for nonresponse surveys. Hoboken, NJ: John Wiley and
+Sons. 1987.
+
+
+
+
+                                                E-7
+

@@ -1,0 +1,416 @@
+Holden JM, Eldridge AL, Beecher GR, Buzzard IM, Bhagwat SA, Davis CS, Douglass
+LW, Gebhardt SE, Haytowitz DB, Schakel S. Carotenoid content of U.S. foods: an
+update of the database. J Food Comp Anal 1999;12:169–196.*
+
+Huang M, Winters D. Application of ultra-performance liquid chromatography/tandem
+mass spectrometry for the measurement of vitamin D in foods and nutritional
+supplements. J AOAC Int 2011;94:211-223.
+
+Institute of Medicine. Dietary reference intakes for thiamin, riboflavin, niacin, vitamin B6,
+folate, vitamin B12, pantothenic acid, biotin, and choline. Washington, DC: National
+Academy Press, 1998.
+
+Institute of Medicine. Dietary reference intakes for vitamin C, vitamin E, selenium, and
+carotenoids. Washington, DC: National Academy Press, 2000.
+
+Institute of Medicine. Dietary reference intakes for vitamin A, vitamin K, arsenic, boron,
+chromium, copper, iodine, iron, manganese, molybdenum, nickel, silicon, vanadium,
+and zinc. Washington, DC: National Academy Press, 2001.
+
+Institute of Medicine. Dietary reference intakes for vitamin D and calcium. Washington,
+DC: National Academy Press, 2011.
+
+Jones DB. Factors for converting percentages of nitrogen in foods and feeds into
+percentages of protein. US Department of Agriculture, Circular 83, slight revision,
+1941.*
+
+Koc H, Mar MH, Ranasinghe A, Swenberg JA, Zeisel SH. Quantitation of choline and its
+metabolites in tissues and foods by liquid chromatography/electrospray ionization-
+isotope dilution mass spectrometry. Anal Chem 2002;74:4734-4740.
+
+Kotz S, Johnson NL, ed. Encyclopedia of statistical sciences. New York, NY: John Wiley
+and Sons, 1988.
+
+Kubota J, Allaway WH. Geographic distribution of trace element problems. In: Mortvedt
+JJ, ed. Micronutrients in agriculture: proceedings of symposium held at Muscle Shoals,
+Alabama. Madison, WI: Soil Science Society of America, 1972:525–554.
+
+Leonard SW, Good CK, Gugger ET, Traber MG. Vitamin E bioavailability from fortified
+breakfast cereal is greater than that from encapsulated supplements. Am J Clin Nutr
+2004;79:86–92.
+
+Liem IIH, Steinkraus KH, Cronk JC. Production of vitamin B12 in tempeh: a fermented
+soybean food. Appl Environ Microbiol 1977;34:773–776.
+
+Little, RA, Rubin, DB. Statistical analysis with missing data. Hoboken, NJ: John Wiley
+and Sons. 2002.
+                                                45
+Livesay G, Marinos E. Estimation of energy expenditure, net carbohydrate utilization,
+and net fat oxidation and synthesis by indirect calorimetry: evaluation of errors with
+special reference to the detailed composition of fuels. Am J Clin Nutr 1988;47:608–628.
+
+Mangels AR, Holden JM, Beecher GR, et al. Carotenoid content of fruits and
+vegetables: an evaluation of analytic data. J Am Diet Assoc 1993;93:284–296.
+
+Martin JI, Landen WO, Soliman AM, Eitenmiller RR. Application of a tri-enzyme
+extraction for total folate determination in foods. J Assoc Anal Chem 1990;73:805–808.
+
+Matthews RH, Garrison YJ. Food yields summarized by different stages of preparation.
+US Department of Agriculture, Agriculture Handbook 102, 1975.*
+
+Merrill AL, Watt BK. Energy value of foods: basis and derivation, revised. US
+Department of Agriculture, Agriculture Handbook 74, 1973.*
+
+Møller A, Ireland J. LanguaL 2009 – The LanguaL Thesaurus. EuroFIR Technical
+Report D1.8.43. Danish Food Information. Version current 2009. Internet:
+http://www.langual.org/langual_literature.asp (accessed 06 May 2013).
+
+Murphy EW, Criner PE, Gray BC. Comparison of methods for determining retentions of
+nutrients in cooked foods. J Agric Food Chem 1975;23:1153.*
+
+National Research Council. Recommended dietary allowances. 10th ed. Washington,
+DC: National Academy Press, 1989.
+
+Phillips KM, Ruggio DM, Ashraf-Khorassani M. Phytosterol composition of nuts and
+seeds commonly consumed in the United States. J Agric Food Chem 2005;53(24):
+9436-9445.
+
+Phillips KM, Byrdwell WC, Exler J, Harnly JM, Holden JM, Holick MF, Hollis BW, Horst
+RL, Lemar LE, Patterson KY, et al. Development and validation of control materials for
+the measurement of vitamin D3 in selected US foods. J Food Comp Anal 2008;21:527-
+534.
+
+Reamer DC, Veillon C. Determination of selenium in biological materials by stable
+isotope dilution gas chromatography-mass spectrometry. Anal Chem 1981;53(14):2166-
+2169.
+
+Schakel SF, Buzzard IM, Gebhardt SE. Procedures for estimating nutrient values in
+food composition databases. J Food Comp Anal 1997;10:102–114.*
+
+Sheppard AJ. Lipid manual: Methodology suitable for fatty acid-cholesterol analysis.
+Dubuque, IA: William C Brown Publishers, 1992.
+
+                                             46
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+dairy and egg products; raw, processed, prepared. Agriculture Handbook 8–1, 1976.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+spices and herbs; raw, processed, prepared. Agriculture Handbook 8–2, 1977.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+baby foods; raw, processed, prepared. Agriculture Handbook 8–3, 1978.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods: fats
+and oils; raw, processed, prepared. Agriculture Handbook 8–4, 1979.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+poultry products; raw, processed, prepared. Agriculture Handbook 8–5, 1979.
+
+U.S Department of Agriculture, Agricultural Research Service. Composition of foods:
+soups, sauces, and gravies; raw, processed, prepared. Agriculture Handbook
+8–6, 1980.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+sausages and luncheon meats; raw, processed, prepared. Agriculture Handbook 8–7,
+1980.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+breakfast cereals; raw, processed, prepared. Agriculture Handbook 8–8, 1982.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+fruits and fruit juices; raw, processed, prepared. Agriculture Handbook 8–9, 1982.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+pork products; raw, processed, prepared. Agriculture Handbook 8–10, 1992.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+vegetables and vegetable products; raw, processed, prepared. Agriculture Handbook 8–
+11, 1984.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods: nut
+and seed products; raw, processed, prepared. Agriculture Handbook 8–12, 1984.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+beef products; raw, processed, prepared. Agriculture Handbook 8–13, 1990.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+beverages; raw, processed, prepared. Agriculture Handbook 8–14, 1986.
+
+
+                                             47
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+finfish and shellfish products; raw, processed, prepared. Agriculture Handbook 8–15,
+1987.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+legumes and legume products; raw, processed, prepared. Agriculture Handbook 8–16,
+1986.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+lamb, veal, and game products; raw, processed, prepared. Agriculture Handbook 8–17,
+1989.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+baked products; raw, processed, prepared. Agriculture Handbook 8–18, 1992.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+snacks and sweets; raw, processed, prepared. Agriculture Handbook 8–19, 1991.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+cereal grains and pasta; raw, processed, prepared. Agriculture Handbook 8–20, 1989.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+fast foods; raw, processed, prepared. Agriculture Handbook 8–21, 1988.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+raw, processed, prepared. Agriculture Handbook 8, 1989 Supplement, 1990.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+raw, processed, prepared. Agriculture Handbook 8, 1990 Supplement, 1991.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+raw, processed, prepared. Agriculture Handbook 8, 1991 Supplement, 1992.
+
+US Department of Agriculture, Agricultural Research Service. Composition of foods:
+raw, processed, prepared. Agriculture Handbook 8, 1992 Supplement, 1993.
+
+US Department of Agriculture, Agricultural Research Service. Provisional table on the
+selenium content of foods. USDA, HNIS, PT–109, 1992.
+
+US Department of Agriculture, Agricultural Research Service, Nutrient Data Laboratory.
+USDA Table of Nutrient Retention Factors, Release 6. Version current 2007. Internet:
+http://www.ars.usda.gov/Main/docs.htm?docid=9448 (accessed 30 June 2014)*
+
+US Department of Agriculture, Agricultural Research Service, Nutrient Data Laboratory.
+USDA Database for the Choline Content of Common Foods, release 2. Version current
+2008. Internet: http://www.ars.usda.gov/nutrientdata/choline (accessed 30 June 2014)*
+                                             48
+US Department of Agriculture, Agricultural Research Service, Nutrient Data Laboratory.
+USDA National Fluoride Database of Selected Beverages and Foods, release 2.
+Version current 2005. Internet: http://www.ars.usda.gov/nutrientdata/fluoride (accessed
+30 June 2014)*
+
+US Department of Agriculture, Agricultural Research Service, Food Surveys Research
+Group. USDA Food and Nutrient Database for Dietary Studies, Release 5.0 [online
+database]. Version current 2012. Internet:
+http://www.ars.usda.gov/Services/docs.htm?docid=22370 (accessed 30 June 2014)
+
+US Food and Drug Administration, US Department of Health and Human Services.
+Food Labeling [Code of Federal Regulations, 21 CFR 101]. Version current 2012.
+Internet: http://www.gpo.gov/fdsys/pkg/CFR-2012-title21-vol2/pdf/CFR-2012-title21-
+vol2-part101.pdf (accessed 30 June 2014).
+
+Van Winkle S, Levy SM, Kiritsy MC, Heilman JR, Wefel JS, Marshall T. Water and
+formula fluoride concentrations: significance for infants fed formula. Pediatr Dent
+1995;17(4):305-310.
+
+Watt BK, Merrill AL. Composition of foods raw, processed, prepared. US Department of
+Agriculture, Agriculture Handbook 8, 1963.
+
+Weihrauch JL, Chatra AS. Provisional table on the vitamin K content of foods, revised.
+USDA, HNIS, PT–104, 1994.*
+
+Weihrauch JL, Posati LP, Anderson BA, Exler J. Lipid conversion factors for calculating
+fatty acid content of foods. J Am Oil Chem Soc 1977;54:36–40.
+
+Weihrauch JL, Tamaki J. Provisional table on the vitamin D content of foods. USDA,
+HNIS, PT–108, 1991.*
+
+Williams J, Patterson K, Howe J, Snyder C, Boillot K, Lofgren P, Thompson L, Luna A,
+Nalawade A, Douglass L, et al. Nutrient composition in ground pork using regression
+techniques (Poster). Institute of Food Technologists Annual Meeting + Food Expo.
+Anaheim, CA. Version current 9 June 2009. Internet:
+http://www.ars.usda.gov/SP2UserFiles/Place/12354500/Articles/IFT09_GrdPork.pdf
+(accessed 30 June 2014) *
+
+Ye L, Landen WO, Eitenmiller RR. Ye, Landen, Eitenmiller liquid chromatographic
+analysis of all-trans-retinyl palmitate, β-carotene, and vitamin E in fortified foods and the
+extraction of encapsulated and nonencapsulated retinyl palmitate. J Agric Food Chem
+2000;48(9):4003-8.
+
+Zeisel, SH, Blusztajn JK. Choline and human nutrition. Annual Reviews of Nutrition.
+1994;14:269-296.
+                                                49
+Zeisel SH, Mar MH, Howe JC, Holden JM. Concentrations of choline – containing
+compounds and betaine in common foods. J Nutr 133:1302-1307; Erratum. 2003. J Nutr
+2003;133:2918-2919.
+_______________
+* Available on NDL’s web site: http://www.ars.usda.gov/nutrientdata.
+
+
+
+
+                                          50
+Notes on Foods
+
+Introduction
+
+The information contained in ”Notes on Foods” was initially published in printed copies
+of Agriculture Handbook No. 8 (AH-8), which were presented as individual sections by
+food groups. In addition to a description of the tables and how nutrient values were
+determined, each food group section included a portion, called “Notes on Foods” with
+information specific to each food group. The information on the database, nutrient
+values and formats has been published separately as the documentation accompanying
+each release of the USDA National Nutrient Database for Standard Reference (SR;
+NDL, 2013). At this time, “Notes on Foods” are included in this document for only some
+of the sections previously available in the printed copies. It is anticipated that this
+document will expand, as information for the remaining food groups is added.
+
+Data are obtained from a variety of sources (Figure 2). These include the scientific
+literature, data provided by food companies and trade associations, other government
+agencies and USDA-sponsored contracts. In a number of cases, various trade
+associations have worked with the Nutrient Data Laboratory (NDL) to design analytical
+studies to obtain new data on various food items. These studies are described in
+greater detail in their respective sections below. Since 1997, USDA-sponsored
+contracts have been conducted under the aegis of the National Food and Nutrient
+Analysis Program (NFNAP), which is described below.
+
+
+
+
+     Figure 2. Sources of data and NDL products
+
+
+                                             51
+National Food and Nutrient Analysis Program
+
+In 1997, the NDL, in cooperation with the National Heart Lung and Blood Institute and
+other Institutes and Offices of the National Institutes of Health (NIH), instituted the
+National Food and Nutrient Analysis Program. In 2005, The National Cancer Institute
+took over the lead role in coordinating the program at NIH. The goals of NFNAP are to
+improve the quantity and quality of data in the USDA National Nutrient Databank which
+has resulted in annual updates of the USDA National Nutrient Database for Standard
+Reference (USDA, 2014) and a number of Special Interest Databases: isoflavones
+(USDA, 2008), choline (USDA, 2004a), proanthocyanidins (USDA, 2004b), fluoride
+(USDA, 2005), and flavonoids (USDA, 2013). To achieve these goals, five principle
+aims were established:
+
+   1. Identify and rank foods and nutrients for analysis;
+   2. Evaluate existing data for foods and nutrients;
+   3. Develop strategies for sampling;
+   4. Process and analyze foods; and
+   5. Review and disseminate results.
+
+Since its inception in 1997, over 1,900 unique food items have been sampled and
+analyzed under NFNAP—some of these have been sampled and analyzed more than
+once as products and formulations have changed. To date, values for over 1,600 of
+these food items have been incorporated into SR. The process of acquiring, evaluating,
+and disseminating food composition data is continuous. At any time, new samples are
+being collected, prepared and analyzed and data for samples already analyzed are
+being revised and processed through NDL’s Nutrient Data Bank System (NDBS).
+Details of these studies are described in specific chapters on each food group, which
+follow this section. A number of trade associations in the food industry, such as the
+National Cattleman’s Beef Association, the National Pork Board, the Produce for Better
+Health Foundation, the Mushroom Council, the American Egg Board and others have
+worked with NDL to analyze food items in their product category sectors, using
+protocols adapted as part of NFNAP. Details of each of these studies are described in
+the specific chapter for each food group.
+
+Identify Key Foods and critical nutrients for sampling and analysis
+
+To identify and rank foods and nutrients for analysis, the Key Foods approach
+(Haytowitz et al., 2000; Haytowitz et al., 2002) was used. Key Foods are those foods
+which in aggregate contribute 75% of the nutrient intake for selected nutrients of public
+health importance from the diet. The most current Key Foods list was generated using
+weighted two-day food consumption data from the National Health and Nutrition
+Examination Survey (NHANES) 2007-08 Data Files (NCHS, 2010) and food
+composition data from SR22 (issued in 2009). For the current Key Foods list, targeted
+nutrients (total fat, food energy, total sugar, total dietary fiber, calcium, iron, potassium,
+sodium, β-carotene, α-tocopherol, vitamin C, vitamin B12, choline, cholesterol and
+saturated fatty acids) were those identified in the Dietary Guidelines Advisory
+                                                 52
+Committee Report on the Dietary Guidelines for Americans, 2010 (DGAC, 2010) and
+the Dietary Guidelines for Americans, 2010 (USDA & USDHHS, 2010) as “shortfall”
+nutrients (limited in the diet) or nutrients of excess consumption, in particular those
+associated with poor health outcomes. Other nutrients of concern such as trans fatty
+acids were considered but not included in the Key Foods algorithm as only those
+nutrients included in the Food and Nutrient Database for Dietary Surveys (FNDDS), 5.0
+(USDA-ARS, 2012) can be used. The Key Foods approach has allowed NDL to
+concentrate analytical resources on those foods that contribute significant amounts of
+nutrients of public health interest to the diet.
+
+Evaluate existing data for scientific quality
+
+At the initiation of NFNAP in 1997, the food composition values in SR were reviewed for
+scientific quality by NDL staff. Data for many of the foods in the database at that time
+were found to be more than 10 years old, based on a limited number of values, lacking
+in complete and accurate documentation, and including some samples of uncertain
+origin. To assess the quality of existing data and to improve the level of documentation,
+NDL scientists developed an expert system for evaluating data quality (Holden et al.,
+2002; Holden et al., 2005). The expert system focuses on evaluation and
+documentation of five data quality indicators: 1) sampling plan; 2) sample handling; 3)
+number of samples analyzed; 4) analytical methodology; and 5) analytical quality
+control. This system has been used in the production of a number of special interest
+databases including isoflavones (USDA, 2008), choline (USDA, 2004a),
+proanthocyanidins (USDA, 2004b), fluoride (USDA, 2005), and flavonoids (USDA,
+2007). This process is used to provide information on the data quality assessment for
+all of the analytical nutrient profiles for foods in SR. Many of the food profiles in the
+database lacked some or all of the data quality information. For these reasons, and to
+establish a core set of data of known sampling, analytical methodology, and quality
+control, NDL determined that comprehensive updates of the food items on the Key
+Foods list would be needed.
+
+Devise and implement a probability-based sampling survey of US foods
+
+A probability-proportional-to-size (PPS) food sampling plan was developed by NDL staff
+in collaboration with statisticians from the National Agricultural Statistics Service, USDA
+(Pehrsson et al., 2000). This approach allows the development of nationally
+representative data for a given food. The original NFNAP food product sampling design
+was based on a stratified design including each of four regions across the 48
+conterminous states of nearly equal in population size. A revised PPS sampling design
+was developed with 2000 US Census data (Perry et al., 2003) and was based on a
+stratified three-stage design using 2001 Census Bureau projected state population sizes
+and Census regions (US Census Bureau, 2002). Forty-eight geographically dispersed
+counties were selected at the first stage, supermarket outlets at the second stage, and
+specific food products at the third stage. Subsets of these locations can be selected
+according to the requirements of the specific food item and nutrients, weighing
+variability vs. reliability. Multiples of these geographic locations can also be employed
+                                                53
+for studies requiring more samples, i.e., where wide variability in a nutrient is expected
+and/or existing data are limited or nonexistent. Fluoride, for example, is highly variable
+in drinking water; in a national USDA study, drinking water was sampled in 144
+locations and over two seasons (Pehrsson et al., 2006). Another consideration in
+designing the sampling strategy was that fewer samples would be analyzed for lower
+consumption foods as identified during the Key Foods process or for nutrients in foods
+which were not significant contributors to the diet or present in low or trace
+concentrations. Details of the sampling design are discussed in Perry et al. (2003). A
+new sampling plan based on data from the 2010 US Census has been developed (Perry
+et al., 2013) and will be used for future sample pickups.
+
+Specific food products were selected according to a sampling approach based on
+market share. For example, after examining the Key Foods list, it was determined that
+pizza was a major contributor of many nutrients. Since both pizzas purchased from a
+fast food pizza restaurant vs. those purchased frozen and heated and served at home
+are commonly consumed, NDL undertook the analysis of both types. Several different
+types (e.g., cheese, pepperoni, pepperoni and sausage, and meat/vegetable
+combinations) and brands (e.g., major national brands and store brands) were
+purchased in supermarkets as described above. Later, several different types (e.g.,
+cheese, pepperoni, and deluxe) of fast food restaurant pizza from major national chains
+were purchased from individual restaurants. For frozen pizzas, national composites of
+each type and brand were prepared. For the fast food restaurant pizzas, four
+composites of three randomly drawn samples of each type and brand were prepared.
+
+Foods were purchased under contract by a USDA-directed professional product pickup
+company using tested selection protocols in retail outlets. The foods were shipped to
+the Food Analysis Laboratory Control Center (FALCC) at Virginia Tech in Blacksburg,
+Virginia for sample preparation. Procedures were developed for sample unit receipt,
+preparation, and storage which can be modified as needed for new food samples.
+FALCC continuously develops protocols for homogenizing and compositing samples
+based on instructions from NDL. FALCC also collects relevant weights and dissection
+information for edible and non-edible portions as required, and documents processing
+and preparation procedures. Processed samples are shipped to USDA-qualified
+analytical laboratories for analysis as directed by NDL. Reserve and archive samples of
+each food are maintained at FALCC.
+
+The sampling plan can be modified to meet the requirements of a specific study of
+specific nutrients or unique foods, e.g., the sampling of tap water in homes to determine
+fluoride levels. With modifications, the sampling plan can be used for special population
+groups located in geographically distinct areas (e.g., American Indians and Alaska
+Natives on reservations, and Hispanic Americans (Perry et al., 2002)).
+
+Analyze sampled foods under USDA-supervised laboratory contracts
+
+NDL employs a two-step process for awarding contracts for analysis of foods. The first
+step requires prospective contractors to submit a formal proposal. Prospective
+                                              54
+

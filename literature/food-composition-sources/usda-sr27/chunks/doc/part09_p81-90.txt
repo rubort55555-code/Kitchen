@@ -1,0 +1,430 @@
+distribution of the nutrients, but may lead to undesirable loss of nutrients and flavor
+changes. Thus, some cereals are exposed to multiple coating processes for topical
+application of the added nutrients. A phase 1 coating may include vitamin addition, then
+phase 2 may include coating with slurries of sugars, honey and flavoring agents.
+Coatings may be applied by spraying the product as it passes down a conveyer belt or
+may be added by means of a coating drum (Burns, 2000). Manufacturers generally add
+nutrients at a higher level than labeled to compensate for possible losses during
+processing, thus ensuring that content of fortification nutrients in the packaged cereal
+meets or exceeds the declared level (FDA, 2010).
+
+Nutrient data: Due to the frequency of reformulations of breakfast cereals and brand
+name specificity of most items in this food group, the Nutrient Data Laboratory relies
+heavily on the cereal industry to provide current nutrient data for breakfast cereals in
+SR. Kellogg and General Mills, who represent nearly two-thirds of the RTE retail market
+(Schroeder, 2011), typically supply data each year, while Quaker, Post, and others
+contribute data some years. Breakfast cereal manufacturers generally can provide data
+for proximates, all fortification vitamins and minerals and some non-fortification vitamins
+and minerals. Data for fatty acid classes (total saturated, monounsaturated and
+polyunsaturated fatty acids) are generally provided, but individual fatty acids rarely so.
+Industry-provided fortification nutrient values are based on the label-declared values,
+representing the minimum amount of that fortified nutrient that should be present in the
+cereal. Although industry does not provide values for all non-fortification vitamins and
+minerals, a portion of these nutrients (e.g., magnesium and vitamin C) are generally
+industry-supplied. Some nutrient values are derived from the product’s nutrition facts
+label, as well.
+
+Every few years, beginning in 2002, various RTE cereals with a high market share have
+been selected for statistically representative nationwide sampling and nutrient analysis
+as part of the USDA National Food and Nutrient Analysis Program (NFNAP). Hot
+cereals, such as regular and instant oatmeal, corn grits, and farina, were sampled
+through NFNAP, as well. The NFNAP sampling method is described in detail elsewhere
+(p. 52). The most recent sampling in 2013 was for Quaker and private label maple
+brown sugar instant oatmeal, General Mills Honey Nut Cheerios and Cinnamon Toast
+Crunch.
+
+Approximately 200 breakfast cereals are included in a subset of foods supplied for the
+Food and Nutrient Database for Dietary Studies, which is used for national nutrition
+monitoring. For these products, there is a list of 65 nutrients for which values must be
+provided. A variety of standard imputing methods are available in NDL’s databank
+system for estimating missing nutrient values. The predominant imputation method for
+RTE cereals is by NDL’s formulation estimation procedures. These estimation
+procedures were incorporated into the databank system; they include linear
+programming techniques to estimate ingredient proportions by weight and calculate a
+full nutrient profile based on this estimated commercial recipe (i.e. formulation)
+(Haytowitz, 2009). Individual fatty acids, choline, vitamin K, carotenoids, caffeine and
+theobromine are generally derived by the formulation method. In the absence of
+                                               75
+analytical data, added folic acid is calculated by subtracting estimated natural food
+folate from the total folate value provided by the manufacturer.
+
+In general, a profile is calculated by recipe for the cooked version of hot cereals that are
+sold in bulk, such as rolled oats or farina. The yield and retention factors are applied to
+the recipe to estimate the effects of cooking on moisture and nutrient levels.
+
+Food Group 08 items in SR include data for both ready-to-eat and hot breakfast cereals
+that are derived from cereal manufacturers, food labels, lab analyses, formulation and
+other estimations. Recent trends show a decrease in sugar and sodium levels and
+increase in fiber levels in RTE cereals, on average (Thomas, 2013). NDL will continue
+to monitor these and other changes.
+
+
+References for Notes on Foods – Breakfast Cereals
+
+Burns RE, Caldwell EF, Fast RB, Jones WH. Application of nutritional and
+flavoring/sweetening coatings. 2nd ed. In: R.B. Fast, R.B. and E. F. Caldwell, eds.
+Breakfast cereals and how they are made. St. Paul, MN: American Association of
+Cereal Chemists, 2000:279-313.
+
+Caldwell EF, Johnson LE, Labuza TP. Fortification and preservation of cereals. 2nd ed.
+In: Fast RB, Caldwell EF, eds. Breakfast cereals and how they are made. St. Paul, MN:
+American Association of Cereal Chemists, 2000:375-410.
+
+Haytowitz DB, Lemar LE, Pehrsson PR. USDA’s nutrient databank system—a tool for
+handling data from diverse sources. J Food Comp Anal 2009;22:433-41.
+
+Park YK. History of cereal-grain product fortification in the United States. Nutr Today
+2001;36(3):124-137.
+
+Phillips KM, Ruggio DM, Ashraf-Khorassani M, Eitenmiller RE, Cho S, Lemar LE, Perry
+R, Pehrsson PR, Holden JM. Folic acid content of ready-to-eat cereals determined by
+liquid chromatography-mass spectrometry: comparison to product label and to values
+determined by microbiological assay. Cereal Chem 2010;87(1):42–9.
+
+Rader JI, Weaver CM, Angyal G. Total folate in enriched cereal-grain products in the
+United States following fortification. Food Chem 2000;70:275-289.
+
+Schroeder E. Innovation back in play: reformulations, focus on health still on top of
+mind. Milling & Baking News 4 October 2011; 1-30.
+
+Steele CJ. Cereal fortification – technological problems. Cereal Foods World
+1976;21(10):538-40.
+
+
+                                               76
+Thomas RG, Pehrsson PR, Ahuja JKC, Smieja E, Miller KB. Recent trends in ready-to-
+eat breakfast cereals in the U.S. Procedia Food Sci [serial online] 2013;2:20-26.
+Internet: http://www.sciencedirect.com/science/article/pii/S2211601X13000060
+(accessed 30 June 2014).
+
+US Food and Drug Administration, US Department of Health and Human Services.
+Cereal flours and related products. Washington, DC: US Government Printing Office,
+2012. [Code of Federal Regulations, 21 CFR 137]
+
+US Food and Drug Administration, US Department of Health and Human Services.
+Department of Health and Human Services. Nutrition labeling of food. Washington, DC:
+US Government Printing Office, 2010. [Code of Federal Regulations, 21 CFR 101]
+
+
+
+
+                                           77
+Cereal Grains and Pasta (Food Group 20)
+
+There are over 180 food items in the Cereal Grains and Pasta food group in the SR.
+The sources of nutrient data for these items are mainly analytical obtained from the
+scientific literature or analytical studies. These include data collected by nationwide
+sampling under NDL’s NFNAP program, described earlier.
+
+Federal Definitions and Standards of Identity have been published for a number of
+cereal grain and pasta products appearing on the market today (FDA, 2008a, 2008b).
+Federal Enrichment Standards exist for wheat flour, cornmeal, rice, and macaroni and
+noodle products (FDA, 2008a, 2008b). These standards do not mandate the
+enrichment of the products, but if it is labeled as “enriched,” specified nutrient levels
+must be present. Federal standards specify enrichment levels or ranges for thiamin,
+riboflavin, niacin, iron, and folic acid in most enriched products. The Federal
+Enrichment Standard for riboflavin in enriched rice has been stayed since 1958, and
+hence riboflavin is not currently added to enriched rice. The standards for enriched
+grain products were amended to require the addition of folic acid beginning in 1998.
+Addition of calcium to most enriched products is optional, but if added must meet
+specified levels. However, consistency in levels of enrichment may be an issue
+(Guerrero et al, 2009). The current Federal Enrichment Standards are listed in Table 21.
+
+In the Cereal Grains and Pasta food group, data are presented for the enriched and
+unenriched forms of commonly enriched products.
+
+      Table 21. Standards for Enrichment1
+   Food Item       Thiamin Riboflavin Niacin Iron             Folic Acid     Calcium2
+                                       --- milligrams per pound ---
+   Wheat flour     2.9        1.8           24       20       0.7            960
+   Self-rising     2.9        1.8           24       20       0.7            960
+   wheat flour
+   Cornmeal        2.0-3.0    1.2-1.8       16-24 13-26       0.7-1.0        500-750
+   Self-rising     2.0-3.0    1.2-1.8       16-24 13-26       0.7-1.0        500-750
+   cornmeal
+   Rice            2.0-4.0    1.2-2.43      16-32 13-16.5 0.7-1.4            500-
+                                                                             1,000
+   Macaroni and       4.0-5.0   1.7-2.2      27-34 13-16.5 0.9-1.2           500-625
+   noodle products
+  1.
+     A range of figures indicates minimum and maximum levels. A single figure is the
+     minimum level, with overages left to good manufacturing practice.
+  2.
+     Calcium enrichment is optional in these products.
+  3.
+     The enrichment standard for riboflavin in enriched rice has been stayed since
+     1958.
+
+In 2010, the US Departments of Agriculture and Health and Human Services released
+the seventh edition of the Dietary Guidelines for Americans, which set evidence-based
+                                               78
+recommendations for the public to help prevent disease (US Departments of Agriculture
+and Health and Human Services, 2010). The guidelines emphasize consumption of
+whole grain foods, stating at least half of an individual’s recommended total grain intake
+should be whole grains to reduce the risk of several chronic diseases and help with
+weight maintenance.
+
+The AACC International definition of whole grains is “Whole grains shall consist of the
+intact, ground, cracked or flaked caryopsis, whose principal anatomical components -
+the starchy endosperm, germ and bran - are present in the same relative proportions as
+they exist in the intact caryopsis.”
+
+In 2006, FDA issued draft guidance for Industry and FDA Staff on Whole Grain Label
+Statements. It can be accessed at:
+http://www.fda.gov/Food/GuidanceComplianceRegulatory
+Information/GuidanceDocuments/FoodLabelingNutrition/ucm059088.htm.
+
+Cereal grains.—The majority of the cereal grains included in Food Group 20 are
+cultivated grasses belonging to the Poaceae (alt.Gramineae) family and are thus true
+cereals. Amaranth, buckwheat, and quinoa differ botanically from true cereals, and are
+referred to as pseudo cereals because they are grown and used like cereal grains
+(Brouk, 1975). Arrowroot flour is derived from arrowroot and tapioca is produced from
+cassava root, which are both non-cereal-grain plants, but used in ways similar to cereal
+grains.
+
+The scientific name is given for the most unprocessed form of the cereal grain in the
+database. The Germplasm Resources Information Network (GRIN) was used as the
+basic reference for the scientific names and preferred common names (USDA, 2011).
+
+With the exception of corn (maize), which is native to the Americas, nearly all true
+cereal grains originated in Europe and Asia (Brouk, 1975). Buckwheat is native to
+central Asia. Amaranth and quinoa are native to Central and South America,
+respectively.
+
+Kasha, a buckwheat product, originated in Russia. Buckwheat groats, which are
+roasted to develop a distinctive nutty flavor, may be packaged in the whole form or
+milled to either coarse, medium, or fine granulations. Kasha is usually cooked as a hot
+cereal or prepared in combination with other foods and ingredients.
+
+Corn and corn products appearing in Food Group 20 are restricted to field corn varieties
+and do not represent the varieties (sweet corn) used mainly as a vegetable. Corn and
+cornmeal products are available in white, yellow, and blue varieties. Yellow corn
+varieties have higher vitamin A values due to the presence of the provitamin-A
+carotenoids, alpha- and beta-carotene. Yellow corn also has much higher levels of
+lutein + zeaxanthin. With the exception of these nutrients, the composition profiles of
+white and yellow corn are similar.
+
+                                              79
+Self-rising cornmeals and wheat flours have more calcium, phosphorus, and sodium
+due to the addition of chemical leavening agents and salt. Sodium bicarbonate,
+monocalcium phosphate, sodium acid pyrophosphate, and sodium aluminum phosphate
+are the most commonly used leavening agents. Salt is also usually added to self-rising
+products for flavor. Bolted cornmeal has had most of the bran removed during milling,
+but contains most of the germ present in the whole-grain corn.
+
+Masa corn flour is milled from corn which has been steeped in a lime (calcium
+hydroxide) solution. This is done both to facilitate the removal of the outer hull of the
+corn grain and to impart the characteristic flavor of authentic corn tortillas and other
+related products. As a result of the use of lime in processing, masa corn flour is higher
+in calcium than other corn products.
+
+Brown rice has the bran layers intact. Rice that has been milled to remove the bran
+layers is referred to as white rice in this database.
+
+Bulgur, a wheat product, has been produced in the Middle East and northern Africa
+since ancient times. Bulgur is produced by parboiling, drying, and then cracking wheat
+kernels. It is usually consumed as a cooked cereal or as an ingredient in other dishes.
+
+Couscous is coarse-ground wheat endosperm made from durum wheat or another hard
+wheat variety. Couscous is a popular food in northern Africa and in the Middle East. It
+is usually eaten as a hot cereal or combined with other foods.
+
+Wheat flour tortilla mix is used for making flour tortillas and other related products. This
+product is higher in calcium than other wheat flour products because calcium carbonate
+is added.
+
+Bread flour, approximately 13% protein, is milled primarily from hard wheats. Cake
+flour, approximately 9% protein, is milled from soft wheats. Semolina is coarse-ground
+endosperm from durum wheat, and is used chiefly for making pasta.
+
+Teff is an ancient crop believed to have been domesticated in the northern highlands of
+Ethiopia. It is used alone or in combination with sorghum to prepare the fermented flat
+bread, injera (Dendy, 1995).
+
+Corn grits, farina, rolled oats or oatmeal, and toasted wheat germ are included in Food
+Group 08, Breakfast Cereals.
+
+Nutrient data for different forms and products of each cereal grain were not obtained
+from the same sample or source. For example, a single source of wheat was not
+processed to all forms given in the database: whole-grain, bran, germ, and various flour
+products. The data were obtained from many sources at different times for analysis and
+are affected by different variables: growing locations, crop years, cultivars, natural
+variability, milling and processing techniques, laboratories, and possibly methods of
+analysis. Therefore, in a comparison of different forms and products of a cereal grain,
+                                                80
+nutritional differences may not measure precisely the effect of processing or preparation
+methods.
+
+Pasta.—Under Federal Standards of Identity, there are two broad categories of pasta
+products: macaroni and noodle products (FDA, 2008b). Macaroni products are formed
+by extrusion of the pasta dough into a variety of shapes and sizes including elbows,
+spirals, shells, twists, wheels, etc. Specific shapes of macaroni products have unique
+names such as rigatoni, manicotti, ziti, linguini, and spaghetti which are recognized by
+the consumer.
+
+Although spaghetti is defined under Federal standards as a macaroni product, it is
+included as a separate category due to its unique market identity. However, the nutrient
+composition of spaghetti and that of other forms of macaroni products are the same on
+an equal weight basis.
+
+Noodle products are also available in a variety of sizes and shapes. Federal Standards
+of Identity specify that noodle products must contain not less than 5.5 percent by weight
+of the solids of egg or egg yolk (FDA, 2008b).
+
+Various forms of vegetable macaroni and noodle products are available today. Federal
+standards specify that these products must contain a minimum of 3 percent by weight of
+the solids of tomatoes (red varieties), artichoke, beet, carrot, parsley, or spinach ((FDA,
+2008b). Spinach noodles and tricolor-type (red, green, and regular) macaroni are the
+most commonly available products of this type on the market.
+
+Protein-fortified macaroni products, both with and without added vegetable solids, are
+also available. These products usually contain wheat germ, dried yeast, or other
+ingredients which increase the protein content of the product. If a macaroni product is
+labeled as “with Fortified Protein,” under Federal standards it must have a protein
+content of at least 20 percent on a 13-percent moisture basis and protein quality not
+less than 95 percent of that of casein (FDA, 2008b).
+
+Corn pasta is available on the market to meet the needs of those who are allergic to
+wheat and hence must avoid foods containing wheat ingredients. Corn pasta is made
+exclusively from corn flour. Since it contains no wheat flour ingredients, corn pasta is
+not required to meet Federal standards for macaroni or noodle products.
+
+Fresh-refrigerated pasta has a higher moisture content than dry pasta and must be kept
+under refrigeration until prepared. Data are presented for plain and spinach types, both
+of which contain egg. Stuffed pasta such as ravioli and tortellini are listed in Food
+Group 22, Meals, Entrees, and Side Dishes.
+
+Data are presented for the cooked forms of both egg-containing and non-egg-containing
+homemade pasta. The recipe used for each item is footnoted.
+
+
+                                               81
+Oriental noodles do not fall under Federal Standards of Identity. Although these
+products may be labeled as noodles, they usually do not contain eggs. Chinese-style
+pasta products currently in SR include rice noodles, chow mein noodles, and fried flat
+noodles. Two Japanese noodles are currently in SR: soba noodles are made with
+buckwheat flour; somen is a thin wheat flour noodle. Chinese cellophane noodles, also
+called long rice noodles, are made from mung bean flour and are included in Food
+Group 16, Legumes and Legume Products.
+
+
+References for Notes on Foods – Cereal Grains and Pasta
+
+AACC International. Definition of whole grains. Version current 1999. Internet:
+http://www.aaccnet.org/initiatives/definitions/Pages/WholeGrain.aspx (accessed 30
+June 2014).
+
+Dendy DAV. Sorghum and millets: chemistry and technology. St. Paul MN: American
+Association of Cereal Chemists,1995.
+
+Guerrero R, Gebhardt SE, Holden JM, Kretsch M, Todd K, Novotny R, Murphy S. White
+rice sold in Hawaii, Guam, and Saipan often lacks nutrient enrichment.
+ J Am Diet Assoc 2009;109(10):1738-43.
+
+US Department of Agriculture (USDA), Agricultural Research Service, National Genetic
+Resources Program. Germplasm Resources Information Network - (GRIN) [online
+database]. Version current 2011. Internet:
+http://www.ars-grin.gov/cgi-bin/npgs/html/tax_search.pl (accessed 30 June 2014).
+
+US Department of Agriculture and US Department of Health and Human Services.
+Dietary Guidelines for Americans, 2010. 7th ed. Version current 2011. Internet:
+http://www.cnpp.usda.gov/DGAs2010-PolicyDocument.htm (accessed 30 June 2014).
+
+US Food and Drug Administration, US Department of Health and Human Services.
+Cereal Flours and Related Products. Washington, DC: US Government Printing Office,
+2008a. [Code of Federal Regulations, 21 CFR 137]
+
+US Food and Drug Administration, US Department of Health and Human Services.
+Macaroni and Noodle Products. Washington, DC: US Government Printing Office,
+2008b. [Code of Federal Regulations, 21 CFR 139]
+
+US Food and Drug Administration, US Department of Health and Human Services.
+Whole Grain Label Statements [Docket 2006D-0066]. Version current 2006. Internet:
+http://www.fda.gov/Food/GuidanceRegulation/GuidanceDocumentsRegulatoryInformati
+on/LabelingNutrition/ucm059088.htm (accessed 30 June 2014).
+
+
+
+                                             82
+Eggs (Food Group 01)
+
+Recently, NDL arranged to have regular large, whole eggs picked up in a nationwide
+sampling as part of NFNAP. Notes on other food items in this food group will be
+included at a later time.
+
+Sampling and analysis. Whole egg samples of regular large eggs were picked up in
+March/April 2010 at the 12 NFNAP sampling locations. The sample units were sent to
+the Food Analysis Laboratory Control Center (FALCC) at Virginia Tech for preparation
+of analytical samples to be sent to the qualified analytical laboratories. Individual
+samples from each of the 12 locations were prepared for the determination of
+proximates (moisture, protein and fat), fatty acids, and cholesterol. Samples units from
+the 12 locations were paired, using randomization, to create six city-pair analytical
+composites for analysis of vitamins, minerals, and sugars. FALCC also sent quality
+control (QC) samples to the analytical laboratories to monitor accuracy and precision of
+measurements.
+
+Results. The analytical and QC data received from the analytical laboratories were
+reviewed. The QC results were found to be acceptable, and the analytical data for most
+nutrients were comparable to the current data in the National Nutrient Database for
+Standard Reference, Release 22 (SR22). Values for cholesterol, vitamin D, and vitamin
+B12 were significantly different from the older values which were based on analyses from
+eggs sampled in 2002.
+
+Cholesterol was determined by gas chromatography; the new value for cholesterol is
+372 mg/100g compared to the SR22 value of 423 mg/100g. This estimate was based
+on the analysis of the 12 individual samples by each of three independent qualified
+laboratories. The results for QC materials from all three laboratories were also
+acceptable.
+
+Vitamin D was determined by HPLC-UV for the six city-pair composites. The results for
+the QC material were within the acceptable range. Two of the city-pair composites were
+analyzed by another lab using HPLC-MS/MS to double check the data. The inter-lab
+results were in good agreement.
+
+Values for four of the six city-pair composites for Vitamin D averaged 1.2 μg (49.2
+IU)/100g (with a range of 1 μg (39 IU) – 1.8 μg (71 IU)/100g), compared to the SR22
+value of 1.2 μg (49.6 IU)/100g. However, the values for the other two city-pairs were
+3.8 μg (150 IU)/100g and 8.7 μg (348 IU)/100g. Each city-pair with a higher vitamin D
+value contained samples of eggs for a specific brand picked up in two non-contiguous
+states from the same grocery store chain, and those cartons were labeled as follows:
+5X MORE VITAMIN D PER EGG.
+
+Reserve samples for the four individual cities that were part of the two city-pairs with
+higher vitamin D were sent to the laboratory to be analyzed for vitamin D. One of the
+city values was within the expected range (1 μg (39 IU) – 1.8 μg (71 IU)/100g) of the
+                                               83
+data for the current estimate. The other three city values were much higher and fell
+between 7.1 μg (284 IU)/100g and 12.1 μg (483 IU)/100g. Two of these three samples
+were from the same store brand, and their respective cartons were labeled as indicated
+above, and thus higher in vitamin D. The third of the three was obtained from a store
+brand that had no vitamin D statement on the carton. Additional samples of that brand
+were sampled, analyzed, and confirmed.
+
+To calculate the final estimate of vitamin D in large, whole eggs, all values from samples
+which had no vitamin D claims were averaged together to yield a value of 2.0 μg (82
+IU)/100g with a range of 1.0 μg (39 IU)/100g to 9.2 μg (368 IU)/100g. The new value is
+64% higher than the SR22 value of 1.2 μg (50 IU)/100g.
+
+The values for the store brand which contained a vitamin D claim were not used. NDL
+staff decided that the presence of a claim could influence the selection of that brand by
+the consumer and may bias the representativeness of the sample set. However, it is
+clear that some eggs in the marketplace now contain higher levels of vitamin D. It is
+likely that this change is due to the fortification of specific feeds given to the laying hens.
+More research will be needed to assess the impact on vitamin D levels in eggs
+nationwide.
+
+The new value for vitamin B12 (0.89 μg/100g) is 31% lower than the value in SR22 (1.29
+μg/100g). The values for the QC samples were satisfactory.
+
+Impact. All egg products that contain egg yolk, where the fat soluble cholesterol and
+vitamin D are found, were updated to reflect the change in values. NDL food
+specialists, who use whole eggs and other egg products as ingredients in formulations
+and recipes, will use these cholesterol and vitamin D values to calculate the
+composition of those food items. NDL plans to follow up on the sampling and analysis
+of whole eggs in one to two years to monitor levels of vitamin D in samples nationwide.
+
+
+
+
+                                                 84
+

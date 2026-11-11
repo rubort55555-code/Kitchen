@@ -1,0 +1,806 @@
+{
+ "units": {
+  "water": "g",
+  "kcal": "kcal",
+  "prot": "g",
+  "fat": "g",
+  "ash": "g",
+  "carb": "g",
+  "fib": "g",
+  "sug": "g",
+  "ca": "mg",
+  "fe": "mg",
+  "mg": "mg",
+  "p": "mg",
+  "k": "mg",
+  "na": "mg",
+  "zn": "mg",
+  "cu": "mg",
+  "mn": "mg",
+  "se": "µg",
+  "vitc": "mg",
+  "b1": "mg",
+  "b2": "mg",
+  "b3": "mg",
+  "b5": "mg",
+  "b6": "mg",
+  "folate": "µg",
+  "folic": "µg",
+  "foodfol": "µg",
+  "b9dfe": "µg DFE",
+  "choline": "mg",
+  "b12": "µg",
+  "vitaiu": "IU",
+  "vita": "µg RAE",
+  "retinol": "µg",
+  "acar": "µg",
+  "bcar": "µg",
+  "bcrypt": "µg",
+  "lyco": "µg",
+  "lutzea": "µg",
+  "vite": "mg",
+  "vitd": "µg",
+  "vitdiu": "IU",
+  "vitk": "µg",
+  "satfat": "g",
+  "mufa": "g",
+  "pufa": "g",
+  "chol": "mg",
+  "gw1": "g",
+  "gw2": "g",
+  "refuse": "%"
+ },
+ "nutr_def_full_table": {
+  "203": {
+   "units": "g",
+   "tag": "PROCNT",
+   "name": "Protein"
+  },
+  "204": {
+   "units": "g",
+   "tag": "FAT",
+   "name": "Total lipid (fat)"
+  },
+  "205": {
+   "units": "g",
+   "tag": "CHOCDF",
+   "name": "Carbohydrate, by difference"
+  },
+  "207": {
+   "units": "g",
+   "tag": "ASH",
+   "name": "Ash"
+  },
+  "208": {
+   "units": "kcal",
+   "tag": "ENERC_KCAL",
+   "name": "Energy"
+  },
+  "209": {
+   "units": "g",
+   "tag": "STARCH",
+   "name": "Starch"
+  },
+  "210": {
+   "units": "g",
+   "tag": "SUCS",
+   "name": "Sucrose"
+  },
+  "211": {
+   "units": "g",
+   "tag": "GLUS",
+   "name": "Glucose (dextrose)"
+  },
+  "212": {
+   "units": "g",
+   "tag": "FRUS",
+   "name": "Fructose"
+  },
+  "213": {
+   "units": "g",
+   "tag": "LACS",
+   "name": "Lactose"
+  },
+  "214": {
+   "units": "g",
+   "tag": "MALS",
+   "name": "Maltose"
+  },
+  "221": {
+   "units": "g",
+   "tag": "ALC",
+   "name": "Alcohol, ethyl"
+  },
+  "255": {
+   "units": "g",
+   "tag": "WATER",
+   "name": "Water"
+  },
+  "257": {
+   "units": "g",
+   "tag": "",
+   "name": "Adjusted Protein"
+  },
+  "262": {
+   "units": "mg",
+   "tag": "CAFFN",
+   "name": "Caffeine"
+  },
+  "263": {
+   "units": "mg",
+   "tag": "THEBRN",
+   "name": "Theobromine"
+  },
+  "268": {
+   "units": "kJ",
+   "tag": "ENERC_KJ",
+   "name": "Energy"
+  },
+  "269": {
+   "units": "g",
+   "tag": "SUGAR",
+   "name": "Sugars, total"
+  },
+  "287": {
+   "units": "g",
+   "tag": "GALS",
+   "name": "Galactose"
+  },
+  "291": {
+   "units": "g",
+   "tag": "FIBTG",
+   "name": "Fiber, total dietary"
+  },
+  "301": {
+   "units": "mg",
+   "tag": "CA",
+   "name": "Calcium, Ca"
+  },
+  "303": {
+   "units": "mg",
+   "tag": "FE",
+   "name": "Iron, Fe"
+  },
+  "304": {
+   "units": "mg",
+   "tag": "MG",
+   "name": "Magnesium, Mg"
+  },
+  "305": {
+   "units": "mg",
+   "tag": "P",
+   "name": "Phosphorus, P"
+  },
+  "306": {
+   "units": "mg",
+   "tag": "K",
+   "name": "Potassium, K"
+  },
+  "307": {
+   "units": "mg",
+   "tag": "NA",
+   "name": "Sodium, Na"
+  },
+  "309": {
+   "units": "mg",
+   "tag": "ZN",
+   "name": "Zinc, Zn"
+  },
+  "312": {
+   "units": "mg",
+   "tag": "CU",
+   "name": "Copper, Cu"
+  },
+  "313": {
+   "units": "µg",
+   "tag": "FLD",
+   "name": "Fluoride, F"
+  },
+  "315": {
+   "units": "mg",
+   "tag": "MN",
+   "name": "Manganese, Mn"
+  },
+  "317": {
+   "units": "µg",
+   "tag": "SE",
+   "name": "Selenium, Se"
+  },
+  "318": {
+   "units": "IU",
+   "tag": "VITA_IU",
+   "name": "Vitamin A, IU"
+  },
+  "319": {
+   "units": "µg",
+   "tag": "RETOL",
+   "name": "Retinol"
+  },
+  "320": {
+   "units": "µg",
+   "tag": "VITA_RAE",
+   "name": "Vitamin A, RAE"
+  },
+  "321": {
+   "units": "µg",
+   "tag": "CARTB",
+   "name": "Carotene, beta"
+  },
+  "322": {
+   "units": "µg",
+   "tag": "CARTA",
+   "name": "Carotene, alpha"
+  },
+  "323": {
+   "units": "mg",
+   "tag": "TOCPHA",
+   "name": "Vitamin E (alpha-tocopherol)"
+  },
+  "324": {
+   "units": "IU",
+   "tag": "VITD",
+   "name": "Vitamin D"
+  },
+  "325": {
+   "units": "µg",
+   "tag": "ERGCAL",
+   "name": "Vitamin D2 (ergocalciferol)"
+  },
+  "326": {
+   "units": "µg",
+   "tag": "CHOCAL",
+   "name": "Vitamin D3 (cholecalciferol)"
+  },
+  "328": {
+   "units": "µg",
+   "tag": "VITD",
+   "name": "Vitamin D (D2 + D3)"
+  },
+  "334": {
+   "units": "µg",
+   "tag": "CRYPX",
+   "name": "Cryptoxanthin, beta"
+  },
+  "337": {
+   "units": "µg",
+   "tag": "LYCPN",
+   "name": "Lycopene"
+  },
+  "338": {
+   "units": "µg",
+   "tag": "LUT+ZEA",
+   "name": "Lutein + zeaxanthin"
+  },
+  "341": {
+   "units": "mg",
+   "tag": "TOCPHB",
+   "name": "Tocopherol, beta"
+  },
+  "342": {
+   "units": "mg",
+   "tag": "TOCPHG",
+   "name": "Tocopherol, gamma"
+  },
+  "343": {
+   "units": "mg",
+   "tag": "TOCPHD",
+   "name": "Tocopherol, delta"
+  },
+  "344": {
+   "units": "mg",
+   "tag": "TOCTRA",
+   "name": "Tocotrienol, alpha"
+  },
+  "345": {
+   "units": "mg",
+   "tag": "TOCTRB",
+   "name": "Tocotrienol, beta"
+  },
+  "346": {
+   "units": "mg",
+   "tag": "TOCTRG",
+   "name": "Tocotrienol, gamma"
+  },
+  "347": {
+   "units": "mg",
+   "tag": "TOCTRD",
+   "name": "Tocotrienol, delta"
+  },
+  "401": {
+   "units": "mg",
+   "tag": "VITC",
+   "name": "Vitamin C, total ascorbic acid"
+  },
+  "404": {
+   "units": "mg",
+   "tag": "THIA",
+   "name": "Thiamin"
+  },
+  "405": {
+   "units": "mg",
+   "tag": "RIBF",
+   "name": "Riboflavin"
+  },
+  "406": {
+   "units": "mg",
+   "tag": "NIA",
+   "name": "Niacin"
+  },
+  "410": {
+   "units": "mg",
+   "tag": "PANTAC",
+   "name": "Pantothenic acid"
+  },
+  "415": {
+   "units": "mg",
+   "tag": "VITB6A",
+   "name": "Vitamin B-6"
+  },
+  "417": {
+   "units": "µg",
+   "tag": "FOL",
+   "name": "Folate, total"
+  },
+  "418": {
+   "units": "µg",
+   "tag": "VITB12",
+   "name": "Vitamin B-12"
+  },
+  "421": {
+   "units": "mg",
+   "tag": "CHOLN",
+   "name": "Choline, total"
+  },
+  "428": {
+   "units": "µg",
+   "tag": "MK4",
+   "name": "Menaquinone-4"
+  },
+  "429": {
+   "units": "µg",
+   "tag": "VITK1D",
+   "name": "Dihydrophylloquinone"
+  },
+  "430": {
+   "units": "µg",
+   "tag": "VITK1",
+   "name": "Vitamin K (phylloquinone)"
+  },
+  "431": {
+   "units": "µg",
+   "tag": "FOLAC",
+   "name": "Folic acid"
+  },
+  "432": {
+   "units": "µg",
+   "tag": "FOLFD",
+   "name": "Folate, food"
+  },
+  "435": {
+   "units": "µg",
+   "tag": "FOLDFE",
+   "name": "Folate, DFE"
+  },
+  "454": {
+   "units": "mg",
+   "tag": "BETN",
+   "name": "Betaine"
+  },
+  "501": {
+   "units": "g",
+   "tag": "TRP_G",
+   "name": "Tryptophan"
+  },
+  "502": {
+   "units": "g",
+   "tag": "THR_G",
+   "name": "Threonine"
+  },
+  "503": {
+   "units": "g",
+   "tag": "ILE_G",
+   "name": "Isoleucine"
+  },
+  "504": {
+   "units": "g",
+   "tag": "LEU_G",
+   "name": "Leucine"
+  },
+  "505": {
+   "units": "g",
+   "tag": "LYS_G",
+   "name": "Lysine"
+  },
+  "506": {
+   "units": "g",
+   "tag": "MET_G",
+   "name": "Methionine"
+  },
+  "507": {
+   "units": "g",
+   "tag": "CYS_G",
+   "name": "Cystine"
+  },
+  "508": {
+   "units": "g",
+   "tag": "PHE_G",
+   "name": "Phenylalanine"
+  },
+  "509": {
+   "units": "g",
+   "tag": "TYR_G",
+   "name": "Tyrosine"
+  },
+  "510": {
+   "units": "g",
+   "tag": "VAL_G",
+   "name": "Valine"
+  },
+  "511": {
+   "units": "g",
+   "tag": "ARG_G",
+   "name": "Arginine"
+  },
+  "512": {
+   "units": "g",
+   "tag": "HISTN_G",
+   "name": "Histidine"
+  },
+  "513": {
+   "units": "g",
+   "tag": "ALA_G",
+   "name": "Alanine"
+  },
+  "514": {
+   "units": "g",
+   "tag": "ASP_G",
+   "name": "Aspartic acid"
+  },
+  "515": {
+   "units": "g",
+   "tag": "GLU_G",
+   "name": "Glutamic acid"
+  },
+  "516": {
+   "units": "g",
+   "tag": "GLY_G",
+   "name": "Glycine"
+  },
+  "517": {
+   "units": "g",
+   "tag": "PRO_G",
+   "name": "Proline"
+  },
+  "518": {
+   "units": "g",
+   "tag": "SER_G",
+   "name": "Serine"
+  },
+  "521": {
+   "units": "g",
+   "tag": "HYP",
+   "name": "Hydroxyproline"
+  },
+  "573": {
+   "units": "mg",
+   "tag": "",
+   "name": "Vitamin E, added"
+  },
+  "578": {
+   "units": "µg",
+   "tag": "",
+   "name": "Vitamin B-12, added"
+  },
+  "601": {
+   "units": "mg",
+   "tag": "CHOLE",
+   "name": "Cholesterol"
+  },
+  "605": {
+   "units": "g",
+   "tag": "FATRN",
+   "name": "Fatty acids, total trans"
+  },
+  "606": {
+   "units": "g",
+   "tag": "FASAT",
+   "name": "Fatty acids, total saturated"
+  },
+  "607": {
+   "units": "g",
+   "tag": "F4D0",
+   "name": "4:0"
+  },
+  "608": {
+   "units": "g",
+   "tag": "F6D0",
+   "name": "6:0"
+  },
+  "609": {
+   "units": "g",
+   "tag": "F8D0",
+   "name": "8:0"
+  },
+  "610": {
+   "units": "g",
+   "tag": "F10D0",
+   "name": "10:0"
+  },
+  "611": {
+   "units": "g",
+   "tag": "F12D0",
+   "name": "12:0"
+  },
+  "612": {
+   "units": "g",
+   "tag": "F14D0",
+   "name": "14:0"
+  },
+  "613": {
+   "units": "g",
+   "tag": "F16D0",
+   "name": "16:0"
+  },
+  "614": {
+   "units": "g",
+   "tag": "F18D0",
+   "name": "18:0"
+  },
+  "615": {
+   "units": "g",
+   "tag": "F20D0",
+   "name": "20:0"
+  },
+  "617": {
+   "units": "g",
+   "tag": "F18D1",
+   "name": "18:1 undifferentiated"
+  },
+  "618": {
+   "units": "g",
+   "tag": "F18D2",
+   "name": "18:2 undifferentiated"
+  },
+  "619": {
+   "units": "g",
+   "tag": "F18D3",
+   "name": "18:3 undifferentiated"
+  },
+  "620": {
+   "units": "g",
+   "tag": "F20D4",
+   "name": "20:4 undifferentiated"
+  },
+  "621": {
+   "units": "g",
+   "tag": "F22D6",
+   "name": "22:6 n-3 (DHA)"
+  },
+  "624": {
+   "units": "g",
+   "tag": "F22D0",
+   "name": "22:0"
+  },
+  "625": {
+   "units": "g",
+   "tag": "F14D1",
+   "name": "14:1"
+  },
+  "626": {
+   "units": "g",
+   "tag": "F16D1",
+   "name": "16:1 undifferentiated"
+  },
+  "627": {
+   "units": "g",
+   "tag": "F18D4",
+   "name": "18:4"
+  },
+  "628": {
+   "units": "g",
+   "tag": "F20D1",
+   "name": "20:1"
+  },
+  "629": {
+   "units": "g",
+   "tag": "F20D5",
+   "name": "20:5 n-3 (EPA)"
+  },
+  "630": {
+   "units": "g",
+   "tag": "F22D1",
+   "name": "22:1 undifferentiated"
+  },
+  "631": {
+   "units": "g",
+   "tag": "F22D5",
+   "name": "22:5 n-3 (DPA)"
+  },
+  "636": {
+   "units": "mg",
+   "tag": "PHYSTR",
+   "name": "Phytosterols"
+  },
+  "638": {
+   "units": "mg",
+   "tag": "STID7",
+   "name": "Stigmasterol"
+  },
+  "639": {
+   "units": "mg",
+   "tag": "CAMD5",
+   "name": "Campesterol"
+  },
+  "641": {
+   "units": "mg",
+   "tag": "SITSTR",
+   "name": "Beta-sitosterol"
+  },
+  "645": {
+   "units": "g",
+   "tag": "FAMS",
+   "name": "Fatty acids, total monounsaturated"
+  },
+  "646": {
+   "units": "g",
+   "tag": "FAPU",
+   "name": "Fatty acids, total polyunsaturated"
+  },
+  "652": {
+   "units": "g",
+   "tag": "F15D0",
+   "name": "15:0"
+  },
+  "653": {
+   "units": "g",
+   "tag": "F17D0",
+   "name": "17:0"
+  },
+  "654": {
+   "units": "g",
+   "tag": "F24D0",
+   "name": "24:0"
+  },
+  "662": {
+   "units": "g",
+   "tag": "F16D1T",
+   "name": "16:1 t"
+  },
+  "663": {
+   "units": "g",
+   "tag": "F18D1T",
+   "name": "18:1 t"
+  },
+  "664": {
+   "units": "g",
+   "tag": "F22D1T",
+   "name": "22:1 t"
+  },
+  "665": {
+   "units": "g",
+   "tag": "",
+   "name": "18:2 t not further defined"
+  },
+  "666": {
+   "units": "g",
+   "tag": "",
+   "name": "18:2 i"
+  },
+  "669": {
+   "units": "g",
+   "tag": "F18D2TT",
+   "name": "18:2 t,t"
+  },
+  "670": {
+   "units": "g",
+   "tag": "F18D2CLA",
+   "name": "18:2 CLAs"
+  },
+  "671": {
+   "units": "g",
+   "tag": "F24D1C",
+   "name": "24:1 c"
+  },
+  "672": {
+   "units": "g",
+   "tag": "F20D2CN6",
+   "name": "20:2 n-6 c,c"
+  },
+  "673": {
+   "units": "g",
+   "tag": "F16D1C",
+   "name": "16:1 c"
+  },
+  "674": {
+   "units": "g",
+   "tag": "F18D1C",
+   "name": "18:1 c"
+  },
+  "675": {
+   "units": "g",
+   "tag": "F18D2CN6",
+   "name": "18:2 n-6 c,c"
+  },
+  "676": {
+   "units": "g",
+   "tag": "F22D1C",
+   "name": "22:1 c"
+  },
+  "685": {
+   "units": "g",
+   "tag": "F18D3CN6",
+   "name": "18:3 n-6 c,c,c"
+  },
+  "687": {
+   "units": "g",
+   "tag": "F17D1",
+   "name": "17:1"
+  },
+  "689": {
+   "units": "g",
+   "tag": "F20D3",
+   "name": "20:3 undifferentiated"
+  },
+  "693": {
+   "units": "g",
+   "tag": "FATRNM",
+   "name": "Fatty acids, total trans-monoenoic"
+  },
+  "695": {
+   "units": "g",
+   "tag": "FATRNP",
+   "name": "Fatty acids, total trans-polyenoic"
+  },
+  "696": {
+   "units": "g",
+   "tag": "F13D0",
+   "name": "13:0"
+  },
+  "697": {
+   "units": "g",
+   "tag": "F15D1",
+   "name": "15:1"
+  },
+  "851": {
+   "units": "g",
+   "tag": "F18D3CN3",
+   "name": "18:3 n-3 c,c,c (ALA)"
+  },
+  "852": {
+   "units": "g",
+   "tag": "F20D3N3",
+   "name": "20:3 n-3"
+  },
+  "853": {
+   "units": "g",
+   "tag": "F20D3N6",
+   "name": "20:3 n-6"
+  },
+  "855": {
+   "units": "g",
+   "tag": "F20D4N6",
+   "name": "20:4 n-6"
+  },
+  "856": {
+   "units": "g",
+   "tag": "",
+   "name": "18:3i"
+  },
+  "857": {
+   "units": "g",
+   "tag": "F21D5",
+   "name": "21:5"
+  },
+  "858": {
+   "units": "g",
+   "tag": "F22D4",
+   "name": "22:4"
+  },
+  "859": {
+   "units": "g",
+   "tag": "F18D1TN7",
+   "name": "18:1-11 t (18:1t n-7)"
+  }
+ },
+ "note": "n: ключи как в ABBREV.txt SR27, на 100 г съедобной части"
+}

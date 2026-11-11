@@ -1,0 +1,469 @@
+values for fluoride are national averages and should be used with caution when levels of
+fluoride in locally produced foods and beverages are of interest or concern.
+
+Vitamins. Vitamins included in the database are ascorbic acid (vitamin C), thiamin,
+riboflavin, niacin, pantothenic acid, vitamin B6, vitamin B12, added vitamin B12, folate,
+total choline, betaine, vitamin A (individual carotenoids, and retinol), vitamin E
+(tocopherols and tocotrienols), added vitamin E, vitamin K (phylloquinone,
+dihydrophylloquinone and menaquinone-4), and vitamin D (D2 and D3).
+
+Ascorbic acid. In the current database system, nearly all data for ascorbic acid listed
+under Nutrient No. 401, total ascorbic acid, have been determined by the
+microfluorometric method (AOAC 967.22). Older values which have not been updated
+are primarily for reduced ascorbic acid and were determined by the dichloroindophenol
+method (AOAC 967.21).
+
+Thiamin, Riboflavin, and Niacin. Thiamin is determined chemically by the fluorometric
+method (AOAC 942.23). Fluorometric (AOAC 970.65) or microbiological (AOAC 940.33)
+methods are used to measure riboflavin. Niacin is determined by microbiological
+methods (AOAC 944.13). The values for niacin are for preformed niacin only and do not
+include the niacin contributed by tryptophan, a niacin precursor. The term “niacin
+equivalent” applies to the potential niacin value; that is, to the sum of the preformed
+niacin and the amount that could be derived from tryptophan (the mean value of 60 mg
+tryptophan is considered equivalent to 1 mg niacin (IOM, 1998)). Although not included
+in SR, niacin equivalents can be estimated for those foods where amino acids are
+given:
+
+   mg Niacin equivalents = mg niacin + (mg tryptophan / 60).
+
+Pantothenic acid, Vitamins B6, and B12. Pantothenic acid (AOAC 945.74 or 992.07),
+vitamin B6 (AOAC 961.15), and vitamin B12 (AOAC 952.20) are determined by
+microbiological methods. Vitamin B12 is found intrinsically in foods of animal origin or
+those containing some ingredient of animal origin, e.g., cake that contains eggs or milk.
+For foods that contain only plant products, the value for vitamin B12 is assumed to be
+zero with the exception of some fortified foods discussed below. Some reports contain
+values for vitamin B12 in certain fermented foods (soy sauce and miso). It is believed
+that this B12 is synthesized not by the microorganisms responsible for the fermentation
+of the food, but rather by other contaminating microorganisms. Therefore, one should
+not consider these foods to be a consistent source of vitamin B12 (Liem et al., 1977) and
+these values are not included in the database.
+
+The Dietary Reference Intakes (DRI) report on vitamin B12 recommended that people
+older than 50 years meet their Recommended Dietary Allowances (RDA) mainly by
+consuming foods fortified with vitamin B12 or a vitamin B12-containing supplement (IOM,
+1998). Since vitamin B12 added as a fortificant may provide a significant source of the
+vitamin in the diet, Nutrient No. 578 for “added vitamin B12” has been added to the
+database. In this release, there are over 300 foods fortified with vitamin B12. The vast
+                                                15
+majority are breakfast cereals, infant formulas, and plant-based meat substitutes. For
+these foods, the value for total vitamin B12 is used for “added vitamin B12.” Only a few
+cereals containing a milk ingredient would contain any intrinsic vitamin B12. Milk-based
+infant formulas should contain intrinsic vitamin B12. Plant-based meat substitutes should
+not contain intrinsic vitamin B12.
+
+Folate. Values are reported for folic acid (Nutr. No. 431), food folate (Nutr. No. 432), and
+total folate reported in μg (Nutr. No. 417) and as dietary folate equivalents (DFEs) (Nutr.
+No. 435). These varied folate forms are included and defined as described in the DRI
+report on folate (IOM, 1998). RDAs for folate are expressed in DFEs, which take into
+account the greater bioavailability of synthetic folic acid compared with naturally
+occurring food folate.
+
+To calculate DFEs for any single food, it is necessary to have separate values for
+naturally occurring food folate and added synthetic folic acid in that item.
+
+   μg DFE = μg food folate + (1.7 * μg folic acid)
+
+Folate values for foods analyzed through NFNAP are generated using the trienzyme
+microbiological procedure (Martin et al., 1990). For a small number of foods, total folate
+was determined as the sum of one or more individual folate vitamers
+(5-methyltetrahydrofolate, 10-formyl folic acid, 5-formyltetrahydrofolic acid, and
+tetrahydrofolic acid); these are indicated in the footnotes. Microbiological methods
+measure μg total folate; for enriched foods, folic acid and food folate are not
+distinguished from each other. Therefore, to be able to calculate DFE, multi-ingredient
+enriched foods are analyzed by an additional microbiological procedure without
+enzymes to estimate the amount of added folic acid (Chun et al., 2006). Food folate is
+then calculated by difference.
+
+The addition of folic acid to enriched cereal-grain products subject to standards of
+identity began in the United States on January 1, 1998 (CFR, Title 21, Pts. 136—137).
+These products include enriched flour, cornmeal and grits, farina, rice, macaroni,
+noodles, bread, rolls, and buns. Folic acid may continue to be added (with some
+restrictions on amounts) to breakfast cereals, infant formulas, medical foods, food for
+special dietary use, and meal replacement products.
+
+For unenriched foods, food folate would be equivalent to total folate since folic acid
+(pteroylmonoglutamic acid) occurs rarely in foods. Therefore, the same value with its
+number of data points and standard error, if present, is used for total folate and food
+folate. The folic acid value is assumed to be zero.
+
+For enriched cereal-grain products with standards of identity (flour, cornmeal and grits,
+farina, rice, macaroni, noodles, bread, rolls, and buns), the folic acid value is calculated
+by subtracting the analytical folate value before fortification from the analytical value for
+the fortified product.
+
+                                                16
+Some ready-to-eat (RTE) cereals have been fortified with folic acid for over 25 years,
+and food folate values (before fortification) are not readily available for these products.
+Food folate was estimated by means of the NDBS formulation program for a variety of
+high-consumption cereals. Mean folate values were calculated for categories of RTE
+cereals based on grain content. Added folic acid was then calculated by subtracting
+estimated food folate from the total folate content. Generally, food folate values
+represent a small proportion of the total folate in the fortified products.
+
+Choline and Betaine. Beginning with SR19 (2006), total choline and betaine values from
+the USDA Database for the Choline Content of Common Foods, Release 2 (USDA,
+2008) have been incorporated into SR. In some cases, newer values have been
+incorporated into SR and these supersede the values in the Special Interest Database
+for choline. Values for the individual metabolites have not been added to SR, but are
+available in the USDA Database for the Choline Content of Common Foods,
+(http://www.ars.usda.gov/Services/docs.htm?docid=6232).
+
+For analysis, choline compounds are extracted, partitioned into organic and aqueous
+phases using methanol and chloroform, and analyzed directly by liquid chromatography-
+electrospray ionization-isotope dilution mass spectrometry (LC-ESI-IDMS) (Koc et al.,
+2002). Samples are analyzed for betaine and these choline-contributing compounds:
+free choline (Cho), glycerophosphocholine (GPC), phosphocholine (Pcho),
+phosphatidylcholine (Ptdcho), and sphingomyelin (SM).
+
+Because there are metabolic pathways for the interconversion of Cho, GPC, Pcho,
+PtdCho, and SM (Zeisel et al., 1994), total choline content is calculated as the sum of
+these choline-contributing metabolites. Betaine values are not included in the
+calculation of total choline since the conversion of choline to betaine is irreversible
+(Zeisel et al., 2003).
+
+Vitamin A. Beginning with SR15 (2002), values for vitamin A in μg of retinol activity
+equivalents (RAEs) and μg of retinol are reported. At the same time, values in μg of
+retinol equivalents (REs) were dropped from the database.
+
+This change responded to new reference values for vitamin A in the DRI report issued
+by the Institute of Medicine of the National Academies (IOM, 2001). The report
+recommended changing the factors used for calculating vitamin A activity from the
+individual provitamin A carotenoids and introduced RAE as a new unit for expressing
+vitamin A activity. One μg RAE is equivalent to 1 μg of all-trans-retinol, 12 μg of all-
+trans-β-carotene, or 24 μg of other provitamin A carotenoids. The RAE conversion
+factors are based on studies showing that the conversion of provitamin A carotenoids to
+retinol was only half as great as previously thought.
+
+Vitamin A is also reported in international units (IU), and will continue to be reported
+because it is still the unit used for nutrition labeling in the US. One IU is equivalent to
+0.3 μg retinol, 0.6 μg β-carotene, or 1.2 μg other provitamin-A carotenoids (NAS/NRC,
+1989) and thus over-estimates bioavailability.
+                                                17
+Individual carotenoids (β-carotene, α-carotene, β-cryptoxanthin, lycopene, and
+lutein+zeaxanthin) are reported. The analytical data are from NFNAP, generated using
+HPLC methodology (AOAC 941.15 or Craft, 2001). Most analytical systems do not
+separate lutein and zeaxanthin, so these carotenoids are shown combined. These
+values supersede those in Holden et al., 1999. Vitamin A activity values in RAE and IU
+were calculated from the content of retinol and individual carotenoids (β-carotene, α-
+carotene, and β-cryptoxanthin) using the appropriate factors. For food items used in the
+FNDDS, carotenoid values are imputed if analytical data are not available. For many of
+these items data are only available for vitamin A in IU. The variability in carotenoid
+levels due to cultivar, season, growing area, etc., as well as rounding within the NDBS,
+increases the difficulty in matching the calculated vitamin A activity values from imputed
+individual carotenoids to the existing IU values. As a result, the vitamin A IU value
+agrees within ±15 IU of the value calculated from individual carotenoids.
+
+When individual carotenoids are not reported for plant foods (i.e., fruits, vegetables,
+legumes, nuts, cereal grains, and spices and herbs), μg RAE are calculated by dividing
+the IU value by 20. In foods of animal origin, such as eggs, beef, pork, poultry, lamb,
+veal, game, and fish (except for some organ meats and dairy), all of the vitamin A
+activity is contributed by retinol. For these foods, where analytical data are not available,
+μg RAE and μg of retinol are calculated by dividing the IU value by 3.33.
+
+In foods that contain both retinol and provitamin A carotenoids, the amount of each of
+these components must be known to calculate RAE. Previously, most of the vitamin A
+data in the database were received as IU. Therefore, the amounts of the provitamin A
+carotenoids and retinol were then estimated from the ingredients. Once the components
+had been estimated, μg RAE were calculated as (IU from carotenoids/20) + (IU from
+retinol/3.33). Micrograms of retinol were calculated as IU from retinol/3.33.
+
+Vitamin D. Due to considerable public health interest in vitamin D, a multi-year project
+was undertaken by NDL to expand and update the relatively small existing dataset of
+vitamin D values in SR. Much of the original data for vitamin D had been published
+earlier in USDA’s Provisional Table (PT-108) (Weihrauch and Tamaki, 1991), with
+values for fortified foods updated as needed with data received from the food industry.
+Earlier data collected between 1999 and 2008 utilized AOAC methods 982.29 or
+992.26.
+
+The availability of vitamin D data for foods permitting subsequent dietary intake
+assessment is expected be a useful tool in investigating dietary requirements of vitamin
+D in vulnerable groups, one of the specific research recommendations of the 2005
+Dietary Guidelines Committee (DGAC. 2004). An Institute of Medicine Committee to
+Review Dietary Reference Intakes for Vitamin D and Calcium was convened in 2009 to
+assess current relevant data and revise, as appropriate, the DRIs for vitamin D and
+calcium. Their report was issued in 2011 (IOM).
+
+
+                                                18
+Cholecalciferol (vitamin D3; Nutr. No. 326) is the form naturally occurring in animal
+products and the form most commonly added to fortified foods. Ergocalciferol (vitamin
+D2; Nutr. No. 325) is the form found in plants and is added to some fortified foods, such
+as soy milk. In SR27, vitamin D (Nutr. No. 328) is defined as the sum of vitamin D2 and
+vitamin D3.
+
+Before foods could be analyzed for vitamin D and included in SR, analytical
+methodology had to be developed that could be used for a variety of food matrices
+(Byrdwell, 2008). Although a single method is not required for USDA-sponsored
+analyses, all participating laboratories must demonstrate that their analysis of quality
+control materials falls within an acceptable range of values. For vitamin D, all methods
+involved extraction with solvent(s), cleanup steps, and quantification by HPLC or by
+HPLC and LC/MS. In the absence of certified quality control materials for vitamin D,
+NDL, in collaboration with Virginia Tech, developed five matrix-specific materials, one of
+which was sent with every batch of foods to be analyzed. The materials were: vitamin
+D3 fortified fluid milk, a vitamin D3 fortified multigrain ready-to-eat cereal, orange juice
+fortified with calcium and vitamin D3, pasteurized process cheese fortified with vitamin
+D3, and canned red salmon, a natural source of D3 (Phillips et al., 2008). Vitamin D may
+also be present as 25-hydroxycholecalciferol in some foods such as fish, meat, and
+poultry. At this point the analytical methodology used to determine this metabolite of
+vitamin D has not been sufficiently validated; when work on this validation is completed
+25-hydroxycholecalciferol values will be provided in future releases of SR.
+
+Once an improved method of analysis was developed (Byrdwell, 2008), and the
+laboratories certified, a selection of foods, representing natural vitamin D sources and
+fortified sources, were chosen for sampling and analysis under the NFNAP (Haytowitz
+et al., 2008). Analyses have been completed for raw eggs and the following fortified
+products: fluid milk at 4 fat levels, reduced fat chocolate milk, fruit yogurt, and orange
+juice. Current analytical values for fish are based on limited analyses; additional
+samples are being analyzed and values will be updated in future SR releases. Vitamin
+D analyses have also been completed for selected cuts/pieces of chicken, pork, and
+beef. These data have been determined by a new LC/MS/MS method (Huang and
+Winters, 2011).
+
+Vitamin D values in SR27 are provided in both micrograms (μg) and International Units
+(IU) to support both the analytical unit (μg) and the unit (IU) that is currently used in
+nutrient labeling of foods in the US. The biological activity of vitamin D is given as 40
+IU/μg. Where available, specific isomers of vitamin D are reported only in μg.
+Calculations for vitamin D in SR include:
+
+   Vitamin D, μg (Nutr. No. 328) = vitamin D2, μg + vitamin D3, μg
+   Vitamin D, IU (Nutr. No. 324) = vitamin D, μg x 40
+
+Vitamin D values in μg (Nutr. No. 328) are provided for all items in SR27 used to create
+the FNDDS.
+
+                                               19
+In some cases, it was possible to identify food groups for which the foods do not provide
+or only contain trace amounts of vitamin D. Values for those foods were set to zero.
+For example, except for mushrooms, plant foods are not expected to contain any
+appreciable levels of vitamin D. In order to provide vitamin D estimates for the rest of
+the foods provided to create the FNDDS, data for other foods have been taken from the
+scientific literature or from other food composition databases, calculated from industry-
+declared % DV fortification levels, determined by formulation/recipe techniques, or
+estimated by other USDA imputation methods.
+
+Fluid milk available at the retail level is fortified. The dairy industry provided guidance
+that most dairy products used as ingredients in formulated (commercial multi-ingredient)
+foods, are not likely to be fortified with vitamin D. Likewise, margarine used in
+commercial products is generally not vitamin D-fortified; a relatively low number of
+vitamin D-fortified margarines and spreads are available in the retail market. For
+ingredients that could be fortified at the retail level, but generally are not fortified at the
+food processing level, two related profiles are available in SR – one with added vitamin
+D and one without. When estimates were calculated for formulated foods, the
+unfortified profile was used. For home-prepared foods, such as pudding prepared with
+milk, the fortified ingredient(s) was selected for use in the recipe calculation of vitamin
+D. In the case of margarine, a market-share blend of fortified and unfortified product
+was used.
+
+For some retail products, such as yogurt, there is considerable brand-to-brand
+difference in vitamin D fortification practices. One brand or line of products may be
+fortified with vitamin D, whereas another brand may not. Both types are included in the
+database. The market changes quickly and consumers concerned about vitamin D
+intake should always confirm vitamin D content by checking the product label.
+
+Vitamin E. The DRI report (IOM, 2000) defines vitamin E as the naturally occurring form
+(RRR-α-tocopherol) and three synthetic forms of α-tocopherol. Since the release of
+SR16-1 (2003), NDL has reported vitamin E as mg of α-tocopherol (Nutr. No. 323) in
+accordance with the DRI report. Analytical values for tocopherols found in the database
+are determined by gas-liquid chromatography (GLC) or high-performance liquid
+chromatography (HPLC; Ye et al., 2000). Although β, γ, and δ-tocopherol do not
+contribute to vitamin E activity, they are included in the database when analytical data
+are available and starting with SR27 (2013) data on α-, β, γ, and δ-tocotrienol have also
+been included.
+
+In the 2000 DRI report, a revised factor was recommended for calculation of the
+milligram amounts of α-tocopherol contributed by synthetic forms of vitamin E, since all
+rac-α-tocopherol contains 2R-stereoisomeric and 2S-stereoisomeric forms in equal
+amounts. Vitamin E activity to establish recommended intakes is limited to the 2R-
+stereoisomeric forms of α-tocopherol (IOM, 2000).
+
+
+
+                                                 20
+However, the unit for vitamin E required by the NLEA is IU and is based on the 1968
+RDA definitions for vitamin E (CFR, Title 21, Pt. 101) (US Food and Drug
+Administration–Department of Health and Human Services, 2004).
+
+When NDL receives vitamin E data from the food industry expressed as IU, the values
+are converted to mg amounts based on the conversions of vitamin E in IU to mg as
+defined by the DRI report:
+
+   One mg of α-tocopherol = IU of the all rac-α-tocopherol compound × 0.45; and
+   One mg of α-tocopherol = IU of the RRR-α-tocopherol compound × 0.67.
+
+The basis of the vitamin E tolerable upper intake level (UL), another important reference
+value defined in the DRI report, was established using all forms of supplemental α-
+tocopherol (IOM, 2000). Although the 2S-stereoisomers do not contribute to dietary
+requirements for vitamin E (IOM, 2000), they do contribute to the total intake relative to
+the UL. Starting with SR18 (2005), “added vitamin E” (Nutr. No. 573) was added to the
+database. In this release, there are about 140 food items that have values for added
+vitamin E greater than 0. For the majority of these food items, the form added is all rac-
+α-tocopherol; these values should be multiplied by 2 to relate intakes of this form to the
+UL. Items that are fortified with RRR-α-tocopherol are identified by a footnote and the
+added vitamin E value can be used directly to estimate its contribution to the UL.
+
+Vitamin K. Much of the data for vitamin K has been generated under NFNAP and
+supersedes the values in the USDA Provisional Table (PT-104) (Weihrauch and Chatra,
+1994). Vitamin K is extracted with hexane, purified with solid phase extraction using
+silica columns, and quantitated using HPLC with chemical reduction and fluorescence
+detection. Losses are corrected using vitamin K1(25) as the internal standard (Booth
+et al., 1994). Starting with SR23 (2010), in addition to data on vitamin K1 (Nutr. No.
+430), data on dihydrophylloquinone (Nutr. No. 429) and menaquinone-4 (Nutr. No. 428)
+are also released. Dihydrophylloquinone is created during the commercial
+hydrogenation of plant oils. Menaquinone-4 is formed from vitamin K1 and/or the
+synthetic form of vitamin K found in animal feed, and is found primarily in meats and
+meat products.
+
+Lipid Components. Fatty acids are expressed as the actual quantity of fatty acid in g
+per 100 g of food and do not represent fatty acids as triglycerides. Historically, most
+fatty acid data were obtained as the percentage of fatty acid methyl esters and
+determined by GLC analyses (AOAC 996.06). These data were converted to g fatty acid
+per 100 g total lipid using lipid conversion factors and then to g fatty acid per 100 g
+edible portion of food using the total lipid content. Details of the derivation of lipid
+conversion factors were published by Weihrauch et al., (1977).
+
+In the redesigned NDBS, fatty acid data may be imported in a variety of units and
+converted within the system. No conversions are required if data are received as g fatty
+acid per 100 g edible portion of food. Data received as fatty acid esters and as
+triglycerides are converted to fatty acids using Sheppard conversion factors. Sheppard
+                                              21
+conversion factors are based on the molecular weights of the specific fatty acid and its
+corresponding esters (butyl or methyl) and triglyceride (Sheppard, 1992). When fatty
+acid data are received as percentages of fatty acid methyl esters, methyl esters are
+converted to fatty acids using Sheppard conversion factors and then multiplied by total
+lipid (Nutrient No. 204) to give g fatty acid per 100 g edible portion of food. Occasionally,
+total lipid values are available from a variety of data sources, but individual fatty acids
+are available from fewer sources. In those cases, it may be necessary to normalize the
+individual fatty acids to the mean fat value of the food item. In the case of normalized
+fatty acids, the sum of the individual fatty acids will equal the mean fat value multiplied
+by the Weihrauch (1977) lipid conversion factor for that food item. No statistics of
+variability are reported for normalized fatty acids.
+
+Individual Fatty Acids. The basic format for describing individual fatty acids is that the
+number before the colon indicates the number of carbon atoms in the fatty acid chain
+and the number after the colon indicates the number of double bonds. For unsaturated
+fatty acids, additional nutrient numbers have been added to accommodate the reporting
+of many specific positional and geometric isomers. Of the specific isomers, there are
+two basic classifications considered: omega double bond position and cis/trans
+configuration of double bonds.
+
+Omega-3 (n-3) and omega-6 (n-6) isomers are denoted in shorthand nomenclature as
+n-3 and n-6. The n- number indicates the position of the first double bond from the
+methyl end of the carbon chain. The letter c or t indicates whether the bond is cis or
+trans. For polyunsaturated fatty acids, cis and trans configurations at successive double
+bonds may be indicated. For example, linoleic acid is an 18 carbon omega-6 fatty acid
+with 2 double bonds, both in cis configuration. When data are isomer specific, linoleic
+acid is described as 18:2 n-6 c,c. Other isomers of 18:2, for which nutrient numbers
+have now been assigned, include 18:2 c,t; 18:2 t,c; 18:2 t,t; 18:2 t not further defined;
+and 18:2 i. 18:2 i is not a single isomer but includes isomers other than 18:2 n-6 c,c with
+peaks that cannot be easily differentiated in the particular food item. Systematic and
+common names for fatty acids are given in Table 2.
+
+Table 2 is provided for the convenience of users in attaching common names or
+systematic names to fatty acids in this database. Though individual fatty acids are more
+specific than in past releases, it is not possible to include every possible geometric and
+positional isomer. Where specific isomers exist for a fatty acid, the common name of the
+most typical isomer is listed for the undifferentiated fatty acid and an asterisk (*)
+designates the specific isomer to which that name applies. For example, the most
+typical isomer for 18:1 is oleic acid. Thus, undifferentiated 18:1 is designated in Table 2
+as oleic acid, but an asterisk by 18:1 c indicates the common name for 18:1 oleic acid
+actually only applies to this isomer.
+
+
+
+
+                                                22
+Table 2.—Systematic and Common Names for Fatty Acids
+Fatty acid                  Systematic name       Common name of        Nutrient
+                                                  most typical isomer   number
+Saturated fatty acids
+4:0                         butanoic              butyric                 607
+6:0                         hexanoic              caproic                 608
+8:0                         octanoic              caprylic                609
+10:0                        decanoic              capric                  610
+12:0                        dodecanoic            lauric                  611
+13:0                        tridecanoic                                   696
+14:0                        tetradecanoic         myristic                612
+15:0                        pentadecanoic                                 652
+16:0                        hexadecanoic          palmitic                613
+17:0                        heptadecanoic         margaric                653
+18:0                        octadecanoic          stearic                 614
+20:0                        eicosanoic            arachidic               615
+22:0                        docosanoic            behenic                 624
+24:0                        tetracosanoic         lignoceric              654
+Monounsaturated fatty acids
+14:1                        tetradecenoic         myristoleic            625
+15:1                        pentadecenoic                                697
+16:1 undifferentiated       hexadecenoic          palmitoleic            626
+ 16:1 cis                                                                673*
+ 16:1 trans                                                              662
+17:1                        heptadecenoic                                687
+18:1 undifferentiated       octadecenoic          oleic                  617
+ 18:1 cis                                                                674*
+ 18:1 trans                                                              663
+20:1                        eicosenoic            gadoleic               628
+22:1 undifferentiated       docosenoic            erucic                 630
+ 22:1 cis                                                                676*
+ 22:1 trans                                                              664
+24:1 cis                    cis-tetracosenoic     nervonic               671
+Polyunsaturated fatty acids
+18:2 undifferentiated       octadecadienoic       linoleic                618
+ 18:2 trans not further                                                   665
+   defined
+ 18:2 i (mixed isomers)                                                  666
+ 18:2 n-6 cis, cis                                                       675*
+ 18:2 trans, trans                                                       669
+ 18:2 conjugated linoleic                                                670
+   acid (CLAs)
+18:3 undifferentiated       octadecatrienoic      linolenic              619
+ 18:3 n-3 cis, cis, cis                           alpha-linolenic        851*
+ 18:3 n-6 cis, cis, cis                           gamma-linolenic        685
+
+                                       23
+Fatty acid                       Systematic name             Common name of      Nutrient
+                                                             most typical isomer number
+  18:3 trans (other isomers)                                                       856
+  18:3 i (mixed isomers)                                                           866
+18:4                                octadecatetraenoic     parinaric               627
+20:2 n-6 cis, cis                   eicosadienoic                                  672
+20:3 undifferentiated               eicosatrienoic                                 689
+  20:3 n-3                                                                         852
+  20:3 n-6                                                                         853
+20:4 undifferentiated                                                              620
+  20:4 n-6                          eicosatetraenoic       arachidonic            855*
+20:5 n-3                            eicosapentaenoic (EPA) timnodonic              629
+21:5                                                                               857
+22:4                                                                               858
+22:5 n-3                            docosapentaenoic (DPA) clupanodonic            631
+22:6 n-3                            docosahexaenoic (DHA)                          621
+* Designates the specific isomer associated with the common name; the typical isomer
+is listed for the undifferentiated fatty acid.
+
+Fatty acid totals. Only a small portion of the fatty acid data received for release in SR27
+contains specific positional and geometric isomers. Therefore, it has been necessary to
+maintain the usual nutrient numbers corresponding to fatty acids with no further
+differentiation other than carbon length and number of double bonds. To aid users of
+our data, specific isomers are always summed to provide a total value for the
+undifferentiated fatty acid. For example, mean values for the specific isomers of 18:2
+are summed to provide a mean for 18:2 undifferentiated (Nutrient No. 618). Other fatty
+acid totals provided are: (1) the sum of saturated, monounsaturated, and
+polyunsaturated fatty acids; and (2) the sum of trans-monoenoic, the sum of trans-
+polyenoic, and the sum of all trans fatty acids.
+
+Values for total saturated, monounsaturated, and polyunsaturated fatty acids may
+include individual fatty acids not reported; therefore, the sum of their values may exceed
+the sum of the individual fatty acids. In rare cases, the sum of the individual fatty acids
+may exceed the sum of the values given for the total saturated fatty acids (SFA),
+monounsaturated fatty acids (MUFA), and polyunsaturated fatty acids (PUFA). These
+differences are generally caused by rounding and should be relatively small.
+
+For multi-ingredient processed brand-name foods, industry data are often available for
+fatty acid classes (SFA, MUFA, and PUFA) but are lacking for individual fatty acids. In
+these cases, individual fatty acids are calculated from the fatty acids of the individually
+listed ingredients and normalized to the total fat level. A best-fit approximation has been
+made to fatty acid classes but, unavoidably, calculated sums of individual fatty acid
+totals do not always match industry data for fatty acid classes. Zero values for individual
+fatty acids should be understood to mean that trace amounts may be present. When g
+
+
+                                               24
+

@@ -1,0 +1,436 @@
+Lamb, Veal, and Game Products (Food Group 17)
+
+Recently, NDL collaborated with other scientists to obtain analytical data on Australian
+lamb and veal, as well as New Zealand lamb. NDL also collaborated with Colorado
+State University on a domestic veal study. Notes on other items in this food group will
+be included after other studies have been completed.
+
+Australian Lamb and Veal Study
+
+A study was conducted to obtain nutrient values for specific cuts of raw Australian veal
+and lamb. Australian scientific collaborators sent samples to Texas Tech University,
+where samples were homogenized, composited, and analyzed for nutrients needed for
+labeling. The veal cuts analyzed were rib roast, fore shank, and hind shank. Ground
+lamb sold as 85% lean was also analyzed. Nutrient values were added to SR for each
+of these cuts.
+
+New Zealand Lamb Study
+
+A study was conducted in collaboration with the New Zealand Meat Industry Association
+to determine nutrient composition of 25 lamb cuts and offal items (8-10 samples per cut)
+which are available in retail grocery stores in the US. This study was done along with a
+study of New Zealand beef cuts, described in the Notes on Beef section of this report.
+The lamb cuts were boneless chump, hind shank, tunnel boned leg/ chump off/shank
+off, bone in leg chop/steak, fully frenched rack, partly frenched rack, tenderloin,
+boneless loin, loin chop, loin saddle, square cut shoulder, boneless rolled netted
+shoulder, square cut shoulder chops, foreshank, breast, boneless flap, neck chops,
+ground lamb, liver, kidney, heart, sweetbreads, brains, testes, and swiss cut tongue.
+These cuts were selected by the members of the New Zealand Meat Industry
+Association with different items being supplied from different meat plants throughout
+New Zealand. Retail cuts fabricated from the meat carcasses were prepared for
+dissection, homogenization and nutrient analysis at Massey University, New Zealand.
+Weights for component factors such as separable lean, intramuscular and
+subcutaneous fat (separable fat), bone and connective tissue were determined. Nutrient
+values were added to SR for each of these cuts in both raw and cooked form (using a
+braised, fast roasted, fast fried, or boiled method) for “separable lean only” and
+“separable lean and fat” items.
+
+Retail Veal Study
+
+A study was conducted with Colorado State University (CSU) to obtain nutrient and
+composition data for 7 representative retail veal cuts. The cuts were: loin chops, loin
+roast, shoulder blade chops, foreshank (center cut), foreshank (osso buco), cutlets, and
+ground veal. These retail cuts were obtained from the six major US establishments
+which conduct their own slaughter of special fed (non-bob veal) US calves. The
+locations were Greeley CO, Collingswood NJ, Detroit MI, Harleysville PA, Franklin WI,
+and Vineland NJ. Raw and cooked samples (n=6 per cut) were dissected using
+                                              85
+standard protocols and then homogenized, composited, and analyzed at CSU for
+proximates, fatty acids, cholesterol, and ICP minerals. The B-vitamins, vitamins D3 and
+25(OH)D, and selenium were analyzed at a validated commercial laboratory. Choline
+and vitamin E were analyzed at specialized laboratories. Weights of component factors
+for each cut, such as separable lean, separable fat, and bone and connective tissue,
+were determined. Nutrient values were added to SR for these cuts in raw and cooked
+form (grilled, braised or pan-fried) for “separable lean only” and “separable lean and fat”.
+
+
+
+
+                                               86
+Legumes and Legume Products (Food Group 16)
+
+The legumes included in this food group are restricted to the mature, dry seeds of the
+family Fabaceae or Leguminosae, as well as products made from them. The immature
+seeds or pods and other parts of the plant, such as leaves, tubers, and sprouted seeds
+are included in Food Group 11, Vegetables and Vegetable Products.
+
+The sources of nutrient data include the scientific literature, analytical studies conducted
+by NDL and other government agencies, and the food industry. Since the inception of
+NFNAP (p. 52) in 1997, a few legumes and legume products (common beans, baked
+beans, refried beans, chickpeas, peanut butter, and tofu,) have been sampled and
+analyzed. Data for commonly consumed raw and cooked legumes were obtained by a
+comprehensive study conducted in the 1980’s at the University of Idaho. Data on other
+raw and cooked legumes, for the most part, have been obtained from the scientific
+literature. In most cases, data for other processed legumes were supplied by the food
+industry or obtained from the scientific literature.
+
+Data are presented for raw, cooked, and canned legumes. Legume products, such as
+peanut butter, soy milk, soy flour, isolates and concentrates, tofu, tempeh, and natto,
+are also included in this food group. If appropriate, data are presented for both the
+unprepared and the prepared forms of the food.
+
+Nutrient data for different forms of the same legumes and the legume products were not
+necessarily derived from the same sample. That is, a single sample of kidney beans
+was not analyzed in all forms given in the database: raw, cooked, and canned. The
+data were obtained from many sources and most likely represent different crop years,
+growing areas, cultivars, processing techniques, lengths and conditions of storage, and
+possibly different methods of analysis. Therefore, in a comparison of different forms of
+a legume, nutritional differences should not be ascribed solely to the effect of
+processing or preparation methods.
+
+Raw legumes.--Although nutrient data were available for several cultivars of some
+legumes, the data base for any one cultivar was too small to justify giving separate
+entries by cultivar. Mature legumes are not eaten raw because toxic factors, such as
+hemaglutinins and trypsin inhibitors (Akroyd and Doughty, 1982), are present. Raw,
+mature legumes are also unpalatable and hard to digest. The usual processing or
+preparation methods, such as cooking and canning, remove or inactivate these toxic
+factors. Cooking or other processing of legumes also makes them more palatable by
+reducing the beany flavor that some find objectionable.
+
+Prepared legumes.--Nutrient data for cooked legumes were sometimes unavailable or
+incomplete. In these cases, nutrient values for the cooked form were calculated from
+data for the raw form of the same legume. For example, nutrient data for boiled
+peanuts were calculated from data for raw peanuts.
+
+
+                                               87
+Appropriate true nutrient retention factors were used to calculate the nutrient content of
+the cooked foods after adjusting for moisture changes. These are presented in the
+USDA Table of Nutrient Retention Factors, Release 6 (2007). The percentage yields for
+cooked legumes prepared from raw legumes are given in Table 22. The increased
+moisture content for cooked legumes leads to the average yield factor of about 2.5.
+
+Table 22. Yields Factors for Selected Cooked Legumes
+                                     Yield Factor
+  Legume                               Ratio of
+                                      Weights1
+   Beans:
+   Black                                  2.3
+   Cranberry                              2.3
+   Great northern                         2.5
+   Navy                                   2.3
+   Pink                                   2.3
+   Pinto                                  2.4
+   Red kidney                             2.4
+   Small red                              2.3
+   Small white                            2.3
+   Broadbeans                             2.8
+   Chickpeas                              2.1
+   Cowpeas                                2.6
+   Lima beans:
+        Baby                              2.4
+        Large                             2.6
+   Lentils                                2.7
+   Mung beans                             3.2
+   Peas, split                            2.5
+   Pigeon peas                            2.6
+1
+  Ratio of Weights = (Weight of legume cooked / Weight of legume, uncooked)
+
+Sodium values for cooked legumes are relatively low because no salt was added.
+Since the sodium content of tap water varies according to location (0-39 mg/100g [NDB
+No. 14429]), the sodium value of cooked legumes may be underestimated if the water
+supply naturally contains significant amounts of sodium. Sodium content of cooked
+legumes will depend on the amount of salt used in cooking and can be as high as that
+of canned legumes. Sodium values for cooked legumes with added salt were
+calculated by adding the sodium content of approximately 1/8 of a teaspoon of salt per
+100 grams of legumes or 236 mg of sodium to the sodium naturally occurring in the
+cooked vegetable with no salt added. Tap water also contains other dissolved minerals.
+The content varies considerably depending on the source and treatment of the local
+water supply.
+
+
+
+                                              88
+Retention values are generally based on cooking methods that minimize the loss of
+nutrients, particularly the water-soluble vitamins, primarily due to leaching into the
+cooking water. Nutrient values of cooked legumes obtained by these procedures tend
+to be higher than those values for the same legumes cooked by less-than-optimum
+methods. Some conditions that affect the retention of nutrients in legumes include
+cooking method, size and shape of the legumes or amount of surface area, maturity,
+condition of the legume, proportion of broken seeds, amount of cooling water and
+cooking time.
+
+Nutrient values for multi-ingredient mixtures such as home-prepared Boston baked
+beans were calculated from recipes developed by the US Department of Agriculture.
+Values for each nutrient provided by the ingredients used in the recipe were totaled.
+Nutrient values were adjusted by using appropriate nutrient retention values to account
+for any changes caused by evaporation or hydration and heat destruction due to
+cooking procedures.
+
+Data for canned legumes were often developed for the purpose of nutritional labeling;
+therefore data are presented for the total can contents. During the canning process,
+and sometimes during cooking, the cotyledons of legumes rupture, releasing starch into
+the brine; therefore, draining of the liquid medium is difficult. However, cooks do
+generally drain these products. Some packers may add sugar to certain canned
+legumes and this may also affect the nutrient content.
+
+Nomenclature.--To aid in identifying individual legumes listed in the tables, the scientific
+name of the legume is included in the food description file, usually on the raw form of
+the legume. The USDA Germplasm Resources Information Network (GRIN), (USDA,
+2011) was used as the basic reference for the scientific and preferred common names.
+
+Identifying legumes by their common names, however, is often confusing because
+these names are not always applied to the same food in different geographical
+locations. Some names of legumes in common use or unique to one region of the
+country have been included in the common name filed of the food description file.
+Additional descriptions of legumes and legume products are provided in the following
+paragraphs.
+
+In other countries and among immigrants to the United States, various terms are often
+substituted for “legume.” The term “pulse” is sometimes used for a legume having a low
+fat content. Pulses include common beans, broadbeans, peas, and lentils. Soybeans
+and peanuts are sometimes referred to as leguminous oilseeds (Akroyd and Doughty,
+1982). Data on oils derived from these sources, are found in Food Group 4, Fats and
+Oils.
+
+“Dhal” or “dal” are legumes that have been dehulled and split. This practice is common
+in India to shorten the cooking time. “Gram” is a term sometimes used in India for the
+whole seed of any legume (Yamaguchi, 1983) and sometimes used as another name
+
+                                                89
+for the chickpea (Duke, 1981). There are a number of other “grams.” For example, red
+gram refers to pigeon peas, green gram to mung beans, and Bengal gram to chickpeas.
+
+Adzuki beans (Vigna angularis) are grown primarily in East Asia, but have been
+introduced into the southern United States and Hawaii. These beans are eaten either
+boiled or fried. Adzuki beans ground into a fine paste are used in some confections,
+such as yokan. Canned adzuki beans, sweetened with sugar, are commonly sold in
+Hawaii (Duke, 1981).
+
+Common beans (Phaseolus vulgaris) are native to the tropical areas of Central and
+South America. They include black, black turtle soup, cranberry, French, great
+northern, kidney, navy, pink, pinto, and white beans, which are widely grown in many
+areas around the world. White beans are commonly used to prepare many types of
+baked beans. Pinto beans are used in many Mexican recipes (Akroyd and Doughty,
+1982, Duke, 1981). Data were combined for several types of kidney beans to produce
+an overall figure for kidney beans.
+
+The broadbean (Vicia faba) has been cultivated in the Mediterranean region and the
+Near East since ancient times. It was the only bean known to Europeans until the
+common bean (P. vulgaris) was introduced from the New World. There are two major
+subspecies of broadbeans. Var. major, which has large flat seeds, is usually consumed
+by humans. Var. equina, which has small, globular seeds and commonly called field
+bean or horse bean, is used for feeding livestock. Broadbeans are used in many dishes
+in the Mediterranean region, such as falafel (Akroyd and Doughty, 1982).
+
+Carob flour or powder (Ceratonia siliqua), also called St. John’s bread, may be used in
+some foods as a chocolate replacement. The seeds are ground to extract a gum,
+known as locust bean gum, which is used in many food and industrial products. The
+pods are ground to produce carob flour. Vegetable oil or other fats are frequently added
+to the raw carob flour to make confectionary coatings or candy bars. The carob tree is
+native to the eastern Mediterranean region and has been introduced to California and
+other areas (Akroyd and Doughty, 1982, Duke, 1981).
+
+Chickpeas (Cicer arietinum) or garbanzo beans are one of the most commonly
+consumed legumes in India and in the Middle East (Akroyd and Doughty, 1982). In the
+United States, canned or cooked chickpeas are a common item at many salad bars. In
+the Middle East chickpeas are used in many dishes such as hummus and falafel.
+These items have become more popular in the United States.
+
+Cowpeas (Vigna unguiculata), or black-eyed peas, are cultivated in the southern United
+States and in many tropical areas. There are three major subspecies: Vigna
+unguiculata unguiculata is the common cowpea or black-eyed pea; Vigna unguiculata
+cylindrica, or catjang, is used whole or split but is more frequently used as forage; Vigna
+unguiculata sesquipedalis, or yardlong bean, has pods that may grow to 36 inches in
+length and is commonly used in Asian cooking as a vegetable. The mature seeds are
+also used (Akroyd and Doughty, 1982).
+                                               90
+Hyacinth beans (Dolichos purpurens), also known as lablab, are native to Asia and have
+been cultivated in India for centuries. The mature seeds are eaten as a dahl.
+
+Lentils (Lens culinaris) originated in the Mediterranean area. The seeds are usually
+boiled and served in soups and stews (Akroyd and Doughty, 1982).
+
+Lima beans (Phaseolus lunatus) originated in tropical regions of the Americas and are
+now grown in tropical and subtropical areas around the world. Baby lima beans grow in
+most areas of the United States (Duke, 1981). There are two major subgroupings of
+lima beans: the small or baby type and the large lima beans.
+
+Lupins (Lupinus spp.) are found in the Americas and in the Mediterranean region.
+There are four major species. White or Egyptian lupins (Lupinus albus) are common in
+the Mediterranean region and were cultivated by the Romans. Seeds are treated by
+soaking, then boiling, and sometimes additional soaking. Sweet strains with less
+alkaloids have been developed.
+
+Blue lupin (Lupinus angustifolius) originated in northern Europe and is grown primarily
+for animal feed. Yellow lupin (Lupinus luteus) is native to southern Europe and the
+Mediterranean. Low-alkaloid varieties have been developed. Tarwi or pearl lupin
+(Lupinus mutabilis) has been grown in South America for centuries. Special preparation
+methods are required to remove the alkaloids. Low-alkaloid types are being developed
+(Akroyd and Doughty, 1982, Duke, 1981). Because of limited data, nutrient values for
+all four subspecies have been combined in the tables.
+
+Mothbeans (Vigna aconitifolia) are native to India and are eaten whole or as a dhal.
+The seeds are also used as a source of flour (Duke, 1981).
+
+Mung beans (Vigna radiata), also called green gram in India, are native to tropical areas
+of Asia and are widely grown there. Recently, mung beans have been introduced to the
+United States. In China and the United States mung beans are commonly grown for
+sprouting and are consumed as a vegetable. The mature seeds can be boiled and
+eaten. They can also be ground into a flour for use in bakery products and fried snack
+foods (Akroyd and Doughty, 1982). Mung beans are also made into a noodle-like
+product called long rice. A similar product made from mung bean flour is cellophane
+noodles.
+
+Mungo beans (Vigna mungo), sometimes called black gram, originated in India and are
+also grown in the West Indies (Vaughan and Geisler, 1997). Mungo beans are eaten
+either whole or as a dhal. They also can be boiled or roasted and ground into flour for
+use in cakes and breads.
+
+Peas (Pisum sativum), or field peas, originated in southwest Asia and are now grown in
+temperate areas around the world (Akroyd and Doughty, 1982). They were once
+named as different species-—garden peas and field peas—but are now classified
+                                              91
+together. Field peas are hardier, have smaller seeds, and are usually grown for the
+mature seeds.
+
+Peanuts (Arachis hypogaea), native to Latin America, are now grown in tropic, subtropic
+and warm-temperate areas of the world. In the United States over 60 percent of the
+peanuts are processed into peanut butter, about 20 percent are roasted, and about 19
+percent are used in confections (USDA-ERS, 2014). In other countries, peanuts are
+produced primarily for their oil and the remaining peanut cake is used for livestock feed.
+The three main types of peanuts are Virginia, Spanish, and Valencia. Virginia peanuts
+have large seeds and usually contain two seeds per pod. Spanish peanuts have small
+seeds and their pods also contain two seeds. Valencia peanuts also have small seeds
+and the pods contain two to five seeds (Brouk, 1975). Nutrient data on the different
+cultivars of peanuts were combined to generate overall values for peanuts: Virginia
+(including runner), 90.6 percent; Spanish type, 8.5 percent; and Valencia type, 0.9
+percent. By federal regulation (21 CFR 164.150), peanut butter must contain at least 90
+percent peanuts, and not more than 10 percent seasonings (including sugar, salt, and
+oil), and stabilizing ingredients.
+
+Pigeon peas (Cajanus cajan), or red gram, were probably native to Africa, spreading in
+prehistoric times to Asia (Vaughan and Geisler, 1997). In India, pigeon peas are usually
+consumed as a dahl.
+
+Soybeans (Glycine max) are among the most important sources of protein and oil
+known to man. Indigenous to eastern Asia, where they have been used in myriad ways
+for centuries, soybeans are now cultivated in eastern and southeastern Asia as well as
+in the Americas, predominately in the United States and Brazil (Akroyd and Doughty,
+1982, Duke, 1981, Vaughan and Geisler, 1997). A number of fermented soybean prod-
+ucts are known in east and southeastern Asian countries, and in recent years these
+have attracted a following in the United States.
+
+Shoyu (Japanese soy sauce) is made from equal parts soybeans and cracked, roasted
+wheat, plus salt and water. The mixture is inoculated with Aspergillus soyae mold and
+fermented from 6 months to as long as 5 years. Tamari is a different product made with
+little or no wheat. In the United States a non-fermented, synthetic product known as soy
+sauce is prepared from hydrolyzed soy protein, caramel coloring, corn syrup, salt, and
+water (Shurtleff and Aoyagi, 1979a) rather than using the traditional fermentation
+method. Soy sauces are commonly used as condiments in east and southeastern
+Asian style cooking. It is also used in western cuisines and prepared foods.
+
+Miso, or soy paste, is made from soybeans, a grain (either rice or barley), salt, and
+water. The mold Aspergillus oryzae is introduced for fermentation (Shurtleff and
+Aoyagi, 1976). Many different types of miso are marketed and rarely are identified in
+the scientific literature. Data for a number of market samples have been combined in
+the database, which explains the somewhat large variation in some nutrient values.
+
+
+                                              92
+Natto is made from whole, cooked soybeans, which are inoculated with the bacterium
+Bacillus subtiis. Natto is often served over rice or noodles as a main dish or used in
+soups and salads (Shurtleff and Aoyagi, 1979a).
+
+Tempeh, from Indonesia, is made from cooked soybeans bound together with the
+mycellia of the mold Rhizopus mycellius. The product is made into cakes or patties and
+often sliced and fried (Shurtleff and Aoyagi, 1979b).
+
+Tofu, another soy product, is prepared by precipitating the protein of soy milk with any
+of several coagulants. Tofu is prepared by soaking the whole soybeans overnight and
+later grinding them with water before draining. The resulting soy milk is pressed from
+the cooked, ground soybeans, leaving a white or yellowish pulp consisting of the
+insoluble parts of the soybean. This pulp is known as okara, and can be used in many
+recipes (Shurtleff and Aoyagi, 1979a). Any of several coagulants is then added to
+precipitate the protein and form the curds. Nigari, the traditional coagulant used in
+Japan, contains primarily magnesium chloride. Calcium chloride, calcium sulfate,
+seawater, lemon juice and vinegar can also be used. As expected, the composition of
+the coagulant affects the calcium and magnesium content of the finished product.
+Excess liquid is pressed from the curd, which in turn affects the firmness of the tofu
+(Shurtleff and Aoyagi, 1979a). Tofu is available in a number of “firmness” types, i.e.
+soft, silken, medium, firm, extra firm, and others reflecting the amount of water pressed
+from the curd. The amount of water pressed from the tofu, reflected in the firmness
+term used, will also have concomitant effect on the nutrient content—firm tofu with less
+water will have a higher nutrient content than soft types with more water. However,
+there is no standard for these terms, and one company’s tofu using a particular term,
+may be more similar to another company’s product using a different term.
+
+Soymilk is a beverage produced commercially from soybeans. In the United States, soy
+milk may be used by individuals who choose not to consume animal products, are
+allergic to cow’s milk, or who are lactose intolerant. Some infant formulas are based on
+soy milk. Soy milk can be processed in many of the same ways as cow’s milk and can
+be substituted for it in many recipes.
+
+In the United States and in other countries, soybeans are utilized as a source of oil, and
+the resulting defatted meal was formerly used for animal feed. In recent years,
+however, the defatted soy meal has been used in the preparation of many soy-based
+products. Soy flour and soy grits can also be prepared from the defatted meal. Soy
+flour is used in many foods as is or may be extruded into various soy-based products.
+Soy protein concentrates are processed to remove most of the non-protein compounds,
+primarily soluble sugars, from the defatted soy flour by wet extraction. Concentrates are
+often extruded in the preparation of many products.
+
+Soy protein isolates have had nearly all the non-protein constituents removed. The soy
+extract can be either spray-dried or extruded into an acid medium to form fibers
+resembling meat, which are marketed as textured vegetable protein. Soy protein
+
+                                              93
+isolates are also used as an ingredient in a number of food products, both as a protein
+extender and for their functional properties.
+
+Modern processing methods have been used experimentally on a number of other
+legumes, but none have reached large—scale commercial production or have gained
+the commercial acceptance of soy products.
+
+Winged beans (Psophocarpus tetragonolobus) are native to southeast Asia and have
+been introduced to tropical areas of the United States, such as Hawaii, Puerto Rico, and
+southern Florida. The pods, leaves, stems, and tubers of this plant are all edible and
+are included in Food Group 11, Vegetable and Vegetable Products. Only data on the
+mature seeds, however, are reported here. The mature seeds can be steamed, boiled,
+roasted, fermented, or processed into milk or into products such as tofu or tempeh
+(BOSTID, 1981).
+
+References for Notes on Foods – Legumes and Legume Products
+
+Akroyd WE, Doughty J. Legumes in human nutrition. Rome, Italy: Food and Agricultural
+Organization of the United Nations, 1982. [FAO Food and Nutrition Paper No. 20.]
+
+Board on Science and Technology for International Development (BOSTID), National
+Research Council. The winged bean – a high protein crop for the tropics. Washington,
+DC: National Academy Press, 1981.
+
+Brouk B. Plants consumed by man. New York: Academic Press, 1975.
+
+Shurtleff W, Aoyagi A. The book of miso. New York: Ballantine Books, 1976.
+
+Shurtleff W, Aoyagi A. The book of tofu. New York: Ballantine Books, 1979a.
+
+Shurtleff W, Aoyagi A. The book of tempeh. New York: Ballantine Books,1979b.
+
+US Department of Agriculture, Agricultural Research Service, National Genetic
+Resources Program. Germplasm Resources Information Network - (GRIN) [online
+database]. Version current 2011. Internet:
+http://www.ars-grin.gov/cgi-bin/npgs/html/tax_search.pl (accessed 30 June 2014).
+
+U.S. Department of Agriculture, Economic Research Service. Food Availability (Per
+Capita) Data System. Version current Feb 2014. Internet:
+http://www.ers.usda.gov/data-products/food-availability-(per-capita)-data-system/food-
+availability-documentation.aspx). (Accessed 21 July 2014)
+
+Vaughan JG, Geisler CA. The new oxford book of food plants. New York: Oxford
+University Press, 1997.
+
+
+                                              94
+

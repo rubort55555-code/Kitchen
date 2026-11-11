@@ -1,0 +1,431 @@
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Laboratory of the Government Chemist (2004) Nutrient survey of breakfast cereals
+Laboratory of the Government Chemist (2005) Nutrient survey of flours and grains
+University of Leeds (2007) Nutritional analysis of commonly consumed South Asian foods
+in the UK
+Department of Health (2011) Nutrient analysis survey of biscuits, buns, cakes and pastries
+Department of Health (2012) Nutrient analysis of eggs
+Department of Health (2013) Nutrient analysis of a range of processed foods with
+particular reference to trans fatty acids, revised version
+Department of Health (2013) Nutrient analysis of fish and fish products
+Department of Health (2013) Nutrient analysis of fruit and vegetables
+Public Health England (2015) Nutrient analysis of fruit and vegetables
+QIB Extra (2020) Report on nutrient analysis of key cuts of pork
+
+Scientific literature
+Bolton-Smith, C., Price, R.J.G., Fenton, S.T., Harrington, D.J. and Shearer, M.J. (2000)
+Compilation of a provisional UK database for the phylloquinone (vitamin K1) content of
+foods. Br. J. Nutr. 83, 389-399
+Caribbean Food and Nutrition Institute (1974) Food composition tables for use in the
+English speaking Caribbean. Unwin Brothers, Woking
+Cashel, K., English, R. and Lewis, J. (1989) Composition of Foods, Australia. Volume 1.
+Department of Community Services and Health, Canberra
+Chughtai, M.I.D. and Khan, A. (1960) Nutritive value of food-stuffs and planning of
+satisfactory diets in Pakistan, Part 1. Composition of raw food-stuffs, Punjab University
+Press, Lahore
+Cutrufelli, R. and Matthews, R.H. (1986) Composition of foods: beverages, raw, processed
+and prepared. Agriculture Handbook No. 8-14, US Department of Agriculture, Washington
+DC
+Cutrufelli, R. and Pehrsson, P.R. (1991) Composition of foods: snacks and sweets, raw,
+processed and prepared. Agriculture Handbook No. 8-19, US Department of Agriculture,
+Washington DC
+Department of Health and Social Security (1977) The composition of mature human milk.
+Report on Health and Social Subjects No 12, HMSO, London
+Department of Health (1991) Dietary reference values for food energy and nutrients for the
+United Kingdom. Report on Health and Social Subjects No. 41, HMSO, London
+Exler, J. (1987) Composition of foods: finfish and shellfish products, raw, processed and
+prepared, Agriculture Handbook No 8-15, US Department of Agriculture, Washington DC
+Gebhardt, S.E., Cutrufelli, R. and Matthews, R.H. (1982) Composition of foods: fruits and
+fruit juices, raw, processed and prepared, Agriculture Handbook No 8-9, US Department of
+Agriculture, Washington DC
+
+
+
+                                                  21
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Gopalan, C., Rama Sastri, B.V. and Balasubramanian, S.C. (1980) Nutritive value of
+Indian foods, National Institute of Nutrition, Indian Council of Medical Research,
+Hyderabad
+Haytowitz, D.B. and Matthews, R.H. (1986) Composition of foods: legumes and legume
+products, raw, processed and prepared. Agriculture Handbook No. 8-11, US Department
+of Agriculture, Washington DC
+Lewis, J. and English, R. (1990) Composition of foods, Australia. Volume 5, nuts and
+legumes, beverages, miscellaneous foods. Department of Community Services and
+Health, Canberra
+Marsh, A.C., Moss, M.K. and Murphy, E.W. (1977) Composition of foods: spices and
+herbs, raw, processed and prepared. Agriculture Handbook No. 8-2, US Department of
+Agriculture, Washington, Washington DC
+McCarthy, M.A. and Matthews, R.H. (1984) Composition of foods: nut and seed products,
+raw, processed and prepared. Agriculture Handbook No. 8-12, US Department of
+Agriculture, Washington DC
+Polacchi, W., McHargue, J.S. and Perloff, B.P. (1982) Food composition tables for the
+near east, Food and Agriculture Organization of the United Nations, Rome
+Posati, L.P. and Orr, M.L. (1976) Composition of foods, dairy and egg products, raw,
+processed and prepared, Agriculture Handbook No. 8-1, US Department of Agriculture,
+Washington DC
+U.S. Department of Agriculture, Agricultural Research Service. (2013) USDA National
+Nutrient Database for Standard Reference, Release 26. Nutrient Data Laboratory Home
+Page
+Visser, F.R. and Burrows, J.K. (1983) Composition of New Zealand foods. 1, characteristic
+fruits and vegetables. DSIR Bulletin 235, New Zealand Department of Scientific and
+industrial Research, Wellington
+Wharton, P.A., Eaton, P.M. and Day, K.C. (1983) Sorrento Asian food tables: food tables,
+recipes and customs of mothers attending Sorrento Maternity Hospital, Birmingham,
+England. Hum. Nutr. Appli. Nutr., 37A, 378-402
+Wu Leung, W.T., Butrum, R.R., Chang, F.H., Narayama Rao, M. and Polacchi, W. (1972)
+Food composition table for use in East Asia, Food and Agriculture Organization and US
+Department of Health, Education and Welfare, Bethesda
+
+
+
+
+                                                  22
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+
+Appendix B: Food sub-group codes
+Cereals and cereal products                                                A
+Flours, grains and starches                                                AA
+Sandwiches                                                                 AB
+Rice                                                                       AC
+Pasta                                                                      AD
+Pizzas                                                                     AE
+Breads                                                                     AF
+Rolls                                                                      AG
+Breakfast cereals                                                          AI
+Infant cereal foods                                                        AK
+Biscuits                                                                   AM
+Cakes                                                                      AN
+Pastry                                                                     AO
+Buns and pastries                                                          AP
+Puddings                                                                   AS
+Savouries                                                                  AT
+
+Milk and milk products                                                     B
+Cows milk                                                                  BA
+        Breakfast milk                                                     BAB
+        Skimmed milk                                                       BAE
+        Semi-skimmed milk                                                  BAH
+        Whole milk                                                         BAK
+        Channel Island milk                                                BAN
+        Processed milks                                                    BAR
+Other milks                                                                BC
+Infant formulas                                                            BF
+        Whey-based modified milks                                          BFD
+        Non-whey-based modified milks                                      BFG
+        Soya-based modified milks                                          BFJ
+        Follow-on formulas                                                 BFP
+Milk-based drinks                                                          BH
+Creams                                                                     BJ
+        Fresh creams (pasteurised)                                         BJC
+        Frozen creams (pasteurised)                                        BJF
+        Sterilised creams                                                  BJL
+        UHT creams                                                         BJP
+        Imitation creams                                                   BJS
+Cheeses                                                                    BL
+Yogurts                                                                    BN
+
+                                                  23
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+       Whole milk yogurts                                                  BNE
+       Low fat yogurts                                                     BNH
+       Other yogurts                                                       BNS
+Ice creams                                                                 BP
+Puddings and chilled desserts                                              BR
+Savoury dishes and sauces                                                  BV
+
+Eggs                                                                       C
+Eggs                                                                       CA
+Egg dishes                                                                 CD
+      Savoury egg dishes                                                   CDE
+      Sweet egg dishes                                                     CDH
+
+Vegetables                                                                 D
+Potatoes                                                                   DA
+      Early potatoes                                                       DAE
+      Main crop potatoes                                                   DAM
+      Chipped old potatoes                                                 DAP
+      Potato products                                                      DAR
+Beans and lentils                                                          DB
+Peas                                                                       DF
+Vegetables, general                                                        DG
+Vegetables, dried                                                          DI
+Vegetable dishes                                                           DR
+
+Fruit                                                                      F
+Fruit, general                                                             FA
+Fruit juices                                                               FC
+
+Nuts and seeds                                                             G
+Nuts and seeds, general                                                    GA
+
+Herbs and spices                                                           H
+Fish and fish products                                                     J
+White fish                                                                 JA
+Fatty fish                                                                 JC
+Crustacea                                                                  JK
+Molluscs                                                                   JM
+Fish products and dishes                                                   JR
+
+
+
+                                                  24
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Meat and meat products                                                     M
+Meat                                                                       MA
+       Bacon                                                               MAA
+       Beef                                                                MAC
+       Lamb                                                                MAE
+       Pork                                                                MAG
+       Veal                                                                MAI
+Poultry                                                                    MC
+       Chicken                                                             MCA
+       Duck                                                                MCC
+       Goose                                                               MCE
+       Grouse                                                              MCG
+       Partridge                                                           MCI
+       Pheasant                                                            MCK
+       Pigeon                                                              MCM
+       Turkey                                                              MCO
+Game                                                                       ME
+       Hare                                                                MEA
+       Rabbit                                                              MEC
+       Venison                                                             MEE
+Offal                                                                      MG
+Burgers and grillsteaks                                                    MBG
+Meat products                                                              MI
+Other meat products                                                        MIG
+Meat dishes                                                                MR
+
+Fats and oils                                                              O
+Spreading fats                                                             OA
+Animal fats                                                                OB
+Oils                                                                       OC
+Non-animal fats                                                            OE
+Cooking fats                                                               OF
+
+Beverages                                                                  P
+Powdered drinks, essences and infusions                                    PA
+Powdered drinks and essences                                               PAA
+Infusions                                                                  PAC
+Soft drinks                                                                PC
+       Carbonated drinks                                                   PCA
+       Squash and cordials                                                 PCC
+Juices                                                                     PE
+
+
+                                                  25
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Alcoholic beverages                                                        Q
+Beers                                                                      QA
+Ciders                                                                     QC
+Wines                                                                      QE
+Fortified wines                                                            QF
+Vermouths                                                                  QG
+Liqueurs                                                                   QI
+Spirits                                                                    QK
+
+Sugars, preserves and snacks                                               S
+Sugars, syrups and preserves                                               SC
+Confectionery                                                              SE
+      Chocolate confectionery                                              SEA
+      Non-chocolate confectionery                                          SEC
+Savoury snacks                                                             SN
+      Potato-based snacks                                                  SNA
+      Potato and mixed cereal snacks                                       SNB
+      Non-potato snacks                                                    SNC
+
+Soups, sauces and miscellaneous foods                                      W
+Soups                                                                      WA
+       Homemade soups                                                      WAA
+       Canned soups                                                        WAC
+       Packet soups                                                        WAE
+Sauces                                                                     WC
+       Dairy sauces                                                        WCD
+       Salad sauces, dressings and pickles                                 WCG
+       Non-salad sauces                                                    WCN
+Pickles and chutneys                                                       WE
+Miscellaneous foods                                                        WY
+
+
+
+
+                                                  26
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+
+Appendix C: Acronyms, descriptions and units
+Acronym           Description                                              Units
+13CISRET          13-cis-retinol                                           µg
+25OHD3            25-hydroxy vitamin D3                                    µg
+5METHF            5-methyl folate                                          µg
+ACAR              Alpha-carotene                                           µγ
+ALCO              Alcohol                                                  g
+ALTRET            All-trans-retinol                                        µg
+AOACFIB           AOAC fibre                                               g
+ATOPH             Alpha-tocopherol                                         mg
+ATOTR             Alpha-tocotrienol                                        mg
+BCAR              Beta-carotene                                            µγ
+BIOT              Biotin                                                   µγ
+BRASPHYTO         Brassicasterol                                           mg
+BSITPHYTO         Beta-sitosterol                                          mg
+BTOPH             Beta-tocopherol                                          mg
+BTOPH             Beta-tocopherol                                          mg
+CA                Calcium                                                  mg
+CAMPHYTO          Campesterol                                              mg
+CAREQU            Carotene                                                 µγ
+CHO               Carbohydrate                                             g
+CHOL              Cholesterol                                              mg
+CITA              Citric acid                                              g
+CL                Chloride                                                 mg
+COMM              Comments and data source
+CRYPYT            Cryptoxanthins                                           µγ
+CU                Copper                                                   mg
+D5AVEN            Delta-5-avenasterol                                      mg
+D7AVEN            Delta-7-avenasterol                                      mg
+D7STIG            Delta-7-stigmastenol                                     mg
+DEHYRET           Dehydroretinol                                           µg
+DESC              Food description
+DTOPH             Delta-tocopherol                                         mg
+
+                                                  27
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Acronym           Description                                                   Units
+EDPOR             Edible proportion
+ENGFIB            Englyst fibre                                                 g
+FAC10:0           Decanoic acid per 100g fatty acids                            g
+FAC10:1           Decenoic acid per 100g fatty acids                            g
+FAC10:1c          cis-Decenoic acid per 100g fatty acids                        g
+FAC11:0xb         ex Br Undecanoic acid per 100g fatty acids                    g
+FAC12:0           Dodecanoic acid per 100g fatty acids                          g
+FAC12:0xb         ex Br Dodecanoic acid per 100g fatty acids                    g
+FAC12:1           Dodecenoic acid per 100g fatty acids                          g
+FAC12:1c          cis-Dodecenoic acid per 100g fatty acids                      g
+FAC13:0xb         ex Br Tridecanoic acid                                        g
+FAC14:0           Tetradecanoic acid per 100g fatty acids                       g
+FAC14:0xb         ex Br Tetradecanoic acid per 100g fatty acids                 g
+FAC14:1           Tetradecenoic acid per 100g fatty acids                       g
+FAC14:1c          cis-Tetradecenoic acid per 100g fatty acids                   g
+FAC15:0           Pentadecanoic acid per 100g fatty acids                       g
+FAC15:0xb         ex Br Pentadecanoic acid per 100g fatty acids                 g
+FAC15:1           Pentadecenoic acid per 100g fatty acids                       g
+FAC15:1c          cis-Pentadecenoic acid per 100g fatty acids                   g
+FAC16 poly        unknown C16 polyunsaturated fatty acids per 100g fatty acid   g
+FAC16:0           Hexadecanoic acid per 100g fatty acids                        g
+FAC16:0xb         ex Br Hexadecanoic acid per 100g fatty acids                  g
+FAC16:1           Hexadecenoic acid per 100g fatty acids                        g
+FAC16:1c          cis-Hexadecenoic acid per 100g fatty acids                    g
+FAC16:2c          cis-Hexadecadienoic acid per 100g fatty acids                 g
+FAC16:3c          cis-Hexadecatrienoic acid per 100g fatty acids                g
+FAC16:4           Hexadecatetraenoic acid per 100g fatty acids                  g
+FAC16:4c          cis-Hexadecatetraenoic acid per 100g fatty acids              g
+FAC17:0           Heptadecanoic acid per 100g fatty acids                       g
+FAC17:0xb         ex Br Heptadecanoic acid per 100g fatty acids                 g
+FAC17:1           Heptadecenoic acid per 100g fatty acids                       g
+FAC17:1c          cis-Heptadecenoic acid per 100g fatty acids                   g
+FAC18 poly        unknown C18 polyunsaturated fatty acids per 100g fatty acid   g
+
+                                                  28
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Acronym           Description                                                  Units
+FAC18:0           Octadecanoic acid per 100g fatty acids                       g
+FAC18:0xb         ex Br Octadecanoic acid per 100g fatty acids                 g
+FAC18:1           Octadecenoic acid per 100g fatty acids                       g
+FAC18:1c          cis-Octadecenoic acid per 100g fatty acids                   g
+FAC18:1n7         n-7 Octadecenoic acid per 100g fatty acids                   g
+FAC18:1n9         n-9 Octadecenoic acid per 100g fatty acids                   g
+FAC18:2           Octadecadienoic acid per 100g fatty acids                    g
+FAC18:2cn6        cis n-6 Octadecadienoic acid per 100g fatty acids            g
+FAC18:3           Octadecatrienoic acid per 100g fatty acids                   g
+FAC18:3cn3        cis n-3 Octadecatrienoic acid per 100g fatty acids           g
+FAC18:3cn6        cis n-6 Octadecatrienoic acid per 100g fatty acids           g
+FAC18:4           Octadecatetraenoic acid per 100g fatty acids                 g
+FAC18:4cn3        cis n-3 Octadecatetraenoic acid per 100g fatty acids         g
+FAC20 poly        unknown C20 polyunsaturated fatty acid per 100g fatty acid   g
+FAC20:0           Eicosanoic acid per 100g fatty acids                         g
+FAC20:0xb         ex Br Eicosanoic acid per 100g fatty acids                   g
+FAC20:1           Eicosenoic acid per 100g fatty acids                         g
+FAC20:1c          cis-Eicosenoic acid per 100g fatty acids                     g
+FAC20:2           Eicosadienoic acid per 100g fatty acids                      g
+FAC20:2cn6        cis n-6 Eicosadienoic acid per 100g fatty acids              g
+FAC20:3           Eicosatrienoic acid per 100g fatty acids                     g
+FAC20:3cn6        cis n-6 Eicosatrienoic acid per 100g fatty acids             g
+FAC20:4           Eicosatetraenoic acid per 100g fatty acids                   g
+FAC20:4cn6        cis n-6 Eicosatetraenoic acid per 100g fatty acids           g
+FAC20:5           Eicosapentaenoic acid per 100g fatty acids                   g
+FAC20:5cn3        cis n-3 Eicosapentaenoic acid per 100g fatty acids           g
+FAC21:5           Heneicosapentaenoic acid per 100g fatty acids                g
+FAC21:5cn3        cis n-3 Heneicosapentaenoic acid per 100g fatty acids        g
+FAC22 poly        unknown C22 polyunsaturated fatty acid per 100g fatty acid   g
+FAC22:0           Docosanoic acid per 100g fatty acids                         g
+FAC22:0xb         ex Br Docosanoic acid per 100g fatty acids                   g
+FAC22:1           Docosenoic acid per 100g fatty acids                         g
+FAC22:1c          cis-Docosenoic acid per 100g fatty acids                     g
+
+                                                  29
+McCance and Widdowson’s The Composition of Foods integrated dataset 2021
+
+
+
+Acronym           Description                                              Units
+FAC22:1n11        n-11 Docosenoic acid per 100g fatty acids                g
+FAC22:1n9         n-9 Docosenoic acid per 100g fatty acids                 g
+FAC22:2           Docosadienoic acid per 100g fatty acids                  g
+FAC22:2cn6        cis n-6 Docosadienoic acid per 100g fatty acids          g
+FAC22:3cn6        cis n-6 Docosatriienoic acid per 100g fatty acids        g
+FAC22:4           Docosatetraenoic acid per 100g fatty acids               g
+FAC22:4cn6        cis n-6 Docosatetraenoic acid per 100g fatty acids       g
+FAC22:5           Docosapentaenoic acid per 100g fatty acids               g
+FAC22:5cn3        cis n-3 Docosapentaenoic acid per 100g fatty acids       g
+FAC22:6           Docosahexaenoic acid (DHA) per 100g fatty acids          g
+FAC22:6cn3        cis n-3 Docosahexaenoic acid (DHA) per 100g FA           g
+FAC24:0           Tetracosanoic acid per 100g fatty acids                  g
+FAC24:0xb         ex Br Tetracosanoic acid per 100g fatty acids            g
+FAC24:1           Tetracosenoic acid per 100g fatty acids                  g
+FAC24:1c          cis-Tetracosenoic acid per 100g fatty acids              g
+FAC25:0xb         ex Br Pentacosanoic acid per 100g fatty acids            g
+FAC4:0            Butanoic acid per 100g fatty acids                       g
+FAC6:0            Hexanoic acid per 100g fatty acids                       g
+FAC8:0            Octanoic acid per 100g fatty acids                       g
+FACTRANS          Total Trans fatty acids per 100g fatty acids             g
+FAT               Fat                                                      g
+FE                Iron                                                     mg
+FOD10:0           Decanoic acid per 100g food                              g
+FOD10:1           Decenoic acid per 100g food                              g
+FOD10:1c          cis-Decenoic acid per 100g food                          g
+FOD11:0xb         ex Br Undecanoic acid per 100g food                      g
+FOD12:0           Dodecanoic acid per 100g food                            g
+FOD12:0xb         ex Br Dodecanoic acid per 100g food                      g
+FOD12:1           Dodecenoic acid per 100g food                            g
+FOD12:1c          cis-Dodecenoic acid per 100g food                        g
+FOD13:0           Tridecanoic acid per 100g food                           g
+FOD13:0xb         ex Br Tridecanoic acid per 100g food                     g
+FOD14:0           Tetradecanoic acid per 100g food                         g
+
+                                                  30
+
