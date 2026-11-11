@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Chevron, Header, Seg, Sheet } from "../components/ui";
 import { defaultSettings, getState, makeBackup, markBackup, restore, setSettings, useStore, type Backup } from "../lib/store";
 import { allCatalog, FISH_TYPE_TEXT, shelfDays } from "../lib/catalog";
-import { DEFAULT_RULES, newRule } from "../lib/exclusions";
+import { newRule } from "../lib/exclusions";
 import { parseBackupText, type Parsed } from "../lib/importOld";
 import { makeDemo } from "../lib/demo";
 import { FAQ, SCREEN_HELP, SECTIONS, searchHelp, type HelpSection, type Screen } from "../lib/help";
@@ -244,6 +244,18 @@ function Rules() {
   const s = useStore((x) => x.settings);
   const [editing, setEditing] = useState<string | null>(null);
   const setRule = (r: Rule) => setSettings({ rules: s.rules.map((x) => (x.id === r.id ? r : x)) });
+  // Любое ограничение, в том числе начальное, можно удалить; удалённое начальное можно вернуть
+  const missingDefaults = defaultSettings().rules.filter((d) => !s.rules.some((x) => x.id === d.id));
+  function removeRule(r: Rule) {
+    const before = s.rules;
+    setSettings({ rules: s.rules.filter((x) => x.id !== r.id) });
+    setEditing(null);
+    toast(`Ограничение удалено: ${r.title}`, () => setSettings({ rules: before }));
+  }
+  function restoreDefaults() {
+    setSettings({ rules: [...s.rules, ...missingDefaults] });
+    toast("Начальные ограничения возвращены");
+  }
   return (
     <div className="screen">
       <Header title="Ограничения" screen="rules" onBack={back} backText="Ещё" />
@@ -264,8 +276,8 @@ function Rules() {
       <h2>Базовые продукты</h2>
       <p className="muted mt0">Они всегда есть дома и не считаются недостающими в рецептах.</p>
       <textarea className="inp" style={{ minHeight: 80 }} defaultValue={s.basics.join(", ")} onBlur={(e: any) => setSettings({ basics: splitList(e.target.value) })} aria-label="Базовые продукты" />
-      <button className="link" onClick={() => { setSettings({ rules: defaultSettings().rules }); toast("Ограничения сброшены к начальным"); }}>Вернуть начальные ограничения</button>
-      {editing && (() => { const r = s.rules.find((x) => x.id === editing); return r ? <RuleSheet rule={r} members={s.members} onSave={setRule} onDelete={() => { setSettings({ rules: s.rules.filter((x) => x.id !== r.id) }); setEditing(null); }} onClose={() => setEditing(null)} /> : null; })()}
+      {missingDefaults.length > 0 && <button className="link" onClick={restoreDefaults}>Вернуть удалённые начальные ограничения ({missingDefaults.map((r) => r.title).join(", ")})</button>}
+      {editing && (() => { const r = s.rules.find((x) => x.id === editing); return r ? <RuleSheet rule={r} members={s.members} onSave={setRule} onDelete={() => removeRule(r)} onClose={() => setEditing(null)} /> : null; })()}
     </div>
   );
 }
@@ -274,7 +286,6 @@ function RuleSheet({ rule, members, onSave, onDelete, onClose }: { rule: Rule; m
   const [r, setR] = useState<Rule>(rule);
   const [words, setWords] = useState(rule.words.join(", "));
   const [except, setExcept] = useState((rule.except || []).join(", "));
-  const isDefault = DEFAULT_RULES.some((d) => d.id === rule.id);
   const save = () => { onSave({ ...r, title: r.title.trim() || "Без названия", words: splitList(words), except: splitList(except) }); onClose(); toast("Сохранено"); };
   return (
     <Sheet title="Ограничение" onClose={onClose} left={<button className="x l" onClick={onClose}>Отмена</button>} right={<button className="x" onClick={save}>Сохранить</button>}>
@@ -298,7 +309,7 @@ function RuleSheet({ rule, members, onSave, onDelete, onClose }: { rule: Rule; m
       <label className="f" htmlFor="rr">Чем заменить (подсказка в рецептах)</label>
       <input id="rr" className="inp" value={r.replace || ""} onChange={(e: any) => setR({ ...r, replace: e.target.value.trim() || undefined })} placeholder="Например: минтай" />
       <button className="btn" style={{ marginTop: 18 }} onClick={save}>Сохранить</button>
-      {!isDefault && <button className="btn danger" onClick={onDelete}>Удалить ограничение</button>}
+      <button className="btn danger" onClick={onDelete}>Удалить ограничение</button>
     </Sheet>
   );
 }
