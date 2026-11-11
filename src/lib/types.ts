@@ -177,8 +177,8 @@ export interface ShopItem {
 /** Минимальный запас: «всегда держать: яйца ≥ 10 шт». */
 export interface MinStock { name: string; qty: number; unit: Unit }
 
-export type Slot = "завтрак" | "обед" | "ужин";
-export const SLOTS: Slot[] = ["завтрак", "обед", "ужин"];
+export type Slot = "завтрак" | "обед" | "ужин" | "перекус";
+export const SLOTS: Slot[] = ["завтрак", "обед", "ужин", "перекус"];
 
 /** Блюдо в меню на конкретный день. */
 export interface PlanEntry {

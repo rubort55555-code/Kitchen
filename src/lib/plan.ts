@@ -68,7 +68,7 @@ export function pruneOld() {
 // ---- Автоменю: что можно на какой приём пищи и как держать баланс ----
 const BREAKFAST_RE = /завтрак|омлет|каша|сырник|блин|оладь|яичниц|тост|запеканк|панкейк|скрэмбл|шакшук/;
 
-type Role = "завтрак" | "суп" | "основное" | "другое";
+type Role = "завтрак" | "суп" | "основное" | "перекус" | "другое";
 /** Чем рецепт может быть в меню: завтрак, суп, основное блюдо. Салаты, закуски, соусы, напитки, десерты сами по себе — не приём пищи. */
 function roleOf(r: Recipe): Role {
   const kind = norm(r.kind || "");
@@ -76,6 +76,7 @@ function roleOf(r: Recipe): Role {
   if (kind === "суп") return "суп";
   if (kind === "основное" || kind === "обед" || kind === "ужин") return "основное";
   if (kind === "завтрак") return "завтрак";
+  if (kind === "перекус") return "перекус";
   if (kind === "салат" || kind === "закуска" || kind === "соус" || kind === "напиток" || kind === "десерт" || kind === "гарнир" || kind === "выпечка") return BREAKFAST_RE.test(k) && kind === "выпечка" ? "завтрак" : "другое";
   // Рецепты без вида (от Claude, из старого приложения)
   if (BREAKFAST_RE.test(k)) return "завтрак";
@@ -110,6 +111,7 @@ function breakfastType(r: Recipe): string {
 export function fitsSlot(r: Recipe, slot: Slot): boolean {
   const role = roleOf(r);
   if (slot === "завтрак") return role === "завтрак";
+  if (slot === "перекус") return role === "перекус";
   if (slot === "обед") return role === "суп" || role === "основное";
   return role === "основное";
 }
