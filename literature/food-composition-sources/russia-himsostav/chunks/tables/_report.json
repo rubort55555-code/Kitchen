@@ -1,0 +1,45 @@
+{
+ "macro_columns": [
+  "water",
+  "prot",
+  "fat",
+  "sfa",
+  "chol",
+  "mds",
+  "starch",
+  "carb",
+  "fib",
+  "org",
+  "ash"
+ ],
+ "micro_columns": [
+  "na",
+  "k",
+  "ca",
+  "mg",
+  "p",
+  "fe",
+  "vita",
+  "carot",
+  "re",
+  "te",
+  "b1",
+  "b2",
+  "pp",
+  "ne",
+  "vitc",
+  "kcal"
+ ],
+ "units": "на 100 г; вода…зола, г; chol, na…fe, te, b1, b2, pp, ne, vitc — мг; vita, carot, re — мкг; kcal — ккал",
+ "pairs": 84,
+ "accepted": 643,
+ "rejected": 438,
+ "reasons": {
+  "слева не 12 чисел": 194,
+  "нет строки справа": 24,
+  "сумма ≠ 100": 8,
+  "справа не 16 чисел": 188,
+  "энергия не сходится": 8,
+  "нет порции 100 в строке кода": 16
+ }
+}
