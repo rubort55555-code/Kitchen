@@ -19,6 +19,7 @@ import { RecipeEdit, RecipeNew } from "./screens/RecipeEdit";
 import { ConsentSheet } from "./screens/Privacy";
 import { MenuCheck } from "./screens/MenuCheck";
 import { NewsSheet } from "./screens/News";
+import { ConditionSheet } from "./screens/Condition";
 import { LATEST, shouldShowNews } from "./lib/whatsnew";
 import { hasConsent } from "./lib/privacy";
 import { Intro } from "./screens/Intro";
@@ -48,6 +49,7 @@ function SheetView({ s }: { s: Sheet }) {
     case "overdue": return <Overdue />;
     case "intro": return <Intro />;
     case "news": return <NewsSheet />;
+    case "condition": return <ConditionSheet memberId={s.memberId} />;
     case "garnish": return <GarnishPick entryId={s.entryId} />;
     case "menucheck": return <MenuCheck days={s.days} />;
     case "consent": return <ConsentSheet which={s.which} />;

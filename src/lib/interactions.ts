@@ -46,6 +46,7 @@ export const SOURCES: Record<string, Source> = {
   neal2021: { id: "neal2021", cite: "Neal B. и др. Effect of salt substitution on cardiovascular events and death. N Engl J Med, 2021 (SSaSS: кластерное РКИ, 20 995 человек, 4,7 года: инсульт −14%, смерть −12%)" },
   wouda2022: { id: "wouda2022", cite: "Wouda R.D. и др. Sex-specific associations between potassium intake, blood pressure, and cardiovascular outcomes: the EPIC-Norfolk study. Eur Heart J, 2022 (когорта, 24 963 человека: больше калия — меньше сердечно-сосудистых событий)" },
   who2012k: { id: "who2012k", cite: "ВОЗ. Guideline: Potassium intake for adults and children, 2012 (не менее 3510 мг калия в сутки; руководство)" },
+  eauUro: { id: "eauUro", cite: "EAU Guidelines on Urolithiasis (Европейская ассоциация урологов), глава 4: рекомендации по питанию и жидкости" },
   efsa2015: { id: "efsa2015", cite: "EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific opinion on the safety of caffeine. EFSA Journal, 2015" },
 };
 
@@ -86,6 +87,7 @@ export const EVIDENCE: Record<string, Evidence> = {
   grinder2004: { design: "rct", n: 14 }, hennigar2015: { design: "rct", n: 152 }, ali2026: { design: "rct", n: 19000 },
   niklewicz2024: { design: "meta-small" }, neufingerl2021: { design: "meta-small" }, pawlak2013: { design: "review" },
   neal2021: { design: "rct", n: 20995 }, wouda2022: { design: "cohort", n: 24963 }, who2012k: { design: "regulatory" },
+  eauUro: { design: "regulatory" },
   efsa2015: { design: "regulatory" },
 };
 export const sourceLevel = (id: string): Level => levelOf(EVIDENCE[id] ?? { design: "mechanism" });

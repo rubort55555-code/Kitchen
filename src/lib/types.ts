@@ -269,7 +269,7 @@ export interface Settings {
   /** Чей дневник открыт (id члена семьи). */
   diaryWho?: string;
   /** Пробные функции: включены ли (по умолчанию — да). */
-  beta?: { barcode?: boolean; nutrition?: boolean };
+  beta?: { barcode?: boolean; nutrition?: boolean; conditions?: boolean };
   /** Журнал пробы сканера: последние попытки (для отчёта о том, как работает). */
   scanLog?: ScanEvent[];
   /** Запомненные штрихкоды: код → как назвали продукт и что о нём известно из Open Food Facts. */

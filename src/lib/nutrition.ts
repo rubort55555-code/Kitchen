@@ -13,6 +13,7 @@
 // - ИМТ, окружность талии и отношение талии к бёдрам — МР 2.3.1.0253-21 (разд. 4) и пороги ВОЗ.
 // Это ориентиры для здоровых взрослых, а не назначение врача.
 
+import { uroStatus } from "./conditions";
 import { ACTIVITIES, actByKey, actKey, type Activity } from "./activities";
 
 export type Sex = "m" | "f";
@@ -51,7 +52,7 @@ export const STAGE_EXTRA: Record<Stage, { kcal: number; protein: number; fat: nu
 export interface HealthFlags { diabetes?: boolean; kidney?: boolean; gi?: boolean; eating?: boolean; meds?: boolean }
 export const HEALTH_QUESTIONS: { key: keyof HealthFlags; text: string }[] = [
   { key: "diabetes", text: "Есть диабет" },
-  { key: "kidney", text: "Есть болезни почек" },
+  { key: "kidney", text: "Есть хроническая болезнь почек, диализ, единственная или пересаженная почка (мочекаменная болезнь сюда не относится)" },
   { key: "gi", text: "Есть болезни желудка или кишечника" },
   { key: "eating", text: "Было или есть расстройство пищевого поведения" },
   { key: "meds", text: "Регулярно принимаю лекарства" },
@@ -92,6 +93,8 @@ export interface BodyProfile {
   health?: HealthFlags;
   /** Ограничения по здоровью от врача — приложение их не назначает, только напоминает. */
   medical?: string;
+  /** Заболевания, диагноз которых поставил врач (человек отмечает сам): питание при них — по клиническим рекомендациям, см. conditions.ts. */
+  conditions?: import("./conditions").Conditions;
   /** Когда обновляли вес. */
   updated?: string;
 }
@@ -345,7 +348,9 @@ const STAGE_MICROS: Record<string, [number, number, number, number, number]> = {
 const STAGE_IDX: Record<Stage, number> = { t1: 0, t2: 1, t3: 2, l1: 3, l2: 4 };
 
 export function micros(p: BodyProfile, now = new Date()): Micro[] {
-  const list = microsBase(p, now);
+  let list = microsBase(p, now);
+  // Мочекаменная болезнь: кальций из еды 1000–1200 мг — не ограничивать (Минздрав 2024, EAU)
+  if (uroStatus(p, ageOf(p, now)).active) list = list.map((x) => (x.key === "ca" ? { ...x, amount: 1000, note: "1000–1200 мг при мочекаменной болезни" } : x));
   const st = stageOf(p);
   if (!st) return list;
   return list.map((x) => (STAGE_MICROS[x.key] ? { ...x, amount: STAGE_MICROS[x.key][STAGE_IDX[st]] } : x));
@@ -391,6 +396,20 @@ function microsBase(p: BodyProfile, now: Date): Micro[] {
   ];
 }
 
+/** Нормы при мочекаменной болезни (conditions.ts): включаются, только если человек отметил диагноз и ему подходят рекомендации. */
+export interface UroTargets {
+  stone: import("./conditions").StoneType;
+  fluidLimit: boolean;
+  /** Потолок белка применяется. */
+  proteinCap: boolean;
+  /** Вода и напитки, л в сутки: от и до (при сердечной недостаточности норму не повышаем). */
+  waterMin: number; waterMax: number;
+  /** Кальций из еды, мг: не ограничивать меньше и не превышать больше. */
+  caMin: number; caMax: number;
+  /** Белок, г в сутки: 0,8–1,0 г на кг массы тела. */
+  proteinMin: number; proteinMax: number;
+}
+
 export interface Plan {
   age: number;
   bmr: number;
@@ -423,6 +442,8 @@ export interface Plan {
   fiber: number; // г
   /** Питьевая вода, л/сутки (ориентир). */
   water: number;
+  /** Нормы при мочекаменной болезни; нет — рекомендации не применяются. */
+  uro?: UroTargets;
   /** Изменение веса в неделю при цели, кг (минус — снижение). */
   weekly: number;
   bmi: BmiInfo;
@@ -458,7 +479,10 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   }
   const bmi = bmiOf(p);
 
+  const uro = uroStatus(p, age);
   let goal = p.goal;
+  if (p.conditions?.uro && !uro.active && uro.reason) warnings.push(uro.reason);
+  if (uro.active && goal === "protein") { goal = "keep"; warnings.push("При мочекаменной болезни белок ограничивают до 1 г на кг массы тела, поэтому цель «больше белка» отключена. Расчёт сделан на сохранение веса."); }
   if (goal === "lose" && (p.pregnant || p.lactating)) { goal = "keep"; warnings.push("Во время беременности и кормления худеть не рекомендуется — расчёт сделан на сохранение веса. Обсудите питание с врачом."); }
   if ((goal === "lose" || goal === "gain") && hasHealthFlag(p.health)) { goal = "keep"; warnings.push("Вы отметили состояние здоровья, при котором план питания лучше составлять с врачом. Показаны только общие нормы — без дефицита и набора калорий."); }
   if (goal === "lose" && bmi.level === "low") { goal = "keep"; warnings.push("ИМТ ниже 18,5 — снижать вес не нужно. Расчёт сделан на сохранение веса."); }
@@ -505,6 +529,14 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   if (goal === "lose") { protein = Math.max(protein, 1.2 * kgFor); notes.push("При снижении веса белка больше (1,2 г на кг), чтобы сохранить мышцы."); }
   if (age >= 65) protein = Math.max(protein, 1.0 * kgFor);
   protein = Math.min(protein, 2.0 * kgFor);
+  // Мочекаменная болезнь: белок 0,8–1,0 г на кг массы тела (Минздрав 2024, EAU); нижняя граница — норма для меню, верхняя — предел
+  let uroT: UroTargets | undefined;
+  if (uro.active) {
+    uroT = { stone: uro.stone, fluidLimit: uro.fluidLimit, proteinCap: uro.proteinCap, waterMin: 2.5, waterMax: 3, caMin: 1000, caMax: 1200, proteinMin: Math.round(0.8 * kgFor), proteinMax: uro.proteinCap ? Math.round(1.0 * kgFor) : 9999 };
+    if (uro.proteinCap) protein = uroT.proteinMin;
+    warnings.push(...uro.warnings);
+    notes.push("Рекомендации при мочекаменной болезни (Минздрав РФ 2024, EAU): белок 0,8–1,0 г на кг, кальций 1000–1200 мг, соль до 5 г, жидкости не меньше 2,5 л. Подробно — в справочнике.");
+  }
 
   // Жиры — 30% калорий, насыщенные — не больше 10%
   const fat = (kcal * 0.3) / 9;
@@ -516,7 +548,9 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
   // Клетчатка — 10 г на 1000 ккал, не меньше 20 г
   const fiber = Math.max(20, kcal / 100);
   // Вода и напитки — табл. 7 МР по группе активности и полу (в нормы уже заложена активность группы); +0,3 л при беременности, +0,7 л при кормлении
-  const water = waterMR(p.sex, age, group.n) + (p.lactating ? 0.7 : p.pregnant ? 0.3 : 0);
+  let water = waterMR(p.sex, age, group.n) + (p.lactating ? 0.7 : p.pregnant ? 0.3 : 0);
+  // Мочекаменная болезнь: диурез 2–2,5 л требует жидкости не меньше 2,5 л; при сердечной недостаточности норму не повышаем
+  if (uroT && !uroT.fluidLimit) water = Math.max(water, uroT.waterMin); else if (uroT) { uroT.waterMin = round(water, 1); uroT.waterMax = round(water, 1); }
 
   if (p.medical?.trim()) warnings.push(`Учтите рекомендации врача: ${p.medical.trim()}. Приложение не заменяет консультацию.`);
 
@@ -524,7 +558,7 @@ export function planFor(p: BodyProfile, now = new Date()): Plan | null {
     age, bmr: Math.round(b), pal: k, group, tee: Math.round(tee), kcal: Math.round(kcal / 10) * 10, goal,
     protein: Math.round(protein), fat: Math.round(fat), satFatMax: Math.round(satFatMax), carbs: Math.round(carbs),
     sugarMax: Math.round(sugarMax), animalProtein: Math.round(protein * 0.5), fats: fatQuality(kcal), mr: mrNorm(p.sex, age, group.n), stage, cholMax: 300, transMax: round((kcal * 0.01) / 9, 1), naMax: 2000, saltMax: 5, fiber: Math.round(fiber), water: round(water, 1), weekly: round(weekly, 2),
-    bmi, waist: waistRisk(p), notes, warnings, diary: diary ? diary.days : undefined,
+    bmi, waist: waistRisk(p), notes, warnings, diary: diary ? diary.days : undefined, ...(uroT ? { uro: uroT } : {}),
   };
 }
 

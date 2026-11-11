@@ -56,7 +56,7 @@ export function assess(meals: Meal[], plan: Plan, body: BodyProfile, waterMl: nu
   const kcal = a("kcal");
   const macro: Row[] = [
     mk("kcal", "Энергия", "ккал", kcal, plan.kcal, "target", kcal < plan.kcal * 0.9 ? "low" : kcal > plan.kcal * 1.1 ? "over" : "ok"),
-    mk("protein", "Белки", "г", a("protein"), plan.protein, "target", range(a("protein"), plan.protein, 0.85, 1.3)),
+    mk("protein", "Белки", "г", a("protein"), plan.protein, "target", plan.uro ? (a("protein") < plan.uro.proteinMin * 0.9 ? "low" : a("protein") > plan.uro.proteinMax ? "over" : "ok") : range(a("protein"), plan.protein, 0.85, 1.3)),
     mk("fat", "Жиры", "г", a("fat"), plan.fat, "target", range(a("fat"), plan.fat, 0.8, 1.2)),
     mk("carbs", "Углеводы", "г", a("carbs"), plan.carbs, "target", range(a("carbs"), plan.carbs, 0.75, 1.25)),
     mk("fiber", "Клетчатка", "г", a("fiber"), plan.fiber, "min", atLeast(a("fiber"), plan.fiber)),
@@ -67,7 +67,7 @@ export function assess(meals: Meal[], plan: Plan, body: BodyProfile, waterMl: nu
     mk("satFat", "Насыщенные жиры", "г", a("satFat"), plan.satFatMax, "max", atMost(a("satFat"), plan.satFatMax)),
     mk("chol", "Холестерин", "мг", a("chol"), plan.cholMax, "max", atMost(a("chol"), plan.cholMax)),
     mk("na", "Натрий", "мг", a("na"), plan.naMax, "max", atMost(a("na"), plan.naMax)),
-  ].filter((r) => r.v > 0 || r.key === "na");
+  ].concat(plan.uro ? [mk("caMax", "Кальций из еды (при мочекаменной болезни — не больше)", "мг", a("ca"), plan.uro.caMax, "max", atMost(a("ca"), plan.uro.caMax))] : []).filter((r) => r.v > 0 || r.key === "na");
   const dishes = dishFluidMl(meals, recipes);
   const fluid = (waterMl + drinksMl(meals) + dishes) / days;
   const water = plan.water > 0 ? mk("water", "Вода и напитки", "мл", fluid, plan.water * 1000, "min", fluid >= plan.water * 850 ? "ok" : fluid >= plan.water * 600 ? "near" : "low") : null;

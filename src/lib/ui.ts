@@ -17,6 +17,7 @@ export type Sheet =
   | { kind: "overdue" }
   | { kind: "intro" }
   | { kind: "news" }
+  | { kind: "condition"; memberId: string }
   | { kind: "garnish"; entryId: string }
   | { kind: "menucheck"; days: string[] }
   | { kind: "consent"; which: import("./privacy").ConsentKind }

@@ -1,7 +1,7 @@
 // Политика конфиденциальности и согласия: окно согласия, страница «Конфиденциальность», экран первого запуска.
 import { useEffect, useState } from "react";
 import { Header, Sheet } from "../components/ui";
-import { eraseHealthData, getState, giveConsent, useStore, withdrawConsent } from "../lib/store";
+import { eraseConditions, eraseHealthData, getState, giveConsent, useStore, withdrawConsent } from "../lib/store";
 import { resolveConsent } from "../lib/consent";
 import { CONSENT_TEXT, CONTACT, POLICY_VERSION, hasConsent, policySections, type ConsentKind } from "../lib/privacy";
 import { closeSheet, goPage, toast } from "../lib/ui";
@@ -40,7 +40,7 @@ export function PolicyText() {
   );
 }
 
-const LABEL: Record<ConsentKind, string> = { policy: "Политика прочитана", health: "Данные о здоровье и теле", off: "Поиск товара по штрихкоду (Open Food Facts)" };
+const LABEL: Record<ConsentKind, string> = { policy: "Политика прочитана", health: "Данные о здоровье и теле", condition: "Сведения о заболевании (режим «при мочекаменной болезни»)", off: "Поиск товара по штрихкоду (Open Food Facts)" };
 
 /** Страница «Ещё → Конфиденциальность». */
 export function PrivacyPage() {
@@ -53,13 +53,13 @@ export function PrivacyPage() {
       <p className="muted mt0">Ваши записи хранятся только в памяти этого телефона. Версия текста: {POLICY_VERSION}.{CONTACT ? ` Контакт: ${CONTACT}.` : ""}</p>
       <div className="card">
         <h3>Согласия</h3>
-        {(["policy", "health", "off"] as ConsentKind[]).map((k) => {
+        {(["policy", "health", "condition", "off"] as ConsentKind[]).map((k) => {
           const on = hasConsent(consent, k);
           return (
             <div key={k} className="kv">
               <span>{LABEL[k]}<br /><small className="muted">{on ? "дано " + new Date(consent![k]!.at).toLocaleDateString("ru-RU") : "не дано"}</small></span>
               {on
-                ? (k === "policy" ? <span /> : <button className="link" onClick={() => { withdrawConsent(k); toast("Согласие отозвано"); }}>Отозвать</button>)
+                ? (k === "policy" ? <span /> : <button className="link" onClick={() => { withdrawConsent(k); if (k === "condition") eraseConditions(); toast(k === "condition" ? "Согласие отозвано, отметки о заболевании удалены" : "Согласие отозвано"); }}>Отозвать</button>)
                 : <button className="link" onClick={() => giveConsent(k)}>Дать</button>}
             </div>
           );

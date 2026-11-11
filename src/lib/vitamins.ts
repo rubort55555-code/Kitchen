@@ -38,6 +38,12 @@ export function naKDay(meals: Meal[], naMax = NA_MAX): { na: number; k: number }
 }
 
 /** hour — час суток для сегодняшнего дня (раньше 17 ч день не закончен и упрекать рано); для прошлых дней — 24. */
+/** Подсказки режима «рекомендации при мочекаменной болезни»: сладкие газированные напитки (EAU). */
+export function uroHints(meals: Meal[]): Hint[] {
+  const bad = meals.filter((m) => m.caffeine !== undefined && /кола|энергетик/i.test(m.name));
+  return bad.length ? [{ id: "uro-drinks", text: "Среди записей сладкие газированные напитки. В руководстве EAU при мочекаменной болезни советуют ограничить алкоголь, газировку и калорийные напитки; лучше пить воду.", src: ["eauUro"] }] : [];
+}
+
 export function vitaminHints(meals: Meal[], ctx: IronContext, hour = 24): Hint[] {
   const out: Hint[] = [];
   if (hour < 17) return out;

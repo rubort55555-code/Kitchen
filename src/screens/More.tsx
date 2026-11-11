@@ -639,6 +639,11 @@ function Beta() {
           <div className="main"><div className="name">Питание и личные нормы</div><div className="meta">⚙︎ → «Питание»: калории, БЖУ, витамины по росту, весу, распорядку дня и цели</div></div>
           <input type="checkbox" className="switch" checked={s.beta?.nutrition !== false} onChange={(e: any) => setSettings({ beta: { ...s.beta, nutrition: e.target.checked } })} aria-label="Питание и личные нормы" />
         </label>
+        <label className="li">
+          <span className="ico">📖</span>
+          <div className="main"><div className="name">Справочник: питание при мочекаменной болезни</div><div className="meta">Выключено по умолчанию. Для людей с диагнозом врача: рекомендации Минздрава и EAU по воде, кальцию, соли и белку. Справочная информация, не назначение. Тексты ещё ждут проверки врачом-урологом и юристом.</div></div>
+          <input type="checkbox" className="switch" checked={s.beta?.conditions === true} onChange={(e: any) => setSettings({ beta: { ...s.beta, conditions: e.target.checked } })} aria-label="Справочник: питание при мочекаменной болезни" />
+        </label>
       </div>
       <h2>Сканер: как работает у вас</h2>
       <p className="small">{scanSummary(s.scanLog || [])}.</p>

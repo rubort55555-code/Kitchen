@@ -13,7 +13,7 @@ import { LEVEL_TEXT, ironDay, ironHints } from "../lib/iron";
 import { CA_TEXT, calciumDay, mineralHints } from "../lib/minerals";
 import { dishFluidMl } from "../lib/fluid";
 import { STATUS_TEXT, assess, drinksMl, type Row } from "../lib/assess";
-import { vitaminHints } from "../lib/vitamins";
+import { uroHints, vitaminHints } from "../lib/vitamins";
 import { FAT_TEXT, fatSolubleDay, fatSolubleHints } from "../lib/fatsoluble";
 import { copyMeal, defaultGrams, dayView, hasMicroData, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
 import { askConsent } from "../lib/consent";
@@ -122,7 +122,7 @@ export function Diary({ date: start }: { date?: string }) {
         {view.hints.map((h, i) => <div key={i} className="issue little small">💡 {h}</div>)}
       </div>
 
-      <CombosBlock meals={list} recipes={recipes} limit={caffeineLimit(!!(member?.body?.pregnant || member?.body?.lactating))} />
+      <CombosBlock meals={list} recipes={recipes} uro={!!plan?.uro} limit={caffeineLimit(!!(member?.body?.pregnant || member?.body?.lactating))} />
       {plan && member?.body && <MicroBlock eaten={e} body={member.body} hasMeals={list.length > 0} noData={list.filter((m) => !hasMicroData(m)).length} total={list.length} />}
 
       {plan && member?.body && <AssessCard date={date} who={who} plan={plan} body={member.body} recipes={recipes} />}
@@ -261,9 +261,9 @@ function MicroBlock({ eaten, body, hasMeals, noData, total }: { eaten: Record<Nu
 }
 
 /** Кофеин за день против предела и подсказки по сочетаниям (что усваивается лучше или хуже). */
-function CombosBlock({ meals, limit, recipes }: { meals: Meal[]; limit: number; recipes: import("../lib/types").Recipe[] }) {
+function CombosBlock({ meals, limit, recipes, uro }: { meals: Meal[]; limit: number; recipes: import("../lib/types").Recipe[]; uro?: boolean }) {
   const caf = caffeineOf(meals);
-  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...mineralHints(meals, { recipes }), ...fatSolubleHints(meals, { recipes }), ...vitaminHints(meals, { recipes }, meals[0]?.date === ymd() ? new Date().getHours() : 24), ...interactionHints(meals, { caffeineLimit: limit })], [meals, limit, recipes]);
+  const hints = useMemo(() => [...ironHints(meals, { recipes }), ...mineralHints(meals, { recipes }), ...fatSolubleHints(meals, { recipes }), ...vitaminHints(meals, { recipes }, meals[0]?.date === ymd() ? new Date().getHours() : 24), ...interactionHints(meals, { caffeineLimit: limit }), ...(uro ? uroHints(meals) : [])], [meals, limit, recipes, uro]);
   const irons = useMemo(() => ironDay(meals, { recipes }), [meals, recipes]);
   const cas = useMemo(() => calciumDay(meals, { recipes }), [meals, recipes]);
   const fss = useMemo(() => fatSolubleDay(meals, { recipes }), [meals, recipes]);

@@ -1,5 +1,5 @@
 // Состояние приложения и все действия с данными. Каждое действие сразу сохраняется в телефон.
-import { POLICY_VERSION, type ConsentKind } from "./privacy";
+import { versionOf, type ConsentKind } from "./privacy";
 import { removeMeasure, upsertMeasure, type Measure } from "./body";
 import { useSyncExternalStore } from "react";
 import * as db from "./db";
@@ -498,7 +498,7 @@ export function markNewsSeen(id: string) {
 }
 /** Согласие дано. */
 export function giveConsent(k: ConsentKind) {
-  setSettings({ consent: { ...(state.settings.consent || {}), [k]: { version: POLICY_VERSION, at: Date.now() } } });
+  setSettings({ consent: { ...(state.settings.consent || {}), [k]: { version: versionOf(k), at: Date.now() } } });
 }
 /** Согласие отозвано. */
 export function withdrawConsent(k: ConsentKind) {
@@ -603,4 +603,9 @@ export function reportError(e: unknown) {
   const msg = e instanceof Error ? `${e.name}: ${e.message}` : String(e);
   try { localStorage.setItem("kitchen-last-error", JSON.stringify({ msg, t: new Date().toISOString() })); } catch { /* нет места */ }
   console.error(e);
+}
+
+/** Удалить отметки о заболеваниях (и снять режим рекомендаций) у всех членов семьи. */
+export function eraseConditions() {
+  setSettings({ members: state.settings.members.map((m) => (m.body?.conditions ? { ...m, body: { ...m.body, conditions: undefined } } : m)) });
 }

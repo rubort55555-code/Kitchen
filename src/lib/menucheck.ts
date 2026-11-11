@@ -68,7 +68,7 @@ export function fitDay(entries: PlanEntry[], recipes: Recipe[], who: string, pla
   const total = () => fixed + mains.reduce((s, e) => s + p[e.id] * (perOne.get(e.id)!.kcal || 0), 0);
   const prot = () => extras.reduce((s, m) => s + (m.n.protein || 0), 0) + mains.reduce((s, e) => s + p[e.id] * (perOne.get(e.id)!.protein || 0), 0);
   // Чем меньше, тем лучше: отклонение по калориям; при равенстве — белок не ниже нормы и порции ближе друг к другу
-  const cost = () => Math.abs(total() - T) + Math.max(0, plan.protein - prot()) * 2 + Object.values(p).reduce((s, x) => s + Math.abs(x - p0), 0) * 3;
+  const cost = () => Math.abs(total() - T) + Math.max(0, plan.protein - prot()) * 2 + (plan.uro ? Math.max(0, prot() - plan.uro.proteinMax) * 4 : 0) + Object.values(p).reduce((s, x) => s + Math.abs(x - p0), 0) * 3;
   for (let it = 0; it < 60; it++) {
     let best = cost(), move: [string, number] | null = null;
     for (const e of mains) for (const d of [-PORTION_STEP, PORTION_STEP]) {
@@ -137,7 +137,7 @@ export function evaluateMenu(entries: PlanEntry[], dates: string[], recipes: Rec
     const dm = meals.filter((m) => m.date === date);
     const kcal = sum(dm, "kcal"), protein = sum(dm, "protein"), fat = sum(dm, "fat"), carbs = sum(dm, "carbs");
     const kcalOk = Math.abs(kcal - plan.kcal) <= plan.kcal * KCAL_TOL;
-    const proteinOk = protein >= plan.protein;
+    const proteinOk = protein >= plan.protein && (!plan.uro || protein <= plan.uro.proteinMax);
     const fatOk = Math.abs(fat - plan.fat) <= plan.fat * FAT_CARB_TOL;
     const carbsOk = Math.abs(carbs - plan.carbs) <= plan.carbs * FAT_CARB_TOL;
     return { date, kcal: Math.round(kcal), target: plan.kcal, pct: Math.round((kcal / plan.kcal) * 100), protein: Math.round(protein), fat: Math.round(fat), carbs: Math.round(carbs), kcalOk, proteinOk, fatOk, carbsOk, ok: kcalOk && proteinOk && fatOk && carbsOk, slots: mine.filter((e) => e.date === date).length };

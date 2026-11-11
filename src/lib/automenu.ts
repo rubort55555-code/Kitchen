@@ -6,6 +6,7 @@ import { checkRecipe, compileRules, neverFor } from "./exclusions";
 import { recipeStatus } from "./match";
 import { cuisineOf } from "./cuisine";
 import { planFor } from "./nutrition";
+import { hasHighOxalate, oxalateAvoided } from "./conditions";
 import { fitsSlot, planList, weekDays } from "./plan";
 import { ymd } from "./util";
 
@@ -29,8 +30,10 @@ export function autoMenu(start: string, slots: Slot[], only?: string): AutoMenuR
   const compiled = compileRules(st.settings.rules, st.settings.customCatalog, st.settings.members);
   const who = st.settings.members.map((m) => m.id);
   const cuis = st.settings.planCuisine || "";
+  // Мочекаменная болезнь с кальций-оксалатными или неизвестными камнями: блюда с шпинатом, щавелем, ревенём, мангольдом и миндалём не ставим
+  const avoidOx = people.some((x) => x.plan.uro && oxalateAvoided(x.plan.uro.stone));
   const allowed = (r: (typeof st.recipes)[number]) =>
-    checkRecipe(r, compiled, who).verdict === "ok" && (!cuis || !(fitsSlot(r, "обед") || fitsSlot(r, "ужин")) || cuisineOf(r) === cuis);
+    checkRecipe(r, compiled, who).verdict === "ok" && !(avoidOx && hasHighOxalate(r.ingredients.map((i) => i.name))) && (!cuis || !(fitsSlot(r, "обед") || fitsSlot(r, "ужин")) || cuisineOf(r) === cuis);
   const bonus = (r: (typeof st.recipes)[number]) => {
     const s = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings));
     return s.urgent * 30 + s.percent * 0.4 + (r.fav ? 15 : 0) + (r.rating ? (r.rating - 3) * 8 : 0);

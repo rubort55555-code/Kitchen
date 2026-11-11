@@ -3,8 +3,10 @@ import { Fragment, useMemo, useState } from "react";
 import { Header, Seg, Sheet } from "../components/ui";
 import { BodyLog } from "../components/BodyLog";
 import { giveConsent, setSettings, useStore } from "../lib/store";
+import { askConsent } from "../lib/consent";
+import { MODE_TITLE, STONE_TITLE, type StoneType } from "../lib/conditions";
 import { CONSENT_TEXT, hasConsent } from "../lib/privacy";
-import { goPage } from "../lib/ui";
+import { goPage, openSheet } from "../lib/ui";
 import type { Member } from "../lib/types";
 import {
   GOALS, HEALTH_QUESTIONS, STAGES,  bmr, dayEnergy, hasHealthFlag, fromHours, hm, micros, newProfile, normSegs, parseHm, planFor, templateDay,
@@ -124,6 +126,7 @@ function PersonCard({ m, plan, onEdit }: { m: Member; plan: Plan | null; onEdit:
         <span>Вода и напитки</span><span>≈ {n1(plan.water)} л (вместе с жидкостью супов)</span>
       </div>
       {plan.warnings.map((w, i) => <div key={i} className="issue small">⚠️ {w}</div>)}
+      {b.conditions?.uro && <button className="btn sec" onClick={() => openSheet({ kind: "condition", memberId: m.id })}>📖 {MODE_TITLE}</button>}
       <BodyLog m={m} plan={plan} />
       {hasHealthFlag(b.health) && <div className="issue small">🩺 Вы отметили состояние здоровья: приложение не строит план с дефицитом или набором калорий. Питание лучше обсудить с врачом.</div>}
       {!b.days?.length && <p className="muted small">Активность посчитана по умолчанию (сидячая работа). Нажмите «Изменить» и распишите обычный день — расчёт станет точнее.</p>}
@@ -185,6 +188,7 @@ function ProfileSheet({ m, onSave, onClose }: { m: Member; onSave: (b: BodyProfi
     return body;
   });
   const [view, setView] = useState<View>({ v: "profile" });
+  const condOn = useStore((st) => st.settings.beta?.conditions === true);
   const [err, setErr] = useState("");
   const up = (patch: Partial<BodyProfile>) => { setB({ ...b, ...patch }); setErr(""); };
   const days = b.days || [];
@@ -287,6 +291,31 @@ function ProfileSheet({ m, onSave, onClose }: { m: Member; onSave: (b: BodyProfi
       <label className="f" htmlFor="nmed">Рекомендации врача по питанию</label>
       <textarea id="nmed" className="inp" rows={2} value={b.medical || ""} placeholder="Например: меньше соли, без сахара" onChange={(e: any) => up({ medical: e.target.value })} />
       <p className="muted small">Приложение не ставит диагнозы и не назначает диеты — только напоминает о том, что сказал врач.</p>
+
+      {(condOn || b.conditions?.uro) && (<>
+      <label className="f">Заболевания (если диагноз поставил врач)</label>
+      <p className="muted small mt0">{MODE_TITLE}. Это справочная информация из клинических рекомендаций, а не назначение: рекомендации врача важнее.</p>
+      <div className="chips">
+        <button type="button" className="chip" aria-pressed={!!b.conditions?.uro} onClick={async () => {
+          if (b.conditions?.uro) return up({ conditions: { ...b.conditions, uro: false } });
+          if (await askConsent("condition")) up({ conditions: { ...(b.conditions || {}), uro: true, stone: b.conditions?.stone || "unknown" } });
+        }}>Мочекаменная болезнь</button>
+      </div>
+      {b.conditions?.uro && (
+        <>
+          <p className="small" style={{ margin: "8px 0 4px" }}>Тип камней (если врач назвал)</p>
+          <div className="chips">
+            {(Object.keys(STONE_TITLE) as StoneType[]).map((k) => <button type="button" key={k} className="chip" aria-pressed={(b.conditions?.stone || "unknown") === k} onClick={() => up({ conditions: { ...b.conditions, stone: k } })}>{STONE_TITLE[k]}</button>)}
+          </div>
+          <p className="small" style={{ margin: "8px 0 4px" }}>Отметьте, если это про вас — тогда числа могут измениться или не применяться</p>
+          <div className="chips">
+            {([["fluidLimit", "Врач ограничил жидкость (сердечная недостаточность, отёки, цирроз, диализ)"], ["calciumIssue", "Повышенный кальций в крови или гиперпаратиреоз"], ["gut", "Операции на желудке или кишечнике, воспалительные болезни кишечника"], ["diuretics", "Принимаю мочегонные"]] as const).map(([k, t]) => (
+              <button type="button" key={k} className="chip" aria-pressed={!!b.conditions?.[k]} onClick={() => up({ conditions: { ...b.conditions, [k]: !b.conditions?.[k] } })}>{t}</button>
+            ))}
+          </div>
+        </>
+      )}
+      </>)}
 
       {err && <p className="err" role="alert">{err}</p>}
       <button className="btn" style={{ marginTop: 12 }} onClick={submit}>Посчитать</button>

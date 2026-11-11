@@ -63,7 +63,7 @@ function fitDayNum(mains: Cand[], extras: Cand[], p: Person): { portions: number
   const x = mains.map(() => p0);
   const kcal = () => fixed + mains.reduce((s, c, i) => s + x[i] * (c.per.kcal || 0), 0);
   const prot = () => extras.reduce((s, c) => s + (c.per.protein || 0), 0) + mains.reduce((s, c, i) => s + x[i] * (c.per.protein || 0), 0);
-  const cost = () => Math.abs(kcal() - T) + Math.max(0, p.plan.protein - prot()) * 2 + x.reduce((s, v) => s + Math.abs(v - p0), 0) * 3;
+  const cost = () => Math.abs(kcal() - T) + Math.max(0, p.plan.protein - prot()) * 2 + (p.plan.uro ? Math.max(0, prot() - p.plan.uro.proteinMax) * 4 : 0) + x.reduce((s, v) => s + Math.abs(v - p0), 0) * 3;
   for (let it = 0; it < 12; it++) {
     let best = cost(), mi = -1, mv = 0;
     for (let i = 0; i < mains.length; i++) for (const d of [-PORTION_STEP, PORTION_STEP]) {
@@ -184,7 +184,7 @@ export function autoPlan(inp: AutoInput): AutoResult {
         dd++;
         const kc = v.vec.kcal || 0, pr = v.vec.protein || 0, ft = v.vec.fat || 0, cb = v.vec.carbs || 0;
         const dk = Math.max(0, Math.abs(kc - p.plan.kcal) / p.plan.kcal - KCAL_TOL);
-        const dp = Math.max(0, (p.plan.protein - pr) / p.plan.protein);
+        const dp = Math.max(0, (p.plan.protein - pr) / p.plan.protein) + (p.plan.uro ? Math.max(0, (pr - p.plan.uro.proteinMax) / p.plan.uro.proteinMax) : 0);
         const df = Math.max(0, Math.abs(ft - p.plan.fat) / p.plan.fat - FAT_CARB_TOL);
         const dc = Math.max(0, Math.abs(cb - p.plan.carbs) / p.plan.carbs - FAT_CARB_TOL);
         if (dk > 0 || dp > 0 || df > 0 || dc > 0) notOk++;
@@ -193,7 +193,7 @@ export function autoPlan(inp: AutoInput): AutoResult {
       }
       if (!dd) continue;
       const avg = (k: string) => (sum[NK(k)] || 0) / dd;
-      const lim: [string, number][] = [["na", p.plan.naMax], ["satFat", p.plan.satFatMax], ["chol", p.plan.cholMax], ["sugar", p.plan.sugarMax * 2.5]];
+      const lim: [string, number][] = [["na", p.plan.naMax], ["satFat", p.plan.satFatMax], ["chol", p.plan.cholMax], ["sugar", p.plan.sugarMax * 2.5], ...(p.plan.uro ? [["ca", p.plan.uro.caMax] as [string, number]] : [])];
       for (const [k, L] of lim) { const o = Math.max(0, avg(k) / L - 1); if (o > 0) { viol++; pen3 += 100 * o; } }
       for (const m of norms.get(p.id) || []) pen4 += 100 * Math.max(0, MICRO_MIN - avg(m.key) / m.amount);
     }

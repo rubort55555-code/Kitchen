@@ -32,7 +32,7 @@ export function AskClaude({ week, day }: { week?: string; day?: string }) {
 
   const prompt = useMemo(() => buildPrompt(
     { who: whoIds, minutes: Number(minutes) || null, kind: week ? "любое" : kind, count: 3, wish, useFirst: urgent.slice(0, 5), weekPart: week ? weekPromptPart(days.length ? days : weekDays(week), slots, settings.planCuisine) : undefined,
-      nutrition: settings.beta?.nutrition === false ? undefined : members.filter((m) => whoIds.includes(m.id) && m.body).map((m) => { const p = planFor(m.body!); return p ? planLine(m.name, p) : ""; }).filter(Boolean) },
+      nutrition: settings.beta?.nutrition === false ? undefined : members.filter((m) => whoIds.includes(m.id) && m.body && !m.body.conditions?.uro).map((m) => { const p = planFor(m.body!); return p ? planLine(m.name, p) : ""; }).filter(Boolean) },
     products, members, settings.rules, settings.basics, settings.customCatalog,
   ), [off, minutes, kind, wish, products, settings, week, day]);
 
