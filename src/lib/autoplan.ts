@@ -273,8 +273,8 @@ export function autoPlan(inp: AutoInput): AutoResult {
   let curKey = evaluate();
   for (let guard = 0; guard < 4 && fishCount() < 2; guard++) {
     let improved = false;
-    for (const s of empty.filter((x) => x.slot === "ужин" && x.main?.prot !== "рыба")) {
-      for (const c of (pools.get("ужин") || []).filter((x) => x.prot === "рыба" && canPlace(s, x))) {
+    for (const s of empty.filter((x) => (x.slot === "ужин" || x.slot === "обед") && x.main?.prot !== "рыба")) {
+      for (const c of (pools.get(s.slot) || []).filter((x) => x.prot === "рыба" && canPlace(s, x))) {
         const oldMain = s.main, oldG = s.garnish;
         place(s, c);
         const k = evaluate();

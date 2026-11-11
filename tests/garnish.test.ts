@@ -79,6 +79,14 @@ ok("итальянская кухня определяется приложен�
 ok("соль в итальянской пасте посчитана реалистично: натрия не больше 2500 мг на порцию", it.filter((r) => recipeNutrition(r)).every((r) => (recipeNutrition(r)!.perServing.na || 0) <= 2500), it.filter((r) => (recipeNutrition(r)?.perServing.na || 0) > 2500).map((r) => r.name));
 ok("у всех итальянских рецептов состав считается без пропусков", it.every((r) => !recipeNutrition(r)?.missing?.length), it.filter((r) => recipeNutrition(r)?.missing?.length).map((r) => r.name));
 
+const az = recipes.filter((r) => r.cuisine === "Азиатская");
+ok("азиатских рецептов не меньше 20, есть суп, основное, салат, гарнир, десерт", az.length >= 20 && ["суп", "основное", "салат", "гарнир", "десерт"].every((k) => az.some((r) => r.kind === k)), az.length);
+ok("азиатская кухня определяется приложением", az.every((r) => cuisineOf(r) === "Азиатская"));
+ok("у всех азиатских рецептов состав считается без пропусков", az.every((r) => !recipeNutrition(r)?.missing?.length), az.filter((r) => recipeNutrition(r)?.missing?.length).map((r) => r.name + ": " + recipeNutrition(r)!.missing));
+ok("азиатские блюда: натрия не больше 3000 мг на порцию (соевый соус)", az.filter((r) => recipeNutrition(r)).every((r) => (recipeNutrition(r)!.perServing.na || 0) <= 3000), az.filter((r) => (recipeNutrition(r)?.perServing.na || 0) > 3000).map((r) => r.name + " " + Math.round(recipeNutrition(r)!.perServing.na || 0)));
+ok("азиатские блюда с лапшой и рисом — гарнир не нужен", ["Лапша чоу мейн", "Бибимбап", "Пад тай с креветками", "Жареный рис с яйцом и овощами"].every((n) => { const r = az.find((x) => x.name.startsWith(n.split(" ")[0]) && x.name.includes(n.split(" ")[1] || "")); return !r || garnishNeed(r, "обед") !== "required"; }));
+ok("к азиатскому жареному мясу и рыбе подходит рис", ["Курица кунг пао", "Лосось в соево-медовой глазури"].every((n) => { const r = az.find((x) => x.name.startsWith(n.split(" ")[0])); return !r || autoGarnishes(r, garn).length >= 3; }));
+
 // Порядок в выборе: сверху то, что есть дома
 const st = (g: string, urgent: number, percent: number) => ({ g: find(g), s: { urgent, percent } });
 const ordered = orderByHome([st("Гречка рассыпчатая", 0, 40), st("Рис отварной рассыпчатый", 0, 100), st("Макароны отварные", 0, 100), st("Булгур рассыпчатый", 1, 60), st("Кускус с маслом", 0, 0), st("Капуста тушёная", 1, 100), st("Брокколи на пару", 0, 100)]).map((x) => x.g.name);
