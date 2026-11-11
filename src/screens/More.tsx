@@ -13,6 +13,7 @@ import { norm, plural, uid, ymd } from "../lib/util";
 import { Stats } from "./Stats";
 import { PrivacyPage } from "./Privacy";
 import { Feedback } from "./Feedback";
+import { resetApp } from "../lib/resetApp";
 import { feedbackReady } from "../lib/feedback";
 import { Nutrition } from "./Nutrition";
 import { ageOf, basicsError, bmiOf, needsBasics, planFor, type BodyProfile } from "../lib/nutrition";
@@ -670,7 +671,8 @@ function About() {
       <p className="muted small">{info}</p>
       <p className="muted small">Бесплатно, без регистрации и рекламы. Работает без интернета.</p>
       <button className="btn sec" onClick={() => openSheet({ kind: "news" })}>Что нового</button>
-      <button className="btn sec" onClick={() => { closeSheet(); location.reload(); }}>Перезапустить приложение</button>
+      <button className="btn sec" onClick={() => { closeSheet(); resetApp(); }}>Обновить и перезапустить приложение</button>
+      <p className="muted small">Скачивает свежие файлы приложения заново. Ваши данные не затрагиваются.</p>
     </div>
   );
 }

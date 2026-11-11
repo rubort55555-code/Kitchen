@@ -32,7 +32,16 @@ self.addEventListener("fetch", (e) => {
   // version.json всегда из сети — по нему видно, есть ли обновление.
   if (url.pathname.endsWith("/version.json")) return;
   if (req.mode === "navigate") {
-    e.respondWith(caches.match("./", { ignoreSearch: true }).then((r) => r || fetch(req)));
+    // Есть интернет — берём свежую страницу с сайта (так обновления доходят всегда); нет интернета или связь медленнее 3 секунд — сохранённую копию
+    e.respondWith((async () => {
+      const cached = await caches.match("./", { ignoreSearch: true });
+      try {
+        // no-cache: у GitHub Pages страницы отдаются с max-age=600, без проверки браузер мог бы показывать старую копию до 10 минут
+        return await Promise.race([fetch(req.url, { cache: "no-cache", credentials: "same-origin" }), new Promise((_, no) => setTimeout(no, cached ? 3000 : 30000))]);
+      } catch {
+        return cached || fetch(req);
+      }
+    })());
     return;
   }
   if (url.pathname.includes("/ocr/") && !/(tesseract|worker)\.min\.js$/.test(url.pathname)) {
