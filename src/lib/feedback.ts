@@ -1,8 +1,9 @@
 // Сообщение об ошибке: голос → текст, вложения, отправка. Анонимно: никаких идентификаторов, только текст, файлы и версия приложения.
 // Принимает сообщения Worker из папки worker/ (Cloudflare). Адрес — после первого развёртывания (см. worker/README.md).
 
-/** Адрес приёмника, например "https://kitchen-feedback.ВАШ-ПОДДОМЕН.workers.dev". Задаётся при сборке переменной FEEDBACK_URL (в GitHub: Settings → Secrets and variables → Actions → Variables). Пока пусто — отправка выключена. */
-export const FEEDBACK_URL: string = typeof __FEEDBACK_URL__ !== "undefined" ? __FEEDBACK_URL__ : "";
+/** Адрес приёмника (worker/). Не секретный: сервер принимает запросы только с сайта приложения и ограничивает частоту. Можно заменить при сборке переменной FEEDBACK_URL. */
+const DEFAULT_URL = "https://kitchen-feedback.rubort55555.workers.dev";
+export const FEEDBACK_URL: string = (typeof __FEEDBACK_URL__ !== "undefined" && __FEEDBACK_URL__) || DEFAULT_URL;
 
 export const LIMITS = { text: 5000, files: 5, fileBytes: 5 * 1024 * 1024, voiceSec: 120 } as const;
 export const FILE_TYPES = ["image/png", "image/jpeg", "image/webp", "image/gif", "application/pdf", "text/plain"] as const;

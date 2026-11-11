@@ -285,9 +285,10 @@ with sync_playwright() as p:
         ok(S + "поиск по справке", "списать" in pg.inner_text("main").lower())
         # Что-то не работает
         more(pg); pg.click("main .li >> text=Что-то не работает")
-        pg.fill("textarea", "тест"); pg.click("main .btn >> text=Скопировать")
-        rep = pg.evaluate("navigator.clipboard.readText()")
-        ok(S + "отчёт о проблеме", "Версия приложения" in rep and "тест" in rep)
+        pg.fill("#fb-text", "тест")
+        fb = pg.inner_text("main")
+        ok(S + "«Что-то не работает» открывает форму сообщения: текст, голос, вложения", "Надиктовать" in fb and "Скриншоты и файлы" in fb and pg.input_value("#fb-text") == "тест")
+        ok(S + "в форме нет старой кнопки «Скопировать» для чата с Claude", pg.query_selector("main .btn >> text=Скопировать") is None)
 
         # Справочник: своя белая рыба → под запрет
         more(pg); pg.click("text=Справочник продуктов")

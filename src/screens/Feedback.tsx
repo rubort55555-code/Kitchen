@@ -1,4 +1,4 @@
-// «Сообщить об ошибке»: ровно три способа — голос, вложения и текст. Сообщение анонимное.
+// «Что-то не работает» — сообщение об ошибке: ровно три способа — голос, вложения и текст. Сообщение анонимное.
 import { useEffect, useRef, useState } from "react";
 import { Header } from "../components/ui";
 import { askConsent } from "../lib/consent";
@@ -79,7 +79,7 @@ export function Feedback() {
   if (sent) {
     return (
       <div className="screen">
-        <Header title="Сообщить об ошибке" screen="more" onBack={back} backText="Ещё" />
+        <Header title="Что-то не работает" screen="more" onBack={back} backText="Ещё" />
         <div className="card" role="status"><h3>Спасибо, сообщение отправлено</h3><p className="small mt0">Оно анонимное, ответа не будет. Если проблема важная, напишите ещё раз с подробностями.</p></div>
         <button className="btn sec" onClick={() => { setSent(false); setMsg(""); }}>Написать ещё</button>
       </div>
@@ -87,7 +87,7 @@ export function Feedback() {
   }
   return (
     <div className="screen">
-      <Header title="Сообщить об ошибке" screen="more" onBack={back} backText="Ещё" />
+      <Header title="Что-то не работает" screen="more" onBack={back} backText="Ещё" />
       <p className="muted mt0">Опишите, что пошло не так: голосом, текстом или приложите скриншот. Сообщение анонимное, но его увидят все, кто откроет страницу проекта на GitHub. Не указывайте имя, телефон и данные о здоровье.</p>
       {!ready && <p className="small" role="alert">Приём сообщений пока не подключён, отправить не получится.</p>}
 
