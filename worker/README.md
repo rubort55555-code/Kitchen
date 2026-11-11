@@ -18,10 +18,9 @@
 3. **Секреты репозитория.** В репозитории: Settings → Secrets and variables → Actions → New repository secret. Добавьте три:
    `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `FEEDBACK_GITHUB_TOKEN` (токен бота).
 4. **Развёртывание.** Вкладка Actions → «Приём сообщений» → Run workflow. Через минуту сервер заработает.
-5. **Адрес.** В Cloudflare: Workers & Pages → `kitchen-feedback` покажет адрес вида
-   `https://kitchen-feedback.ВАШ-ПОДДОМЕН.workers.dev`. В GitHub: Settings → Secrets and variables → Actions → вкладка
-   *Variables* → New repository variable: имя `FEEDBACK_URL`, значение — этот адрес. Затем на вкладке Actions
-   запустите «Публикация» (Run workflow), чтобы сайт пересобрался. До этого кнопка «Отправить» выключена.
+5. **Адрес.** Выкладка пишет адрес в журнал (`https://kitchen-feedback.ВАШ-ПОДДОМЕН.workers.dev`). Он уже прописан
+   в `src/lib/feedback.ts` (`DEFAULT_URL`). Если адрес поменяется, измените эту строку или задайте при сборке переменную
+   `FEEDBACK_URL` (GitHub: Settings → Secrets and variables → Actions → Variables).
 
 ## Проверка
 
