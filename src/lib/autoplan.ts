@@ -10,7 +10,7 @@ import type { PlanEntry, Recipe, Slot } from "./types";
 import { recipeNutrition, type NutrientKey } from "./recipeNutrition";
 import { micros, type BodyProfile, type Plan } from "./nutrition";
 import { fitsSlot, proteinOf } from "./plan";
-import { garnishClass, garnishFits, garnishNeed, isGarnish, type GClass } from "./garnish";
+import { autoGarnishes, garnishClass, garnishNeed, isGarnish, type GClass } from "./garnish";
 import { norm, uid } from "./util";
 import { KCAL_TOL, FAT_CARB_TOL, MICRO_MIN, PORTION_MAX, PORTION_MIN, PORTION_STEP, snapPortion } from "./menucheck";
 
@@ -96,7 +96,7 @@ export function autoPlan(inp: AutoInput): AutoResult {
   const sidePool = okRecipes.filter((r) => norm(r.kind || "") === "салат" && !/фрукт|банан|апельсин|груш/.test(norm(r.name))).map(cand).filter((c): c is Cand => !!c);
   const garnishPool = okRecipes.filter(isGarnish).map(cand).filter((c): c is Cand => !!c);
   const optMemo = new Map<string, Cand[]>();
-  const optionsFor = (main: Cand) => { let o = optMemo.get(main.r.id); if (!o) { o = garnishPool.filter((g) => garnishFits(main.r, g.r)); optMemo.set(main.r.id, o); } return o; };
+  const optionsFor = (main: Cand) => { let o = optMemo.get(main.r.id); if (!o) { const ok = new Set(autoGarnishes(main.r, garnishPool.map((c) => c.r)).map((r) => r.id)); o = garnishPool.filter((g) => ok.has(g.r.id)); optMemo.set(main.r.id, o); } return o; };
 
   // Место в меню: блюдо (стоящее или подбираемое) и гарнир к нему. Гарнир подбираем, если блюду он нужен и пользователь его не ставил.
   interface Spot { day: string; slot: Slot; fixed?: PlanEntry; main?: Cand; garnish?: Cand | null; gFree: boolean }
@@ -119,8 +119,8 @@ export function autoPlan(inp: AutoInput): AutoResult {
   const setGarnish = (s: Spot, c: Cand | null) => { s.garnish = c; };
   const needMemo = new Map<string, string>();
   const needOf = (c: Cand, slot: Slot) => { const k = c.r.id + slot; let n = needMemo.get(k); if (!n) { n = garnishNeed(c.r, slot); needMemo.set(k, n); } return n; };
-  // Новому блюду гарнир ставим всегда, когда он возможен (к блюду с крахмалом внутри — овощной); стоящему — только если гарнир обязателен или по умолчанию
-  const wantGarnish = (s: Spot) => !!s.main && (s.gFree || !s.fixed) && (s.fixed ? ["required", "default"].includes(needOf(s.main, s.slot)) : needOf(s.main, s.slot) !== "none");
+  // Гарнир подбираем только там, где он нужен по умолчанию или обязателен; к блюду с крахмалом внутри (плов, паста, жаркое с картошкой) сам не ставится — человек может выбрать овощи вручную
+  const wantGarnish = (s: Spot) => !!s.main && (s.gFree || !s.fixed) && ["required", "default"].includes(needOf(s.main, s.slot));
   // Один гарнир не больше трёх раз за период — жёсткое правило, пока есть из чего выбрать
   const gCount = (id: string, except?: Spot) => spots.reduce((n, x) => n + (x !== except && x.garnish?.r.id === id ? 1 : 0), 0);
   const pickGarnish = (s: Spot) => { const o = s.main ? optionsFor(s.main) : []; const free = o.filter((g) => gCount(g.r.id, s) < 3); const l = free.length ? free : o; return l.length ? pickRand(l) : null; };
@@ -273,8 +273,8 @@ export function autoPlan(inp: AutoInput): AutoResult {
   let curKey = evaluate();
   for (let guard = 0; guard < 4 && fishCount() < 2; guard++) {
     let improved = false;
-    for (const s of empty.filter((x) => x.slot === "ужин" && x.main?.prot !== "рыба")) {
-      for (const c of (pools.get("ужин") || []).filter((x) => x.prot === "рыба" && canPlace(s, x))) {
+    for (const s of empty.filter((x) => (x.slot === "ужин" || x.slot === "обед") && x.main?.prot !== "рыба")) {
+      for (const c of (pools.get(s.slot) || []).filter((x) => x.prot === "рыба" && canPlace(s, x))) {
         const oldMain = s.main, oldG = s.garnish;
         place(s, c);
         const k = evaluate();

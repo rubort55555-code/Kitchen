@@ -7,7 +7,7 @@ import { parseRecipeText } from "../tools/recipes.mjs";
 import type { PlanEntry, Recipe, Rule } from "../src/lib/types";
 import { checkRecipe, compileRules } from "../src/lib/exclusions";
 import { fitsSlot } from "../src/lib/plan";
-import { garnishClass, garnishFits, garnishNeed, isGarnish } from "../src/lib/garnish";
+import { isStarchy, garnishFits, garnishNeed, isGarnish } from "../src/lib/garnish";
 let pass = 0, fail = 0;
 const ok = (name: string, c: boolean, extra?: unknown) => { if (c) pass++; else { fail++; console.log("FAIL", name, extra ?? ""); } };
 
@@ -40,12 +40,13 @@ ok("рыба в меню не реже двух раз за неделю", !ev1.
 
 // Гарниры: к блюдам, где он обязателен или по умолчанию, — всегда; только подходящие; к остальным не ставим
 const byId = (id: string) => recipes.find((r) => r.id === id)!;
-const needy = r1.added.filter((e) => garnishNeed(byId(e.recipeId!), e.slot) !== "none");
-ok("в меню есть блюда, к которым возможен гарнир (обед и ужин не супы)", needy.length >= 5, needy.length);
+const needy = r1.added.filter((e) => ["required", "default"].includes(garnishNeed(byId(e.recipeId!), e.slot)));
+ok("в меню есть блюда, которым нужен гарнир", needy.length >= 3, needy.length);
 ok("к каждому такому блюду подобран гарнир", needy.every((e) => !!e.garnish), needy.filter((e) => !e.garnish).map((e) => e.name));
 ok("гарниры только из подходящих к блюду", r1.added.filter((e) => e.garnish).every((e) => isGarnish(byId(e.garnish!.id)) && garnishFits(byId(e.recipeId!), byId(e.garnish!.id))));
 ok("к супам и завтракам гарнир не ставится", r1.added.filter((e) => garnishNeed(byId(e.recipeId!), e.slot) === "none").every((e) => !e.garnish));
-ok("к блюдам с крахмалом внутри — только овощной гарнир", r1.added.filter((e) => e.garnish && garnishNeed(byId(e.recipeId!), e.slot) === "optional").every((e) => garnishClass(byId(e.garnish!.id)) === "овощи"));
+ok("к блюдам с крахмалом внутри (плов, паста, жаркое с картошкой) гарнир сам не ставится", r1.added.filter((e) => garnishNeed(byId(e.recipeId!), e.slot) === "optional").every((e) => !e.garnish));
+ok("автоподбор ставит «настоящие» гарниры: крупы, картофель, макароны, полента, а не отварную капусту", r1.added.filter((e) => e.garnish).every((e) => isStarchy(byId(e.garnish!.id))), r1.added.filter((e) => e.garnish).map((e) => e.garnish!.name));
 ok("один гарнир не больше трёх раз за неделю", (() => { const c = new Map<string, number>(); r1.added.forEach((e) => e.garnish && c.set(e.garnish.id, (c.get(e.garnish.id) || 0) + 1)); return !c.size || Math.max(...c.values()) <= 3; })());
 ok("гарнир не ставится отдельным блюдом меню", r1.added.every((e) => !isGarnish(byId(e.recipeId!))));
 

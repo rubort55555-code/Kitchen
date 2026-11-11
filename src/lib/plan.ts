@@ -7,7 +7,7 @@ import { recipeStatus } from "./match";
 import { addDays, norm, parseYmd, uid, ymd } from "./util";
 import { parseAnswer } from "./claude";
 import { cuisineOf } from "./cuisine";
-import { garnishClass, garnishNeed, isGarnish, suitableGarnishes } from "./garnish";
+import { autoGarnishes, garnishClass, garnishNeed, isGarnish } from "./garnish";
 
 const DAY_SHORT = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
 const DAY_LONG = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
@@ -213,7 +213,7 @@ export function autoFill(start: string, slots: Slot[], only?: string): { added: 
       if (e.garnish || !e.recipeId) continue;
       const main = st.recipes.find((r) => r.id === e.recipeId);
       if (!main || !["required", "default"].includes(garnishNeed(main, e.slot))) continue;
-      const opts = suitableGarnishes(main, garnishes);
+      const opts = autoGarnishes(main, garnishes);
       if (!opts.length) continue;
       const prev = plan.filter((x) => x.garnish && x.date === addDays(e.date, -1)).map((x) => garnishClass(garnishes.find((g) => g.id === x.garnish!.id) || ({} as Recipe)));
       const best = opts.map((g) => ({ g, sc: (gScore.get(g.id) || 0) - (used.get(g.id) || 0) * 25 - (prev.includes(garnishClass(g)) ? 30 : 0) })).sort((a, b) => b.sc - a.sc)[0].g;
