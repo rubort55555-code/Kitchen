@@ -60,7 +60,7 @@ DR — 175, MAE — 97, MR — 88, MAC — 88, DG — 66, DB — 62, H — 56, F
 |---|---|---|
 | `cofid-2021/` | McCance and Widdowson's CoFID 2021 (Великобритания, OGL) | xlsx, руководство; 2 887 продуктов + 393 выведенных |
 | `usda-sr27/` | USDA SR Release 27 (2014, общественное достояние) | документация, ASCII-база; 8 618 продуктов |
-| `russia-himsostav/` | Скурихин, Тутельян (ред.), «Химический состав российских пищевых продуктов», 2002 | 237 стр., чанки по 10 страниц, разобрано 1 002 строки таблиц (README папки) |
+| `russia-himsostav/` | Скурихин, Тутельян (ред.), «Химический состав российских пищевых продуктов», 2002 | 237 стр., чанки по 10 страниц, разобраны все 1 074 строки таблиц (178 вручную по скану) (README папки) |
 | `comparison/` | сравнение с таблицей состава приложения | `COMPARISON.md`, `products_match.csv`, `values_long.csv`, **`food_composition_unified.xlsx`** (сводная книга Excel, приоритет российского источника; `tools/build-food-workbook.py`) |
 
 Скрипты: `tools/chunk-food-sources.py` (нарезка), `tools/verify-food-chunks.py` (проверка полноты), `tools/compare-food-sources.py` (сравнение). Загрузка источников — вручную или `tools/fetch-food-databases.py`; для SR27 нужен хост `www.ars.usda.gov`.

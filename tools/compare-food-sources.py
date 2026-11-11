@@ -128,7 +128,7 @@ for it in app:
     rc = [] if it["n"] in RU_BLOCK else ru_cands(it["n"]); nru += 1 if rc else 0
     ruv = {}
     for k, f in RUF.items():
-        xs = sorted(r["n"][f] for r in rc if isinstance(r["n"].get(f), (int, float)) and not (k == "kcal" and r.get("flags")))
+        xs = sorted(r["n"][f] for r in rc if isinstance(r["n"].get(f), (int, float)) and not (k == "kcal" and any("энергия" in f_ for f_ in r.get("flags", []))))
         if xs: ruv[k] = (statistics.median(xs), xs[0], xs[-1])
     rows.append([it["n"], src, m["ndb"], sr["name"] if sr else "(нет в SR27)", c["code"] if c else "", c["name"] if c else "", round(s, 2), "да" if conf else "нет", q,
                  len(rc), "; ".join(f"{r['code']} {r['name']}" for r in rc[:3])])
@@ -169,7 +169,7 @@ L.append("| Источник | Год | Продуктов | Показател�
 L.append(f"| Приложение «Кухня» (`compositionData.json`) | — | {len(app)} | 31 | Fineli CC BY 4.0, USDA — общественное достояние, ГОСТ — по маркировке | — |")
 L.append(f"| McCance and Widdowson's CoFID, набор 2021 (Великобритания) | 2021 | {len(cofid)} (+393 выведенных из набора) | ≈ 280 (14 листов) | Open Government Licence | `cofid-2021/chunks/foods/` |")
 L.append(f"| USDA National Nutrient Database SR, Release 27 | 2014 | {len(sr27)} | 53 в сокращённой таблице (в полной — 150 кодов NUTR_DEF) | общественное достояние | `usda-sr27/chunks/foods/` |")
-L.append(f"| Химический состав российских пищевых продуктов (под ред. Скурихина и Тутельяна, Институт питания РАМН) | 2002 | {len(ru_rows)} принято из 1 074 найденных строк таблиц 1–12 (72 отброшено, причины — `russia-himsostav/README.md`) | 16 (КБЖУ, МДС, клетчатка, НЖК, холестерин, 6 минералов, A/РЭ/ТЭ, B1, B2, PP, C) | не установлена (издание под защитой авторского права) | `russia-himsostav/chunks/` |\n")
+L.append(f"| Химический состав российских пищевых продуктов (под ред. Скурихина и Тутельяна, Институт питания РАМН) | 2002 | {len(ru_rows)} принято все 1 074 найденные строки таблиц 1–12 (178 из них прочитаны вручную по скану, см. `russia-himsostav/README.md`) | 16 (КБЖУ, МДС, клетчатка, НЖК, холестерин, 6 минералов, A/РЭ/ТЭ, B1, B2, PP, C) | не установлена (издание под защитой авторского права) | `russia-himsostav/chunks/` |\n")
 L.append("## 2. Показатели: что есть в каждом источнике\n")
 L.append("Доля продуктов с числовым значением (в CoFID «Tr» — следы — считается значением 0, «N» — не определено, — пропуском).\n")
 L.append("| Показатель приложения | CoFID: код (доля) | SR27: поле (доля) | Fineli R18: код (доля) | Приложение (доля из 260) | Российский справочник |\n|---|---|---|---|---|---|")

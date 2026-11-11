@@ -63,7 +63,7 @@ def cf_vals(c):
     return v
 
 def ru_vals(r):
-    return {k: r["n"][f] for k, f in RUF.items() if isinstance(r["n"].get(f), (int, float)) and not (k == "kcal" and r.get("flags"))}
+    return {k: r["n"][f] for k, f in RUF.items() if isinstance(r["n"].get(f), (int, float)) and not (k == "kcal" and any("энергия" in f_ for f_ in r.get("flags", [])))}
 
 # --- русские кандидаты (то же правило, что в tools/compare-food-sources.py) ---
 def rstem(w):
@@ -172,7 +172,8 @@ head_a = ["Источник", "Код", "Название", "Раздел/гру
 rows_all = []
 for r in ru_rows:
     notes = []
-    if r.get("flags"): notes.append("энергия не сходится с БЖУ — не использована")
+    if r.get("flags"): notes.extend(r["flags"])
+    if r.get("manual"): notes.append("прочитано вручную по скану")
     if r.get("unreadable"): notes.append("не прочитано: " + ", ".join(r["unreadable"]))
     ck = r.get("check_portion2")
     if ck and ck.get("suspect"): notes.append("не взято (не сошлось со второй порцией): " + ", ".join(ck["suspect"]))
@@ -207,7 +208,7 @@ lines = [
     ["Что внутри:"],
     [f"• Продуктов приложения: {len(groups)}; российский справочник использован у {n_ru}, неоднозначно у {n_amb}, нет совпадения у {len(groups) - n_ru - n_amb}; SR27 найден у {n_sr}; CoFID (надёжное совпадение по названию) у {n_cf}."],
     [f"• Значений в сводной: {total}; из РФ {cnt_src['РФ']}, из SR27 {cnt_src['SR27']}, из CoFID {cnt_src['CoFID']}."],
-    [f"• «Все продукты»: РФ {len(ru_rows)} строк (из 1 074 найденных; 72 отброшены, см. russia-himsostav/README.md), CoFID {len(cofid)}, SR27 {len(sr27)}; всего {len(rows_all)}."],
+    [f"• «Все продукты»: РФ {len(ru_rows)} строк (все 1 074 найденные строки таблиц 1–12; 178 прочитаны вручную по скану, см. russia-himsostav/README.md), CoFID {len(cofid)}, SR27 {len(sr27)}; всего {len(rows_all)}."],
     [""],
     ["Как сопоставлялись продукты и чего не стоит ждать:"],
     ["• Названия на трёх языках, общего кода нет. Ключ — продукт приложения: к нему SR27 привязан по коду NDB из tools/nutrition-map.jsonl, CoFID — по английскому названию (только надёжные совпадения: то же главное слово и состояние, однозначно), российский справочник — по русскому названию и состоянию (сырой/варёный/сушёный/консервы). Остальные продукты источников между собой не сопоставлялись."],

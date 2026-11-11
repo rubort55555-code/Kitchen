@@ -95,7 +95,8 @@ if os.path.exists(os.path.join(RB, "chunks", "tables", "foods_parsed.jsonl")):
     off = 0
     for r in rows:
         n = r["n"]; g = lambda k: n.get(k) or 0
-        if any(k not in n for k in ("water", "prot", "fat", "carb", "ash", "kcal")) or abs(g("water") + g("prot") + g("fat") + g("carb") + g("fib") + g("org") + g("ash") - 100) > 1.5: off += 1
+        book_sum = any("в самой книге" in f for f in r.get("flags", []))
+        if any(k not in n for k in ("water", "prot", "fat", "carb", "ash", "kcal")) or (not book_sum and abs(g("water") + g("prot") + g("fat") + g("carb") + g("fib") + g("org") + g("ash") + g("alc") - 100) > 1.5): off += 1
     print(f"Рос. справочник: текст чанков = текст PDF: {joined == whole}; разобранных строк {len(rows)}, нарушают проверки {off}")
     bad += (joined != whole) + off
 print("ОК" if bad == 0 else f"ЕСТЬ РАСХОЖДЕНИЯ: {bad}")

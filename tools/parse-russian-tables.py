@@ -133,18 +133,18 @@ def assign(cells, cent):
         else: best[j] = (d, v)
     return [best[j][1] if j in best else None for j in range(len(cent))], dropped
 
-def check(n):
+def check(n, allow_sum=False):
     for k in CORE_MACRO + ["kcal"]:
         if n.get(k) is None: return f"нет значения «{k}»"
     g = lambda k: n.get(k) or 0
-    s = g("water") + g("prot") + g("fat") + g("carb") + g("fib") + g("org") + g("ash")
-    if abs(s - 100) > 1.5: return f"сумма компонентов {s:.1f} вместо 100"
+    s = g("water") + g("prot") + g("fat") + g("carb") + g("fib") + g("org") + g("ash") + g("alc")      # alc — спирт, г на 100 г (таблица 11)
+    if not allow_sum and abs(s - 100) > 1.5: return f"сумма компонентов {s:.1f} вместо 100"
     return None
 
 def energy_off(n):
     """True, если энергия справочника расходится с БЖУ (± 12% или ± 10 ккал): либо ошибка скана в энергии, либо собственные коэффициенты справочника. Сумма компонентов при этом верна."""
     g = lambda k: n.get(k) or 0
-    est = 4 * g("prot") + 9 * g("fat") + 4 * g("carb") + 2 * g("fib") + 3 * g("org")
+    est = 4 * g("prot") + 9 * g("fat") + 4 * g("carb") + 2 * g("fib") + 3 * g("org") + 7 * g("alc")
     return abs(est - n["kcal"]) > max(10, 0.12 * n["kcal"])
 
 def main():
@@ -180,6 +180,22 @@ def main():
             cu = centers([pair[i][0] for i in sorted(strict)]) if strict else None
             for i, (code, name, cells, y, why, sec) in enumerate(macro):
                 rec = {"code": code, "name": name, "page": p, "table": tn}
+                mf = MANUAL.get((p, code))
+                if mf and mf.get("full"):
+                    # строка прочитана вручную целиком (все колонки): автоматический разбор не нужен
+                    if mf.get("name"): rec["name"] = mf["name"]
+                    port = float(mf.get("portion", 100))
+                    n = {k: v for k, v in mf.items() if k not in ("full", "portion", "name", "allow_sum")}
+                    if port != 100: n = {k: round(v * 100 / port, 3) for k, v in n.items()}
+                    sum_note = mf.get("allow_sum")
+                    why2 = check(n, allow_sum=bool(sum_note))
+                    if why2: bad.append({**rec, "reason": why2 + " (строка прочитана вручную)", "n": n}); reasons["вручную: " + why2.split(" ")[0]] += 1; continue
+                    flags = []
+                    if port != 100: flags.append(f"значения книги даны на порцию {port:g} г, пересчитано на 100 г")
+                    if sum_note: flags.append(sum_note)
+                    if energy_off(n): flags.append("энергия не сходится с БЖУ (ккал не использовать без проверки по скану)")
+                    ok.append({**rec, "method": "вручную по скану (строка целиком)", **({"flags": flags} if flags else {}), "manual": ["вся строка"], "n": n})
+                    continue
                 if why: bad.append({**rec, "reason": why}); reasons[why.split(":")[0].split(" (")[0].replace("порция 50 г", "порция не 100 г")] += 1; continue
                 if i not in pair: bad.append({**rec, "reason": "нет строки справа (код не найден, число строк слева и справа разное)"}); reasons["нет строки справа"] += 1; continue
                 mc, how, sec_u = pair[i]
