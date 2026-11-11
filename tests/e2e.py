@@ -568,7 +568,10 @@ with sync_playwright() as p:
     pg = ctx.new_page(); errs = []
     pg.route("**/recipes.json", lambda r: r.abort())
     pg.on("pageerror", lambda e: errs.append(str(e)))
-    pg.goto(URL); pg.wait_for_selector('.sheet[aria-label="Знакомство"]')
+    pg.goto(URL)
+    # Сначала уведомление о данных и согласие с политикой, потом знакомство
+    pg.wait_for_selector('.sheet[aria-label="Согласие"]'); pg.click('.sheet .btn:has-text("Понятно, продолжить")')
+    pg.wait_for_selector('.sheet[aria-label="Знакомство"]')
     ok(S + "показано на первом запуске", "Что лежит дома" in pg.inner_text(".sheet"))
     for _ in range(3): pg.click(".sheet .btn >> text=Далее")
     ok(S + "четвёртый экран", "Сколько пропало" in pg.inner_text(".sheet"))

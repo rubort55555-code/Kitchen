@@ -6,6 +6,7 @@ import { planFor, type BodyProfile } from "../src/lib/nutrition";
 import { parseRecipeText } from "../tools/recipes.mjs";
 import type { PlanEntry, Recipe, Rule } from "../src/lib/types";
 import { checkRecipe, compileRules } from "../src/lib/exclusions";
+import { fitsSlot } from "../src/lib/plan";
 import { garnishClass, garnishFits, garnishNeed, isGarnish } from "../src/lib/garnish";
 let pass = 0, fail = 0;
 const ok = (name: string, c: boolean, extra?: unknown) => { if (c) pass++; else { fail++; console.log("FAIL", name, extra ?? ""); } };
@@ -88,6 +89,17 @@ const fx: PlanEntry[] = [{ id: "u1", date: days[1], slot: "ужин", name: cut.
 const r4 = autoPlan({ recipes, allowed: () => true, days, slots: [...slots], fixed: fx, people: [f], iterations: 3000 });
 ok("стоящему блюду без гарнира подобран гарнир", !!r4.garnishes["u1"] && garnishFits(cut, byId(r4.garnishes["u1"].id)), r4.garnishes);
 ok("выбранный пользователем гарнир не трогаем", !r4.garnishes["u2"]);
+
+// Перекус: отдельный приём пищи, блюда только вида «перекус», без гарнира
+const snack = recipes.find((r) => r.kind === "перекус")!;
+ok("в базе не меньше 10 перекусов и 10 овощных блюд", recipes.filter((r) => r.kind === "перекус").length >= 10 && recipes.filter((r) => r.kind === "основное" && !/мяс|говяд|свинин|курин|куриц|индейк|рыб|минтай|лосос|креветк|кальмар/i.test(r.name + r.ingredients.map((i) => i.name).join(" "))).length >= 10);
+ok("перекус подходит только к перекусу", fitsSlot(snack, "перекус") && !fitsSlot(snack, "ужин") && !fitsSlot(snack, "обед") && !fitsSlot(snack, "завтрак") && !fitsSlot(recipes.find((r) => r.kind === "основное")!, "перекус"));
+const r5 = autoPlan({ recipes, allowed: () => true, days, slots: [...slots, "перекус"], fixed: [], people: [f], iterations: 8000 });
+ok("с перекусом заполнено 28 мест", r5.added.length === 28 && r5.empty === 0, r5.added.length);
+ok("на перекус стоят только перекусы, без гарнира", r5.added.filter((e) => e.slot === "перекус").length === 7 && r5.added.filter((e) => e.slot === "перекус").every((e) => byId(e.recipeId!).kind === "перекус" && !e.garnish));
+const ev5 = evaluateMenu(r5.added.map((e) => ({ ...e, portions: r5.portions[e.id] })), days, recipes, { id: "m1", body: bodyF }, f.plan, rulesFor([member("m1", "Аня", bodyF)]));
+ok("с перекусами калории каждого дня в пределах ±5%", ev5.dayRes.every((d) => d.kcalOk), ev5.dayRes.map((d) => d.pct));
+ok("перекусы помогают кальцию: в среднем за неделю не хуже, чем без них", (ev5.micro.find((m) => m.key === "ca")?.pct || 0) >= (ev1.micro.find((m) => m.key === "ca")?.pct || 0) - 2, [ev5.micro.find((m) => m.key === "ca")?.pct, ev1.micro.find((m) => m.key === "ca")?.pct]);
 
 // Нет подходящих блюд
 const none = autoPlan({ recipes, allowed: () => false, days, slots: [...slots], fixed: [], people: [f], iterations: 100 });

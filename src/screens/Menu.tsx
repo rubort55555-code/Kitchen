@@ -195,7 +195,7 @@ export function PickSheet({ date, slot }: { date: string; slot: Slot }) {
       .sort((a, b) => b.st.urgent - a.st.urgent || b.st.percent - a.st.percent);
   }, [st, q]);
   // На завтрак сразу показываем завтраки, если они есть; фильтр можно сбросить
-  const [flt, setFlt] = useState<Filters>(() => (slot === "завтрак" && st.recipes.some((r) => kindOf(r) === "завтрак") ? { ...NO_FILTERS, kind: "завтрак" } : NO_FILTERS));
+  const [flt, setFlt] = useState<Filters>(() => ((slot === "завтрак" || slot === "перекус") && st.recipes.some((r) => kindOf(r) === slot) ? { ...NO_FILTERS, kind: slot } : NO_FILTERS));
   const rows = filterRecipes(ok, flt);
   const pick = (name: string, id?: string) => {
     addEntry(date, slot, name, id);

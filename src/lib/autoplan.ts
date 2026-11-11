@@ -52,6 +52,7 @@ function mulberry(seed: number) {
 }
 
 const q = (x: number) => Math.round(x * 2) / 2; // «равноценность»: отклонения меньше полупроцента не различаем
+const qc = (x: number) => Math.round(x / 3) * 3; // для пределов и микроэлементов грубее: суммарное отклонение меньше 3 процентных пунктов — равноценно, тогда решает разнообразие
 
 /** Подбор порций основных блюд одного дня одного человека (только числа). Возвращает порции и вектор дня. */
 function fitDayNum(mains: Cand[], extras: Cand[], p: Person): { portions: number[]; vec: Vec } {
@@ -168,7 +169,7 @@ export function autoPlan(inp: AutoInput): AutoResult {
       if (!s.main) continue;
       counts.set(s.main.r.id, (counts.get(s.main.r.id) || 0) + 1);
       home += s.main.bonus + (s.garnish?.bonus || 0);
-      if (s.slot !== "завтрак") { mainsLD++; if (s.main.prot === "рыба") fish++; }
+      if (s.slot === "обед" || s.slot === "ужин") { mainsLD++; if (s.main.prot === "рыба") fish++; }
       if (s.garnish) gCounts.set(s.garnish.r.id, (gCounts.get(s.garnish.r.id) || 0) + 1);
     }
     for (const n of counts.values()) if (n > 2) variety += n - 2;
@@ -196,7 +197,7 @@ export function autoPlan(inp: AutoInput): AutoResult {
       for (const [k, L] of lim) { const o = Math.max(0, avg(k) / L - 1); if (o > 0) { viol++; pen3 += 100 * o; } }
       for (const m of norms.get(p.id) || []) pen4 += 100 * Math.max(0, MICRO_MIN - avg(m.key) / m.amount);
     }
-    return [notOk, q(pen2), viol, q(pen3), q(pen4), variety, -home];
+    return [notOk, q(pen2), viol, qc(pen3), qc(pen4), variety, -home];
   }
   const less = (a: Key, b: Key) => { for (let i = 0; i < a.length; i++) { if (a[i] !== b[i]) return a[i] < b[i]; } return false; };
   const same = (a: Key, b: Key) => a.every((v, i) => v === b[i]);
@@ -266,6 +267,26 @@ export function autoPlan(inp: AutoInput): AutoResult {
   empty.forEach((s, i) => { s.main = best!.snap.picks[i][0]; s.garnish = best!.snap.picks[i][1] ?? null; });
   spots.filter((s) => s.fixed && s.gFree).forEach((s, i) => { s.garnish = best!.snap.fixedG[i] ?? null; });
   sideOf.clear(); best!.snap.sides.forEach((v, k) => sideOf.set(k, v));
+
+  // Доводка разнообразия: рыбы меньше двух раз — пробуем поставить рыбное блюдо на ужин вместо другого, если это не ухудшает уровни 1–4 (калории, пределы, витамины)
+  const fishCount = () => spots.filter((x) => (x.slot === "обед" || x.slot === "ужин") && x.main?.prot === "рыба").length;
+  let curKey = evaluate();
+  for (let guard = 0; guard < 4 && fishCount() < 2; guard++) {
+    let improved = false;
+    for (const s of empty.filter((x) => x.slot === "ужин" && x.main?.prot !== "рыба")) {
+      for (const c of (pools.get("ужин") || []).filter((x) => x.prot === "рыба" && canPlace(s, x))) {
+        const oldMain = s.main, oldG = s.garnish;
+        place(s, c);
+        const k = evaluate();
+        // Уровни 1–4 не должны стать хуже (сравнение по порядку), а разнообразие — лучше
+        // (небольшое отклонение по калориям — до 1 пункта штрафа и до 3 пунктов по витаминам — считаем равноценным)
+        if (k[0] <= curKey[0] && k[1] <= curKey[1] + 1 && k[2] <= curKey[2] && k[3] <= curKey[3] && k[4] <= curKey[4] + 3 && k[5] < curKey[5]) { curKey = k; improved = true; break; }
+        s.main = oldMain; s.garnish = oldG ?? null;
+      }
+      if (improved) break;
+    }
+    if (!improved) break;
+  }
 
   // Результат
   const added: PlanEntry[] = [];
