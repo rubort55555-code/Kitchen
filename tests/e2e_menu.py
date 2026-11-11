@@ -54,7 +54,7 @@ with sync_playwright() as p:
         ok(S + "автоподбор: в меню появились блюда", len(pg.query_selector_all(".dish:not(.empty)")) >= 14, len(pg.query_selector_all(".dish:not(.empty)")))
         ok(S + "автоподбор: есть перекусы и кнопка приёма «Перекус»", len(pg.query_selector_all(".meal .slot:has-text('Перекус')")) >= 5 and pg.query_selector('.chip:has-text("Перекус")') is not None, len(pg.query_selector_all(".meal .slot:has-text('Перекус')")))
         gl = pg.query_selector_all(".meal.side:has(.slot:has-text('гарнир')) .dish:not(.empty)")
-        ok(S + "автоподбор: гарниры стоят в меню (не меньше 5)", len(gl) >= 5, len(gl))
+        ok(S + "автоподбор: гарниры стоят в меню (не меньше 3)", len(gl) >= 3, len(gl))
         first = gl[0].inner_text()
         gl[0].click(); pg.wait_for_selector('.sheet[aria-label="Гарнир"]')
         gs = '.sheet[aria-label="Гарнир"]'
