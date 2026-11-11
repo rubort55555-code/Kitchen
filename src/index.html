@@ -30,5 +30,21 @@
 <div id="root"></div>
 <noscript>Для работы приложения нужен JavaScript.</noscript>
 %JS%
+<!-- Если за 10 секунд приложение не появилось (например, в телефоне застряли старые файлы), показываем кнопку «Обновить приложение» -->
+<script>
+setTimeout(function () {
+  var r = document.getElementById("root");
+  if (!r || r.childNodes.length) return;
+  var d = document.createElement("div");
+  d.style.cssText = "font-family:Manrope,system-ui,sans-serif;padding:24px 16px;max-width:480px;margin:0 auto;color:#222";
+  d.innerHTML = '<h1 style="font-size:22px">Приложение не открылось</h1><p>Данные на телефоне целы. Чаще всего помогает обновление файлов приложения.</p><button id="reset" style="width:100%;min-height:52px;border:0;border-radius:16px;font-weight:800;font-size:16px;background:#2F7D4F;color:#fff">Обновить приложение</button>';
+  document.body.appendChild(d);
+  document.getElementById("reset").onclick = function () {
+    var done = function () { location.reload(); };
+    var cl = function () { return window.caches ? caches.keys().then(function (k) { return Promise.all(k.filter(function (x) { return x.indexOf("kitchen-") === 0; }).map(function (x) { return caches.delete(x); })); }) : Promise.resolve(); };
+    (navigator.serviceWorker ? navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (x) { return x.unregister(); })); }) : Promise.resolve()).then(cl).then(done, done);
+  };
+}, 10000);
+</script>
 </body>
 </html>
