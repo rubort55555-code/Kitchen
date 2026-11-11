@@ -41,4 +41,7 @@
     <!-- Камера: сканер штрихкодов и фото чеков. Без камеры приложение тоже работает. -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- Микрофон: только чтобы надиктовать сообщение об ошибке. Без микрофона можно писать текстом. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
 </manifest>

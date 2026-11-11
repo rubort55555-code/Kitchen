@@ -31,6 +31,8 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npm run check
       - run: npm run android
+        env:
+          FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
       - name: Сборка APK
         working-directory: android
         run: ./gradlew assembleRelease --no-daemon

@@ -41,7 +41,7 @@ const result = await esbuild.build({
   metafile: true,
   conditions: ["production"],
   legalComments: "none",
-  define: { __VERSION__: JSON.stringify(VERSION), __BUILT_AT__: String(BUILT_AT), __CATALOG_H__: JSON.stringify(CATALOG_H), "process.env.NODE_ENV": '"production"' },
+  define: { __FEEDBACK_URL__: JSON.stringify(process.env.FEEDBACK_URL || ""), __VERSION__: JSON.stringify(VERSION), __BUILT_AT__: String(BUILT_AT), __CATALOG_H__: JSON.stringify(CATALOG_H), "process.env.NODE_ENV": '"production"' },
   nodePaths: process.env.LOCAL_NODE_MODULES ? [process.env.LOCAL_NODE_MODULES] : [],
   logLevel: "warning",
 });

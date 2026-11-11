@@ -27,6 +27,8 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npm run check
       - run: npm run ios
+        env:
+          FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
       - name: Сборка приложения
         run: |
           xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release \

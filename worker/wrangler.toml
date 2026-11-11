@@ -1,0 +1,23 @@
+name = "kitchen-feedback"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Журналы запросов выключены: сообщения анонимные
+[observability]
+enabled = false
+
+[vars]
+GITHUB_REPO = "rubort55555-code/Kitchen"
+BASE_BRANCH = "main"
+# Откуда принимаем запросы: сайт и приложения из магазина (Capacitor)
+ALLOWED_ORIGINS = "https://rubort55555-code.github.io,capacitor://localhost,https://localhost,http://localhost"
+
+# Бесплатное распознавание речи (Whisper)
+[ai]
+binding = "AI"
+
+# Не больше 6 запросов в минуту с одного подключения
+[[ratelimits]]
+name = "LIMITER"
+namespace_id = "1001"
+simple = { limit = 6, period = 60 }

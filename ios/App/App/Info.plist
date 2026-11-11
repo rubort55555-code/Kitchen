@@ -28,6 +28,8 @@
 	<false/>
 	<key>NSCameraUsageDescription</key>
 	<string>Камера нужна, чтобы сканировать штрихкоды и фотографировать чеки и рецепты.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Микрофон нужен, чтобы надиктовать сообщение об ошибке. Запись не сохраняется.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Доступ к фото нужен, чтобы выбрать снимок чека, рецепта или блюда.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
