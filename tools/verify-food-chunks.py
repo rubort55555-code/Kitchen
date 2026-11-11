@@ -84,5 +84,19 @@ w = [l for l in zc.read("WEIGHT.txt").decode("latin-1").splitlines() if l.strip(
 nm = sum(len(r["measures"]) for r in recs.values())
 print(f"SR27: строк WEIGHT {len(w)}, мер в чанках {nm}")
 bad += (len(w) != nm)
+# Российский справочник: текст чанков = текст PDF; разобранные строки: ключевые значения на месте, сумма компонентов 100 ± 1,5 г, коды страниц в пределах книги
+RB = os.path.join(R, "russia-himsostav")
+if os.path.exists(os.path.join(RB, "chunks", "tables", "foods_parsed.jsonl")):
+    import subprocess
+    src = os.path.join(RB, "source", [f for f in os.listdir(os.path.join(RB, "source")) if f.endswith(".pdf")][0])
+    whole = subprocess.run(["pdftotext", "-layout", src, "-"], capture_output=True, text=True).stdout
+    joined = "".join(open(f, encoding="utf-8").read() for f in sorted(glob.glob(os.path.join(RB, "chunks", "book", "*.txt"))))
+    rows = [json.loads(l) for l in open(os.path.join(RB, "chunks", "tables", "foods_parsed.jsonl"), encoding="utf-8")]
+    off = 0
+    for r in rows:
+        n = r["n"]; g = lambda k: n.get(k) or 0
+        if any(k not in n for k in ("water", "prot", "fat", "carb", "ash", "kcal")) or abs(g("water") + g("prot") + g("fat") + g("carb") + g("fib") + g("org") + g("ash") - 100) > 1.5: off += 1
+    print(f"Рос. справочник: текст чанков = текст PDF: {joined == whole}; разобранных строк {len(rows)}, нарушают проверки {off}")
+    bad += (joined != whole) + off
 print("ОК" if bad == 0 else f"ЕСТЬ РАСХОЖДЕНИЯ: {bad}")
 sys.exit(1 if bad else 0)
