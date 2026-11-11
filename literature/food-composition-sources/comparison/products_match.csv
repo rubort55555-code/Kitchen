@@ -41,7 +41,7 @@
 Грибы эноки,USDA SR28,11950,"MUSHROOMS,ENOKI,RAW",,,0,нет,"Mushrooms, enoki, raw",0,
 Груша,Fineli R18 + USDA,09252,"PEARS,RAW",14-365,"Pears, average, raw, flesh only",0.5,нет,"Pear, without skin",0,
 Груши,Fineli R18 + USDA,09252,"PEARS,RAW",14-365,"Pears, average, raw, flesh only",0.5,нет,"Pear, without skin",0,
-Дрожжи,USDA SR28,18375,"LEAVENING AGENTS,YEAST,BAKER'S,ACTIVE DRY",,,0,нет,"Leavening agents, yeast, baker's, active dry",1,12.1.1 Дрожжи прессованные
+Дрожжи,USDA SR28,18375,"LEAVENING AGENTS,YEAST,BAKER'S,ACTIVE DRY",,,0,нет,"Leavening agents, yeast, baker's, active dry",0,
 Желатин,Fineli R18 + USDA,19177,"GELATINS,DRY PDR,UNSWTND",,,0,нет,Gelatin,1,12.1.4 Желатин
 Зелёный лук,USDA SR28,11291,"ONIONS,SPRING OR SCALLIONS (INCL TOPS&BULB),RAW",,,0,нет,"Onions, spring or scallions (includes tops and bulb), raw",0,
 Зира,USDA SR28,02014,CUMIN SEED,,,0,нет,"Spices, cumin seed",0,
@@ -49,7 +49,7 @@
 Имбирь,Fineli R18 + USDA,11216,"GINGER ROOT,RAW",,,0,нет,"Ginger root, raw",0,
 Имбирь молотый,USDA SR28,02021,"GINGER,GROUND",,,0,нет,"Spices, ginger, ground",0,
 Индейка,Fineli R18 + USDA,05710,"TURKEY,RTL PARTS,BREAST,MEAT ONLY,RAW",,,0,нет,Turkey breast,2,3.1.15.5 Индейки 1 кат.; 3.1.15.6 Индейки 2 кат.
-Йогурт,Fineli R18 + USDA,01116,"YOGURT,PLN,WHL MILK,8 GRAMS PROT PER 8 OZ",,,0,нет,"Yoghurt, plain, 2.5% fat",5,"1.2.2.2 Йогурт 1,5% жирности; 1.2.2.3 Йогурт плодово-ягодный, 1,5% жирности; 1.3.2.4 Йогурт сладкий 3,2% жирности"
+Йогурт,Fineli R18 + USDA,01116,"YOGURT,PLN,WHL MILK,8 GRAMS PROT PER 8 OZ",,,0,нет,"Yoghurt, plain, 2.5% fat",6,"1.2.2.2 Йогурт 1,5% жирности; 1.2.2.3 Йогурт плодово-ягодный, 1,5% жирности; 1.3.2.3 Йогурт 3,2% жирности"
 Кабачок,Fineli R18 + USDA,11477,"SQUASH,SMMR,ZUCCHINI,INCL SKN,RAW",,,0,нет,"Zucchini, summer squash",0,
 Какао,Fineli R18 + USDA,19165,"COCOA,DRY PDR,UNSWTND",12-545,Cocoa powder,0.67,да,"Cocoa powder, unsweetened",1,10.11.4 Какао тертое
 Кальмары,Fineli R18 + USDA,15175,"SQUID,MIXED SPECIES,RAW",16-263,"Squid, raw",1.0,да,Squid,0,
@@ -66,7 +66,7 @@
 Квас,USDA SR28,14305,"MALT BEV,INCL NON-ALCOHOLIC BEER",,,0,нет,"Malt beverage, includes non-alcoholic beer",0,
 Квашеная капуста,Fineli R18 + USDA,11439,"SAUERKRAUT,CND,SOL&LIQUIDS",,,0,нет,Sour cabbage/sauerkraut,0,
 Кетчуп,Fineli R18 + USDA,11935,Catsup,17-709,Tomato ketchup,1.0,да,Tomato ketchup,0,
-Кефир,ГОСТ/маркировка поверх,01289,(нет в SR27),,,0,нет,"Gefilus kefir drink, plain, fat 2.5%, 1 ug vitamin d, lactose-free, probiotics",3,"1.1.2.3 Кефир нежирный; 1.1.2.4 Кефир 1,0% жирности; 1.3.2.7 Кефир жирности"
+Кефир,ГОСТ/маркировка поверх,01289,(нет в SR27),,,0,нет,"Gefilus kefir drink, plain, fat 2.5%, 1 ug vitamin d, lactose-free, probiotics",4,"1.1.2.3 Кефир нежирный; 1.1.2.4 Кефир 1,0% жирности; 1.2.2.4 Кефир 2,5% жирности 1"
 Киви,Fineli R18 + USDA,09148,"KIWIFRUIT,GRN,RAW",14-371,"Kiwi fruit, flesh only, raw",0.67,да,"Kiwi fruit, without skin",2,9.1.3.4 Киви; 9.1.3.6 Киви подварка
 Кинза,Fineli R18 + USDA,11165,"CORIANDER (CILANTRO) LEAVES,RAW",13-888,"Coriander leaves, fresh",0.5,нет,"Coriander, fresh",0,
 Кокосовая стружка,Fineli R18 + USDA,12108,"COCONUT MEAT,DRIED (DESICCATED),NOT SWTND",,,0,нет,Coconut flake,0,
@@ -121,7 +121,7 @@
 Масло кунжутное,USDA SR28,04058,"OIL,SESAME,SALAD OR COOKING",,,0,нет,"Oil, sesame, salad or cooking",1,5.4.9 Масло кунжутное Масло льняное
 Масло оливковое,Fineli R18 + USDA,04053,"OIL,OLIVE,SALAD OR COOKING",,,0,нет,Olive oil,1,5.4.11 Масло оливковое Масло пальмовое Масло подсолнечное
 Масло подсолнечное,Fineli R18 + USDA,04060,"OIL,SUNFLOWER,LINOLEIC (LESS THAN 60%)",,,0,нет,Sunflower oil,1,5.4.11 Масло оливковое Масло пальмовое Масло подсолнечное
-Масло сливочное,Fineli R18 + USDA,01145,"BUTTER,WITHOUT SALT",17-661,"Butter, unsalted",1.0,да,"Butter, unsalted",0,
+Масло сливочное,Fineli R18 + USDA,01145,"BUTTER,WITHOUT SALT",17-661,"Butter, unsalted",1.0,да,"Butter, unsalted",1,5.1.2 Масло сладко-сливочное «Вологодское»
 Масло чили,Fineli R18 + USDA,04582,"OIL,CANOLA",,,0,нет,Rapeseed oil,0,
 Мёд,Fineli R18 + USDA,19296,HONEY,17-050,Honey,1.0,да,Honey,1,10.11.8 Мед пчелиный
 Мидии,USDA SR28,15164,"MUSSEL,BLUE,RAW",,,0,нет,"Mollusks, mussel, blue, raw",0,
@@ -130,7 +130,7 @@
 Молоко,Fineli R18 + USDA,01077,"MILK,WHL,3.25% MILKFAT,W/ ADDED VITAMIN D",,,0,нет,"Milk, 3.5% fat, 1 ug added vitamin d",14,1.1.1.1 Молоко пастеризованное нежирное; 1.1.1.4 Молоко белковое; 1.1.4.4 Молоко сухое нежирное
 Морковь,Fineli R18 + USDA,11124,"CARROTS,RAW",13-496,"Carrots, old, raw",0.5,нет,Carrot,1,8.1.5.1 Морковь
 Моцарелла,Fineli R18 + USDA,01026,"CHEESE,MOZZARELLA,WHL MILK",,,0,нет,"Cheese, mozzarella cheese, 20% fat",0,
-Мука,Fineli R18 + USDA,20081,"WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",,,0,нет,"Flour, wheat flour, semi-coarse",16,6.1.2.1 Мука высшего сорта; 6.1.2.2 Мука 1 сорта; 6.1.3.1 Мука высшего сорта
+Мука,Fineli R18 + USDA,20081,"WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",,,0,нет,"Flour, wheat flour, semi-coarse",17,6.1.2.1 Мука высшего сорта; 6.1.2.2 Мука 1 сорта; 6.1.3.1 Мука высшего сорта
 Мука рисовая,Fineli R18 + USDA,20061,"RICE FLOUR,WHITE",,,0,нет,"Flour, rice flour, rice flake",0,
 Мускатный орех,USDA SR28,02025,"NUTMEG,GROUND",,,0,нет,"Spices, nutmeg, ground",0,
 Мята,USDA SR28,02065,"SPEARMINT,FRESH",,,0,нет,"Spearmint, fresh",0,
@@ -190,7 +190,7 @@
 Скумбрия,USDA SR28,15046,"MACKEREL,ATLANTIC,RAW",,,0,нет,"Fish, mackerel, Atlantic, raw",2,4.1.2.1 Скумбрия атлантическая; 4.1.2.5 Скумбрия дальневосточная
 Сливки,Fineli R18 + USDA,01050,"CREAM,FLUID,LT (COFFEE CRM OR TABLE CRM)",,,0,нет,"Cooking cream, 19% fat",7,"1.3.1.6 Сливки пастеризованные 8,0% жирности; 1.3.1.7 Сливки пастеризованные 10,0% жирности; 1.3.1.8 Сливки стерилизованные 10,0% жирности"
 Сливы,Fineli R18 + USDA,09279,"PLUMS,RAW",,,0,нет,"Plum, without stone",1,9.1.1.9 Слива
-Сметана,USDA SR28,01056,"CREAM,SOUR,CULTURED",,,0,нет,"Cream, sour, cultured",5,"1.3.2.13 Сметана «Домашняя» 10,0% жирности; 1.4.2.1 Сметана 15,0% жирности; 1.4.2.2 Сметана 20,0% жирности"
+Сметана,USDA SR28,01056,"CREAM,SOUR,CULTURED",,,0,нет,"Cream, sour, cultured",6,"1.3.2.12 Сметана 10,0% жирности; 1.3.2.13 Сметана «Домашняя» 10,0% жирности; 1.4.2.1 Сметана 15,0% жирности"
 Сода,Fineli R18 + USDA,18372,"LEAVENING AGENTS,BAKING SODA",,,0,нет,"Baking soda, bicarbonate of soda",0,
 Соевый соус,Fineli R18 + USDA,16123,SOY SAU MADE FROM SOY&WHEAT (SHOYU),,,0,нет,Soy sauce,0,
 Сок,Fineli R18 + USDA,09016,"APPLE JUC,CND OR BTLD,UNSWTND,WO/ ADDED VIT C",,,0,нет,"Apple juice, unsweetened, vitamin c",0,
@@ -201,10 +201,10 @@
 Стручковая фасоль,Fineli R18 + USDA,11052,"BEANS,SNAP,GREEN,RAW",,,0,нет,"Bean, green bean, string bean",0,
 Судак,Fineli R18 + USDA,15064,"PIKE,WALLEYE,RAW",,,0,нет,"Zander, pike-perch",1,4.1.9.12 Судак
 Сумах,USDA SR28,02028,PAPRIKA,,,0,нет,"Spices, paprika",0,
-Сухари,Fineli R18 + USDA,18079,"BREAD CRUMBS,DRY,GRATED,PLN",,,0,нет,"Flour, breadcrumbs",4,6.1.3.5.12 Сухари армейские; 6.1.3.8.2 Сухари армейские; 6.1.3.10.2 Сухари армейские
+Сухари,Fineli R18 + USDA,18079,"BREAD CRUMBS,DRY,GRATED,PLN",,,0,нет,"Flour, breadcrumbs",5,6.1.3.2.11 Сухари сливочные; 6.1.3.5.12 Сухари армейские; 6.1.3.8.2 Сухари армейские
 Сухари панировочные,Fineli R18 + USDA,18079,"BREAD CRUMBS,DRY,GRATED,PLN",,,0,нет,"Flour, breadcrumbs",0,
 Сухарики,Fineli R18 + USDA,18243,"CROUTONS,SEASONED",,,0,нет,Crouton,0,
-Сыр,Fineli R18 + USDA,01022,"CHEESE,GOUDA",12-358,"Cheese, Gouda",1.0,да,"Cheese, gouda",2,"1.1.3.4 Сыр домашний нежирный; 1.3.3.3 Сыр домашний 4,0% жирности"
+Сыр,Fineli R18 + USDA,01022,"CHEESE,GOUDA",12-358,"Cheese, Gouda",1.0,да,"Cheese, gouda",0,
 Сыр плавленый,Fineli R18 + USDA,01048,"CHEESE SPRD,PAST PROCESS,AMERICAN",,,0,нет,"Processed cheese, 20-24% fat",0,
 Сыр твёрдый,Fineli R18 + USDA,01022,"CHEESE,GOUDA",12-358,"Cheese, Gouda",1.0,да,"Cheese, gouda",0,
 Сыр творожный,Fineli R18 + USDA,01017,"CHEESE,CREAM",,,0,нет,"Cream cheese, low-fat, 25% fat, plain, lactose-free",0,
@@ -230,14 +230,14 @@
 Уксус рисовый,Fineli R18 + USDA,02053,"VINEGAR,DISTILLED",17-339,Vinegar,1.0,да,Vinegar,0,
 Устричный соус,USDA SR28,06176,"SAUCE,OYSTER,RTS",,,0,нет,"Sauce, oyster, ready-to-serve",0,
 Утка,USDA SR28,05139,"DUCK,DOMESTICATED,MEAT&SKN,RAW",,,0,нет,"Duck, domesticated, meat and skin, raw",0,
-Фарш,Fineli R18 + USDA,23572,"BEEF,GROUND,80% LN MEAT / 20% FAT,RAW",18-013,"Beef, brisket, raw, lean and fat",0.5,нет,"Beef, ground, 80% lean meat / 20% fat, raw",2,3.3.18 Фарш свиной сосисочный; 3.3.19 Фарш колбасный куриный
+Фарш,Fineli R18 + USDA,23572,"BEEF,GROUND,80% LN MEAT / 20% FAT,RAW",18-013,"Beef, brisket, raw, lean and fat",0.5,нет,"Beef, ground, 80% lean meat / 20% fat, raw",0,
 Фарш говяжий,USDA SR28,23572,"BEEF,GROUND,80% LN MEAT / 20% FAT,RAW",18-013,"Beef, brisket, raw, lean and fat",0.5,нет,"Beef, ground, 80% lean meat / 20% fat, raw",0,
-Фарш куриный,Fineli R18 + USDA,05332,"CHICKEN,GROUND,RAW",19-538,Chicken slices,0.33,нет,"Chicken, ground, raw",1,3.3.19 Фарш колбасный куриный
+Фарш куриный,Fineli R18 + USDA,05332,"CHICKEN,GROUND,RAW",19-538,Chicken slices,0.33,нет,"Chicken, ground, raw",0,
 Фарш мясной,Fineli R18 + USDA,23572,"BEEF,GROUND,80% LN MEAT / 20% FAT,RAW",18-013,"Beef, brisket, raw, lean and fat",0.5,нет,"Beef, ground, 80% lean meat / 20% fat, raw",0,
 Фасоль консервированная,Fineli R18 + USDA,16145,"BEANS,RED,KIDNEY,MATURE SEEDS,CND,DRND SOL",,,0,нет,"Bean, kidney bean, boiled",0,
 Фасоль сухая,Fineli R18 + USDA,16027,"BEANS,KIDNEY,ALL TYPES,MATURE SEEDS,RAW",,,0,нет,"Bean, brown bean, white bean, average",0,
 Фунчоза,USDA SR28,16082,"NOODLES,CHINESE,CELLOPHANE OR LONG RICE (MUNG BNS),DEHYD",,,0,нет,"Noodles, chinese, cellophane or long rice (mung beans), dehydrated",0,
-Хлеб,Fineli R18 + USDA,18069,"BREAD,WHITE,COMMLY PREP (INCL SOFT BREAD CRUMBS)",,,0,нет,"White bread, wheat bread, french bread, industrial",11,6.1.3.5.1 Хлеб пшеничный подовый; 6.1.3.5.2 Хлеб паляница; 6.1.3.8.1 Хлеб подовый
+Хлеб,Fineli R18 + USDA,18069,"BREAD,WHITE,COMMLY PREP (INCL SOFT BREAD CRUMBS)",,,0,нет,"White bread, wheat bread, french bread, industrial",13,6.1.3.2.1 Хлеб пшеничный формовой; 6.1.3.5.1 Хлеб пшеничный подовый; 6.1.3.5.2 Хлеб паляница
 Хлеб ржаной,Fineli R18 + USDA,18060,"BREAD,RYE",,,0,нет,"Rye bread, water, rye and dark wheat flour",3,6.2.2.1 Хлеб бородинский ржаная обойная и пшеничная 2; 6.2.2.2 Хлеб рижский ржаная сеяная и пшеничная 1; 6.2.2.3 Хлеб украинский ржаная обдирная и пшеничная 1
 Хмели-сунели,USDA SR28,02013,CORIANDER SEED,,,0,нет,"Spices, coriander seed",0,
 Хрен,Fineli R18 + USDA,02055,"HORSERADISH,PREPARED",13-258,"Horseradish, raw",1.0,да,Horseradish,1,8.1.5.34 Хрен
@@ -254,8 +254,8 @@
 Щавель,USDA SR28,11616,"DOCK,RAW",,,0,нет,"Dock, raw",1,8.1.1.10 Щавель
 Щука,Fineli R18 + USDA,15062,"PIKE,NORTHERN,RAW",,,0,нет,Pike,1,4.1.13.6 Щука
 Эстрагон сушёный,USDA SR28,02041,"SPICES,TARRAGON,DRIED",,,0,нет,"Spices, tarragon, dried",0,
-Яблоки,Fineli R18 + USDA,09003,"APPLES,RAW,WITH SKIN",14-319,"Apples, eating, raw, flesh and skin",0.5,нет,"Apples, raw, with skin",0,
-Яблоко,Fineli R18 + USDA,09003,"APPLES,RAW,WITH SKIN",14-319,"Apples, eating, raw, flesh and skin",0.5,нет,"Apples, raw, with skin",0,
+Яблоки,Fineli R18 + USDA,09003,"APPLES,RAW,WITH SKIN",14-319,"Apples, eating, raw, flesh and skin",0.5,нет,"Apples, raw, with skin",1,9.1.2.6 Яблоки
+Яблоко,Fineli R18 + USDA,09003,"APPLES,RAW,WITH SKIN",14-319,"Apples, eating, raw, flesh and skin",0.5,нет,"Apples, raw, with skin",1,9.1.2.6 Яблоки
 Ягоды,Fineli R18 + USDA,09050,"BLUEBERRIES,RAW",14-325,Blueberries,1.0,да,"Blueberries, raw",0,
 Ягоды замороженные,Fineli R18 + USDA,09054,"BLUEBERRIES,FRZ,UNSWTND",,,0,нет,"Berry, average",0,
 Яйца,Fineli R18 + USDA,01123,"EGG,WHL,RAW,FRSH",12-937,"Eggs, chicken, whole, raw",0.67,нет,"Egg, whole, raw, fresh",0,

@@ -6,6 +6,7 @@
 # Принятие строки (оба прохода): вода, белки, жиры, углеводы, зола и энергия на месте; вода+белки+жиры+углеводы+волокна+кислоты+зола = 100 ± 1,5 г.
 #   Энергия не сходится с БЖУ (± 12% или ± 10 ккал) — строка принимается с пометкой flags (энергию не использовать). Остальное — в rejected.jsonl с причиной.
 # Проверка по второй порции: у многих продуктов вторая строка (200 г и т. п.) = первая × порция/100; не сошедшееся с допуском на округление значение не берётся (клетка пуста, в записи — suspect).
+# Ручные поправки по скану: tools/russia-manual-corrections.json (страница + код → значения), подставляются поверх и проходят те же проверки.
 # Запуск (из корня репозитория): python3 -I tools/parse-russian-tables.py
 import json, os, re, statistics, subprocess
 from collections import Counter, defaultdict
@@ -18,6 +19,10 @@ MICRO_STD = ["na", "k", "ca", "mg", "p", "fe", "vita", "carot", "re", "te", "b1"
 MICRO_FAT = [c for c in MICRO_STD if c != "vitc"]                                                       # таблица 5: нет витамина C
 MICRO_DRINK = MICRO_STD[:-1] + ["alc", "kcal"]                                                           # таблица 11: напитки, колонка «Алк»
 CORE_MACRO = ["water", "prot", "fat", "carb", "ash"]
+MANUAL_PATH = os.path.join("tools", "russia-manual-corrections.json")
+MANUAL = {}
+if os.path.exists(MANUAL_PATH):
+    for r_ in json.load(open(MANUAL_PATH, encoding="utf-8"))["rows"]: MANUAL[(r_["page"], r_["code"])] = r_["values"]
 CODE = re.compile(r"^\d{1,2}(?:\.\d{1,3}){1,5}$")
 
 def words(p):
@@ -82,6 +87,7 @@ def raw_macro(ws):
         second = None
         for y2 in sorted({round(w["y"]) for w in body if c["y"] + 8 < w["y"] < y_end - 6}):
             ln2 = sorted([w for w in body if abs(w["y"] - y2) <= 5 and w["x0"] > c["x1"]], key=lambda w: w["x0"])
+            if any(w["w"].startswith("%") or "с.п" in w["w"] for w in ln2): continue          # строка «% суточной потребности», а не вторая порция
             n2 = [(w, num(w["w"])) for w in ln2 if num(w["w"]) is not None]
             q = next((j for j, (w, v) in enumerate(n2) if abs(w["xc"] - port["xc"]) <= 14 and v not in (100,) and len(n2) - j - 1 >= 5), None)
             if q is not None: second = (n2[q][1], [(w["xc"], v) for w, v in n2[q + 1:]]); break
@@ -198,6 +204,9 @@ def main():
                     if suspect:
                         mv = [None if c_ in suspect else v for c_, v in zip(mcols, mv)]; uv = [None if c_ in suspect else v for c_, v in zip(ucols, uv)]
                 n = dict(zip(mcols, mv)); n.update(dict(zip(ucols, uv)))
+                manual = MANUAL.get((p, code), {})
+                if manual:                                   # значения, прочитанные вручную по скану: ставятся поверх, сомнительные по второй порции снимаются
+                    n.update(manual); suspect = [c_ for c_ in suspect if c_ not in manual]; unread = [c_ for c_ in unread if c_ not in manual]
                 why2 = check(n)
                 if why2: bad.append({**rec, "reason": why2 + (f" (сомнительные значения по второй порции: {suspect})" if suspect else ""), "n": n}); reasons[why2.split(" ")[0] + (" ≠ 100" if why2.startswith("сумма") else "")] += 1; continue
                 extra = {}
@@ -205,6 +214,7 @@ def main():
                 if how == "порядок": extra["pair"] = "по порядку строк (код справа не распознан)"
                 if d1 or d2: extra["dropped_marks"] = d1 + d2
                 if unread: extra["unreadable"] = unread
+                if manual: extra["manual"] = sorted(manual)
                 if port2: extra["check_portion2"] = {"portion": port2, "matched": matched, "suspect": suspect}
                 ok.append({**rec, "method": method, **extra, "n": {k: v for k, v in n.items() if v is not None}})
             p += 2
