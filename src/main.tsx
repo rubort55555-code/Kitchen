@@ -1,6 +1,7 @@
 // Точка входа: загружаем данные, рисуем приложение, включаем работу без интернета.
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import { checkContent, load, reportError } from "./lib/store";
 import { setUpdate } from "./lib/ui";
 import { isNative } from "./lib/native";
@@ -11,7 +12,7 @@ window.addEventListener("error", (e) => reportError(e.error || e.message));
 window.addEventListener("unhandledrejection", (e) => reportError(e.reason));
 
 startTheme();
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(<ErrorBoundary><App /></ErrorBoundary>);
 load();
 // Приложение из магазина: свежие рецепты и справочник с сайта, когда приложение снова открывают
 if (isNative) document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") checkContent(); });
