@@ -22,7 +22,7 @@ if (isNative) document.addEventListener("visibilitychange", () => { if (document
 // Если номера разные, показываем «Есть новая версия» с кнопкой, которая сбрасывает сохранённые файлы и перезагружает приложение.
 // Это работает, даже если сам service worker по какой-то причине не обновился.
 async function checkVersion() {
-  if (isNative || typeof __VERSION__ === "undefined" || __VERSION__ === "dev") return;
+  if (isNative || !navigator.onLine || typeof __VERSION__ === "undefined" || __VERSION__ === "dev") return;
   try {
     const r = await fetch("./version.json?t=" + Date.now(), { cache: "no-store" });
     if (!r.ok) return;
