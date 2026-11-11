@@ -12,6 +12,8 @@ import { PLACES, UNITS } from "../lib/types";
 import { norm, plural, uid, ymd } from "../lib/util";
 import { Stats } from "./Stats";
 import { PrivacyPage } from "./Privacy";
+import { Feedback } from "./Feedback";
+import { feedbackReady } from "../lib/feedback";
 import { Nutrition } from "./Nutrition";
 import { ageOf, basicsError, bmiOf, needsBasics, planFor, type BodyProfile } from "../lib/nutrition";
 import { closeAll, closeSheet, goPage, goTab, openSheet, toast, useUI } from "../lib/ui";
@@ -31,6 +33,7 @@ export function More() {
     case "data": return <Data />;
     case "help": return <HelpPage />;
     case "bug": return <Bug />;
+    case "feedback": return <Feedback />;
     case "about": return <About />;
     case "beta": return <Beta />;
     case "nutrition": return <Nutrition />;
@@ -75,6 +78,7 @@ function Menu() {
       <div className="list">
         <Row icon="❓" title="Помощь" sub="Справка и частые вопросы" onClick={() => goPage("help")} />
         <Row icon="🧪" title="Пробные функции" sub="Сканер штрихкодов, питание" onClick={() => goPage("beta")} />
+        {feedbackReady() && <Row icon="📣" title="Сообщить об ошибке" sub="Голосом, текстом или со скриншотом" onClick={() => goPage("feedback")} />}
         <Row icon="🛠" title="Что-то не работает" onClick={() => goPage("bug")} />
         <Row icon="ℹ️" title="О приложении" sub={"Версия " + VERSION} onClick={() => goPage("about")} />
       </div>

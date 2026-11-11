@@ -40,7 +40,7 @@ export function PolicyText() {
   );
 }
 
-const LABEL: Record<ConsentKind, string> = { policy: "Политика прочитана", health: "Данные о здоровье и теле", off: "Поиск товара по штрихкоду (Open Food Facts)" };
+const LABEL: Record<ConsentKind, string> = { policy: "Политика прочитана", health: "Данные о здоровье и теле", off: "Поиск товара по штрихкоду (Open Food Facts)", feedback: "Сообщение об ошибке (анонимно, в открытый репозиторий)" };
 
 /** Страница «Ещё → Конфиденциальность». */
 export function PrivacyPage() {
@@ -53,7 +53,7 @@ export function PrivacyPage() {
       <p className="muted mt0">Ваши записи хранятся только в памяти этого телефона. Версия текста: {POLICY_VERSION}.{CONTACT ? ` Контакт: ${CONTACT}.` : ""}</p>
       <div className="card">
         <h3>Согласия</h3>
-        {(["policy", "health", "off"] as ConsentKind[]).map((k) => {
+        {(["policy", "health", "off", "feedback"] as ConsentKind[]).map((k) => {
           const on = hasConsent(consent, k);
           return (
             <div key={k} className="kv">

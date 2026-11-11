@@ -1,0 +1,41 @@
+# Приёмник сообщений об ошибках (папка worker/) на бесплатном Cloudflare Workers.
+# Нужно один раз добавить в GitHub (Settings → Secrets and variables → Actions) три секрета; подробности — worker/README.md.
+name: Приём сообщений
+
+on:
+  push:
+    branches: [main]
+    paths: ["worker/**", ".github/workflows/worker.yml"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Проверка секретов
+        env:
+          A: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          B: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          C: ${{ secrets.FEEDBACK_GITHUB_TOKEN }}
+        run: |
+          if [ -z "$A" ] || [ -z "$B" ] || [ -z "$C" ]; then
+            echo "::warning::Не заданы секреты CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, FEEDBACK_GITHUB_TOKEN — приёмник не развёрнут (см. worker/README.md)."
+            echo "SKIP=1" >> "$GITHUB_ENV"
+          fi
+      - uses: actions/setup-node@v4
+        if: env.SKIP != '1'
+        with:
+          node-version: 22
+      - name: Развернуть приёмник
+        if: env.SKIP != '1'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: worker
+          wranglerVersion: "4"
+          secrets: |
+            FEEDBACK_GITHUB_TOKEN
+        env:
+          FEEDBACK_GITHUB_TOKEN: ${{ secrets.FEEDBACK_GITHUB_TOKEN }}
