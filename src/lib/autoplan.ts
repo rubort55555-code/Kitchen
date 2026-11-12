@@ -128,8 +128,8 @@ export function autoPlan(inp: AutoInput): AutoResult {
     return { ...main, per };
   };
   const dayCache = new Map<string, { portions: number[]; vec: Vec }>();
-  // Нормы дня: если в меню дня только часть приёмов пищи, считаем долю суточной нормы
-  const shareOfDay = (d: string) => daySlotShare([...spots.filter((x) => x.day === d).map((x) => x.slot), ...inp.fixed.filter((e) => e.date === d).map((e) => e.slot)]);
+  // Нормы дня: если подбираем только часть приёмов пищи, считаем долю суточной нормы (блюда вне подбираемых приёмов в сумму дня не входят)
+  const shareOfDay = (d: string) => daySlotShare(spots.filter((x) => x.day === d).map((x) => x.slot));
   const scaled = (p: Person, d: string): Person => ({ ...p, plan: scalePlan(p.plan, shareOfDay(d)) });
   function dayState(d: string, person0: Person) {
     const person = scaled(person0, d);

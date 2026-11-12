@@ -1,6 +1,7 @@
 // Проверка автоподбора меню: node node_modules/.bin/tsx tests/autoplan.test.ts
 import { readFileSync, readdirSync } from "node:fs";
 import { autoPlan } from "../src/lib/autoplan";
+import { recipeNutrition } from "../src/lib/recipeNutrition";
 import { assess } from "../src/lib/assess";
 import { evaluateMenu, menuMeals } from "../src/lib/menucheck";
 import { planFor, type BodyProfile } from "../src/lib/nutrition";
@@ -115,6 +116,12 @@ ok("только обед: калории обеда ≈ 40% нормы дня",
 
 const fullLack = assess(menuMeals(ro.added.map((e) => ({ ...e, portions: ro.portions[e.id] })), recipes, "m1").meals, f.plan, bodyF, 0, recipes)!.micro.filter((r) => r.v > 0 && r.pct < 90).length;
 ok("только обед: недельная проверка требует меньше витаминов, чем при сравнении с нормой всего дня", evo.lacking.length < fullLack, [evo.lacking.length, fullLack]);
+
+// Завтрак уже стоит в меню, подбираем только ужин: цель ужина — его доля дня, а не 60% нормы
+const fixedB: PlanEntry = { id: "fb", date: days[0], slot: "завтрак", name: "Завтрак", recipeId: recipes.find((r) => r.kind === "завтрак")!.id };
+const rfb = autoPlan({ recipes, allowed: () => true, days: [days[0]], slots: ["ужин"], fixed: [fixedB], people: [f], iterations: 2000 });
+const dinKcal = (() => { const e = rfb.added[0]; const k = (id?: string) => (id ? recipeNutrition(recipes.find((r) => r.id === id)!)?.perServing.kcal || 0 : 0); return k(e.recipeId) + k(e.garnish?.id) + k(e.side?.id); })();
+ok("ужин при уже стоящем завтраке не раздувается (≈30% нормы, не 60%)", dinKcal < f.plan.kcal * 0.45, [Math.round(dinKcal), f.plan.kcal]);
 
 // Нет подходящих блюд
 const none = autoPlan({ recipes, allowed: () => false, days, slots: [...slots], fixed: [], people: [f], iterations: 100 });
