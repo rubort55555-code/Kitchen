@@ -89,6 +89,9 @@ def off_route(route):
         return route.fulfill(status=200, content_type="application/json", headers={"Access-Control-Allow-Origin": "*"}, body=json.dumps(OFF[code]))
     return route.fulfill(status=404, content_type="application/json", headers={"Access-Control-Allow-Origin": "*"}, body=json.dumps({"code": code, "status": 0, "status_verbose": "product not found"}))
 
+# Согласие на запрос в Open Food Facts (иначе перед поиском откроется окно согласия)
+CONSENT = """() => new Promise((res) => { const r = indexedDB.open('kitchen'); r.onsuccess = () => { const db = r.result; const tx = db.transaction('kv', 'readwrite'); const os = tx.objectStore('kv'); const g = os.get('settings'); g.onsuccess = () => { const st = g.result || {}; st.consent = Object.assign(st.consent || {}, { off: { version: '2026-11-10', at: 1 }, policy: { version: '2026-11-10', at: 1 } }); os.put(st, 'settings'); }; tx.oncomplete = () => { db.close(); res(true); }; }; })"""
+
 def open_add(pg):
     pg.click(".tabs .plus"); pg.wait_for_selector("#pName")
 
@@ -112,7 +115,7 @@ with sync_playwright() as p:
     pg.route("https://world.openfoodfacts.org/**", off_route)
     errs = []
     pg.on("pageerror", lambda e: errs.append(str(e)))
-    pg.goto(URL); pg.wait_for_selector("h1")
+    pg.goto(URL); pg.wait_for_selector("h1"); pg.evaluate(CONSENT); pg.reload(); pg.wait_for_selector("h1")
 
     # 1. цифры вручную → товар найден
     open_add(pg)
@@ -221,7 +224,7 @@ with sync_playwright() as p:
     pg.route("https://world.openfoodfacts.org/**", off_route)
     errs = []
     pg.on("pageerror", lambda e: errs.append(str(e)))
-    pg.goto(URL); pg.wait_for_selector("h1")
+    pg.goto(URL); pg.wait_for_selector("h1"); pg.evaluate(CONSENT); pg.reload(); pg.wait_for_selector("h1")
     open_add(pg)
     pg.click("text=▥ Сканировать штрихкод")
     try:
@@ -240,7 +243,7 @@ with sync_playwright() as p:
     br = p.chromium.launch(args=["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream"])
     ctx = br.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True, permissions=["camera"], color_scheme="dark")
     pg = ctx.new_page(); pg.route("**/recipes.json", lambda r: r.abort())
-    pg.goto(URL); pg.wait_for_selector("h1"); open_add(pg); pg.click("text=▥ Сканировать штрихкод")
+    pg.goto(URL); pg.wait_for_selector("h1"); pg.evaluate(CONSENT); pg.reload(); pg.wait_for_selector("h1"); open_add(pg); pg.click("text=▥ Сканировать штрихкод")
     pg.wait_for_selector(".scan video"); pg.wait_for_timeout(800)
     ok("нет горизонтальной прокрутки со сканером", pg.evaluate("document.querySelector('.sheet-b').scrollWidth <= document.querySelector('.sheet-b').clientWidth + 1"))
     pg.screenshot(path=os.path.join(ROOT, "tests", "barcode-scan-dark.png"))

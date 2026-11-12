@@ -1,7 +1,7 @@
 // Экран «Ещё»: семья, ограничения, справочник, данные, справка, «Что-то не работает» (сообщение об ошибке).
 import { useEffect, useMemo, useState } from "react";
 import { Chevron, Header, Seg, Sheet } from "../components/ui";
-import { defaultSettings, getState, makeBackup, markBackup, restore, setSettings, useStore, type Backup } from "../lib/store";
+import { defaultSettings, getState, makeBackup, markBackup, reportError, restore, setSettings, useStore, type Backup } from "../lib/store";
 import { allCatalog, FISH_TYPE_TEXT, shelfDays } from "../lib/catalog";
 import { newRule } from "../lib/exclusions";
 import { parseBackupText, type Parsed } from "../lib/importOld";
@@ -449,19 +449,20 @@ function Data() {
   }
   async function doRestore(mode: "replace" | "merge") {
     if (!pending) return;
-    await restore(pending.backup, mode);
+    try { await restore(pending.backup, mode); }
+    catch (e) { reportError(e); setMsg("Не получилось записать копию в телефон — данные остались прежними. Попробуйте ещё раз или сообщите в «Что-то не работает»."); return; }
     const b = pending.backup;
     setPending(null); setOldText("");
     toast(mode === "replace" ? "Данные восстановлены" : "Данные добавлены");
     setMsg(`Готово: ${b.products.length} продуктов, ${b.recipes.length} рецептов, ${b.log.length} записей журнала.`);
   }
   async function demo() {
-    await restore(makeDemo(), "replace");
+    try { await restore(makeDemo(), "replace"); } catch (e) { reportError(e); setConfirm(null); setMsg("Не получилось записать демо-данные."); return; }
     setConfirm(null); toast("Демо-данные загружены"); goTab("home");
   }
   async function wipe() {
     const b: Backup = { app: "kitchen-app", v: 1, at: "", products: [], log: [], recipes: [], settings: defaultSettings() };
-    await restore(b, "replace");
+    try { await restore(b, "replace"); } catch (e) { reportError(e); setConfirm(null); setMsg("Не получилось удалить данные. Попробуйте ещё раз."); return; }
     setConfirm(null); toast("Все данные удалены");
   }
   const has = st.products.length + st.log.length + st.recipes.length > 0;

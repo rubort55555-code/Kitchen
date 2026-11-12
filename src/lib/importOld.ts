@@ -3,6 +3,7 @@ import type { LogEntry, Place, Product, Reason, Recipe, Settings, Unit } from ".
 import { PLACES, UNITS } from "./types";
 import { norm, uid, ymd } from "./util";
 import { BACKUP_APP, type Backup } from "./store";
+import { cleanLog, cleanMeals, cleanProducts, cleanRecipes, cleanSettings } from "./sanitize";
 
 const OLD_APP = "chto-prigotovit";
 
@@ -13,7 +14,8 @@ export function parseBackupText(text: string, base: Settings): Parsed | null {
   let o: any;
   try { o = JSON.parse(text.trim()); } catch { return null; }
   if (o && o.app === BACKUP_APP && Array.isArray(o.products)) {
-    return { kind: "new", backup: { ...o, log: o.log || [], recipes: o.recipes || [], settings: { ...base, ...(o.settings || {}) } } };
+    // Содержимое проверяем: битые записи отбрасываются, неверные настройки заменяются обычными
+    return { kind: "new", backup: { app: BACKUP_APP, v: typeof o.v === "number" ? o.v : 1, at: typeof o.at === "string" ? o.at : "", products: cleanProducts(o.products), log: cleanLog(o.log), recipes: cleanRecipes(o.recipes), meals: cleanMeals(o.meals), settings: cleanSettings(o.settings, base) } };
   }
   if (o && o.app === OLD_APP && o.state && Array.isArray(o.state.items)) return { kind: "old", ...convertOld(o.state, base) };
   return null;

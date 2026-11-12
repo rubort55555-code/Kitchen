@@ -78,6 +78,11 @@ export function rub(n: number): string {
 }
 
 /** Разбирает число, введённое с запятой или точкой. Пусто/мусор → null. */
+/** Разумные пределы ввода: опечатка в лишний ноль не должна портить статистику и дневник. */
+export const MAX_PRICE = 1_000_000;
+export const MAX_QTY = 100_000;
+export const MAX_GRAMS = 5000;
+
 export function toNum(s: string | number | null | undefined): number | null {
   if (s === null || s === undefined) return null;
   if (typeof s === "number") return isFinite(s) ? s : null;

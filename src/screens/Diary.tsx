@@ -17,7 +17,7 @@ import { vitaminHints } from "../lib/vitamins";
 import { FAT_TEXT, fatSolubleDay, fatSolubleHints } from "../lib/fatsoluble";
 import { copyMeal, defaultGrams, dayView, hasMicroData, mealCustom, mealDrink, mealFromComposition, mealFromOff, mealFromRecipe, mealsOf, recentMeals, searchFoods, slotByHour } from "../lib/diary";
 import { askConsent } from "../lib/consent";
-import { addDays, cap, norm, ymd } from "../lib/util";
+import { addDays, cap, norm, ymd, MAX_GRAMS } from "../lib/util";
 
 const kcalText = (x: number) => Math.round(x).toLocaleString("ru-RU");
 const SLOT_EMOJI: Record<MealSlot, string> = { "завтрак": "🍳", "обед": "🍲", "ужин": "🥗", "перекус": "🍎" };
@@ -418,7 +418,7 @@ function ProductPick({ onPick }: { onPick: (name: string, grams: number) => void
     const m = mealFromComposition(sel, grams, "", "перекус");
     return (
       <>
-        <div className="card"><h3>{sel}</h3><p className="muted small mt0">{m ? `${kcalText(m.n.kcal || 0)} ккал · Б ${Math.round(m.n.protein || 0)} · Ж ${Math.round(m.n.fat || 0)} · У ${Math.round(m.n.carbs || 0)}` : "Укажите вес"}</p></div>
+        <div className="card"><h3>{sel}</h3><p className="muted small mt0">{m ? `${kcalText(m.n.kcal || 0)} ккал · Б ${Math.round(m.n.protein || 0)} · Ж ${Math.round(m.n.fat || 0)} · У ${Math.round(m.n.carbs || 0)}` : grams > MAX_GRAMS ? "Не больше 5 кг за одну запись — проверьте вес" : "Укажите вес"}</p></div>
         <label className="f" htmlFor="pg">Вес, г</label>
         <input id="pg" className="inp big" inputMode="decimal" value={g} onChange={(e: any) => setG(e.target.value)} />
         <button className="btn" style={{ marginTop: 12 }} disabled={!m} onClick={() => onPick(sel, grams)}>Записать{m ? ` · ${kcalText(m.n.kcal || 0)} ккал` : ""}</button>

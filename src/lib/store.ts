@@ -12,6 +12,7 @@ import { findCatalog, setCatalog } from "./catalog";
 import { mergeBase, staleBase } from "./baseSync";
 import { fetchSite, isNative, SITE } from "./native";
 import { convert } from "./units";
+import { cleanLog, cleanMeals, cleanProducts, cleanRecipes, cleanSettings } from "./sanitize";
 
 export interface State {
   ready: boolean;
@@ -61,10 +62,35 @@ export function useStore<T>(sel: (s: State) => T): T {
   return useSyncExternalStore((cb) => { subs.add(cb); return () => subs.delete(cb); }, () => sel(state));
 }
 
+// ---------- несколько открытых вкладок ----------
+// Каждая вкладка держит данные в памяти. Чтобы вкладки не затирали изменения друг друга
+// (настройки — одна запись: список покупок, меню, семья), после каждой записи сообщаем остальным,
+// и они перечитывают данные из базы.
+const chan: BroadcastChannel | null = typeof BroadcastChannel !== "undefined" ? new BroadcastChannel("kitchen-data") : null;
+(chan as unknown as { unref?: () => void } | null)?.unref?.(); // в тестах под Node канал не держит процесс
+let reloadTimer: ReturnType<typeof setTimeout> | null = null;
+function notifyOthers() { try { chan?.postMessage("changed"); } catch { /* вкладка закрывается */ } }
+async function reloadFromDb() {
+  try {
+    const [products, log, recipes, meals, saved] = await Promise.all([
+      db.getAll<Product>("products"), db.getAll<LogEntry>("log"), db.getAll<Recipe>("recipes"), db.getAll<Meal>("meals"), db.getKv<Partial<Settings>>("settings"),
+    ]);
+    set({ products: cleanProducts(products), log: cleanLog(log).sort((a, b) => a.t - b.t), recipes: cleanRecipes(recipes), meals: cleanMeals(meals), settings: cleanSettings(saved, defaultSettings()) });
+  } catch (e) {
+    reportError(e);
+  }
+}
+if (chan) chan.onmessage = () => {
+  if (!state.ready) return;
+  if (reloadTimer) clearTimeout(reloadTimer);
+  reloadTimer = setTimeout(() => { reloadTimer = null; reloadFromDb(); }, 50);
+};
+
 /** Сохранение с понятным сообщением об ошибке. */
 async function persist(p: Promise<void>) {
   try {
     await p;
+    notifyOthers();
     if (state.saveError) set({ saveError: null });
   } catch (e) {
     reportError(e);
@@ -77,10 +103,11 @@ export async function load() {
     const [products, log, recipes, meals, saved] = await Promise.all([
       db.getAll<Product>("products"), db.getAll<LogEntry>("log"), db.getAll<Recipe>("recipes"), db.getAll<Meal>("meals"), db.getKv<Partial<Settings>>("settings"),
     ]);
-    const settings = { ...defaultSettings(), ...(saved || {}) };
-    log.sort((a, b) => a.t - b.t);
+    // Битые записи (например, из старой копии) не должны ломать приложение
+    const settings = cleanSettings(saved, defaultSettings());
+    const okLog = cleanLog(log).sort((a, b) => a.t - b.t);
     await applySavedCatalog();
-    set({ ready: true, products, log, recipes, meals, settings });
+    set({ ready: true, products: cleanProducts(products), log: okLog, recipes: cleanRecipes(recipes), meals: cleanMeals(meals), settings });
     checkContent();
   } catch (e) {
     reportError(e);
@@ -550,19 +577,20 @@ export function makeBackup(): Backup {
 
 /** Восстановление: replace — заменить всё; merge — добавить недостающее. */
 export async function restore(b: Backup, mode: "replace" | "merge") {
-  let products = b.products, log = b.log, recipes = b.recipes, meals = b.meals || [], settings = { ...defaultSettings(), ...b.settings };
+  let products = cleanProducts(b.products), log = cleanLog(b.log), recipes = cleanRecipes(b.recipes), meals = cleanMeals(b.meals), settings = cleanSettings(b.settings, defaultSettings());
+  const bs = settings;
   if (mode === "merge") {
     const mergeBy = <T extends { id: string }>(a: T[], c: T[]) => { const m = new Map(a.map((x) => [x.id, x])); c.forEach((x) => { if (!m.has(x.id)) m.set(x.id, x); }); return Array.from(m.values()); };
-    products = mergeBy(state.products, b.products);
-    log = mergeBy(state.log, b.log).sort((x, y) => x.t - y.t);
-    recipes = mergeBy(state.recipes, b.recipes);
-    meals = mergeBy(state.meals, b.meals || []);
+    products = mergeBy(state.products, products);
+    log = mergeBy(state.log, log).sort((x, y) => x.t - y.t);
+    recipes = mergeBy(state.recipes, recipes);
+    meals = mergeBy(state.meals, meals);
     const byId = <T extends { id: string }>(a: T[] = [], c: T[] = []) => { const m = new Map(a.map((x) => [x.id, x])); c.forEach((x) => { if (!m.has(x.id)) m.set(x.id, x); }); return Array.from(m.values()); };
     settings = {
       ...state.settings,
-      lastBuy: { ...b.settings.lastBuy, ...state.settings.lastBuy },
-      shop: byId(state.settings.shop, b.settings.shop),
-      plan: byId(state.settings.plan, b.settings.plan),
+      lastBuy: { ...bs.lastBuy, ...state.settings.lastBuy },
+      shop: byId(state.settings.shop, bs.shop),
+      plan: byId(state.settings.plan, bs.plan),
     };
   }
   seedGen++;
@@ -586,6 +614,7 @@ export async function restore(b: Backup, mode: "replace" | "merge") {
   }
   await db.replaceAll({ products, log, recipes, meals, kv });
   set({ products, log, recipes, meals, settings });
+  notifyOthers();
   seedBase();
 }
 
