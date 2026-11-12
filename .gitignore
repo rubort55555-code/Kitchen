@@ -3,3 +3,4 @@ dist
 tests/__pycache__
 tests/*.png
 !tests/receipt-sample.png
+tests/stress/_tmp/
