@@ -3,7 +3,7 @@ import { Fragment, useEffect, useMemo, useState } from "react";
 import { Sheet } from "../components/ui";
 import { NO_FILTERS, RecipeFilters, filterRecipes, kindOf, type Filters } from "../components/RecipeFilters";
 import { getState, setSettings, useStore } from "../lib/store";
-import { addEntry, autoFill, setGarnish, dayShort, dayTitle, entriesFor, pruneOld, recipesInPlan, removeEntry, restorePlan, toggleDone, weekDays } from "../lib/plan";
+import { addEntry, autoFill, setGarnish, dayShort, dayTitle, entriesFor, pruneOld, planFactors, recipesInPlan, removeEntry, restorePlan, toggleDone, weekDays } from "../lib/plan";
 import { addMany, missingFor, restoreShop, shopList } from "../lib/shop";
 import { compileRules, checkRecipe, neverFor } from "../lib/exclusions";
 import { recipeStatus } from "../lib/match";
@@ -41,7 +41,7 @@ export function Menu() {
     return m;
   }, [st.recipes, st.settings.rules, st.settings.customCatalog, st.settings.members]);
   const cuis = st.settings.planCuisine || "";
-  const missing = useMemo(() => missingFor(recipesInPlan(future)), [plan, st.products, st.recipes, offset, mode, day]);
+  const missing = useMemo(() => missingFor(recipesInPlan(future), planFactors(future)), [plan, st.products, st.recipes, offset, mode, day]);
 
   function toggleSlot(s: Slot) {
     const next = slots.includes(s) ? slots.filter((x) => x !== s) : SLOTS.filter((x) => x === s || slots.includes(x));
@@ -55,7 +55,7 @@ export function Menu() {
     else {
       // Недостающее для новых блюд сразу уходит в список покупок (отмена вернёт и меню, и список)
       const shopBefore = shopList();
-      const n = addMany(missingFor(recipesInPlan(future)), "Меню");
+      const n = addMany(missingFor(recipesInPlan(future), planFactors(future)), "Меню");
       toast(`Поставлено ${r.added} ${plural(r.added, "блюдо", "блюда", "блюд")}` + (n ? `; докупить: ${n} в списке покупок` : ""), () => { restorePlan(before); restoreShop(shopBefore); });
     }
   }
@@ -71,8 +71,8 @@ export function Menu() {
       if (r.noPeople) return void toast("Сначала заполните рост, вес и цель в «Ещё → Питание».");
       if (r.noRecipes) return void toast("Нет подходящих рецептов: проверьте ограничения и кухню.");
       const shopBefore = shopList();
-      const n = addMany(missingFor(recipesInPlan(future)), "Меню");
-      toast(`Подобрано блюд: ${r.added}${r.empty ? `, не нашлось для ${r.empty} мест` : ""}. Порции подогнаны под нормы${n ? `; докупить: ${n}` : ""}`, () => { restorePlan(before); restoreShop(shopBefore); });
+      const n = addMany(missingFor(recipesInPlan(future), planFactors(future)), "Меню");
+      toast(`Подобрано блюд: ${r.added}${r.empty ? `, не нашлось для ${r.empty} мест` : ""}. Порции стандартные: по одной на человека${n ? `; докупить: ${n}` : ""}`, () => { restorePlan(before); restoreShop(shopBefore); });
     }, 30);
   }
   function clearWeek() {

@@ -1,7 +1,7 @@
 // Автоподбор меню под нормы (этап 2 плана): без интернета и без внешнего ИИ — случайный старт и улучшение заменами.
 // Порядок приоритетов (выше важнее; нижний уровень не может ухудшить верхний, поэтому ключи сравниваются по порядку):
 //  1) запреты — блюда берутся только из разрешённых (allowed);
-//  2) калории дня ±5% цели, белок не ниже нормы, жиры и углеводы ±10% — порции основных блюд подбираются под каждого человека;
+//  2) калории дня ±5% цели, белок не ниже нормы, жиры и углеводы ±10% (при одной порции каждого блюда: число порций человек выбирает сам);
 //  3) пределы «не больше» в среднем за неделю (натрий, насыщенные жиры, холестерин, сахара);
 //  4) витамины, минералы и клетчатка не ниже 90% нормы в среднем за неделю (там, где в рецептах есть данные);
 //  5) разнообразие: блюдо не больше двух раз, рыба не реже двух раз, белок не повторяется в обед и ужин;
@@ -12,7 +12,7 @@ import { micros, type BodyProfile, type Plan } from "./nutrition";
 import { fitsSlot, proteinOf } from "./plan";
 import { autoGarnishes, garnishClass, garnishNeed, isGarnish, type GClass } from "./garnish";
 import { norm, uid } from "./util";
-import { daySlotShare, scalePlan, KCAL_TOL, FAT_CARB_TOL, MICRO_MIN, PORTION_MAX, PORTION_MIN, PORTION_STEP, snapPortion } from "./menucheck";
+import { daySlotShare, scalePlan, KCAL_TOL, FAT_CARB_TOL, MICRO_MIN } from "./menucheck";
 
 type Vec = Partial<Record<NutrientKey, number>>;
 export interface Person { id: string; plan: Plan; body: BodyProfile }
@@ -56,32 +56,13 @@ function mulberry(seed: number) {
 const q = (x: number) => Math.round(x * 2) / 2; // «равноценность»: отклонения меньше полупроцента не различаем
 const qc = (x: number) => Math.round(x / 3) * 3; // для пределов и микроэлементов грубее: суммарное отклонение меньше 3 процентных пунктов — равноценно, тогда решает разнообразие
 
-/** Подбор порций основных блюд одного дня одного человека (только числа). Возвращает порции и вектор дня. */
-function fitDayNum(mains: Cand[], extras: Cand[], p: Person): { portions: number[]; vec: Vec } {
-  const T = p.plan.kcal;
-  const fixed = extras.reduce((s, c) => s + (c.per.kcal || 0), 0);
-  const base = mains.reduce((s, c) => s + (c.per.kcal || 0), 0);
-  const p0 = snapPortion(base > 0 ? (T - fixed) / base : 1);
-  const x = mains.map(() => p0);
-  const kcal = () => fixed + mains.reduce((s, c, i) => s + x[i] * (c.per.kcal || 0), 0);
-  const prot = () => extras.reduce((s, c) => s + (c.per.protein || 0), 0) + mains.reduce((s, c, i) => s + x[i] * (c.per.protein || 0), 0);
-  const cost = () => Math.abs(kcal() - T) + Math.max(0, p.plan.protein - prot()) * 2 + x.reduce((s, v) => s + Math.abs(v - p0), 0) * 3;
-  for (let it = 0; it < 12; it++) {
-    let best = cost(), mi = -1, mv = 0;
-    for (let i = 0; i < mains.length; i++) for (const d of [-PORTION_STEP, PORTION_STEP]) {
-      const nv = x[i] + d;
-      if (nv < PORTION_MIN || nv > PORTION_MAX) continue;
-      const old = x[i]; x[i] = nv; const c = cost(); x[i] = old;
-      if (c < best - 1e-9) { best = c; mi = i; mv = nv; }
-    }
-    if (mi < 0) break;
-    x[mi] = mv;
-  }
+/** Сумма дня одного человека при заданных порциях основных блюд (порции не подбираем: размер порции стандартный, число порций выбирает человек). */
+function fitDayNum(mains: Cand[], extras: Cand[], _p: Person, xs: number[]): { portions: number[]; vec: Vec } {
   const vec: Vec = {};
   const add = (c: Cand, k: number) => { for (const key in c.per) vec[NK(key)] = (vec[NK(key)] || 0) + (c.per[NK(key)] || 0) * k; };
-  mains.forEach((c, i) => add(c, x[i]));
+  mains.forEach((c, i) => add(c, xs[i] ?? 1));
   extras.forEach((c) => add(c, 1));
-  return { portions: x, vec };
+  return { portions: mains.map((_, i) => xs[i] ?? 1), vec };
 }
 
 export function autoPlan(inp: AutoInput): AutoResult {
@@ -152,16 +133,17 @@ export function autoPlan(inp: AutoInput): AutoResult {
   const scaled = (p: Person, d: string): Person => ({ ...p, plan: scalePlan(p.plan, shareOfDay(d)) });
   function dayState(d: string, person0: Person) {
     const person = scaled(person0, d);
-    const mains: Cand[] = [], ids: string[] = [], keys: string[] = [];
+    const mains: Cand[] = [], ids: string[] = [], keys: string[] = [], xs: number[] = [];
     for (const s of spots.filter((x) => x.day === d)) {
       if (!s.main) continue;
-      mains.push(withGarnish(s.main, s.garnish)); keys.push(s.main.r.id + "+" + (s.garnish?.r.id || "")); ids.push(s.fixed?.id || s.slot);
+      const x = s.fixed?.portions?.[person0.id] ?? 1;
+      mains.push(withGarnish(s.main, s.garnish)); xs.push(x); keys.push(s.main.r.id + "+" + (s.garnish?.r.id || "") + "x" + x); ids.push(s.fixed?.id || s.slot);
     }
     const side = fixedSide(d) || sideOf.get(d) || null;
     const extras = side ? [side] : [];
     const key = person.id + "|" + shareOfDay(d) + "|" + keys.join(",") + "|" + (side?.r.id || "");
     let v = dayCache.get(key);
-    if (!v) { v = fitDayNum(mains, extras, person); dayCache.set(key, v); }
+    if (!v) { v = fitDayNum(mains, extras, person, xs); dayCache.set(key, v); }
     return { mains, ids, v, side };
   }
 

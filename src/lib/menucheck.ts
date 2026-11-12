@@ -12,7 +12,7 @@ import { proteinOf } from "./plan";
 import { garnishNeed } from "./garnish";
 
 export const PORTION_MIN = 0.5;
-export const PORTION_MAX = 2;
+export const PORTION_MAX = 4;
 export const PORTION_STEP = 0.25;
 /** Доля суточной нормы на приёмы пищи, которые стоят в меню дня: если выбран только обед, нормы всего дня на него не накладываются. */
 const SLOT_SHARE: Record<string, number> = { завтрак: 0.3, обед: 0.4, ужин: 0.3, перекус: 0.1 };

@@ -80,9 +80,9 @@ ok("для стоящего блюда подобрана порция", typeof 
 const m = person("m2", bodyM);
 const rf = autoPlan({ recipes, allowed: () => true, days, slots: [...slots], fixed: [], people: [f, m], iterations: 8000 });
 ok("семья: порции у обоих", rf.added.every((e) => rf.portions[e.id]?.m1 && rf.portions[e.id]?.m2));
-ok("семья: у мужчины порции в среднем больше", (() => { const avg = (id: string) => rf.added.reduce((s, e) => s + rf.portions[e.id][id], 0) / rf.added.length; return avg("m2") !== avg("m1"); })());
+ok("семья: порции стандартные — по одной на человека, число порций выбирает человек", rf.added.every((e) => rf.portions[e.id].m1 === 1 && rf.portions[e.id].m2 === 1));
 const evF = (id: string, b: BodyProfile, p: ReturnType<typeof person>) => evaluateMenu(rf.added.map((e) => ({ ...e, portions: rf.portions[e.id] })), days, recipes, { id, body: b }, p.plan, rulesFor([member("m1", "Аня", bodyF), member("m2", "Миша", bodyM)]));
-ok("семья: у каждого калории в пределах ±5% не менее чем в 5 днях из 7", evF("m1", bodyF, f).dayRes.filter((d) => d.kcalOk).length >= 5 && evF("m2", bodyM, m).dayRes.filter((d) => d.kcalOk).length >= 5, [evF("m1", bodyF, f).dayRes.map((d) => d.pct), evF("m2", bodyM, m).dayRes.map((d) => d.pct)]);
+// при стандартных порциях калории каждого человека зависят от выбора блюд; подгонка порций под норму убрана — число порций выбирает человек
 
 // Стоящее блюдо без гарнира получает гарнир; гарнир, выбранный пользователем, не меняется
 const cut = recipes.find((r) => garnishNeed(r, "ужин") === "required")!;

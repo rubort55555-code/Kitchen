@@ -19,7 +19,7 @@ export function peopleWithPlan(): Person[] {
   });
 }
 
-/** Заполняет пустые места меню блюдами под нормы всех, кто ест, и подбирает порции каждому. only — только один день. */
+/** Заполняет пустые места меню блюдами под нормы всех, кто ест (порция — стандартная, на одного человека). only — только один день. */
 export function autoMenu(start: string, slots: Slot[], only?: string): AutoMenuResult {
   const st = getState();
   const people = peopleWithPlan();
@@ -41,10 +41,10 @@ export function autoMenu(start: string, slots: Slot[], only?: string): AutoMenuR
   if (!st.recipes.some(allowed)) return { added: 0, empty: 0, people: people.length, noPeople: false, noRecipes: true };
   const res = autoPlan({ recipes: st.recipes, allowed, bonus, ready, days, slots, fixed, people });
   const next: PlanEntry[] = plan.map((e) => {
-    const p = res.portions[e.id], g = res.garnishes[e.id];
-    return p || g ? { ...e, ...(p ? { portions: { ...(e.portions || {}), ...p } } : {}), ...(g ? { garnish: g } : {}) } : e;
+    const g = res.garnishes[e.id];
+    return g ? { ...e, garnish: g } : e;
   });
-  for (const e of res.added) next.push({ ...e, portions: res.portions[e.id] });
+  for (const e of res.added) next.push(e); // порции — стандартные, по одной на человека; число порций человек меняет сам
   setSettings({ plan: next });
   return { added: res.filled, empty: res.empty, people: people.length, noPeople: false, noRecipes: false };
 }
