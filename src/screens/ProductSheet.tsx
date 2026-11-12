@@ -5,7 +5,7 @@ import { deleteProduct, openPackage, undoWriteOff, updateProduct, useStore, valu
 import { findCatalog } from "../lib/catalog";
 import type { Place, Reason, Unit } from "../lib/types";
 import { PLACES, UNITS } from "../lib/types";
-import { addDays, dateText, num, rub, toNum, untilText, ymd } from "../lib/util";
+import { addDays, dateText, MAX_PRICE, MAX_QTY, num, rub, toNum, untilText, ymd } from "../lib/util";
 import { qtyText, stepFor } from "../lib/units";
 import { closeSheet, toast } from "../lib/ui";
 
@@ -31,8 +31,8 @@ export function ProductSheet({ id }: { id: string }) {
   function saveEdit() {
     const q = toNum(f.qty), pr = toNum(f.price);
     if (!f.name.trim()) return setErr("Напишите название.");
-    if (q === null || q < 0) return setErr("Проверьте количество.");
-    if (pr === null || pr < 0) return setErr("Проверьте цену.");
+    if (q === null || q < 0 || q > MAX_QTY) return setErr("Проверьте количество.");
+    if (pr === null || pr < 0 || pr > MAX_PRICE) return setErr("Проверьте цену.");
     // Цена была за купленное количество; при смене единицы считаем, что поменяли всё целиком
     updateProduct(p!.id, { name: f.name.trim(), qty: q, unit: f.unit, price: pr, place: f.place, until: f.until || null, bought: f.bought || p!.bought, ...(f.unit !== p!.unit ? { initialQty: q } : {}) });
     setEdit(false);

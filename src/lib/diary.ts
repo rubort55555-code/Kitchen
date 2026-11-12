@@ -4,7 +4,7 @@ import { NUTRIENTS, compositionOf, recipeNutrition, type NutrientKey } from "./r
 import type { OffProduct } from "./off";
 import type { Drink } from "./interactions";
 import type { Plan } from "./nutrition";
-import { norm, uid } from "./util";
+import { MAX_GRAMS, norm, uid } from "./util";
 import DATA from "./compositionData.json";
 
 export type N = Partial<Record<NutrientKey, number>>;
@@ -37,7 +37,7 @@ export function mealFromRecipe(r: Recipe, servings: number, date: string, slot: 
 /** Продукт из справочника состава на заданный вес в граммах. */
 export function mealFromComposition(name: string, grams: number, date: string, slot: MealSlot, who?: string): Meal | null {
   const e = compositionOf(name);
-  if (!e || !(grams > 0)) return null;
+  if (!e || !(grams > 0) || grams > MAX_GRAMS) return null;
   const n: N = {};
   NUTRIENTS.forEach((x, k) => { n[x.key] = ((e.v[k] ?? 0) * grams) / 100; });
   return mk(date, slot, name, n, who, { qty: `${Math.round(grams)} г` });
@@ -46,7 +46,7 @@ export function mealFromComposition(name: string, grams: number, date: string, s
 /** Товар по штрихкоду (Open Food Facts) на заданный вес. null — на упаковке нет калорийности. */
 export function mealFromOff(p: OffProduct, name: string, grams: number, date: string, slot: MealSlot, who?: string): Meal | null {
   const c = p.per100;
-  if (!c || typeof c.kcal !== "number" || !(grams > 0)) return null;
+  if (!c || typeof c.kcal !== "number" || !(grams > 0) || grams > MAX_GRAMS) return null;
   const k = grams / 100;
   const n: N = { kcal: c.kcal * k };
   if (c.p !== undefined) n.protein = c.p * k;
@@ -70,7 +70,7 @@ export function hasMicroData(m: Meal): boolean {
 
 /** Своё блюдо: человек вводит калории и БЖУ на всё съеденное. */
 export function mealCustom(name: string, v: { kcal: number; protein?: number; fat?: number; carbs?: number }, date: string, slot: MealSlot, who?: string): Meal | null {
-  if (!name.trim() || !(v.kcal >= 0)) return null;
+  if (!name.trim() || !(v.kcal >= 0) || v.kcal > 20000) return null;
   const n: N = { kcal: v.kcal };
   if (v.protein !== undefined) n.protein = v.protein;
   if (v.fat !== undefined) n.fat = v.fat;

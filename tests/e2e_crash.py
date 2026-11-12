@@ -22,9 +22,22 @@ with sync_playwright() as p:
     br = p.chromium.launch(executable_path=os.environ.get("CHROMIUM", "/opt/pw-browsers/chromium"))
     pg = br.new_context(viewport={"width": 390, "height": 844}, is_mobile=True).new_page()
     pg.goto(URL); pg.wait_for_selector("h1"); pg.wait_for_timeout(1500)
-    # Портим сохранённые настройки так, чтобы отрисовка упала
+    # Испорченные настройки (например, из старой копии) приложение чинит само и открывается
     pg.evaluate(SEED, {"members": "сломано", "rules": 5, "tipsSeen": 7})
     pg.reload(); pg.wait_for_timeout(3000)
+    t = pg.inner_text("body")
+    ok("испорченные настройки не ломают приложение: открывается главная", "Приложение не открылось" not in t and pg.query_selector(".tabs") is not None, t[:100])
+    # Сбой отрисовки: в приветствие на главной подмешиваем ошибку
+    import re
+    def broken(route):
+        r = route.fetch(); body = r.text()
+        body = re.sub(r'let (\w+)=(\w+)\.getHours\(\);return \1<5\?', r'let \1=\2.getHours();if(self.__crash)throw Error("test");return \1<5?', body)
+        route.fulfill(response=r, body=body)
+    pg.context.close()
+    pg = br.new_context(viewport={"width": 390, "height": 844}, is_mobile=True, service_workers="block").new_page()
+    pg.route("**/app-*.js", broken)
+    pg.add_init_script("self.__crash = true")
+    pg.goto(URL); pg.wait_for_timeout(3000)
     t = pg.inner_text("body")
     ok("при сбое отрисовки виден запасной экран, а не белый", "Приложение не открылось" in t, t[:100])
     ok("есть кнопка «Обновить приложение»", pg.query_selector("button:has-text('Обновить приложение')") is not None)

@@ -126,7 +126,9 @@ export function parseAnswer(text: string): { recipes: Recipe[]; error?: string }
   for (const c of candidates) {
     const data = tryJson(c);
     if (!data) continue;
-    const raw: unknown[] = Array.isArray(data) ? data : (data.dishes || data.ideas || data.recipes || (data.name ? [data] : []));
+    const list = Array.isArray(data) ? data : (data.dishes || data.ideas || data.recipes || (data.name ? [data] : []));
+    // Поле не списком ({"recipes": "…"}) — такой блок не подходит
+    const raw: unknown[] = Array.isArray(list) ? list : [];
     const recipes = raw.map(toRecipe).filter((r): r is Recipe => !!r);
     if (recipes.length) return { recipes };
   }
