@@ -159,7 +159,9 @@ export function evaluateMenu(entries: PlanEntry[], dates: string[], recipes: Rec
   });
 
   // 3–4. Среднее за неделю: считает та же оценка, что и в дневнике
-  const a = assess(meals, fullPlan, member.body, 0, recipes);
+  const shares = dayRes.map((d) => daySlotShare(mine.filter((e) => e.date === d.date).map((e) => e.slot)));
+  const avgShare = shares.length ? shares.reduce((x, y) => x + y, 0) / shares.length : 1; // меню на часть приёмов пищи — нормы и пределы на ту же часть
+  const a = assess(meals, fullPlan, member.body, 0, recipes, avgShare);
   const limits = a ? a.limits : [];
   const micro = a ? a.micro : [];
   const noData = micro.filter((r) => r.v === 0).map((r) => r.title);

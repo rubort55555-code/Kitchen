@@ -1,7 +1,8 @@
 // Проверка автоподбора меню: node node_modules/.bin/tsx tests/autoplan.test.ts
 import { readFileSync, readdirSync } from "node:fs";
 import { autoPlan } from "../src/lib/autoplan";
-import { evaluateMenu } from "../src/lib/menucheck";
+import { assess } from "../src/lib/assess";
+import { evaluateMenu, menuMeals } from "../src/lib/menucheck";
 import { planFor, type BodyProfile } from "../src/lib/nutrition";
 import { parseRecipeText } from "../tools/recipes.mjs";
 import type { PlanEntry, Recipe, Rule } from "../src/lib/types";
@@ -111,6 +112,9 @@ ok("ужин выбирается из блюд, которые можно пр�
 const ro = autoPlan({ recipes, allowed: () => true, days: days.slice(0, 1), slots: ["обед"], fixed: [], people: [f], iterations: 3000 });
 const evo = evaluateMenu(ro.added.map((e) => ({ ...e, portions: ro.portions[e.id] })), days.slice(0, 1), recipes, { id: "m1", body: bodyF }, f.plan, rulesFor([member("m1", "Аня", bodyF)]));
 ok("только обед: калории обеда ≈ 40% нормы дня", !!evo.dayRes[0] && evo.dayRes[0].kcal < f.plan.kcal * 0.6 && evo.dayRes[0].kcalOk, [evo.dayRes[0]?.kcal, f.plan.kcal]);
+
+const fullLack = assess(menuMeals(ro.added.map((e) => ({ ...e, portions: ro.portions[e.id] })), recipes, "m1").meals, f.plan, bodyF, 0, recipes)!.micro.filter((r) => r.v > 0 && r.pct < 90).length;
+ok("только обед: недельная проверка требует меньше витаминов, чем при сравнении с нормой всего дня", evo.lacking.length < fullLack, [evo.lacking.length, fullLack]);
 
 // Нет подходящих блюд
 const none = autoPlan({ recipes, allowed: () => false, days, slots: [...slots], fixed: [], people: [f], iterations: 100 });
