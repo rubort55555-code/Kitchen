@@ -6,7 +6,7 @@ import { findCatalog, shelfDays, suggest } from "../lib/catalog";
 import { compileRules, checkProduct } from "../lib/exclusions";
 import type { CatalogItem, Place, Unit } from "../lib/types";
 import { PLACES, UNITS } from "../lib/types";
-import { addDays, cap, dateText, daysLeft, norm, rub, toNum, untilText, ymd } from "../lib/util";
+import { addDays, cap, dateText, daysLeft, MAX_PRICE, MAX_QTY, norm, rub, toNum, untilText, ymd } from "../lib/util";
 import { quickAmounts } from "../lib/units";
 import { closeSheet, openSheet, toast } from "../lib/ui";
 import { BarcodeScan, type ScanHow } from "../components/BarcodeScan";
@@ -125,7 +125,9 @@ export function AddProduct() {
     const pr = toNum(price);
     if (!n) return setErr("Напишите, что за продукт.");
     if (q === null || q <= 0) return setErr("Укажите количество.");
+    if (q > MAX_QTY) return setErr("Слишком большое количество — проверьте, нет ли лишних нулей.");
     if (pr === null || pr < 0) { priceRef.current?.focus(); return setErr("Укажите цену — без неё не посчитать потери в рублях. Если продукт достался бесплатно, напишите 0."); }
+    if (pr > MAX_PRICE) { priceRef.current?.focus(); return setErr("Слишком большая цена — проверьте, нет ли лишних нулей."); }
     const bc = code && code.status !== "loading" ? { barcode: code.code, off: code.status === "found" || code.status === "none" ? code.off : undefined } : {};
     const it = addProduct({ name: n, qty: q, unit, place, until, price: pr, ...bc });
     toast(`Добавлено: ${it.name}`, () => deleteProduct(it.id));

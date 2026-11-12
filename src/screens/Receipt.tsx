@@ -9,7 +9,7 @@ import { claudeUrl } from "../lib/claude";
 import { prepareImage, recognize, statusText } from "../lib/ocr";
 import { UNITS, type Place, type Unit } from "../lib/types";
 import { closeAll, toast } from "../lib/ui";
-import { plural, rub, toNum } from "../lib/util";
+import { MAX_PRICE, MAX_QTY, plural, rub, toNum } from "../lib/util";
 import { autoUntil } from "./AddProduct";
 
 interface Row extends ReceiptItem { id: number; on: boolean; qtyS: string; priceS: string; orig: string }
@@ -80,7 +80,7 @@ export function Receipt({ mode }: { mode: "photo" | "text" }) {
   // С итогом чека сверяем все позиции — и те, что не добавляем (пакет, помада)
   const allSum = rows.reduce((s, r) => s + (toNum(r.priceS) || 0), 0);
   const receiptTotal = useMemo(() => claudeTotal ?? findTotal(text), [text, claudeTotal]);
-  const bad = (r: Row) => r.on && (!r.name.trim() || !((toNum(r.qtyS) || 0) > 0) || toNum(r.priceS) === null);
+  const bad = (r: Row) => { const q = toNum(r.qtyS) || 0, pr = toNum(r.priceS); return r.on && (!r.name.trim() || !(q > 0) || q > MAX_QTY || pr === null || pr < 0 || pr > MAX_PRICE); };
 
   function save() {
     if (active.some(bad)) { setErr("Проверьте выделенные строки: нужны название, количество и цена."); return; }

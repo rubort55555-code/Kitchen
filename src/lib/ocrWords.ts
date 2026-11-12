@@ -57,27 +57,45 @@ function words() {
   return vocab;
 }
 
-/** Расстояние между словами: вставка/удаление/замена — 1, замена похожих букв — 0,4. Дальше limit не считаем. */
+/** Расстояние между словами: вставка/удаление/замена — 1, замена похожих букв — 0,4. Дальше limit не считаем.
+ *  Считаем только полосу у диагонали: клетка в k шагах от неё стоит не меньше k, а значения больше limit + 0,5
+ *  на выбор слова не влияют (см. fixWord) — так в разы быстрее при том же результате. */
+const BIG = 1e9;
+let bufA = new Float64Array(64), bufB = new Float64Array(64);
 function dist(a: string, b: string, limit: number): number {
   const m = a.length, n = b.length;
   if (Math.abs(m - n) > limit) return Infinity;
-  let prev = Array.from({ length: n + 1 }, (_, j) => j);
+  const band = Math.floor(limit + 0.5);
+  if (bufA.length <= n) { bufA = new Float64Array(n + 8); bufB = new Float64Array(n + 8); }
+  let prev = bufA, cur = bufB;
+  for (let j = 0; j <= n; j++) prev[j] = j <= band ? j : BIG;
   for (let i = 1; i <= m; i++) {
-    const cur = [i];
-    let rowMin = i;
-    for (let j = 1; j <= n; j++) {
+    const lo = Math.max(1, i - band), hi = Math.min(n, i + band);
+    cur.fill(BIG, 0, n + 1);
+    cur[0] = i <= band ? i : BIG;
+    let rowMin = lo > 1 ? BIG : cur[0];
+    for (let j = lo; j <= hi; j++) {
       const c = a[i - 1] === b[j - 1] ? 0 : cheap.has(a[i - 1] + b[j - 1]) ? 0.4 : 1;
       const v = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + c);
-      cur.push(v); if (v < rowMin) rowMin = v;
+      cur[j] = v; if (v < rowMin) rowMin = v;
     }
     if (rowMin > limit) return Infinity;
-    prev = cur;
+    const t = prev; prev = cur; cur = t;
   }
-  return prev[n];
+  return prev[n] >= BIG ? Infinity : prev[n];
 }
 
 /** Одно слово: знакомое — как есть; иначе ближайшее знакомое, если оно уверенно лучше остальных. */
+const memo = new Map<string, string>();
 export function fixWord(w: string): string {
+  const hit = memo.get(w);
+  if (hit !== undefined) return hit;
+  const r = fixWordRaw(w);
+  if (memo.size > 5000) memo.clear();
+  memo.set(w, r);
+  return r;
+}
+function fixWordRaw(w: string): string {
   const low = w.toLowerCase().replace(/ё/g, "е");
   if (low.length < 4 || !/^[а-я]+$/.test(low)) return w;
   const v = words();

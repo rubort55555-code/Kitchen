@@ -4,7 +4,7 @@ import { UNITS } from "./types";
 import { addProduct, getState, haveQty, setSettings, valueOf } from "./store";
 import { compileRules, checkProduct, type Hit, neverFor } from "./exclusions";
 import { findCatalog } from "./catalog";
-import { keyOf, covers, recipeStatus } from "./match";
+import { keyOf, keysFor, covers, recipeStatus } from "./match";
 import { norm, toNum, uid } from "./util";
 import { qtyText } from "./units";
 import { conv, parseNeed } from "./cook";
@@ -60,21 +60,52 @@ export interface Hints {
   price: number | null;
 }
 
+// Подсказки считаются для каждой строки списка при каждой отрисовке, поэтому тяжёлое
+// (журнал по продуктам и правила) считаем один раз на версию данных, а не на строку.
+let logCache: { log: unknown; custom: unknown; stats: Map<string, { bought: number; lost: number }> } | null = null;
+function logStats(st: ReturnType<typeof getState>) {
+  if (logCache && logCache.log === st.log && logCache.custom === st.settings.customCatalog) return logCache.stats;
+  const stats = new Map<string, { bought: number; lost: number }>();
+  const keyByName = new Map<string, string>();
+  for (const e of st.log) {
+    if (e.reason !== "bought" && e.reason !== "spoiled" && e.reason !== "thrown") continue;
+    let k = keyByName.get(e.name);
+    if (k === undefined) { k = keyOf(e.name, st.settings.customCatalog); keyByName.set(e.name, k); }
+    const x = stats.get(k) || { bought: 0, lost: 0 };
+    if (e.reason === "bought") x.bought++; else x.lost++;
+    stats.set(k, x);
+  }
+  logCache = { log: st.log, custom: st.settings.customCatalog, stats };
+  return stats;
+}
+let homeCache: { products: unknown; custom: unknown; byKey: Map<string, import("./types").Product[]> } | null = null;
+function homeByKey(st: ReturnType<typeof getState>) {
+  if (homeCache && homeCache.products === st.products && homeCache.custom === st.settings.customCatalog) return homeCache.byKey;
+  const byKey = new Map<string, import("./types").Product[]>();
+  for (const p of st.products) for (const k of keysFor(p.name, st.settings.customCatalog)) byKey.set(k, [...(byKey.get(k) || []), p]);
+  homeCache = { products: st.products, custom: st.settings.customCatalog, byKey };
+  return byKey;
+}
+let rulesCache: { settings: unknown; compiled: ReturnType<typeof compileRules> } | null = null;
+function compiledRules(st: ReturnType<typeof getState>) {
+  const s = st.settings;
+  if (rulesCache && rulesCache.settings === s) return rulesCache.compiled;
+  const compiled = compileRules(s.rules, s.customCatalog, s.members);
+  rulesCache = { settings: s, compiled };
+  return compiled;
+}
+
 /** Подсказки к строке списка: есть дома, часто пропадает, запрещено, последняя цена. */
 export function hintsFor(name: string): Hints {
   const st = getState();
   const k = keyOf(name, st.settings.customCatalog);
-  const home = st.products.filter((p) => covers(p.name, k, st.settings.customCatalog));
+  const home = homeByKey(st).get(k) || [];
   const have = home.length ? home.map((p) => qtyText(p.qty, p.unit)).join(" + ") : null;
-  let bought = 0, lost = 0;
-  for (const e of st.log) {
-    if (keyOf(e.name, st.settings.customCatalog) !== k) continue;
-    if (e.reason === "bought") bought++;
-    else if (e.reason === "spoiled" || e.reason === "thrown") lost++;
-  }
-  const compiled = compileRules(st.settings.rules, st.settings.customCatalog, st.settings.members);
+  const { bought, lost } = logStats(st).get(k) || { bought: 0, lost: 0 };
+  const compiled = compiledRules(st);
   const banned = checkProduct(name, compiled, st.settings.members.map((m) => m.id));
-  const lb = st.settings.lastBuy[norm(name)] || (findCatalog(name, st.settings.customCatalog) ? st.settings.lastBuy[norm(findCatalog(name, st.settings.customCatalog)!.n)] : undefined);
+  const cat = findCatalog(name, st.settings.customCatalog);
+  const lb = st.settings.lastBuy[norm(name)] || (cat ? st.settings.lastBuy[norm(cat.n)] : undefined);
   return { have, loss: bought >= 3 ? lost / bought : null, banned: banned && banned.rule.level === "never" ? banned : null, price: lb ? lb.price : null };
 }
 
