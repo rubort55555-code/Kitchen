@@ -12,7 +12,7 @@ import { micros, type BodyProfile, type Plan } from "./nutrition";
 import { fitsSlot, proteinOf } from "./plan";
 import { autoGarnishes, garnishClass, garnishNeed, isGarnish, type GClass } from "./garnish";
 import { norm, uid } from "./util";
-import { KCAL_TOL, FAT_CARB_TOL, MICRO_MIN, PORTION_MAX, PORTION_MIN, PORTION_STEP, snapPortion } from "./menucheck";
+import { daySlotShare, scalePlan, KCAL_TOL, FAT_CARB_TOL, MICRO_MIN, PORTION_MAX, PORTION_MIN, PORTION_STEP, snapPortion } from "./menucheck";
 
 type Vec = Partial<Record<NutrientKey, number>>;
 export interface Person { id: string; plan: Plan; body: BodyProfile }
@@ -147,7 +147,11 @@ export function autoPlan(inp: AutoInput): AutoResult {
     return { ...main, per };
   };
   const dayCache = new Map<string, { portions: number[]; vec: Vec }>();
-  function dayState(d: string, person: Person) {
+  // Нормы дня: если в меню дня только часть приёмов пищи, считаем долю суточной нормы
+  const shareOfDay = (d: string) => daySlotShare([...spots.filter((x) => x.day === d).map((x) => x.slot), ...inp.fixed.filter((e) => e.date === d).map((e) => e.slot)]);
+  const scaled = (p: Person, d: string): Person => ({ ...p, plan: scalePlan(p.plan, shareOfDay(d)) });
+  function dayState(d: string, person0: Person) {
+    const person = scaled(person0, d);
     const mains: Cand[] = [], ids: string[] = [], keys: string[] = [];
     for (const s of spots.filter((x) => x.day === d)) {
       if (!s.main) continue;
@@ -155,7 +159,7 @@ export function autoPlan(inp: AutoInput): AutoResult {
     }
     const side = fixedSide(d) || sideOf.get(d) || null;
     const extras = side ? [side] : [];
-    const key = person.id + "|" + keys.join(",") + "|" + (side?.r.id || "");
+    const key = person.id + "|" + shareOfDay(d) + "|" + keys.join(",") + "|" + (side?.r.id || "");
     let v = dayCache.get(key);
     if (!v) { v = fitDayNum(mains, extras, person); dayCache.set(key, v); }
     return { mains, ids, v, side };
@@ -185,22 +189,24 @@ export function autoPlan(inp: AutoInput): AutoResult {
     if (mainsLD >= 6 && fish < 2) variety += 2 - fish;
     for (const p of people) {
       const sum: Vec = {};
-      let dd = 0;
+      let dd = 0, shSum = 0;
       for (const d of days) {
         const { mains, v } = dayState(d, p);
         if (!mains.length) continue;
-        dd++;
+        dd++; shSum += shareOfDay(d);
+        const pl = scaled(p, d).plan;
         const kc = v.vec.kcal || 0, pr = v.vec.protein || 0, ft = v.vec.fat || 0, cb = v.vec.carbs || 0;
-        const dk = Math.max(0, Math.abs(kc - p.plan.kcal) / p.plan.kcal - KCAL_TOL);
-        const dp = Math.max(0, (p.plan.protein - pr) / p.plan.protein);
-        const df = Math.max(0, Math.abs(ft - p.plan.fat) / p.plan.fat - FAT_CARB_TOL);
-        const dc = Math.max(0, Math.abs(cb - p.plan.carbs) / p.plan.carbs - FAT_CARB_TOL);
+        const dk = Math.max(0, Math.abs(kc - pl.kcal) / pl.kcal - KCAL_TOL);
+        const dp = Math.max(0, (pl.protein - pr) / pl.protein);
+        const df = Math.max(0, Math.abs(ft - pl.fat) / pl.fat - FAT_CARB_TOL);
+        const dc = Math.max(0, Math.abs(cb - pl.carbs) / pl.carbs - FAT_CARB_TOL);
         if (dk > 0 || dp > 0 || df > 0 || dc > 0) notOk++;
         pen2 += 100 * (2 * dk + dp + 0.5 * df + 0.5 * dc);
         for (const k in v.vec) sum[NK(k)] = (sum[NK(k)] || 0) + (v.vec[NK(k)] || 0);
       }
       if (!dd) continue;
-      const avg = (k: string) => (sum[NK(k)] || 0) / dd;
+      const sh = shSum / dd; // пределы и нормы витаминов — на ту часть дня, которая в меню
+      const avg = (k: string) => (sum[NK(k)] || 0) / dd / sh;
       const lim: [string, number][] = [["na", p.plan.naMax], ["satFat", p.plan.satFatMax], ["chol", p.plan.cholMax], ["sugar", p.plan.sugarMax * 2.5]];
       for (const [k, L] of lim) { const o = Math.max(0, avg(k) / L - 1); if (o > 0) { viol++; pen3 += 100 * o; } }
       for (const m of norms.get(p.id) || []) pen4 += 100 * Math.max(0, MICRO_MIN - avg(m.key) / m.amount);

@@ -107,6 +107,11 @@ const homeSet = new Set(recipes.filter((r) => fitsSlot(r, "ужин") && !isGarn
 const rh = autoPlan({ recipes, allowed: () => true, ready: (r) => homeSet.has(r.id), days: days.slice(0, 1), slots: ["ужин"], fixed: [], people: [f], iterations: 2000 });
 ok("ужин выбирается из блюд, которые можно приготовить из имеющегося", rh.added.length === 1 && homeSet.has(rh.added[0].recipeId!));
 
+// Только один приём пищи: нормы дня на него не накладываются целиком
+const ro = autoPlan({ recipes, allowed: () => true, days: days.slice(0, 1), slots: ["обед"], fixed: [], people: [f], iterations: 3000 });
+const evo = evaluateMenu(ro.added.map((e) => ({ ...e, portions: ro.portions[e.id] })), days.slice(0, 1), recipes, { id: "m1", body: bodyF }, f.plan, rulesFor([member("m1", "Аня", bodyF)]));
+ok("только обед: калории обеда ≈ 40% нормы дня", !!evo.dayRes[0] && evo.dayRes[0].kcal < f.plan.kcal * 0.6 && evo.dayRes[0].kcalOk, [evo.dayRes[0]?.kcal, f.plan.kcal]);
+
 // Нет подходящих блюд
 const none = autoPlan({ recipes, allowed: () => false, days, slots: [...slots], fixed: [], people: [f], iterations: 100 });
 ok("нет разрешённых блюд — пусто и без ошибок", none.added.length === 0 && none.empty === 21);
