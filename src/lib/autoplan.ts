@@ -77,9 +77,10 @@ export function autoPlan(inp: AutoInput): AutoResult {
   const poolFor = (slot: Slot) => {
     const all = okRecipes.filter((r) => !isGarnish(r) && fitsSlot(r, slot)).map(cand).filter((c): c is Cand => !!c);
     if (!inp.ready) return all;
-    // Блюда из того, что есть дома: берём только их, если хватает на меню без повторов (каждое блюдо — не больше двух раз)
+    // Блюда из того, что есть дома: берём только их, если их достаточно для разнообразия (не меньше 20 или половины всех на этот приём пищи, и хватает на меню без повторов)
     const have = all.filter((c) => inp.ready!(c.r));
-    return have.length * 2 >= days.length + 2 && have.length >= 4 ? have : all;
+    // Если таких блюд мало (меньше 20 или меньше половины всех), фильтр не включаем: иначе выбор слишком узкий и страдают калории
+    return have.length * 2 >= days.length + 2 && have.length >= Math.min(20, Math.ceil(all.length / 2)) ? have : all;
   };
   const pools = new Map(slots.map((s) => [s, poolFor(s)]));
   const sidePool = okRecipes.filter((r) => norm(r.kind || "") === "салат" && !/фрукт|банан|апельсин|груш/.test(norm(r.name))).map(cand).filter((c): c is Cand => !!c);

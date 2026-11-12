@@ -105,9 +105,12 @@ ok("с перекусами калории каждого дня в предел
 ok("перекусы помогают кальцию: в среднем за неделю не хуже, чем без них", (ev5.micro.find((m) => m.key === "ca")?.pct || 0) >= (ev1.micro.find((m) => m.key === "ca")?.pct || 0) - 2, [ev5.micro.find((m) => m.key === "ca")?.pct, ev1.micro.find((m) => m.key === "ca")?.pct]);
 
 // Блюда «из того, что есть дома»: на ужин берутся только готовые к приготовлению, если их хватает
-const homeSet = new Set(recipes.filter((r) => fitsSlot(r, "ужин") && !isGarnish(r)).slice(0, 12).map((r) => r.id));
+const homeSet = new Set(recipes.filter((r) => fitsSlot(r, "ужин") && !isGarnish(r)).slice(0, 30).map((r) => r.id));
 const rh = autoPlan({ recipes, allowed: () => true, ready: (r) => homeSet.has(r.id), days: days.slice(0, 1), slots: ["ужин"], fixed: [], people: [f], iterations: 2000 });
 ok("ужин выбирается из блюд, которые можно приготовить из имеющегося", rh.added.length === 1 && homeSet.has(rh.added[0].recipeId!));
+const fewSet = new Set([...homeSet].slice(0, 5));
+const rhf = autoPlan({ recipes, allowed: () => true, ready: (r) => fewSet.has(r.id), days, slots: ["ужин"], fixed: [], people: [f], iterations: 3000 });
+ok("если блюд из имеющегося мало (5), фильтр не включается и меню не сужается до них", new Set(rhf.added.map((e) => e.recipeId)).size > 5, new Set(rhf.added.map((e) => e.recipeId)).size);
 
 // Только один приём пищи: нормы дня на него не накладываются целиком
 const ro = autoPlan({ recipes, allowed: () => true, days: days.slice(0, 1), slots: ["обед"], fixed: [], people: [f], iterations: 3000 });
