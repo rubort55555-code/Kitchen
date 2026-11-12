@@ -1,7 +1,9 @@
 // Проверка автоподбора меню: node node_modules/.bin/tsx tests/autoplan.test.ts
 import { readFileSync, readdirSync } from "node:fs";
 import { autoPlan } from "../src/lib/autoplan";
-import { evaluateMenu } from "../src/lib/menucheck";
+import { recipeNutrition } from "../src/lib/recipeNutrition";
+import { assess } from "../src/lib/assess";
+import { evaluateMenu, menuMeals } from "../src/lib/menucheck";
 import { planFor, type BodyProfile } from "../src/lib/nutrition";
 import { parseRecipeText } from "../tools/recipes.mjs";
 import type { PlanEntry, Recipe, Rule } from "../src/lib/types";
@@ -79,9 +81,9 @@ ok("для стоящего блюда подобрана порция", typeof 
 const m = person("m2", bodyM);
 const rf = autoPlan({ recipes, allowed: () => true, days, slots: [...slots], fixed: [], people: [f, m], iterations: 8000 });
 ok("семья: порции у обоих", rf.added.every((e) => rf.portions[e.id]?.m1 && rf.portions[e.id]?.m2));
-ok("семья: у мужчины порции в среднем больше", (() => { const avg = (id: string) => rf.added.reduce((s, e) => s + rf.portions[e.id][id], 0) / rf.added.length; return avg("m2") !== avg("m1"); })());
+ok("семья: порции стандартные — по одной на человека, число порций выбирает человек", rf.added.every((e) => rf.portions[e.id].m1 === 1 && rf.portions[e.id].m2 === 1));
 const evF = (id: string, b: BodyProfile, p: ReturnType<typeof person>) => evaluateMenu(rf.added.map((e) => ({ ...e, portions: rf.portions[e.id] })), days, recipes, { id, body: b }, p.plan, rulesFor([member("m1", "Аня", bodyF), member("m2", "Миша", bodyM)]));
-ok("семья: у каждого калории в пределах ±5% не менее чем в 5 днях из 7", evF("m1", bodyF, f).dayRes.filter((d) => d.kcalOk).length >= 5 && evF("m2", bodyM, m).dayRes.filter((d) => d.kcalOk).length >= 5, [evF("m1", bodyF, f).dayRes.map((d) => d.pct), evF("m2", bodyM, m).dayRes.map((d) => d.pct)]);
+// при стандартных порциях калории каждого человека зависят от выбора блюд; подгонка порций под норму убрана — число порций выбирает человек
 
 // Стоящее блюдо без гарнира получает гарнир; гарнир, выбранный пользователем, не меняется
 const cut = recipes.find((r) => garnishNeed(r, "ужин") === "required")!;
@@ -101,6 +103,25 @@ ok("на перекус стоят только перекусы, без гар�
 const ev5 = evaluateMenu(r5.added.map((e) => ({ ...e, portions: r5.portions[e.id] })), days, recipes, { id: "m1", body: bodyF }, f.plan, rulesFor([member("m1", "Аня", bodyF)]));
 ok("с перекусами калории каждого дня в пределах ±5%", ev5.dayRes.every((d) => d.kcalOk), ev5.dayRes.map((d) => d.pct));
 ok("перекусы помогают кальцию: в среднем за неделю не хуже, чем без них", (ev5.micro.find((m) => m.key === "ca")?.pct || 0) >= (ev1.micro.find((m) => m.key === "ca")?.pct || 0) - 2, [ev5.micro.find((m) => m.key === "ca")?.pct, ev1.micro.find((m) => m.key === "ca")?.pct]);
+
+// Блюда «из того, что есть дома»: на ужин берутся только готовые к приготовлению, если их хватает
+const homeSet = new Set(recipes.filter((r) => fitsSlot(r, "ужин") && !isGarnish(r)).slice(0, 12).map((r) => r.id));
+const rh = autoPlan({ recipes, allowed: () => true, ready: (r) => homeSet.has(r.id), days: days.slice(0, 1), slots: ["ужин"], fixed: [], people: [f], iterations: 2000 });
+ok("ужин выбирается из блюд, которые можно приготовить из имеющегося", rh.added.length === 1 && homeSet.has(rh.added[0].recipeId!));
+
+// Только один приём пищи: нормы дня на него не накладываются целиком
+const ro = autoPlan({ recipes, allowed: () => true, days: days.slice(0, 1), slots: ["обед"], fixed: [], people: [f], iterations: 3000 });
+const evo = evaluateMenu(ro.added.map((e) => ({ ...e, portions: ro.portions[e.id] })), days.slice(0, 1), recipes, { id: "m1", body: bodyF }, f.plan, rulesFor([member("m1", "Аня", bodyF)]));
+ok("только обед: калории обеда ≈ 40% нормы дня", !!evo.dayRes[0] && evo.dayRes[0].kcal < f.plan.kcal * 0.6 && evo.dayRes[0].kcalOk, [evo.dayRes[0]?.kcal, f.plan.kcal]);
+
+const fullLack = assess(menuMeals(ro.added.map((e) => ({ ...e, portions: ro.portions[e.id] })), recipes, "m1").meals, f.plan, bodyF, 0, recipes)!.micro.filter((r) => r.v > 0 && r.pct < 90).length;
+ok("только обед: недельная проверка требует меньше витаминов, чем при сравнении с нормой всего дня", evo.lacking.length < fullLack, [evo.lacking.length, fullLack]);
+
+// Завтрак уже стоит в меню, подбираем только ужин: цель ужина — его доля дня, а не 60% нормы
+const fixedB: PlanEntry = { id: "fb", date: days[0], slot: "завтрак", name: "Завтрак", recipeId: recipes.find((r) => r.kind === "завтрак")!.id };
+const rfb = autoPlan({ recipes, allowed: () => true, days: [days[0]], slots: ["ужин"], fixed: [fixedB], people: [f], iterations: 2000 });
+const dinKcal = (() => { const e = rfb.added[0]; const k = (id?: string) => (id ? recipeNutrition(recipes.find((r) => r.id === id)!)?.perServing.kcal || 0 : 0); return k(e.recipeId) + k(e.garnish?.id) + k(e.side?.id); })();
+ok("ужин при уже стоящем завтраке не раздувается (≈30% нормы, не 60%)", dinKcal < f.plan.kcal * 0.45, [Math.round(dinKcal), f.plan.kcal]);
 
 // Нет подходящих блюд
 const none = autoPlan({ recipes, allowed: () => false, days, slots: [...slots], fixed: [], people: [f], iterations: 100 });

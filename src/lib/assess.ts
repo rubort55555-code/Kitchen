@@ -46,7 +46,9 @@ const atMost = (v: number, t: number): Status => (v > t ? "over" : "ok");
 const MICRO_SKIP = new Set(["na"]);
 
 /** meals — записи за нужные даты (одного человека); waterMl — выпитая вода за эти даты, сумма; recipes — для жидкости из блюд. */
-export function assess(meals: Meal[], plan: Plan, body: BodyProfile, waterMl: number, recipes: Recipe[] = []): Assessment | null {
+/** share — какую часть суточной нормы нужно набрать (меню только на часть приёмов пищи); для дневника всегда 1. */
+export function assess(meals: Meal[], plan0: Plan, body: BodyProfile, waterMl: number, recipes: Recipe[] = [], share = 1): Assessment | null {
+  const plan: Plan = share >= 1 ? plan0 : { ...plan0, kcal: plan0.kcal * share, protein: plan0.protein * share, fat: plan0.fat * share, carbs: plan0.carbs * share, fiber: plan0.fiber * share, sugarMax: plan0.sugarMax * share, satFatMax: plan0.satFatMax * share, cholMax: plan0.cholMax * share, naMax: plan0.naMax * share };
   const dates = [...new Set(meals.map((m) => m.date))];
   const days = dates.length;
   if (!days) return null;
@@ -75,7 +77,7 @@ export function assess(meals: Meal[], plan: Plan, body: BodyProfile, waterMl: nu
   const keys = new Set<string>(NUTRIENTS.map((x) => x.key));
   const micro = micros(body)
     .filter((x) => keys.has(x.key) && !MICRO_SKIP.has(x.key))
-    .map((x) => { const v = a(x.key as NutrientKey); return mk(x.key, x.title, x.unit, v, x.amount, "min", v >= x.amount * 0.9 ? "ok" : v >= x.amount * 0.7 ? "near" : "low"); });
+    .map((x) => { const v = a(x.key as NutrientKey), am = x.amount * share; return mk(x.key, x.title, x.unit, v, am, "min", v >= am * 0.9 ? "ok" : v >= am * 0.7 ? "near" : "low"); });
 
   const noMicro = meals.filter((m) => !hasMicroData(m)).length;
   const checked = [...macro, ...limits, ...(water ? [water] : [])];

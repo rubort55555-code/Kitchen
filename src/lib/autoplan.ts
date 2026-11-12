@@ -1,7 +1,7 @@
 // Автоподбор меню под нормы (этап 2 плана): без интернета и без внешнего ИИ — случайный старт и улучшение заменами.
 // Порядок приоритетов (выше важнее; нижний уровень не может ухудшить верхний, поэтому ключи сравниваются по порядку):
 //  1) запреты — блюда берутся только из разрешённых (allowed);
-//  2) калории дня ±5% цели, белок не ниже нормы, жиры и углеводы ±10% — порции основных блюд подбираются под каждого человека;
+//  2) калории дня ±5% цели, белок не ниже нормы, жиры и углеводы ±10% (при одной порции каждого блюда: число порций человек выбирает сам);
 //  3) пределы «не больше» в среднем за неделю (натрий, насыщенные жиры, холестерин, сахара);
 //  4) витамины, минералы и клетчатка не ниже 90% нормы в среднем за неделю (там, где в рецептах есть данные);
 //  5) разнообразие: блюдо не больше двух раз, рыба не реже двух раз, белок не повторяется в обед и ужин;
@@ -12,7 +12,7 @@ import { micros, type BodyProfile, type Plan } from "./nutrition";
 import { fitsSlot, proteinOf } from "./plan";
 import { autoGarnishes, garnishClass, garnishNeed, isGarnish, type GClass } from "./garnish";
 import { norm, uid } from "./util";
-import { KCAL_TOL, FAT_CARB_TOL, MICRO_MIN, PORTION_MAX, PORTION_MIN, PORTION_STEP, snapPortion } from "./menucheck";
+import { daySlotShare, scalePlan, KCAL_TOL, FAT_CARB_TOL, MICRO_MIN } from "./menucheck";
 
 type Vec = Partial<Record<NutrientKey, number>>;
 export interface Person { id: string; plan: Plan; body: BodyProfile }
@@ -22,6 +22,8 @@ export interface AutoInput {
   allowed: (r: Recipe) => boolean;
   /** Бонус за продукты дома и сроки: используется только при равенстве по приоритетам 1–5. */
   bonus?: (r: Recipe) => number;
+  /** Хватает ли продуктов дома на блюдо (почти всё есть). Если таких блюд на место хватает для разнообразия, берём только их. */
+  ready?: (r: Recipe) => boolean;
   days: string[];
   slots: Slot[];
   /** Уже стоящие в меню блюда: места не меняем, но порции подбираем. */
@@ -54,32 +56,13 @@ function mulberry(seed: number) {
 const q = (x: number) => Math.round(x * 2) / 2; // «равноценность»: отклонения меньше полупроцента не различаем
 const qc = (x: number) => Math.round(x / 3) * 3; // для пределов и микроэлементов грубее: суммарное отклонение меньше 3 процентных пунктов — равноценно, тогда решает разнообразие
 
-/** Подбор порций основных блюд одного дня одного человека (только числа). Возвращает порции и вектор дня. */
-function fitDayNum(mains: Cand[], extras: Cand[], p: Person): { portions: number[]; vec: Vec } {
-  const T = p.plan.kcal;
-  const fixed = extras.reduce((s, c) => s + (c.per.kcal || 0), 0);
-  const base = mains.reduce((s, c) => s + (c.per.kcal || 0), 0);
-  const p0 = snapPortion(base > 0 ? (T - fixed) / base : 1);
-  const x = mains.map(() => p0);
-  const kcal = () => fixed + mains.reduce((s, c, i) => s + x[i] * (c.per.kcal || 0), 0);
-  const prot = () => extras.reduce((s, c) => s + (c.per.protein || 0), 0) + mains.reduce((s, c, i) => s + x[i] * (c.per.protein || 0), 0);
-  const cost = () => Math.abs(kcal() - T) + Math.max(0, p.plan.protein - prot()) * 2 + x.reduce((s, v) => s + Math.abs(v - p0), 0) * 3;
-  for (let it = 0; it < 12; it++) {
-    let best = cost(), mi = -1, mv = 0;
-    for (let i = 0; i < mains.length; i++) for (const d of [-PORTION_STEP, PORTION_STEP]) {
-      const nv = x[i] + d;
-      if (nv < PORTION_MIN || nv > PORTION_MAX) continue;
-      const old = x[i]; x[i] = nv; const c = cost(); x[i] = old;
-      if (c < best - 1e-9) { best = c; mi = i; mv = nv; }
-    }
-    if (mi < 0) break;
-    x[mi] = mv;
-  }
+/** Сумма дня одного человека при заданных порциях основных блюд (порции не подбираем: размер порции стандартный, число порций выбирает человек). */
+function fitDayNum(mains: Cand[], extras: Cand[], _p: Person, xs: number[]): { portions: number[]; vec: Vec } {
   const vec: Vec = {};
   const add = (c: Cand, k: number) => { for (const key in c.per) vec[NK(key)] = (vec[NK(key)] || 0) + (c.per[NK(key)] || 0) * k; };
-  mains.forEach((c, i) => add(c, x[i]));
+  mains.forEach((c, i) => add(c, xs[i] ?? 1));
   extras.forEach((c) => add(c, 1));
-  return { portions: x, vec };
+  return { portions: mains.map((_, i) => xs[i] ?? 1), vec };
 }
 
 export function autoPlan(inp: AutoInput): AutoResult {
@@ -91,7 +74,13 @@ export function autoPlan(inp: AutoInput): AutoResult {
   const cache = new Map<string, Cand | null>();
   const cand = (r: Recipe) => { if (!cache.has(r.id)) cache.set(r.id, info(r)); return cache.get(r.id) || null; };
   const byId = (id: string | undefined) => { const r = id ? inp.recipes.find((x) => x.id === id) : undefined; return r ? cand(r) : null; };
-  const poolFor = (slot: Slot) => okRecipes.filter((r) => !isGarnish(r) && fitsSlot(r, slot)).map(cand).filter((c): c is Cand => !!c);
+  const poolFor = (slot: Slot) => {
+    const all = okRecipes.filter((r) => !isGarnish(r) && fitsSlot(r, slot)).map(cand).filter((c): c is Cand => !!c);
+    if (!inp.ready) return all;
+    // Блюда из того, что есть дома: берём только их, если хватает на меню без повторов (каждое блюдо — не больше двух раз)
+    const have = all.filter((c) => inp.ready!(c.r));
+    return have.length * 2 >= days.length + 2 && have.length >= 4 ? have : all;
+  };
   const pools = new Map(slots.map((s) => [s, poolFor(s)]));
   const sidePool = okRecipes.filter((r) => norm(r.kind || "") === "салат" && !/фрукт|банан|апельсин|груш/.test(norm(r.name))).map(cand).filter((c): c is Cand => !!c);
   const garnishPool = okRecipes.filter(isGarnish).map(cand).filter((c): c is Cand => !!c);
@@ -139,17 +128,22 @@ export function autoPlan(inp: AutoInput): AutoResult {
     return { ...main, per };
   };
   const dayCache = new Map<string, { portions: number[]; vec: Vec }>();
-  function dayState(d: string, person: Person) {
-    const mains: Cand[] = [], ids: string[] = [], keys: string[] = [];
+  // Нормы дня: если подбираем только часть приёмов пищи, считаем долю суточной нормы (блюда вне подбираемых приёмов в сумму дня не входят)
+  const shareOfDay = (d: string) => daySlotShare(spots.filter((x) => x.day === d).map((x) => x.slot));
+  const scaled = (p: Person, d: string): Person => ({ ...p, plan: scalePlan(p.plan, shareOfDay(d)) });
+  function dayState(d: string, person0: Person) {
+    const person = scaled(person0, d);
+    const mains: Cand[] = [], ids: string[] = [], keys: string[] = [], xs: number[] = [];
     for (const s of spots.filter((x) => x.day === d)) {
       if (!s.main) continue;
-      mains.push(withGarnish(s.main, s.garnish)); keys.push(s.main.r.id + "+" + (s.garnish?.r.id || "")); ids.push(s.fixed?.id || s.slot);
+      const x = s.fixed?.portions?.[person0.id] ?? 1;
+      mains.push(withGarnish(s.main, s.garnish)); xs.push(x); keys.push(s.main.r.id + "+" + (s.garnish?.r.id || "") + "x" + x); ids.push(s.fixed?.id || s.slot);
     }
     const side = fixedSide(d) || sideOf.get(d) || null;
     const extras = side ? [side] : [];
-    const key = person.id + "|" + keys.join(",") + "|" + (side?.r.id || "");
+    const key = person.id + "|" + shareOfDay(d) + "|" + keys.join(",") + "|" + (side?.r.id || "");
     let v = dayCache.get(key);
-    if (!v) { v = fitDayNum(mains, extras, person); dayCache.set(key, v); }
+    if (!v) { v = fitDayNum(mains, extras, person, xs); dayCache.set(key, v); }
     return { mains, ids, v, side };
   }
 
@@ -177,22 +171,24 @@ export function autoPlan(inp: AutoInput): AutoResult {
     if (mainsLD >= 6 && fish < 2) variety += 2 - fish;
     for (const p of people) {
       const sum: Vec = {};
-      let dd = 0;
+      let dd = 0, shSum = 0;
       for (const d of days) {
         const { mains, v } = dayState(d, p);
         if (!mains.length) continue;
-        dd++;
+        dd++; shSum += shareOfDay(d);
+        const pl = scaled(p, d).plan;
         const kc = v.vec.kcal || 0, pr = v.vec.protein || 0, ft = v.vec.fat || 0, cb = v.vec.carbs || 0;
-        const dk = Math.max(0, Math.abs(kc - p.plan.kcal) / p.plan.kcal - KCAL_TOL);
-        const dp = Math.max(0, (p.plan.protein - pr) / p.plan.protein);
-        const df = Math.max(0, Math.abs(ft - p.plan.fat) / p.plan.fat - FAT_CARB_TOL);
-        const dc = Math.max(0, Math.abs(cb - p.plan.carbs) / p.plan.carbs - FAT_CARB_TOL);
+        const dk = Math.max(0, Math.abs(kc - pl.kcal) / pl.kcal - KCAL_TOL);
+        const dp = Math.max(0, (pl.protein - pr) / pl.protein);
+        const df = Math.max(0, Math.abs(ft - pl.fat) / pl.fat - FAT_CARB_TOL);
+        const dc = Math.max(0, Math.abs(cb - pl.carbs) / pl.carbs - FAT_CARB_TOL);
         if (dk > 0 || dp > 0 || df > 0 || dc > 0) notOk++;
         pen2 += 100 * (2 * dk + dp + 0.5 * df + 0.5 * dc);
         for (const k in v.vec) sum[NK(k)] = (sum[NK(k)] || 0) + (v.vec[NK(k)] || 0);
       }
       if (!dd) continue;
-      const avg = (k: string) => (sum[NK(k)] || 0) / dd;
+      const sh = shSum / dd; // пределы и нормы витаминов — на ту часть дня, которая в меню
+      const avg = (k: string) => (sum[NK(k)] || 0) / dd / sh;
       const lim: [string, number][] = [["na", p.plan.naMax], ["satFat", p.plan.satFatMax], ["chol", p.plan.cholMax], ["sugar", p.plan.sugarMax * 2.5]];
       for (const [k, L] of lim) { const o = Math.max(0, avg(k) / L - 1); if (o > 0) { viol++; pen3 += 100 * o; } }
       for (const m of norms.get(p.id) || []) pen4 += 100 * Math.max(0, MICRO_MIN - avg(m.key) / m.amount);

@@ -48,8 +48,8 @@ export const toggleDone = (id: string) => {
 export function setGarnish(id: string, g: { id: string; name: string } | undefined) {
   save(planList().map((x) => (x.id === id ? { ...x, garnish: g } : x)));
 }
-const snap = (x: number) => Math.min(2, Math.max(0.5, Math.round(x * 4) / 4));
-/** Порция основного блюда меню для человека (0,5–2, шаг 0,25). */
+const snap = (x: number) => Math.min(4, Math.max(0.5, Math.round(x * 4) / 4));
+/** Порция основного блюда меню для человека (0,5–4, шаг 0,25). */
 export function setPortion(id: string, who: string, portion: number) {
   save(planList().map((x) => (x.id === id ? { ...x, portions: { ...(x.portions || {}), [who]: snap(portion) } } : x)));
 }
@@ -273,6 +273,22 @@ export function recipesInPlan(days: string[]): Recipe[] {
   const st = getState();
   const ids = new Set(planList().filter((e) => days.includes(e.date) && !e.done).flatMap((e) => [e.recipeId, e.garnish?.id, e.side?.id, e.sweet?.id]).filter(Boolean));
   return st.recipes.filter((r) => ids.has(r.id));
+}
+
+/** Во сколько раз нужно взять продуктов рецепта относительно записанного в нём (на r.servings порций): едят по порции на человека, число порций у каждого своё. recipeId → коэффициент. */
+export function planFactors(days: string[]): Map<string, number> {
+  const st = getState();
+  const who = st.settings.members.map((m) => m.id);
+  const f = new Map<string, number>();
+  for (const e of planList().filter((x) => days.includes(x.date) && !x.done)) {
+    const eaten = who.length ? who.reduce((s, id) => s + (e.portions?.[id] ?? 1), 0) : 1;
+    for (const id of [e.recipeId, e.garnish?.id, e.side?.id, e.sweet?.id]) {
+      if (!id) continue;
+      const r = st.recipes.find((x) => x.id === id);
+      f.set(id, (f.get(id) || 0) + eaten / Math.max(1, r?.servings || 2));
+    }
+  }
+  return f;
 }
 
 /** Дополнение к запросу Claude: просим меню на неделю в особом JSON. */

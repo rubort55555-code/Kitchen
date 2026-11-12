@@ -1,11 +1,10 @@
 // «Насколько меню подходит»: меню на неделю против норм каждого человека, порции под человека.
 import { useMemo, useState } from "react";
 import { Sheet } from "../components/ui";
-import { setPortion, setPortions, dayShort, dayTitle } from "../lib/plan";
+import { setPortion, dayShort, dayTitle } from "../lib/plan";
 import { useStore } from "../lib/store";
-import { PORTION_MAX, PORTION_MIN, PORTION_STEP, evaluateMenu, fitWeek, portionOf } from "../lib/menucheck";
+import { PORTION_MAX, PORTION_MIN, PORTION_STEP, evaluateMenu, portionOf } from "../lib/menucheck";
 import { planFor } from "../lib/nutrition";
-import { toast } from "../lib/ui";
 
 const f = (x: number) => String(Math.round(x * 100) / 100).replace(".", ",");
 
@@ -22,11 +21,6 @@ export function MenuCheck({ days }: { days: string[] }) {
   if (!cur || !ev) {
     return <Sheet title="Насколько меню подходит"><p className="empty muted">Заполните в «Ещё → Питание» рост, вес и цель хотя бы одному человеку — тогда я смогу сравнить меню с нормой.</p></Sheet>;
   }
-  const fit = () => {
-    const r = fitWeek(entries, recipes, cur.m.id, cur.plan!);
-    setPortions(r.portions, cur.m.id);
-    toast(r.days.length ? `Порции подобраны на ${r.days.length} дн.` : "Нечего подбирать: в меню нет блюд с рецептом");
-  };
   const mains = (date: string) => entries.filter((e) => e.date === date && e.recipeId);
 
   return (
@@ -47,8 +41,7 @@ export function MenuCheck({ days }: { days: string[] }) {
                 {l.items.map((x) => <p key={x} className="small" style={{ margin: "2px 0" }}>{x}</p>)}
               </details>
             ))}
-            <button className="btn" onClick={fit}>Подобрать порции под {cur.m.name}</button>
-            <p className="muted small">Порции основных блюд меняются от {f(PORTION_MIN)} до {PORTION_MAX} с шагом {f(PORTION_STEP)}. Салат и десерт к блюду считаются одной порцией.</p>
+            <p className="muted small">Порция — стандартная, на одного человека. Сколько порций съесть, выбираете вы: от {f(PORTION_MIN)} до {PORTION_MAX} с шагом {f(PORTION_STEP)}. Салат и десерт к блюду считаются одной порцией.</p>
           </div>
 
           {ev.dayRes.map((d) => (

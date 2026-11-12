@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Header, Seg, Sheet, Tip } from "../components/ui";
 import { deleteProduct, frequentNames, setSettings, useStore } from "../lib/store";
 import { addMany, addShop, belowMin, buy, estimate, hintsFor, missingFor, parseAmount, removeShop, restoreShop, shopText, toggleShop, type BuyRow } from "../lib/shop";
-import { recipesInPlan, weekDays } from "../lib/plan";
+import { planFactors, recipesInPlan, weekDays } from "../lib/plan";
 import { findCatalog, suggest } from "../lib/catalog";
 import { autoUntil } from "./AddProduct";
 import type { MinStock, Place, ShopItem, Unit } from "../lib/types";
@@ -23,7 +23,7 @@ export function Shop() {
   const est = useMemo(() => estimate(list), [list, st.settings.lastBuy, st.products]);
   const low = useMemo(() => belowMin(st.settings.minStock).filter((x) => !open.some((o) => norm(o.name) === norm(x.name))), [st.settings.minStock, st.products, list]);
   const week = weekDays(ymd());
-  const menuMissing = useMemo(() => missingFor(recipesInPlan(week)).filter((x) => !open.some((o) => norm(o.name) === norm(x.name))), [st.settings.plan, st.products, st.recipes, list]);
+  const menuMissing = useMemo(() => missingFor(recipesInPlan(week), planFactors(week)).filter((x) => !open.some((o) => norm(o.name) === norm(x.name))), [st.settings.plan, st.products, st.recipes, list]);
   const sugg = useMemo(() => (name.trim() ? suggest(name, st.settings.customCatalog, frequentNames(st.settings), 5) : []), [name, st.settings]);
 
   function add(e?: { preventDefault(): void }, n = name) {

@@ -66,8 +66,9 @@ const withG = { ...cutE, garnish: { id: rice.id, name: rice.name } };
 const kc = (es: PlanEntry[]) => menuMeals(es, recipes, "m1").meals.reduce((s, m) => s + (m.n.kcal || 0), 0);
 ok("гарнир добавляет калории блюда", kc([withG]) > kc([cutE]) + 200, [kc([withG]), kc([cutE])]);
 ok("порция блюда меняет и гарнир", Math.abs(kc([{ ...withG, portions: { m1: 2 } }]) - 2 * kc([withG])) < 3);
+// на один ужин приходится 30% суточной нормы
 const fitG = fitDay([withG], recipes, "m1", plan)!;
-ok("подбор порций учитывает гарнир", fitG.kcal > 0 && Math.abs(fitG.kcal - plan.kcal) <= Math.abs(kc([withG]) - plan.kcal) + 1, [fitG.kcal, plan.kcal]);
+ok("подбор порций учитывает гарнир", fitG.kcal > 0 && Math.abs(fitG.kcal - plan.kcal * 0.3) <= Math.abs(kc([withG]) - plan.kcal * 0.3) + 1, [fitG.kcal, plan.kcal]);
 const frying = recipes.find((r) => r.kind === "основное" && /котлет|отбивн|жарен/i.test(r.name))!;
 const noG = evaluateMenu([{ id: "n1", date: "2026-11-11", slot: "ужин", name: frying.name, recipeId: frying.id }], ["2026-11-11"], recipes, me, plan, rules);
 ok("к жареному без гарнира — замечание «нужен гарнир»", noG.levels[4].items.some((x) => x.includes("нужен гарнир")), noG.levels[4]);

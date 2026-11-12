@@ -5,7 +5,7 @@ import { addProduct, getState, haveQty, setSettings, valueOf } from "./store";
 import { compileRules, checkProduct, type Hit, neverFor } from "./exclusions";
 import { findCatalog } from "./catalog";
 import { keyOf, keysFor, covers, recipeStatus } from "./match";
-import { norm, toNum, uid } from "./util";
+import { norm, scaleAmount, toNum, uid } from "./util";
 import { qtyText } from "./units";
 import { conv, parseNeed } from "./cook";
 
@@ -139,7 +139,8 @@ export function belowMin(min: MinStock[] = getState().settings.minStock || []): 
 }
 
 /** Недостающее для нескольких рецептов (без базовых, без того, что есть, без запрещённого). */
-export function missingFor(recipes: Recipe[]): { name: string; amount: string; for: string[] }[] {
+/** factors — во сколько раз брать продуктов относительно рецепта (по порциям меню); без него — на весь рецепт. */
+export function missingFor(recipes: Recipe[], factors?: Map<string, number>): { name: string; amount: string; for: string[] }[] {
   const st = getState();
   const compiled = compileRules(st.settings.rules, st.settings.customCatalog, st.settings.members);
   const who = st.settings.members.map((m) => m.id);
@@ -150,7 +151,7 @@ export function missingFor(recipes: Recipe[]): { name: string; amount: string; f
       if (checkProduct(m.name, compiled, who)?.rule.level === "never") continue;
       const k = keyOf(m.name, st.settings.customCatalog);
       const cur = acc.get(k) || { name: m.name, amounts: [], for: [] };
-      if (m.amount) cur.amounts.push(m.amount);
+      if (m.amount) cur.amounts.push(factors ? scaleAmount(m.amount, factors.get(r.id) ?? 1) : m.amount);
       cur.for.push(r.name);
       acc.set(k, cur);
     }

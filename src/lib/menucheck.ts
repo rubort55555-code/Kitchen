@@ -12,8 +12,21 @@ import { proteinOf } from "./plan";
 import { garnishNeed } from "./garnish";
 
 export const PORTION_MIN = 0.5;
-export const PORTION_MAX = 2;
+export const PORTION_MAX = 4;
 export const PORTION_STEP = 0.25;
+/** Доля суточной нормы на приёмы пищи, которые стоят в меню дня: если выбран только обед, нормы всего дня на него не накладываются. */
+const SLOT_SHARE: Record<string, number> = { завтрак: 0.3, обед: 0.4, ужин: 0.3, перекус: 0.1 };
+export function daySlotShare(slots: Iterable<string>): number {
+  let t = 0;
+  for (const s of new Set(slots)) t += SLOT_SHARE[s] || 0;
+  return Math.min(1, t) || 1;
+}
+/** Нормы человека на часть дня. */
+export function scalePlan(plan: Plan, share: number): Plan {
+  if (share >= 1) return plan;
+  return { ...plan, kcal: plan.kcal * share, protein: plan.protein * share, fat: plan.fat * share, carbs: plan.carbs * share, fiber: plan.fiber * share };
+}
+
 export const KCAL_TOL = 0.05; // калории дня: ±5% цели
 export const FAT_CARB_TOL = 0.1; // жиры и углеводы дня: ±10% нормы
 export const MICRO_MIN = 0.9; // витамины и минералы в среднем за неделю: не ниже 90% нормы
@@ -47,7 +60,8 @@ const sum = (ms: Meal[], k: "kcal" | "protein" | "fat" | "carbs") => ms.reduce((
 
 export interface Fit { portions: Record<string, number>; kcal: number; diff: number }
 /** Подбор порций основных блюд одного дня под цель по калориям (шаг 0,25, от 0,5 до 2). Салат и десерт остаются одной порцией. */
-export function fitDay(entries: PlanEntry[], recipes: Recipe[], who: string, plan: Plan): Fit | null {
+export function fitDay(entries: PlanEntry[], recipes: Recipe[], who: string, fullPlan: Plan): Fit | null {
+  const plan = scalePlan(fullPlan, daySlotShare(entries.map((e) => e.slot)));
   const mealAt = (id: string | undefined, e: PlanEntry) => { const r = id ? recipes.find((x) => x.id === id) : undefined; return r ? mealFromRecipe(r, 1, e.date, e.slot, who) : null; };
   // Блюдо вместе с гарниром на одну порцию
   const unit = (e: PlanEntry) => {
@@ -117,7 +131,7 @@ export interface MenuEval {
 }
 
 /** Оценка меню на нужные даты для одного человека по приоритетам. */
-export function evaluateMenu(entries: PlanEntry[], dates: string[], recipes: Recipe[], member: { id: string; body: BodyProfile }, plan: Plan, rules: Parameters<typeof compileRules>): MenuEval {
+export function evaluateMenu(entries: PlanEntry[], dates: string[], recipes: Recipe[], member: { id: string; body: BodyProfile }, fullPlan: Plan, rules: Parameters<typeof compileRules>): MenuEval {
   const mine = entries.filter((e) => dates.includes(e.date));
   const { meals, unknown } = menuMeals(mine, recipes, member.id);
   const compiled = compileRules(...rules);
@@ -135,6 +149,7 @@ export function evaluateMenu(entries: PlanEntry[], dates: string[], recipes: Rec
   // 2. Каждый день
   const dayRes: DayRes[] = [...new Set(mine.map((e) => e.date))].sort().map((date) => {
     const dm = meals.filter((m) => m.date === date);
+    const plan = scalePlan(fullPlan, daySlotShare(mine.filter((e) => e.date === date).map((e) => e.slot)));
     const kcal = sum(dm, "kcal"), protein = sum(dm, "protein"), fat = sum(dm, "fat"), carbs = sum(dm, "carbs");
     const kcalOk = Math.abs(kcal - plan.kcal) <= plan.kcal * KCAL_TOL;
     const proteinOk = protein >= plan.protein;
@@ -144,7 +159,9 @@ export function evaluateMenu(entries: PlanEntry[], dates: string[], recipes: Rec
   });
 
   // 3–4. Среднее за неделю: считает та же оценка, что и в дневнике
-  const a = assess(meals, plan, member.body, 0, recipes);
+  const shares = dayRes.map((d) => daySlotShare(mine.filter((e) => e.date === d.date).map((e) => e.slot)));
+  const avgShare = shares.length ? shares.reduce((x, y) => x + y, 0) / shares.length : 1; // меню на часть приёмов пищи — нормы и пределы на ту же часть
+  const a = assess(meals, fullPlan, member.body, 0, recipes, avgShare);
   const limits = a ? a.limits : [];
   const micro = a ? a.micro : [];
   const noData = micro.filter((r) => r.v === 0).map((r) => r.title);
