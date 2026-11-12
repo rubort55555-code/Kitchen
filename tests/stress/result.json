@@ -2,7 +2,7 @@
  {
   "section": "объём",
   "status": "INFO",
-  "name": "записано в базу: {'products': 1000, 'log': 20000, 'meals': 15000} за 2.2 с",
+  "name": "записано в базу: {'products': 1000, 'log': 20000, 'meals': 15000} за 2.1 с",
   "extra": ""
  },
  {
@@ -26,8 +26,8 @@
  {
   "section": "объём",
   "status": "PASS",
-  "name": "вкладка «Продукты» открывается: 299 мс",
-  "extra": "299 мс"
+  "name": "вкладка «Продукты» открывается: 266 мс",
+  "extra": "266 мс"
  },
  {
   "section": "объём",
@@ -38,8 +38,8 @@
  {
   "section": "объём",
   "status": "PASS",
-  "name": "вкладка «Рецепты» открывается: 44 мс",
-  "extra": "44 мс"
+  "name": "вкладка «Рецепты» открывается: 57 мс",
+  "extra": "57 мс"
  },
  {
   "section": "объём",
@@ -49,9 +49,9 @@
  },
  {
   "section": "объём",
-  "status": "FAIL",
-  "name": "вкладка «Покупки» открывается: 1594 мс",
-  "extra": "1594 мс"
+  "status": "PASS",
+  "name": "вкладка «Покупки» открывается: 47 мс",
+  "extra": "47 мс"
  },
  {
   "section": "объём",
@@ -62,8 +62,8 @@
  {
   "section": "объём",
   "status": "PASS",
-  "name": "вкладка «Главная» открывается: 23 мс",
-  "extra": "23 мс"
+  "name": "вкладка «Главная» открывается: 20 мс",
+  "extra": "20 мс"
  },
  {
   "section": "объём",
@@ -73,15 +73,15 @@
  },
  {
   "section": "объём",
-  "status": "FAIL",
-  "name": "«Покупки» (60 позиций, журнал 20000): набор 3 букв в «Что купить» — 2805 мс",
-  "extra": "2805 мс"
+  "status": "PASS",
+  "name": "«Покупки» (60 позиций, журнал 20000): набор 3 букв в «Что купить» — 59 мс",
+  "extra": "59 мс"
  },
  {
   "section": "объём",
   "status": "PASS",
-  "name": "набор «молоко» в поиске продуктов (1000 шт): 116 мс на 6 букв",
-  "extra": "116 мс"
+  "name": "набор «молоко» в поиске продуктов (1000 шт): 133 мс на 6 букв",
+  "extra": "133 мс"
  },
  {
   "section": "объём",
@@ -98,68 +98,68 @@
  {
   "section": "объём",
   "status": "INFO",
-  "name": "прокрутка списка 20 рывков: 788 мс",
+  "name": "прокрутка списка 20 рывков: 744 мс",
   "extra": ""
  },
  {
   "section": "объём",
   "status": "PASS",
-  "name": "«Ещё → Статистика»: 28 мс",
+  "name": "«Ещё → Статистика»: 23 мс",
+  "extra": "23 мс"
+ },
+ {
+  "section": "объём",
+  "status": "PASS",
+  "name": "статистика за «Неделя» (журнал 20000): 22 мс",
+  "extra": "22 мс"
+ },
+ {
+  "section": "объём",
+  "status": "PASS",
+  "name": "статистика за «Месяц» (журнал 20000): 34 мс",
+  "extra": "34 мс"
+ },
+ {
+  "section": "объём",
+  "status": "PASS",
+  "name": "статистика за «Год» (журнал 20000): 28 мс",
   "extra": "28 мс"
  },
  {
   "section": "объём",
   "status": "PASS",
-  "name": "статистика за «Неделя» (журнал 20000): 18 мс",
-  "extra": "18 мс"
- },
- {
-  "section": "объём",
-  "status": "PASS",
-  "name": "статистика за «Месяц» (журнал 20000): 32 мс",
-  "extra": "32 мс"
- },
- {
-  "section": "объём",
-  "status": "PASS",
-  "name": "статистика за «Год» (журнал 20000): 32 мс",
-  "extra": "32 мс"
- },
- {
-  "section": "объём",
-  "status": "PASS",
-  "name": "«Ещё → Питание»: 20 мс",
-  "extra": "20 мс"
- },
- {
-  "section": "объём",
-  "status": "PASS",
-  "name": "«Ещё → Семья»: 23 мс",
+  "name": "«Ещё → Питание»: 23 мс",
   "extra": "23 мс"
  },
  {
   "section": "объём",
   "status": "PASS",
-  "name": "«Ещё → Ограничения в питании»: 22 мс",
-  "extra": "22 мс"
+  "name": "«Ещё → Семья»: 26 мс",
+  "extra": "26 мс"
  },
  {
   "section": "объём",
   "status": "PASS",
-  "name": "«Ещё → Справочник продуктов»: 21 мс",
+  "name": "«Ещё → Ограничения в питании»: 24 мс",
+  "extra": "24 мс"
+ },
+ {
+  "section": "объём",
+  "status": "PASS",
+  "name": "«Ещё → Справочник продуктов»: 36 мс",
+  "extra": "36 мс"
+ },
+ {
+  "section": "объём",
+  "status": "PASS",
+  "name": "«Ещё → Конфиденциальность»: 29 мс",
+  "extra": "29 мс"
+ },
+ {
+  "section": "объём",
+  "status": "PASS",
+  "name": "«Ещё → Оформление»: 21 мс",
   "extra": "21 мс"
- },
- {
-  "section": "объём",
-  "status": "PASS",
-  "name": "«Ещё → Конфиденциальность»: 22 мс",
-  "extra": "22 мс"
- },
- {
-  "section": "объём",
-  "status": "PASS",
-  "name": "«Ещё → Оформление»: 23 мс",
-  "extra": "23 мс"
  },
  {
   "section": "объём",
@@ -176,20 +176,20 @@
  {
   "section": "объём",
   "status": "PASS",
-  "name": "«Ещё → Помощь»: 22 мс",
-  "extra": "22 мс"
- },
- {
-  "section": "объём",
-  "status": "PASS",
-  "name": "«Ещё → Пробные функции»: 23 мс",
+  "name": "«Ещё → Помощь»: 23 мс",
   "extra": "23 мс"
  },
  {
   "section": "объём",
   "status": "PASS",
-  "name": "«Ещё → О приложении»: 24 мс",
-  "extra": "24 мс"
+  "name": "«Ещё → Пробные функции»: 18 мс",
+  "extra": "18 мс"
+ },
+ {
+  "section": "объём",
+  "status": "PASS",
+  "name": "«Ещё → О приложении»: 25 мс",
+  "extra": "25 мс"
  },
  {
   "section": "объём",
@@ -200,7 +200,7 @@
  {
   "section": "объём",
   "status": "INFO",
-  "name": "память JS после обхода экранов: 79 МБ",
+  "name": "память JS после обхода экранов: 91 МБ",
   "extra": ""
  },
  {
@@ -212,7 +212,7 @@
  {
   "section": "скорость нажатий",
   "status": "PASS",
-  "name": "200 добавлений подряд: сохранено 200 из 200 за 17.7 с",
+  "name": "200 добавлений подряд: сохранено 200 из 200 за 17.6 с",
   "extra": "200"
  },
  {
@@ -224,14 +224,14 @@
  {
   "section": "скорость нажатий",
   "status": "PASS",
-  "name": "300 переключений вкладок: 5.9 с, без сбоя",
+  "name": "300 переключений вкладок: 5.8 с, без сбоя",
   "extra": "None"
  },
  {
   "section": "скорость нажатий",
   "status": "PASS",
-  "name": "150 раз открыть/закрыть окно: память 18.5→18.6 МБ, элементов 111→108",
-  "extra": "(18531236, 18603505, 111, 108)"
+  "name": "150 раз открыть/закрыть окно: память 18.5→18.7 МБ, элементов 111→108",
+  "extra": "(18497818, 18693649, 111, 108)"
  },
  {
   "section": "скорость нажатий",
@@ -296,7 +296,7 @@
  {
   "section": "ввод",
   "status": "INFO",
-  "name": "цена 1e20: СОХРАНЕНО qty=1 price=100000000000000000000",
+  "name": "цена 1e20: отклонено (Слишком большая цена — проверьте, нет ли лишних нулей.)",
   "extra": ""
  },
  {
@@ -314,14 +314,14 @@
  {
   "section": "ввод",
   "status": "INFO",
-  "name": "количество 999999999: СОХРАНЕНО qty=999999999 price=10",
+  "name": "количество 999999999: отклонено (Слишком большое количество — проверьте, нет ли лишних нулей.)",
   "extra": ""
  },
  {
   "section": "ввод",
-  "status": "FAIL",
+  "status": "PASS",
   "name": "не сохраняются бесконечные/отрицательные/гигантские количества и цены",
-  "extra": "[('Тест-огромная', 1, 100000000000000000000)]"
+  "extra": "[]"
  },
  {
   "section": "ввод",
@@ -356,20 +356,20 @@
  {
   "section": "ввод",
   "status": "PASS",
-  "name": "300 покупок подряд: сохранено 300 за 62.8 с",
+  "name": "300 покупок подряд: сохранено 300 за 7.4 с",
   "extra": "300"
  },
  {
   "section": "ввод",
-  "status": "FAIL",
+  "status": "PASS",
   "name": "ответ Claude «recipes — строка»: понятное сообщение, без исключения",
-  "extra": "('', ['console.error: TypeError: (intermediate value)(intermediate value)(intermediate value).map is not a function\\n    at cs (http://127.0.0.1:8177/app-27YH6KP7.js:12:10052)\\n    at Q (http://127.0.0.1:8177/app-27YH6KP7.js:26:34927)\\n    at onClick (http://127.0.0.1:8177/app-27YH6KP7.js:26:41101)\\n    at n3 (http://127.0.0.1:8177/app-27YH6KP7.js:8:127456)\\n    at http://127.0.0.1:8177/app-27YH6KP7.js:8:132464\\n    at nb (http://127.0.0.1:8177/app-27YH6KP7.js:8:15138)\\n    at Lm (http://127.0.0.1:8177/app-27YH6KP7.js:8:128690)\\n    at Rp (http://127.0.0.1:8177/app-27YH6KP7.js:9:28581)\\n    at i9 (http://127.0.0.1:8177/app-27YH6KP7.js:9:28395)', 'pageerror: (intermediate value)(intermediate value)(intermediate value).map is not a function'])"
+  "extra": "('Нашёл блок с данными, но не смог его прочитать. Попросите Claude: «Повтори JSON с блюдами».', [])"
  },
  {
   "section": "ввод",
-  "status": "FAIL",
+  "status": "PASS",
   "name": "ответ Claude «dishes — число»: понятное сообщение, без исключения",
-  "extra": "('', ['console.error: TypeError: (intermediate value)(intermediate value)(intermediate value).map is not a function\\n    at cs (http://127.0.0.1:8177/app-27YH6KP7.js:12:10052)\\n    at Q (http://127.0.0.1:8177/app-27YH6KP7.js:26:34927)\\n    at onClick (http://127.0.0.1:8177/app-27YH6KP7.js:26:41101)\\n    at n3 (http://127.0.0.1:8177/app-27YH6KP7.js:8:127456)\\n    at http://127.0.0.1:8177/app-27YH6KP7.js:8:132464\\n    at nb (http://127.0.0.1:8177/app-27YH6KP7.js:8:15138)\\n    at Lm (http://127.0.0.1:8177/app-27YH6KP7.js:8:128690)\\n    at Rp (http://127.0.0.1:8177/app-27YH6KP7.js:9:28581)\\n    at i9 (http://127.0.0.1:8177/app-27YH6KP7.js:9:28395)', 'pageerror: (intermediate value)(intermediate value)(intermediate value).map is not a function'])"
+  "extra": "('Нашёл блок с данными, но не смог его прочитать. Попросите Claude: «Повтори JSON с блюдами».', [])"
  },
  {
   "section": "ввод",
@@ -385,15 +385,15 @@
  },
  {
   "section": "ввод",
-  "status": "FAIL",
-  "name": "разбор зашумлённого текста чека (150 строк): интерфейс завис на 1936 мс",
-  "extra": "1936 мс; кнопка «Разобрать»"
+  "status": "PASS",
+  "name": "разбор зашумлённого текста чека (150 строк): интерфейс завис на 20 мс",
+  "extra": "20 мс; кнопка «Разобрать»"
  },
  {
   "section": "ввод",
-  "status": "FAIL",
+  "status": "PASS",
   "name": "без ошибок страницы при граничном вводе",
-  "extra": "['console.error: TypeError: (intermediate value)(intermediate value)(intermediate value).map is not a function\\n    at cs (http://127.0.0.1:8177/app-27YH6KP7.js:12:10052)\\n    at Q (http://127.0.0.1:8177/app-27YH6KP7.js:26:34927)\\n    at onClick (http://127.0.0.1:8177/app-27YH6KP7.js:26:41101)\\n    at n3 (http://127.0.0.1:8177/app-27YH6KP7.js:8:127456)\\n    at http://127.0.0.1:8177/app-27YH6KP7.js:8:132464\\n    at nb (http://127.0.0.1:8177/app-27YH6KP7.js:8:15138)\\n    at Lm (http://127.0.0.1:8177/app-27YH6KP7.js:8:128690)\\n    at Rp (http://127.0.0.1:8177/app-27YH6KP7.js:9:28581)\\n    at i9 (http://127.0.0.1:8177/app-27YH6KP7.js:9:28395)', 'pageerror: (intermediate value)(intermediate value)(intermediate value).map is not a function', 'console.error: TypeError: (intermediate value)(intermediate value)(intermediate value).map is not a function\\n    at cs (http://127.0.0.1:8177/app-27YH6KP7.js:12:10052)\\n    at Q (http://127.0.0.1:8177/app-27YH6KP7.js:26:34927)\\n    at onClick (http://127.0.0.1:8177/app-27YH6KP7.js:26:41101)\\n    at n3 (http://127.0.0.1:8177/app-27YH6KP7.js:8:127456)\\n    at http://127.0.0.1:8177/app-27YH6KP7.js:8:132464\\n    at nb (http://127.0.0.1:8177/app-27YH6KP7.js:8:15138)\\n    at Lm (http://127.0.0.1:8177/app-27YH6KP7.js:8:128690)\\n    at Rp (http://127.0.0.1:8177/app-27YH6KP7.js:9:28581)\\n    at i9 (http://127.0.0.1:8177/app-27YH6KP7.js:9:28395)', 'pageerror: (intermediate value)(intermediate value)(intermediate value).map is not a function']"
+  "extra": "[]"
  },
  {
   "section": "копия",
@@ -417,35 +417,35 @@
   "section": "копия",
   "status": "PASS",
   "name": "«битые-продукты.json»: копия принята и восстановлена (2.1 с)",
-  "extra": "(None, [\"console.error: DataError: Failed to execute 'put' on 'IDBObjectStore': Evaluating the object store's key path did not yield a value.\\n    at http://127.0.0.1:8177/app-27YH6KP7.js:11:31089\\n    at Array.forEach (<anonymous>)\\n    at R3 (http://127.0.0.1:8177/app-27YH6KP7.js:11:31076)\\n    at async X0 (http://127.0.0.1:8177/app-27YH6KP7.js:11:944461)\\n    at async p (http://127.0.0.1:8177/app-27YH6KP7.js:25:103514)\", \"pageerror: Failed to execute 'put' on 'IDBObjectStore': Evaluating the object store's key path did not yield a value.\"])"
- },
- {
-  "section": "копия",
-  "status": "FAIL",
-  "name": "«битые-настройки.json»: копия принята и восстановлена (2.1 с) — приложение после этого сломано",
-  "extra": "('после перехода на «Главная»: запасной экран «Приложение не открылось»', [\"console.error: TypeError: Cannot read properties of undefined (reading 'map')\\n    at Y9 (http://127.0.0.1:8177/app-27YH6KP7.js:11:924100)\\n    at G9 (http://127.0.0.1:8177/app-27YH6KP7.js:11:913545)\\n    at lt (http://127.0.0.1:8177/app-27YH6KP7.js:11:913449)\\n    at http://127.0.0.1:8177/app-27YH6KP7.js:13:156184\\n    at Object.useMemo (http://127.0.0.1:8177/app-27YH6KP7.js:8:60488)\\n    at Re.useMemo (http://127.0.0.1:8177/app-27YH6KP7.js:1:11696)\\n    at j4 (http://127.0.0.1:8177/app-27YH6KP7.js:13:156172)\\n    at lp (http://127.0.0.1:8177/app-27YH6KP7.js:8:47927)\\n    at yf (http://127.0.0.1:8177/app-27YH6KP7.js:8:70744)\\n    at yy (http://127.0.0.1:8177/app-27YH6KP7.js:8:81085)\", \"console.error: TypeError: Cannot read properties of undefined (reading 'map')\\n    at Y9 (http://127.0.0.1:8177/app-27YH6KP7.js:11:924100)\\n    at G9 (http://127.0.0.1:8177/app-27YH6KP7.js:11:913545)\\n    at lt (http://127.0.0.1:8177/app-27YH6KP7.js:11:913449)\\n    at http://127.0.0.1:8177/app-27YH6KP7.js:13:156184\\n    at Object.useMemo (http://127.0.0.1:8177/app-27YH6KP7.js:8:60488)\\n    at Re.useMemo (http://127.0.0.1:8177/app-27YH6KP7.js:1:11696)\\n    at j4 (http://127.0.0.1:8177/app-27YH6KP7.js:13:156172)\\n    at lp (http://127.0.0.1:8177/app-27YH6KP7.js:8:47927)\\n    at yf (http://127.0.0.1:8177/app-27YH6KP7.js:8:70744)\\n    at yy (http://127.0.0.1:8177/app-27YH6KP7.js:8:81085)\"])"
+  "extra": "(None, [])"
  },
  {
   "section": "копия",
   "status": "PASS",
-  "name": "«большая-копия.json»: копия принята и восстановлена (8.6 с)",
+  "name": "«битые-настройки.json»: копия принята и восстановлена (2.1 с)",
+  "extra": "(None, [])"
+ },
+ {
+  "section": "копия",
+  "status": "PASS",
+  "name": "«большая-копия.json»: копия принята и восстановлена (9.1 с)",
   "extra": "(None, [])"
  },
  {
   "section": "копия",
   "status": "INFO",
-  "name": "ошибки страницы в разделе копий: console.error: DataError: Failed to execute 'put' on 'IDBObjectStore': Evaluating the object store's key path did not yield a value.\n    at http://127.0.0.1:8177/app-27YH6KP7.js:11:31089\n    at Array.forEach (<anonymous>)\n    at R3 (http://127.0.0.1:8177/app-27YH6KP7.js:11:31076)\n    at async X0 (http://127.0.0.1:8177/app-27YH6KP7.js:11:944461)\n    at async p (http://127.0.0.1:8177/app-27YH6KP7.js:25:103514); pageerror: Failed to execute 'put' on 'IDBObjectStore': Evaluating the object store's key path did not yield a value.; console.error: TypeError: Cannot read properties of undefined (reading 'map')\n    at Y9 (http://127.0.0.1:8177/app-27YH6KP7.js:11:924100)\n    at G9 (http://127.0.0.1:8177/app-27YH6KP7.js:11:913545)\n    at lt (http://127.0.0.1:8177/app-27YH6KP7.js:11:913449)\n    at http://127.0.0.1:8177/app-27YH6KP7.js:13:156184\n    at Object.useMemo (http://127.0.0.1:8177/app-27YH6KP7.js:8:60488)\n    at Re.useMemo (http://127.0.0.1:8177/app-27YH6KP7.js:1:11696)\n    at j4 (http://127.0.0.1:8177/app-27YH6KP7.js:13:156172)\n    at lp (http://127.0.0.1:8177/app-27YH6KP7.js:8:47927)\n    at yf (http://127.0.0.1:8177/app-27YH6KP7.js:8:70744)\n    at yy (http://127.0.0.1:8177/app-27YH6KP7.js:8:81085); console.error: TypeError: Cannot read properties of undefined (reading 'map')\n    at Y9 (http://127.0.0.1:8177/app-27YH6KP7.js:11:924100)\n    at G9 (http://127.0.0.1:8177/app-27YH6KP7.js:11:913545)\n    at lt (http://127.0.0.1:8177/app-27YH6KP7.js:11:913449)\n    at http://127.0.0.1:8177/app-27YH6KP7.js:13:156184\n    at Object.useMemo (http://127.0.0.1:8177/app-27YH6KP7.js:8:60488)\n    at Re.useMemo (http://127.0.0.1:8177/app-27YH6KP7.js:1:11696)\n    at j4 (http://127.0.0.1:8177/app-27YH6KP7.js:13:156172)\n    at lp (http://127.0.0.1:8177/app-27YH6KP7.js:8:47927)\n    at yf (http://127.0.0.1:8177/app-27YH6KP7.js:8:70744)\n    at yy (http://127.0.0.1:8177/app-27YH6KP7.js:8:81085)",
+  "name": "ошибки страницы в разделе копий: ",
   "extra": ""
  },
  {
   "section": "две вкладки",
-  "status": "FAIL",
-  "name": "покупки, добавленные в двух открытых вкладках, обе сохранились: ['Из вкладки B']",
-  "extra": "['Из вкладки B']"
+  "status": "PASS",
+  "name": "покупки, добавленные в двух открытых вкладках, обе сохранились: ['Из вкладки A', 'Из вкладки B']",
+  "extra": "['Из вкладки A', 'Из вкладки B']"
  },
  {
   "section": "две вкладки",
-  "status": "FAIL",
+  "status": "PASS",
   "name": "вкладка A видит продукт, добавленный во вкладке B (без перезагрузки)",
   "extra": ""
  },
@@ -470,7 +470,7 @@
  {
   "section": "случайные действия",
   "status": "INFO",
-  "name": "выполнено случайных действий: 1500",
+  "name": "выполнено случайных действий: 600",
   "extra": ""
  },
  {
