@@ -22,6 +22,8 @@ export interface AutoInput {
   allowed: (r: Recipe) => boolean;
   /** Бонус за продукты дома и сроки: используется только при равенстве по приоритетам 1–5. */
   bonus?: (r: Recipe) => number;
+  /** Хватает ли продуктов дома на блюдо (почти всё есть). Если таких блюд на место хватает для разнообразия, берём только их. */
+  ready?: (r: Recipe) => boolean;
   days: string[];
   slots: Slot[];
   /** Уже стоящие в меню блюда: места не меняем, но порции подбираем. */
@@ -91,7 +93,13 @@ export function autoPlan(inp: AutoInput): AutoResult {
   const cache = new Map<string, Cand | null>();
   const cand = (r: Recipe) => { if (!cache.has(r.id)) cache.set(r.id, info(r)); return cache.get(r.id) || null; };
   const byId = (id: string | undefined) => { const r = id ? inp.recipes.find((x) => x.id === id) : undefined; return r ? cand(r) : null; };
-  const poolFor = (slot: Slot) => okRecipes.filter((r) => !isGarnish(r) && fitsSlot(r, slot)).map(cand).filter((c): c is Cand => !!c);
+  const poolFor = (slot: Slot) => {
+    const all = okRecipes.filter((r) => !isGarnish(r) && fitsSlot(r, slot)).map(cand).filter((c): c is Cand => !!c);
+    if (!inp.ready) return all;
+    // Блюда из того, что есть дома: берём только их, если хватает на меню без повторов (каждое блюдо — не больше двух раз)
+    const have = all.filter((c) => inp.ready!(c.r));
+    return have.length * 2 >= days.length + 2 && have.length >= 4 ? have : all;
+  };
   const pools = new Map(slots.map((s) => [s, poolFor(s)]));
   const sidePool = okRecipes.filter((r) => norm(r.kind || "") === "салат" && !/фрукт|банан|апельсин|груш/.test(norm(r.name))).map(cand).filter((c): c is Cand => !!c);
   const garnishPool = okRecipes.filter(isGarnish).map(cand).filter((c): c is Cand => !!c);

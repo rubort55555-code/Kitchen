@@ -35,10 +35,11 @@ export function autoMenu(start: string, slots: Slot[], only?: string): AutoMenuR
     const s = recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings));
     return s.urgent * 30 + s.percent * 0.4 + (r.fav ? 15 : 0) + (r.rating ? (r.rating - 3) * 8 : 0);
   };
+  const ready = (r: (typeof st.recipes)[number]) => recipeStatus(r, st.products, st.settings.basics, st.settings.customCatalog, neverFor(st.settings)).percent >= 80;
   const plan = planList();
   const fixed = plan.filter((e) => days.includes(e.date) && e.recipeId);
   if (!st.recipes.some(allowed)) return { added: 0, empty: 0, people: people.length, noPeople: false, noRecipes: true };
-  const res = autoPlan({ recipes: st.recipes, allowed, bonus, days, slots, fixed, people });
+  const res = autoPlan({ recipes: st.recipes, allowed, bonus, ready, days, slots, fixed, people });
   const next: PlanEntry[] = plan.map((e) => {
     const p = res.portions[e.id], g = res.garnishes[e.id];
     return p || g ? { ...e, ...(p ? { portions: { ...(e.portions || {}), ...p } } : {}), ...(g ? { garnish: g } : {}) } : e;

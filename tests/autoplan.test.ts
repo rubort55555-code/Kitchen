@@ -102,6 +102,11 @@ const ev5 = evaluateMenu(r5.added.map((e) => ({ ...e, portions: r5.portions[e.id
 ok("с перекусами калории каждого дня в пределах ±5%", ev5.dayRes.every((d) => d.kcalOk), ev5.dayRes.map((d) => d.pct));
 ok("перекусы помогают кальцию: в среднем за неделю не хуже, чем без них", (ev5.micro.find((m) => m.key === "ca")?.pct || 0) >= (ev1.micro.find((m) => m.key === "ca")?.pct || 0) - 2, [ev5.micro.find((m) => m.key === "ca")?.pct, ev1.micro.find((m) => m.key === "ca")?.pct]);
 
+// Блюда «из того, что есть дома»: на ужин берутся только готовые к приготовлению, если их хватает
+const homeSet = new Set(recipes.filter((r) => fitsSlot(r, "ужин") && !isGarnish(r)).slice(0, 12).map((r) => r.id));
+const rh = autoPlan({ recipes, allowed: () => true, ready: (r) => homeSet.has(r.id), days: days.slice(0, 1), slots: ["ужин"], fixed: [], people: [f], iterations: 2000 });
+ok("ужин выбирается из блюд, которые можно приготовить из имеющегося", rh.added.length === 1 && homeSet.has(rh.added[0].recipeId!));
+
 // Нет подходящих блюд
 const none = autoPlan({ recipes, allowed: () => false, days, slots: [...slots], fixed: [], people: [f], iterations: 100 });
 ok("нет разрешённых блюд — пусто и без ошибок", none.added.length === 0 && none.empty === 21);
