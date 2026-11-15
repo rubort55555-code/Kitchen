@@ -7,12 +7,13 @@ import type { CatalogItem, LogEntry, Meal, PlanEntry, Place, Product, Reason, Re
 import { copyMeal, mealFromRecipe } from "./diary";
 import { planFor } from "./nutrition";
 import { DEFAULT_RULES } from "./exclusions";
-import { norm, uid, ymd, addDays, daysLeft } from "./util";
+import { norm, uid, ymd, addDays } from "./util";
 import { findCatalog, setCatalog } from "./catalog";
 import { mergeBase, staleBase } from "./baseSync";
 import { fetchSite, isNative, SITE } from "./native";
 import { convert } from "./units";
 import { NS } from "./env";
+import { createProduct, roundRub, editProduct, movement, openProduct, repriceBought, takeProduct } from "../domain";
 import { cleanLog, cleanMeals, cleanProducts, cleanRecipes, cleanSettings } from "./sanitize";
 
 export interface State {
@@ -149,11 +150,7 @@ export interface NewProduct {
 }
 
 export function addProduct(p: NewProduct, reason: Reason = "bought"): Product {
-  const it: Product = {
-    id: uid(), name: p.name.trim(), qty: p.qty, initialQty: p.qty, unit: p.unit, place: p.place,
-    bought: p.bought || ymd(), until: p.until, price: Math.max(0, p.price), opened: null, createdAt: Date.now(),
-  };
-  if (p.barcode) it.barcode = p.barcode;
+  const it = createProduct(p, { id: uid(), now: Date.now(), today: ymd() });
   const entry = logEntry(it, reason, it.qty, it.price);
   const key = norm(it.name);
   const prev = state.settings.lastBuy[key];
@@ -169,28 +166,22 @@ export function addProduct(p: NewProduct, reason: Reason = "bought"): Product {
   return it;
 }
 
-function logEntry(it: Product, reason: Reason, qty: number, rub: number, dish?: string): LogEntry {
-  const e: LogEntry = { id: uid(), t: Date.now(), productId: it.id, name: it.name, reason, qty: round(qty), unit: it.unit, rub: Math.round(rub * 100) / 100, place: it.place };
-  if (dish) e.dish = dish;
-  return e;
-}
-const round = (n: number) => Math.round(n * 1000) / 1000;
+/** Запись журнала: правило — в сущности «Движение», здесь только номер и время. */
+const logEntry = (it: Product, reason: Reason, qty: number, rub: number, dish?: string): LogEntry =>
+  movement(it, reason, qty, rub, { id: uid(), now: Date.now() }, dish);
 
-/** Стоимость остатка продукта. */
-export function valueOf(it: Product): number {
-  if (!it.initialQty) return 0;
-  return (it.price * it.qty) / it.initialQty;
-}
+/** Стоимость остатка продукта (правило — в сущности «Продукт»). */
+export { valueOf } from "../domain";
 
 export function updateProduct(id: string, patch: Partial<Product>) {
   const old = state.products.find((x) => x.id === id);
   if (!old) return;
-  const it = { ...old, ...patch };
+  const { product: it, qtyDelta } = editProduct(old, patch);
   const changes: db.Change[] = [{ store: "products", put: [it] }];
   let log = [...state.log];
   // Исправили цену — исправляем и запись «Куплено», иначе в статистике «съедено» окажется больше, чем «куплено»
   if (patch.price !== undefined && patch.price !== old.price) {
-    const fixed = log.filter((e) => e.productId === id && e.reason === "bought").map((e) => ({ ...e, rub: Math.round(it.price * 100) / 100 }));
+    const fixed = repriceBought(log, it);
     if (fixed.length) {
       const byId = new Map(fixed.map((e) => [e.id, e]));
       log = log.map((e) => byId.get(e.id) || e);
@@ -198,10 +189,9 @@ export function updateProduct(id: string, patch: Partial<Product>) {
     }
   }
   // Исправили количество вручную — записываем в журнал как «Исправлено» (в статистику потерь не идёт).
-  if (patch.qty !== undefined && patch.qty !== old.qty) {
-    const e = logEntry(it, "adjust", it.qty - old.qty, 0);
+  if (qtyDelta) {
+    const e = logEntry(it, "adjust", qtyDelta, 0);
     log.push(e); changes.push({ store: "log", put: [e] });
-    if (it.qty > it.initialQty) it.initialQty = it.qty;
   }
   set({ products: state.products.map((x) => (x.id === id ? it : x)), log });
   persist(db.apply(changes));
@@ -213,19 +203,16 @@ export interface Undo { product: Product; logId: string; existed: boolean }
 export function writeOff(id: string, qty: number, reason: Reason, dish?: string): Undo | null {
   const it = state.products.find((x) => x.id === id);
   if (!it || qty <= 0) return null;
-  const take = Math.min(qty, it.qty);
-  const rub = it.initialQty ? (it.price * take) / it.initialQty : 0;
-  const e = logEntry(it, reason, take, rub, dish);
-  const left = round(it.qty - take);
+  const { left, taken, rub } = takeProduct(it, qty);
+  const e = logEntry(it, reason, taken, rub, dish);
   const changes: db.Change[] = [{ store: "log", put: [e] }];
   let products: Product[];
-  if (left <= 0) {
+  if (!left) {
     products = state.products.filter((x) => x.id !== id);
     changes.push({ store: "products", del: [id] });
   } else {
-    const upd = { ...it, qty: left };
-    products = state.products.map((x) => (x.id === id ? upd : x));
-    changes.push({ store: "products", put: [upd] });
+    products = state.products.map((x) => (x.id === id ? left : x));
+    changes.push({ store: "products", put: [left] });
   }
   set({ products, log: [...state.log, e] });
   persist(db.apply(changes));
@@ -254,27 +241,25 @@ export function applyCook(takes: { productId: string; take: number }[], dish: st
   for (const t of takes) {
     const it = products.find((x) => x.id === t.productId);
     if (!it || !(t.take > 0)) continue;
-    const take = Math.min(t.take, it.qty);
-    const full = it.initialQty ? (it.price * take) / it.initialQty : 0;
-    logs.push(logEntry(it, "cooked", take, full * (1 - leftFrac), dish));
+    const { left, taken, rub } = takeProduct(it, t.take);
+    logs.push(logEntry(it, "cooked", taken, rub * (1 - leftFrac), dish));
     // Продукт может идти в две строки рецепта (масло в тесто и на жарку): для отмены помним его только в исходном виде
     if (!before.some((b) => b.id === it.id)) before.push(it);
-    const left = round(it.qty - take);
-    if (left <= 0) {
+    if (!left) {
       products = products.filter((x) => x.id !== it.id);
       changes.push({ store: "products", del: [it.id] });
     } else {
-      const upd = { ...it, qty: left };
-      products = products.map((x) => (x.id === it.id ? upd : x));
-      changes.push({ store: "products", put: [upd] });
+      products = products.map((x) => (x.id === it.id ? left : x));
+      changes.push({ store: "products", put: [left] });
     }
   }
   let leftoverId: string | undefined;
   if (leftover && leftover.qty > 0) {
-    const it: Product = {
-      id: uid(), name: `Остатки: ${dish}`, qty: leftover.qty, initialQty: leftover.qty, unit: "шт", place: "Холодильник",
-      bought: ymd(), until: addDays(ymd(), leftover.days), price: Math.max(0, Math.round(leftover.price * 100) / 100), opened: null, createdAt: Date.now(),
-    };
+    const today = ymd();
+    const it = createProduct(
+      { name: `Остатки: ${dish}`, qty: leftover.qty, unit: "шт", place: "Холодильник", until: addDays(today, leftover.days), price: roundRub(leftover.price) },
+      { id: uid(), now: Date.now(), today },
+    );
     // «Исправлено» не считается ни покупкой, ни потерей: деньги уже учтены в приготовленных продуктах
     logs.push(logEntry(it, "adjust", it.qty, it.price, dish));
     products = [...products, it];
@@ -309,13 +294,8 @@ export function openPackage(id: string) {
   const it = state.products.find((x) => x.id === id);
   if (!it) return;
   const cat = findCatalog(it.name, state.settings.customCatalog);
-  const today = ymd();
-  let until = it.until;
-  if (cat?.o) {
-    const byOpen = addDays(today, cat.o);
-    if (!until || (daysLeft(byOpen)! < (daysLeft(until) ?? 99999))) until = byOpen;
-  }
-  updateProduct(id, { opened: today, until });
+  const { opened, until } = openProduct(it, ymd(), cat?.o);
+  updateProduct(id, { opened, until });
 }
 
 /** Сколько этого продукта есть дома (с пересчётом единиц). */

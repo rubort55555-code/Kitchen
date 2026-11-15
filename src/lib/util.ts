@@ -3,29 +3,9 @@
 export const uid = (): string =>
   Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 
-const p2 = (n: number) => String(n).padStart(2, "0");
-
-/** Дата в формате ГГГГ-ММ-ДД по местному времени телефона. */
-export function ymd(d: Date = new Date()): string {
-  return `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())}`;
-}
-
-export function parseYmd(s: string): Date {
-  const [y, m, d] = s.split("-").map(Number);
-  return new Date(y, (m || 1) - 1, d || 1);
-}
-
-export function addDays(s: string, n: number): string {
-  const d = parseYmd(s);
-  d.setDate(d.getDate() + n);
-  return ymd(d);
-}
-
-/** Сколько дней осталось до даты (0 — сегодня последний день, <0 — просрочено). */
-export function daysLeft(until: string | null | undefined, today: string = ymd()): number | null {
-  if (!until) return null;
-  return Math.round((parseYmd(until).getTime() - parseYmd(today).getTime()) / 86400000);
-}
+// Даты — часть сущностей (src/domain/date.ts); здесь — для старых импортов.
+import { daysLeft, parseYmd } from "../domain/date";
+export { ymd, parseYmd, addDays, daysLeft } from "../domain/date";
 
 export type Fresh = "ok" | "soon" | "bad" | "none";
 /** Цветовая метка свежести: зелёный / жёлтый (истекает за 2 дня) / красный (просрочено). */

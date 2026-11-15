@@ -1,62 +1,12 @@
 // Общие типы данных приложения.
 
-export type Place = "Холодильник" | "Морозилка" | "Шкаф";
-export const PLACES: Place[] = ["Холодильник", "Морозилка", "Шкаф"];
-
-export type Unit = "г" | "кг" | "мл" | "л" | "шт" | "уп";
-export const UNITS: Unit[] = ["шт", "г", "кг", "мл", "л", "уп"];
+// Продукт и движение продукта — сущности, они живут в src/domain/. Здесь — для старых импортов.
+export { PLACES, UNITS, REASON_TEXT } from "../domain";
+export type { Place, Unit, Product, Reason, LogEntry } from "../domain";
+import type { Place, Unit } from "../domain";
 
 /** Тип рыбы в справочнике — по нему работает правило «белая морская рыба». */
 export type FishType = "white_sea" | "red" | "river" | "other_sea";
-
-/** Продукт, который лежит дома. */
-export interface Product {
-  id: string;
-  name: string;
-  /** Количество, которое осталось сейчас. */
-  qty: number;
-  /** Сколько было при покупке — нужно, чтобы считать стоимость остатка. */
-  initialQty: number;
-  unit: Unit;
-  place: Place;
-  /** Дата покупки, ГГГГ-ММ-ДД. */
-  bought: string;
-  /** Годен до, ГГГГ-ММ-ДД; null — срок не важен (соль, крупы). */
-  until: string | null;
-  /** Цена за всё купленное количество, ₽. */
-  price: number;
-  /** Дата вскрытия упаковки, если вскрыта. */
-  opened?: string | null;
-  /** Штрихкод, если продукт добавлен сканированием. */
-  barcode?: string;
-  createdAt: number;
-}
-
-/** Причина изменения количества — основа статистики «съедено / пропало / осталось». */
-export type Reason = "bought" | "eaten" | "cooked" | "spoiled" | "thrown" | "adjust";
-
-export const REASON_TEXT: Record<Reason, string> = {
-  bought: "Куплено",
-  eaten: "Съедено",
-  cooked: "Приготовлено",
-  spoiled: "Пропало",
-  thrown: "Выброшено",
-  adjust: "Исправлено",
-};
-
-export interface LogEntry {
-  id: string;
-  t: number;
-  productId?: string;
-  name: string;
-  reason: Reason;
-  qty: number;
-  unit: Unit;
-  /** Стоимость этого количества, ₽. */
-  rub: number;
-  place?: Place;
-  dish?: string;
-}
 
 export interface Member {
   id: string;
