@@ -164,6 +164,21 @@ Fineli Rel18 + USDA SR28 + tools/nutrition-map.jsonl ──npm run composition�
 | `ios.yml` | `main`, `claude/**` | `npm run ios` → сборка на macOS без подписи → `kitchen-unsigned.ipa` |
 | `worker.yml` | push в `main` | деплой Cloudflare Worker через wrangler |
 
+### Зеркало для обкатки (staging)
+
+Крупные изменения сначала попадают в ветку `staging` и публикуются копией приложения по адресу `…/Kitchen/staging/`. Обе версии живут на одном сайте, поэтому всё, что браузер хранит «на сайт», разведено по пространствам имён (`src/lib/env.ts`, флаг сборки `STAGING=1` → `__STAGING__`):
+
+| Что | Боевая | Зеркало |
+|---|---|---|
+| База IndexedDB | `kitchen` | `kitchen-staging` |
+| Кэш service worker | `kitchen@<версия>` | `kitchen-staging@<версия>` |
+| Область service worker | `/Kitchen/` (не обслуживает `/Kitchen/staging/`) | `/Kitchen/staging/` |
+| localStorage, канал вкладок | `kitchen-*` | `kitchen-staging-*` |
+| Сайт для обновления рецептов (приложение из магазина) | `…/Kitchen/` | `…/Kitchen/staging/` |
+| Название на экране | «Кухня» | «Кухня · тест», жёлтая полоса «Тестовая версия» |
+
+«Обновить приложение» и аварийный сброс в `index.html` трогают только свой service worker и свои кэши. Публикация: GitHub Pages разрешает публиковать только из `main`, поэтому `deploy.yml` (на `main`) собирает обе версии в один сайт, а `staging.yml` при изменении `staging` лишь запускает его. Сломанная сборка зеркала не мешает публикации боевой версии.
+
 ## 7. Обновление приложения
 
 **Веб (PWA):**

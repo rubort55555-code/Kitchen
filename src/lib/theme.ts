@@ -3,6 +3,7 @@
 import { registerPlugin } from "@capacitor/core";
 import { useSyncExternalStore } from "react";
 import { isNative } from "./native";
+import { NS } from "./env";
 import { getState, subscribe } from "./store";
 import type { Appearance } from "./types";
 
@@ -14,7 +15,7 @@ const Brightness = registerPlugin<{ get(): Promise<{ value: number }> }>("Bright
 export const brightnessSupported = isNative;
 
 const THEME_COLOR: Record<Theme, string> = { light: "#F7F3EC", dark: "#141A16", sun: "#FFFFFF" };
-const KEY = "kitchen-theme";
+const KEY = NS + "-theme";
 
 let current: Theme | null = null;
 let brightness: number | null = null;

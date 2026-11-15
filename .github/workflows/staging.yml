@@ -1,0 +1,22 @@
+# «Зеркало» для обкатки: изменение в ветке staging пересобирает сайт (боевая версия + зеркало в …/staging/).
+# Публиковать на GitHub Pages разрешено только из main, поэтому здесь мы лишь запускаем «Публикацию» на main —
+# она сама возьмёт свежую ветку staging. Боевая версия при этом собирается из того же main, что и раньше.
+name: Зеркало
+
+on:
+  push:
+    branches: [staging]
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Запустить публикацию сайта
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --repo "${{ github.repository }}" --ref main

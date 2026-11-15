@@ -1,5 +1,12 @@
 # Автоматическая публикация: при каждом изменении кода GitHub сам собирает приложение
 # и выкладывает его на GitHub Pages. Делать ничего не нужно.
+#
+# На сайте две версии:
+#   https://rubort55555-code.github.io/Kitchen/          — боевая, из ветки main;
+#   https://rubort55555-code.github.io/Kitchen/staging/  — «зеркало» для обкатки крупных изменений, из ветки staging.
+# У GitHub Pages один сайт на репозиторий, поэтому при любом изменении собираются обе версии сразу:
+# изменение в staging не трогает боевую версию, и наоборот. Если ветки staging нет — публикуется только боевая.
+# Изменение в staging запускает эту публикацию через staging.yml: публиковать на Pages разрешено только из main.
 name: Публикация
 
 on:
@@ -20,21 +27,55 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Боевая версия (main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: prod
+      - name: Есть ли ветка staging
+        id: stg
+        working-directory: prod
+        run: |
+          if git ls-remote --exit-code --heads origin staging >/dev/null; then echo "exists=true" >> "$GITHUB_OUTPUT"; else echo "exists=false" >> "$GITHUB_OUTPUT"; fi
+      - name: Зеркало (staging)
+        if: steps.stg.outputs.exists == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: staging
+          path: stg
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install --no-audit --no-fund
-      - name: Проверка типов (не блокирует публикацию)
-        run: npm run check
-        continue-on-error: true
-      - run: npm run build
+
+      - name: Сборка боевой версии
+        working-directory: prod
         env:
           FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
+        run: |
+          npm install --no-audit --no-fund
+          npm run check || echo "::warning::Проверка типов в main не прошла (публикацию не блокирует)"
+          npm run build
+
+      # Зеркало — для обкатки, поэтому проверка типов здесь обязательна. Если сборка зеркала сломана,
+      # боевая версия всё равно публикуется, а зеркала на сайте не будет до следующей удачной сборки.
+      - name: Сборка зеркала
+        if: steps.stg.outputs.exists == 'true'
+        continue-on-error: true
+        working-directory: stg
+        env:
+          FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
+          STAGING: "1"
+        run: |
+          npm install --no-audit --no-fund
+          npm run check
+          npm run build
+          rm -rf ../prod/dist/staging
+          cp -r dist ../prod/dist/staging
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: prod/dist
 
   deploy:
     needs: build
