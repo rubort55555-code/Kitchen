@@ -5,11 +5,16 @@ import { readFileSync, writeFileSync, rmSync, mkdirSync, cpSync, readdirSync, st
 import { join, relative } from "node:path";
 import { loadAll } from "./tools/recipes.mjs";
 
+// STAGING=1 — сборка «зеркала» для обкатки крупных изменений: своя база и кэш, пометка «Тест» (см. src/lib/env.ts).
+const STAGING = process.env.STAGING === "1";
+const NS = STAGING ? "kitchen-staging" : "kitchen";
+const TITLE = STAGING ? "Кухня · тест" : "Кухня";
+
 const now = new Date();
 const pad = (n) => String(n).padStart(2, "0");
 const sha = (process.env.GITHUB_SHA || "local").slice(0, 7);
 // Версия видна в приложении: Ещё → О приложении. Так легко понять, обновился ли телефон.
-const VERSION = `${now.getUTCFullYear()}.${pad(now.getUTCMonth() + 1)}.${pad(now.getUTCDate())}-${pad(now.getUTCHours())}${pad(now.getUTCMinutes())}-${sha}`;
+const VERSION = (STAGING ? "staging-" : "") + `${now.getUTCFullYear()}.${pad(now.getUTCMonth() + 1)}.${pad(now.getUTCDate())}-${pad(now.getUTCHours())}${pad(now.getUTCMinutes())}-${sha}`;
 
 rmSync("dist", { recursive: true, force: true });
 mkdirSync("dist", { recursive: true });
@@ -41,7 +46,7 @@ const result = await esbuild.build({
   metafile: true,
   conditions: ["production"],
   legalComments: "none",
-  define: { __FEEDBACK_URL__: JSON.stringify(process.env.FEEDBACK_URL || ""), __VERSION__: JSON.stringify(VERSION), __BUILT_AT__: String(BUILT_AT), __CATALOG_H__: JSON.stringify(CATALOG_H), "process.env.NODE_ENV": '"production"' },
+  define: { __FEEDBACK_URL__: JSON.stringify(process.env.FEEDBACK_URL || ""), __VERSION__: JSON.stringify(VERSION), __BUILT_AT__: String(BUILT_AT), __CATALOG_H__: JSON.stringify(CATALOG_H), __STAGING__: String(STAGING), "process.env.NODE_ENV": '"production"' },
   nodePaths: process.env.LOCAL_NODE_MODULES ? [process.env.LOCAL_NODE_MODULES] : [],
   logLevel: "warning",
 });
@@ -51,6 +56,11 @@ const js = outs.find((f) => f.endsWith(".js"));
 const css = outs.find((f) => f.endsWith(".css"));
 
 cpSync("public", "dist", { recursive: true });
+if (STAGING) {
+  // У зеркала своё имя на экране «Домой», чтобы не перепутать с основной версией
+  const m = JSON.parse(readFileSync("dist/manifest.webmanifest", "utf8"));
+  writeFileSync("dist/manifest.webmanifest", JSON.stringify({ ...m, name: "Кухня · тестовая версия", short_name: "Кухня тест" }, null, 2));
+}
 
 // База рецептов: из текстовых файлов recipes/*.txt — в один файл recipes.json
 const base = loadAll("recipes");
@@ -77,7 +87,9 @@ console.log("Рецептов в базе:", base.recipes.length, "частей:
 const html = readFileSync("src/index.html", "utf8")
   .replace("%CSS%", css ? `<link rel="stylesheet" href="./${css}">` : "")
   .replace("%JS%", `<script type="module" src="./${js}"></script>`)
-  .replace("%VERSION%", VERSION);
+  .replace("%VERSION%", VERSION)
+  .replaceAll("%TITLE%", TITLE)
+  .replaceAll("%NS%", NS);
 writeFileSync("dist/index.html", html);
 
 // Список всех файлов — service worker сохранит их в телефон для работы без интернета.
@@ -91,7 +103,8 @@ const files = [];
 })("dist");
 const sw = readFileSync("src/sw.js", "utf8")
   .replace("%VERSION%", VERSION)
+  .replace("%NS%", NS)
   .replace("%FILES%", JSON.stringify(files.filter((f) => f !== "./sw.js" && f !== "./catalog.json" && f !== "./guide.html" && !f.split("/").pop().startsWith(".") && !(f.startsWith("./ocr/") && !/tesseract\.min\.js$|worker\.min\.js$/.test(f))).map((f) => (f === "./index.html" ? "./" : f))));
 writeFileSync("dist/sw.js", sw);
 writeFileSync("dist/version.json", JSON.stringify({ version: VERSION }));
-console.log("Готово:", VERSION, js, css, files.length, "файлов");
+console.log(STAGING ? "Готово (зеркало):" : "Готово:", VERSION, js, css, files.length, "файлов");

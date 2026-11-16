@@ -1,6 +1,10 @@
 // Service worker: сохраняет файлы приложения в телефон, чтобы оно открывалось без интернета.
 const VERSION = "%VERSION%";
-const CACHE = "kitchen-" + VERSION;
+// Пространство имён сборки: "kitchen" — боевая, "kitchen-staging" — «зеркало» для обкатки (см. src/lib/env.ts)
+const NS = "%NS%";
+const CACHE = NS + "@" + VERSION;
+// Кэш этой сборки (у боевой — ещё и кэши старого вида «kitchen-<версия>»). Чужие кэши не трогаем.
+const own = (k) => k.startsWith(NS + "@") || (NS === "kitchen" && /^kitchen-\d/.test(k));
 const FILES = %FILES%;
 
 self.addEventListener("install", (e) => {
@@ -15,7 +19,7 @@ self.addEventListener("message", (e) => {
 self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k.startsWith("kitchen-") && k !== CACHE).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(keys.filter((k) => own(k) && k !== CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
@@ -29,6 +33,8 @@ self.addEventListener("fetch", (e) => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
+  // Боевая версия (…/Kitchen/) не обслуживает «зеркало» (…/Kitchen/staging/): у него свой service worker
+  if (!url.href.startsWith(self.registration.scope) || url.href.startsWith(self.registration.scope + "staging/")) return;
   // version.json всегда из сети — по нему видно, есть ли обновление.
   if (url.pathname.endsWith("/version.json")) return;
   if (req.mode === "navigate") {

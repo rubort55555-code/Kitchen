@@ -26,6 +26,7 @@ import { Diary, AddMeal } from "./screens/Diary";
 import { Overdue, isExpired } from "./screens/Overdue";
 import { useEffect } from "react";
 import { ymd } from "./lib/util";
+import { STAGING } from "./lib/env";
 
 const TABS: { id: Tab; title: string; icon: typeof Icon.home }[] = [
   { id: "home", title: "Главная", icon: Icon.home },
@@ -95,6 +96,7 @@ export function App() {
           <button className="chip" aria-pressed="true" onClick={update}>Обновить</button>
         </div>
       )}
+      {STAGING && <div className="staging-strip" role="note">Тестовая версия · данные отдельно от основной</div>}
       <main>
         {tab === "home" && <Home />}
         {tab === "products" && <Products />}
