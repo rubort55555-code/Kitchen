@@ -42,7 +42,7 @@ jobs:
           python-version: "3.12"
       - name: Браузер для сценариев
         run: |
-          pip install playwright==1.48.0
+          pip install playwright==1.48.0 pillow==11.0.0
           python -m playwright install --with-deps chromium
           echo "CHROMIUM=$(python -c 'from playwright.sync_api import sync_playwright as s; p = s().start(); print(p.chromium.executable_path); p.stop()')" >> "$GITHUB_ENV"
       - name: Сценарии в браузере
