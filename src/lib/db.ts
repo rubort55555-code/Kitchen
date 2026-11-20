@@ -1,7 +1,10 @@
 // Хранилище на телефоне: IndexedDB (данные не пропадают после закрытия приложения).
 // Небольшая собственная обёртка вместо Dexie: меньше кода и работает полностью офлайн.
 
-const DB_NAME = "kitchen";
+import { STORAGE } from "./channel";
+
+// У тестовой копии своя база («kitchen-test»), рабочая — «kitchen».
+const DB_NAME = STORAGE;
 const DB_VERSION = 2;
 export const STORES = ["products", "log", "recipes", "meals", "kv"] as const;
 export type StoreName = (typeof STORES)[number];

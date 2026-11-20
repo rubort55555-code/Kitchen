@@ -1,16 +1,27 @@
-# Автоматическая публикация: при каждом изменении кода GitHub сам собирает приложение
-# и выкладывает его на GitHub Pages. Делать ничего не нужно.
+# Публикация сайта: рабочая версия и тестовая копия. Делать ничего не нужно — всё идёт само после «Проверки».
+#
+#   https://rubort55555-code.github.io/Kitchen/       — рабочая версия: последний коммит main, прошедший «Проверку»
+#   https://rubort55555-code.github.io/Kitchen/test/  — тестовая копия: последняя ветка, прошедшая «Проверку»
+#
+# Тестовая копия хранит данные отдельно от рабочей (своя база в браузере, свои офлайн-файлы) и помечена «ТЕСТ».
+# Изменение в ветке → «Проверка» → ветка попадает в тестовую копию. Слияние в main → «Проверка» → рабочая версия,
+# тестовая копия при этом остаётся той, что была (её коммит записан в test/version.json).
+# Положить в тестовую копию нужную ветку вручную: Actions → «Публикация» → Run workflow → ветка или коммит.
 name: Публикация
 
 on:
-  push:
-    branches: [main]
+  workflow_run:
+    workflows: [Проверка]
+    types: [completed]
   workflow_dispatch:
+    inputs:
+      test_ref:
+        description: "Ветка или коммит для тестовой копии (пусто — оставить ту, что сейчас на сайте)"
+        required: false
+        default: ""
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -18,27 +29,108 @@ concurrency:
 
 jobs:
   build:
+    # только после успешной проверки изменения (push), не после проверки, вызванной из сборок Android/iPhone
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      actions: read
+      pages: read
     steps:
-      - uses: actions/checkout@v4
+      - name: Что публиковать
+        id: refs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+          RUN_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          RUN_SHA: ${{ github.event.workflow_run.head_sha }}
+          INPUT_REF: ${{ inputs.test_ref }}
+          SITE: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: |
+          set -eu
+          # Рабочая версия — последний коммит main, у которого «Проверка» прошла
+          prod=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/checks.yml/runs?branch=main&event=push&status=success&per_page=1" --jq '.workflow_runs[0].head_sha // empty')
+          if [ -z "$prod" ]; then echo "::error::У main нет ни одной успешной «Проверки» — рабочую версию не из чего собрать"; exit 1; fi
+          # Тестовая копия
+          test_ref=""; test_branch=""
+          if [ "$EVENT" = workflow_run ] && [ "$RUN_BRANCH" != main ]; then
+            test_ref="$RUN_SHA"; test_branch="$RUN_BRANCH"
+          elif [ -n "$INPUT_REF" ]; then
+            test_ref="$INPUT_REF"; test_branch="$INPUT_REF"
+          else
+            cur=$(curl -fsS "${SITE}test/version.json" 2>/dev/null || true)
+            if [ "$(echo "$cur" | jq -r '.channel // empty' 2>/dev/null || true)" = test ]; then
+              test_ref=$(echo "$cur" | jq -r '.sha // empty'); test_branch=$(echo "$cur" | jq -r '.branch // empty')
+            fi
+          fi
+          if [ -z "$test_ref" ]; then test_ref="$prod"; test_branch=main; fi
+          echo "prod=$prod" >> "$GITHUB_OUTPUT"
+          echo "test_ref=$test_ref" >> "$GITHUB_OUTPUT"
+          echo "test_branch=$test_branch" >> "$GITHUB_OUTPUT"
+          {
+            echo "### Публикация"
+            echo "- рабочая версия: \`main\` @ \`${prod:0:7}\`"
+            echo "- тестовая копия: \`$test_branch\` @ \`${test_ref:0:12}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Рабочая версия — исходники
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.refs.outputs.prod }}
+          path: prod
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install --no-audit --no-fund
-      - name: Проверка типов (не блокирует публикацию)
-        run: npm run check
-        continue-on-error: true
-      - run: npm run build
+      - name: Рабочая версия — сборка
+        working-directory: prod
         env:
           FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
+          KITCHEN_SHA: ${{ steps.refs.outputs.prod }}
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+
+      - name: Тестовая копия — исходники
+        id: testsrc
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.refs.outputs.test_ref }}
+          path: testsrc
+      - name: Тестовая копия — сборка
+        if: steps.testsrc.outcome == 'success'
+        continue-on-error: true
+        working-directory: testsrc
+        env:
+          FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
+          KITCHEN_BRANCH: ${{ steps.refs.outputs.test_branch }}
+        run: |
+          npm ci --no-audit --no-fund
+          KITCHEN_CHANNEL=test KITCHEN_SHA="$(git rev-parse HEAD)" OUT_DIR=dist-test node build.mjs
+          # Ветка, сделанная до появления тестовой копии, соберётся как рабочая — с общей базой. Такую не публикуем.
+          if [ "$(jq -r '.channel // empty' dist-test/version.json 2>/dev/null || true)" != test ]; then
+            echo "::warning::Ветка $KITCHEN_BRANCH ещё не умеет собираться тестовой копией (нет src/lib/channel.ts) — тестовая копия не опубликована"
+            exit 0
+          fi
+          cp -r dist-test ../prod/dist/test
+      - name: Нет тестовой копии
+        if: steps.testsrc.outcome != 'success'
+        env:
+          REF: ${{ steps.refs.outputs.test_ref }}
+        run: echo "::warning::Не удалось взять исходники тестовой копии ($REF) — опубликована только рабочая версия"
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: prod/dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

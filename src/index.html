@@ -9,10 +9,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Кухня">
+<meta name="apple-mobile-web-app-title" content="%APP_NAME%">
 <meta name="format-detection" content="telephone=no">
 <meta name="app-version" content="%VERSION%">
-<title>Кухня</title>
+<title>%APP_NAME%</title>
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <link rel="icon" href="./icons/icon-192.png">
@@ -23,11 +23,12 @@
 @font-face{font-family:Manrope;font-style:normal;font-weight:400 800;font-display:swap;src:url(./fonts/manrope-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 </style>
 <!-- Оформление с прошлого раза — чтобы при запуске не мелькала другая тема -->
-<script>try{var t=localStorage.getItem("kitchen-theme");if(t==="light"||t==="dark"||t==="sun")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{var t=localStorage.getItem("%STORAGE%-theme");if(t==="light"||t==="dark"||t==="sun")document.documentElement.dataset.theme=t}catch(e){}</script>
 %CSS%
 </head>
 <body>
 <div id="root"></div>
+%TEST_BADGE%
 <noscript>Для работы приложения нужен JavaScript.</noscript>
 %JS%
 <!-- Если за 10 секунд приложение не появилось (например, в телефоне застряли старые файлы), показываем кнопку «Обновить приложение» -->
@@ -41,8 +42,10 @@ setTimeout(function () {
   document.body.appendChild(d);
   document.getElementById("reset").onclick = function () {
     var done = function () { location.reload(); };
-    var cl = function () { return window.caches ? caches.keys().then(function (k) { return Promise.all(k.filter(function (x) { return x.indexOf("kitchen-") === 0; }).map(function (x) { return caches.delete(x); })); }) : Promise.resolve(); };
-    (navigator.serviceWorker ? navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (x) { return x.unregister(); })); }) : Promise.resolve()).then(cl).then(done, done);
+    // Только свои кэши и свой service worker: на том же сайте может быть тестовая копия (папка test/)
+    var cl = function () { return window.caches ? caches.keys().then(function (k) { return Promise.all(k.filter(function (x) { return x.indexOf("%CACHE_PREFIX%") === 0; }).map(function (x) { return caches.delete(x); })); }) : Promise.resolve(); };
+    var scope = new URL("./", location.href).href;
+    (navigator.serviceWorker ? navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.filter(function (x) { return x.scope === scope; }).map(function (x) { return x.unregister(); })); }) : Promise.resolve()).then(cl).then(done, done);
   };
 }, 10000);
 </script>

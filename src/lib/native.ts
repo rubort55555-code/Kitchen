@@ -1,11 +1,12 @@
 // Приложение для Android/iOS (Capacitor): то, что в браузере делается иначе.
 import { Capacitor } from "@capacitor/core";
+import { IS_TEST, SITE_ROOT } from "./channel";
 
 /** true — открыто как приложение из магазина или APK, false — в браузере. */
 export const isNative = Capacitor.isNativePlatform();
 
-/** Сайт приложения: оттуда приложение из магазина берёт свежие рецепты и справочник. */
-export const SITE = "https://rubort55555-code.github.io/Kitchen/";
+/** Сайт приложения: оттуда приложение из магазина берёт свежие рецепты и справочник. Тестовое — с тестовой копии сайта. */
+export const SITE = IS_TEST ? SITE_ROOT + "test/" : SITE_ROOT;
 
 /** Файл с сайта (null — нет интернета или сайт не ответил за 8 секунд). */
 export async function fetchSite<T>(file: string): Promise<T | null> {

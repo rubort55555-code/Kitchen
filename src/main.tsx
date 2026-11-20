@@ -39,16 +39,20 @@ if ("serviceWorker" in navigator && location.protocol !== "file:" && !isNative) 
   window.addEventListener("load", async () => {
     try {
       const reg = await navigator.serviceWorker.register("./sw.js");
+      // Управляет ли страницей уже СВОЙ service worker. При первом открытии тестовой копии (папка test/)
+      // ей управляет рабочий — его область весь сайт; это не обновление, а первая установка.
+      const own = new URL("./sw.js", location.href).href;
+      const ownController = () => navigator.serviceWorker.controller?.scriptURL === own;
       const offer = (w: ServiceWorker) => setUpdate(() => { w.postMessage("skipWaiting"); });
-      if (reg.waiting && navigator.serviceWorker.controller) offer(reg.waiting);
+      if (reg.waiting && ownController()) offer(reg.waiting);
       reg.addEventListener("updatefound", () => {
         const w = reg.installing;
         w?.addEventListener("statechange", () => {
-          if (w.state === "installed" && navigator.serviceWorker.controller) offer(w);
+          if (w.state === "installed" && ownController()) offer(w);
         });
       });
       // Перезагружаемся только при обновлении (при первой установке перезагрузка не нужна)
-      const hadController = !!navigator.serviceWorker.controller;
+      const hadController = ownController();
       let reloaded = false;
       navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController && !reloaded) { reloaded = true; location.reload(); } });
       // Проверяем обновления каждый раз, когда приложение снова открывают

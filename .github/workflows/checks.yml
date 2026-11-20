@@ -1,0 +1,47 @@
+# Проверка: типы, рецепты, все проверки логики и сценарии в браузере.
+# Идёт при каждом изменении в main и в рабочих ветках. От неё зависит всё остальное:
+#  • сайт (deploy.yml) публикуется только из того, что прошло проверку: main — рабочая версия, ветка — тестовая копия;
+#  • сборки для Android и iPhone (android.yml, ios.yml) вызывают её у себя и без неё не собираются.
+name: Проверка
+
+on:
+  push:
+    branches: [main, test, "claude/**"]
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  # у вызова из android.yml/ios.yml своя группа, чтобы не отменять отдельную «Проверку» той же ветки
+  group: check-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Проверка типов
+        run: npm run check
+      - name: Проверка рецептов
+        run: npm run check-recipes
+      - name: Проверки логики
+        run: npm test
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Браузер для сценариев
+        run: |
+          pip install playwright==1.48.0
+          python -m playwright install --with-deps chromium
+          echo "CHROMIUM=$(python -c 'from playwright.sync_api import sync_playwright as s; p = s().start(); print(p.chromium.executable_path); p.stop()')" >> "$GITHUB_ENV"
+      - name: Сценарии в браузере
+        run: npm run test:e2e

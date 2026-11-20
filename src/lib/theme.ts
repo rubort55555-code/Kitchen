@@ -3,6 +3,7 @@
 import { registerPlugin } from "@capacitor/core";
 import { useSyncExternalStore } from "react";
 import { isNative } from "./native";
+import { STORAGE } from "./channel";
 import { getState, subscribe } from "./store";
 import type { Appearance } from "./types";
 
@@ -14,7 +15,8 @@ const Brightness = registerPlugin<{ get(): Promise<{ value: number }> }>("Bright
 export const brightnessSupported = isNative;
 
 const THEME_COLOR: Record<Theme, string> = { light: "#F7F3EC", dark: "#141A16", sun: "#FFFFFF" };
-const KEY = "kitchen-theme";
+// Тот же ключ читает index.html при запуске (там он подставляется сборкой: %STORAGE%-theme).
+const KEY = STORAGE + "-theme";
 
 let current: Theme | null = null;
 let brightness: number | null = null;

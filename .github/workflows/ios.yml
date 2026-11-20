@@ -1,13 +1,21 @@
-# Приложение для iPhone: GitHub сам собирает его на Mac при каждом изменении кода
-# и выкладывает на страницу Releases → «Кухня для iPhone (тестовая сборка)».
+# Приложение для iPhone: GitHub сам собирает его на Mac после «Проверки» и выкладывает на страницу Releases.
+#  • из main — «Кухня для iPhone» (kitchen-unsigned.ipa): рабочая версия;
+#  • из рабочих веток — «Кухня ТЕСТ для iPhone» (kitchen-test-unsigned.ipa): отдельное приложение «Кухня ТЕСТ»
+#    со своим идентификатором — ставится рядом с рабочим, данные свои, рецепты берёт с тестовой копии сайта.
 # Файл без подписи Apple: поставить его можно через Sideloadly или AltStore (см. README).
 # Когда появится аккаунт Apple разработчика, здесь добавится подпись и отправка в TestFlight.
 name: iOS
 
 on:
   push:
-    branches: [main, "claude/**"]
+    branches: [main, test, "claude/**"]
   workflow_dispatch:
+    inputs:
+      channel:
+        description: "Какую сборку: test — «Кухня ТЕСТ», prod — рабочая"
+        type: choice
+        options: [test, prod]
+        default: test
 
 permissions:
   contents: write
@@ -17,18 +25,39 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  checks:
+    uses: ./.github/workflows/checks.yml
+
   ipa:
+    needs: checks
     runs-on: macos-15
+    env:
+      # main — рабочая версия, всё остальное — тестовая копия (вручную — как выбрано)
+      KITCHEN_CHANNEL: ${{ github.event_name == 'workflow_dispatch' && inputs.channel || (github.ref_name == 'main' && 'prod' || 'test') }}
+      KITCHEN_BRANCH: ${{ github.ref_name }}
     steps:
       - uses: actions/checkout@v4
+      - name: Куда выкладывать
+        run: |
+          if [ "$KITCHEN_CHANNEL" = test ]; then
+            { echo "TAG=ios-test"; echo "TITLE=Кухня ТЕСТ для iPhone"; echo "IPA=kitchen-test-unsigned.ipa"; } >> "$GITHUB_ENV"
+          else
+            { echo "TAG=ios"; echo "TITLE=Кухня для iPhone"; echo "IPA=kitchen-unsigned.ipa"; } >> "$GITHUB_ENV"
+          fi
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install --no-audit --no-fund
-      - run: npm run check
+      - run: npm ci --no-audit --no-fund
       - run: npm run ios
         env:
           FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
+      - name: Тестовая копия — своё имя и идентификатор
+        if: env.KITCHEN_CHANNEL == 'test'
+        run: |
+          sed -i '' 's/PRODUCT_BUNDLE_IDENTIFIER = io.github.rubort55555code.kitchen;/PRODUCT_BUNDLE_IDENTIFIER = io.github.rubort55555code.kitchen.test;/' ios/App/App.xcodeproj/project.pbxproj
+          /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName Кухня ТЕСТ" ios/App/App/Info.plist
+          grep -c "kitchen.test;" ios/App/App.xcodeproj/project.pbxproj
+          /usr/libexec/PlistBuddy -c "Print :CFBundleDisplayName" ios/App/App/Info.plist
       - name: Сборка приложения
         run: |
           xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release \
@@ -41,22 +70,23 @@ jobs:
         run: |
           mkdir Payload
           cp -R build/Build/Products/Release-iphoneos/App.app Payload/
-          zip -qry kitchen-unsigned.ipa Payload
-          ls -la kitchen-unsigned.ipa
+          zip -qry "$IPA" Payload
+          ls -la "$IPA"
       - uses: actions/upload-artifact@v4
         with:
-          name: kitchen-ipa
-          path: kitchen-unsigned.ipa
+          name: ${{ env.IPA }}
+          path: ${{ env.IPA }}
       - name: Выложить на страницу Releases
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ios-test
-          name: Кухня для iPhone (тестовая сборка)
+          tag_name: ${{ env.TAG }}
+          name: ${{ env.TITLE }}
           prerelease: true
           make_latest: false
           body: |
-            Сборка №${{ github.run_number }} от ${{ github.sha }}.
+            Сборка №${{ github.run_number }} из ветки ${{ github.ref_name }} (${{ github.sha }}).
             Файл без подписи Apple. Как поставить на iPhone: на компьютере установите Sideloadly (sideloadly.io),
-            подключите iPhone кабелем, перетащите kitchen-unsigned.ipa в Sideloadly и войдите своим Apple ID.
+            подключите iPhone кабелем, перетащите ${{ env.IPA }} в Sideloadly и войдите своим Apple ID.
             С бесплатным Apple ID приложение работает 7 дней, потом его нужно переустановить тем же способом — данные сохраняются.
-          files: kitchen-unsigned.ipa
+            ${{ env.KITCHEN_CHANNEL == 'test' && 'Это тестовая копия «Кухня ТЕСТ»: ставится рядом с рабочим приложением, данные у неё свои.' || '' }}
+          files: ${{ env.IPA }}

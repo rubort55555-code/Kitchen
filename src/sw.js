@@ -1,7 +1,11 @@
 // Service worker: сохраняет файлы приложения в телефон, чтобы оно открывалось без интернета.
 const VERSION = "%VERSION%";
-const CACHE = "kitchen-" + VERSION;
+// Начало имён своих кэшей: у рабочей версии «kitchen-», у тестовой копии «kitchentest-» (src/lib/channel.ts)
+const PREFIX = "%CACHE_PREFIX%";
+const CACHE = PREFIX + VERSION;
 const FILES = %FILES%;
+// Папки сайта, которые этот service worker не обслуживает: у рабочей версии это тестовая копия (test/) — у неё свой.
+const FOREIGN = %FOREIGN%;
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)));
@@ -15,7 +19,7 @@ self.addEventListener("message", (e) => {
 self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k.startsWith("kitchen-") && k !== CACHE).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(keys.filter((k) => k.startsWith(PREFIX) && k !== CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
@@ -29,6 +33,7 @@ self.addEventListener("fetch", (e) => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
+  if (FOREIGN.some((dir) => url.href.startsWith(self.registration.scope + dir))) return;
   // version.json всегда из сети — по нему видно, есть ли обновление.
   if (url.pathname.endsWith("/version.json")) return;
   if (req.mode === "navigate") {

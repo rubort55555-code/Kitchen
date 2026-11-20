@@ -7,13 +7,16 @@
   "scripts": {
     "build": "node build.mjs",
     "check": "tsc --noEmit -p tsconfig.json",
+    "test": "node tools/run-tests.mjs",
+    "test:e2e": "node tools/run-e2e.mjs",
     "check-recipes": "node tools/check-recipes.mjs",
     "rewrite": "node tools/rewrite.mjs",
     "composition": "node tools/build-composition.mjs",
     "android": "node build.mjs && cap sync android",
     "ios": "node build.mjs && cap sync ios",
     "coverage:iron": "tsx tools/iron-coverage.ts",
-    "privacy": "tsx tools/gen-privacy.ts"
+    "privacy": "tsx tools/gen-privacy.ts",
+    "build:test": "KITCHEN_CHANNEL=test OUT_DIR=dist-test node build.mjs"
   },
   "dependencies": {
     "@capacitor/android": "8.5.3",
@@ -30,6 +33,7 @@
     "@types/react-dom": "^19.2.0",
     "esbuild": "0.28.2",
     "fda-nutrient-database": "1.0.2",
+    "tsx": "4.20.6",
     "typescript": "6.0.3"
   }
 }
