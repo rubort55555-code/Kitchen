@@ -1,12 +1,19 @@
-# Приложение для Android: GitHub сам собирает файл APK при каждом изменении кода
-# и выкладывает его на страницу Releases → «Кухня для Android (тестовая сборка)».
-# Скачайте kitchen.apk на телефон и откройте — новая версия ставится поверх старой, данные сохраняются.
+# Приложение для Android: GitHub сам собирает APK после «Проверки» и выкладывает его на страницу Releases.
+#  • из main — «Кухня для Android» (kitchen.apk): боевая версия, ставится поверх прежней, данные сохраняются;
+#  • из остальных веток (staging, claude/**) — «Кухня тест для Android» (kitchen-staging.apk): отдельное приложение «Кухня тест»,
+#    ставится РЯДОМ с боевым, со своими данными, рецепты берёт с зеркала сайта (…/staging/).
 name: Android
 
 on:
   push:
-    branches: [main, "claude/**"]
+    branches: [main, staging, "claude/**"]
   workflow_dispatch:
+    inputs:
+      channel:
+        description: "Какую сборку: test — «Кухня тест», prod — боевая"
+        type: choice
+        options: [test, prod]
+        default: test
 
 permissions:
   contents: write
@@ -16,10 +23,24 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  checks:
+    uses: ./.github/workflows/checks.yml
+
   apk:
+    needs: checks
     runs-on: ubuntu-latest
+    env:
+      # main — боевая версия, всё остальное — «Кухня тест» (сборка зеркала, STAGING=1; вручную — как выбрано)
+      STAGING: ${{ (github.event_name == 'workflow_dispatch' && inputs.channel == 'test' || github.event_name != 'workflow_dispatch' && github.ref_name != 'main') && '1' || '' }}
     steps:
       - uses: actions/checkout@v4
+      - name: Куда выкладывать
+        run: |
+          if [ "$STAGING" = 1 ]; then
+            { echo "TAG=android-staging"; echo "TITLE=Кухня тест для Android"; echo "APK=kitchen-staging.apk"; } >> "$GITHUB_ENV"
+          else
+            { echo "TAG=android"; echo "TITLE=Кухня для Android"; echo "APK=kitchen.apk"; } >> "$GITHUB_ENV"
+          fi
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -28,28 +49,27 @@ jobs:
           distribution: temurin
           java-version: 21
       - uses: gradle/actions/setup-gradle@v4
-      - run: npm install --no-audit --no-fund
-      - run: npm run check
+      - run: npm ci --no-audit --no-fund
       - run: npm run android
         env:
           FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
       - name: Сборка APK
         working-directory: android
         run: ./gradlew assembleRelease --no-daemon
-      - run: cp android/app/build/outputs/apk/release/app-release.apk kitchen.apk
+      - run: cp android/app/build/outputs/apk/release/app-release.apk "$APK"
       - uses: actions/upload-artifact@v4
         with:
-          name: kitchen-apk
-          path: kitchen.apk
+          name: ${{ env.APK }}
+          path: ${{ env.APK }}
       - name: Выложить на страницу Releases
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: android-test
-          name: Кухня для Android (тестовая сборка)
+          tag_name: ${{ env.TAG }}
+          name: ${{ env.TITLE }}
           prerelease: true
           make_latest: false
           body: |
-            Сборка №${{ github.run_number }} от ${{ github.sha }}.
-            Как поставить: скачайте kitchen.apk на телефон, откройте его и разрешите установку из этого источника.
-            Новая версия ставится поверх старой — данные сохраняются.
-          files: kitchen.apk
+            Сборка №${{ github.run_number }} из ветки ${{ github.ref_name }} (${{ github.sha }}).
+            Как поставить: скачайте ${{ env.APK }} на телефон, откройте его и разрешите установку из этого источника.
+            ${{ env.STAGING == '1' && 'Это тестовая версия «Кухня тест»: ставится рядом с боевым приложением, данные у неё свои. Для проверки на своих данных: в основном приложении Ещё → Данные → сохранить копию, в «Кухня тест» — загрузить её.' || 'Новая версия ставится поверх старой — данные сохраняются.' }}
+          files: ${{ env.APK }}

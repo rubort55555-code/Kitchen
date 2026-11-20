@@ -203,6 +203,8 @@ function digits(tok: string): string {
 function normalizeLines(text: string): string[] {
   return text.split(/\r?\n/)
     .map((l) => l.replace(/[ \t]+/g, " ").replace(/[©®]/g, "0").replace(/(\d)\s*[,.]\s+(\d)/g, "$1,$2").replace(/[×✕]/g, "x").replace(/[“”«»"']/g, "").trim())
+    // Ноль в размере упаковки, прочитанный как буква: «1еШт» → «10шт», «5ООмл» → «500мл»
+    .map((l) => l.replace(/(\d)([OoОоЕеEe]+)(\s*(?:шт|кг|гр?|мл|л)(?![а-яё]))/gi, (_m, d: string, z: string, u: string) => d + "0".repeat(z.length) + u))
     .map((l) => l.split(/(\s+)/).map((w) => (/^\s+$/.test(w) ? w : cyr(digits(w)))).join(""))
     // Слова с ошибками распознавания — ближайшим знакомым словом («ЗРЛИВНОЙ» → «ЗАЛИВНОЙ», «СУННА» → «СУММА»)
     .map(fixWords)

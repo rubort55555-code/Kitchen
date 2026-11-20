@@ -5,3 +5,5 @@ declare const __FEEDBACK_URL__: string;
 /** Время сборки (мс) и подпись встроенного справочника — для обновления баз с сайта. */
 declare const __BUILT_AT__: number;
 declare const __CATALOG_H__: string;
+/** true — сборка «зеркала» для обкатки (STAGING=1), false — боевая. */
+declare const __STAGING__: boolean;

@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
+    "build:staging": "STAGING=1 OUT_DIR=dist-staging node build.mjs",
     "check": "tsc --noEmit -p tsconfig.json",
+    "test": "node tools/run-tests.mjs",
+    "test:e2e": "node tools/run-e2e.mjs",
     "check-recipes": "node tools/check-recipes.mjs",
     "rewrite": "node tools/rewrite.mjs",
     "composition": "node tools/build-composition.mjs",
@@ -30,6 +33,7 @@
     "@types/react-dom": "^19.2.0",
     "esbuild": "0.28.2",
     "fda-nutrient-database": "1.0.2",
+    "tsx": "4.20.6",
     "typescript": "6.0.3"
   }
 }

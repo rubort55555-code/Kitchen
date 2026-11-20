@@ -12,6 +12,7 @@ import { findCatalog, setCatalog } from "./catalog";
 import { mergeBase, staleBase } from "./baseSync";
 import { fetchSite, isNative, SITE } from "./native";
 import { convert } from "./units";
+import { NS } from "./env";
 import { cleanLog, cleanMeals, cleanProducts, cleanRecipes, cleanSettings } from "./sanitize";
 
 export interface State {
@@ -66,7 +67,7 @@ export function useStore<T>(sel: (s: State) => T): T {
 // Каждая вкладка держит данные в памяти. Чтобы вкладки не затирали изменения друг друга
 // (настройки — одна запись: список покупок, меню, семья), после каждой записи сообщаем остальным,
 // и они перечитывают данные из базы.
-const chan: BroadcastChannel | null = typeof BroadcastChannel !== "undefined" ? new BroadcastChannel("kitchen-data") : null;
+const chan: BroadcastChannel | null = typeof BroadcastChannel !== "undefined" ? new BroadcastChannel(NS + "-data") : null;
 (chan as unknown as { unref?: () => void } | null)?.unref?.(); // в тестах под Node канал не держит процесс
 let reloadTimer: ReturnType<typeof setTimeout> | null = null;
 function notifyOthers() { try { chan?.postMessage("changed"); } catch { /* вкладка закрывается */ } }
@@ -630,6 +631,6 @@ export function markTip(id: string) {
 // ---------- ошибки для кнопки «Что-то не работает» ----------
 export function reportError(e: unknown) {
   const msg = e instanceof Error ? `${e.name}: ${e.message}` : String(e);
-  try { localStorage.setItem("kitchen-last-error", JSON.stringify({ msg, t: new Date().toISOString() })); } catch { /* нет места */ }
+  try { localStorage.setItem(NS + "-last-error", JSON.stringify({ msg, t: new Date().toISOString() })); } catch { /* нет места */ }
   console.error(e);
 }
