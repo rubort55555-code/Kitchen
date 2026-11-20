@@ -7,6 +7,7 @@
 # У GitHub Pages один сайт на репозиторий, поэтому при любом изменении собираются обе версии сразу:
 # изменение в staging не трогает боевую версию, и наоборот. Если ветки staging нет — публикуется только боевая.
 # Изменение в staging запускает эту публикацию через staging.yml: публиковать на Pages разрешено только из main.
+# Боевая версия публикуется только после «Проверки» (checks.yml): типы, рецепты, все тесты и сценарии в браузере.
 name: Публикация
 
 on:
@@ -24,7 +25,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  checks:
+    uses: ./.github/workflows/checks.yml
+
   build:
+    needs: checks
     runs-on: ubuntu-latest
     steps:
       - name: Боевая версия (main)
@@ -53,7 +58,6 @@ jobs:
           FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
         run: |
           npm install --no-audit --no-fund
-          npm run check || echo "::warning::Проверка типов в main не прошла (публикацию не блокирует)"
           npm run build
 
       # Зеркало — для обкатки, поэтому проверка типов здесь обязательна. Если сборка зеркала сломана,
